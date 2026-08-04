@@ -1,9 +1,9 @@
 ========================================================================
 「今も正体が分かっていない 地球の音 3選」
-AI画像生成用プロンプト（残り26点）
+AI画像生成用プロンプト（全32点）
 
-・44カットを重複整理して35素材に圧縮済み。うち11ファイルは Python で生成済み。
-・このファイルの26点を生成すれば、実写ストック1点を除いて全カットが埋まる。
+・44カットを重複整理して35素材に圧縮済み。図版で作るのは3点だけ。
+・このファイルの32点を生成すれば、実写ストック1点を除いて全カットが埋まる。
 ・どの生成サービスでもそのまま貼れるよう、共通スタイルは各行に展開してある。
 ・アスペクト比は必ず 9:16 を指定すること。
 ========================================================================
@@ -144,6 +144,43 @@ Archive shelves full of magnetic tape reels in a dim storage room, deep perspect
 A34  → カット 44       宇宙から見た夜の地球
 ------------------------------------------------------------------------
 Earth seen from deep space at night, faint city lights scattered on the dark side, thin blue atmospheric rim, stars behind, the planet in the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+========================================================================
+【差し替え分（当初グラフを当てていたカット。すべて写真的な絵に戻した）】
+========================================================================
+
+------------------------------------------------------------------------
+A02  → カット 2        暗闇で一人でに回り続けるテープマシン
+------------------------------------------------------------------------
+Close up of a reel to reel tape machine running alone in a dark room, both reels slowly turning, a single small indicator lamp glowing amber, nobody present, dust drifting in a narrow beam of light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A08  → カット 9, 14, 43    宇宙から見た太平洋側の地球
+------------------------------------------------------------------------
+Earth seen from orbit showing the pacific side, almost entirely dark ocean with no landmass visible, thin glowing blue atmospheric limb along the curve, deep starfield behind, the planet occupying the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+  ※赤い光点は編集で足す。画像生成に描かせない（位置と明滅を制御できるようにするため）
+  ※カット14は点を減衰させる。カット43は点を3つに増やす。画像は1枚で足りる
+
+------------------------------------------------------------------------
+A10  → カット 12       外洋にかかる季節の境目
+------------------------------------------------------------------------
+Aerial view of open ocean where two weather systems meet, warm hazy spring light on one side and cold dark autumn storm cloud on the other, a visible front line dividing the water, no land, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A17  → カット 20       夕闇に並ぶ高圧送電鉄塔
+------------------------------------------------------------------------
+Row of high voltage transmission pylons silhouetted against a dark dusk sky, power lines converging into the distance, low oppressive clouds, empty field below, sense of a constant unheard hum, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A30  → カット 38       机に広げられた紙の海図
+------------------------------------------------------------------------
+Worn paper nautical chart spread across a wooden desk under a warm lamp, brass dividers and a pencil resting on it, faint hand drawn marks, printed detail deliberately out of focus and unreadable, shallow focus on the nearest edge, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated warm color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+  ※赤い経路は編集で描き足す
+
+------------------------------------------------------------------------
+A32  → カット 41       夜の海に離れて浮かぶ三つの灯り
+------------------------------------------------------------------------
+Three small distant lights floating far apart from each other on a black night ocean, calm water reflecting them faintly, stars above, nothing else visible in any direction, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
 
 ========================================================================
 【実写ストックで探すもの】

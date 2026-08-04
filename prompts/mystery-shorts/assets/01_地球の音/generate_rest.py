@@ -2,7 +2,7 @@
 """
 残り26点の画像を、Higgsfield 以外のサービスで生成する。
 
-`残り26点_画像プロンプト.txt` を読んで、素材ID順に生成し `generated/` に保存する。
+`画像プロンプト_全32点.txt` を読んで、素材ID順に生成し `generated/` に保存する。
 APIキーは環境変数から読む。キーを持っているサービスを --provider で選ぶ。
 
   # Google（Imagen）— 9:16をそのまま出せるので第一候補
@@ -32,7 +32,7 @@ import time
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PROMPT_FILE = os.path.join(HERE, "残り26点_画像プロンプト.txt")
+PROMPT_FILE = os.path.join(HERE, "画像プロンプト_全32点.txt")
 OUT = os.path.join(HERE, "generated")
 
 NEGATIVE = ("text, letters, watermark, logo, signature, caption, subtitles, cartoon, "
