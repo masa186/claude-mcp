@@ -391,13 +391,56 @@ def wav_seconds(path):
 
 
 def find_voice_file():
-    # 自分で用意した音声を置いてあれば、それを1本まるごと使う
-    names = ("声.wav", "声.mp3", "声.m4a", "全文.wav", "narration.wav", "voice.wav")
-    for d in (".", "/content", AUD, WORK):
-        for n in names:
-            p = os.path.join(d, n)
-            if os.path.exists(p):
-                return os.path.abspath(p)
+    # 自分で用意した音声を使う。声.wav が1本でも、声1〜声9のように
+    # 分かれていてもよい。分かれている場合は番号順に繋いで1本にする
+    import glob
+    exts = ("wav", "mp3", "m4a")
+    for d in ("/content", ".", AUD, WORK):
+        if not os.path.isdir(d):
+            continue
+        hits = []
+        for e in exts:
+            hits += glob.glob(os.path.join(d, "声*." + e))
+            hits += glob.glob(os.path.join(d, "voice*." + e))
+        hits = [h for h in hits if not os.path.basename(h).startswith("繋いだ")]
+        if not hits:
+            continue
+        if len(hits) == 1:
+            return os.path.abspath(hits[0])
+
+        # 「声2」より「声10」が先に来ないよう、数字として並べる
+        def order(path):
+            m = re.findall(r"\d+", os.path.basename(path))
+            return (int(m[0]) if m else 0, os.path.basename(path))
+        hits.sort(key=order)
+        print("     %d本を番号順に繋ぎます: %s"
+              % (len(hits), "、".join(os.path.basename(h) for h in hits)))
+
+        os.makedirs(WORK, exist_ok=True)
+        lst = os.path.join(WORK, "voices.txt")
+        with open(lst, "w", encoding="utf-8") as f:
+            for h in hits:
+                f.write("file '%s'\n" % os.path.abspath(h))
+        joined = os.path.join(WORK, "繋いだ声.wav")
+        try:
+            sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+                "-f", "concat", "-safe", "0", "-i", lst,
+                "-ar", "44100", "-ac", "1", joined])
+            return joined
+        except Exception:
+            # 形式がばらばらだと繋げないことがあるので、変換してから繋ぐ
+            parts = []
+            for i, h in enumerate(hits):
+                q = os.path.join(WORK, "v%02d.wav" % i)
+                sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+                    "-i", h, "-ar", "44100", "-ac", "1", q])
+                parts.append(q)
+            with open(lst, "w", encoding="utf-8") as f:
+                for q in parts:
+                    f.write("file '%s'\n" % q)
+            sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+                "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", joined])
+            return joined
     return None
 
 
