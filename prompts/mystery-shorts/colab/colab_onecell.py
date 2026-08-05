@@ -12,12 +12,14 @@ import urllib.error, urllib.parse, urllib.request, wave
 
 W, H, FPS = 1080, 1920, 30
 NUMCARD_SEC, GAP, GAP_ITEM_END = 1.8, 0.25, 0.60
+TITLE_SEC = 2.2      # 声0.wav が無いときに、タイトルを出しておく長さ
 COLORS = {"red": "#FF2A2A", "yellow": "#FFD400", "": "#FFFFFF"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 
 CUTS = [
     {'cut': '0', 'telop1': 'TITLE', 'telop2': '', 'hl': 'TITLE', 'hl_color': '',
      'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
+    {'cut': '1', 'telop1': '地球には', 'telop2': '正体不明の音がある', 'hl': '正体不明', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '2', 'telop1': '記録は残っている', 'telop2': 'だが音源が分からない', 'hl': '音源', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A02', 'item_end': '0'},
     {'cut': '3', 'telop1': '1.アップスウィープ', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A03', 'item_end': '0'},
     {'cut': '4', 'telop1': '1991年', 'telop2': 'アメリカの観測機関が', 'hl': '1991年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A04', 'item_end': '0'},
@@ -92,7 +94,8 @@ SEARCH = {
 
 SILENT_CUTS = {3, 16, 29}
 NARRATION = {
-    0: '地球には、誰も正体を特定できていない音がある。',
+    0: '今も正体が分かっていない、地球の音、3選。',
+    1: '地球には、誰も正体を特定できていない音がある。',
     2: '観測記録は残っている。だが音源が分からない。',
     4: '1991年、アメリカの観測機関が',
     5: '太平洋の海中で奇妙な音を捉えた。',
@@ -138,7 +141,7 @@ NARRATION = {
 # 声1〜声9 のどのファイルにどのカットが入っているか。
 # ファイルごとの実測時間でカットを割り振るので、途中でズレても次のファイルで戻る
 BLOCKS = [
-    [0, 2, 3, 4, 5],
+    [0, 1, 2, 3, 4, 5],
     [6, 7, 8, 9, 10, 11],
     [12, 13, 14, 15, 16, 17],
     [18, 19, 20, 21, 22],
@@ -506,28 +509,49 @@ def join_voices(paths):
     return joined
 
 
+def has_title_voice(paths):
+    # 声0.wav があれば、それはタイトルを読み上げたもの。
+    # タイトルだけ無音だと、始まりが抜けたように聞こえる
+    if not paths:
+        return False
+    m = re.search(r"(\d+)", os.path.basename(paths[0]))
+    return bool(m) and int(m.group(1)) == 0
+
+
+def voice_blocks(paths):
+    if not has_title_voice(paths):
+        return BLOCKS
+    return [[0]] + [[c for c in b if c != 0] for b in BLOCKS]
+
+
 def plan_from_voices(paths, cuts_used):
     # 音声ファイルごとの実測時間で、その中のカットに時間を配る。
     # 1本まるごとで按分するとズレが最後まで積もるが、ファイル単位で
     # 区切れば、ズレてもその声が終われば必ず戻る
-    if len(paths) == len(BLOCKS):
-        pairs = [(media_seconds(p), b) for p, b in zip(paths, BLOCKS)]
+    blocks = voice_blocks(paths)
+    if len(paths) == len(blocks):
+        pairs = [(media_seconds(p), b) for p, b in zip(paths, blocks)]
     else:
         # 本数が想定と違うときは、全部まとめて1本ぶんとして按分する
         pairs = [(sum(media_seconds(p) for p in paths), sorted(cuts_used))]
+
+    titled = has_title_voice(paths) and len(paths) == len(blocks)
 
     dur = {}
     for sec, block in pairs:
         here = [c for c in block if c in cuts_used]
         if not here:
             continue
-        cards = [c for c in here if c in SILENT_CUTS]
-        talk = [c for c in here if c not in SILENT_CUTS]
+        # 番号カードは尺を固定する。タイトルも、読み上げが無いなら固定にする。
+        # 文字数で割ると、原稿の無いタイトルが一瞬で消えてしまう
+        cards = {c: NUMCARD_SEC for c in here if c in SILENT_CUTS}
+        if 0 in here and not titled:
+            cards[0] = TITLE_SEC
+        talk = [c for c in here if c not in cards]
         chars = {c: max(len(NARRATION.get(c, "")), 1) for c in talk}
-        body = max(sec - len(cards) * NUMCARD_SEC, 0.6)
+        body = max(sec - sum(cards.values()), 0.6)
         unit = body / max(sum(chars.values()), 1)
-        for c in cards:
-            dur[c] = NUMCARD_SEC
+        dur.update(cards)
         for c in talk:
             dur[c] = max(chars[c] * unit, 0.7)
     return dur
@@ -728,10 +752,16 @@ def telop(row, font, out):
     if row["hl"] == "TITLE":
         return draw_title(font, out)
     numcard = row["hl"] == "ALL"
-    size = 84 if numcard else 72
-    fnt = ImageFont.truetype(font, size)
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
+
+    # 標準の太ゴシックだと安っぽい。見出し用の極太を本文にも使う
+    face = find_title_font() or font
+    cap = 96 if numcard else 78
+    lines_raw = [l for l in (row["telop1"], row["telop2"]) if l]
+    fnt = min((fit_font(d, l, face, W * 0.88, cap) for l in lines_raw),
+              key=lambda f: f.size)
+    size = fnt.size
 
     def split(line):
         if numcard:
@@ -748,15 +778,32 @@ def telop(row, font, out):
             return segs
         return [(line, "#FFFFFF")]
 
-    lines = [l for l in (row["telop1"], row["telop2"]) if l]
-    lh = int(size * 1.28)
+    lines = lines_raw
+    lh = int(size * 1.30)
     y = int(H * .58) - (len(lines) - 1) * lh // 2
+    sw = max(int(size * 0.13), 8)      # 参考動画は芯と同じくらい黒フチが太い
+
+    # 先に影だけを別の層に描いてぼかす。フチだけだと背景に沈む
+    from PIL import ImageFilter
+    shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ds = ImageDraw.Draw(shadow)
+    yy = y
+    for line in lines:
+        segs = split(line)
+        x = (W - sum(d.textlength(t, font=fnt) for t, _ in segs)) / 2
+        for txt, _ in segs:
+            ds.text((x, yy + size * 0.06), txt, font=fnt, fill=(0, 0, 0, 200),
+                    stroke_width=sw, stroke_fill=(0, 0, 0, 200))
+            x += d.textlength(txt, font=fnt)
+        yy += lh
+    im.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(size * 0.10)))
+
     for line in lines:
         segs = split(line)
         x = (W - sum(d.textlength(t, font=fnt) for t, _ in segs)) / 2
         for txt, col in segs:
             d.text((x, y), txt, font=fnt, fill=col,
-                   stroke_width=6 if col != "#FFFFFF" else 5, stroke_fill="black")
+                   stroke_width=sw, stroke_fill="black")
             x += d.textlength(txt, font=fnt)
         y += lh
     im.save(out)
@@ -764,8 +811,9 @@ def telop(row, font, out):
 
 def camera(kind, n, video=False):
     n = max(n, 2)
-    # 実写は素材自体が動いているので、寄り引きは控えめにする
-    amp = 0.06 if video else 0.08
+    # 1カット1.5秒ほどしかないので、控えめに振ると動いていないように見える。
+    # 実写は素材自体も動くぶん、静止画より少し弱くする
+    amp = 0.11 if video else 0.18
     zmax = 1.0 + amp
     if kind == "zoomout":
         z, x, y = "max(%f-%f*on,1.0)" % (zmax, amp / n), "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
@@ -776,8 +824,8 @@ def camera(kind, n, video=False):
     elif kind == "pandown":
         z, x, y = "%f" % (zmax,), "iw/2-(iw/zoom/2)", "(ih-ih/zoom)*(on/%d)" % n
     elif kind == "still":
-        # 実写では「止め」も微速の寄りにする。完全静止は素人っぽく見える
-        z = "1.0" if not video else "min(1.0+%f*on,%f)" % (amp / n, zmax)
+        # 「止め」でも動かす。完全静止が1カットでも混ざると、そこで目が止まる
+        z = "min(1.0+%f*on,%f)" % (amp * 0.6 / n, 1.0 + amp * 0.6)
         x, y = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
     else:
         z, x, y = "min(1.0+%f*on,%f)" % (amp / n, zmax), "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
