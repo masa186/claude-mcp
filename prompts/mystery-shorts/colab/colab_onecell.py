@@ -233,13 +233,23 @@ def pexels_search(key, term, portrait_only):
     if portrait_only:
         q["orientation"] = "portrait"
     url = "https://api.pexels.com/videos/search?" + urllib.parse.urlencode(q)
-    req = urllib.request.Request(url, headers={"Authorization": key})
+    # Colab のIPからだと素の urllib は 403 で弾かれる。ブラウザらしく名乗る
+    req = urllib.request.Request(url, headers={
+        "Authorization": key,
+        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36"),
+        "Accept": "application/json",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://www.pexels.com/",
+    })
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             return json.loads(r.read()).get("videos", []), None
     except urllib.error.HTTPError as e:
         if e.code == 401:
             sys.exit("Pexelsのキーが違うようです。貼り直して、もう一度押してください。")
+        if e.code == 403:
+            return [], "HTTP 403（キーが無効か、Colabからの接続が拒否されました）"
         return [], "HTTP %s" % e.code
     except Exception as e:
         return [], type(e).__name__
@@ -366,6 +376,45 @@ def wav_seconds(path):
         return w.getnframes() / w.getframerate()
 
 
+def find_voice_file():
+    # 自分で用意した音声を置いてあれば、それを1本まるごと使う
+    names = ("声.wav", "声.mp3", "声.m4a", "全文.wav", "narration.wav", "voice.wav")
+    for d in (".", "/content", AUD, WORK):
+        for n in names:
+            p = os.path.join(d, n)
+            if os.path.exists(p):
+                return os.path.abspath(p)
+    return None
+
+
+def media_seconds(path):
+    if path.lower().endswith(".wav"):
+        try:
+            return wav_seconds(path)
+        except Exception:
+            pass
+    out = subprocess.run([ffmpeg_bin(), "-hide_banner", "-i", path],
+                         capture_output=True, text=True).stderr
+    m = re.search(r"Duration: (\d+):(\d+):(\d+\.?\d*)", out)
+    if not m:
+        return 0.0
+    return int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3))
+
+
+def plan_from_voice(total_sec, cuts_used):
+    # 音声1本しかないので、各カットの尺をセリフの文字数で按分する。
+    # 文字数は話す長さにだいたい比例するので、これで絵と声がほぼ合う
+    cards = [c for c in cuts_used if c in SILENT_CUTS]
+    talk = [c for c in cuts_used if c not in SILENT_CUTS]
+    chars = {c: max(len(NARRATION.get(c, "")), 1) for c in talk}
+    body = max(total_sec - len(cards) * NUMCARD_SEC, 1.0)
+    unit = body / sum(chars.values())
+    dur = {c: NUMCARD_SEC for c in cards}
+    for c in talk:
+        dur[c] = max(chars[c] * unit, 0.8)
+    return dur
+
+
 def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
     os.makedirs(AUD, exist_ok=True)
     made, total = 0, 0.0
@@ -461,7 +510,7 @@ def find_asset(row, cut):
 ASSET_ALIAS = {"6": "A06", "7": "A06", "32": "A26"}
 
 
-def build(font, only_n, out):
+def build(font, only_n, out, fixed_dur=None):
     FF = ffmpeg_bin()
     os.makedirs(TMP, exist_ok=True)
     segs = []
@@ -477,13 +526,17 @@ def build(font, only_n, out):
             continue
         wav = os.path.join(AUD, "cut%02d.wav" % cut)
         wav = wav if os.path.exists(wav) else None
-        if r["hl"] == "ALL":
+        if fixed_dur is not None:
+            wav = None                      # 音声は最後にまとめて敷く
+            dur = fixed_dur.get(cut, 2.2)
+        elif r["hl"] == "ALL":
             dur = NUMCARD_SEC
         elif wav:
             dur = wav_seconds(wav)          # 声の長さがそのままカットの長さになる
         else:
             dur = 2.2
-        dur += GAP_ITEM_END if r["item_end"] == "1" else GAP
+        if fixed_dur is None:
+            dur += GAP_ITEM_END if r["item_end"] == "1" else GAP
         tp = os.path.join(TMP, "t%02d.png" % cut)
         seg = os.path.join(TMP, "s%02d.mp4" % cut)
         telop(r, font, tp)
@@ -542,10 +595,19 @@ def main():
     print("1/4  図版をつくる")
     render_figures()
 
-    if a.voice:
+    voice_file = find_voice_file()
+    fixed = None
+    if voice_file:
+        sec = media_seconds(voice_file)
+        print("2/4  用意された音声を使います（%s / %.1f秒）"
+              % (os.path.basename(voice_file), sec))
+        used = [int(r["cut"]) for r in CUTS if not only or int(r["cut"]) <= only]
+        fixed = plan_from_voice(sec, used)
+    elif a.voice:
         print("2/4  ナレーションをつくる")
         if not vv_alive(a.vv_host):
-            sys.exit("VOICEVOX につながりません。エンジンを起動してから実行してください。")
+            sys.exit("VOICEVOX につながりません。エンジンを起動するか、\n"
+                     "自分で作った音声を /content に「声.wav」の名前で置いてください。")
         sp = vv_find_speaker(a.vv_host, a.voice)
         if not sp:
             names = sorted({t[1] for t in vv_speakers(a.vv_host)})
@@ -568,7 +630,14 @@ def main():
         sys.exit("日本語フォントが見つかりません。")
 
     print("4/4  動画を組み立てる")
-    n = build(font, only, a.out)
+    if fixed is None:
+        n = build(font, only, a.out)
+    else:
+        tmp = os.path.join(WORK, "no_audio.mp4")
+        n = build(font, only, tmp, fixed_dur=fixed)
+        sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+            "-i", tmp, "-i", voice_file, "-map", "0:v", "-map", "1:a",
+            "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", a.out])
     print("\n完成： %s（%dカット）" % (a.out, n))
 
 
