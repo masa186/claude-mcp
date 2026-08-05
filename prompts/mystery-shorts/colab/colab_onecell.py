@@ -606,6 +606,12 @@ def generate_missing(key, only_n):
             r["asset"] = ASSET_ALIAS[row["cut"]]
         if find_asset(r, cut) is None:      # 借りる前の、素の状態で見る
             need.append(cut)
+    # 番号の無い手持ち素材が空きに入る分は、作らなくてよい
+    spare = len(mine_index()[1])
+    if spare:
+        keep = set(spread(need, spare))
+        need = [c for c in need if c not in keep]
+        print("     番号の無い素材が %d 点あるので、その分は作りません" % spare)
     if not need:
         print("     足りないカットはありません")
         return
@@ -623,6 +629,8 @@ def generate_missing(key, only_n):
                 os.remove(dst)
         time.sleep(1.5)
     _PLAN_CACHE.clear()
+    global _MINE_CACHE
+    _MINE_CACHE = None          # 作った分を見直す
     print("     %d / %d 枚できました" % (ok, len(need)))
 
 
@@ -772,11 +780,26 @@ def unpack_zips():
         print("     zip から %d 点を取り出しました" % total)
 
 
-def find_mine(cut):
-    # 自分で用意した素材。名前の先頭にカット番号があれば拾う。
-    # 4.png / 04.jpg / cut4.png / カット4_海.png / 4-2.mp4 … どれでもよい
+MAX_CUT = max(int(r["cut"]) for r in CUTS)
+
+
+def cut_of(name):
+    # 名前からカット番号を読む。「cut25」「カット25」を優先し、
+    # 無ければ最初の数字。番号として有り得ない値なら「番号なし」とみなす。
+    # hf_20260804_183232_1.png のような生成ツールの名前を誤って拾わないため
+    m = re.search(r"(?:cut|カット)[ _\-]*(\d+)", name, re.I)
+    if m:
+        return int(m.group(1))
+    m = re.search(r"(\d+)", name)
+    if m and int(m.group(1)) <= MAX_CUT:
+        return int(m.group(1))
+    return None
+
+
+def _scan_mine():
+    # 手で置いた素材を1回だけ見て、番号つきと番号なしに分ける
     import glob
-    best = None
+    numbered, spare = {}, []
     for d in (MINE, "/content/素材_画像", "/content/素材_動画"):
         if not os.path.isdir(d):
             continue
@@ -784,14 +807,37 @@ def find_mine(cut):
             if os.path.splitext(fp)[1].lower() not in VIDEO_EXT | {".png", ".jpg", ".jpeg", ".webp"}:
                 continue
             name = os.path.basename(fp)
-            # 「cut25」「カット25」の数字を優先。無ければ最初の数字
-            m = (re.search(r"(?:cut|カット)[ _\-]*(\d+)", name, re.I)
-                 or re.search(r"(\d+)", name))
-            if m and int(m.group(1)) == cut:
-                if "_ok" in name:
-                    return fp
-                best = best or fp
-    return best
+            cut = cut_of(name)
+            if cut is None:
+                spare.append(fp)
+                continue
+            # 同じカットに複数あれば、_ok つきを差し替え版として優先する
+            cur = numbered.get(cut)
+            if cur is None or ("_ok" in name and "_ok" not in os.path.basename(cur)):
+                numbered[cut] = fp
+    return numbered, spare
+
+
+_MINE_CACHE = None
+
+
+def mine_index():
+    global _MINE_CACHE
+    if _MINE_CACHE is None:
+        _MINE_CACHE = _scan_mine()
+    return _MINE_CACHE
+
+
+def find_mine(cut):
+    # 自分で用意した素材。名前の先頭にカット番号があれば拾う。
+    # 4.png / 04.jpg / cut4.png / カット4_海.png / 4-2.mp4 … どれでもよい
+    return mine_index()[0].get(cut)
+
+
+def spread(items, n):
+    # items から n 個を等間隔に選ぶ。前半に固まらせないため
+    n = min(n, len(items))
+    return [items[k * len(items) // n] for k in range(n)] if n else []
 
 
 def find_asset(row, cut):
@@ -842,6 +888,18 @@ def _resolve_assets(only_n):
         plan.append([cut, r, a])
         if a:
             have.append((cut, a))
+
+    # 番号が付いていない手持ちの素材は、空いているカットに散らして使う。
+    # 生成ツールが付けた名前のままでも、捨てずに済ませたい
+    spare = [p for p in mine_index()[1] if p not in {a for _, a in have}]
+    gaps = [i for i, (_, _, a) in enumerate(plan) if not a]
+    for i, sp in zip(spread(gaps, len(spare)), spare):
+        plan[i][2] = sp
+        have.append((plan[i][0], sp))
+    if spare and gaps:
+        print("     番号の無い素材 %d 点を空いているカットに入れました"
+              % min(len(spare), len(gaps)))
+
     if not have:
         return plan
 
