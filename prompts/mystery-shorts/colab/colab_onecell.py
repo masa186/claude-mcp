@@ -247,8 +247,36 @@ FACE = "太ゴシック"      # --face で差し替える
 
 # テロップの出し方。参考6本を測ると4本は動きなしの切り替えで、
 # 動くものは 0.1秒ほどで 93% から等倍に戻る出方だった
-ANIMS = ("ポップ", "ふわっと", "なし")
-ANIM = "ポップ"
+ANIMS = ("なし", "ポップ", "ふわっと")
+ANIM = "なし"
+
+# カットの切り替え。参考動画のうち動きがあった2本は、文字ではなく
+# 画面全体をボカして次に移っていた。頻度は 1分あたり 7〜19回
+TRANS = ("半分", "節目だけ", "全部", "なし")
+TRANS_MODE = "半分"
+TRANS_SEC = 0.16
+
+
+def wants_trans(i, row):
+    if TRANS_MODE == "なし":
+        return False
+    if TRANS_MODE == "全部":
+        return True
+    if row["hl"] == "ALL" or row["item_end"] == "1" or row["hl"] == "TITLE":
+        return True
+    return TRANS_MODE == "半分" and i % 2 == 0
+
+
+def trans_filter(on):
+    # カットの頭を、ボカした自分自身から重ねて戻す。
+    # 前後のカットを食い合わないので、尺は1フレームも動かない
+    if not on:
+        return "[v]null[vv]"
+    return ("[v]split[sh][bl];"
+            "[bl]scale=iw*1.06:ih*1.06,crop=%d:%d,gblur=sigma=18,"
+            "rgbashift=rh=7:bh=-7[bb];"
+            "[bb][sh]xfade=transition=fade:duration=%.2f:offset=0[vv]"
+            % (W, H, TRANS_SEC))
 
 
 def telop_filter():
@@ -932,6 +960,15 @@ def telop(row, font, out):
             return segs
         return [(line, "#FFFFFF")]
 
+    # 番号は丸で囲む。参考動画も「②」の形で出していて、そのほうが締まる
+    badge = None
+    if numcard and lines_raw and len(lines_raw[0]) <= 2 and lines_raw[0].isdigit():
+        badge = lines_raw[0]
+        lines_raw = lines_raw[1:]
+        fnt = min((fit_font(d, l, face, W * 0.88, cap) for l in lines_raw),
+                  key=lambda f: f.size)
+        size = fnt.size
+
     lines = lines_raw
     lh = int(size * 1.30)
     y = int(H * .58) - (len(lines) - 1) * lh // 2
@@ -960,6 +997,22 @@ def telop(row, font, out):
                    stroke_width=sw, stroke_fill="black")
             x += d.textlength(txt, font=fnt)
         y += lh
+
+    if badge:
+        from PIL import ImageFont as _IF
+        bs = int(size * 0.86)
+        bf = _IF.truetype(face, bs)
+        r = int(bs * 0.82)
+        cx, cy = W // 2, int(H * .58) - (len(lines) - 1) * lh // 2 - int(r * 1.5)
+        ring = max(int(bs * 0.11), 7)
+        # 黒フチ→色の順に描いて、どんな背景でも輪郭が立つようにする
+        col = COLORS.get(row["hl_color"], "#FF2A2A")
+        for w_, c_ in ((ring + sw, "black"), (ring, col)):
+            d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=c_, width=w_)
+        bw = d.textlength(badge, font=bf)
+        bb = d.textbbox((0, 0), badge, font=bf)
+        d.text((cx - bw / 2, cy - (bb[3] + bb[1]) / 2), badge, font=bf,
+               fill=col, stroke_width=sw, stroke_fill="black")
     im.save(out)
 
 
@@ -1204,7 +1257,7 @@ def build(font, only_n, out, fixed_dur=None):
     FF = ffmpeg_bin()
     os.makedirs(TMP, exist_ok=True)
     segs = []
-    for cut, r, asset in resolve_assets(only_n):
+    for i, (cut, r, asset) in enumerate(resolve_assets(only_n)):
         if asset is None:
             continue
         wav = os.path.join(AUD, "cut%02d.wav" % cut)
@@ -1224,6 +1277,7 @@ def build(font, only_n, out, fixed_dur=None):
             dur += GAP_ITEM_END if r["item_end"] == "1" else GAP
         if r["hl"] == "TITLE":
             dur = max(dur, 3.2)
+        use_trans = wants_trans(i, r) and dur > TRANS_SEC * 2
         tp = os.path.join(TMP, "t%02d.png" % cut)
         seg = os.path.join(TMP, "s%02d.mp4" % cut)
         telop(r, font, tp)
@@ -1248,8 +1302,9 @@ def build(font, only_n, out, fixed_dur=None):
             args += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
             amap = "[2:a]anull[a]"
         args += ["-filter_complex",
-                 "[0:v]%s[bg];%s;%s" % (vf, telop_filter(), amap),
-                 "-map", "[v]", "-map", "[a]", "-t", "%.3f" % dur, "-r", str(FPS),
+                 "[0:v]%s[bg];%s;%s;%s"
+                 % (vf, telop_filter(), trans_filter(use_trans), amap),
+                 "-map", "[vv]", "-map", "[a]", "-t", "%.3f" % dur, "-r", str(FPS),
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "21",
                  "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
                  "-ar", "44100", "-ac", "2", seg]
@@ -1268,7 +1323,7 @@ def build(font, only_n, out, fixed_dur=None):
 
 
 def main():
-    global FACE, ANIM
+    global FACE, ANIM, TRANS_MODE
     ap = argparse.ArgumentParser()
     ap.add_argument("--key", required=True)
     ap.add_argument("--range", type=int, default=0, help="0なら全部")
@@ -1281,9 +1336,11 @@ def main():
     ap.add_argument("--gen-images", default="", help="Geminiのキー。足りないカットを生成して終了")
     ap.add_argument("--face", default=FACE, choices=sorted(FACES), help="テロップの書体")
     ap.add_argument("--anim", default=ANIM, choices=ANIMS, help="テロップの出し方")
+    ap.add_argument("--trans", default=TRANS_MODE, choices=TRANS, help="カットの切り替え")
     a = ap.parse_args()
     FACE = a.face
     ANIM = a.anim
+    TRANS_MODE = a.trans
 
     os.makedirs(WORK, exist_ok=True)
     only = a.range or None
