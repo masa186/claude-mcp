@@ -113,6 +113,26 @@ def render_telop(row, font_path, out_path):
 
     l1, l2 = row["telop1"], row["telop2"]
     hl, color_name = row["hl"], row["hl_color"]
+
+    if hl == "TITLE":
+        # 行ごとに大きさと色を変える。1行にベタ打ちすると弱い
+        spec = [("今も正体が", "#FFFFFF", 0.62),
+                ("分かっていない", "#FFFFFF", 0.95),
+                ("地球の音", COLORS["red"], 1.00),
+                ("3選", "#FFD24A", 0.80)]
+        img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(img)
+        base = 92
+        heights = [int(base * k * 1.30) for _, _, k in spec]
+        y = (H - sum(heights)) // 2
+        for (text, col, k), lh in zip(spec, heights):
+            f = ImageFont.truetype(font_path, int(base * k))
+            d.text(((W - d.textlength(text, font=f)) / 2, y), text, font=f,
+                   fill=col, stroke_width=8, stroke_fill="black")
+            y += lh
+        img.save(out_path)
+        return
+
     is_numcard = hl == "ALL"
 
     size = 84 if is_numcard else 72
@@ -250,11 +270,14 @@ def main():
 
         if asset is None:
             missing_asset.append((cut, r["asset"]))
-        if wav is None and not is_numcard:
+        if wav is None and not is_numcard and r["hl"] != "TITLE":
             missing_wav.append(cut)
 
-        dur = (NUMCARD_SEC if is_numcard
-               else (wav_seconds(wav) if wav else 2.2))
+        if r["hl"] == "TITLE":
+            dur = max(wav_seconds(wav) if wav else 3.5, 3.2)
+        else:
+            dur = (NUMCARD_SEC if is_numcard
+                   else (wav_seconds(wav) if wav else 2.2))
         dur += GAP_ITEM_END if r.get("item_end") == "1" else GAP
         plan.append((r, cut, asset, wav, dur))
 

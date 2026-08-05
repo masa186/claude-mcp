@@ -16,6 +16,8 @@ COLORS = {"red": "#FF2A2A", "yellow": "#FFD400", "": "#FFFFFF"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 
 CUTS = [
+    {'cut': '0', 'telop1': 'TITLE', 'telop2': '', 'hl': 'TITLE', 'hl_color': '',
+     'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '1', 'telop1': '誰も正体を', 'telop2': '特定できていない音', 'hl': '特定できていない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '2', 'telop1': '記録は残っている', 'telop2': 'だが音源が分からない', 'hl': '音源', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A02', 'item_end': '0'},
     {'cut': '3', 'telop1': '1.アップスウィープ', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A03', 'item_end': '0'},
@@ -91,6 +93,7 @@ SEARCH = {
 
 SILENT_CUTS = {3, 16, 29}
 NARRATION = {
+    0: '今も正体が分かっていない、地球の音。3選。',
     1: '地球には、誰も正体を特定できていない音がある。',
     2: '観測記録は残っている。だが音源が分からない。',
     4: '1991年、アメリカの観測機関が',
@@ -438,8 +441,32 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
 
 # ── テロップ ──
 
+TITLE_LINES = [("今も正体が", "#FFFFFF", 0.62),
+               ("分かっていない", "#FFFFFF", 0.95),
+               ("地球の音", "#FF2A2A", 1.00),
+               ("3選", "#FFD24A", 0.80)]
+
+
+def draw_title(font_path, out):
+    # 行ごとに大きさと色を変える。1行にベタ打ちすると弱い
+    from PIL import Image, ImageDraw, ImageFont
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    base = 92
+    fonts = [(t, c, ImageFont.truetype(font_path, int(base * k))) for t, c, k in TITLE_LINES]
+    heights = [int(base * k * 1.30) for _, _, k in TITLE_LINES]
+    y = (H - sum(heights)) // 2
+    for (text, col, fnt), lh in zip(fonts, heights):
+        x = (W - d.textlength(text, font=fnt)) / 2
+        d.text((x, y), text, font=fnt, fill=col, stroke_width=8, stroke_fill="black")
+        y += lh
+    im.save(out)
+
+
 def telop(row, font, out):
     from PIL import Image, ImageDraw, ImageFont
+    if row["hl"] == "TITLE":
+        return draw_title(font, out)
     numcard = row["hl"] == "ALL"
     size = 84 if numcard else 72
     fnt = ImageFont.truetype(font, size)
@@ -522,6 +549,8 @@ def build(font, only_n, out, fixed_dur=None):
         if row["cut"] in ASSET_ALIAS:
             r["asset"] = ASSET_ALIAS[row["cut"]]
         asset = find_asset(r, cut)
+        if asset is None and cut == 0:
+            asset = find_asset({"asset": "A01"}, 1)   # タイトルはカット1の絵を借りる
         if asset is None:
             continue
         wav = os.path.join(AUD, "cut%02d.wav" % cut)
@@ -529,6 +558,8 @@ def build(font, only_n, out, fixed_dur=None):
         if fixed_dur is not None:
             wav = None                      # 音声は最後にまとめて敷く
             dur = fixed_dur.get(cut, 2.2)
+        elif r["hl"] == "TITLE":
+            dur = wav_seconds(wav) if wav else 3.5
         elif r["hl"] == "ALL":
             dur = NUMCARD_SEC
         elif wav:
@@ -537,6 +568,8 @@ def build(font, only_n, out, fixed_dur=None):
             dur = 2.2
         if fixed_dur is None:
             dur += GAP_ITEM_END if r["item_end"] == "1" else GAP
+        if r["hl"] == "TITLE":
+            dur = max(dur, 3.2)
         tp = os.path.join(TMP, "t%02d.png" % cut)
         seg = os.path.join(TMP, "s%02d.mp4" % cut)
         telop(r, font, tp)
