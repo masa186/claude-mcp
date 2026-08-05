@@ -506,8 +506,10 @@ def media_seconds(path):
     return int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3))
 
 
-# 参考動画は尺の2〜3割が間だった。ブロックをそのまま繋ぐと息継ぎが無くなる
-BLOCK_GAP, TITLE_GAP = 0.30, 0.45
+# 参考動画を測ると、間は 0.24〜0.38秒が中央で、0.40〜0.70秒の長めが
+# 1本あたり7〜23回あった。短い間だけだと切れ目が立たないので、
+# ブロックの継ぎ目はその長めの帯に置く
+BLOCK_GAP, TITLE_GAP = 0.45, 0.60
 
 
 def voice_gaps(paths):
