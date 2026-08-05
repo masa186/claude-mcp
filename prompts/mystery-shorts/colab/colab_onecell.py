@@ -89,10 +89,56 @@ SEARCH = {
     42: ['archive shelves tape reels storage'],
 }
 
+SILENT_CUTS = {3, 16, 29}
+NARRATION = {
+    1: '地球には、誰も正体を特定できていない音がある。',
+    2: '観測記録は残っている。だが音源が分からない。',
+    4: '1991年、アメリカの観測機関が',
+    5: '太平洋の海中で奇妙な音を捉えた。',
+    6: '周波数が上昇していく音が',
+    7: '延々と繰り返される。',
+    8: 'アップスウィープと名付けられた。',
+    9: '音源は南太平洋の一点。',
+    10: 'そこは陸から遠く離れた海域だった。',
+    11: 'この音には季節変動がある。',
+    12: '春と秋にピークを迎える。',
+    13: '海底火山の活動ではないかとされるが',
+    14: '音源は特定されていない。',
+    15: 'そして今も、鳴り続けている。',
+    17: '世界各地で同じ報告が上がっている。',
+    18: '低い唸り声のような音が聞こえる。',
+    19: 'エンジンが遠くで回っているような音だ。',
+    20: 'ハムと呼ばれている。',
+    21: '1970年代のイギリス、ブリストル。',
+    22: '1990年代のアメリカ、タオス。',
+    23: 'タオスでは住民のおよそ2パーセントが',
+    24: 'その音が聞こえると答えた。',
+    25: 'しかし残りの98パーセントには聞こえない。',
+    26: '工業機械、地殻の振動、耳鳴り。',
+    27: 'あらゆる説が検証されたが',
+    28: '発生源はいまだに特定されていない。',
+    30: '1989年、アメリカ海軍の潜水艦探知網が',
+    31: '太平洋である鳴き声を拾った。',
+    32: '52ヘルツ。',
+    33: 'クジラの声としては異常に高い。',
+    34: 'シロナガスクジラは10から39ヘルツ。',
+    35: 'この個体だけが違う周波数で鳴いていた。',
+    36: 'つまり仲間には届かない。',
+    37: '研究者は30年以上追跡を続けた。',
+    38: '回遊経路はどの種とも一致しない。',
+    39: '種の特定も、姿の確認もできていない。',
+    40: '世界で最も孤独なクジラと呼ばれている。',
+    41: '3つの音に共通するのは',
+    42: '記録は残っているのに',
+    43: '音源だけが見つかっていないという点だ。',
+    44: '地球はまだ、静かではない。',
+}
+
 WORK = os.path.abspath("shorts_work")
 VID = os.path.join(WORK, "素材_動画")
 IMG = os.path.join(WORK, "素材_画像")
 TMP = os.path.join(WORK, "_作業中")
+AUD = os.path.join(WORK, "音声")
 
 
 def sh(args):
@@ -233,6 +279,83 @@ def pexels(key, cuts_wanted, per_cut=2, min_h=1400):
     return got, miss
 
 
+
+# ── VOICEVOX ──────────────────────────────────────────────────────
+
+def vv_get(host, path, timeout=20):
+    with urllib.request.urlopen(host + path, timeout=timeout) as r:
+        return json.loads(r.read())
+
+
+def vv_alive(host, timeout=5):
+    try:
+        urllib.request.urlopen(host + "/version", timeout=timeout).read()
+        return True
+    except Exception:
+        return False
+
+
+def vv_speakers(host):
+    out = []
+    for sp in vv_get(host, "/speakers"):
+        for st in sp["styles"]:
+            out.append((st["id"], sp["name"], st["name"]))
+    return out
+
+
+def vv_find_speaker(host, name):
+    # 名前の一部が一致する話者を探す。ノーマル系のスタイルを優先する
+    hits = [t for t in vv_speakers(host) if name in t[1]]
+    if not hits:
+        return None
+    for t in hits:
+        if t[2] in ("ノーマル", "normal"):
+            return t
+    return hits[0]
+
+
+def vv_synth(host, speaker, text, speed, pitch, intonation):
+    q = json.loads(urllib.request.urlopen(urllib.request.Request(
+        host + "/audio_query?" + urllib.parse.urlencode({"text": text, "speaker": speaker}),
+        data=b"", method="POST"), timeout=60).read())
+    q["speedScale"] = speed
+    q["pitchScale"] = pitch
+    q["intonationScale"] = intonation
+    q["prePhonemeLength"] = 0.05
+    q["postPhonemeLength"] = 0.05
+    req = urllib.request.Request(
+        host + "/synthesis?" + urllib.parse.urlencode({"speaker": speaker}),
+        data=json.dumps(q).encode(), method="POST",
+        headers={"Content-Type": "application/json"})
+    return urllib.request.urlopen(req, timeout=300).read()
+
+
+def wav_seconds(path):
+    with wave.open(path, "rb") as w:
+        return w.getnframes() / w.getframerate()
+
+
+def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
+    os.makedirs(AUD, exist_ok=True)
+    made, total = 0, 0.0
+    for cut in sorted(NARRATION):
+        if cuts_wanted and cut not in cuts_wanted:
+            continue
+        path = os.path.join(AUD, "cut%02d.wav" % cut)
+        if not os.path.exists(path):
+            try:
+                open(path, "wb").write(
+                    vv_synth(host, speaker, NARRATION[cut], speed, pitch, intonation))
+                made += 1
+            except Exception as e:
+                print("   カット%-2d  失敗（%s）" % (cut, type(e).__name__))
+                if os.path.exists(path):
+                    os.remove(path)
+                continue
+        total += wav_seconds(path)
+    return made, total
+
+
 # ── テロップ ──
 
 def telop(row, font, out):
@@ -321,7 +444,14 @@ def build(font, only_n, out):
         asset = find_asset(r, cut)
         if asset is None:
             continue
-        dur = (NUMCARD_SEC if r["hl"] == "ALL" else 2.2)
+        wav = os.path.join(AUD, "cut%02d.wav" % cut)
+        wav = wav if os.path.exists(wav) else None
+        if r["hl"] == "ALL":
+            dur = NUMCARD_SEC
+        elif wav:
+            dur = wav_seconds(wav)          # 声の長さがそのままカットの長さになる
+        else:
+            dur = 2.2
         dur += GAP_ITEM_END if r["item_end"] == "1" else GAP
         tp = os.path.join(TMP, "t%02d.png" % cut)
         seg = os.path.join(TMP, "s%02d.mp4" % cut)
@@ -335,10 +465,16 @@ def build(font, only_n, out):
         else:
             args += ["-loop", "1", "-i", asset]
             vf = camera(r["camera"], frames)
-        args += ["-i", tp, "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
-                 "-filter_complex",
-                 "[0:v]%s[bg];[bg][1:v]overlay=0:0:format=auto[v]" % vf,
-                 "-map", "[v]", "-map", "2:a", "-t", "%.3f" % dur, "-r", str(FPS),
+        args += ["-i", tp]
+        if wav:
+            args += ["-i", wav]
+            amap = "[2:a]apad[a]"
+        else:
+            args += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
+            amap = "[2:a]anull[a]"
+        args += ["-filter_complex",
+                 "[0:v]%s[bg];[bg][1:v]overlay=0:0:format=auto[v];%s" % (vf, amap),
+                 "-map", "[v]", "-map", "[a]", "-t", "%.3f" % dur, "-r", str(FPS),
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "21",
                  "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
                  "-ar", "44100", "-ac", "2", seg]
@@ -361,16 +497,36 @@ def main():
     ap.add_argument("--key", required=True)
     ap.add_argument("--range", type=int, default=0, help="0なら全部")
     ap.add_argument("--out", default="動画.mp4")
+    ap.add_argument("--voice", default="", help="VOICEVOXの話者名。空なら声なし")
+    ap.add_argument("--vv-host", default="http://127.0.0.1:50021")
+    ap.add_argument("--speed", type=float, default=1.10)
+    ap.add_argument("--pitch", type=float, default=-0.02)
+    ap.add_argument("--intonation", type=float, default=0.90)
     a = ap.parse_args()
 
     os.makedirs(WORK, exist_ok=True)
     only = a.range or None
     wanted = {c for c in SEARCH if not only or c <= only}
 
-    print("1/3  図版をつくる")
+    print("1/4  図版をつくる")
     render_figures()
 
-    print("2/3  Pexelsから映像を落とす（%dカット）" % len(wanted))
+    if a.voice:
+        print("2/4  ナレーションをつくる")
+        if not vv_alive(a.vv_host):
+            sys.exit("VOICEVOX につながりません。エンジンを起動してから実行してください。")
+        sp = vv_find_speaker(a.vv_host, a.voice)
+        if not sp:
+            names = sorted({t[1] for t in vv_speakers(a.vv_host)})
+            sys.exit("話者「%s」が見つかりません。使えるのは: %s" % (a.voice, "、".join(names)))
+        print("     %s（%s） ID=%d" % (sp[1], sp[2], sp[0]))
+        narr_cuts = {c for c in NARRATION if not only or c <= only}
+        made, total = make_narration(a.vv_host, sp[0], a.speed, a.pitch, a.intonation, narr_cuts)
+        print("     %d本 生成 / 発話 %.1f秒" % (made, total))
+    else:
+        print("2/4  ナレーションは作りません")
+
+    print("3/4  Pexelsから映像を落とす（%dカット）" % len(wanted))
     got, miss = pexels(a.key, wanted)
     print("     %d本 取得" % got)
     if miss:
@@ -380,7 +536,7 @@ def main():
     if not font:
         sys.exit("日本語フォントが見つかりません。")
 
-    print("3/3  動画を組み立てる")
+    print("4/4  動画を組み立てる")
     n = build(font, only, a.out)
     print("\n完成： %s（%dカット）" % (a.out, n))
 
