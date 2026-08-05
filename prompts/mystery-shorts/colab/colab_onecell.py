@@ -471,24 +471,39 @@ def wav_seconds(path):
         return w.getnframes() / w.getframerate()
 
 
+AUDIO_EXT = (".wav", ".mp3", ".m4a", ".ogg", ".aac", ".flac")
+NOT_VOICE = ("bgm", "music", "narration", "no_audio", "se_")
+
+
+def voice_order(path):
+    # audio(1).wav / 声1.wav / 音声 2.mp3 … 名前の中の数字を順番とみなす。
+    # 数字が無いものは先頭（1本目は audio.wav のように番号が付かない）
+    n = os.path.basename(path)
+    m = re.findall(r"\d+", os.path.splitext(n)[0])
+    return (int(m[0]) if m else -1, n)
+
+
 def find_voice_files():
-    # 声.wav が1本でも、声1〜声9 のように分かれていてもよい。番号順に返す
+    # 声1.wav … と付いていれば確実。付いていなくても、置いてある音声を
+    # 名前の数字順に並べて使う。スマホだと名前を直すのが一番の手間なので
     import glob
-    exts = ("wav", "mp3", "m4a")
     for d in ("/content", ".", AUD, WORK):
         if not os.path.isdir(d):
             continue
-        hits = []
-        for e in exts:
-            hits += glob.glob(os.path.join(d, "声*." + e))
-            hits += glob.glob(os.path.join(d, "voice*." + e))
-        if not hits:
-            continue
-
-        def order(path):
-            m = re.findall(r"\d+", os.path.basename(path))
-            return (int(m[0]) if m else 0, os.path.basename(path))
-        return sorted(set(hits), key=order)
+        named, loose = [], []
+        for fp in glob.glob(os.path.join(d, "*")):
+            if os.path.splitext(fp)[1].lower() not in AUDIO_EXT:
+                continue
+            n = os.path.basename(fp).lower()
+            if any(x in n for x in NOT_VOICE):
+                continue
+            if n.startswith(("声", "voice")):
+                named.append(fp)
+            else:
+                loose.append(fp)
+        hits = named or loose
+        if hits:
+            return sorted(set(hits), key=voice_order)
     return []
 
 
@@ -554,10 +569,12 @@ def join_voices(paths):
 
 
 def has_title_voice(paths):
-    # 声0.wav があれば、それはタイトルを読み上げたもの。
-    # タイトルだけ無音だと、始まりが抜けたように聞こえる
+    # 先頭がタイトルの読み上げかどうか。声0.wav なら明らか。
+    # 名前を直していない場合は本数で見る（ブロック数より1本多ければ先頭がタイトル）
     if not paths:
         return False
+    if len(paths) == len(BLOCKS) + 1:
+        return True
     m = re.search(r"(\d+)", os.path.basename(paths[0]))
     return bool(m) and int(m.group(1)) == 0
 
@@ -578,8 +595,10 @@ def plan_from_voices(paths, cuts_used):
         pairs = [(media_seconds(p) + g, b)
                  for p, b, g in zip(paths, blocks, gaps)]
     else:
-        # 本数が想定と違うときは、全部まとめて1本ぶんとして按分する
-        pairs = [(sum(media_seconds(p) for p in paths), sorted(cuts_used))]
+        # 本数が想定と違うときは、全部まとめて1本ぶんとして按分する。
+        # 継ぎ目に入れる無音も足しておかないと、そのぶん丸ごとずれる
+        pairs = [(sum(media_seconds(p) for p in paths) + sum(voice_gaps(paths)),
+                  sorted(cuts_used))]
 
     titled = has_title_voice(paths) and len(paths) == len(blocks)
 
@@ -601,6 +620,13 @@ def plan_from_voices(paths, cuts_used):
         dur.update(cards)
         for c in talk:
             dur[c] = max(chars[c] * unit, 0.7)
+        # 下限を効かせると合計が声より長くなることがある。
+        # はみ出したぶんは全体を縮めて、必ず声の長さに収める
+        got = sum(dur[c] for c in here)
+        if got > sec + 1e-6:
+            k = sec / got
+            for c in here:
+                dur[c] *= k
     return dur
 
 
@@ -1204,8 +1230,19 @@ def main():
     fixed, voice_file = None, None
     if voices:
         print("2/4  用意された音声を使います（%d本）" % len(voices))
-        for v in voices:
-            print("     %-16s %5.1f秒" % (os.path.basename(v), media_seconds(v)))
+        titled = has_title_voice(voices)
+        for i, v in enumerate(voices):
+            what = "タイトル" if (titled and i == 0) else "声%d" % (i if titled else i + 1)
+            print("     %-8s %-22s %5.1f秒"
+                  % (what, os.path.basename(v)[:22], media_seconds(v)))
+        want = len(BLOCKS) + (1 if titled else 0)
+        if len(voices) != want:
+            print("     ※ %d本のはずが %d本です。台本のブロックと数が合わないので、"
+                  % (want, len(voices)))
+            print("       全部まとめて割り振ります（音が少しずれることがあります）")
+        elif not all(os.path.basename(v).startswith(("声", "voice")) for v in voices):
+            print("     ※ 名前で順番を決めました。上の並びが台本の順と違っていたら、")
+            print("       声1.wav 声2.wav … と付け直してください")
     elif a.voice:
         print("2/4  ナレーションをつくる")
         if not vv_alive(a.vv_host):
