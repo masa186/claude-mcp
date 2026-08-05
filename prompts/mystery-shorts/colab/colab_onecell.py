@@ -258,25 +258,40 @@ TRANS_SEC = 0.16
 
 
 def wants_trans(i, row):
+    # タイトルだけは終わりをボカして次へ渡す。参考動画もそこだけ強く飛ばしていた
     if TRANS_MODE == "なし":
-        return False
+        return ""
+    if row["hl"] == "TITLE":
+        return "out"
     if TRANS_MODE == "全部":
-        return True
-    if row["hl"] == "ALL" or row["item_end"] == "1" or row["hl"] == "TITLE":
-        return True
-    return TRANS_MODE == "半分" and i % 2 == 0
+        return "in"
+    if row["hl"] == "ALL" or row["item_end"] == "1":
+        return "in"
+    return "in" if (TRANS_MODE == "半分" and i % 2 == 0) else ""
 
 
-def trans_filter(on):
-    # カットの頭を、ボカした自分自身から重ねて戻す。
-    # 前後のカットを食い合わないので、尺は1フレームも動かない
-    if not on:
+def blur_chain(strong):
+    z, sig, sft = (1.20, 34, 13) if strong else (1.06, 18, 7)
+    return ("scale=iw*%.2f:ih*%.2f,crop=%d:%d,gblur=sigma=%d,rgbashift=rh=%d:bh=-%d"
+            % (z, z, W, H, sig, sft, sft))
+
+
+def trans_filter(mode, dur):
+    # ボカした自分自身と重ねる。前後のカットを食い合わないので、
+    # 尺は1フレームも動かない
+    if not mode:
         return "[v]null[vv]"
-    return ("[v]split[sh][bl];"
-            "[bl]scale=iw*1.06:ih*1.06,crop=%d:%d,gblur=sigma=18,"
-            "rgbashift=rh=7:bh=-7[bb];"
-            "[bb][sh]xfade=transition=fade:duration=%.2f:offset=0[vv]"
-            % (W, H, TRANS_SEC))
+    d = min(TRANS_SEC, max(dur * 0.4, 0.06))
+    if mode == "in":
+        return ("[v]split[sh][bl];[bl]%s[bb];"
+                "[bb][sh]xfade=transition=fade:duration=%.2f:offset=0[vv]"
+                % (blur_chain(False), d))
+    # タイトルは終わり際にボカして飛ばす。長くなるぶんは切り戻す
+    d = min(0.34, max(dur * 0.3, 0.10))
+    return ("[v]split[sh][bl];[bl]%s[bb];"
+            "[sh][bb]xfade=transition=fade:duration=%.2f:offset=%.3f,"
+            "trim=0:%.3f,setpts=PTS-STARTPTS[vv]"
+            % (blur_chain(True), d, max(dur - d, 0.02), dur))
 
 
 def telop_filter():
@@ -766,9 +781,9 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
 # Imagen は有料の枠でしか動かない。無料のキーだと 429 が返るので、
 # 無料でも使える gemini-2.5-flash-image に落ちられるようにしておく。
 # 呼び方も返り方も違うので、方式ごと持つ
-GEMINI_MODELS = [("imagen-4.0-generate-001", "predict"),
-                 ("imagen-3.0-generate-002", "predict"),
-                 ("gemini-2.5-flash-image", "generate")]
+GEMINI_MODELS = [("gemini-2.5-flash-image", "generate"),
+                 ("imagen-4.0-generate-001", "predict"),
+                 ("imagen-3.0-generate-002", "predict")]
 
 NEGATIVE = ("text, letters, watermark, logo, caption, cartoon, anime, "
             "3d render, distorted face, extra fingers, low resolution, blurry")
@@ -804,6 +819,17 @@ def gen_read(res, how):
     return None
 
 
+def quota_kind(err):
+    # 429 が「1分あたり」なのか「1日ぶん使い切り」なのかを本文から見る
+    try:
+        body = err.read().decode("utf-8", "ignore")
+    except Exception:
+        return "minute"
+    if re.search(r"PerDay|per day|daily", body, re.I):
+        return "day"
+    return "minute"
+
+
 def gen_one(prompt, key):
     last = None
     for model, how in GEMINI_MODELS:
@@ -825,6 +851,11 @@ def gen_one(prompt, key):
                 last = "HTTP %s" % e.code
                 if e.code == 401:        # キーが違う。どのモデルでも同じ
                     raise RuntimeError("キーが違います")
+                if e.code == 429:
+                    detail = quota_kind(e)
+                    if detail == "day":
+                        raise RuntimeError("今日の無料枠を使い切りました")
+                    last = "混み合っています"
                 continue                 # 枠切れもモデル名違いも、次を試す
             except Exception as e:
                 last = type(e).__name__
@@ -861,18 +892,34 @@ def generate_missing(key, only_n, reserve_pexels=False):
         print("     足りないカットはありません")
         return
     print("     %d カットを生成します: %s" % (len(need), ", ".join(map(str, need))))
-    ok = 0
+    print("     無料枠は1分あたりの上限が低いので、ゆっくり進みます")
+    ok, wait = 0, 6.0
     for cut in need:
         dst = os.path.join(GEN, "%02d.png" % cut)
-        try:
-            open(dst, "wb").write(gen_one(PROMPTS[cut], key))
-            ok += 1
-            print("     カット%-2d  できました" % cut)
-        except Exception as e:
-            print("     カット%-2d  失敗（%s）" % (cut, e))
-            if os.path.exists(dst):
-                os.remove(dst)
-        time.sleep(1.5)
+        # 429 は1分あたりの上限。間を空けて3回まで粘る
+        for attempt in range(3):
+            try:
+                open(dst, "wb").write(gen_one(PROMPTS[cut], key))
+                ok += 1
+                print("     カット%-2d  できました" % cut)
+                break
+            except Exception as e:
+                if os.path.exists(dst):
+                    os.remove(dst)
+                if "今日の無料枠" in str(e):
+                    print("     カット%-2d  %s" % (cut, e))
+                    print("     ここで止めます。明日また押すか、④に進んでください")
+                    print("     （足りないカットは近くの映像で埋まります）")
+                    _PLAN_CACHE.clear()
+                    print("     %d / %d 枚できました" % (ok, len(need)))
+                    return
+                if attempt == 2:
+                    print("     カット%-2d  失敗（%s）" % (cut, e))
+                else:
+                    print("     カット%-2d  混み合っています。%d秒待ちます"
+                          % (cut, int(wait * (attempt + 1) * 5)))
+                    time.sleep(wait * (attempt + 1) * 5)
+        time.sleep(wait)
     _PLAN_CACHE.clear()
     global _MINE_CACHE
     _MINE_CACHE = None          # 作った分を見直す
@@ -1277,7 +1324,7 @@ def build(font, only_n, out, fixed_dur=None):
             dur += GAP_ITEM_END if r["item_end"] == "1" else GAP
         if r["hl"] == "TITLE":
             dur = max(dur, 3.2)
-        use_trans = wants_trans(i, r) and dur > TRANS_SEC * 2
+        use_trans = wants_trans(i, r) if dur > TRANS_SEC * 2 else ""
         tp = os.path.join(TMP, "t%02d.png" % cut)
         seg = os.path.join(TMP, "s%02d.mp4" % cut)
         telop(r, font, tp)
@@ -1303,7 +1350,7 @@ def build(font, only_n, out, fixed_dur=None):
             amap = "[2:a]anull[a]"
         args += ["-filter_complex",
                  "[0:v]%s[bg];%s;%s;%s"
-                 % (vf, telop_filter(), trans_filter(use_trans), amap),
+                 % (vf, telop_filter(), trans_filter(use_trans, dur), amap),
                  "-map", "[vv]", "-map", "[a]", "-t", "%.3f" % dur, "-r", str(FPS),
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "21",
                  "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
