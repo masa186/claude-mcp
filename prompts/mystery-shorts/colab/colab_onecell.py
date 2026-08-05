@@ -21,7 +21,7 @@ CUTS = [
      'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '1', 'telop1': '地球には', 'telop2': '正体不明の音がある', 'hl': '正体不明', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '2', 'telop1': '記録は残っている', 'telop2': 'だが音源が分からない', 'hl': '音源', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A02', 'item_end': '0'},
-    {'cut': '3', 'telop1': '1つ目', 'telop2': 'アップスウィープ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A03', 'item_end': '0'},
+    {'cut': '3', 'telop1': '1', 'telop2': 'アップスウィープ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A03', 'item_end': '0'},
     {'cut': '4', 'telop1': '1991年', 'telop2': 'アメリカの観測機関が', 'hl': '1991年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A04', 'item_end': '0'},
     {'cut': '5', 'telop1': '太平洋の海中で', 'telop2': '奇妙な音を捉えた', 'hl': '奇妙な音', 'hl_color': 'yellow', 'camera': 'pandown', 'asset': 'A05', 'item_end': '0'},
     {'cut': '6', 'telop1': '周波数が', 'telop2': '上昇していく音が', 'hl': '上昇', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A06', 'item_end': '0'},
@@ -34,7 +34,7 @@ CUTS = [
     {'cut': '13', 'telop1': '海底火山の活動では', 'telop2': 'ないかとされるが', 'hl': '海底火山', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A11', 'item_end': '0'},
     {'cut': '14', 'telop1': '音源は', 'telop2': '特定されていない', 'hl': '特定されていない', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A08', 'item_end': '0'},
     {'cut': '15', 'telop1': 'そして今も', 'telop2': '鳴り続けている', 'hl': '今も', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A12', 'item_end': '1'},
-    {'cut': '16', 'telop1': '2つ目', 'telop2': 'ザ・ハム', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A13', 'item_end': '0'},
+    {'cut': '16', 'telop1': '2', 'telop2': 'ザ・ハム', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A13', 'item_end': '0'},
     {'cut': '17', 'telop1': '世界各地で', 'telop2': '同じ報告が上がっている', 'hl': '同じ報告', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A14', 'item_end': '0'},
     {'cut': '18', 'telop1': '低い唸り声のような', 'telop2': '音が聞こえる', 'hl': '唸り声', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A15', 'item_end': '0'},
     {'cut': '19', 'telop1': 'エンジンが遠くで', 'telop2': '回っているような音', 'hl': 'エンジン', 'hl_color': 'yellow', 'camera': 'panright', 'asset': 'A16', 'item_end': '0'},
@@ -47,7 +47,7 @@ CUTS = [
     {'cut': '26', 'telop1': '工業機械 地殻の振動', 'telop2': '耳鳴り', 'hl': '', 'hl_color': '', 'camera': 'pandown', 'asset': 'A22', 'item_end': '0'},
     {'cut': '27', 'telop1': 'あらゆる説が', 'telop2': '検証されたが', 'hl': '検証', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A23', 'item_end': '0'},
     {'cut': '28', 'telop1': '発生源はいまだに', 'telop2': '特定されていない', 'hl': '特定されていない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A13', 'item_end': '1'},
-    {'cut': '29', 'telop1': '3つ目', 'telop2': '52ヘルツのクジラ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A01', 'item_end': '0'},
+    {'cut': '29', 'telop1': '3', 'telop2': '52ヘルツのクジラ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A01', 'item_end': '0'},
     {'cut': '30', 'telop1': '1989年', 'telop2': '米海軍の探知網が', 'hl': '1989年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A24', 'item_end': '0'},
     {'cut': '31', 'telop1': '太平洋である', 'telop2': '鳴き声を拾った', 'hl': '鳴き声', 'hl_color': 'yellow', 'camera': 'panright', 'asset': 'A25', 'item_end': '0'},
     {'cut': '32', 'telop1': '52ヘルツ', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'still', 'asset': 'A26a', 'item_end': '0'},
@@ -234,12 +234,25 @@ def find_font():
     return ""
 
 
+# 選べる見出し書体。①が /content/fonts に落としておく
+FACES = {
+    "ゴツい": "DelaGothicOne-Regular.ttf",
+    "太ゴシック": "ZenKakuGothicNew-Black.ttf",
+    "ポップ": "RocknRollOne-Regular.ttf",
+    "丸ゴシック": "ZenMaruGothic-Black.ttf",
+    "レトロ": "ReggaeOne-Regular.ttf",
+    "筆っぽい": "KaiseiDecol-Bold.ttf",
+}
+FACE = "太ゴシック"      # --face で差し替える
+
+
 def find_title_font():
-    # タイトルは極太の見出し用。無ければ本文用で代用する
+    # タイトルとテロップの書体。無ければ本文用で代用する
     import glob
-    for pat in ("/content/fonts/DelaGothicOne*.ttf",
+    want = FACES.get(FACE, FACES["太ゴシック"])
+    for pat in ("/content/fonts/" + want,
+                "/content/fonts/DelaGothicOne*.ttf",
                 "/usr/share/fonts/**/DelaGothicOne*",
-                "/usr/share/fonts/**/RampartOne*",
                 "/usr/share/fonts/**/NotoSansCJK*Black*"):
         hits = sorted(glob.glob(pat, recursive=True))
         if hits:
@@ -1120,6 +1133,7 @@ def build(font, only_n, out, fixed_dur=None):
 
 
 def main():
+    global FACE
     ap = argparse.ArgumentParser()
     ap.add_argument("--key", required=True)
     ap.add_argument("--range", type=int, default=0, help="0なら全部")
@@ -1130,7 +1144,9 @@ def main():
     ap.add_argument("--pitch", type=float, default=-0.02)
     ap.add_argument("--intonation", type=float, default=0.90)
     ap.add_argument("--gen-images", default="", help="Geminiのキー。足りないカットを生成して終了")
+    ap.add_argument("--face", default=FACE, choices=sorted(FACES), help="テロップの書体")
     a = ap.parse_args()
+    FACE = a.face
 
     os.makedirs(WORK, exist_ok=True)
     only = a.range or None
