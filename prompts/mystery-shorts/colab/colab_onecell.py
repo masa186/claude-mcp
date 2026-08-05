@@ -135,6 +135,20 @@ NARRATION = {
     44: '地球はまだ、静かではない。',
 }
 
+# 声1〜声9 のどのファイルにどのカットが入っているか。
+# ファイルごとの実測時間でカットを割り振るので、途中でズレても次のファイルで戻る
+BLOCKS = [
+    [0, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10, 11],
+    [12, 13, 14, 15, 16, 17],
+    [18, 19, 20, 21, 22],
+    [23, 24, 25, 26, 27],
+    [28, 29, 30, 31, 32, 33],
+    [34, 35, 36, 37],
+    [38, 39, 40, 41, 42],
+    [43, 44],
+]
+
 WORK = os.path.abspath("shorts_work")
 VID = os.path.join(WORK, "素材_動画")
 IMG = os.path.join(WORK, "素材_画像")
@@ -390,9 +404,8 @@ def wav_seconds(path):
         return w.getnframes() / w.getframerate()
 
 
-def find_voice_file():
-    # 自分で用意した音声を使う。声.wav が1本でも、声1〜声9のように
-    # 分かれていてもよい。分かれている場合は番号順に繋いで1本にする
+def find_voice_files():
+    # 声.wav が1本でも、声1〜声9 のように分かれていてもよい。番号順に返す
     import glob
     exts = ("wav", "mp3", "m4a")
     for d in ("/content", ".", AUD, WORK):
@@ -402,46 +415,14 @@ def find_voice_file():
         for e in exts:
             hits += glob.glob(os.path.join(d, "声*." + e))
             hits += glob.glob(os.path.join(d, "voice*." + e))
-        hits = [h for h in hits if not os.path.basename(h).startswith("繋いだ")]
         if not hits:
             continue
-        if len(hits) == 1:
-            return os.path.abspath(hits[0])
 
-        # 「声2」より「声10」が先に来ないよう、数字として並べる
         def order(path):
             m = re.findall(r"\d+", os.path.basename(path))
             return (int(m[0]) if m else 0, os.path.basename(path))
-        hits.sort(key=order)
-        print("     %d本を番号順に繋ぎます: %s"
-              % (len(hits), "、".join(os.path.basename(h) for h in hits)))
-
-        os.makedirs(WORK, exist_ok=True)
-        lst = os.path.join(WORK, "voices.txt")
-        with open(lst, "w", encoding="utf-8") as f:
-            for h in hits:
-                f.write("file '%s'\n" % os.path.abspath(h))
-        joined = os.path.join(WORK, "繋いだ声.wav")
-        try:
-            sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
-                "-f", "concat", "-safe", "0", "-i", lst,
-                "-ar", "44100", "-ac", "1", joined])
-            return joined
-        except Exception:
-            # 形式がばらばらだと繋げないことがあるので、変換してから繋ぐ
-            parts = []
-            for i, h in enumerate(hits):
-                q = os.path.join(WORK, "v%02d.wav" % i)
-                sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
-                    "-i", h, "-ar", "44100", "-ac", "1", q])
-                parts.append(q)
-            with open(lst, "w", encoding="utf-8") as f:
-                for q in parts:
-                    f.write("file '%s'\n" % q)
-            sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
-                "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", joined])
-            return joined
-    return None
+        return sorted(set(hits), key=order)
+    return []
 
 
 def media_seconds(path):
@@ -458,17 +439,54 @@ def media_seconds(path):
     return int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3))
 
 
-def plan_from_voice(total_sec, cuts_used):
-    # 音声1本しかないので、各カットの尺をセリフの文字数で按分する。
-    # 文字数は話す長さにだいたい比例するので、これで絵と声がほぼ合う
-    cards = [c for c in cuts_used if c in SILENT_CUTS]
-    talk = [c for c in cuts_used if c not in SILENT_CUTS]
-    chars = {c: max(len(NARRATION.get(c, "")), 1) for c in talk}
-    body = max(total_sec - len(cards) * NUMCARD_SEC, 1.0)
-    unit = body / sum(chars.values())
-    dur = {c: NUMCARD_SEC for c in cards}
-    for c in talk:
-        dur[c] = max(chars[c] * unit, 0.8)
+def join_voices(paths):
+    os.makedirs(WORK, exist_ok=True)
+    joined = os.path.join(WORK, "narration.wav")
+    if len(paths) == 1:
+        sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+            "-i", paths[0], "-ar", "44100", "-ac", "1", joined])
+        return joined
+    parts = []
+    for i, h in enumerate(paths):
+        q = os.path.join(WORK, "v%02d.wav" % i)
+        sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+            "-i", h, "-ar", "44100", "-ac", "1", q])
+        parts.append(q)
+    lst = os.path.join(WORK, "voices.txt")
+    with open(lst, "w", encoding="utf-8") as f:
+        for q in parts:
+            f.write("file '%s'\n" % q)
+    sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+        "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", joined])
+    return joined
+
+
+def plan_from_voices(paths, cuts_used):
+    """音声ファイルごとの実測時間で、その中のカットに時間を配る。
+
+    1本まるごとで按分するとズレが最後まで積もるが、ファイル単位で
+    区切れば、ズレてもその声が終われば必ず戻る。
+    """
+    if len(paths) == len(BLOCKS):
+        pairs = [(media_seconds(p), b) for p, b in zip(paths, BLOCKS)]
+    else:
+        # 本数が想定と違うときは、全部まとめて1本ぶんとして按分する
+        pairs = [(sum(media_seconds(p) for p in paths), sorted(cuts_used))]
+
+    dur = {}
+    for sec, block in pairs:
+        here = [c for c in block if c in cuts_used]
+        if not here:
+            continue
+        cards = [c for c in here if c in SILENT_CUTS]
+        talk = [c for c in here if c not in SILENT_CUTS]
+        chars = {c: max(len(NARRATION.get(c, "")), 1) for c in talk}
+        body = max(sec - len(cards) * NUMCARD_SEC, 0.6)
+        unit = body / max(sum(chars.values()), 1)
+        for c in cards:
+            dur[c] = NUMCARD_SEC
+        for c in talk:
+            dur[c] = max(chars[c] * unit, 0.7)
     return dur
 
 
@@ -564,23 +582,30 @@ def telop(row, font, out):
     im.save(out)
 
 
-def camera(kind, n):
+def camera(kind, n, video=False):
     n = max(n, 2)
+    # 実写は素材自体が動いているので、寄り引きは控えめにする
+    amp = 0.06 if video else 0.08
+    zmax = 1.0 + amp
     if kind == "zoomout":
-        z, x, y = "max(1.08-%f*on,1.0)" % (.08 / n), "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+        z, x, y = "max(%f-%f*on,1.0)" % (zmax, amp / n), "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
     elif kind == "panleft":
-        z, x, y = "1.06", "(iw-iw/zoom)*(1-on/%d)" % n, "ih/2-(ih/zoom/2)"
+        z, x, y = "%f" % (zmax,), "(iw-iw/zoom)*(1-on/%d)" % n, "ih/2-(ih/zoom/2)"
     elif kind == "panright":
-        z, x, y = "1.06", "(iw-iw/zoom)*(on/%d)" % n, "ih/2-(ih/zoom/2)"
+        z, x, y = "%f" % (zmax,), "(iw-iw/zoom)*(on/%d)" % n, "ih/2-(ih/zoom/2)"
     elif kind == "pandown":
-        z, x, y = "1.06", "iw/2-(iw/zoom/2)", "(ih-ih/zoom)*(on/%d)" % n
+        z, x, y = "%f" % (zmax,), "iw/2-(iw/zoom/2)", "(ih-ih/zoom)*(on/%d)" % n
     elif kind == "still":
-        z, x, y = "1.0", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+        # 実写では「止め」も微速の寄りにする。完全静止は素人っぽく見える
+        z = "1.0" if not video else "min(1.0+%f*on,%f)" % (amp / n, zmax)
+        x, y = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
     else:
-        z, x, y = "min(1.0+%f*on,1.08)" % (.08 / n), "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+        z, x, y = "min(1.0+%f*on,%f)" % (amp / n, zmax), "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+    # 動画は1入力フレーム=1出力フレーム。静止画は d=n で伸ばす
+    d = 1 if video else n
     return ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d,"
             "zoompan=z='%s':d=%d:x='%s':y='%s':s=%dx%d:fps=%d"
-            % (W * 2, H * 2, W * 2, H * 2, z, n, x, y, W, H, FPS))
+            % (W * 2, H * 2, W * 2, H * 2, z, d, x, y, W, H, FPS))
 
 
 def find_asset(row, cut):
@@ -638,9 +663,9 @@ def build(font, only_n, out, fixed_dur=None):
         frames = int(round(dur * FPS))
         args = [FF, "-hide_banner", "-loglevel", "error", "-y"]
         if os.path.splitext(asset)[1].lower() in VIDEO_EXT:
+            # 実写にも必ず動きを足す。素材が動いていても、寄り引きが無いと単調に見える
             args += ["-stream_loop", "-1", "-i", asset]
-            vf = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d,fps=%d"
-                  % (W, H, W, H, FPS))
+            vf = ("fps=%d," % FPS) + camera(r["camera"], frames, video=True)
         else:
             args += ["-loop", "1", "-i", asset]
             vf = camera(r["camera"], frames)
@@ -690,14 +715,12 @@ def main():
     print("1/4  図版をつくる")
     render_figures()
 
-    voice_file = find_voice_file()
-    fixed = None
-    if voice_file:
-        sec = media_seconds(voice_file)
-        print("2/4  用意された音声を使います（%s / %.1f秒）"
-              % (os.path.basename(voice_file), sec))
-        used = [int(r["cut"]) for r in CUTS if not only or int(r["cut"]) <= only]
-        fixed = plan_from_voice(sec, used)
+    voices = find_voice_files()
+    fixed, voice_file = None, None
+    if voices:
+        print("2/4  用意された音声を使います（%d本）" % len(voices))
+        for v in voices:
+            print("     %-16s %5.1f秒" % (os.path.basename(v), media_seconds(v)))
     elif a.voice:
         print("2/4  ナレーションをつくる")
         if not vv_alive(a.vv_host):
@@ -723,6 +746,23 @@ def main():
     font = find_font()
     if not font:
         sys.exit("日本語フォントが見つかりません。")
+
+    if voices:
+        # 素材が無くて飛ばすカットに時間を配ると、その分だけ音がずれる。
+        # 実際に使えるカットだけで割り振る
+        have = []
+        for row in CUTS:
+            c = int(row["cut"])
+            if only and c > only:
+                break
+            r = dict(row)
+            if row["cut"] in ASSET_ALIAS:
+                r["asset"] = ASSET_ALIAS[row["cut"]]
+            if find_asset(r, c) or (c == 0 and find_asset({"asset": "A01"}, 1)):
+                have.append(c)
+        fixed = plan_from_voices(voices, set(have))
+        voice_file = join_voices(voices)
+        print("     使えるカット %d / 音声 %.1f秒" % (len(have), media_seconds(voice_file)))
 
     print("4/4  動画を組み立てる")
     if fixed is None:
