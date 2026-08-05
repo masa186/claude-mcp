@@ -198,6 +198,7 @@ IMG = os.path.join(WORK, "素材_画像")
 TMP = os.path.join(WORK, "_作業中")
 AUD = os.path.join(WORK, "音声")
 MINE = "/content/素材"      # 自分で用意した素材を入れる場所
+GEN  = "/content/生成"      # ③がつくった画像。手置きと違い透かしが無い
 
 
 def sh(args):
@@ -556,44 +557,78 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
 
 # ── 足りないカットの画像を生成する ────────────────────────────────
 
-GEMINI_MODELS = ["imagen-4.0-generate-001", "imagen-3.0-generate-002"]
+# Imagen は有料の枠でしか動かない。無料のキーだと 429 が返るので、
+# 無料でも使える gemini-2.5-flash-image に落ちられるようにしておく。
+# 呼び方も返り方も違うので、方式ごと持つ
+GEMINI_MODELS = [("imagen-4.0-generate-001", "predict"),
+                 ("imagen-3.0-generate-002", "predict"),
+                 ("gemini-2.5-flash-image", "generate")]
+
+NEGATIVE = ("text, letters, watermark, logo, caption, cartoon, anime, "
+            "3d render, distorted face, extra fingers, low resolution, blurry")
+
+
+def gen_body(prompt, how, ratio=True):
+    if how == "predict":
+        return json.dumps({
+            "instances": [{"prompt": prompt}],
+            "parameters": {"sampleCount": 1, "aspectRatio": "9:16",
+                           "negativePrompt": NEGATIVE},
+        }).encode()
+    cfg = {"responseModalities": ["IMAGE"]}
+    if ratio:
+        cfg["imageConfig"] = {"aspectRatio": "9:16"}
+    return json.dumps({
+        "contents": [{"parts": [{"text": prompt + "。避けるもの: " + NEGATIVE}]}],
+        "generationConfig": cfg,
+    }).encode()
+
+
+def gen_read(res, how):
+    if how == "predict":
+        preds = res.get("predictions") or []
+        if preds and preds[0].get("bytesBase64Encoded"):
+            return base64.b64decode(preds[0]["bytesBase64Encoded"])
+        return None
+    for c in res.get("candidates") or []:
+        for part in (c.get("content") or {}).get("parts") or []:
+            data = (part.get("inlineData") or part.get("inline_data") or {}).get("data")
+            if data:
+                return base64.b64decode(data)
+    return None
 
 
 def gen_one(prompt, key):
-    body = json.dumps({
-        "instances": [{"prompt": prompt}],
-        "parameters": {"sampleCount": 1, "aspectRatio": "9:16",
-                       "negativePrompt": ("text, letters, watermark, logo, caption, "
-                                          "cartoon, anime, 3d render, distorted face, "
-                                          "extra fingers, low resolution, blurry")},
-    }).encode()
     last = None
-    for model in GEMINI_MODELS:
-        url = ("https://generativelanguage.googleapis.com/v1beta/models/%s:predict" % model)
-        req = urllib.request.Request(url, data=body, method="POST", headers={
-            "Content-Type": "application/json", "x-goog-api-key": key,
-            "User-Agent": "Mozilla/5.0"})
-        try:
-            with urllib.request.urlopen(req, timeout=180) as r:
-                res = json.loads(r.read())
-            preds = res.get("predictions") or []
-            if preds and preds[0].get("bytesBase64Encoded"):
-                return base64.b64decode(preds[0]["bytesBase64Encoded"])
-            last = "画像が返りませんでした"
-        except urllib.error.HTTPError as e:
-            last = "HTTP %s" % e.code
-            if e.code in (400, 404):     # モデル名が違うだけなら次を試す
-                continue
-            break
-        except Exception as e:
-            last = type(e).__name__
-            break
+    for model, how in GEMINI_MODELS:
+        # imageConfig を知らない版だと 400 になるので、比率なしでもう一度試す
+        for ratio in ((True, False) if how == "generate" else (True,)):
+            verb = "predict" if how == "predict" else "generateContent"
+            url = "https://generativelanguage.googleapis.com/v1beta/models/%s:%s" % (model, verb)
+            req = urllib.request.Request(url, data=gen_body(prompt, how, ratio),
+                                         method="POST", headers={
+                "Content-Type": "application/json", "x-goog-api-key": key,
+                "User-Agent": "Mozilla/5.0"})
+            try:
+                with urllib.request.urlopen(req, timeout=180) as r:
+                    img = gen_read(json.loads(r.read()), how)
+                if img:
+                    return img
+                last = "画像が返りませんでした"
+            except urllib.error.HTTPError as e:
+                last = "HTTP %s" % e.code
+                if e.code == 401:        # キーが違う。どのモデルでも同じ
+                    raise RuntimeError("キーが違います")
+                continue                 # 枠切れもモデル名違いも、次を試す
+            except Exception as e:
+                last = type(e).__name__
+                break
     raise RuntimeError(last or "不明")
 
 
 def generate_missing(key, only_n, reserve_pexels=False):
     # Pexels と手持ちで埋まらなかったカットだけ作る
-    os.makedirs(MINE, exist_ok=True)
+    os.makedirs(GEN, exist_ok=True)
     need = []
     for row in CUTS:
         cut = int(row["cut"])
@@ -622,7 +657,7 @@ def generate_missing(key, only_n, reserve_pexels=False):
     print("     %d カットを生成します: %s" % (len(need), ", ".join(map(str, need))))
     ok = 0
     for cut in need:
-        dst = os.path.join(MINE, "%02d.png" % cut)
+        dst = os.path.join(GEN, "%02d.png" % cut)
         try:
             open(dst, "wb").write(gen_one(PROMPTS[cut], key))
             ok += 1
@@ -804,7 +839,7 @@ def _scan_mine():
     # 手で置いた素材を1回だけ見て、番号つきと番号なしに分ける
     import glob
     numbered, spare = {}, []
-    for d in (MINE, "/content/素材_画像", "/content/素材_動画"):
+    for d in (MINE, GEN, "/content/素材_画像", "/content/素材_動画"):
         if not os.path.isdir(d):
             continue
         for fp in sorted(glob.glob(os.path.join(d, "*"))):
@@ -1000,7 +1035,7 @@ def build(font, only_n, out, fixed_dur=None):
             args += ["-loop", "1", "-i", asset]
             vf = camera(r["camera"], frames)
         # 生成サービスの透かしは下端(縦 0.90 付近)に入る。実測して 88% で切る
-        if "/content/素材" in asset or asset.startswith(MINE):
+        if asset.startswith(MINE) or "/content/素材_" in asset:
             vf = "crop=iw:ih*0.88:0:0," + vf
         args += ["-i", tp]
         if wav:
