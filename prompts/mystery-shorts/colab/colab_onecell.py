@@ -668,7 +668,9 @@ def find_mine(cut):
             if os.path.splitext(fp)[1].lower() not in VIDEO_EXT | {".png", ".jpg", ".jpeg", ".webp"}:
                 continue
             name = os.path.basename(fp)
-            m = re.search(r"(\d+)", name)
+            # 「cut25」「カット25」の数字を優先。無ければ最初の数字
+            m = (re.search(r"(?:cut|カット)[ _\-]*(\d+)", name, re.I)
+                 or re.search(r"(\d+)", name))
             if m and int(m.group(1)) == cut:
                 if "_ok" in name:
                     return fp
@@ -742,6 +744,29 @@ def _resolve_assets(only_n):
     if borrowed:
         print("     素材が無い %d カットは近くの映像を借ります" % borrowed)
     return plan
+
+
+def warn_low_res(plan):
+    # 横素材を縦に切ると横幅の 9/16 しか残らない。元が小さいとぼやける
+    FF = ffmpeg_bin()
+    seen, bad = set(), []
+    for cut, r, a in plan:
+        if not a or a in seen or os.path.splitext(a)[1].lower() not in VIDEO_EXT:
+            continue
+        seen.add(a)
+        out = subprocess.run([FF, "-hide_banner", "-i", a],
+                             capture_output=True, text=True).stderr
+        m = re.search(r"(\d{3,4})x(\d{3,4})", out)
+        if not m:
+            continue
+        w, h = int(m.group(1)), int(m.group(2))
+        keep = min(w, int(h * 9 / 16)) if w > h else w
+        if keep < 600:
+            bad.append((os.path.basename(a), w, h))
+    if bad:
+        print("     切り出すと粗くなる素材:")
+        for n, w, h in bad[:6]:
+            print("       %s (%dx%d)" % (n[:40], w, h))
 
 
 def report_sources(plan):
@@ -887,7 +912,9 @@ def main():
         print("     使えるカット %d / 音声 %.1f秒" % (len(have), media_seconds(voice_file)))
 
     print("4/4  動画を組み立てる")
-    report_sources(resolve_assets(only))
+    _plan = resolve_assets(only)
+    report_sources(_plan)
+    warn_low_res(_plan)
     if fixed is None:
         n = build(font, only, a.out)
     else:
