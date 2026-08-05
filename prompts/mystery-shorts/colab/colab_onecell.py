@@ -7,7 +7,7 @@ Colab の1セルから呼ばれる、全部入りのパイプライン。
 
   python3 colab_onecell.py --key <PEXELSキー> --range 10
 """
-import argparse, csv, json, os, re, shutil, subprocess, sys, time
+import argparse, base64, csv, json, os, re, shutil, subprocess, sys, time
 import urllib.error, urllib.parse, urllib.request, wave
 
 W, H, FPS = 1080, 1920, 30
@@ -148,6 +148,49 @@ BLOCKS = [
     [38, 39, 40, 41, 42],
     [43, 44],
 ]
+
+PROMPTS = {
+    1: 'Pitch black deep ocean with a single faint beam of light descending from the surface, suspended particles drifting slowly, immense emptiness, subject in lower half of frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    2: 'Close up of a reel to reel tape machine running alone in a dark room, both reels slowly turning, a single small indicator lamp glowing amber, nobody present, dust drifting in a narrow beam of light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    3: 'Vast dark ocean surface at night seen from high above, moonlight scattered across the waves, no land anywhere, heavy vignette, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    4: 'Rows of analog recording equipment in a dim government monitoring facility, reel to reel tapes turning, early 1990s technology, cold fluorescent light, deep perspective down the aisle, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    5: 'Underwater hydrophone sensor suspended in the deep dark ocean, cable rising into blackness above, cold blue light from far above, marine snow drifting, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    8: 'A handwritten paper label on an old magnetic tape reel box, ink blurred and completely unreadable, warm archive lighting from one side, extreme shallow focus, dust on the surface, cinematic photorealistic, vertical 9:16 composition, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    9: 'Earth seen from orbit showing the pacific side, almost entirely dark ocean with no landmass visible, thin glowing blue atmospheric limb along the curve, deep starfield behind, the planet occupying the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    10: 'Endless empty ocean horizon under a heavy grey overcast sky, no ships, no land, flat cold light, sense of total isolation, cinematic photorealistic, vertical 9:16 composition, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    11: 'Vast dark ocean surface at night seen from high above, moonlight scattered across the waves, no land anywhere, heavy vignette, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    12: 'Aerial view of open ocean where two weather systems meet, warm hazy spring light on one side and cold dark autumn storm cloud on the other, a visible front line dividing the water, no land, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    13: 'Underwater volcanic vent erupting glowing orange magma into black abyssal water, superheated plume rising, dramatic contrast between fire and darkness, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    14: 'Earth seen from orbit showing the pacific side, almost entirely dark ocean with no landmass visible, thin glowing blue atmospheric limb along the curve, deep starfield behind, the planet occupying the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    15: 'Modern hydrophone buoy floating alone on a black night ocean, small blinking indicator light, stars above, gentle swell, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    16: 'Empty suburban street at 3am, orange sodium streetlights, no people, parked cars, oppressive silence, heavy vignette, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    17: 'Large world map pinned on a dark wall with several small pins clustered in different continents, dim desk lamp lighting it from below, shallow depth of field, map deliberately out of focus and unreadable, cinematic photorealistic, vertical 9:16 composition, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    18: 'Close up of a person lying awake in bed at night with eyes open in the dark, only ambient blue light from a window, face partly in shadow, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    19: 'Distant industrial complex at night with faint smoke and a few scattered lights, seen across a dark empty field, cold grade, low horizon, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    20: 'Row of high voltage transmission pylons silhouetted against a dark dusk sky, power lines converging into the distance, low oppressive clouds, empty field below, sense of a constant unheard hum, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    22: 'Adobe buildings in a high desert town under a huge blue sky, dry mountains in the distance, dusty warm afternoon light, no people, cinematic photorealistic, vertical 9:16 composition, shallow depth of field, subtle film grain, muted desaturated warm color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    23: 'Overhead night view of a small desert town, only a few windows lit, most of the town completely dark, empty streets, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    24: 'Close up of a hand pressed against an ear, eyes closed in concentration, harsh side lighting, dark background, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    25: 'A crowded city street where everyone walks normally except one person standing completely still with a troubled expression, heavy motion blur on the crowd, the still figure sharp, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    26: 'Triptych composition blending an industrial factory turbine, a seismograph needle tracing a line, and a human ear in extreme close up, all in cold desaturated tones, seamless transitions between the three, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    27: 'Researcher wearing headphones adjusting audio measurement equipment on a tripod in a dark open field at night, single lamp illuminating the equipment, stars above, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    28: 'Empty suburban street at 3am, orange sodium streetlights, no people, parked cars, oppressive silence, heavy vignette, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    29: 'Pitch black deep ocean with a single faint beam of light descending from the surface, suspended particles drifting slowly, immense emptiness, subject in lower half of frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    30: 'Cold war era naval sonar station interior, green radar and waveform screens glowing in a dark room, 1980s military equipment, operator silhouettes at the consoles, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold green color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    31: 'Underwater listening array cables descending into the deep dark pacific, faint blue light from far above, cables converging toward the abyss, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    33: 'A single whale silhouette suspended alone in an enormous expanse of empty dark blue ocean, no other life visible anywhere, the whale small in the frame, marine snow drifting, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    34: 'Several blue whales swimming together in formation in deep blue water, calm and synchronized, seen from the side, shafts of surface light above them, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    35: 'Several blue whales swimming together in formation in deep blue water, calm and synchronized, seen from the side, shafts of surface light above them, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    36: 'Several blue whales swimming together in formation in deep blue water, calm and synchronized, seen from the side, shafts of surface light above them, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    37: 'Desk covered with decades of printed sonar charts and handwritten notes stacked in thick layers, warm lamp light from one side, shallow focus on the nearest stack, papers yellowed with age, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated warm color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    38: 'Worn paper nautical chart spread across a wooden desk under a warm lamp, brass dividers and a pencil resting on it, faint hand drawn marks, printed detail deliberately out of focus and unreadable, shallow focus on the nearest edge, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated warm color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    39: 'An indistinct massive dark shape barely visible in murky deep water, form completely unresolvable, suspended particles between camera and subject, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    40: 'A single whale silhouette suspended alone in an enormous expanse of empty dark blue ocean, no other life visible anywhere, the whale small in the frame, marine snow drifting, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    41: 'Three small distant lights floating far apart from each other on a black night ocean, calm water reflecting them faintly, stars above, nothing else visible in any direction, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    42: 'Archive shelves full of magnetic tape reels in a dim storage room, deep perspective down a long aisle, dust in the air, single overhead light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    43: 'Earth seen from orbit showing the pacific side, almost entirely dark ocean with no landmass visible, thin glowing blue atmospheric limb along the curve, deep starfield behind, the planet occupying the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    44: 'Earth seen from deep space at night, faint city lights scattered on the dark side, thin blue atmospheric rim, stars behind, the planet in the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+}
 
 WORK = os.path.abspath("shorts_work")
 VID = os.path.join(WORK, "素材_動画")
@@ -510,6 +553,79 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
     return made, total
 
 
+
+# ── 足りないカットの画像を生成する ────────────────────────────────
+
+GEMINI_MODELS = ["imagen-4.0-generate-001", "imagen-3.0-generate-002"]
+
+
+def gen_one(prompt, key):
+    body = json.dumps({
+        "instances": [{"prompt": prompt}],
+        "parameters": {"sampleCount": 1, "aspectRatio": "9:16",
+                       "negativePrompt": ("text, letters, watermark, logo, caption, "
+                                          "cartoon, anime, 3d render, distorted face, "
+                                          "extra fingers, low resolution, blurry")},
+    }).encode()
+    last = None
+    for model in GEMINI_MODELS:
+        url = ("https://generativelanguage.googleapis.com/v1beta/models/%s:predict" % model)
+        req = urllib.request.Request(url, data=body, method="POST", headers={
+            "Content-Type": "application/json", "x-goog-api-key": key,
+            "User-Agent": "Mozilla/5.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                res = json.loads(r.read())
+            preds = res.get("predictions") or []
+            if preds and preds[0].get("bytesBase64Encoded"):
+                return base64.b64decode(preds[0]["bytesBase64Encoded"])
+            last = "画像が返りませんでした"
+        except urllib.error.HTTPError as e:
+            last = "HTTP %s" % e.code
+            if e.code in (400, 404):     # モデル名が違うだけなら次を試す
+                continue
+            break
+        except Exception as e:
+            last = type(e).__name__
+            break
+    raise RuntimeError(last or "不明")
+
+
+def generate_missing(key, only_n):
+    # Pexels と手持ちで埋まらなかったカットだけ作る
+    os.makedirs(MINE, exist_ok=True)
+    need = []
+    for row in CUTS:
+        cut = int(row["cut"])
+        if only_n and cut > only_n:
+            break
+        if cut not in PROMPTS:
+            continue
+        r = dict(row)
+        if row["cut"] in ASSET_ALIAS:
+            r["asset"] = ASSET_ALIAS[row["cut"]]
+        if find_asset(r, cut) is None:      # 借りる前の、素の状態で見る
+            need.append(cut)
+    if not need:
+        print("     足りないカットはありません")
+        return
+    print("     %d カットを生成します: %s" % (len(need), ", ".join(map(str, need))))
+    ok = 0
+    for cut in need:
+        dst = os.path.join(MINE, "%02d.png" % cut)
+        try:
+            open(dst, "wb").write(gen_one(PROMPTS[cut], key))
+            ok += 1
+            print("     カット%-2d  できました" % cut)
+        except Exception as e:
+            print("     カット%-2d  失敗（%s）" % (cut, e))
+            if os.path.exists(dst):
+                os.remove(dst)
+        time.sleep(1.5)
+    _PLAN_CACHE.clear()
+    print("     %d / %d 枚できました" % (ok, len(need)))
+
+
 # ── テロップ ──
 
 # 参考動画に合わせて、白→黄→赤→白。暗い海の上でいちばん飛ぶ組み合わせ
@@ -861,10 +977,18 @@ def main():
     ap.add_argument("--speed", type=float, default=1.10)
     ap.add_argument("--pitch", type=float, default=-0.02)
     ap.add_argument("--intonation", type=float, default=0.90)
+    ap.add_argument("--gen-images", default="", help="Geminiのキー。足りないカットを生成して終了")
     a = ap.parse_args()
 
     os.makedirs(WORK, exist_ok=True)
     only = a.range or None
+
+    if a.gen_images:
+        print("足りないカットの画像をつくります")
+        render_figures()
+        unpack_zips()
+        generate_missing(a.gen_images.strip(), only)
+        return
     wanted = {c for c in SEARCH if not only or c <= only}
 
     print("1/4  図版をつくる")
