@@ -625,6 +625,37 @@ def camera(kind, n, video=False):
             % (W * 2, H * 2, W * 2, H * 2, z, d, x, y, W, H, FPS))
 
 
+def unpack_zips():
+    # /content に置かれた zip は素材として展開する。中の階層は無視して平らに置く
+    import glob, zipfile
+    zips = sorted(glob.glob("/content/*.zip"))
+    if not zips:
+        return
+    os.makedirs(MINE, exist_ok=True)
+    total = 0
+    for z in zips:
+        try:
+            with zipfile.ZipFile(z) as f:
+                for info in f.infolist():
+                    if info.is_dir():
+                        continue
+                    name = os.path.basename(info.filename)
+                    if not name or name.startswith("."):
+                        continue
+                    if os.path.splitext(name)[1].lower() not in VIDEO_EXT | {".png", ".jpg", ".jpeg", ".webp"}:
+                        continue
+                    dst = os.path.join(MINE, name)
+                    if os.path.exists(dst):
+                        continue
+                    with f.open(info) as src, open(dst, "wb") as out:
+                        shutil.copyfileobj(src, out)
+                    total += 1
+        except Exception as e:
+            print("   %s は展開できませんでした（%s）" % (os.path.basename(z), type(e).__name__))
+    if total:
+        print("     zip から %d 点を取り出しました" % total)
+
+
 def find_mine(cut):
     # 自分で用意した素材。名前の先頭にカット番号があれば拾う。
     # 4.png / 04.jpg / cut4.png / カット4_海.png / 4-2.mp4 … どれでもよい
@@ -765,6 +796,9 @@ def build(font, only_n, out, fixed_dur=None):
         else:
             args += ["-loop", "1", "-i", asset]
             vf = camera(r["camera"], frames)
+        # 生成サービスの透かしは下端(縦 0.90 付近)に入る。実測して 88% で切る
+        if "/content/素材" in asset or asset.startswith(MINE):
+            vf = "crop=iw:ih*0.88:0:0," + vf
         args += ["-i", tp]
         if wav:
             args += ["-i", wav]
@@ -810,6 +844,7 @@ def main():
 
     print("1/4  図版をつくる")
     render_figures()
+    unpack_zips()
 
     voices = find_voice_files()
     fixed, voice_file = None, None
