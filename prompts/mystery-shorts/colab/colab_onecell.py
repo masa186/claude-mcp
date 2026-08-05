@@ -227,53 +227,84 @@ def render_figures():
 
 # ── Pexels ──
 
-def pexels(key, cuts_wanted, per_cut=2, min_h=1400):
+def pexels_search(key, term, portrait_only):
+    # 縦だけに絞ると候補がほぼ無くなる素材が多い。まず縦、無ければ全部から探す
+    q = {"query": term, "per_page": 20}
+    if portrait_only:
+        q["orientation"] = "portrait"
+    url = "https://api.pexels.com/videos/search?" + urllib.parse.urlencode(q)
+    req = urllib.request.Request(url, headers={"Authorization": key})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read()).get("videos", []), None
+    except urllib.error.HTTPError as e:
+        if e.code == 401:
+            sys.exit("Pexelsのキーが違うようです。貼り直して、もう一度押してください。")
+        return [], "HTTP %s" % e.code
+    except Exception as e:
+        return [], type(e).__name__
+
+
+def best_file(v, min_h, portrait_only):
+    # 縦向きを優先。無ければ横でも拾う（あとで中央を切り出して縦にする）
+    files = [g for g in v.get("video_files", [])
+             if g.get("height") and g.get("width") and g["height"] >= min_h]
+    if not files:
+        return None
+    tate = [g for g in files if g["height"] > g["width"]]
+    if tate:
+        return max(tate, key=lambda g: g["height"])
+    return None if portrait_only else max(files, key=lambda g: g["width"] * g["height"])
+
+
+def pexels(key, cuts_wanted, per_cut=2, min_h=900):
     os.makedirs(VID, exist_ok=True)
     got, miss = 0, []
     for cut in sorted(SEARCH):
         if cut not in cuts_wanted:
             continue
         if [f for f in os.listdir(VID) if f.startswith("cut%02d_" % cut)]:
+            print("   カット%-2d  取得済み" % cut)
             continue
-        picked, seen = [], set()
-        for term in SEARCH[cut]:
+
+        picked, seen, note = [], set(), ""
+        # ①縦だけで探す → ②足りなければ向き不問で探す
+        for portrait_only in (True, False):
             if len(picked) >= per_cut:
                 break
-            url = "https://api.pexels.com/videos/search?" + urllib.parse.urlencode(
-                {"query": term, "orientation": "portrait", "per_page": 15, "size": "medium"})
-            req = urllib.request.Request(url, headers={"Authorization": key})
-            try:
-                with urllib.request.urlopen(req, timeout=60) as r:
-                    vids = json.loads(r.read()).get("videos", [])
-            except urllib.error.HTTPError as e:
-                if e.code == 401:
-                    sys.exit("Pexelsのキーが違うようです。もう一度確認してください。")
-                if e.code == 429:
-                    time.sleep(20); continue
-                print("   カット%-2d  検索に失敗（%s）" % (cut, e.code)); continue
-            except Exception as e:
-                print("   カット%-2d  つながりません（%s）" % (cut, type(e).__name__)); continue
-            for v in vids:
-                if len(picked) >= per_cut or v["id"] in seen:
-                    continue
-                seen.add(v["id"])
-                cands = [g for g in v.get("video_files", [])
-                         if g.get("height") and g.get("width")
-                         and g["height"] > g["width"] and g["height"] >= min_h]
-                if cands:
-                    picked.append(max(cands, key=lambda g: g["height"]))
-            time.sleep(.5)
+            for term in SEARCH[cut]:
+                if len(picked) >= per_cut:
+                    break
+                vids, err = pexels_search(key, term, portrait_only)
+                if err:
+                    note = err
+                for v in vids:
+                    if len(picked) >= per_cut or v["id"] in seen:
+                        continue
+                    seen.add(v["id"])
+                    vf = best_file(v, min_h, portrait_only)
+                    if vf:
+                        picked.append(vf)
+                time.sleep(.4)
+            if picked and portrait_only:
+                break
+
         if not picked:
-            miss.append(cut); continue
+            miss.append(cut)
+            print("   カット%-2d  見つからず%s" % (cut, "（%s）" % note if note else ""))
+            continue
+
         for i, vf in enumerate(picked, 1):
+            tag = "縦" if vf["height"] > vf["width"] else "横→切出"
             path = os.path.join(VID, "cut%02d_%d_%dx%d.mp4" % (cut, i, vf["width"], vf["height"]))
             try:
                 rq = urllib.request.Request(vf["link"], headers={"User-Agent": "Mozilla/5.0"})
                 with urllib.request.urlopen(rq, timeout=600) as r, open(path, "wb") as fh:
                     shutil.copyfileobj(r, fh)
                 got += 1
-                print("   カット%-2d  取得" % cut)
-            except Exception:
+                print("   カット%-2d  %s %dx%d" % (cut, tag, vf["width"], vf["height"]))
+            except Exception as e:
+                print("   カット%-2d  落とせず（%s）" % (cut, type(e).__name__))
                 if os.path.exists(path):
                     os.remove(path)
     return got, miss
