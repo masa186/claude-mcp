@@ -154,6 +154,7 @@ VID = os.path.join(WORK, "素材_動画")
 IMG = os.path.join(WORK, "素材_画像")
 TMP = os.path.join(WORK, "_作業中")
 AUD = os.path.join(WORK, "音声")
+MINE = "/content/素材"      # 自分で用意した素材を入れる場所
 
 
 def sh(args):
@@ -624,7 +625,30 @@ def camera(kind, n, video=False):
             % (W * 2, H * 2, W * 2, H * 2, z, d, x, y, W, H, FPS))
 
 
+def find_mine(cut):
+    # 自分で用意した素材。名前の先頭にカット番号があれば拾う。
+    # 4.png / 04.jpg / cut4.png / カット4_海.png / 4-2.mp4 … どれでもよい
+    import glob
+    best = None
+    for d in (MINE, "/content/素材_画像", "/content/素材_動画"):
+        if not os.path.isdir(d):
+            continue
+        for fp in sorted(glob.glob(os.path.join(d, "*"))):
+            if os.path.splitext(fp)[1].lower() not in VIDEO_EXT | {".png", ".jpg", ".jpeg", ".webp"}:
+                continue
+            name = os.path.basename(fp)
+            m = re.search(r"(\d+)", name)
+            if m and int(m.group(1)) == cut:
+                if "_ok" in name:
+                    return fp
+                best = best or fp
+    return best
+
+
 def find_asset(row, cut):
+    mine = find_mine(cut)
+    if mine:
+        return mine
     for d in (IMG, VID):
         if not os.path.isdir(d):
             continue
@@ -641,9 +665,18 @@ ASSET_ALIAS = {"6": "A06", "7": "A06", "32": "A26"}
 
 
 ROTATE = ["zoomin", "panright", "zoomout", "panleft", "pandown"]
+_PLAN_CACHE = {}
 
 
 def resolve_assets(only_n):
+    if only_n in _PLAN_CACHE:
+        return _PLAN_CACHE[only_n]
+    plan = _resolve_assets(only_n)
+    _PLAN_CACHE[only_n] = plan
+    return plan
+
+
+def _resolve_assets(only_n):
     # 素材が無いカットは近くの映像を借りる。絵が変わらないと、
     # セリフだけ進んで「音が合っていない」ように見えてしまう
     plan, have = [], []
@@ -673,11 +706,27 @@ def resolve_assets(only_n):
         pick = next((p for _, p in near if p != prev), near[0][1])
         plan[i][2] = pick
         # 借り物は動きを変えて、同じ絵に見えないようにする
-        plan[i][1] = dict(r, camera=ROTATE[cut % len(ROTATE)])
+        plan[i][1] = dict(r, camera=ROTATE[cut % len(ROTATE)], _borrowed=True)
         borrowed += 1
     if borrowed:
         print("     素材が無い %d カットは近くの映像を借ります" % borrowed)
     return plan
+
+
+def report_sources(plan):
+    kind = {"自分で用意": 0, "Pexels": 0, "図版": 0, "借用": 0}
+    for cut, r, a in plan:
+        if not a:
+            continue
+        if r.get("_borrowed"):
+            kind["借用"] += 1
+        elif a.startswith(MINE) or "/content/素材" in a:
+            kind["自分で用意"] += 1
+        elif a.startswith(IMG):
+            kind["図版"] += 1
+        else:
+            kind["Pexels"] += 1
+    print("     素材の内訳: " + " / ".join("%s %d" % (k, v) for k, v in kind.items() if v))
 
 
 def build(font, only_n, out, fixed_dur=None):
@@ -803,6 +852,7 @@ def main():
         print("     使えるカット %d / 音声 %.1f秒" % (len(have), media_seconds(voice_file)))
 
     print("4/4  動画を組み立てる")
+    report_sources(resolve_assets(only))
     if fixed is None:
         n = build(font, only, a.out)
     else:
