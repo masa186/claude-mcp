@@ -1,5 +1,7 @@
-generated/
-pexels/
-_work/
-narration/*.wav
+素材_画像/
+素材_動画/
+音声/
+完成/
+_作業中/
 *.mp4
+*.wav

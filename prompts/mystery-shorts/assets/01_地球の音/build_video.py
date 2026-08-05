@@ -12,8 +12,10 @@ cuts.csv・素材・ナレーションから、動画を丸ごと組み立てる
 最後に全カットを連結し、BGMがあれば敷いて書き出す。
 
 準備：
-  narration/cutNN.wav       voicevox_tts.py で生成
-  generated/ または pexels/ 素材（ファイル名に素材IDかcutNNを含めておく）
+  音声/cutNN.wav        voicevox_tts.py で生成
+  素材_画像/ 素材_動画/  素材（ファイル名に素材IDかcutNNを含めておく）
+
+候補が複数あるカットは、採用したいファイル名に _ok を足すとそれが選ばれる。
 
 使い方：
   python3 build_video.py --check              # 素材が揃っているか確認
@@ -34,9 +36,9 @@ import wave
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CUTS = os.path.join(HERE, "cuts.csv")
-NARR = os.path.join(HERE, "narration")
-WORK = os.path.join(HERE, "_work")
-ASSET_DIRS = [os.path.join(HERE, "generated"), os.path.join(HERE, "pexels")]
+NARR = os.path.join(HERE, "音声")
+WORK = os.path.join(HERE, "_作業中")
+ASSET_DIRS = [os.path.join(HERE, "素材_画像"), os.path.join(HERE, "素材_動画")]
 
 W, H = 1080, 1920
 FPS = 30
@@ -77,7 +79,12 @@ def read_cuts():
 
 
 def find_asset(asset_id, cut):
-    """素材IDか cutNN を含むファイルを探す。見つからなければ None。"""
+    """素材IDか cutNN を含むファイルを探す。見つからなければ None。
+
+    候補が複数あるときは、ファイル名に _ok が入っているものを優先する。
+    Pexels は1カットに2本落とすので、良いほうの名前に _ok を足せば
+    そちらが採用される（ドライブアプリ上で名前を変えるだけでよい）。
+    """
     for d in ASSET_DIRS:
         if not os.path.isdir(d):
             continue
@@ -89,7 +96,8 @@ def find_asset(asset_id, cut):
             if fn.startswith(asset_id) or fn.startswith(f"cut{cut:02d}_"):
                 hits.append(os.path.join(d, fn))
         if hits:
-            return hits[0]
+            picked = [h for h in hits if "_ok" in os.path.basename(h)]
+            return (picked or hits)[0]
     return None
 
 
@@ -213,7 +221,7 @@ def main():
     ap.add_argument("--only", default="", help="カット範囲。例 1-10 や 3,7,12")
     ap.add_argument("--bgm", default="", help="BGMファイル")
     ap.add_argument("--bgm-db", type=float, default=-24.0, help="BGMの音量(dB)")
-    ap.add_argument("--out", default=os.path.join(HERE, "地球の音.mp4"))
+    ap.add_argument("--out", default=os.path.join(HERE, "完成", "地球の音.mp4"))
     ap.add_argument("--check", action="store_true", help="素材の過不足を確認して終了")
     a = ap.parse_args()
 
@@ -265,6 +273,7 @@ def main():
         sys.exit(f"フォントが見つかりません: {a.font}\n--font で指定してください。")
 
     os.makedirs(WORK, exist_ok=True)
+    os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     segments = []
 
     for r, cut, asset, wav, dur in plan:

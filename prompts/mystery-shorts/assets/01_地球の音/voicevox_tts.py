@@ -24,7 +24,7 @@ localhost:50021 にREST APIが立つので、そこへ投げれば全部自動�
   python3 voicevox_tts.py --speaker 13 --speed 1.10 --only 18,30 --force
 
 出力：
-  このフォルダに cut01.wav 〜 cut44.wav（3・16・29はナンバーカードなので欠番）
+  音声/ に cut01.wav 〜 cut44.wav（3・16・29はナンバーカードなので欠番）
   最後に各カットの長さと合計尺を表示する。目標86秒からズレていたら --speed を調整して再実行。
 """
 
@@ -38,8 +38,10 @@ import urllib.request
 import wave
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-TEXT_FILE = os.path.join(HERE, "voicevox_一括読み込み用.txt")
+TEXT_FILE = os.path.join(HERE, "ナレーション原稿.txt")
 HOST = os.environ.get("VOICEVOX_HOST", "http://127.0.0.1:50021")
+OUTDIR = os.path.join(HERE, "音声")
+os.makedirs(OUTDIR, exist_ok=True)
 
 # ナンバーカードなので音声なし。行番号→カット番号の対応もこれで決まる
 SILENT_CUTS = {3, 16, 29}
@@ -136,7 +138,7 @@ def main():
         cut = mapping[idx]
         if want and cut not in want:
             continue
-        path = os.path.join(HERE, f"cut{cut:02d}.wav")
+        path = os.path.join(OUTDIR, f"cut{cut:02d}.wav")
 
         if os.path.exists(path) and not a.force:
             durations[cut] = wav_seconds(path)
@@ -153,7 +155,7 @@ def main():
 
     # 既存分も含めて合計を出す
     for cut in mapping.values():
-        p = os.path.join(HERE, f"cut{cut:02d}.wav")
+        p = os.path.join(OUTDIR, f"cut{cut:02d}.wav")
         if cut not in durations and os.path.exists(p):
             durations[cut] = wav_seconds(p)
 

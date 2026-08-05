@@ -16,7 +16,7 @@
   地球・海図・三波形）も描ける。差し替え用の写真プロンプトが用意できない場合の
   保険であって、既定では使わない。
 
-出力：1080x1920 PNG（9:16）
+出力：素材_画像/ に 1080x1920 PNG（9:16）
 共通処理：中央のテロップ帯を暗く落とす／ビネット／フィルムグレイン／文字は一切入れない
 
   python3 render_assets.py          # 本番用の3点
@@ -30,7 +30,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from PIL import Image
 
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generated")
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "素材_画像")
 os.makedirs(OUT, exist_ok=True)
 
 W, H = 1080, 1920

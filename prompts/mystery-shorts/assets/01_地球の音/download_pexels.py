@@ -35,7 +35,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LIST_FILE = os.path.join(HERE, "素材調達リスト.md")
-OUT = os.path.join(HERE, "pexels")
+OUT = os.path.join(HERE, "素材_動画")
 CREDITS = os.path.join(OUT, "credits.csv")
 
 API = "https://api.pexels.com/videos/search"
