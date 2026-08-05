@@ -18,7 +18,6 @@ VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 CUTS = [
     {'cut': '0', 'telop1': 'TITLE', 'telop2': '', 'hl': 'TITLE', 'hl_color': '',
      'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
-    {'cut': '1', 'telop1': '誰も正体を', 'telop2': '特定できていない音', 'hl': '特定できていない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '2', 'telop1': '記録は残っている', 'telop2': 'だが音源が分からない', 'hl': '音源', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A02', 'item_end': '0'},
     {'cut': '3', 'telop1': '1.アップスウィープ', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A03', 'item_end': '0'},
     {'cut': '4', 'telop1': '1991年', 'telop2': 'アメリカの観測機関が', 'hl': '1991年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A04', 'item_end': '0'},
@@ -93,8 +92,7 @@ SEARCH = {
 
 SILENT_CUTS = {3, 16, 29}
 NARRATION = {
-    0: '今も正体が分かっていない、地球の音。3選。',
-    1: '地球には、誰も正体を特定できていない音がある。',
+    0: '地球には、誰も正体を特定できていない音がある。',
     2: '観測記録は残っている。だが音源が分からない。',
     4: '1991年、アメリカの観測機関が',
     5: '太平洋の海中で奇妙な音を捉えた。',
