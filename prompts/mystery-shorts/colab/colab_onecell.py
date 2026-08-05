@@ -54,7 +54,7 @@ CUTS = [
     {'cut': '33', 'telop1': 'クジラの声としては', 'telop2': '異常に高い', 'hl': '異常に高い', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A27', 'item_end': '0'},
     {'cut': '34', 'telop1': 'シロナガスクジラは', 'telop2': '10〜39ヘルツ', 'hl': '10〜39', 'hl_color': 'yellow', 'camera': 'panleft', 'asset': 'A28', 'item_end': '0'},
     {'cut': '35', 'telop1': 'この個体だけが', 'telop2': '違う周波数で鳴いていた', 'hl': 'この個体だけ', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A28', 'item_end': '0'},
-    {'cut': '36', 'telop1': 'つまり', 'telop2': '仲間には届かない', 'hl': '届かない', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A28', 'item_end': '0'},
+    {'cut': '36', 'telop1': 'つまり', 'telop2': '仲間には届かない', 'hl': '届かない', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A27', 'item_end': '0'},
     {'cut': '37', 'telop1': '研究者は30年以上', 'telop2': '追跡を続けた', 'hl': '30年以上', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A29', 'item_end': '0'},
     {'cut': '38', 'telop1': '回遊経路はどの種とも', 'telop2': '一致しない', 'hl': '一致しない', 'hl_color': 'yellow', 'camera': 'panright', 'asset': 'A30', 'item_end': '0'},
     {'cut': '39', 'telop1': '種の特定も', 'telop2': '姿の確認もできていない', 'hl': 'できていない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A31', 'item_end': '0'},
@@ -263,6 +263,8 @@ def wants_trans(i, row):
         return ""
     if row["hl"] == "TITLE":
         return "out"
+    if i == 1:
+        return "in"          # タイトルがボケて飛んだ先。ここで戻さないと繋がらない
     if TRANS_MODE == "全部":
         return "in"
     if row["hl"] == "ALL" or row["item_end"] == "1":
@@ -1244,20 +1246,44 @@ def _resolve_assets(only_n):
     if not have:
         return plan
 
+    # 図版はそのカットの説明のために描いたもの。他所で使い回すと
+    # 同じ絵が何度も出てきて、見ているほうは飽きる
+    pool = [(c, a) for c, a in have if not a.startswith(IMG)] or have
+
+    used = {}
+    for _, _, a in plan:
+        if a:
+            used[a] = used.get(a, 0) + 1
+
     borrowed = 0
     for i, (cut, r, a) in enumerate(plan):
         if a:
             continue
-        # 近い順に候補を並べ、直前と同じ絵は避ける
-        near = sorted(have, key=lambda t: abs(t[0] - cut))
+        # 前だけ見ても、次のカットが同じ絵を持っていれば並んでしまう
         prev = plan[i - 1][2] if i else None
-        pick = next((p for _, p in near if p != prev), near[0][1])
+        prev2 = plan[i - 2][2] if i > 1 else None
+        nxt = plan[i + 1][2] if i + 1 < len(plan) else None
+        # 近さより「使われていないもの」を優先する。近い順だけで選ぶと
+        # 隣の1枚が何度も呼ばれてしまう
+        cand = sorted(pool, key=lambda t: (used.get(t[1], 0),
+                                           abs(t[0] - cut)))
+        pick = next((p for _, p in cand
+                     if p != prev and p != prev2 and p != nxt), None)
+        if pick is None:
+            pick = next((p for _, p in cand if p != prev and p != nxt), None)
+        if pick is None:
+            pick = next((p for _, p in cand if p != prev), cand[0][1])
         plan[i][2] = pick
+        used[pick] = used.get(pick, 0) + 1
         # 借り物は動きを変えて、同じ絵に見えないようにする
         plan[i][1] = dict(r, camera=ROTATE[cut % len(ROTATE)], _borrowed=True)
         borrowed += 1
     if borrowed:
         print("     素材が無い %d カットは近くの映像を借ります" % borrowed)
+        top = sorted(used.items(), key=lambda kv: -kv[1])[:1]
+        if top and top[0][1] >= 4:
+            print("     ※ %s が %d 回出ます。素材を足すと減ります"
+                  % (os.path.basename(top[0][0])[:28], top[0][1]))
     return plan
 
 

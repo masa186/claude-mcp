@@ -35,7 +35,7 @@ cut,telop1,telop2,hl,hl_color,camera,asset,item_end
 33,クジラの声としては,異常に高い,異常に高い,red,zoomin,A27,0
 34,シロナガスクジラは,10〜39ヘルツ,10〜39,yellow,panleft,A28,0
 35,この個体だけが,違う周波数で鳴いていた,この個体だけ,red,zoomin,A28,0
-36,つまり,仲間には届かない,届かない,red,zoomout,A28,0
+36,つまり,仲間には届かない,届かない,red,zoomout,A27,0
 37,研究者は30年以上,追跡を続けた,30年以上,red,zoomin,A29,0
 38,回遊経路はどの種とも,一致しない,一致しない,yellow,panright,A30,0
 39,種の特定も,姿の確認もできていない,できていない,red,zoomin,A31,0
