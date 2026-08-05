@@ -21,7 +21,7 @@ CUTS = [
      'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '1', 'telop1': '地球には', 'telop2': '正体不明の音がある', 'hl': '正体不明', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A01', 'item_end': '0'},
     {'cut': '2', 'telop1': '記録は残っている', 'telop2': 'だが音源が分からない', 'hl': '音源', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A02', 'item_end': '0'},
-    {'cut': '3', 'telop1': '1.アップスウィープ', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A03', 'item_end': '0'},
+    {'cut': '3', 'telop1': '1つ目', 'telop2': 'アップスウィープ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A03', 'item_end': '0'},
     {'cut': '4', 'telop1': '1991年', 'telop2': 'アメリカの観測機関が', 'hl': '1991年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A04', 'item_end': '0'},
     {'cut': '5', 'telop1': '太平洋の海中で', 'telop2': '奇妙な音を捉えた', 'hl': '奇妙な音', 'hl_color': 'yellow', 'camera': 'pandown', 'asset': 'A05', 'item_end': '0'},
     {'cut': '6', 'telop1': '周波数が', 'telop2': '上昇していく音が', 'hl': '上昇', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A06', 'item_end': '0'},
@@ -34,7 +34,7 @@ CUTS = [
     {'cut': '13', 'telop1': '海底火山の活動では', 'telop2': 'ないかとされるが', 'hl': '海底火山', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A11', 'item_end': '0'},
     {'cut': '14', 'telop1': '音源は', 'telop2': '特定されていない', 'hl': '特定されていない', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A08', 'item_end': '0'},
     {'cut': '15', 'telop1': 'そして今も', 'telop2': '鳴り続けている', 'hl': '今も', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A12', 'item_end': '1'},
-    {'cut': '16', 'telop1': '2.ザ・ハム', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A13', 'item_end': '0'},
+    {'cut': '16', 'telop1': '2つ目', 'telop2': 'ザ・ハム', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A13', 'item_end': '0'},
     {'cut': '17', 'telop1': '世界各地で', 'telop2': '同じ報告が上がっている', 'hl': '同じ報告', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A14', 'item_end': '0'},
     {'cut': '18', 'telop1': '低い唸り声のような', 'telop2': '音が聞こえる', 'hl': '唸り声', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A15', 'item_end': '0'},
     {'cut': '19', 'telop1': 'エンジンが遠くで', 'telop2': '回っているような音', 'hl': 'エンジン', 'hl_color': 'yellow', 'camera': 'panright', 'asset': 'A16', 'item_end': '0'},
@@ -47,7 +47,7 @@ CUTS = [
     {'cut': '26', 'telop1': '工業機械 地殻の振動', 'telop2': '耳鳴り', 'hl': '', 'hl_color': '', 'camera': 'pandown', 'asset': 'A22', 'item_end': '0'},
     {'cut': '27', 'telop1': 'あらゆる説が', 'telop2': '検証されたが', 'hl': '検証', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A23', 'item_end': '0'},
     {'cut': '28', 'telop1': '発生源はいまだに', 'telop2': '特定されていない', 'hl': '特定されていない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A13', 'item_end': '1'},
-    {'cut': '29', 'telop1': '3.52ヘルツのクジラ', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A01', 'item_end': '0'},
+    {'cut': '29', 'telop1': '3つ目', 'telop2': '52ヘルツのクジラ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A01', 'item_end': '0'},
     {'cut': '30', 'telop1': '1989年', 'telop2': '米海軍の探知網が', 'hl': '1989年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A24', 'item_end': '0'},
     {'cut': '31', 'telop1': '太平洋である', 'telop2': '鳴き声を拾った', 'hl': '鳴き声', 'hl_color': 'yellow', 'camera': 'panright', 'asset': 'A25', 'item_end': '0'},
     {'cut': '32', 'telop1': '52ヘルツ', 'telop2': '', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'still', 'asset': 'A26a', 'item_end': '0'},
@@ -92,11 +92,15 @@ SEARCH = {
     42: ['archive shelves tape reels storage'],
 }
 
-SILENT_CUTS = {3, 16, 29}
+SILENT_CUTS = set()      # 番号カードも読み上げるので、無音のカットは無い
+# 番号カードはセリフが短い。文字数どおりに割ると1秒ちょっとで消えて読めない
+CARD_CUTS = {int(r["cut"]) for r in CUTS if r["hl"] == "ALL"}
+CARD_WEIGHT = 17
 NARRATION = {
     0: '今も正体が分かっていない、地球の音、3選。',
     1: '地球には、誰も正体を特定できていない音がある。',
     2: '観測記録は残っている。だが音源が分からない。',
+    3: '1つ目、アップスウィープ。',
     4: '1991年、アメリカの観測機関が',
     5: '太平洋の海中で奇妙な音を捉えた。',
     6: '周波数が上昇していく音が',
@@ -109,6 +113,7 @@ NARRATION = {
     13: '海底火山の活動ではないかとされるが',
     14: '音源は特定されていない。',
     15: 'そして今も、鳴り続けている。',
+    16: '2つ目、ザ・ハム。',
     17: '世界各地で同じ報告が上がっている。',
     18: '低い唸り声のような音が聞こえる。',
     19: 'エンジンが遠くで回っているような音だ。',
@@ -121,6 +126,7 @@ NARRATION = {
     26: '工業機械、地殻の振動、耳鳴り。',
     27: 'あらゆる説が検証されたが',
     28: '発生源はいまだに特定されていない。',
+    29: '3つ目、52ヘルツのクジラ。',
     30: '1989年、アメリカ海軍の潜水艦探知網が',
     31: '太平洋である鳴き声を拾った。',
     32: '52ヘルツ。',
@@ -548,7 +554,8 @@ def plan_from_voices(paths, cuts_used):
         if 0 in here and not titled:
             cards[0] = TITLE_SEC
         talk = [c for c in here if c not in cards]
-        chars = {c: max(len(NARRATION.get(c, "")), 1) for c in talk}
+        chars = {c: max(len(NARRATION.get(c, "")),
+                        CARD_WEIGHT if c in CARD_CUTS else 1) for c in talk}
         body = max(sec - sum(cards.values()), 0.6)
         unit = body / max(sum(chars.values()), 1)
         dur.update(cards)
