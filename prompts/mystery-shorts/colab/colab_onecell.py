@@ -591,7 +591,7 @@ def gen_one(prompt, key):
     raise RuntimeError(last or "不明")
 
 
-def generate_missing(key, only_n):
+def generate_missing(key, only_n, reserve_pexels=False):
     # Pexels と手持ちで埋まらなかったカットだけ作る
     os.makedirs(MINE, exist_ok=True)
     need = []
@@ -600,6 +600,10 @@ def generate_missing(key, only_n):
         if only_n and cut > only_n:
             break
         if cut not in PROMPTS:
+            continue
+        # ④が Pexels で埋めるカットは、まだ落ちていなくても作らない。
+        # ここで作ると動く映像が静止画に負けるし、生成の回数も無駄になる
+        if reserve_pexels and cut in SEARCH:
             continue
         r = dict(row)
         if row["cut"] in ASSET_ALIAS:
@@ -1045,7 +1049,17 @@ def main():
         print("足りないカットの画像をつくります")
         render_figures()
         unpack_zips()
-        generate_missing(a.gen_images.strip(), only)
+        # ③は④より先に押される。Pexels をまだ落としていない状態で数えると
+        # 「全部足りない」に見えるので、キーがあるなら先に落としてから数える
+        real_key = a.key.strip() and a.key.strip() != "x"
+        if real_key:
+            wanted = {c for c in SEARCH if not only or c <= only}
+            print("     先に Pexels を落とします（%dカット）" % len(wanted))
+            got, _ = pexels(a.key.strip(), wanted)
+            print("     %d本 取得" % got)
+        else:
+            print("     Pexels のキーが無いので、④が埋めるカットは作りません")
+        generate_missing(a.gen_images.strip(), only, reserve_pexels=not real_key)
         return
     wanted = {c for c in SEARCH if not only or c <= only}
 
