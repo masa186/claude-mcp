@@ -462,11 +462,9 @@ def join_voices(paths):
 
 
 def plan_from_voices(paths, cuts_used):
-    """音声ファイルごとの実測時間で、その中のカットに時間を配る。
-
-    1本まるごとで按分するとズレが最後まで積もるが、ファイル単位で
-    区切れば、ズレてもその声が終われば必ず戻る。
-    """
+    # 音声ファイルごとの実測時間で、その中のカットに時間を配る。
+    # 1本まるごとで按分するとズレが最後まで積もるが、ファイル単位で
+    # 区切れば、ズレてもその声が終われば必ず戻る
     if len(paths) == len(BLOCKS):
         pairs = [(media_seconds(p), b) for p, b in zip(paths, BLOCKS)]
     else:
