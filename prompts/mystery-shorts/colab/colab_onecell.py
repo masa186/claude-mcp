@@ -97,7 +97,7 @@ SILENT_CUTS = set()      # 番号カードも読み上げるので、無音の�
 CARD_CUTS = {int(r["cut"]) for r in CUTS if r["hl"] == "ALL"}
 CARD_WEIGHT = 17
 NARRATION = {
-    0: '今も正体が分かっていない、地球の音、3選。',
+    0: '今も正体が分かっていない地球の音、3選。',
     1: '地球には、誰も正体を特定できていない音がある。',
     2: '観測記録は残っている。だが音源が分からない。',
     3: '1つ目、アップスウィープ。',
@@ -506,24 +506,47 @@ def media_seconds(path):
     return int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3))
 
 
+# 参考動画は尺の2〜3割が間だった。ブロックをそのまま繋ぐと息継ぎが無くなる
+BLOCK_GAP, TITLE_GAP = 0.30, 0.45
+
+
+def voice_gaps(paths):
+    # 各ファイルの後ろに入れる無音。最後の1本だけ入れない
+    titled = has_title_voice(paths)
+    out = []
+    for i in range(len(paths)):
+        if i == len(paths) - 1:
+            out.append(0.0)
+        elif i == 0 and titled:
+            out.append(TITLE_GAP)      # タイトルのあとは長めに置く
+        else:
+            out.append(BLOCK_GAP)
+    return out
+
+
 def join_voices(paths):
     os.makedirs(WORK, exist_ok=True)
     joined = os.path.join(WORK, "narration.wav")
-    if len(paths) == 1:
-        sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
-            "-i", paths[0], "-ar", "44100", "-ac", "1", joined])
-        return joined
+    FF = ffmpeg_bin()
     parts = []
-    for i, h in enumerate(paths):
+    for i, (h, g) in enumerate(zip(paths, voice_gaps(paths))):
         q = os.path.join(WORK, "v%02d.wav" % i)
-        sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
-            "-i", h, "-ar", "44100", "-ac", "1", q])
+        sh([FF, "-hide_banner", "-loglevel", "error", "-y",
+            "-i", h, "-ar", "44100", "-ac", "1", "-c:a", "pcm_s16le", q])
         parts.append(q)
+        if g > 0:
+            z = os.path.join(WORK, "z%02d.wav" % i)
+            sh([FF, "-hide_banner", "-loglevel", "error", "-y",
+                "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", "%.3f" % g,
+                "-c:a", "pcm_s16le", z])
+            parts.append(z)
+    if len(parts) == 1:
+        return parts[0]
     lst = os.path.join(WORK, "voices.txt")
     with open(lst, "w", encoding="utf-8") as f:
         for q in parts:
             f.write("file '%s'\n" % q)
-    sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+    sh([FF, "-hide_banner", "-loglevel", "error", "-y",
         "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", joined])
     return joined
 
@@ -549,7 +572,9 @@ def plan_from_voices(paths, cuts_used):
     # 区切れば、ズレてもその声が終われば必ず戻る
     blocks = voice_blocks(paths)
     if len(paths) == len(blocks):
-        pairs = [(media_seconds(p), b) for p, b in zip(paths, blocks)]
+        gaps = voice_gaps(paths)
+        pairs = [(media_seconds(p) + g, b)
+                 for p, b, g in zip(paths, blocks, gaps)]
     else:
         # 本数が想定と違うときは、全部まとめて1本ぶんとして按分する
         pairs = [(sum(media_seconds(p) for p in paths), sorted(cuts_used))]
