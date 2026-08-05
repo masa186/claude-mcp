@@ -245,6 +245,22 @@ FACES = {
 }
 FACE = "太ゴシック"      # --face で差し替える
 
+# テロップの出し方。参考6本を測ると4本は動きなしの切り替えで、
+# 動くものは 0.1秒ほどで 93% から等倍に戻る出方だった
+ANIMS = ("ポップ", "ふわっと", "なし")
+ANIM = "ポップ"
+
+
+def telop_filter():
+    if ANIM == "なし":
+        return "[bg][1:v]overlay=0:0:format=auto[v]"
+    if ANIM == "ふわっと":
+        return ("[1:v]fade=t=in:st=0:d=0.12:alpha=1[tp];"
+                "[bg][tp]overlay=0:'H*0.010*(1-min(t/0.12,1))':format=auto[v]")
+    return ("[1:v]scale=w='iw*(0.93+0.07*min(t/0.12,1))':h=-1:eval=frame,"
+            "fade=t=in:st=0:d=0.08:alpha=1[tp];"
+            "[bg][tp]overlay='(W-w)/2':'(H-h)/2':format=auto[v]")
+
 
 def find_title_font():
     # タイトルとテロップの書体。無ければ本文用で代用する
@@ -585,6 +601,56 @@ def voice_blocks(paths):
     return [[0]] + [[c for c in b if c != 0] for b in BLOCKS]
 
 
+def speech_edges(path):
+    # 声の中の「間」の位置を返す。文字数で割るより、実際に息継ぎした
+    # ところでテロップを変えたほうが合って聞こえる
+    import numpy as np
+    tmp = os.path.join(WORK, "_edge.wav")
+    try:
+        sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+            "-i", path, "-ac", "1", "-ar", "8000", "-c:a", "pcm_s16le", tmp])
+        w = wave.open(tmp)
+        a = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float32) / 32768
+        sr = w.getframerate()
+    except Exception:
+        return []
+    if len(a) < sr // 2:
+        return []
+    hop = int(sr * 0.010)
+    n = len(a) // hop
+    env = np.sqrt((a[:n*hop].reshape(n, hop) ** 2).mean(1) + 1e-12)
+    env = np.convolve(env, np.ones(5) / 5, "same")
+    thr = np.percentile(env, 90) * 0.20
+    out, run = [], 0
+    for i, loud in enumerate(env > thr):
+        if not loud:
+            run += 1
+        else:
+            if run * 0.010 >= 0.10:
+                out.append((i - run / 2) * 0.010)     # 無音の真ん中
+            run = 0
+    return out
+
+
+def snap(targets, edges, window=0.55):
+    # 文字数から出した切り替え時刻を、近くの「間」に寄せる。
+    # 順番は崩さない。近くに間が無ければそのまま
+    used, out = set(), []
+    for t in targets:
+        best, bd = None, window
+        for j, e in enumerate(edges):
+            if j in used or (out and e <= out[-1] + 0.25):
+                continue
+            if abs(e - t) < bd:
+                best, bd = j, abs(e - t)
+        if best is None:
+            out.append(t)
+        else:
+            used.add(best)
+            out.append(edges[best])
+    return out
+
+
 def plan_from_voices(paths, cuts_used):
     # 音声ファイルごとの実測時間で、その中のカットに時間を配る。
     # 1本まるごとで按分するとズレが最後まで積もるが、ファイル単位で
@@ -592,18 +658,18 @@ def plan_from_voices(paths, cuts_used):
     blocks = voice_blocks(paths)
     if len(paths) == len(blocks):
         gaps = voice_gaps(paths)
-        pairs = [(media_seconds(p) + g, b)
+        pairs = [(media_seconds(p) + g, b, p)
                  for p, b, g in zip(paths, blocks, gaps)]
     else:
         # 本数が想定と違うときは、全部まとめて1本ぶんとして按分する。
         # 継ぎ目に入れる無音も足しておかないと、そのぶん丸ごとずれる
         pairs = [(sum(media_seconds(p) for p in paths) + sum(voice_gaps(paths)),
-                  sorted(cuts_used))]
+                  sorted(cuts_used), None)]
 
     titled = has_title_voice(paths) and len(paths) == len(blocks)
 
     dur = {}
-    for sec, block in pairs:
+    for sec, block, src in pairs:
         here = [c for c in block if c in cuts_used]
         if not here:
             continue
@@ -620,6 +686,21 @@ def plan_from_voices(paths, cuts_used):
         dur.update(cards)
         for c in talk:
             dur[c] = max(chars[c] * unit, 0.7)
+
+        # ここまでは文字数の按分。実際の息継ぎに寄せて精度を上げる
+        if src and len(here) > 1:
+            edges = speech_edges(src)
+            if edges:
+                acc, targets = 0.0, []
+                for c in here[:-1]:
+                    acc += dur[c]
+                    targets.append(acc)
+                fixed = snap(targets, edges)
+                prev = 0.0
+                for c, t in zip(here[:-1], fixed):
+                    dur[c] = max(t - prev, 0.55)
+                    prev += dur[c]
+                dur[here[-1]] = max(sec - prev, 0.55)
         # 下限を効かせると合計が声より長くなることがある。
         # はみ出したぶんは全体を縮めて、必ず声の長さに収める
         got = sum(dur[c] for c in here)
@@ -1158,7 +1239,8 @@ def build(font, only_n, out, fixed_dur=None):
         # 生成サービスの透かしは下端(縦 0.90 付近)に入る。実測して 88% で切る
         if asset.startswith(MINE) or "/content/素材_" in asset:
             vf = "crop=iw:ih*0.88:0:0," + vf
-        args += ["-i", tp]
+        # 1枚絵のまま渡すと t が進まず、fade も scale も効かない
+        args += ["-loop", "1", "-framerate", str(FPS), "-i", tp]
         if wav:
             args += ["-i", wav]
             amap = "[2:a]apad[a]"
@@ -1166,7 +1248,7 @@ def build(font, only_n, out, fixed_dur=None):
             args += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
             amap = "[2:a]anull[a]"
         args += ["-filter_complex",
-                 "[0:v]%s[bg];[bg][1:v]overlay=0:0:format=auto[v];%s" % (vf, amap),
+                 "[0:v]%s[bg];%s;%s" % (vf, telop_filter(), amap),
                  "-map", "[v]", "-map", "[a]", "-t", "%.3f" % dur, "-r", str(FPS),
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "21",
                  "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
@@ -1186,7 +1268,7 @@ def build(font, only_n, out, fixed_dur=None):
 
 
 def main():
-    global FACE
+    global FACE, ANIM
     ap = argparse.ArgumentParser()
     ap.add_argument("--key", required=True)
     ap.add_argument("--range", type=int, default=0, help="0なら全部")
@@ -1198,8 +1280,10 @@ def main():
     ap.add_argument("--intonation", type=float, default=0.90)
     ap.add_argument("--gen-images", default="", help="Geminiのキー。足りないカットを生成して終了")
     ap.add_argument("--face", default=FACE, choices=sorted(FACES), help="テロップの書体")
+    ap.add_argument("--anim", default=ANIM, choices=ANIMS, help="テロップの出し方")
     a = ap.parse_args()
     FACE = a.face
+    ANIM = a.anim
 
     os.makedirs(WORK, exist_ok=True)
     only = a.range or None
