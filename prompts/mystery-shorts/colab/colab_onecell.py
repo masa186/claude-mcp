@@ -168,6 +168,19 @@ def find_font():
     return ""
 
 
+def find_title_font():
+    # タイトルは極太の見出し用。無ければ本文用で代用する
+    import glob
+    for pat in ("/content/fonts/DelaGothicOne*.ttf",
+                "/usr/share/fonts/**/DelaGothicOne*",
+                "/usr/share/fonts/**/RampartOne*",
+                "/usr/share/fonts/**/NotoSansCJK*Black*"):
+        hits = sorted(glob.glob(pat, recursive=True))
+        if hits:
+            return hits[0]
+    return find_font()
+
+
 # ── 図版（カット6・7・32）。ナレーションが述べる内容そのものなので用意する ──
 
 def render_figures():
@@ -441,24 +454,32 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
 
 # ── テロップ ──
 
-TITLE_LINES = [("今も正体が", "#FFFFFF", 0.62),
-               ("分かっていない", "#FFFFFF", 0.95),
-               ("地球の音", "#FF2A2A", 1.00),
-               ("3選", "#FFD24A", 0.80)]
+# 参考動画に合わせて、白→黄→赤→白。暗い海の上でいちばん飛ぶ組み合わせ
+TITLE_LINES = [("今も正体が", "#FFFFFF", 0.66),
+               ("分かっていない", "#FFD400", 0.98),
+               ("地球の音", "#FF1F1F", 1.06),
+               ("3選", "#FFFFFF", 0.82)]
 
 
 def draw_title(font_path, out):
-    # 行ごとに大きさと色を変える。1行にベタ打ちすると弱い
+    # 行ごとに大きさと色を変える。1行にベタ打ちすると弱い。
+    # 黒フチは思い切り太く。参考動画はどれも文字の芯と同じくらい縁がある
     from PIL import Image, ImageDraw, ImageFont
+    tf = find_title_font() or font_path
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    base = 92
-    fonts = [(t, c, ImageFont.truetype(font_path, int(base * k))) for t, c, k in TITLE_LINES]
-    heights = [int(base * k * 1.30) for _, _, k in TITLE_LINES]
+    base = 104
+    fonts = [(t, c, ImageFont.truetype(tf, int(base * k))) for t, c, k in TITLE_LINES]
+    heights = [int(base * k * 1.14) for _, _, k in TITLE_LINES]   # 行間を詰めて塊にする
     y = (H - sum(heights)) // 2
+
+    # 背後をうっすら暗くして、どんな素材でも文字が立つようにする
+    pad = 46
+    d.rectangle([0, y - pad, W, y + sum(heights) + pad], fill=(0, 0, 0, 105))
+
     for (text, col, fnt), lh in zip(fonts, heights):
         x = (W - d.textlength(text, font=fnt)) / 2
-        d.text((x, y), text, font=fnt, fill=col, stroke_width=8, stroke_fill="black")
+        d.text((x, y), text, font=fnt, fill=col, stroke_width=14, stroke_fill="black")
         y += lh
     im.save(out)
 
