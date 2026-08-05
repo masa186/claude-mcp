@@ -223,6 +223,8 @@ def main():
     ap.add_argument("--bgm-db", type=float, default=-24.0, help="BGMの音量(dB)")
     ap.add_argument("--out", default=os.path.join(HERE, "完成", "地球の音.mp4"))
     ap.add_argument("--check", action="store_true", help="素材の過不足を確認して終了")
+    ap.add_argument("--skip-missing", action="store_true",
+                    help="素材が無いカットは飛ばして、あるぶんだけで作る")
     a = ap.parse_args()
 
     rows = read_cuts()
@@ -268,7 +270,13 @@ def main():
     if a.check:
         return
     if missing_asset:
-        sys.exit("\n素材が足りません。--check で確認して埋めてください。")
+        if not a.skip_missing:
+            sys.exit("\n素材が足りません。--check で確認して埋めるか、"
+                     "--skip-missing であるぶんだけ作ってください。")
+        skip = {c for c, _ in missing_asset}
+        plan = [p for p in plan if p[1] not in skip]
+        print(f"\n{len(skip)}カットを飛ばして、残り{len(plan)}カットで作ります"
+              f"（尺 {sum(p[4] for p in plan):.1f}秒）")
     if not os.path.exists(a.font):
         sys.exit(f"フォントが見つかりません: {a.font}\n--font で指定してください。")
 
