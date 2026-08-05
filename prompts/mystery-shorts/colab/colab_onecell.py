@@ -512,31 +512,49 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
 # ── テロップ ──
 
 # 参考動画に合わせて、白→黄→赤→白。暗い海の上でいちばん飛ぶ組み合わせ
-TITLE_LINES = [("今も正体が", "#FFFFFF", 0.66),
-               ("分かっていない", "#FFD400", 0.98),
-               ("地球の音", "#FF1F1F", 1.06),
-               ("3選", "#FFFFFF", 0.82)]
+TITLE_LINES = [("今も正体が", "#FFFFFF", 0.72),
+               ("分かっていない", "#FFD400", 1.00),
+               ("地球の音", "#FF1F1F", 0.86),
+               ("3選", "#FFFFFF", 0.34)]
+
+
+def fit_font(draw, text, font_path, target_w, cap):
+    # 行ごとに、目標の幅に収まる最大のサイズを探す
+    from PIL import ImageFont
+    lo, hi, best = 20, cap, None
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        f = ImageFont.truetype(font_path, mid)
+        if draw.textlength(text, font=f) <= target_w:
+            best, lo = f, mid + 1
+        else:
+            hi = mid - 1
+    return best or ImageFont.truetype(font_path, 20)
 
 
 def draw_title(font_path, out):
     # 行ごとに大きさと色を変える。1行にベタ打ちすると弱い。
-    # 黒フチは思い切り太く。参考動画はどれも文字の芯と同じくらい縁がある
-    from PIL import Image, ImageDraw, ImageFont
+    # 参考動画はどれも横幅いっぱいまで文字を使い、黒フチが芯と同じくらい太い
+    from PIL import Image, ImageDraw
     tf = find_title_font() or font_path
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    base = 104
-    fonts = [(t, c, ImageFont.truetype(tf, int(base * k))) for t, c, k in TITLE_LINES]
-    heights = [int(base * k * 1.14) for _, _, k in TITLE_LINES]   # 行間を詰めて塊にする
+
+    fonts = []
+    for text, col, k in TITLE_LINES:
+        f = fit_font(d, text, tf, W * 0.90 * k, int(W * 0.34))
+        fonts.append((text, col, f))
+    heights = [int(f.size * 1.16) for _, _, f in fonts]
     y = (H - sum(heights)) // 2
 
     # 背後をうっすら暗くして、どんな素材でも文字が立つようにする
-    pad = 46
-    d.rectangle([0, y - pad, W, y + sum(heights) + pad], fill=(0, 0, 0, 105))
+    pad = int(W * 0.05)
+    d.rectangle([0, y - pad, W, y + sum(heights) + pad], fill=(0, 0, 0, 115))
 
     for (text, col, fnt), lh in zip(fonts, heights):
         x = (W - d.textlength(text, font=fnt)) / 2
-        d.text((x, y), text, font=fnt, fill=col, stroke_width=14, stroke_fill="black")
+        sw = max(int(fnt.size * 0.11), 8)          # 芯に対して十分な太さの縁
+        d.text((x, y), text, font=fnt, fill=col, stroke_width=sw, stroke_fill="black")
         y += lh
     im.save(out)
 
@@ -622,10 +640,13 @@ def find_asset(row, cut):
 ASSET_ALIAS = {"6": "A06", "7": "A06", "32": "A26"}
 
 
-def build(font, only_n, out, fixed_dur=None):
-    FF = ffmpeg_bin()
-    os.makedirs(TMP, exist_ok=True)
-    segs = []
+ROTATE = ["zoomin", "panright", "zoomout", "panleft", "pandown"]
+
+
+def resolve_assets(only_n):
+    # 素材が無いカットは近くの映像を借りる。絵が変わらないと、
+    # セリフだけ進んで「音が合っていない」ように見えてしまう
+    plan, have = [], []
     for row in CUTS:
         cut = int(row["cut"])
         if only_n and cut > only_n:
@@ -633,9 +654,37 @@ def build(font, only_n, out, fixed_dur=None):
         r = dict(row)
         if row["cut"] in ASSET_ALIAS:
             r["asset"] = ASSET_ALIAS[row["cut"]]
-        asset = find_asset(r, cut)
-        if asset is None and cut == 0:
-            asset = find_asset({"asset": "A01"}, 1)   # タイトルはカット1の絵を借りる
+        a = find_asset(r, cut)
+        if a is None and cut == 0:
+            a = find_asset({"asset": "A01"}, 1)
+        plan.append([cut, r, a])
+        if a:
+            have.append((cut, a))
+    if not have:
+        return plan
+
+    borrowed = 0
+    for i, (cut, r, a) in enumerate(plan):
+        if a:
+            continue
+        # 近い順に候補を並べ、直前と同じ絵は避ける
+        near = sorted(have, key=lambda t: abs(t[0] - cut))
+        prev = plan[i - 1][2] if i else None
+        pick = next((p for _, p in near if p != prev), near[0][1])
+        plan[i][2] = pick
+        # 借り物は動きを変えて、同じ絵に見えないようにする
+        plan[i][1] = dict(r, camera=ROTATE[cut % len(ROTATE)])
+        borrowed += 1
+    if borrowed:
+        print("     素材が無い %d カットは近くの映像を借ります" % borrowed)
+    return plan
+
+
+def build(font, only_n, out, fixed_dur=None):
+    FF = ffmpeg_bin()
+    os.makedirs(TMP, exist_ok=True)
+    segs = []
+    for cut, r, asset in resolve_assets(only_n):
         if asset is None:
             continue
         wav = os.path.join(AUD, "cut%02d.wav" % cut)
@@ -748,16 +797,7 @@ def main():
     if voices:
         # 素材が無くて飛ばすカットに時間を配ると、その分だけ音がずれる。
         # 実際に使えるカットだけで割り振る
-        have = []
-        for row in CUTS:
-            c = int(row["cut"])
-            if only and c > only:
-                break
-            r = dict(row)
-            if row["cut"] in ASSET_ALIAS:
-                r["asset"] = ASSET_ALIAS[row["cut"]]
-            if find_asset(r, c) or (c == 0 and find_asset({"asset": "A01"}, 1)):
-                have.append(c)
+        have = [c for c, _, a in resolve_assets(only) if a]
         fixed = plan_from_voices(voices, set(have))
         voice_file = join_voices(voices)
         print("     使えるカット %d / 音声 %.1f秒" % (len(have), media_seconds(voice_file)))
