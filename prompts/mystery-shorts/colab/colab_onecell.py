@@ -544,6 +544,31 @@ def voice_order(path):
     return (int(m[0]) if m else -1, n)
 
 
+def find_bgm():
+    # /content に bgm.mp3 のような名前で置いてあれば使う
+    import glob
+    for d in ("/content", "."):
+        for fp in sorted(glob.glob(os.path.join(d, "*"))):
+            n = os.path.basename(fp).lower()
+            if os.path.splitext(n)[1] in AUDIO_EXT and ("bgm" in n or "music" in n):
+                return fp
+    return None
+
+
+def mix_bgm(video, bgm, db, out):
+    # 参考動画を測ると、BGM はナレーションより 8〜12dB 下だった。
+    # 頭と尻を少し絞って、喋りの上に乗せる
+    dur = media_seconds(video)
+    fc = ("[1:a]aloop=loop=-1:size=2000000000,atrim=0:%.3f,"
+          "volume=%.1fdB,afade=t=in:d=1.2,afade=t=out:st=%.3f:d=1.8[b];"
+          "[0:a][b]amix=inputs=2:duration=first:normalize=0,"
+          "alimiter=limit=0.95[a]" % (dur, db, max(dur - 1.8, 0.1)))
+    sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
+        "-i", video, "-i", bgm, "-filter_complex", fc,
+        "-map", "0:v", "-map", "[a]", "-c:v", "copy",
+        "-c:a", "aac", "-b:a", "192k", "-shortest", out])
+
+
 def find_voice_files():
     # 声1.wav … と付いていれば確実。付いていなくても、置いてある音声を
     # 名前の数字順に並べて使う。スマホだと名前を直すのが一番の手間なので
@@ -1410,6 +1435,8 @@ def main():
     ap.add_argument("--face", default=FACE, choices=sorted(FACES), help="テロップの書体")
     ap.add_argument("--anim", default=ANIM, choices=ANIMS, help="テロップの出し方")
     ap.add_argument("--trans", default=TRANS_MODE, choices=TRANS, help="カットの切り替え")
+    ap.add_argument("--bgm", default="", help="BGMのファイル。空なら /content から探す")
+    ap.add_argument("--bgm-db", type=float, default=-11.0, help="ナレーションに対する音量")
     a = ap.parse_args()
     FACE = a.face
     ANIM = a.anim
@@ -1503,6 +1530,18 @@ def main():
         sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
             "-i", tmp, "-i", voice_file, "-map", "0:v", "-map", "1:a",
             "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", a.out])
+    bgm = a.bgm.strip() or find_bgm()
+    if bgm and os.path.exists(bgm):
+        tmp = os.path.join(WORK, "with_bgm.mp4")
+        try:
+            mix_bgm(a.out, bgm, a.bgm_db, tmp)
+            shutil.move(tmp, a.out)
+            print("     BGM: %s（%.0fdB）" % (os.path.basename(bgm), a.bgm_db))
+        except Exception as e:
+            print("     BGM を混ぜられませんでした（%s）。音声はそのままです" % e)
+    elif bgm:
+        print("     BGM が見つかりません: %s" % bgm)
+
     print("\n完成： %s（%dカット）" % (a.out, n))
 
 
