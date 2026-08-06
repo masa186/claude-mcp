@@ -702,23 +702,58 @@ def speech_edges(path):
     return out
 
 
-def snap(targets, edges, window=0.55):
-    # 文字数から出した切り替え時刻を、近くの「間」に寄せる。
-    # 順番は崩さない。近くに間が無ければそのまま
-    used, out = set(), []
-    for t in targets:
-        best, bd = None, window
-        for j, e in enumerate(edges):
-            if j in used or (out and e <= out[-1] + 0.25):
-                continue
-            if abs(e - t) < bd:
-                best, bd = j, abs(e - t)
-        if best is None:
-            out.append(t)
-        else:
-            used.add(best)
-            out.append(edges[best])
-    return out
+def snap(targets, edges, total=None, want=None):
+    # 切り替え時刻を「間」に合わせる。近い順に1つずつ選ぶと、
+    # 文字数の見積もりが少しずれただけで正しい間を取り逃す。
+    # 全体でいちばん辻褄が合う組を選ぶ（動的計画法）
+    n = len(targets)
+    if not edges or not n:
+        return list(targets)
+    if want is None:
+        want = [targets[0]] + [targets[i] - targets[i - 1] for i in range(1, n)]
+    if total is None:
+        total = targets[-1]
+    m = len(edges)
+    INF = float("inf")
+
+    def cost(prev_t, t, k):
+        # k番目のカットが prev_t〜t になったときの無理さ
+        got = t - prev_t
+        if got < 0.45:
+            return INF
+        exp = max(want[k], 0.3)
+        return (got - exp) ** 2 / exp
+
+    # best[k][j] = k番目までの境界を決め、k番目が edges[j] のときの最小コスト
+    best = [[INF] * m for _ in range(n)]
+    back = [[-1] * m for _ in range(n)]
+    for j in range(m):
+        best[0][j] = cost(0.0, edges[j], 0)
+    for k in range(1, n):
+        for j in range(m):
+            for h in range(j):
+                if best[k - 1][h] == INF:
+                    continue
+                c = best[k - 1][h] + cost(edges[h], edges[j], k)
+                if c < best[k][j]:
+                    best[k][j], back[k][j] = c, h
+    # 最後のカットの尺も評価に入れる
+    end, endj = INF, -1
+    for j in range(m):
+        if best[n - 1][j] == INF:
+            continue
+        c = best[n - 1][j] + cost(edges[j], total, n)
+        if c < end:
+            end, endj = c, j
+    if endj < 0:
+        return list(targets)
+    out, j = [], endj
+    for k in range(n - 1, -1, -1):
+        out.append(edges[j])
+        j = back[k][j]
+        if j < 0 and k:
+            return list(targets)
+    return out[::-1]
 
 
 def plan_from_voices(paths, cuts_used):
@@ -760,17 +795,18 @@ def plan_from_voices(paths, cuts_used):
         # ここまでは文字数の按分。実際の息継ぎに寄せて精度を上げる
         if src and len(here) > 1:
             edges = speech_edges(src)
-            if edges:
+            if len(edges) >= len(here) - 1:
                 acc, targets = 0.0, []
                 for c in here[:-1]:
                     acc += dur[c]
                     targets.append(acc)
-                fixed = snap(targets, edges)
+                want = [dur[c] for c in here]
+                fixed = snap(targets, edges, total=sec, want=want)
                 prev = 0.0
                 for c, t in zip(here[:-1], fixed):
-                    dur[c] = max(t - prev, 0.55)
+                    dur[c] = max(t - prev, 0.45)
                     prev += dur[c]
-                dur[here[-1]] = max(sec - prev, 0.55)
+                dur[here[-1]] = max(sec - prev, 0.45)
         # 下限を効かせると合計が声より長くなることがある。
         # はみ出したぶんは全体を縮めて、必ず声の長さに収める
         got = sum(dur[c] for c in here)
