@@ -1482,7 +1482,7 @@ def main():
     ap.add_argument("--out", default="動画.mp4")
     ap.add_argument("--voice", default="", help="VOICEVOXの話者名。空なら声なし")
     ap.add_argument("--vv-host", default="http://127.0.0.1:50021")
-    ap.add_argument("--speed", type=float, default=1.05)
+    ap.add_argument("--speed", type=float, default=1.10)
     ap.add_argument("--pitch", type=float, default=-0.02)
     ap.add_argument("--intonation", type=float, default=0.90)
     ap.add_argument("--gen-images", default="", help="Geminiのキー。足りないカットを生成して終了")
