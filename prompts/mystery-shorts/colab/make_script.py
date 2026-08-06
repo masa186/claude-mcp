@@ -60,6 +60,21 @@ def main():
     open(path, "w", encoding="utf-8").write("\n".join(lines) + "\n")
     print("書き出しました: %s" % path)
 
+    # 1カット1ファイルで録る人向け。番号どおりに保存すれば推測が一切要らない
+    per = os.path.abspath(os.path.join(OUT, "ナレーション_カット別.txt"))
+    rows = ["1カットずつ録る場合はこちら。ズレが構造的に起きなくなります。",
+            "保存する名前は cut02.wav / cut03.wav … と、左の番号に合わせること。",
+            "（番号は飛びます。台本にない番号は録らなくてよい）",
+            "",
+            "設定は 速さ 1.10 / 高さ -0.04 / 抑揚 0.95。",
+            ""]
+    for cut in sorted(C.NARRATION):
+        rows.append("cut%02d.wav   %s" % (cut, C.NARRATION[cut]))
+    rows.append("")
+    rows.append("計 %d本" % len(C.NARRATION))
+    open(per, "w", encoding="utf-8").write("\n".join(rows) + "\n")
+    print("書き出しました: %s" % per)
+
     full = os.path.abspath(os.path.join(OUT, "ナレーション_全文.txt"))
     body = []
     for cut in sorted(C.NARRATION):

@@ -544,6 +544,36 @@ def voice_order(path):
     return (int(m[0]) if m else -1, n)
 
 
+def adopt_cut_voices():
+    # カット番号が付いた音声（cut04.wav / カット4.mp3）が置いてあれば、
+    # それをそのカットの声として使う。1カット＝1ファイルなら、
+    # 長さがそのまま尺になるので、どこで切り替えるかを推測しなくてよい
+    import glob
+    valid = {int(r["cut"]) for r in CUTS}
+    got = {}
+    for d in ("/content", ".", AUD):
+        if not os.path.isdir(d):
+            continue
+        for fp in sorted(glob.glob(os.path.join(d, "*"))):
+            if os.path.splitext(fp)[1].lower() not in AUDIO_EXT:
+                continue
+            n = os.path.basename(fp)
+            m = re.match(r"(?:cut|カット)[ _\-]?(\d+)", n, re.I)
+            if m and int(m.group(1)) in valid:
+                got.setdefault(int(m.group(1)), fp)
+    if not got:
+        return 0
+    os.makedirs(AUD, exist_ok=True)
+    FF = ffmpeg_bin()
+    for cut, fp in got.items():
+        dst = os.path.join(AUD, "cut%02d.wav" % cut)
+        if os.path.abspath(fp) == os.path.abspath(dst):
+            continue
+        sh([FF, "-hide_banner", "-loglevel", "error", "-y", "-i", fp,
+            "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", dst])
+    return len(got)
+
+
 def find_bgm():
     # /content に bgm.mp3 のような名前で置いてあれば使う
     import glob
@@ -1538,8 +1568,21 @@ def main():
     render_figures()
     unpack_zips()
 
-    voices = find_voice_files()
-    fixed, voice_file = None, None
+    # 1カット1ファイルが置いてあれば、そちらが確実。推測が要らない
+    per_cut = adopt_cut_voices()
+    need = len([r for r in CUTS if not only or int(r["cut"]) <= only])
+    if per_cut >= max(need - 2, 3):
+        print("2/4  カットごとの音声を使います（%d本）" % per_cut)
+        print("     1カット＝1ファイルなので、切り替えの推測はしません")
+        voices, fixed, voice_file = [], None, None
+        per_cut_ok = True
+    else:
+        per_cut_ok = False
+        if per_cut:
+            print("     カット別の音声が %d/%d 本しかないので、まとめて割り振ります"
+                  % (per_cut, need))
+        voices = find_voice_files()
+        fixed, voice_file = None, None
     if voices:
         print("2/4  用意された音声を使います（%d本）" % len(voices))
         titled = has_title_voice(voices)
@@ -1555,7 +1598,7 @@ def main():
         elif not all(os.path.basename(v).startswith(("声", "voice")) for v in voices):
             print("     ※ 名前で順番を決めました。上の並びが台本の順と違っていたら、")
             print("       声1.wav 声2.wav … と付け直してください")
-    elif a.voice:
+    elif a.voice and not per_cut_ok:
         print("2/4  ナレーションをつくる")
         if not vv_alive(a.vv_host):
             sys.exit("VOICEVOX につながりません。エンジンを起動するか、\n"
@@ -1568,7 +1611,7 @@ def main():
         narr_cuts = {c for c in NARRATION if not only or c <= only}
         made, total = make_narration(a.vv_host, sp[0], a.speed, a.pitch, a.intonation, narr_cuts)
         print("     %d本 生成 / 発話 %.1f秒" % (made, total))
-    else:
+    elif not per_cut_ok:
         print("2/4  ナレーションは作りません")
 
     print("3/4  Pexelsから映像を落とす（%dカット）" % len(wanted))
