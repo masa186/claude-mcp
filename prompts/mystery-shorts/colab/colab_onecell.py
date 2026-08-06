@@ -671,6 +671,11 @@ def voice_blocks(paths):
     return [[0]] + [[c for c in b if c != 0] for b in BLOCKS]
 
 
+# 読点の間は 0.1秒を切ることがある。取りこぼすとそのカットが合わない
+MIN_PAUSE = 0.06
+MIN_TELOP = 0.70      # これより短いテロップは読めない
+
+
 def speech_edges(path):
     # 声の中の「間」の位置を返す。文字数で割るより、実際に息継ぎした
     # ところでテロップを変えたほうが合って聞こえる
@@ -689,25 +694,25 @@ def speech_edges(path):
     hop = int(sr * 0.010)
     n = len(a) // hop
     env = np.sqrt((a[:n*hop].reshape(n, hop) ** 2).mean(1) + 1e-12)
-    env = np.convolve(env, np.ones(5) / 5, "same")
-    thr = np.percentile(env, 90) * 0.20
+    env = np.convolve(env, np.ones(3) / 3, "same")
+    thr = np.percentile(env, 90) * 0.22
     out, run = [], 0
     for i, loud in enumerate(env > thr):
         if not loud:
             run += 1
         else:
-            if run * 0.010 >= 0.10:
+            if run * 0.010 >= MIN_PAUSE:
                 # 読み終わった瞬間。無音の真ん中に置くと、
                 # 読み終わってもテロップが残っていて遅れて見える
                 out.append((i - run) * 0.010 + 0.04)
             run = 0
     # 最後は無音で終わることが多い。そこも切り替え先として使えるようにする
-    if run * 0.010 >= 0.10:
+    if run * 0.010 >= MIN_PAUSE:
         out.append((len(env) - run) * 0.010 + 0.04)
     return out
 
 
-def snap(targets, edges, total=None, want=None):
+def snap(targets, edges, total=None, want=None, pause_bonus=0.30):
     # 切り替え時刻を「間」に合わせる。近い順に1つずつ選ぶと、
     # 文字数の見積もりが少しずれただけで正しい間を取り逃す。
     # 全体でいちばん辻褄が合う組を選ぶ（動的計画法）
@@ -718,13 +723,22 @@ def snap(targets, edges, total=None, want=None):
         want = [targets[0]] + [targets[i] - targets[i - 1] for i in range(1, n)]
     if total is None:
         total = targets[-1]
+    # 間が足りないときは、文字数から出した時刻も候補に混ぜる。
+    # そのままだと候補不足で合わせること自体を諦めてしまう
+    cand = [(e, True) for e in edges]
+    if len(edges) < n:
+        cand += [(t, False) for t in targets]
+    cand.sort()
+    times = [c[0] for c in cand]
+    is_pause = [c[1] for c in cand]
+    edges = times
     m = len(edges)
     INF = float("inf")
 
     def cost(prev_t, t, k):
         # k番目のカットが prev_t〜t になったときの無理さ
         got = t - prev_t
-        if got < 0.45:
+        if got < MIN_TELOP:      # 読めない長さのテロップは作らせない
             return INF
         exp = max(want[k], 0.3)
         return (got - exp) ** 2 / exp
@@ -732,14 +746,17 @@ def snap(targets, edges, total=None, want=None):
     # best[k][j] = k番目までの境界を決め、k番目が edges[j] のときの最小コスト
     best = [[INF] * m for _ in range(n)]
     back = [[-1] * m for _ in range(n)]
+    def bonus(j):
+        return 0.0 if is_pause[j] else pause_bonus
+
     for j in range(m):
-        best[0][j] = cost(0.0, edges[j], 0)
+        best[0][j] = cost(0.0, edges[j], 0) + bonus(j)
     for k in range(1, n):
         for j in range(m):
             for h in range(j):
                 if best[k - 1][h] == INF:
                     continue
-                c = best[k - 1][h] + cost(edges[h], edges[j], k)
+                c = best[k - 1][h] + cost(edges[h], edges[j], k) + bonus(j)
                 if c < best[k][j]:
                     best[k][j], back[k][j] = c, h
     # 最後のカットの尺も評価に入れる
@@ -802,7 +819,7 @@ def plan_from_voices(paths, cuts_used):
         if src and len(here) > 1:
             # 声の中の時刻に、前の継ぎ目からもらった無音のぶんを足す
             edges = [e + head for e in speech_edges(src)]
-            if len(edges) >= len(here) - 1:
+            if edges:
                 acc, targets = 0.0, []
                 for c in here[:-1]:
                     acc += dur[c]
