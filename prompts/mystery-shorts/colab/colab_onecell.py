@@ -825,15 +825,26 @@ def plan_from_voices(paths, cuts_used):
 
 def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
     os.makedirs(AUD, exist_ok=True)
-    made, total = 0, 0.0
+    made, total, stale = 0, 0.0, 0
     for cut in sorted(NARRATION):
         if cuts_wanted and cut not in cuts_wanted:
             continue
         path = os.path.join(AUD, "cut%02d.wav" % cut)
+        # 台本が変わったのに前の音声が残っていると、別の動画の声で作ってしまう。
+        # 読ませた文を隣に控えておいて、違っていたら作り直す
+        stamp = path[:-4] + ".txt"
+        try:
+            same = open(stamp, encoding="utf-8").read() == NARRATION[cut]
+        except Exception:
+            same = False
+        if os.path.exists(path) and not same:
+            os.remove(path)
+            stale += 1
         if not os.path.exists(path):
             try:
                 open(path, "wb").write(
                     vv_synth(host, speaker, NARRATION[cut], speed, pitch, intonation))
+                open(stamp, "w", encoding="utf-8").write(NARRATION[cut])
                 made += 1
             except Exception as e:
                 print("   カット%-2d  失敗（%s）。5秒待って もう一度試します"
@@ -844,6 +855,7 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
                 try:
                     open(path, "wb").write(
                         vv_synth(host, speaker, NARRATION[cut], speed, pitch, intonation))
+                    open(stamp, "w", encoding="utf-8").write(NARRATION[cut])
                     made += 1
                 except Exception:
                     print("   カット%-2d  作れませんでした" % cut)
@@ -851,6 +863,8 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
                         os.remove(path)
                     continue
         total += wav_seconds(path)
+    if stale:
+        print("     台本が変わっていたので %d本 作り直しました" % stale)
     return made, total
 
 
