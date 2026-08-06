@@ -44,3 +44,4 @@ cut,telop1,telop2,hl,hl_color,camera,asset,item_end
 42,記録は,残っているのに,記録,yellow,pandown,A33,0
 43,音源だけが,見つかっていない,見つかっていない,red,zoomin,A08,0
 44,地球はまだ,静かではない,静かではない,red,zoomin,A34,0
+45,あなたが聞いた,説明できない音を教えて,教えて,yellow,zoomin,A34,0

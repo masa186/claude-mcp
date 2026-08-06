@@ -13,6 +13,7 @@ import urllib.error, urllib.parse, urllib.request, wave
 W, H, FPS = 1080, 1920, 30
 NUMCARD_SEC, GAP, GAP_ITEM_END = 1.8, 0.25, 0.60
 TITLE_SEC = 2.2      # 声0.wav が無いときに、タイトルを出しておく長さ
+OUTRO_CUT, OUTRO_SEC = 45, 2.6   # 最後のコメント誘導。声は乗せない
 COLORS = {"red": "#FF2A2A", "yellow": "#FFD400", "": "#FFFFFF"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 
@@ -63,6 +64,7 @@ CUTS = [
     {'cut': '42', 'telop1': '記録は', 'telop2': '残っているのに', 'hl': '記録', 'hl_color': 'yellow', 'camera': 'pandown', 'asset': 'A33', 'item_end': '0'},
     {'cut': '43', 'telop1': '音源だけが', 'telop2': '見つかっていない', 'hl': '見つかっていない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A08', 'item_end': '0'},
     {'cut': '44', 'telop1': '地球はまだ', 'telop2': '静かではない', 'hl': '静かではない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A34', 'item_end': '0'},
+    {'cut': '45', 'telop1': 'あなたが聞いた', 'telop2': '説明できない音を教えて', 'hl': '教えて', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A34', 'item_end': '0'},
 ]
 
 SEARCH = {
@@ -155,7 +157,7 @@ BLOCKS = [
     [28, 29, 30, 31, 32, 33],
     [34, 35, 36, 37],
     [38, 39, 40, 41, 42],
-    [43, 44],
+    [43, 44, 45],
 ]
 
 PROMPTS = {
@@ -649,7 +651,7 @@ def voice_gaps(paths):
     out = []
     for i in range(len(paths)):
         if i == len(paths) - 1:
-            out.append(0.0)
+            out.append(OUTRO_SEC if any(int(r["cut"]) == OUTRO_CUT for r in CUTS) else 0.0)
         elif i == 0 and titled:
             out.append(TITLE_GAP)      # タイトルのあとは長めに置く
         else:
@@ -833,6 +835,8 @@ def plan_from_voices(paths, cuts_used):
         # 番号カードは尺を固定する。タイトルも、読み上げが無いなら固定にする。
         # 文字数で割ると、原稿の無いタイトルが一瞬で消えてしまう
         cards = {c: NUMCARD_SEC for c in here if c in SILENT_CUTS}
+        if OUTRO_CUT in here:
+            cards[OUTRO_CUT] = OUTRO_SEC
         if 0 in here and not titled:
             cards[0] = TITLE_SEC
         talk = [c for c in here if c not in cards]
