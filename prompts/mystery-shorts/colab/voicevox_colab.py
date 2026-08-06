@@ -31,15 +31,19 @@ def alive(timeout=5):
 
 def pick_assets(assets):
     # リリースの添付から Linux CPU 版を選ぶ。分割書庫なら全部返す
-    def ok(name):
+    def ok(name, allow_arm):
         n = name.lower()
         if "linux" not in n:
             return False
         if any(x in n for x in ("gpu", "nvidia", "cuda", "directml", "macos", "windows")):
             return False
+        # Colab は x64。arm 版を混ぜると分割書庫が噛み合わず展開に失敗する
+        if not allow_arm and any(x in n for x in ("arm64", "aarch64", "armhf")):
+            return False
         return "cpu" in n
 
-    hits = [a for a in assets if ok(a["name"])]
+    hits = [a for a in assets if ok(a["name"], False)] or \
+           [a for a in assets if ok(a["name"], True)]
     if not hits:
         return []
     # 分割書庫は .7z.001 のように連番。同じ基底名のものをまとめる
@@ -172,12 +176,12 @@ def start():
     print("起動しています。初回は2〜3分かかります…")
     subprocess.Popen(cmd, cwd=os.path.dirname(run),
                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    for i in range(90):
+    for i in range(150):
         if alive():
             return True
         time.sleep(2)
-        if i and i % 15 == 0:
-            print("  まだ起動中… (%d秒)" % (i * 2))
+        if i and i % 20 == 0:
+            print("  まだ起動中… (%d秒)。初回はモデルの読み込みに時間がかかります" % (i * 2))
     return False
 
 

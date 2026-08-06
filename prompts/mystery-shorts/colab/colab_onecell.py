@@ -889,10 +889,20 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
                     vv_synth(host, speaker, NARRATION[cut], speed, pitch, intonation))
                 made += 1
             except Exception as e:
-                print("   カット%-2d  失敗（%s）" % (cut, type(e).__name__))
+                print("   カット%-2d  失敗（%s）。5秒待って もう一度試します"
+                      % (cut, type(e).__name__))
                 if os.path.exists(path):
                     os.remove(path)
-                continue
+                time.sleep(5)
+                try:
+                    open(path, "wb").write(
+                        vv_synth(host, speaker, NARRATION[cut], speed, pitch, intonation))
+                    made += 1
+                except Exception:
+                    print("   カット%-2d  作れませんでした" % cut)
+                    if os.path.exists(path):
+                        os.remove(path)
+                    continue
         total += wav_seconds(path)
     return made, total
 
@@ -1530,8 +1540,8 @@ def main():
     ap.add_argument("--voice", default="", help="VOICEVOXの話者名。空なら声なし")
     ap.add_argument("--vv-host", default="http://127.0.0.1:50021")
     ap.add_argument("--speed", type=float, default=1.10)
-    ap.add_argument("--pitch", type=float, default=-0.02)
-    ap.add_argument("--intonation", type=float, default=0.90)
+    ap.add_argument("--pitch", type=float, default=-0.04)
+    ap.add_argument("--intonation", type=float, default=0.95)
     ap.add_argument("--gen-images", default="", help="Geminiのキー。足りないカットを生成して終了")
     ap.add_argument("--face", default=FACE, choices=sorted(FACES), help="テロップの書体")
     ap.add_argument("--anim", default=ANIM, choices=ANIMS, help="テロップの出し方")
