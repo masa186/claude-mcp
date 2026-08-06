@@ -10,7 +10,7 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "..", "assets", "01_地球の音")
+OUT = os.path.join(HERE, "..", "assets", "02_未解読の文字")
 sys.path.insert(0, HERE)
 
 import colab_onecell as C
