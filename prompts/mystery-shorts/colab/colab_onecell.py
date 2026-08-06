@@ -1595,6 +1595,11 @@ def main():
         fixed, voice_file = None, None
     if voices:
         print("2/4  用意された音声を使います（%d本）" % len(voices))
+        # エンジンが動いているのに手持ちの音声が優先されると、
+        # 自動生成したつもりで古い音声のまま作ってしまう
+        if a.voice and vv_alive(a.vv_host):
+            print("     ※ VOICEVOX は起動していますが、置いてある音声を優先します。")
+            print("       自動生成させたいなら /content の 声*.wav を消してください")
         titled = has_title_voice(voices)
         for i, v in enumerate(voices):
             what = "タイトル" if (titled and i == 0) else "声%d" % (i if titled else i + 1)
