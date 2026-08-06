@@ -763,18 +763,18 @@ def plan_from_voices(paths, cuts_used):
     blocks = voice_blocks(paths)
     if len(paths) == len(blocks):
         gaps = voice_gaps(paths)
-        pairs = [(media_seconds(p) + g, b, p)
+        pairs = [(media_seconds(p) + g, b, p, 0.0)
                  for p, b, g in zip(paths, blocks, gaps)]
     else:
         # 本数が想定と違うときは、全部まとめて1本ぶんとして按分する。
         # 継ぎ目に入れる無音も足しておかないと、そのぶん丸ごとずれる
         pairs = [(sum(media_seconds(p) for p in paths) + sum(voice_gaps(paths)),
-                  sorted(cuts_used), None)]
+                  sorted(cuts_used), None, 0.0)]
 
     titled = has_title_voice(paths) and len(paths) == len(blocks)
 
     dur = {}
-    for sec, block, src in pairs:
+    for sec, block, src, head in pairs:
         here = [c for c in block if c in cuts_used]
         if not here:
             continue
@@ -793,8 +793,10 @@ def plan_from_voices(paths, cuts_used):
             dur[c] = max(chars[c] * unit, 0.7)
 
         # ここまでは文字数の按分。実際の息継ぎに寄せて精度を上げる
+        snapped = False
         if src and len(here) > 1:
-            edges = speech_edges(src)
+            # 声の中の時刻に、前の継ぎ目からもらった無音のぶんを足す
+            edges = [e + head for e in speech_edges(src)]
             if len(edges) >= len(here) - 1:
                 acc, targets = 0.0, []
                 for c in here[:-1]:
@@ -802,18 +804,23 @@ def plan_from_voices(paths, cuts_used):
                     targets.append(acc)
                 want = [dur[c] for c in here]
                 fixed = snap(targets, edges, total=sec, want=want)
-                prev = 0.0
-                for c, t in zip(here[:-1], fixed):
-                    dur[c] = max(t - prev, 0.45)
-                    prev += dur[c]
-                dur[here[-1]] = max(sec - prev, 0.45)
-        # 下限を効かせると合計が声より長くなることがある。
-        # はみ出したぶんは全体を縮めて、必ず声の長さに収める
-        got = sum(dur[c] for c in here)
-        if got > sec + 1e-6:
-            k = sec / got
-            for c in here:
-                dur[c] *= k
+                if fixed != targets:
+                    # 合わせた境界はそのまま使う。ここで下限や丸めを掛けると
+                    # せっかく乗せた切れ目からずれてしまう
+                    prev = 0.0
+                    for c, t in zip(here[:-1], fixed):
+                        dur[c] = t - prev
+                        prev = t
+                    dur[here[-1]] = sec - prev
+                    snapped = True
+        if not snapped:
+            # 下限を効かせると合計が声より長くなることがある。
+            # はみ出したぶんは全体を縮めて、必ず声の長さに収める
+            got = sum(dur[c] for c in here)
+            if got > sec + 1e-6:
+                k = sec / got
+                for c in here:
+                    dur[c] *= k
     return dur
 
 
@@ -1391,6 +1398,7 @@ def build(font, only_n, out, fixed_dur=None):
     FF = ffmpeg_bin()
     os.makedirs(TMP, exist_ok=True)
     segs = []
+    elapsed = 0.0
     for i, (cut, r, asset) in enumerate(resolve_assets(only_n)):
         if asset is None:
             continue
@@ -1415,7 +1423,12 @@ def build(font, only_n, out, fixed_dur=None):
         tp = os.path.join(TMP, "t%02d.png" % cut)
         seg = os.path.join(TMP, "s%02d.mp4" % cut)
         telop(r, font, tp)
-        frames = int(round(dur * FPS))
+        # カットごとに丸めると端数が積もって、後半ほど境界がずれる。
+        # 通しの時間で丸めてから差を取れば、ずれは1フレームに収まる
+        frames = int(round((elapsed + dur) * FPS)) - int(round(elapsed * FPS))
+        frames = max(frames, 2)
+        elapsed += dur
+        dur = frames / float(FPS)      # 実際に書き出す長さに合わせる
         args = [FF, "-hide_banner", "-loglevel", "error", "-y"]
         if os.path.splitext(asset)[1].lower() in VIDEO_EXT:
             # 実写にも必ず動きを足す。素材が動いていても、寄り引きが無いと単調に見える
