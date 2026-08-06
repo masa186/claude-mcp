@@ -697,8 +697,13 @@ def speech_edges(path):
             run += 1
         else:
             if run * 0.010 >= 0.10:
-                out.append((i - run / 2) * 0.010)     # 無音の真ん中
+                # 読み終わった瞬間。無音の真ん中に置くと、
+                # 読み終わってもテロップが残っていて遅れて見える
+                out.append((i - run) * 0.010 + 0.04)
             run = 0
+    # 最後は無音で終わることが多い。そこも切り替え先として使えるようにする
+    if run * 0.010 >= 0.10:
+        out.append((len(env) - run) * 0.010 + 0.04)
     return out
 
 
