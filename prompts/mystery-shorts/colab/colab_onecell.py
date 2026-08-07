@@ -967,6 +967,8 @@ def gen_one(prompt, key):
                 last = "HTTP %s" % e.code
                 if e.code in (401, 403) and "quota" not in msg.lower():
                     raise RuntimeError("キーが使えません（%s）" % msg[:120])
+                if e.code == 404:
+                    last = "そのモデルが見つかりません"
                 if e.code == 429:
                     if quota_kind(msg) == "day":
                         raise RuntimeError("今日の無料枠を使い切りました")
@@ -975,7 +977,29 @@ def gen_one(prompt, key):
             except Exception as e:
                 last = type(e).__name__
                 break
+    if last == "そのモデルが見つかりません":
+        raise RuntimeError("キーが使えません（画像モデルが1つも見つかりません）")
     raise RuntimeError(last or "不明")
+
+
+def usable_models(key):
+    # 生成を始める前に、そのキーで実際に使えるものだけに絞る
+    url = "https://generativelanguage.googleapis.com/v1beta/models"
+    req = urllib.request.Request(url, headers={"x-goog-api-key": key,
+                                               "User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            data = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        return None, "HTTP %s %s" % (e.code, api_message(e))
+    except Exception as e:
+        return None, type(e).__name__
+    have = {m.get("name", "").split("/")[-1] for m in data.get("models", [])}
+    ok = [(n, h) for n, h in GEMINI_MODELS if n in have]
+    if not ok:
+        img = sorted(n for n in have if "image" in n or "imagen" in n)
+        return [], ("このキーで見えている画像モデル: " + (", ".join(img) if img else "なし"))
+    return ok, ""
 
 
 def list_models(key):
@@ -1030,6 +1054,16 @@ def generate_missing(key, only_n, reserve_pexels=False):
     if not need:
         print("     足りないカットはありません")
         return
+    models, why = usable_models(key)
+    if models is not None and not models:
+        print("     このキーでは画像生成が使えません。")
+        print("     " + why)
+        print("     ④に進んでください（足りないカットは近くの映像で埋まります）")
+        return
+    if models:
+        global GEMINI_MODELS
+        GEMINI_MODELS = models
+        print("     使うモデル: %s" % ", ".join(n for n, _ in models))
     print("     %d カットを生成します: %s" % (len(need), ", ".join(map(str, need))))
     print("     無料枠は1分あたりの上限が低いので、ゆっくり進みます")
     ok, wait = 0, 6.0
@@ -1059,8 +1093,8 @@ def generate_missing(key, only_n, reserve_pexels=False):
                 if attempt == 2:
                     print("     カット%-2d  失敗（%s）" % (cut, e))
                 else:
-                    print("     カット%-2d  混み合っています。%d秒待ちます"
-                          % (cut, int(wait * (attempt + 1) * 5)))
+                    print("     カット%-2d  %s。%d秒待ちます"
+                          % (cut, str(e)[:40], int(wait * (attempt + 1) * 5)))
                     time.sleep(wait * (attempt + 1) * 5)
         time.sleep(wait)
     _PLAN_CACHE.clear()
