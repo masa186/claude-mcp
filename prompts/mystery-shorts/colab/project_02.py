@@ -63,11 +63,13 @@ ROWS = [
       "ヨーロッパ人が来るより前だぜ。"),
  (30, "人類が自力で作った", "数少ない例かも", "自力で", "yellow", "zoomout",
       "人類が自力で文字を作った、数少ない例かもしれない。"),
- (31, "書いた奴が消えた時点で", "意味を失う", "意味を失う", "red", "zoomin",
-      "読めない文字は、書いた奴が消えた時点で意味を失う。"),
- (32, "三つとも", "まだ誰も読めてない", "誰も", "red", "zoomin",
-      "三つとも、まだ誰も読めてないんだ。"),
- (33, "broたちはどれが", "一番読めそうだと思う？", "どれ", "yellow", "zoomin", None),
+ (31, "文字は残った", "読める奴が消えた", "消えた", "red", "zoomin",
+      "この三つ、文字のほうは残ってるんだ。"),
+ (32, "文明が途切れるのは", "文字が消えた時じゃない", "文字が消えた時", "yellow", "zoomin",
+      "消えたのは、読める人間のほうだ。"),
+ (33, "今書いてるこの文字も", "いつか誰も読めなくなる", "誰も読めなくなる", "red", "zoomout",
+      "今broたちが読んでるこの文字も、いつかそうなる。"),
+ (34, "broたちはどれが", "一番読めそうだと思う？", "どれ", "yellow", "zoomin", None),
 ]
 
 ITEM_END = {9, 19, 30}          # 項目の終わりで少し長めに間を取る
@@ -78,7 +80,7 @@ BLOCKS = [[0, 1, 2, 3, 4],
           [15, 16, 17, 18, 19],
           [20, 21, 22, 23, 24],
           [25, 26, 27, 28],
-          [29, 30, 31, 32, 33]]
+          [29, 30, 31, 32, 33, 34]]
 
 # Pexels で拾えるカット
 SEARCH = {
@@ -100,28 +102,34 @@ SEARCH = {
  32: ["night sky stars slow", "dark ocean horizon"],
 }
 
-_STYLE = ("cinematic photorealistic, vertical 9:16 composition, dramatic "
-          "directional lighting, shallow depth of field, subtle film grain, "
-          "muted desaturated warm amber and cold grey color grade, dust motes "
-          "in the air, negative space in the center of the frame, "
-          "no text, no watermark, no letters, no logos")
+_BASE = ("cinematic photorealistic, vertical 9:16 composition, dramatic "
+         "directional lighting, shallow depth of field, subtle film grain, "
+         "dust motes in the air, negative space in the center of the frame, "
+         "no text, no watermark, no letters, no logos")
+
+# 3つの項目で色を変える。全部同じ色だと、話が変わったことが絵で伝わらない
+_A = "warm amber and candlelit gold color grade, aged parchment tones, " + _BASE
+_B = "cold blue grey and pale limestone color grade, mediterranean daylight, " + _BASE
+_C = "deep teal and volcanic black color grade, overcast pacific light, " + _BASE
+_N = "near monochrome, cold neutral grey color grade, " + _BASE
 
 PROMPTS = {
- 1:  "Three ancient documents from different civilisations laid side by side on a dark table under a single lamp, each covered in a different unreadable script, " + _STYLE,
- 2:  "A modern computer screen glowing in a dark room displaying scrolling unreadable symbols, nobody present, " + _STYLE,
- 3:  "Closed leather bound medieval codex resting on dark cloth, brass clasps, single shaft of light, " + _STYLE,
- 6:  "Botanical illustration of an impossible plant with wrong leaf structure and unnatural roots, faded pigments on aged vellum, " + _STYLE,
- 9:  "A cluttered desk covered in decipherment attempts, crossed out notes and abandoned charts, dim lamp, nobody there, " + _STYLE,
- 10: "Fragment of a clay tablet incised with linear script, resting on grey stone, raking side light, " + _STYLE,
- 13: "Weathered marble slab carved with ancient greek lettering, moss in the grooves, overcast light, " + _STYLE,
- 14: "Two clay tablets side by side, one lit clearly and one falling into deep shadow, " + _STYLE,
- 17: "Close macro of unknown incised characters on clay, extreme shallow focus, most of the frame dark, " + _STYLE,
- 18: "A single clay tablet floating in complete darkness, lit from one side only, " + _STYLE,
- 20: "Row of weathered wooden tablets covered in tiny carved glyphs, arranged in a dark museum drawer, " + _STYLE,
- 23: "A wooden tablet under museum glass, catalogue label beside it, dramatic spot lighting, deep shadows, " + _STYLE,
- 26: "Extreme macro of carved glyph rows on dark wood, grain and tool marks visible, " + _STYLE,
- 27: "Laboratory bench with a small wood sample under analytical instruments, cold clinical light, " + _STYLE,
- 28: "Aged wooden tablet fragment held in gloved hands against a black background, " + _STYLE,
- 30: "Silhouetted human hand carving the first mark into a blank wooden board by firelight, " + _STYLE,
- 33: "Vast dark archive of unreadable documents receding into blackness, single dim light above, " + _STYLE,
+ 33: "A modern smartphone screen glowing in total darkness, the text on it fading away character by character, " + _N,
+ 1: "Three ancient documents from different civilisations laid side by side on a dark table under a single lamp, each covered in a different unreadable script, " + _N,
+ 2: "A modern computer screen glowing in a dark room displaying scrolling unreadable symbols, nobody present, " + _N,
+ 3: "Closed leather bound medieval codex resting on dark cloth, brass clasps, single shaft of light, " + _A,
+ 6: "Botanical illustration of an impossible plant with wrong leaf structure and unnatural roots, faded pigments on aged vellum, " + _A,
+ 9: "A cluttered desk covered in decipherment attempts, crossed out notes and abandoned charts, dim lamp, nobody there, " + _A,
+ 10: "Fragment of a clay tablet incised with linear script, resting on grey stone, raking side light, " + _B,
+ 13: "Weathered marble slab carved with ancient greek lettering, moss in the grooves, overcast light, " + _B,
+ 14: "Two clay tablets side by side, one lit clearly and one falling into deep shadow, " + _B,
+ 17: "Close macro of unknown incised characters on clay, extreme shallow focus, most of the frame dark, " + _B,
+ 18: "A single clay tablet floating in complete darkness, lit from one side only, " + _B,
+ 20: "Row of weathered wooden tablets covered in tiny carved glyphs, arranged in a dark museum drawer, " + _C,
+ 23: "A wooden tablet under museum glass, catalogue label beside it, dramatic spot lighting, deep shadows, " + _C,
+ 26: "Extreme macro of carved glyph rows on dark wood, grain and tool marks visible, " + _C,
+ 27: "Laboratory bench with a small wood sample under analytical instruments, cold clinical light, " + _C,
+ 28: "Aged wooden tablet fragment held in gloved hands against a black background, " + _C,
+ 30: "Silhouetted human hand carving the first mark into a blank wooden board by firelight, " + _C,
+ 34: "Vast dark archive of unreadable documents receding into blackness, single dim light above, " + _N,
 }

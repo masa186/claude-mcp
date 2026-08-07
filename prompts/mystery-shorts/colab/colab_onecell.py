@@ -13,7 +13,7 @@ import urllib.error, urllib.parse, urllib.request, wave
 W, H, FPS = 1080, 1920, 30
 NUMCARD_SEC, GAP, GAP_ITEM_END = 1.8, 0.25, 0.60
 TITLE_SEC = 2.2      # 声0.wav が無いときに、タイトルを出しておく長さ
-OUTRO_CUT, OUTRO_SEC = 33, 2.6   # 最後のコメント誘導。声は乗せない
+OUTRO_CUT, OUTRO_SEC = 34, 2.6   # 最後のコメント誘導。声は乗せない
 COLORS = {"red": "#FF2A2A", "yellow": "#FFD400", "": "#FFFFFF"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 
@@ -49,9 +49,10 @@ CUTS = [
     {'cut': '28', 'telop1': '15世紀のものかも', 'telop2': 'しれないと出た', 'hl': '15世紀', 'hl_color': 'red', 'camera': 'panleft', 'asset': 'A00', 'item_end': '0'},
     {'cut': '29', 'telop1': 'ヨーロッパ人が', 'telop2': '来るより前だ', 'hl': '前', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
     {'cut': '30', 'telop1': '人類が自力で作った', 'telop2': '数少ない例かも', 'hl': '自力で', 'hl_color': 'yellow', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '1'},
-    {'cut': '31', 'telop1': '書いた奴が消えた時点で', 'telop2': '意味を失う', 'hl': '意味を失う', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '32', 'telop1': '三つとも', 'telop2': 'まだ誰も読めてない', 'hl': '誰も', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '33', 'telop1': 'broたちはどれが', 'telop2': '一番読めそうだと思う？', 'hl': 'どれ', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '31', 'telop1': '文字は残った', 'telop2': '読める奴が消えた', 'hl': '消えた', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '32', 'telop1': '文明が途切れるのは', 'telop2': '文字が消えた時じゃない', 'hl': '文字が消えた時', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '33', 'telop1': '今書いてるこの文字も', 'telop2': 'いつか誰も読めなくなる', 'hl': '誰も読めなくなる', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '34', 'telop1': 'broたちはどれが', 'telop2': '一番読めそうだと思う？', 'hl': 'どれ', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
 ]
 
 SEARCH = {
@@ -109,8 +110,9 @@ NARRATION = {
     28: '15世紀のものかもしれないと出たんだ。',
     29: 'ヨーロッパ人が来るより前だぜ。',
     30: '人類が自力で文字を作った、数少ない例かもしれない。',
-    31: '読めない文字は、書いた奴が消えた時点で意味を失う。',
-    32: '三つとも、まだ誰も読めてないんだ。',
+    31: 'この三つ、文字のほうは残ってるんだ。',
+    32: '消えたのは、読める人間のほうだ。',
+    33: '今broたちが読んでるこの文字も、いつかそうなる。',
 }
 
 # 声1〜声9 のどのファイルにどのカットが入っているか。
@@ -122,27 +124,28 @@ BLOCKS = [
     [15, 16, 17, 18, 19],
     [20, 21, 22, 23, 24],
     [25, 26, 27, 28],
-    [29, 30, 31, 32, 33],
+    [29, 30, 31, 32, 33, 34],
 ]
 
 PROMPTS = {
-    1: 'Three ancient documents from different civilisations laid side by side on a dark table under a single lamp, each covered in a different unreadable script, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    2: 'A modern computer screen glowing in a dark room displaying scrolling unreadable symbols, nobody present, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    3: 'Closed leather bound medieval codex resting on dark cloth, brass clasps, single shaft of light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    6: 'Botanical illustration of an impossible plant with wrong leaf structure and unnatural roots, faded pigments on aged vellum, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    9: 'A cluttered desk covered in decipherment attempts, crossed out notes and abandoned charts, dim lamp, nobody there, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    10: 'Fragment of a clay tablet incised with linear script, resting on grey stone, raking side light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    13: 'Weathered marble slab carved with ancient greek lettering, moss in the grooves, overcast light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    14: 'Two clay tablets side by side, one lit clearly and one falling into deep shadow, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    17: 'Close macro of unknown incised characters on clay, extreme shallow focus, most of the frame dark, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    18: 'A single clay tablet floating in complete darkness, lit from one side only, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    20: 'Row of weathered wooden tablets covered in tiny carved glyphs, arranged in a dark museum drawer, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    23: 'A wooden tablet under museum glass, catalogue label beside it, dramatic spot lighting, deep shadows, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    26: 'Extreme macro of carved glyph rows on dark wood, grain and tool marks visible, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    27: 'Laboratory bench with a small wood sample under analytical instruments, cold clinical light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    28: 'Aged wooden tablet fragment held in gloved hands against a black background, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    30: 'Silhouetted human hand carving the first mark into a blank wooden board by firelight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    33: 'Vast dark archive of unreadable documents receding into blackness, single dim light above, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated warm amber and cold grey color grade, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    1: 'Three ancient documents from different civilisations laid side by side on a dark table under a single lamp, each covered in a different unreadable script, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    2: 'A modern computer screen glowing in a dark room displaying scrolling unreadable symbols, nobody present, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    3: 'Closed leather bound medieval codex resting on dark cloth, brass clasps, single shaft of light, warm amber and candlelit gold color grade, aged parchment tones, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    6: 'Botanical illustration of an impossible plant with wrong leaf structure and unnatural roots, faded pigments on aged vellum, warm amber and candlelit gold color grade, aged parchment tones, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    9: 'A cluttered desk covered in decipherment attempts, crossed out notes and abandoned charts, dim lamp, nobody there, warm amber and candlelit gold color grade, aged parchment tones, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    10: 'Fragment of a clay tablet incised with linear script, resting on grey stone, raking side light, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    13: 'Weathered marble slab carved with ancient greek lettering, moss in the grooves, overcast light, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    14: 'Two clay tablets side by side, one lit clearly and one falling into deep shadow, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    17: 'Close macro of unknown incised characters on clay, extreme shallow focus, most of the frame dark, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    18: 'A single clay tablet floating in complete darkness, lit from one side only, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    20: 'Row of weathered wooden tablets covered in tiny carved glyphs, arranged in a dark museum drawer, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    23: 'A wooden tablet under museum glass, catalogue label beside it, dramatic spot lighting, deep shadows, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    26: 'Extreme macro of carved glyph rows on dark wood, grain and tool marks visible, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    27: 'Laboratory bench with a small wood sample under analytical instruments, cold clinical light, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    28: 'Aged wooden tablet fragment held in gloved hands against a black background, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    30: 'Silhouetted human hand carving the first mark into a blank wooden board by firelight, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    33: 'A modern smartphone screen glowing in total darkness, the text on it fading away character by character, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    34: 'Vast dark archive of unreadable documents receding into blackness, single dim light above, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
 }
 
 WORK = os.path.abspath("shorts_work")
@@ -268,6 +271,7 @@ def find_title_font():
 # ── 図版（カット6・7・32）。ナレーションが述べる内容そのものなので用意する ──
 
 def render_figures():
+    return
     return
     import numpy as np, matplotlib
     matplotlib.use("Agg")
