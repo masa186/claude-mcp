@@ -13,7 +13,7 @@ import urllib.error, urllib.parse, urllib.request, wave
 W, H, FPS = 1080, 1920, 30
 NUMCARD_SEC, GAP, GAP_ITEM_END = 1.8, 0.25, 0.60
 TITLE_SEC = 2.2      # 声0.wav が無いときに、タイトルを出しておく長さ
-OUTRO_CUT, OUTRO_SEC = 34, 2.6   # 最後のコメント誘導。声は乗せない
+OUTRO_CUT, OUTRO_SEC = 35, 2.6   # 最後のコメント誘導。声は乗せない
 COLORS = {"red": "#FF2A2A", "yellow": "#FFD400", "": "#FFFFFF"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 
@@ -38,21 +38,22 @@ CUTS = [
     {'cut': '17', 'telop1': 'なんでか', 'telop2': '分かるか？', 'hl': 'なんで', 'hl_color': 'yellow', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
     {'cut': '18', 'telop1': '何語で書かれてるか', 'telop2': 'それすら分かってない', 'hl': '何語', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
     {'cut': '19', 'telop1': '資料は1400点', 'telop2': '文字数が足りない', 'hl': '1400点', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '1'},
-    {'cut': '20', 'telop1': '3', 'telop2': 'ロンゴロンゴ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '21', 'telop1': 'イースター島に', 'telop2': 'ロンゴロンゴという文字', 'hl': 'ロンゴロンゴ', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '22', 'telop1': '木の板に刻まれた', 'telop2': '記号の列', 'hl': '記号の列', 'hl_color': 'yellow', 'camera': 'panright', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '23', 'telop1': '残ってる板は', 'telop2': '世界にたった26点', 'hl': '26点', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '24', 'telop1': '19世紀に', 'telop2': '宣教師が来た頃には', 'hl': '19世紀', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '25', 'telop1': '読める島民が', 'telop2': 'もういなかった', 'hl': 'いなかった', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '26', 'telop1': '文字か記号かも', 'telop2': '決着がついてない', 'hl': 'ついてない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '27', 'telop1': 'ただ2024年', 'telop2': '板の一枚を測ったら', 'hl': '2024年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '28', 'telop1': '15世紀のものかも', 'telop2': 'しれないと出た', 'hl': '15世紀', 'hl_color': 'red', 'camera': 'panleft', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '29', 'telop1': 'ヨーロッパ人が', 'telop2': '来るより前だ', 'hl': '前', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '30', 'telop1': '人類が自力で作った', 'telop2': '数少ない例かも', 'hl': '自力で', 'hl_color': 'yellow', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '1'},
-    {'cut': '31', 'telop1': '文字は残った', 'telop2': '読める奴が消えた', 'hl': '消えた', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '32', 'telop1': '文明が途切れるのは', 'telop2': '文字が消えた時じゃない', 'hl': '文字が消えた時', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '33', 'telop1': '今書いてるこの文字も', 'telop2': 'いつか誰も読めなくなる', 'hl': '誰も読めなくなる', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
-    {'cut': '34', 'telop1': 'broたちはどれが', 'telop2': '一番読めそうだと思う？', 'hl': 'どれ', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '20', 'telop1': 'ただ', 'telop2': '3つ目がいちばんおかしい', 'hl': 'いちばんおかしい', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '21', 'telop1': '3', 'telop2': 'ロンゴロンゴ', 'hl': 'ALL', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '22', 'telop1': 'イースター島に', 'telop2': 'ロンゴロンゴという文字', 'hl': 'ロンゴロンゴ', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '23', 'telop1': '木の板に刻まれた', 'telop2': '記号の列', 'hl': '記号の列', 'hl_color': 'yellow', 'camera': 'panright', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '24', 'telop1': '残ってる板は', 'telop2': '世界にたった26点', 'hl': '26点', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '25', 'telop1': '19世紀に', 'telop2': '宣教師が来た頃には', 'hl': '19世紀', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '26', 'telop1': '読める島民が', 'telop2': '一人もいなかった', 'hl': '一人も', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '27', 'telop1': '文字か記号かも', 'telop2': '決着がついてない', 'hl': 'ついてない', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '28', 'telop1': 'ただ2024年', 'telop2': '板の一枚を測ったら', 'hl': '2024年', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '29', 'telop1': '15世紀のものかも', 'telop2': 'しれないと出た', 'hl': '15世紀', 'hl_color': 'red', 'camera': 'panleft', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '30', 'telop1': 'ヨーロッパ人が', 'telop2': '来るより前だ', 'hl': '前', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '31', 'telop1': '人類が自力で作った', 'telop2': '数少ない例かも', 'hl': '自力で', 'hl_color': 'yellow', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '1'},
+    {'cut': '32', 'telop1': '文字は残った', 'telop2': '読める奴が消えた', 'hl': '消えた', 'hl_color': 'red', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '33', 'telop1': '文明が途切れるのは', 'telop2': '文字が消えた時じゃない', 'hl': '文字が消えた時', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '34', 'telop1': '今書いてるこの文字も', 'telop2': 'いつか誰も読めなくなる', 'hl': '誰も読めなくなる', 'hl_color': 'red', 'camera': 'zoomout', 'asset': 'A00', 'item_end': '0'},
+    {'cut': '35', 'telop1': 'broたちはどれが', 'telop2': '一番読めそうだと思う？', 'hl': 'どれ', 'hl_color': 'yellow', 'camera': 'zoomin', 'asset': 'A00', 'item_end': '0'},
 ]
 
 SEARCH = {
@@ -65,13 +66,13 @@ SEARCH = {
     15: ['mediterranean island coast', 'greek island sea'],
     16: ['dust falling light beam', 'abandoned archive shelves'],
     19: ['museum artifact vitrine', 'clay tablet ancient'],
-    21: ['easter island moai', 'moai statues sunset'],
-    22: ['carved wooden surface', 'wood grain texture macro'],
-    24: ['19th century sailing ship', 'old wooden ship sea'],
-    25: ['empty village dusk', 'abandoned island shore'],
-    29: ['old world map ocean', 'antique globe closeup'],
-    31: ['dark empty library', 'faded document closeup'],
-    32: ['night sky stars slow', 'dark ocean horizon'],
+    22: ['easter island moai', 'moai statues sunset'],
+    23: ['carved wooden surface', 'wood grain texture macro'],
+    25: ['19th century sailing ship', 'old wooden ship sea'],
+    26: ['empty village dusk', 'abandoned island shore'],
+    30: ['old world map ocean', 'antique globe closeup'],
+    32: ['dark empty library', 'faded document closeup'],
+    33: ['night sky stars slow', 'dark ocean horizon'],
 }
 
 SILENT_CUTS = set()      # 番号カードも読み上げるので、無音のカットは無い
@@ -99,20 +100,21 @@ NARRATION = {
     17: 'なんでか分かるか？',
     18: '何語で書かれてるのか、それすら分かってない。',
     19: '資料が1400点しかなくて、文字数が足りない。',
-    20: '3つ目、ロンゴロンゴ。',
-    21: 'イースター島に、ロンゴロンゴって文字があるんだ。',
-    22: '木の板に刻まれた記号の列な。',
-    23: '残ってる板は、世界にたった26点。',
-    24: '19世紀に宣教師が来た頃には、',
-    25: 'もう読める島民がいなくなってた。',
-    26: '文字なのか記号なのかも、決着がついてない。',
-    27: 'ただ2024年、板の一枚を測ったらな、',
-    28: '15世紀のものかもしれないと出たんだ。',
-    29: 'ヨーロッパ人が来るより前だぜ。',
-    30: '人類が自力で文字を作った、数少ない例かもしれない。',
-    31: 'この三つ、文字のほうは残ってるんだ。',
-    32: '消えたのは、読める人間のほうだ。',
-    33: '今broたちが読んでるこの文字も、いつかそうなる。',
+    20: 'ただ、3つ目がいちばんおかしいんだ。',
+    21: '3つ目、ロンゴロンゴ。',
+    22: 'イースター島に、ロンゴロンゴって文字があるんだ。',
+    23: '木の板に刻まれた記号の列な。',
+    24: '残ってる板は、世界にたった26点。',
+    25: '19世紀に宣教師が来た頃にはな、',
+    26: '読める島民が、一人もいなくなってたんだ。',
+    27: '文字なのか記号なのかも、決着がついてない。',
+    28: 'ただ2024年、板の一枚を測ったらな、',
+    29: '15世紀のものかもしれないと出たんだ。',
+    30: 'ヨーロッパ人が来るより前だぜ。',
+    31: '人類が自力で文字を作った、数少ない例かもしれない。',
+    32: 'この三つ、文字のほうは残ってるんだ。',
+    33: '消えたのは、読める人間のほうだ。',
+    34: '今broたちが読んでるこの文字も、いつかそうなる。',
 }
 
 # 声1〜声9 のどのファイルにどのカットが入っているか。
@@ -123,8 +125,8 @@ BLOCKS = [
     [10, 11, 12, 13, 14],
     [15, 16, 17, 18, 19],
     [20, 21, 22, 23, 24],
-    [25, 26, 27, 28],
-    [29, 30, 31, 32, 33, 34],
+    [25, 26, 27, 28, 29],
+    [30, 31, 32, 33, 34, 35],
 ]
 
 PROMPTS = {
@@ -138,14 +140,15 @@ PROMPTS = {
     14: 'Two clay tablets side by side, one lit clearly and one falling into deep shadow, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
     17: 'Close macro of unknown incised characters on clay, extreme shallow focus, most of the frame dark, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
     18: 'A single clay tablet floating in complete darkness, lit from one side only, cold blue grey and pale limestone color grade, mediterranean daylight, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    20: 'Row of weathered wooden tablets covered in tiny carved glyphs, arranged in a dark museum drawer, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    23: 'A wooden tablet under museum glass, catalogue label beside it, dramatic spot lighting, deep shadows, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    26: 'Extreme macro of carved glyph rows on dark wood, grain and tool marks visible, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    27: 'Laboratory bench with a small wood sample under analytical instruments, cold clinical light, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    28: 'Aged wooden tablet fragment held in gloved hands against a black background, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    30: 'Silhouetted human hand carving the first mark into a blank wooden board by firelight, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    33: 'A modern smartphone screen glowing in total darkness, the text on it fading away character by character, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
-    34: 'Vast dark archive of unreadable documents receding into blackness, single dim light above, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    20: 'A dark corridor of museum vitrines receding into black, one case at the far end still lit, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    21: 'Row of weathered wooden tablets covered in tiny carved glyphs, arranged in a dark museum drawer, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    24: 'A wooden tablet under museum glass, catalogue label beside it, dramatic spot lighting, deep shadows, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    27: 'Extreme macro of carved glyph rows on dark wood, grain and tool marks visible, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    28: 'Laboratory bench with a small wood sample under analytical instruments, cold clinical light, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    29: 'Aged wooden tablet fragment held in gloved hands against a black background, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    31: 'Silhouetted human hand carving the first mark into a blank wooden board by firelight, deep teal and volcanic black color grade, overcast pacific light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    34: 'A modern smartphone screen glowing in total darkness, the text on it fading away character by character, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
+    35: 'Vast dark archive of unreadable documents receding into blackness, single dim light above, near monochrome, cold neutral grey color grade, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, dust motes in the air, negative space in the center of the frame, no text, no watermark, no letters, no logos',
 }
 
 WORK = os.path.abspath("shorts_work")
@@ -271,6 +274,7 @@ def find_title_font():
 # ── 図版（カット6・7・32）。ナレーションが述べる内容そのものなので用意する ──
 
 def render_figures():
+    return
     return
     return
     import numpy as np, matplotlib
