@@ -1066,14 +1066,23 @@ def generate_missing(key, only_n, reserve_pexels=False):
         print("     使うモデル: %s" % ", ".join(n for n, _ in models))
     print("     %d カットを生成します: %s" % (len(need), ", ".join(map(str, need))))
     print("     無料枠は1分あたりの上限が低いので、ゆっくり進みます")
-    ok, wait = 0, 6.0
+    ok, wait, in_a_row = 0, 3.0, 0
+    started = time.time()
     for cut in need:
         dst = os.path.join(GEN, "%02d.png" % cut)
-        # 429 は1分あたりの上限。間を空けて3回まで粘る
-        for attempt in range(3):
+        # 枠が詰まっているのに全カット粘ると30分かかる。
+        # 連続で落ち始めたら、そこで見切る
+        if in_a_row >= 3:
+            print("     続けて %d カット失敗したので、ここで止めます" % in_a_row)
+            break
+        if time.time() - started > 600:
+            print("     10分たったので、ここで止めます")
+            break
+        for attempt in range(2):
             try:
                 open(dst, "wb").write(gen_one(PROMPTS[cut], key))
                 ok += 1
+                in_a_row = 0
                 print("     カット%-2d  できました" % cut)
                 break
             except Exception as e:
@@ -1090,12 +1099,13 @@ def generate_missing(key, only_n, reserve_pexels=False):
                     print("     " + (LAST_API_ERROR[0] or "（記録なし）"))
                     list_models(key)
                     return
-                if attempt == 2:
+                if attempt == 1:
                     print("     カット%-2d  失敗（%s）" % (cut, e))
+                    in_a_row += 1
                 else:
                     print("     カット%-2d  %s。%d秒待ちます"
-                          % (cut, str(e)[:40], int(wait * (attempt + 1) * 5)))
-                    time.sleep(wait * (attempt + 1) * 5)
+                          % (cut, str(e)[:40], int(wait * 8)))
+                    time.sleep(wait * 8)
         time.sleep(wait)
     _PLAN_CACHE.clear()
     global _MINE_CACHE
