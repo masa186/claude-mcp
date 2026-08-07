@@ -1349,10 +1349,24 @@ def _resolve_assets(only_n):
     # 同じ絵が何度も出てきて、見ているほうは飽きる
     pool = [(c, a) for c, a in have if not a.startswith(IMG)] or have
 
+    # Pexels は1カットにつき2本落としているのに、使っていたのは1本だけだった。
+    # 余っているほうを先に回せば、同じ絵の再登場をそのぶん減らせる
+    import glob
+    shown = {a for _, a in have}
+    spare_stock = []
+    for cut, _, _ in plan:
+        for fp in sorted(glob.glob(os.path.join(VID, "cut%02d_*" % cut))):
+            if fp not in shown and os.path.splitext(fp)[1].lower() in VIDEO_EXT:
+                spare_stock.append((cut, fp))
+    if spare_stock:
+        print("     Pexelsの余り %d本 も使います" % len(spare_stock))
+        pool = spare_stock + pool
+
     used = {}
     for _, _, a in plan:
         if a:
             used[a] = used.get(a, 0) + 1
+    # まだ一度も出ていない余りは 0 のまま＝最優先で選ばれる
 
     borrowed = 0
     for i, (cut, r, a) in enumerate(plan):
