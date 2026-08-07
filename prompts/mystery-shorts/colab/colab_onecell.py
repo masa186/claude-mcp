@@ -883,6 +883,8 @@ def make_narration(host, speaker, speed, pitch, intonation, cuts_wanted):
 # 無料でも使える gemini-2.5-flash-image に落ちられるようにしておく。
 # 呼び方も返り方も違うので、方式ごと持つ
 GEMINI_MODELS = [("gemini-2.5-flash-image", "generate"),
+                 ("gemini-2.5-flash-image-preview", "generate"),
+                 ("gemini-2.0-flash-preview-image-generation", "generate2"),
                  ("imagen-4.0-generate-001", "predict"),
                  ("imagen-3.0-generate-002", "predict")]
 
@@ -897,7 +899,8 @@ def gen_body(prompt, how, ratio=True):
             "parameters": {"sampleCount": 1, "aspectRatio": "9:16",
                            "negativePrompt": NEGATIVE},
         }).encode()
-    cfg = {"responseModalities": ["IMAGE"]}
+    # 版によって IMAGE だけを受け付けるものと、TEXT も要るものがある
+    cfg = {"responseModalities": ["TEXT", "IMAGE"] if how == "generate2" else ["IMAGE"]}
     if ratio:
         cfg["imageConfig"] = {"aspectRatio": "9:16"}
     return json.dumps({
@@ -920,22 +923,32 @@ def gen_read(res, how):
     return None
 
 
-def quota_kind(err):
-    # 429 が「1分あたり」なのか「1日ぶん使い切り」なのかを本文から見る
+LAST_API_ERROR = [""]
+
+
+def api_message(err):
+    # 返ってきた本文から人間が読める説明を取り出す
     try:
         body = err.read().decode("utf-8", "ignore")
     except Exception:
-        return "minute"
-    if re.search(r"PerDay|per day|daily", body, re.I):
-        return "day"
-    return "minute"
+        return ""
+    try:
+        msg = json.loads(body).get("error", {}).get("message", "")
+    except Exception:
+        msg = body
+    return (msg or body)[:300]
+
+
+def quota_kind(msg):
+    # 429 が「1分あたり」なのか「1日ぶん使い切り」なのか
+    return "day" if re.search(r"PerDay|per day|daily", msg, re.I) else "minute"
 
 
 def gen_one(prompt, key):
     last = None
     for model, how in GEMINI_MODELS:
         # imageConfig を知らない版だと 400 になるので、比率なしでもう一度試す
-        for ratio in ((True, False) if how == "generate" else (True,)):
+        for ratio in ((True, False) if how.startswith("generate") else (True,)):
             verb = "predict" if how == "predict" else "generateContent"
             url = "https://generativelanguage.googleapis.com/v1beta/models/%s:%s" % (model, verb)
             req = urllib.request.Request(url, data=gen_body(prompt, how, ratio),
@@ -949,12 +962,13 @@ def gen_one(prompt, key):
                     return img
                 last = "画像が返りませんでした"
             except urllib.error.HTTPError as e:
+                msg = api_message(e)
+                LAST_API_ERROR[0] = "%s: HTTP %s %s" % (model, e.code, msg)
                 last = "HTTP %s" % e.code
-                if e.code == 401:        # キーが違う。どのモデルでも同じ
-                    raise RuntimeError("キーが違います")
+                if e.code in (401, 403) and "quota" not in msg.lower():
+                    raise RuntimeError("キーが使えません（%s）" % msg[:120])
                 if e.code == 429:
-                    detail = quota_kind(e)
-                    if detail == "day":
+                    if quota_kind(msg) == "day":
                         raise RuntimeError("今日の無料枠を使い切りました")
                     last = "混み合っています"
                 continue                 # 枠切れもモデル名違いも、次を試す
@@ -962,6 +976,30 @@ def gen_one(prompt, key):
                 last = type(e).__name__
                 break
     raise RuntimeError(last or "不明")
+
+
+def list_models(key):
+    # そのキーで実際に何が使えるのかを見る。モデル名の推測をやめるため
+    url = "https://generativelanguage.googleapis.com/v1beta/models"
+    req = urllib.request.Request(url, headers={"x-goog-api-key": key,
+                                               "User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            data = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        print("     使えるモデルの一覧も取れません: HTTP %s %s" % (e.code, api_message(e)))
+        return
+    except Exception as e:
+        print("     一覧の取得に失敗: %s" % type(e).__name__)
+        return
+    names = []
+    for m in data.get("models", []):
+        n = m.get("name", "").split("/")[-1]
+        if "image" in n or "imagen" in n:
+            names.append(n)
+    print("     このキーで見えている画像モデル:")
+    for n in names[:12] or ["（1つも無い）"]:
+        print("       " + n)
 
 
 def generate_missing(key, only_n, reserve_pexels=False):
@@ -1007,12 +1045,16 @@ def generate_missing(key, only_n, reserve_pexels=False):
             except Exception as e:
                 if os.path.exists(dst):
                     os.remove(dst)
-                if "今日の無料枠" in str(e):
+                # 待っても直らない種類の失敗で粘らない
+                if any(w in str(e) for w in ("今日の無料枠", "キーが使えません", "キーが違います")):
                     print("     カット%-2d  %s" % (cut, e))
-                    print("     ここで止めます。明日また押すか、④に進んでください")
+                    print("     ここで止めます。④に進んでください")
                     print("     （足りないカットは近くの映像で埋まります）")
                     _PLAN_CACHE.clear()
                     print("     %d / %d 枚できました" % (ok, len(need)))
+                    print("\n     --- 最後に返ってきたエラー ---")
+                    print("     " + (LAST_API_ERROR[0] or "（記録なし）"))
+                    list_models(key)
                     return
                 if attempt == 2:
                     print("     カット%-2d  失敗（%s）" % (cut, e))
@@ -1025,6 +1067,10 @@ def generate_missing(key, only_n, reserve_pexels=False):
     global _MINE_CACHE
     _MINE_CACHE = None          # 作った分を見直す
     print("     %d / %d 枚できました" % (ok, len(need)))
+    if ok == 0:
+        print("\n     --- 最後に返ってきたエラー ---")
+        print("     " + (LAST_API_ERROR[0] or "（記録なし）"))
+        list_models(key)
 
 
 # ── テロップ ──
