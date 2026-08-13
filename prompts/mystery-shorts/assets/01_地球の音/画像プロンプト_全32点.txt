@@ -1,0 +1,195 @@
+========================================================================
+「今も正体が分かっていない 地球の音 3選」
+AI画像生成用プロンプト（全32点）
+
+・44カットを重複整理して35素材に圧縮済み。図版で作るのは3点だけ。
+・このファイルの32点を生成すれば、実写ストック1点を除いて全カットが埋まる。
+・どの生成サービスでもそのまま貼れるよう、共通スタイルは各行に展開してある。
+・アスペクト比は必ず 9:16 を指定すること。
+========================================================================
+
+【ネガティブプロンプト（対応サービスなら全点に適用）】
+text, letters, watermark, logo, signature, caption, subtitles, cartoon, anime,
+illustration, 3d render, cgi, plastic skin, distorted face, extra fingers,
+deformed hands, low resolution, blurry, oversaturated
+
+------------------------------------------------------------------------
+A01  → カット 1, 29    深海に落ちる一筋の光
+------------------------------------------------------------------------
+Pitch black deep ocean with a single faint beam of light descending from the surface, suspended particles drifting slowly, immense emptiness, subject in lower half of frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A03  → カット 3, 11    夜の外洋を高所から見下ろす
+------------------------------------------------------------------------
+Vast dark ocean surface at night seen from high above, moonlight scattered across the waves, no land anywhere, heavy vignette, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A04  → カット 4        1990年代初頭の観測機材室
+------------------------------------------------------------------------
+Rows of analog recording equipment in a dim government monitoring facility, reel to reel tapes turning, early 1990s technology, cold fluorescent light, deep perspective down the aisle, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A05  → カット 5        深海に吊られたハイドロフォン
+------------------------------------------------------------------------
+Underwater hydrophone sensor suspended in the deep dark ocean, cable rising into blackness above, cold blue light from far above, marine snow drifting, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A07  → カット 8        テープリールの箱に貼られた手書きラベル
+------------------------------------------------------------------------
+A handwritten paper label on an old magnetic tape reel box, ink blurred and completely unreadable, warm archive lighting from one side, extreme shallow focus, dust on the surface, cinematic photorealistic, vertical 9:16 composition, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A09  → カット 10       陸の見えない曇天の水平線
+------------------------------------------------------------------------
+Endless empty ocean horizon under a heavy grey overcast sky, no ships, no land, flat cold light, sense of total isolation, cinematic photorealistic, vertical 9:16 composition, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A11  → カット 13       海底火山の噴出
+------------------------------------------------------------------------
+Underwater volcanic vent erupting glowing orange magma into black abyssal water, superheated plume rising, dramatic contrast between fire and darkness, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A12  → カット 15       夜の海に浮かぶ観測ブイ
+------------------------------------------------------------------------
+Modern hydrophone buoy floating alone on a black night ocean, small blinking indicator light, stars above, gentle swell, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A13  → カット 16, 28   深夜3時の郊外の通り
+------------------------------------------------------------------------
+Empty suburban street at 3am, orange sodium streetlights, no people, parked cars, oppressive silence, heavy vignette, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A14  → カット 17       暗い壁の世界地図とピン
+------------------------------------------------------------------------
+Large world map pinned on a dark wall with several small pins clustered in different continents, dim desk lamp lighting it from below, shallow depth of field, map deliberately out of focus and unreadable, cinematic photorealistic, vertical 9:16 composition, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A15  → カット 18       夜、目を開けたまま横たわる人
+------------------------------------------------------------------------
+Close up of a person lying awake in bed at night with eyes open in the dark, only ambient blue light from a window, face partly in shadow, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A16  → カット 19       遠くの工業地帯 夜
+------------------------------------------------------------------------
+Distant industrial complex at night with faint smoke and a few scattered lights, seen across a dark empty field, cold grade, low horizon, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A18  → カット 22       高地砂漠のアドベの町（実写ストックでも可）
+------------------------------------------------------------------------
+Adobe buildings in a high desert town under a huge blue sky, dry mountains in the distance, dusty warm afternoon light, no people, cinematic photorealistic, vertical 9:16 composition, shallow depth of field, subtle film grain, muted desaturated warm color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A19  → カット 23       夜の小さな町の俯瞰、灯りはわずか
+------------------------------------------------------------------------
+Overhead night view of a small desert town, only a few windows lit, most of the town completely dark, empty streets, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A20  → カット 24       耳に手を当てて集中する
+------------------------------------------------------------------------
+Close up of a hand pressed against an ear, eyes closed in concentration, harsh side lighting, dark background, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A21  → カット 25       雑踏の中で一人だけ立ち止まっている
+------------------------------------------------------------------------
+A crowded city street where everyone walks normally except one person standing completely still with a troubled expression, heavy motion blur on the crowd, the still figure sharp, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A22  → カット 26       タービン・地震計・耳の三分割
+------------------------------------------------------------------------
+Triptych composition blending an industrial factory turbine, a seismograph needle tracing a line, and a human ear in extreme close up, all in cold desaturated tones, seamless transitions between the three, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A23  → カット 27       夜のフィールドで測定する研究者
+------------------------------------------------------------------------
+Researcher wearing headphones adjusting audio measurement equipment on a tripod in a dark open field at night, single lamp illuminating the equipment, stars above, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A24  → カット 30       冷戦期の海軍ソナー室
+------------------------------------------------------------------------
+Cold war era naval sonar station interior, green radar and waveform screens glowing in a dark room, 1980s military equipment, operator silhouettes at the consoles, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold green color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A25  → カット 31       深海へ降りる聴音アレイのケーブル
+------------------------------------------------------------------------
+Underwater listening array cables descending into the deep dark pacific, faint blue light from far above, cables converging toward the abyss, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A27  → カット 33, 40   広大な海に一頭だけのクジラ
+------------------------------------------------------------------------
+A single whale silhouette suspended alone in an enormous expanse of empty dark blue ocean, no other life visible anywhere, the whale small in the frame, marine snow drifting, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A28  → カット 34, 35, 36   シロナガスクジラの群れ
+------------------------------------------------------------------------
+Several blue whales swimming together in formation in deep blue water, calm and synchronized, seen from the side, shafts of surface light above them, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+  ※カット35は、この画像から一頭を切り抜いて群れから離して合成する
+  ※カット36は、その一頭から音波リングを描き足す
+
+------------------------------------------------------------------------
+A29  → カット 37       何十年分の記録が積み上がった机
+------------------------------------------------------------------------
+Desk covered with decades of printed sonar charts and handwritten notes stacked in thick layers, warm lamp light from one side, shallow focus on the nearest stack, papers yellowed with age, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated warm color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A31  → カット 39       濁った深海の不明瞭な巨大な影
+------------------------------------------------------------------------
+An indistinct massive dark shape barely visible in murky deep water, form completely unresolvable, suspended particles between camera and subject, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A33  → カット 42       磁気テープの書庫
+------------------------------------------------------------------------
+Archive shelves full of magnetic tape reels in a dim storage room, deep perspective down a long aisle, dust in the air, single overhead light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A34  → カット 44       宇宙から見た夜の地球
+------------------------------------------------------------------------
+Earth seen from deep space at night, faint city lights scattered on the dark side, thin blue atmospheric rim, stars behind, the planet in the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+========================================================================
+【差し替え分（当初グラフを当てていたカット。すべて写真的な絵に戻した）】
+========================================================================
+
+------------------------------------------------------------------------
+A02  → カット 2        暗闇で一人でに回り続けるテープマシン
+------------------------------------------------------------------------
+Close up of a reel to reel tape machine running alone in a dark room, both reels slowly turning, a single small indicator lamp glowing amber, nobody present, dust drifting in a narrow beam of light, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A08  → カット 9, 14, 43    宇宙から見た太平洋側の地球
+------------------------------------------------------------------------
+Earth seen from orbit showing the pacific side, almost entirely dark ocean with no landmass visible, thin glowing blue atmospheric limb along the curve, deep starfield behind, the planet occupying the lower half of the frame, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated cold blue color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+  ※赤い光点は編集で足す。画像生成に描かせない（位置と明滅を制御できるようにするため）
+  ※カット14は点を減衰させる。カット43は点を3つに増やす。画像は1枚で足りる
+
+------------------------------------------------------------------------
+A10  → カット 12       外洋にかかる季節の境目
+------------------------------------------------------------------------
+Aerial view of open ocean where two weather systems meet, warm hazy spring light on one side and cold dark autumn storm cloud on the other, a visible front line dividing the water, no land, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A17  → カット 20       夕闇に並ぶ高圧送電鉄塔
+------------------------------------------------------------------------
+Row of high voltage transmission pylons silhouetted against a dark dusk sky, power lines converging into the distance, low oppressive clouds, empty field below, sense of a constant unheard hum, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+------------------------------------------------------------------------
+A30  → カット 38       机に広げられた紙の海図
+------------------------------------------------------------------------
+Worn paper nautical chart spread across a wooden desk under a warm lamp, brass dividers and a pencil resting on it, faint hand drawn marks, printed detail deliberately out of focus and unreadable, shallow focus on the nearest edge, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, subtle film grain, muted desaturated warm color grade, negative space in the center of the frame, no text, no watermark, no letters, no logos
+  ※赤い経路は編集で描き足す
+
+------------------------------------------------------------------------
+A32  → カット 41       夜の海に離れて浮かぶ三つの灯り
+------------------------------------------------------------------------
+Three small distant lights floating far apart from each other on a black night ocean, calm water reflecting them faintly, stars above, nothing else visible in any direction, cinematic photorealistic, vertical 9:16 composition, dramatic directional lighting, shallow depth of field, subtle film grain, muted desaturated cold blue color grade, volumetric atmosphere, negative space in the center of the frame, no text, no watermark, no letters, no logos
+
+========================================================================
+【実写ストックで探すもの】
+
+S01 → カット 21   1970年代のイギリス・ブリストルの街並み
+  検索ワード： Bristol England 1970s street / terraced houses england vintage
+  探す場所：   Pexels / Pixabay（商用可ライセンスを必ず確認）
+  代替案：     A18 と同じ要領で AI 生成しても成立する。その場合のプロンプトは
+               Row of terraced brick houses in an english city under grey overcast sky,
+               1970s period cars parked along the kerb, faded film color, cinematic
+               photorealistic, vertical 9:16 composition, subtle film grain, no text
+========================================================================
