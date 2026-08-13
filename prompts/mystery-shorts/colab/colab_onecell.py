@@ -572,8 +572,84 @@ def split_stick(im):
     return (Image.fromarray(body, "RGBA"), Image.fromarray(st, "RGBA"), pivot)
 
 
+def mouth_box(im):
+    # 鼻を見つけて、その下に口を置く。鼻は「明るいマズルに囲まれた暗い塊」で、
+    # 眼鏡や輪郭も暗いので、まわりが明るいかどうかで選り分ける。
+    # 絵柄が変わっても、鼻と口の位置関係だけは崩れない
+    import numpy as np
+    try:
+        from scipy import ndimage
+    except Exception:
+        return None
+    a = np.asarray(im.convert("RGBA")).astype(np.int16)
+    al = a[..., 3]
+    ys, xs = np.where(al > 128)
+    if len(ys) < 100:
+        return None
+    y0, y1, x0, x1 = ys.min(), ys.max(), xs.min(), xs.max()
+    head = np.zeros(al.shape, bool)
+    head[y0:y0 + int((y1 - y0) * 0.50), x0:x1 + 1] = True
+    rgb = a[..., :3]
+    light = head & (al > 128) & (rgb.min(2) > 195)          # マズル
+    dark = head & (al > 128) & (rgb.max(2) < 130)           # 鼻・目・輪郭
+    if light.sum() < 200:
+        return None
+    ly, lx = np.where(light)
+    mid = (lx.min() + lx.max()) / 2.0
+    span = max(lx.max() - lx.min(), 1)
+    ring = ndimage.binary_dilation(light, iterations=6)
+    lab, n = ndimage.label(dark)
+    best = None
+    for i in range(1, n + 1):
+        m = lab == i
+        if m.sum() < 120:
+            continue
+        py, px = np.where(m)
+        w, h = px.max() - px.min() + 1, py.max() - py.min() + 1
+        if w > span * 0.5 or h > w * 2.2:
+            continue                       # 輪郭線のような細長いものを外す
+        around = ndimage.binary_dilation(m, iterations=5) & ~m
+        if (around & ring).sum() < around.sum() * 0.75:
+            continue                       # まわりが明るくない＝マズルの外
+        score = abs(px.mean() - mid) / span - m.sum() / float(dark.sum())
+        if best is None or score < best[0]:
+            best = (score, px.min(), px.max(), py.min(), py.max())
+    if best is None:
+        return None
+    _, nx0, nx1, ny0, ny1 = best
+    rx = max(int((nx1 - nx0) * 0.58), 6)
+    return (int((nx0 + nx1) / 2), int(ny1 + (ny1 - ny0) * 0.85), rx, max(int(rx * 0.62), 4))
+
+
+MOUTH_SS = 4          # 拡大して描いてから縮める。縁のギザギザを消すため
+
+
+def open_mouth(im, box, wide):
+    # 閉じた口を消して、開いた口を描く。表情の絵は1枚でいい
+    from PIL import Image, ImageDraw
+    cx, cy, rx, ry = box
+    if not wide:
+        rx, ry = int(rx * 0.85), max(int(ry * 0.52), 3)
+    s = MOUTH_SS
+    big = im.resize((im.width * s, im.height * s), Image.LANCZOS)
+    d = ImageDraw.Draw(big)
+    skin = im.getpixel((cx, max(cy - ry - 12, 0)))          # 鼻の下のマズルの色
+    d.ellipse([(cx - rx - 4) * s, (cy - ry - 3) * s,
+               (cx + rx + 4) * s, (cy + ry + 3) * s], fill=skin)
+    d.ellipse([(cx - rx) * s, (cy - ry) * s, (cx + rx) * s, (cy + ry) * s],
+              fill=(72, 36, 36, 255), outline=(36, 24, 24, 255), width=3 * s)
+    d.ellipse([(cx - rx * 0.62) * s, (cy + ry * 0.18) * s,
+               (cx + rx * 0.62) * s, (cy + ry * 0.92) * s], fill=(198, 104, 104, 255))
+    out = big.resize(im.size, Image.LANCZOS)
+    # 口のまわり以外は原画のまま。縮小で全体が甘くなるのを防ぐ
+    m = Image.new("L", im.size, 0)
+    ImageDraw.Draw(m).ellipse([cx - rx - 6, cy - ry - 5, cx + rx + 6, cy + ry + 5], fill=255)
+    return Image.composite(out, im, m)
+
+
 def char_frames(mood):
-    # 棒を振る動きを1周期ぶん書き出す。あとは ffmpeg に繰り返させる
+    # 棒を振る動き1周期 × 口の3状態（閉じ・中間・開き）を書き出す。
+    # 口が無い絵なら閉じの1状態だけになり、今までどおり静止した口になる
     import math
     from PIL import Image
     if mood in _CHAR_CACHE:
@@ -583,23 +659,87 @@ def char_frames(mood):
         _CHAR_CACHE[mood] = None
         return None
     im = Image.open(src).convert("RGBA")
-    body, stick, pivot = split_stick(im)
+    box = mouth_box(im)
+    faces = [im]
+    if box:
+        faces += [open_mouth(im, box, False), open_mouth(im, box, True)]
     out = os.path.join(TMP, "char_%s" % mood)
     os.makedirs(out, exist_ok=True)
     n = max(int(SWING_SEC * FPS), 2)
     w, h = im.size
-    for i in range(n):
-        f = body.copy()
-        if stick is not None:
-            ang = SWING_DEG * math.sin(2 * math.pi * i / n)
-            big = Image.new("RGBA", (w * 2, h * 2), (0, 0, 0, 0))
-            big.paste(stick, (w // 2, h // 2), stick)
-            big = big.rotate(ang, resample=Image.BICUBIC,
-                             center=(pivot[0] + w // 2, pivot[1] + h // 2))
-            f.alpha_composite(big.crop((w // 2, h // 2, w // 2 + w, h // 2 + h)))
-        f.save(os.path.join(out, "f%03d.png" % i))
-    _CHAR_CACHE[mood] = (os.path.join(out, "f%03d.png"), n)
+    if box:
+        # 口の位置を当てそこねると顔が壊れる。並べて出しておく
+        chk = Image.new("RGB", (w * len(faces), h), (24, 28, 40))
+        for i, f in enumerate(faces):
+            chk.paste(f, (w * i, 0), f)
+        chk.save(os.path.join(WORK, "口_%s.png" % mood))
+        print("     口パク: %s（確認用 %s/口_%s.png）" % (mood, WORK, mood))
+    else:
+        print("     口パク: %s は口が見つからないので動かしません" % mood)
+    bank = []
+    for k, face in enumerate(faces):
+        body, stick, pivot = split_stick(face)
+        row = []
+        for i in range(n):
+            f = body.copy()
+            if stick is not None:
+                ang = SWING_DEG * math.sin(2 * math.pi * i / n)
+                big = Image.new("RGBA", (w * 2, h * 2), (0, 0, 0, 0))
+                big.paste(stick, (w // 2, h // 2), stick)
+                big = big.rotate(ang, resample=Image.BICUBIC,
+                                 center=(pivot[0] + w // 2, pivot[1] + h // 2))
+                f.alpha_composite(big.crop((w // 2, h // 2, w // 2 + w, h // 2 + h)))
+            p = os.path.join(out, "m%d_%03d.png" % (k, i))
+            f.save(p, compress_level=1)     # 捨てる中間ファイル。縮めるだけ無駄
+            row.append(p)
+        bank.append(row)
+    _CHAR_CACHE[mood] = (bank, n)
     return _CHAR_CACHE[mood]
+
+
+MOUTH_MIN_RUN = 2     # 1フレームだけの開閉はちらついて見える
+
+
+def mouth_track(wav, t0, frames):
+    # 声が出ているフレームで口を開ける。0=閉じ 1=中間 2=開き
+    if not wav or not os.path.exists(wav):
+        return [0] * frames
+    env, thr = loudness(wav, "_mouth")
+    if env is None:
+        return [0] * frames
+    raw = []
+    for i in range(frames):
+        k = int(round((t0 + i / float(FPS)) * 100))
+        raw.append(2 if 0 <= k < len(env) and env[k] > thr else 0)
+    # 短すぎる区間を隣に吸収させてから、変わり目の1枚を中間の口にする
+    i = 0
+    while i < len(raw):
+        j = i
+        while j < len(raw) and raw[j] == raw[i]:
+            j += 1
+        if j - i < MOUTH_MIN_RUN:
+            fill = raw[i - 1] if i else (raw[j] if j < len(raw) else 0)
+            for k in range(i, j):
+                raw[k] = fill
+        i = j
+    return [1 if i and raw[i] != raw[i - 1] else raw[i] for i in range(len(raw))]
+
+
+def char_seq(cf, cut, wav, t0, frames, phase):
+    # このカットぶんのコマ並びを作る。中身は使い回しなのでハードリンクで置く
+    bank, n = cf
+    d = os.path.join(TMP, "seq_%02d" % cut)
+    shutil.rmtree(d, ignore_errors=True)
+    os.makedirs(d)
+    mouths = mouth_track(wav, t0, frames + 2) if len(bank) > 1 else [0] * (frames + 2)
+    for i in range(frames + 2):
+        src = bank[min(mouths[i], len(bank) - 1)][(phase + i) % n]
+        dst = os.path.join(d, "f%05d.png" % i)
+        try:
+            os.link(src, dst)
+        except Exception:
+            shutil.copy(src, dst)
+    return os.path.join(d, "f%05d.png")
 
 
 def char_file(mood):
@@ -761,11 +901,10 @@ MIN_PAUSE = 0.06
 MIN_TELOP = 0.70      # これより短いテロップは読めない
 
 
-def speech_edges(path):
-    # 声の中の「間」の位置を返す。文字数で割るより、実際に息継ぎした
-    # ところでテロップを変えたほうが合って聞こえる
+def loudness(path, tag="_edge"):
+    # 10ミリ秒ごとの声の大きさ。間の検出にも口パクにも同じものを使う
     import numpy as np
-    tmp = os.path.join(WORK, "_edge.wav")
+    tmp = os.path.join(WORK, "%s.wav" % tag)
     try:
         sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
             "-i", path, "-ac", "1", "-ar", "8000", "-c:a", "pcm_s16le", tmp])
@@ -773,14 +912,22 @@ def speech_edges(path):
         a = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float32) / 32768
         sr = w.getframerate()
     except Exception:
-        return []
+        return None, 0.0
     if len(a) < sr // 2:
-        return []
+        return None, 0.0
     hop = int(sr * 0.010)
     n = len(a) // hop
     env = np.sqrt((a[:n*hop].reshape(n, hop) ** 2).mean(1) + 1e-12)
     env = np.convolve(env, np.ones(3) / 3, "same")
-    thr = np.percentile(env, 90) * 0.22
+    return env, float(np.percentile(env, 90) * 0.22)
+
+
+def speech_edges(path):
+    # 声の中の「間」の位置を返す。文字数で割るより、実際に息継ぎした
+    # ところでテロップを変えたほうが合って聞こえる
+    env, thr = loudness(path)
+    if env is None:
+        return []
     out, run = [], 0
     for i, loud in enumerate(env > thr):
         if not loud:
@@ -1631,7 +1778,7 @@ def report_sources(plan):
     print("     素材の内訳: " + " / ".join("%s %d" % (k, v) for k, v in kind.items() if v))
 
 
-def build(font, only_n, out, fixed_dur=None):
+def build(font, only_n, out, fixed_dur=None, voice_file=None):
     FF = ffmpeg_bin()
     os.makedirs(TMP, exist_ok=True)
     segs = []
@@ -1662,8 +1809,9 @@ def build(font, only_n, out, fixed_dur=None):
         telop(r, font, tp)
         # カットごとに丸めると端数が積もって、後半ほど境界がずれる。
         # 通しの時間で丸めてから差を取れば、ずれは1フレームに収まる
-        frames = int(round((elapsed + dur) * FPS)) - int(round(elapsed * FPS))
-        frames = max(frames, 2)
+        first = int(round(elapsed * FPS))
+        frames = max(int(round((elapsed + dur) * FPS)) - first, 2)
+        elapsed_before = first / float(FPS)
         elapsed += dur
         dur = frames / float(FPS)      # 実際に書き出す長さに合わせる
         args = [FF, "-hide_banner", "-loglevel", "error", "-y"]
@@ -1681,7 +1829,11 @@ def build(font, only_n, out, fixed_dur=None):
         args += ["-loop", "1", "-framerate", str(FPS), "-i", tp]
         cf = char_frames(char_mood(r, cut))
         if cf:
-            args += ["-stream_loop", "-1", "-framerate", str(FPS), "-i", cf[0]]
+            # 棒の振りはカットをまたいで続ける。切り替わるたびに戻ると目立つ
+            phase = int(round(elapsed_before * FPS))
+            seq = char_seq(cf, cut, voice_file or wav,
+                           elapsed_before if voice_file else 0.0, frames, phase)
+            args += ["-framerate", str(FPS), "-i", seq]
         ai = 3 if cf else 2
         if wav:
             args += ["-i", wav]
@@ -1835,7 +1987,7 @@ def main():
         n = build(font, only, a.out)
     else:
         tmp = os.path.join(WORK, "no_audio.mp4")
-        n = build(font, only, tmp, fixed_dur=fixed)
+        n = build(font, only, tmp, fixed_dur=fixed, voice_file=voice_file)
         sh([ffmpeg_bin(), "-hide_banner", "-loglevel", "error", "-y",
             "-i", tmp, "-i", voice_file, "-map", "0:v", "-map", "1:a",
             "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", a.out])
