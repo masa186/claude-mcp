@@ -158,6 +158,14 @@ TMP = os.path.join(WORK, "_作業中")
 AUD = os.path.join(WORK, "音声")
 MINE = "/content/素材"      # 自分で用意した素材を入れる場所
 GEN  = "/content/生成"      # ③がつくった画像。手置きと違い透かしが無い
+CHAR = "/content/キャラ"    # 解説役。置いてあれば毎カット重ねる
+
+# 表情は3枚だけ。毎カット作ると別人になるので、同じ画像を使い回す
+FACES_CHAR = {"通常": ("通常", "normal"),
+              "驚き": ("驚き", "surprised"),
+              "お手上げ": ("お手上げ", "giveup")}
+CHAR_H = 0.22           # 画面の高さに対する大きさ
+CHAR_MARGIN = 0.03
 
 
 def sh(args):
@@ -228,19 +236,28 @@ def blur_chain(strong):
             % (z, z, W, H, sig, sft, sft))
 
 
+def char_filter(cf):
+    # テロップの上に、左下へ。切り替えのボケはキャラにも掛ける
+    if not cf:
+        return "[v]null[vc]"
+    return ("[2:v]scale=-1:%d[ch];"
+            "[v][ch]overlay=%d:H-h-%d:format=auto[vc]"
+            % (int(H * CHAR_H), int(W * CHAR_MARGIN), int(H * CHAR_MARGIN)))
+
+
 def trans_filter(mode, dur):
     # ボカした自分自身と重ねる。前後のカットを食い合わないので、
     # 尺は1フレームも動かない
     if not mode:
-        return "[v]null[vv]"
+        return "[vc]null[vv]"
     d = min(TRANS_SEC, max(dur * 0.4, 0.06))
     if mode == "in":
-        return ("[v]split[sh][bl];[bl]%s[bb];"
+        return ("[vc]split[sh][bl];[bl]%s[bb];"
                 "[bb][sh]xfade=transition=fade:duration=%.2f:offset=0[vv]"
                 % (blur_chain(False), d))
     # タイトルは終わり際にボカして飛ばす。長くなるぶんは切り戻す
     d = min(0.34, max(dur * 0.3, 0.10))
-    return ("[v]split[sh][bl];[bl]%s[bb];"
+    return ("[vc]split[sh][bl];[bl]%s[bb];"
             "[sh][bb]xfade=transition=fade:duration=%.2f:offset=%.3f,"
             "trim=0:%.3f,setpts=PTS-STARTPTS[vv]"
             % (blur_chain(True), d, max(dur - d, 0.02), dur))
@@ -525,6 +542,33 @@ def adopt_cut_voices():
         sh([FF, "-hide_banner", "-loglevel", "error", "-y", "-i", fp,
             "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", dst])
     return len(got)
+
+
+def char_file(mood):
+    # キャラ/通常.png のように置く。無ければ何も重ねない
+    import glob
+    if mood is None or not os.path.isdir(CHAR):
+        return None
+    for name in FACES_CHAR.get(mood, ()) + FACES_CHAR["通常"]:
+        for fp in sorted(glob.glob(os.path.join(CHAR, name + ".*"))):
+            if os.path.splitext(fp)[1].lower() in (".png", ".webp"):
+                return fp
+    return None
+
+
+def char_mood(row, cut):
+    # 数字が出るところで驚き、否定で終わるところでお手上げ。
+    # 表情が変わるだけで、見ている側は「何か起きた」と受け取る
+    hl = row.get("hl", "")
+    txt = NARRATION.get(cut, "")
+    if row.get("hl") == "TITLE":
+        return None                      # タイトルには乗せない
+    if any(ch.isdigit() for ch in hl):
+        return "驚き"
+    if any(w in txt for w in ("読めない", "分かってない", "確定してない",
+                              "決着がついてない", "足りない", "いなかった")):
+        return "お手上げ"
+    return "通常"
 
 
 def find_bgm():
@@ -1577,15 +1621,20 @@ def build(font, only_n, out, fixed_dur=None):
             vf = "crop=iw:ih*0.88:0:0," + vf
         # 1枚絵のまま渡すと t が進まず、fade も scale も効かない
         args += ["-loop", "1", "-framerate", str(FPS), "-i", tp]
+        cf = char_file(char_mood(r, cut))
+        if cf:
+            args += ["-loop", "1", "-framerate", str(FPS), "-i", cf]
+        ai = 3 if cf else 2
         if wav:
             args += ["-i", wav]
-            amap = "[2:a]apad[a]"
+            amap = "[%d:a]apad[a]" % ai
         else:
             args += ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
-            amap = "[2:a]anull[a]"
+            amap = "[%d:a]anull[a]" % ai
         args += ["-filter_complex",
-                 "[0:v]%s[bg];%s;%s;%s"
-                 % (vf, telop_filter(), trans_filter(use_trans, dur), amap),
+                 "[0:v]%s[bg];%s;%s;%s;%s"
+                 % (vf, telop_filter(), char_filter(cf),
+                    trans_filter(use_trans, dur), amap),
                  "-map", "[vv]", "-map", "[a]", "-t", "%.3f" % dur, "-r", str(FPS),
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "21",
                  "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
