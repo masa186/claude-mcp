@@ -544,6 +544,64 @@ def adopt_cut_voices():
     return len(got)
 
 
+SWING_SEC, SWING_DEG = 2.4, 11.0     # 棒をゆっくり振る周期と振れ幅
+_CHAR_CACHE = {}
+
+
+def split_stick(im):
+    # 差し棒だけを切り離す。薄い色の細長い部分を右上から探す。
+    # 見つからなければ棒なしとして扱う（絵柄が違っても壊れない）
+    import numpy as np
+    from PIL import Image, ImageFilter
+    a = np.asarray(im).astype(np.int16)
+    h, w, _ = a.shape
+    r, g, b, al = a[..., 0], a[..., 1], a[..., 2], a[..., 3]
+    region = np.zeros((h, w), bool)
+    region[:int(h * 0.66), int(w * 0.70):] = True
+    core = (al > 0) & region & (r > 195) & (g > 165) & (b > 120) & (b < r - 25)
+    if core.sum() < h * w * 0.002:
+        return im, None, None
+    m = Image.fromarray((core * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(9))
+    stick = (np.asarray(m) > 0) & (al > 0) & region
+    ys, xs = np.where(stick)
+    pivot = (int(xs[ys.argmax()]), int(ys.max()))     # 持ち手側を軸にする
+    body = np.array(a, dtype=np.uint8)
+    body[..., 3] = np.where(stick, 0, al).astype(np.uint8)
+    st = np.zeros_like(body)
+    st[stick] = a[stick].astype(np.uint8)
+    return (Image.fromarray(body, "RGBA"), Image.fromarray(st, "RGBA"), pivot)
+
+
+def char_frames(mood):
+    # 棒を振る動きを1周期ぶん書き出す。あとは ffmpeg に繰り返させる
+    import math
+    from PIL import Image
+    if mood in _CHAR_CACHE:
+        return _CHAR_CACHE[mood]
+    src = char_file(mood)
+    if not src:
+        _CHAR_CACHE[mood] = None
+        return None
+    im = Image.open(src).convert("RGBA")
+    body, stick, pivot = split_stick(im)
+    out = os.path.join(TMP, "char_%s" % mood)
+    os.makedirs(out, exist_ok=True)
+    n = max(int(SWING_SEC * FPS), 2)
+    w, h = im.size
+    for i in range(n):
+        f = body.copy()
+        if stick is not None:
+            ang = SWING_DEG * math.sin(2 * math.pi * i / n)
+            big = Image.new("RGBA", (w * 2, h * 2), (0, 0, 0, 0))
+            big.paste(stick, (w // 2, h // 2), stick)
+            big = big.rotate(ang, resample=Image.BICUBIC,
+                             center=(pivot[0] + w // 2, pivot[1] + h // 2))
+            f.alpha_composite(big.crop((w // 2, h // 2, w // 2 + w, h // 2 + h)))
+        f.save(os.path.join(out, "f%03d.png" % i))
+    _CHAR_CACHE[mood] = (os.path.join(out, "f%03d.png"), n)
+    return _CHAR_CACHE[mood]
+
+
 def char_file(mood):
     # キャラ/通常.png のように置く。無ければ何も重ねない
     import glob
@@ -1621,9 +1679,9 @@ def build(font, only_n, out, fixed_dur=None):
             vf = "crop=iw:ih*0.88:0:0," + vf
         # 1枚絵のまま渡すと t が進まず、fade も scale も効かない
         args += ["-loop", "1", "-framerate", str(FPS), "-i", tp]
-        cf = char_file(char_mood(r, cut))
+        cf = char_frames(char_mood(r, cut))
         if cf:
-            args += ["-loop", "1", "-framerate", str(FPS), "-i", cf]
+            args += ["-stream_loop", "-1", "-framerate", str(FPS), "-i", cf[0]]
         ai = 3 if cf else 2
         if wav:
             args += ["-i", wav]
