@@ -29,22 +29,29 @@ print('frames done %.0fs' % (time.time() - t0), flush=True)
 # ---------------------------------------------------------------- 音
 sound.write_wav('se.wav', sound.build_track(render.DURATION))
 
+import voice
+if '--voice' in sys.argv or not os.path.exists('voice.wav'):
+    voice.build('voice.wav')
+nar = sound.narration_path('narration.wav', 'voice.wav')
+
 cmd = [FF, '-y', '-framerate', str(render.FPS), '-i', 'frames/%05d.png',
        '-i', 'se.wav']
 labels = ['[1:a]']
 filt = []
 idx = 1
 
-if os.path.exists('narration.wav'):
+if nar:
     idx += 1
-    cmd += ['-i', 'narration.wav']
+    cmd += ['-i', nar]
     labels.append('[%d:a]' % idx)
 
 if os.path.exists('bgm.mp3'):
     idx += 1
     # 動画より短ければ繰り返す
     cmd += ['-stream_loop', '-1', '-i', 'bgm.mp3']
-    filt.append("[%d:a]volume='%s':eval=frame[b]" % (idx, sound.volume_expr()))
+    # 声が乗るぶんBGMを下げる。ここを下げないと台詞が埋もれる
+    filt.append("[%d:a]volume='%s':eval=frame[b]"
+                % (idx, sound.volume_expr(0.55 if nar else 1.0)))
     labels.append('[b]')
 
 mix = ''.join(labels) + 'amix=inputs=%d:duration=first:normalize=0[m]' % len(labels)
@@ -56,8 +63,7 @@ cmd += ['-c:v', 'libx264', '-preset', 'medium', '-crf', '19',
         '-pix_fmt', 'yuv420p', '-r', str(render.FPS),
         '-c:a', 'aac', '-b:a', '192k', '-shortest', OUT]
 
-print('音: 効果音' +
-      ('＋ナレーション' if os.path.exists('narration.wav') else '') +
+print('音: 効果音' + ('＋声(%s)' % nar if nar else '') +
       ('＋BGM' if os.path.exists('bgm.mp3') else ''), flush=True)
 
 r = subprocess.run(cmd, capture_output=True, text=True)

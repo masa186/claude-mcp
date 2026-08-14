@@ -1,9 +1,13 @@
+# ---- 作り直せるもの（置かない）
 frames/
 frames2/
 se.wav
 se2.wav
 se_preview.wav
 se_chosen.wav
+voice.wav
+voice2.wav
+voice_demo.wav
 narration_script.txt
 ep01.mp4
 ep02.mp4
@@ -12,6 +16,21 @@ build2.log
 ref/
 cand/
 cand2/
-clips/
-bgm.mp3
-narration*.wav
+
+# mkpng.py / mkanim.py が作る図
+assets/[0-9]*_*.png
+
+# mkanim.py が作る連番
+clips/airflow/
+clips/airlift/
+clips/wingrace/
+
+# 元の動画。大きいので置かない（prep_clips.py で連番を作り直せる）
+clips/src*.mp4
+clips/*.png
+
+# ---- もらった素材（置いておく）
+# コンテナが片付くと消えるので、これだけはリポジトリに入れる
+!assets/char_*.png
+!se/*.wav
+!bgm.mp3

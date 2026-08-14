@@ -12,7 +12,7 @@ render.py の SHOTS から、カットの切り替わりと指し棒のタップ
   se.wav   … 動画と同じ長さの効果音トラック（ナレーションとBGMに重ねる）
   BGMの音量オートメーション式（ffmpeg の volume= にそのまま貼る）
 """
-import os, wave, argparse, math
+import os, wave, argparse, math, glob
 import numpy as np
 import render
 
@@ -180,16 +180,20 @@ def trim(x, sec):
 
 
 def real_se(kind):
+    """se/pop.wav / se/pop2.wav / se/pop3.wav … と置くと順番に鳴らす。
+    同じ波形が延々続くと、効果音は「癖」として耳につく。
+    増やしたいときはファイルを足すだけでいい。"""
     f = REAL.get(kind)
     if not f:
         return None
-    p = os.path.join(SE_DIR, f)
-    if not os.path.exists(p):
-        return None
-    try:
-        return load_wav(p)
-    except Exception:
-        return None
+    base = os.path.splitext(f)[0]
+    xs = []
+    for p in sorted(glob.glob(os.path.join(SE_DIR, base + '*.wav'))):
+        try:
+            xs.append(load_wav(p))
+        except Exception:
+            pass
+    return xs or None
 
 
 # ------------------------------------------------------------- 配置
@@ -221,7 +225,7 @@ def se_events():
         elif s.get('fig') and str(s['fig'][0]).endswith('/'):
             ev.append((s['t'] + 0.02, 'whoosh'))      # 動きのある図が始まる
         elif s.get('fig') or s.get('board'):
-            ev.append((s['t'] + 0.10, 'chalk'))       # 図や文字が出る＝ポン
+            ev.append((s['t'] + render.LEADIN, 'chalk'))   # 図や文字が出る＝ポン
 
         if s.get('beat'):
             ev.append((s['t'] + s.get('beat_at', 0.34), 'don'))
@@ -230,8 +234,8 @@ def se_events():
         # 2つ目以降の要素が出るときだけ、追加でポンを鳴らす
         rows = len(s.get('board') or []) + (1 if s.get('fig') else 0)
         for ri in range(1, rows):
-            at = s['t'] + 0.10 + ri * render.STAGGER
-            if at < s['t'] + s['dur'] - 0.12:
+            at = s['t'] + render.LEADIN + ri * render.STAGGER
+            if at < s['t'] + s['dur'] - 0.06:
                 ev.append((at, 'chalk'))
     return sorted(ev)
 
@@ -257,12 +261,15 @@ def build_track(dur):
     used_real = []
     for k, f, pk in (('whoosh', whoosh, 0.36), ('don', don, 0.50),
                      ('ton', ton, 0.55), ('chalk', chalk, 0.26)):
-        r = real_se(k)
-        if r is not None:
-            r = trim(r, MAXLEN.get(k, 0.8))
-            m = np.abs(r).max()
-            banks[k] = [r * (pk / m) if m > 0 else r]   # 音量だけ揃える。加工しない
-            used_real.append(k)
+        rs = real_se(k)
+        if rs is not None:
+            bank = []
+            for r in rs:
+                r = trim(r, MAXLEN.get(k, 0.8))
+                m = np.abs(r).max()
+                bank.append(r * (pk / m) if m > 0 else r)  # 音量だけ揃える。加工しない
+            banks[k] = bank
+            used_real.append((k, len(bank)))
         else:
             banks[k] = [shape(f(v), peak=pk) for v in range(VARIANTS)]
     build_track.used_real = used_real
@@ -321,12 +328,21 @@ def bgm_plan():
 BGM_PLAN = bgm_plan()
 
 
-def volume_expr():
-    """ffmpeg の volume= にそのまま貼れる式を作る。"""
-    e = '%.2f' % BGM_PLAN[-1][2]
+def volume_expr(scale=1.0):
+    """ffmpeg の volume= にそのまま貼れる式を作る。
+    scale は全体の掛け算。声を乗せるときは 0.6 くらいまで下げる。"""
+    e = '%.2f' % (BGM_PLAN[-1][2] * scale)
     for a, b, v, _ in reversed(BGM_PLAN[:-1]):
-        e = "if(lt(t,%.2f),%.2f,%s)" % (b, v, e)
+        e = "if(lt(t,%.2f),%.2f,%s)" % (b, v * scale, e)
     return e
+
+
+def narration_path(*cands):
+    """自分で録った声を最優先。無ければ合成した声を使う。"""
+    for p in cands:
+        if p and os.path.exists(p):
+            return p
+    return None
 
 
 def main():
@@ -347,12 +363,13 @@ def main():
     print('  カリ（文字を書く） %d' % c['chalk'])
     print('  ドン（章の切替）   %d' % c['don'])
     print('  トン（棒で叩く）   %d' % c['ton'])
-    real = getattr(build_track, 'used_real', [])
+    real = dict(getattr(build_track, 'used_real', []))
     名 = dict(whoosh='シュッ', chalk='ポン', don='ドン', ton='コツ')
     if real:
-        print('  本物の音を使用: ' + '  '.join(名.get(k, k) for k in real))
+        print('  本物の音を使用: ' + '  '.join(
+            名.get(k, k) + ('（%d種）' % n if n > 1 else '') for k, n in real.items()))
     if len(real) < 4:
-        print('  合成音のまま: ' + '  '.join(名.get(k, k) for k in 名 if k not in real))
+        print('  合成音のまま: ' + '  '.join(名[k] for k in 名 if k not in real))
     print('  -> se.wav')
 
     if a.preview:

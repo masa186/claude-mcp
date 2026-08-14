@@ -34,14 +34,17 @@ render.SHOTS = [
       tele='それが浮いてる。'),
 
  # ---- 学校の説明は成り立たない
- dict(sec='how', dur=1.5, kind='wide', face='serious',
+ dict(sec='how', dur=1.4, kind='wide', face='serious',
       board=[dict(text='学校の説明', size=118)], tele='学校ではこう習う。'),
- dict(dur=2.0, kind='board', fig=('10_wing_wrong.png', 1.00, 'pulse:1.2'),
-      say='翼の上は道が長いから空気が速くなって、それで浮くと。'),
- dict(dur=1.6, kind='board',
-      board=[dict(text='同時に\n着かない', size=126, color=CRIMSON)],
-      say='でも上と下の空気、同時には着かない。'),
- dict(dur=1.4, kind='face', face='explain', tele='この説明、{成り立たない}。'),
+ # 図を止めたまま置くと「矢印がある」としか読めなかったので、
+ # 上下の空気を実際に走らせて、着かないところまで見せる
+ dict(dur=2.4, kind='board', fig=('wingrace/', 1.15, None),
+      board=[dict(text='上と下、同時に着く？', size=94)],
+      say='上と下に分かれた空気が、後ろで同時に出会うから浮く、と。'),
+ dict(dur=1.5, kind='board',
+      board=[dict(text='実際は\n上が先に着く', size=124, color=CRIMSON)],
+      say='実際は、上のほうが先に着く。'),
+ dict(dur=1.3, kind='face', face='explain', tele='この説明、{成り立たない}。'),
 
  # ---- ここで体の記憶に繋げる（前の版で抜けていたところ）
  dict(sec='example', dur=1.9, kind='face', face='point', se='whoosh',
@@ -57,10 +60,14 @@ render.SHOTS = [
  # ---- 翼に戻す
  dict(dur=2.0, kind='screen', clip='wing', face='point',
       tele='翼も、やってることは同じ。'),
- dict(dur=2.4, kind='board', fig=('airflow/', 1.00, None),
+ # 「なぜ空気が下に曲がるのか」を飛ばすと、次の反作用が宙に浮く
+ dict(dur=1.6, kind='board',
+      board=[dict(text='翼は少し\n上を向いてる', size=118)],
+      say='翼は、ほんの少しだけ上を向いている。'),
+ dict(dur=2.4, kind='board', fig=('airflow/', 1.15, None),
       board=[dict(text='空気が{下}へ曲がる', size=104)],
       say='ぶつかった空気は、翼に沿って下へ曲がって出ていく。'),
- dict(dur=2.4, kind='board', fig=('airlift/', 1.00, None), beat=True, beat_at=0.6,
+ dict(dur=2.4, kind='board', fig=('airlift/', 1.15, None), beat=True, beat_at=0.6,
       board=[dict(text='だから翼は{上}へ', size=104, color=MUSTARD)],
       say='空気を下に押した分だけ、翼は上に押し返される。'),
  dict(dur=1.7, kind='board',
@@ -123,14 +130,24 @@ for i in range(n if AUDIO_ONLY else 0, n):
 
 sound.write_wav('se2.wav', sound.build_track(render.DURATION))
 
+# 自分で録った narration2.wav があればそれを使う。無ければ合成する。
+import voice
+if '--voice' in sys.argv or not os.path.exists('voice2.wav'):
+    voice.build('voice2.wav')
+nar = sound.narration_path('narration2.wav', 'voice2.wav')
+
 cmd = [FF, '-y', '-framerate', str(render.FPS), '-i', FRAMES + '/%05d.png', '-i', 'se2.wav']
 labels, filt, idx = ['[1:a]'], [], 1
-if os.path.exists('narration2.wav'):
-    idx += 1; cmd += ['-i', 'narration2.wav']; labels.append('[%d:a]' % idx)
+if nar:
+    idx += 1; cmd += ['-i', nar]; labels.append('[%d:a]' % idx)
 if os.path.exists('bgm.mp3'):
     idx += 1; cmd += ['-stream_loop', '-1', '-i', 'bgm.mp3']
-    filt.append("[%d:a]volume='%s':eval=frame[b]" % (idx, sound.volume_expr()))
+    # 声が乗るぶんBGMを下げる。ここを下げないと台詞が埋もれる
+    filt.append("[%d:a]volume='%s':eval=frame[b]"
+                % (idx, sound.volume_expr(0.55 if nar else 1.0)))
     labels.append('[b]')
+print('音: 効果音' + ('＋声(%s)' % nar if nar else '') +
+      ('＋BGM' if os.path.exists('bgm.mp3') else ''), flush=True)
 mix = ''.join(labels) + 'amix=inputs=%d:duration=first:normalize=0[m]' % len(labels)
 lim = '[m]alimiter=limit=0.85:level=disabled:attack=3:release=60[a]'
 cmd += ['-filter_complex', ';'.join(filt + [mix, lim]), '-map', '0:v', '-map', '[a]',

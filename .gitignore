@@ -1,12 +1,11 @@
-# 生成物（mkpng.py / render.py が実行時に作る）
-pipeline/assets/
-pipeline/frames/
-
 # Python
 __pycache__/
 *.pyc
 
-# 動画・音声の作業ファイル
+# 書き出した動画・作業用の音（作り直せるもの）
 *.mp4
 *.wav
 *.mp3
+
+# 素材そのものは pipeline/.gitignore 側で除外を解除している。
+# コンテナは使い捨てなので、もらった素材はリポジトリに置いておかないと消える。

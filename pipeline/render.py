@@ -44,15 +44,20 @@ WHITE   = (255, 255, 255, 255)
 BLACK   = (16, 18, 16, 255)
 
 BOARD_BOX = (int(W*.055), int(H*.105), int(W*.96), int(H*.625))
-TEXT_BOX  = (BOARD_BOX[0]+46, BOARD_BOX[1]+54, BOARD_BOX[2]-46, BOARD_BOX[3]-40)
+# 文字を置いていい範囲。寄り（1.18倍）と振りで切り取られる外側を除いた内側。
+SAFE_X0, SAFE_X1 = int(W*.115), int(W*.885)
+TEXT_BOX  = (SAFE_X0, BOARD_BOX[1]+54, SAFE_X1, BOARD_BOX[3]-40)
 
 CHAR_W_RATIO, CHAR_CX, CHAR_FOOT = 0.50, 0.235, 0.985
 HAND = (0.472, 0.774)   # char_explain の上げた手の実測値
 
 TELOP_Y     = 0.480      # テロップの上端（下から20%のUI帯を避ける）
+TELOP_Y_FACE = 0.620     # 顔アップのときだけ下げる。口の上に字が乗ると読みにくい
 TELOP_SIZE  = 84
-TELOP_STROKE = 5         # 黒フチ。太すぎるとテンプレ感が出る
-STAGGER     = 0.55       # 黒板の要素を出す間隔（小さい変化のリズム）
+TELOP_STROKE = 6         # 黒フチ。明朝は横画が細いので1px厚くしてある
+STAGGER     = 0.40       # 黒板の要素を出す間隔（小さい変化のリズム）
+LEADIN      = 0.033      # カットしてから1つ目が出るまで（1コマ）。
+                         # ここが0.1秒あると、カットのたびに一拍空いて重く見える
 POP_AT      = 0.38       # テロップの強調語が跳ねる時刻（ショット頭から）
 POP_LEN     = 0.16
 LOGO        = True
@@ -66,32 +71,21 @@ TELOP_KINDS = ('face', 'screen', 'wide')
 
 # ------------------------------------------------------------- フォント
 
-def pick(*cands):
-    for p in cands:
-        if os.path.exists(p):
-            return p
-    return None
+# 書体は style.py に集約した（黒板・テロップ・図の注記で必ず同じ顔になる）。
+# 明朝の太字にしてある。極太ゴシックは量産系まとめ動画の見た目そのものなので、
+# 教養寄りの落ち着きを出すためにこちらに振った。
+import style
 
-# テロップは極太（参考動画はテロップが主役）、黒板は太字
-FONT_TELOP = pick('/usr/share/fonts/opentype/mplus/Mplus1-Black.otf',
-                  '/usr/share/fonts/opentype/mplus/Mplus1-ExtraBold.otf',
-                  '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc',
-                  '/usr/share/fonts/truetype/fonts-japanese-gothic.ttf')
-# 黒板もテロップも同じ書体にする。2書体混ぜると素人っぽく見える。
-FONT_BOARD = FONT_TELOP
-if not FONT_TELOP:
-    raise SystemExit('日本語フォントがありません。Colabなら:\n'
-                     '  !apt-get -qq install fonts-mplus')
+FONT_TELOP = style.SERIF
+FONT_BOARD = style.SERIF
 
-_fc = {}
+
 def font(size, path=None):
-    key = (size, path or FONT_BOARD)
-    if key not in _fc:
-        _fc[key] = ImageFont.truetype(key[1], size)
-    return _fc[key]
+    return style.font(size, path or FONT_BOARD)
+
 
 def tfont(size):
-    return font(size, FONT_TELOP)
+    return style.font(size, FONT_TELOP)
 
 _ic = {}
 def load(n):
@@ -217,7 +211,12 @@ def build():
     t = 0.0
     for i, s in enumerate(SHOTS):
         s['t'] = t
-        s.setdefault('zoom', ZOOM_CYCLE[i % len(ZOOM_CYCLE)])
+        z = ZOOM_CYCLE[i % len(ZOOM_CYCLE)]
+        # 文字のあるショットで横に振ると、端の字が切れる。
+        # 寄り／引きなら倍率が変わり続けるので、切らずに動きだけ稼げる。
+        if s['kind'] in ('board', 'wide') and z in ('left', 'right'):
+            z = 'in' if z == 'left' else 'out'
+        s.setdefault('zoom', z)
         t += s['dur']
     return t
 
@@ -307,14 +306,27 @@ def bg_board():
 
 # ------------------------------------------------------------- 黒板の中身
 
-def wipe(t0, t, dur=0.28):
+def wipe(t0, t, dur=0.22):
     return 0.0 if t < t0 else min(1.0, (t - t0) / dur)
 
 
 def board_area(kind):
     if kind == 'board':
-        return (int(W*.09), int(H*.20), int(W*.91), int(H*.66))
+        return (SAFE_X0, int(H*.19), SAFE_X1, int(H*.79))
     return TEXT_BOX
+
+
+_measure = ImageDraw.Draw(Image.new('RGBA', (4, 4)))
+
+
+def fit_size(text, size, maxw):
+    """はみ出すなら字を小さくする。台本を書き換えるたびに幅を数えるのは
+    現実的でないので、切れるくらいなら自動で縮める。"""
+    for ln in text.split('\n'):
+        plain = ''.join(x for x, _ in parts(ln))
+        while size > 40 and _measure.textlength(plain, font=font(size)) > maxw:
+            size -= 4
+    return size
 
 
 def draw_content(canvas, s, t, kind):
@@ -338,6 +350,7 @@ def draw_content(canvas, s, t, kind):
             it = dict(it)
             it['text'] = count_text(it, local)
         it.setdefault('size', 132 if kind == 'board' else 88)
+        it['size'] = fit_size(it['text'], it['size'], a[2] - a[0])
         rows.append(('txt', it))
 
     total = 0
@@ -349,7 +362,7 @@ def draw_content(canvas, s, t, kind):
     d = ImageDraw.Draw(canvas)
     for ri, r in enumerate(rows):
         # 1つずつ間を置いて出す。これが「小さい変化」の本体。
-        p = wipe(0.10 + ri * STAGGER, local)
+        p = wipe(LEADIN + ri * STAGGER, local)
         if r[0] == 'fig':
             _, img, tw, th, anim = r
             f = img.resize((tw, th), Image.LANCZOS)
@@ -385,7 +398,7 @@ def draw_content(canvas, s, t, kind):
 CLIP_DIR = os.path.join(HERE, 'clips')
 SCREEN_W = 0.86               # 画面幅に対するスクリーンの横幅
 SCREEN_TOP = 0.155            # スクリーンの上端（画面高に対する比）
-ROLL = 0.42                   # 降りてくる時間（秒）
+ROLL = 0.30                   # 降りてくる時間（秒）
 
 _clip_cache = {}
 
@@ -541,7 +554,7 @@ def draw_char(canvas, s, t):
     br = 1.0 + 0.009 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))   # 呼吸
     sway = 1.4 * math.sin(2*math.pi*(t % 4.3)/4.3)                     # ゆっくり左右に傾く
 
-    e = ease_out(min(1.0, local / 0.22))          # カット頭の立ち上がり
+    e = ease_out(min(1.0, local / 0.14))          # カット頭の立ち上がり
     lift = int(46 * (1 - e))                      # 下からスッと上がる
     sq   = 1.0 + 0.055 * (1 - e)                  # 入りで少し潰れて戻る
 
@@ -604,7 +617,7 @@ def face_shot(s, t):
         head = head.crop(hb)
 
     br = 1.0 + 0.012 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))
-    e = ease_out(min(1.0, local / 0.22))
+    e = ease_out(min(1.0, local / 0.14))
     push = 1 + 0.10 * min(1.0, local / max(s['dur'], .01))   # ずっとゆっくり寄る
     k = (W * FACE_FILL) / head.width * br * push * (1 + 0.03*(1-e))
     head = head.resize((max(2, int(head.width*k)), max(2, int(head.height*k))),
@@ -624,7 +637,7 @@ def title_shot(s, t):
     tot = len(lines) * int(126*1.36)
     y = H//2 - tot//2
     for i, ln in enumerate(lines):
-        p = wipe(0.06 + i*0.10, local, 0.16)
+        p = wipe(0.02 + i*0.06, local, 0.11)
         if p <= 0:
             y += int(126*1.36); continue
         lay = Image.new('RGBA', (W, H), (0,0,0,0))
@@ -653,6 +666,7 @@ def draw_telop(canvas, s, t=None):
             k = math.sin(math.pi * d0 / POP_LEN)
             hifnt = tfont(int(TELOP_SIZE * (1 + 0.14 * k)))
     d = ImageDraw.Draw(canvas)
+    ty = TELOP_Y_FACE if s['kind'] == 'face' else TELOP_Y
     # 長い行は2行に折る
     segs = parts(txt)
     plain = ''.join(x for x, _ in segs)
@@ -662,7 +676,7 @@ def draw_telop(canvas, s, t=None):
         cut = cut+1 if cut > 3 else half
         rows = [plain[:cut], plain[cut:]]
         hi_set = set(x for x, h in segs if h)
-        y = int(H*TELOP_Y)
+        y = int(H*ty) - int(TELOP_SIZE*0.67)
         for rw in rows:
             lay = Image.new('RGBA', (W, H), (0,0,0,0))
             dl = ImageDraw.Draw(lay)
@@ -675,7 +689,7 @@ def draw_telop(canvas, s, t=None):
     else:
         lay = Image.new('RGBA', (W, H), (0,0,0,0))
         dl = ImageDraw.Draw(lay)
-        rich(dl, W//2, int(H*TELOP_Y), txt, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
+        rich(dl, W//2, int(H*ty), txt, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
         canvas.alpha_composite(lay)
 
 
@@ -708,12 +722,18 @@ def apply_zoom(im, s, t):
     elif q < 0.30: step = 0.016 * (1 - (1 - q / 0.30) ** 2)
     else:          step = 0.016
     z = s['zoom']
-    Z = 1.34
-    drift = 0.06 * math.sin(2*math.pi*((t - s['t']) / max(s['dur'],.01)) * 0.5)
+    # 寄りと振りの幅は、そのショットに文字があるかで変える。
+    # 1.34倍で端まで振ると、見えるのは元の横幅の 53% しかない。
+    # 黒板の文字はそこからはみ出して切れるので、文字ショットは控えめにする。
+    text_shot = s['kind'] in ('board', 'wide')
+    Z, PAN = (1.26, 0.30) if text_shot else (1.34, 0.84)
+    drift = (0.03 if text_shot else 0.06) * \
+        math.sin(2*math.pi*((t - s['t']) / max(s['dur'],.01)) * 0.5)
+    c0 = 0.5 - PAN/2
     if z == 'in':    k, ox, oy = 1 + (Z-1)*p + step, 0.5, 0.5 + drift
     elif z == 'out': k, ox, oy = Z - (Z-1)*p + step, 0.5, 0.5 - drift
-    elif z == 'left':  k, ox, oy = Z + step, 0.08 + 0.84*p, 0.5
-    else:              k, ox, oy = Z + step, 0.92 - 0.84*p, 0.5
+    elif z == 'left':  k, ox, oy = Z + step, c0 + PAN*p, 0.5
+    else:              k, ox, oy = Z + step, 1 - c0 - PAN*p, 0.5
     bw, bh = int(W*k), int(H*k)
     big = im.resize((bw, bh), Image.LANCZOS)
     x = int((bw - W) * ox); y = int((bh - H) * oy)
