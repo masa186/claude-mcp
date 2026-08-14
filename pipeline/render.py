@@ -123,8 +123,8 @@ SHOTS = [
       tele='{水}です。', tap=True),
 
  # ---- 仕組み①
- dict(sec='how', dur=1.5, kind='wide', face='serious',
-      board=['電子レンジが','出しているのは'], tele='電子レンジが出しているのは、'),
+ dict(sec='how', dur=1.5, kind='wide', face='point',
+      board=['電子レンジが','出しているのは'], tele='ここ見て。電子レンジが出してるのは、'),
  dict(dur=1.6, kind='board', fig=('04_microwave.png', 1.00, 'pulse:1.0'),
       tele='奥から{電波}を出して、'),
  dict(dur=1.6, kind='board', board=[dict(text='マイクロ波', size=140, color=MUSTARD)],
@@ -135,9 +135,11 @@ SHOTS = [
       tele='これを浴びると、水の分子が'),
  dict(dur=1.7, kind='board', fig=('06_flip.png', 1.00, 'alt:0.42'),
       tele='{ぐるん、ぐるん}と向きを変える。'),
- dict(dur=1.6, kind='wide',  face='serious',
-      board=[dict(text='1秒に\n24億回', size=150, color=MUSTARD)],
-      tele='その回数、一秒間に{24億回}。', tap=True),
+ dict(dur=2.0, kind='board',
+      board=[dict(count=2400000000, done='24億回', label='24億回',
+                  count_in=1.1, size=132, color=MUSTARD)],
+      tele='その回数、一秒間に{24億回}。'),
+ dict(dur=1.2, kind='face',  face='surprise', tele='{……多すぎる。}'),
 
  # ---- 仕組み②
  dict(dur=1.3, kind='face',  face='explain', tele='向きを変えるたびに、'),
@@ -152,7 +154,7 @@ SHOTS = [
 
  # ---- 具体例
  dict(sec='example', dur=0.9, kind='title', title='ここで\n1つ気づく'),
- dict(dur=1.6, kind='wide',  face='explain', board=['じゃあ','{お皿}は？'],
+ dict(dur=1.6, kind='wide',  face='point', board=['じゃあ','{お皿}は？'],
       tele='じゃあ、{お皿}はどうなる？'),
  dict(dur=1.7, kind='board', fig=('07_plate_food.png', 1.00, 'pulse:1.3'),
       tele='お皿には{水がない。}'),
@@ -164,7 +166,7 @@ SHOTS = [
 
  # ---- オチ
  dict(sec='punch', dur=1.2, kind='title', title='つまり'),
- dict(dur=1.6, kind='wide',  face='proud', board=['{温めてない}'],
+ dict(dur=1.6, kind='wide',  face='arms', board=['{温めてない}'],
       tele='電子レンジは、温めているんじゃない。'),
  dict(dur=2.1, kind='board', board=[dict(text='水を\n暴れさせてる', size=160, color=MUSTARD)],
       tele='{水を暴れさせている}だけなんです。', tap=True),
@@ -188,7 +190,12 @@ def section_times():
 
 
 FACE_FILES = dict(surprise='char_surprise.png', explain='char_explain.png',
-                  serious='char_serious.png', proud='char_proud.png')
+                  serious='char_serious.png', proud='char_proud.png',
+                  point='char_point.png', arms='char_arms.png')
+
+# 口を開けた差分がある表情は、喋っている間だけ口をパクパクさせる。
+MOUTH_FILES = dict(point='char_point_open.png')
+MOUTH_HZ = 6.5
 
 # まばたき画像は「その表情と同じポーズ」でないと、0.1秒だけ姿勢が跳ねる。
 # 用意できている表情にだけ差し込む。増やしたいときはここにファイル名を足す。
@@ -307,6 +314,9 @@ def draw_content(canvas, s, t, kind):
 
     for row in s.get('board', []):
         it = row if isinstance(row, dict) else dict(text=row)
+        if 'count' in it:
+            it = dict(it)
+            it['text'] = count_text(it, local)
         it.setdefault('size', 132 if kind == 'board' else 88)
         rows.append(('txt', it))
 
@@ -363,6 +373,12 @@ def placeholder():
 
 def char_img(s, t):
     face = s.get('face', 'explain')
+    # 喋っている間（テロップが出ている間）だけ口を動かす
+    mf = MOUTH_FILES.get(face)
+    if mf and s.get('tele'):
+        if int((t - s['t']) * MOUTH_HZ * 2) % 2:
+            im = load(mf)
+            if im is not None: return im
     bf = BLINK_FILES.get(face)
     if bf:
         for b in BLINKS:
@@ -374,6 +390,18 @@ def char_img(s, t):
 
 def ease_out(x):
     return 1 - (1 - x) ** 3
+
+
+def count_text(it, local):
+    """数字を0から一気に回して、決めた値で止める。
+    「1秒に24億回」を文字で置くだけだと読み飛ばされるが、
+    実際に桁が回ると『多すぎる』が体験になる。"""
+    hold = it.get('count_in', 0.95)
+    p = max(0.0, (local - 0.10) / hold)
+    if p >= 1.0:
+        return it.get('done', it.get('label', ''))
+    v = int(it['count'] * (1 - (1 - p) ** 3))     # 減速しながら到達
+    return it.get('fmt', '{:,}').format(v)
 
 
 def animate_fig(f, anim, t):
@@ -438,7 +466,7 @@ def draw_char(canvas, s, t):
                                 int(H*CHAR_FOOT) - im.height + lift - int(hop)))
 
 
-STICK_FACES = ('explain',)   # 手を上げているポーズだけ棒を持たせる
+STICK_FACES = ('explain',)   # 指さし・腕組みのときは棒を持たない   # 手を上げているポーズだけ棒を持たせる
 
 def draw_pointer(canvas, s, t):
     if s.get('face') not in STICK_FACES:

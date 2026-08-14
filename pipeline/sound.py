@@ -206,10 +206,10 @@ def se_events():
             prev = render.SHOTS[i-1]
             章 = s['kind'] == 'title' or prev['kind'] == 'title'
             ev.append((s['t'], 'don' if 章 else 'whoosh'))
-        # 黒板の要素は1つずつ時間差で出るようになったので、その1つ1つに音を当てる。
-        # 「映像の動きと同時に鳴らす」のが目的で、数を稼ぐためではない。
+        # 文字が出るたびに音を鳴らすと、紙を破るような音が延々続いて耳障りになる。
+        # 鳴らすのは「2つ目以降の要素が出るとき」だけに絞る。
         rows = len(s.get('board') or []) + (1 if s.get('fig') else 0)
-        for ri in range(rows):
+        for ri in range(1, rows):
             at = s['t'] + 0.10 + ri * render.STAGGER
             if at < s['t'] + s['dur'] - 0.12:
                 ev.append((at, 'chalk'))
