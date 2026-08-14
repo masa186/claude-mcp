@@ -312,7 +312,9 @@ def draw_content(canvas, s, t, kind):
 
     if s.get('fig'):
         name, scale, spin = s['fig']
-        img = load(name)
+        # 名前が「/」で終わるものは clips/ の連番。空気が曲がる動きなど、
+        # 1枚絵では伝わらないものはここで再生する。
+        img = seq_frame(name, local) if name.endswith('/') else load(name)
         if img is not None:
             tw = int((a[2]-a[0]) * scale)
             th = int(img.height * tw / img.width)
@@ -565,21 +567,41 @@ def draw_pointer(canvas, s, t):
             hx + L*math.cos(r),     hy + L*math.sin(r)], fill=CHALK, width=11)
 
 
+FACE_HEAD  = 0.40    # 中身の高さのうち、頭とみなす割合
+FACE_FILL  = 1.16    # 頭を画面幅の何倍にするか
+FACE_CY    = 0.33    # 顔の中心を画面のどの高さに置くか
+
+
 def face_shot(s, t):
-    """キャラの顔だけを全画面に。素材を増やさずカットを増やす主力。"""
+    """キャラの顔だけを全画面に。
+
+    画像の上端から切ると、透明な余白の量が絵ごとに違うので顔の位置がずれる
+    （表情を変えるたびに顔が切れたり、画面外に飛んだりする）。
+    必ず「中身の範囲」を測ってから、その上から4割を頭として切り出す。
+    """
     img = char_img(s, t)
     local = t - s['t']
-    src = img.crop((0, 0, img.width, int(img.height*0.46)))
+    box = img.getbbox() or (0, 0, img.width, img.height)
+    x0, y0, x1, y1 = box
+    head = img.crop((x0, y0, x1, y0 + max(8, int((y1 - y0) * FACE_HEAD))))
+    # 指さしポーズは腕の分だけ横に広い。切り出したあとで測り直さないと
+    # 顔が中心から外れて、画面の端に寄ってしまう。
+    hb = head.getbbox()
+    if hb:
+        head = head.crop(hb)
+
     br = 1.0 + 0.012 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))
     e = ease_out(min(1.0, local / 0.22))
-    k = max(W/src.width, H*0.78/src.height) * 1.06 * br * (1 + 0.03*(1-e))
-    src = src.resize((int(src.width*k), int(src.height*k)), Image.LANCZOS)
+    k = (W * FACE_FILL) / head.width * br * (1 + 0.03*(1-e))
+    head = head.resize((max(2, int(head.width*k)), max(2, int(head.height*k))),
+                       Image.LANCZOS)
     tilt = 1.1 * math.sin(2*math.pi*(t % 3.7)/3.7)
     if abs(tilt) > 0.05:
-        src = src.rotate(tilt, resample=Image.BICUBIC, expand=True)
+        head = head.rotate(tilt, resample=Image.BICUBIC, expand=True)
+
     im = Image.new('RGBA', (W, H), BOARD)
-    im.alpha_composite(src, (W//2 - src.width//2,
-                             int(H*0.10) + int(34*(1-e))))
+    im.alpha_composite(head, (W//2 - head.width//2,
+                              int(H*FACE_CY) - head.height//2 + int(30*(1-e))))
     return im
 
 

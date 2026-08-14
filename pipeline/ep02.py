@@ -57,9 +57,11 @@ render.SHOTS = [
  # ---- 翼に戻す
  dict(dur=2.0, kind='screen', clip='wing', face='point',
       tele='翼も、やってることは同じ。'),
- dict(dur=2.3, kind='board', fig=('airflow/', 1.00, None),
+ dict(dur=2.4, kind='board', fig=('airflow/', 1.00, None),
+      board=[dict(text='空気が{下}へ曲がる', size=104)],
       say='ぶつかった空気は、翼に沿って下へ曲がって出ていく。'),
- dict(dur=2.3, kind='board', fig=('airlift/', 1.00, None), beat=True, beat_at=0.5,
+ dict(dur=2.4, kind='board', fig=('airlift/', 1.00, None), beat=True, beat_at=0.6,
+      board=[dict(text='だから翼は{上}へ', size=104, color=MUSTARD)],
       say='空気を下に押した分だけ、翼は上に押し返される。'),
  dict(dur=1.7, kind='board',
       board=['空気を{下へ}', '翼が{上へ}'],

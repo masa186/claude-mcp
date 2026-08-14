@@ -7,22 +7,22 @@ import os, math
 import numpy as np
 from PIL import Image, ImageDraw
 
-W, H = 900, 520
+W, H = 900, 700
 N = 48                      # ループするフレーム数
 CHALK = (239, 233, 218, 255)
 HEAT = (206, 78, 55, 255)
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'clips')
 
 # 翼（横から見た形）
-WING = [(150, 300), (640, 258), (640, 300), (150, 316)]
-LE, TE = 150, 640           # 前縁・後縁のx
+WING = [(120, 400), (680, 342), (680, 400), (120, 424)]
+LE, TE = 120, 680           # 前縁・後縁のx
 
 
 def wing_y(x):
     """翼の下面のおおよその高さ。"""
-    if x <= LE: return 308
-    if x >= TE: return 279
-    return 308 + (279 - 308) * (x - LE) / (TE - LE)
+    if x <= LE: return 412
+    if x >= TE: return 371
+    return 412 + (371 - 412) * (x - LE) / (TE - LE)
 
 
 def path(y0, s):
@@ -45,8 +45,8 @@ def frame(i, show_lift=False, show_flow=True):
     p = i / N
 
     if show_flow:
-        rows = (188, 214, 240, 266)            # 翼の上を通る流れ
-        below = (330, 356)                     # 翼の下を通る流れ
+        rows = (215, 255, 295, 335)            # 翼の上を通る流れ
+        below = (455, 500)                     # 翼の下を通る流れ
         for k, y0 in enumerate(rows + below):
             for j in range(5):
                 s = (p + j / 5 + k * 0.04) % 1.0
@@ -55,17 +55,17 @@ def frame(i, show_lift=False, show_flow=True):
                     continue
                 # 進行方向に少し伸ばした粒（速度が見える）
                 x2, y2 = path(y0, max(0.0, s - 0.022))
-                d.line([x2, y2, x, y], fill=CHALK, width=7)
+                d.line([x2, y2, x, y], fill=CHALK, width=12)
 
     d.polygon(WING, fill=CHALK)                # 翼
-    d.line([(640, 258), (720, 292)], fill=CHALK, width=13)
+    d.line([(680, 342), (775, 390)], fill=CHALK, width=16)
 
     if show_lift:
         # 揚力。粒が下へ抜けているのと同時に出す
         k = 0.5 - 0.5 * math.cos(2 * math.pi * p)
-        top = 250 - 120 - int(26 * k)
-        d.line([(400, 250), (400, top)], fill=HEAT, width=18)
-        d.polygon([(400, top - 34), (368, top + 6), (432, top + 6)], fill=HEAT)
+        top = 350 - 170 - int(30 * k)
+        d.line([(400, 350), (400, top)], fill=HEAT, width=24)
+        d.polygon([(400, top - 46), (356, top + 8), (444, top + 8)], fill=HEAT)
     return im
 
 
