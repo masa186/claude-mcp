@@ -1,7 +1,9 @@
 frames/
 se.wav
 se_preview.wav
+se_chosen.wav
 narration_script.txt
 ep01.mp4
 build.log
 ref/
+cand/

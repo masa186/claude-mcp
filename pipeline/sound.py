@@ -138,6 +138,59 @@ def chalk(v=0):
 
 VARIANTS = 3          # 毎回まったく同じ波形だと機械っぽく聞こえる
 
+SE_DIR = os.path.join(HERE, 'se')
+
+# 本物の効果音があればそちらを使う。合成音はあくまで代役。
+#   se/whoosh.wav  カットの切り替わり・映像が入る
+#   se/pop.wav     文字・図が出る
+#   se/don.wav     章の切り替わり・重要な答え
+#   se/tap.wav     指し棒で黒板を叩く
+#   se/rise.wav    溜め（ズームの前）
+REAL = dict(whoosh='whoosh.wav', chalk='pop.wav', don='don.wav',
+            ton='tap.wav', rise='rise.wav')
+
+
+def load_wav(path):
+    """44.1kHz モノラルに揃えて読む。"""
+    with wave.open(path, 'rb') as w:
+        ch, sw, sr, n = w.getnchannels(), w.getsampwidth(), w.getframerate(), w.getnframes()
+        raw = w.readframes(n)
+    x = np.frombuffer(raw, dtype='<i2').astype(np.float64) / 32768
+    if ch > 1:
+        x = x.reshape(-1, ch).mean(axis=1)
+    if sr != SR:                                   # 直線補間で十分
+        x = np.interp(np.linspace(0, len(x)-1, int(len(x)*SR/sr)),
+                      np.arange(len(x)), x)
+    return x
+
+
+# 役割ごとの最大の長さ。効果音は0.75秒に1回鳴るので、長い音をそのまま
+# 重ねると濁る。頭を残して尻をフェードで落とす。
+MAXLEN = dict(whoosh=0.70, chalk=0.45, don=1.20, ton=0.50, rise=1.60)
+
+
+def trim(x, sec):
+    n = int(SR * sec)
+    if len(x) <= n:
+        return x
+    y = x[:n].copy()
+    f = int(SR * 0.08)
+    y[-f:] *= np.linspace(1, 0, f)
+    return y
+
+
+def real_se(kind):
+    f = REAL.get(kind)
+    if not f:
+        return None
+    p = os.path.join(SE_DIR, f)
+    if not os.path.exists(p):
+        return None
+    try:
+        return load_wav(p)
+    except Exception:
+        return None
+
 
 # ------------------------------------------------------------- 配置
 
@@ -184,11 +237,22 @@ def build_track(dur):
         m = np.abs(x).max()
         return x * (peak / m) if m > 0 else x
 
-    banks = {k: [shape(f(v), peak=pk) for v in range(VARIANTS)]
-             for k, f, pk in (('whoosh', whoosh, 0.42), ('don', don, 0.62),
-                              ('ton', ton, 0.55), ('chalk', chalk, 0.26))}
+    banks = {}
+    used_real = []
+    for k, f, pk in (('whoosh', whoosh, 0.42), ('don', don, 0.62),
+                     ('ton', ton, 0.55), ('chalk', chalk, 0.26)):
+        r = real_se(k)
+        if r is not None:
+            r = trim(r, MAXLEN.get(k, 0.8))
+            m = np.abs(r).max()
+            banks[k] = [r * (pk / m) if m > 0 else r]   # 音量だけ揃える。加工しない
+            used_real.append(k)
+        else:
+            banks[k] = [shape(f(v), peak=pk) for v in range(VARIANTS)]
+    build_track.used_real = used_real
     for j, (t, kind) in enumerate(se_events()):
-        s = banks[kind][j % VARIANTS]          # 同じ音を続けて鳴らさない
+        bank = banks[kind]
+        s = bank[j % len(bank)]                # 合成音のときは変種を巡回させる
         i = int(SR * t)
         track[i:i+len(s)] += s[:max(0, len(track)-i)]
     peak = np.abs(track).max()
@@ -267,6 +331,12 @@ def main():
     print('  カリ（文字を書く） %d' % c['chalk'])
     print('  ドン（章の切替）   %d' % c['don'])
     print('  トン（棒で叩く）   %d' % c['ton'])
+    real = getattr(build_track, 'used_real', [])
+    名 = dict(whoosh='シュッ', chalk='ポン', don='ドン', ton='コツ')
+    if real:
+        print('  本物の音を使用: ' + '  '.join(名.get(k, k) for k in real))
+    if len(real) < 4:
+        print('  合成音のまま: ' + '  '.join(名.get(k, k) for k in 名 if k not in real))
     print('  -> se.wav')
 
     if a.preview:
