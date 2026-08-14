@@ -49,7 +49,7 @@ TEXT_BOX  = (BOARD_BOX[0]+46, BOARD_BOX[1]+54, BOARD_BOX[2]-46, BOARD_BOX[3]-40)
 CHAR_W_RATIO, CHAR_CX, CHAR_FOOT = 0.50, 0.235, 0.985
 HAND = (0.472, 0.774)   # char_explain の上げた手の実測値
 
-TELOP_Y     = 0.700      # テロップの上端（下から20%のUI帯を避ける）
+TELOP_Y     = 0.725      # テロップの上端（下から20%のUI帯を避ける）
 TELOP_SIZE  = 84
 TELOP_STROKE = 5         # 黒フチ。太すぎるとテンプレ感が出る
 STAGGER     = 0.55       # 黒板の要素を出す間隔（小さい変化のリズム）
@@ -359,6 +359,71 @@ def draw_content(canvas, s, t, kind):
             y += 18
 
 
+# ------------------------------------------------------------- スクリーン
+
+CLIP_DIR = os.path.join(HERE, 'clips')
+SCREEN_W = 0.86               # 画面幅に対するスクリーンの横幅
+SCREEN_TOP = 0.155            # スクリーンの上端（画面高に対する比）
+ROLL = 0.42                   # 降りてくる時間（秒）
+
+_clip_cache = {}
+
+
+def clip_frames(name):
+    if name not in _clip_cache:
+        d = os.path.join(CLIP_DIR, name)
+        fs = sorted(os.listdir(d)) if os.path.isdir(d) else []
+        _clip_cache[name] = [os.path.join(d, f) for f in fs]
+    return _clip_cache[name]
+
+
+_frame_cache = {}
+
+
+def clip_frame(name, i):
+    fs = clip_frames(name)
+    if not fs:
+        return None
+    key = (name, i % len(fs))
+    if key not in _frame_cache:
+        if len(_frame_cache) > 120:
+            _frame_cache.clear()
+        _frame_cache[key] = Image.open(fs[key[1]]).convert('RGBA')
+    return _frame_cache[key]
+
+
+def draw_screen(canvas, s, t):
+    """黒板の前にスクリーンが降りてきて、そこに映像が流れる。
+    黒板に実写を直接貼ると浮くが、スクリーンなら教室として自然になる。"""
+    local = t - s['t']
+    sw = int(W * SCREEN_W)
+    sh = int(sw * 9 / 16)
+    x0 = W // 2 - sw // 2
+    y0 = int(H * SCREEN_TOP)
+
+    roll = min(1.0, local / ROLL) if s.get('roll', True) else 1.0
+    roll = ease_out(roll)
+    vis = max(2, int(sh * roll))
+
+    d = ImageDraw.Draw(canvas)
+    # 巻き取り機（上のバー）
+    d.rectangle([x0 - 14, y0 - 20, x0 + sw + 14, y0 - 2], fill=(70, 62, 52, 255))
+
+    img = clip_frame(s['clip'], int(local * FPS))
+    panel = Image.new('RGBA', (sw, sh), (236, 234, 228, 255))
+    if img is not None:
+        f = img.resize((sw, sh), Image.LANCZOS)
+        # ゆっくり寄る
+        k = 1.0 + 0.06 * min(1.0, local / max(s['dur'], .01))
+        bw, bh = int(sw * k), int(sh * k)
+        f = f.resize((bw, bh), Image.LANCZOS).crop(
+            ((bw - sw) // 2, (bh - sh) // 2, (bw - sw) // 2 + sw, (bh - sh) // 2 + sh))
+        panel.alpha_composite(f)
+    canvas.alpha_composite(panel.crop((0, 0, sw, vis)), (x0, y0))
+    # スクリーンの下端の棒
+    d.rectangle([x0 - 6, y0 + vis, x0 + sw + 6, y0 + vis + 9], fill=(96, 86, 72, 255))
+
+
 # ------------------------------------------------------------- キャラ
 
 def placeholder():
@@ -617,6 +682,14 @@ def render_frame(t):
 
     if k == 'face':
         frame = face_shot(s, t)
+        frame = apply_zoom(frame, s, t)
+        draw_telop(frame, s, t); draw_logo(frame, t)
+        return frame.convert('RGB')
+
+    if k == 'screen':
+        frame = bg_wide().copy()
+        draw_screen(frame, s, t)
+        draw_char(frame, s, t)
         frame = apply_zoom(frame, s, t)
         draw_telop(frame, s, t); draw_logo(frame, t)
         return frame.convert('RGB')
