@@ -12,7 +12,7 @@ render.py の SHOTS から、カットの切り替わりと指し棒のタップ
   se.wav   … 動画と同じ長さの効果音トラック（ナレーションとBGMに重ねる）
   BGMの音量オートメーション式（ffmpeg の volume= にそのまま貼る）
 """
-import os, wave, argparse
+import os, wave, argparse, math
 import numpy as np
 import render
 
@@ -22,69 +22,121 @@ SR = 44100
 
 # ------------------------------------------------------------- 効果音の合成
 
-def env(n, attack=0.004, decay=0.12, power=2.2):
-    a = int(SR * attack)
+def env(n, attack=0.004, power=2.2):
+    a = max(1, int(SR * attack))
     e = np.ones(n)
     e[:a] = np.linspace(0, 1, a)
-    tail = np.linspace(0, 1, n - a)
-    e[a:] = (1 - tail) ** power
+    e[a:] = (1 - np.linspace(0, 1, n - a)) ** power
     return e
 
 
-def whoosh(dur=0.13):
-    """カットの切り替わり。短く「スッ」。参考動画の重心1900Hz付近に寄せてある。"""
-    n = int(SR * dur)
-    t = np.arange(n) / SR
-    noise = np.random.default_rng(7).normal(0, 1, n)
-    # 一次ローパスの係数を時間で動かして、高い方へ抜ける感じを作る
+def tail(x, times=(0.021, 0.037, 0.058), gains=(0.30, 0.19, 0.11)):
+    """短い残響。合成音が「ペラい」と感じるのは、ほぼ余韻が無いから。"""
+    out = np.zeros(len(x) + int(SR * 0.20))
+    out[:len(x)] = x
+    for tt, g in zip(times, gains):
+        d = int(SR * tt)
+        out[d:d+len(x)] += x * g
+    dec = np.exp(-np.arange(len(out)) / (SR * 0.075))
+    return out * dec
+
+
+def lowpass(x, fc, poles=2):
+    """高域を落として重心を下げる。合成音が安く聞こえる一番の原因は
+    「シャリついた高域ばかりで芯が無い」こと。"""
+    k = 1 - math.exp(-2 * math.pi * fc / SR)
+    y = x.copy()
+    for _ in range(poles):
+        acc = 0.0
+        out = np.empty_like(y)
+        for i in range(len(y)):
+            acc += k * (y[i] - acc)
+            out[i] = acc
+        y = out
+    return y
+
+
+def bandnoise(n, f0, f1, q, seed):
+    """共振する帯域を f0→f1 へ動かしながらノイズを通す。whoosh の芯になる。"""
+    rng = np.random.default_rng(seed)
+    x = rng.normal(0, 1, n)
     y = np.zeros(n)
-    acc = 0.0
+    lp = bp = 0.0
     for i in range(n):
-        k = 0.06 + 0.55 * (i / n)
-        acc += k * (noise[i] - acc)
-        y[i] = noise[i] - acc          # ハイパス側を取る
-    return y * env(n, 0.003, dur, 2.6) * 0.30
+        f = f0 + (f1 - f0) * (i / n)
+        k = min(0.99, 2 * math.pi * f / SR)
+        hp = x[i] - lp - q * bp
+        bp += k * hp
+        lp += k * bp
+        y[i] = bp
+    return y / (np.abs(y).max() + 1e-9)
 
 
-def don(dur=0.30):
-    """章の切り替わり（title）。低音だけだとスマホで聞こえないので、
-    参考動画に合わせて中高域の当たりを重ねる。"""
+def modal(n, freqs, gains, decays):
+    """減衰する正弦を重ねる。木や金属の「当たり」はこれで出る。"""
+    t = np.arange(n) / SR
+    y = np.zeros(n)
+    for f, g, d in zip(freqs, gains, decays):
+        y += g * np.sin(2 * math.pi * f * t) * np.exp(-t * d)
+    return y
+
+
+def whoosh(v=0):
+    """カットの切り替わり。空気が抜ける「シュッ」。"""
+    dur = 0.16 + 0.02 * v
+    n = int(SR * dur)
+    core = lowpass(bandnoise(n, 500 + 90*v, 1900 + 200*v, 0.32, 7 + v), 2200)
+    body = modal(n, (190 + 16*v, 330), (0.60, 0.34), (22, 30))
+    y = (core * 1.5 + body) * env(n, 0.006, 2.0)
+    return tail(y, (0.017, 0.031), (0.26, 0.15)) * 0.34
+
+
+def don(v=0):
+    """章の切り替わり。低域だけだとスマホで鳴らないので中高域を重ねる。"""
+    dur = 0.42
     n = int(SR * dur)
     t = np.arange(n) / SR
-    f = 170 * np.exp(-t * 8) + 78
-    body = np.sin(2 * np.pi * np.cumsum(f) / SR)
-    bright = (np.sin(2 * np.pi * 1750 * t) + np.sin(2 * np.pi * 2400 * t) * 0.6) \
-             * np.exp(-t * 34) * 0.42
-    click = np.random.default_rng(3).normal(0, 1, n) * np.exp(-t * 150) * 0.40
-    return (body * 0.62 + bright + click) * env(n, 0.002, dur, 1.7) * 0.55
+    f = (190 + 20*v) * np.exp(-t * 9) + 72
+    sub = np.sin(2 * math.pi * np.cumsum(f) / SR) * np.exp(-t * 7)
+    mid = modal(n, (430, 690, 1180, 1900), (0.62, 0.44, 0.30, 0.16), (16, 22, 30, 38))
+    hit = lowpass(bandnoise(int(SR*0.05), 900, 2400, 0.5, 31 + v), 2600)
+    y = sub * 0.42 + mid * 1.5
+    y[:len(hit)] += hit * 0.30
+    y = lowpass(y * env(n, 0.002, 1.5), 5200)
+    return tail(y, (0.028, 0.049, 0.077), (0.34, 0.22, 0.13)) * 0.5
 
 
-def chalk(dur=0.26):
-    """黒板に文字が書かれる音。カリカリという細かい擦れ。
-    参考動画は音の立ち上がりが0.8秒に1回あるので、この音で密度を埋める。"""
+def ton(v=0):
+    """指し棒が黒板を叩く音。木の当たりなので倍音は整数比にしない。"""
+    n = int(SR * 0.22)
+    body = modal(n, (430 + 22*v, 1080, 1720, 2540),
+                    (0.66, 0.30, 0.15, 0.07), (30, 44, 58, 78))
+    click = lowpass(bandnoise(int(SR*0.02), 1200, 3000, 0.6, 11 + v), 3000)
+    y = body * env(n, 0.0008, 2.4)
+    y[:len(click)] += click * 0.22
+    return tail(lowpass(y, 5000), (0.013, 0.026), (0.24, 0.13)) * 0.42
+
+
+def chalk(v=0):
+    """黒板に文字が書かれる音。細かい擦れの粒。"""
+    dur = 0.30
     n = int(SR * dur)
-    t = np.arange(n) / SR
-    rng = np.random.default_rng(23)
+    rng = np.random.default_rng(23 + v)
     grains = np.zeros(n)
-    step = int(SR * 0.011)
+    step = int(SR * 0.0095)
     for i in range(0, n - step, step):
-        g = rng.normal(0, 1, step) * np.hanning(step)
-        grains[i:i+step] += g * (0.5 + 0.5 * rng.random())
+        grains[i:i+step] += rng.normal(0, 1, step) * np.hanning(step) * (0.4 + 0.6*rng.random())
     y = np.zeros(n); acc = 0.0
-    for i in range(n):                      # ハイパスで「カリッ」を残す
-        acc += 0.42 * (grains[i] - acc)
+    for i in range(n):
+        acc += 0.40 * (grains[i] - acc)
         y[i] = grains[i] - acc
-    return y * env(n, 0.006, dur, 1.3) * 0.16
+    y = lowpass(y, 1150) * 7.0                          # 12kHz のシャリつきを落とす
+    y += modal(n, (300, 520), (0.16, 0.09), (12, 18))   # 芯を足す
+    y *= env(n, 0.008, 1.1)
+    return tail(y, (0.019,), (0.18,)) * 0.26
 
 
-def ton(dur=0.10):
-    """指し棒で黒板を叩く「トン」。"""
-    n = int(SR * dur)
-    t = np.arange(n) / SR
-    body = (np.sin(2 * np.pi * 520 * t) * 0.5 +
-            np.sin(2 * np.pi * 880 * t) * 0.3)
-    click = np.random.default_rng(11).normal(0, 1, n) * np.exp(-t * 260) * 0.5
-    return (body + click) * env(n, 0.001, dur, 3.0) * 0.42
+VARIANTS = 3          # 毎回まったく同じ波形だと機械っぽく聞こえる
 
 
 # ------------------------------------------------------------- 配置
@@ -111,11 +163,27 @@ def se_events():
 def build_track(dur):
     n = int(SR * dur) + SR
     track = np.zeros(n)
-    sounds = dict(whoosh=whoosh(), don=don(), ton=ton(), chalk=chalk())
-    for t, kind in se_events():
-        s = sounds[kind]
+    # 参考動画のアタックは周波数重心が約1900Hz。合成音は放っておくと高域に
+    # 寄って「安っぽい」音になるので、最後に全部を同じ処理に通して揃える。
+    def shape(x, target=2000.0, peak=0.55):
+        for fc in (9000, 7000, 5600, 4600, 3800, 3200, 2700, 2300, 2000, 1700):
+            y = lowpass(x, fc)
+            w = np.abs(np.fft.rfft(y * np.hanning(len(y))))
+            fr = np.fft.rfftfreq(len(y), 1 / SR)
+            if (w * fr).sum() / (w.sum() + 1e-9) <= target:
+                x = y
+                break
+            x = y
+        m = np.abs(x).max()
+        return x * (peak / m) if m > 0 else x
+
+    banks = {k: [shape(f(v), peak=pk) for v in range(VARIANTS)]
+             for k, f, pk in (('whoosh', whoosh, 0.42), ('don', don, 0.62),
+                              ('ton', ton, 0.55), ('chalk', chalk, 0.26))}
+    for j, (t, kind) in enumerate(se_events()):
+        s = banks[kind][j % VARIANTS]          # 同じ音を続けて鳴らさない
         i = int(SR * t)
-        track[i:i+len(s)] += s
+        track[i:i+len(s)] += s[:max(0, len(track)-i)]
     peak = np.abs(track).max()
     if peak > 0.95:
         track *= 0.95 / peak
@@ -195,10 +263,10 @@ def main():
     print('  -> se.wav')
 
     if a.preview:
-        demo = np.concatenate([whoosh(), np.zeros(SR//3), don(),
-                               np.zeros(SR//3), ton(), np.zeros(SR//3)])
+        gap = np.zeros(SR//3)
+        demo = np.concatenate([whoosh(), gap, chalk(), gap, don(), gap, ton(), gap])
         write_wav(os.path.join(HERE, 'se_preview.wav'), demo)
-        print('  -> se_preview.wav（スッ / ドン / トン の順に3つ）')
+        print('  -> se_preview.wav（シュッ / カリ / ドン / トン の順に4つ）')
 
     print('\nBGMの音量設計')
     for s, e, v, why in BGM_PLAN:

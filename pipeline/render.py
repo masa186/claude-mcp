@@ -56,20 +56,33 @@ LOGO        = True
 
 # ------------------------------------------------------------- フォント
 
-def find_font():
-    for p in ('/usr/share/fonts/truetype/fonts-japanese-gothic.ttf',
-              '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf',
-              '/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc'):
+def pick(*cands):
+    for p in cands:
         if os.path.exists(p):
             return p
-    raise SystemExit('日本語フォントがありません。Colabなら:\n'
-                     '  !apt-get -qq install fonts-ipafont-gothic')
+    return None
 
-FONT_PATH = find_font()
+# テロップは極太（参考動画はテロップが主役）、黒板は太字
+FONT_TELOP = pick('/usr/share/fonts/opentype/mplus/Mplus1-Black.otf',
+                  '/usr/share/fonts/opentype/mplus/Mplus1-ExtraBold.otf',
+                  '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc',
+                  '/usr/share/fonts/truetype/fonts-japanese-gothic.ttf')
+FONT_BOARD = pick('/usr/share/fonts/opentype/mplus/Mplus1-Bold.otf',
+                  '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc',
+                  '/usr/share/fonts/truetype/fonts-japanese-gothic.ttf')
+if not FONT_TELOP:
+    raise SystemExit('日本語フォントがありません。Colabなら:\n'
+                     '  !apt-get -qq install fonts-mplus')
+
 _fc = {}
-def font(s):
-    if s not in _fc: _fc[s] = ImageFont.truetype(FONT_PATH, s)
-    return _fc[s]
+def font(size, path=None):
+    key = (size, path or FONT_BOARD)
+    if key not in _fc:
+        _fc[key] = ImageFont.truetype(key[1], size)
+    return _fc[key]
+
+def tfont(size):
+    return font(size, FONT_TELOP)
 
 _ic = {}
 def load(n):
@@ -108,15 +121,15 @@ SHOTS = [
  # ---- 仕組み①
  dict(sec='how', dur=1.5, kind='wide', face='serious',
       board=['電子レンジが','出しているのは'], tele='電子レンジが出しているのは、'),
- dict(dur=1.6, kind='board', fig=('04_microwave.png', 1.00, None),
+ dict(dur=1.6, kind='board', fig=('04_microwave.png', 1.00, 'pulse:1.0'),
       tele='奥から{電波}を出して、'),
  dict(dur=1.6, kind='board', board=[dict(text='マイクロ波', size=140, color=MUSTARD)],
       tele='{マイクロ波}といいます。'),
- dict(dur=1.5, kind='board', fig=('05_wave.png', .92, None),
+ dict(dur=1.5, kind='board', fig=('05_wave.png', .92, 'scroll:2.4'),
       board=[dict(text='目に見えない', size=88)], tele='目に見えない波です。'),
  dict(dur=1.8, kind='board', fig=('01_water_molecule.png', .52, 1.1),
       tele='これを浴びると、水の分子が'),
- dict(dur=1.7, kind='board', fig=('06_flip.png', 1.00, None),
+ dict(dur=1.7, kind='board', fig=('06_flip.png', 1.00, 'alt:0.42'),
       tele='{ぐるん、ぐるん}と向きを変える。'),
  dict(dur=1.6, kind='wide',  face='serious',
       board=[dict(text='1秒に\n24億回', size=150, color=MUSTARD)],
@@ -124,7 +137,7 @@ SHOTS = [
 
  # ---- 仕組み②
  dict(dur=1.3, kind='face',  face='explain', tele='向きを変えるたびに、'),
- dict(dur=1.9, kind='board', fig=('02_collision.png', .92, None),
+ dict(dur=1.9, kind='board', fig=('02_collision.png', .92, 'pulse:0.55'),
       tele='隣の分子と{ぶつかり合う。}'),
  dict(dur=1.5, kind='wide',  face='explain',
       board=[dict(text='ぶつかる → 熱', size=96, color=CRIMSON)],
@@ -137,12 +150,12 @@ SHOTS = [
  dict(sec='example', dur=0.9, kind='title', title='ここで\n1つ気づく'),
  dict(dur=1.6, kind='wide',  face='explain', board=['じゃあ','{お皿}は？'],
       tele='じゃあ、{お皿}はどうなる？'),
- dict(dur=1.7, kind='board', fig=('07_plate_food.png', 1.00, None),
+ dict(dur=1.7, kind='board', fig=('07_plate_food.png', 1.00, 'pulse:1.3'),
       tele='お皿には{水がない。}'),
  dict(dur=1.5, kind='board', board=[dict(text='温まらない', size=150, color=MUSTARD)],
       tele='だから{温まりません。}', tap=True),
  dict(dur=1.4, kind='face',  face='explain', tele='お皿が熱いのは、'),
- dict(dur=1.6, kind='board', fig=('08_heat_move.png', 1.00, None),
+ dict(dur=1.6, kind='board', fig=('08_heat_move.png', 1.00, 'pulse:0.85'),
       tele='食べ物から{熱が移っただけ}なんです。'),
 
  # ---- オチ
@@ -298,10 +311,9 @@ def draw_content(canvas, s, t, kind):
     for r in rows:
         p = wipe(0.10, local)
         if r[0] == 'fig':
-            _, img, tw, th, spin = r
+            _, img, tw, th, anim = r
             f = img.resize((tw, th), Image.LANCZOS)
-            if spin:
-                f = f.rotate(-local / spin * 360.0, resample=Image.BICUBIC)
+            f = animate_fig(f, anim, local)
             if p < 1:
                 al = f.getchannel('A').point(lambda v: int(v * p)); f.putalpha(al)
             canvas.alpha_composite(f, ((a[0]+a[2])//2 - tw//2, y))
@@ -350,17 +362,70 @@ def char_img(s, t):
     return load(FACE_FILES.get(face)) or placeholder()
 
 
+def ease_out(x):
+    return 1 - (1 - x) ** 3
+
+
+def animate_fig(f, anim, t):
+    """図を止めない。参考動画は画面が常に動いている。
+      spin:秒   … 回る（水の分子）
+      alt:秒    … 左右が入れ替わる（電場の反転）
+      pulse:秒  … 脈打つ（電波・熱）
+      scroll:秒 … 横に流れる（波形）
+    """
+    if not anim:
+        return f
+    if isinstance(anim, (int, float)):
+        anim = 'spin:%s' % anim
+    kind, _, per = str(anim).partition(':')
+    per = float(per or 1.0)
+    ph = (t % per) / per
+
+    if kind == 'spin':
+        return f.rotate(-t / per * 360.0, resample=Image.BICUBIC)
+    if kind == 'alt':
+        return f.transpose(Image.FLIP_LEFT_RIGHT) if ph >= 0.5 else f
+    if kind == 'pulse':
+        k = 1.0 + 0.09 * math.sin(2 * math.pi * ph)
+        w2, h2 = max(2, int(f.width * k)), max(2, int(f.height * k))
+        big = f.resize((w2, h2), Image.LANCZOS)
+        out = Image.new('RGBA', f.size, (0, 0, 0, 0))
+        out.alpha_composite(big, ((f.width - w2) // 2, (f.height - h2) // 2))
+        return out
+    if kind == 'scroll':
+        dx = int(f.width * ph)
+        out = Image.new('RGBA', f.size, (0, 0, 0, 0))
+        out.alpha_composite(f, (-dx, 0))
+        out.alpha_composite(f, (f.width - dx, 0))
+        return out
+    return f
+
+
 def draw_char(canvas, s, t):
     img = char_img(s, t)
     local = t - s['t']
-    br  = 1.0 + 0.008 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))
-    e   = min(1.0, local / 0.15)
-    sc  = br * (1.0 + 0.010*(1-e))
-    tw  = int(W * CHAR_W_RATIO * sc)
-    th  = int(img.height * tw / img.width)
-    im  = img.resize((tw, th), Image.LANCZOS)
-    canvas.alpha_composite(im, (int(W*CHAR_CX) - tw//2,
-                                int(H*CHAR_FOOT) - th + int(7*(1-e))))
+
+    br = 1.0 + 0.009 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))   # 呼吸
+    sway = 1.4 * math.sin(2*math.pi*(t % 4.3)/4.3)                     # ゆっくり左右に傾く
+
+    e = ease_out(min(1.0, local / 0.22))          # カット頭の立ち上がり
+    lift = int(46 * (1 - e))                      # 下からスッと上がる
+    sq   = 1.0 + 0.055 * (1 - e)                  # 入りで少し潰れて戻る
+
+    hop = 0.0                                     # 棒で叩く瞬間に小さく跳ねる
+    if s.get('tap'):
+        d = local - 0.34
+        if 0 <= d < 0.26:
+            hop = math.sin(math.pi * d / 0.26) * 15
+
+    sc = br * (1.0 + 0.012*(1-e))
+    tw = int(W * CHAR_W_RATIO * sc / sq)
+    th = int(img.height * (W * CHAR_W_RATIO * sc) * sq / img.width)
+    im = img.resize((max(tw, 2), max(th, 2)), Image.LANCZOS)
+    if abs(sway) > 0.05:
+        im = im.rotate(sway, resample=Image.BICUBIC, expand=True)
+    canvas.alpha_composite(im, (int(W*CHAR_CX) - im.width//2,
+                                int(H*CHAR_FOOT) - im.height + lift - int(hop)))
 
 
 STICK_FACES = ('explain',)   # 手を上げているポーズだけ棒を持たせる
@@ -385,12 +450,18 @@ def draw_pointer(canvas, s, t):
 def face_shot(s, t):
     """キャラの顔だけを全画面に。素材を増やさずカットを増やす主力。"""
     img = char_img(s, t)
+    local = t - s['t']
     src = img.crop((0, 0, img.width, int(img.height*0.46)))
-    k = max(W/src.width, H*0.78/src.height) * 1.06
+    br = 1.0 + 0.012 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))
+    e = ease_out(min(1.0, local / 0.22))
+    k = max(W/src.width, H*0.78/src.height) * 1.06 * br * (1 + 0.03*(1-e))
     src = src.resize((int(src.width*k), int(src.height*k)), Image.LANCZOS)
-    im = Image.new('RGBA', (W, H), WALL)
-    ImageDraw.Draw(im).rectangle([0, 0, W, H], fill=BOARD)
-    im.alpha_composite(src, (W//2 - src.width//2, int(H*0.10)))
+    tilt = 1.1 * math.sin(2*math.pi*(t % 3.7)/3.7)
+    if abs(tilt) > 0.05:
+        src = src.rotate(tilt, resample=Image.BICUBIC, expand=True)
+    im = Image.new('RGBA', (W, H), BOARD)
+    im.alpha_composite(src, (W//2 - src.width//2,
+                             int(H*0.10) + int(34*(1-e))))
     return im
 
 
@@ -399,7 +470,7 @@ def title_shot(s, t):
     d = ImageDraw.Draw(im)
     local = t - s['t']
     lines = s['title'].split('\n')
-    fnt = font(126)
+    fnt = tfont(126)
     tot = len(lines) * int(126*1.36)
     y = H//2 - tot//2
     for i, ln in enumerate(lines):
@@ -421,7 +492,7 @@ def title_shot(s, t):
 def draw_telop(canvas, s):
     txt = s.get('tele', '')
     if not txt: return
-    fnt = font(TELOP_SIZE)
+    fnt = tfont(TELOP_SIZE)
     d = ImageDraw.Draw(canvas)
     # 長い行は2行に折る
     segs = parts(txt)
