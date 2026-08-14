@@ -46,8 +46,8 @@ BLACK   = (16, 18, 16, 255)
 BOARD_BOX = (int(W*.055), int(H*.105), int(W*.96), int(H*.625))
 TEXT_BOX  = (BOARD_BOX[0]+46, BOARD_BOX[1]+54, BOARD_BOX[2]-46, BOARD_BOX[3]-40)
 
-CHAR_W_RATIO, CHAR_CX, CHAR_FOOT = 0.60, 0.30, 0.985
-HAND = (0.470, 0.560)
+CHAR_W_RATIO, CHAR_CX, CHAR_FOOT = 0.50, 0.235, 0.985
+HAND = (0.472, 0.774)   # char_explain の上げた手の実測値
 
 TELOP_Y     = 0.700      # テロップの上端（下から20%のUI帯を避ける）
 TELOP_SIZE  = 84
@@ -157,8 +157,11 @@ SHOTS = [
 ]
 
 FACE_FILES = dict(surprise='char_surprise.png', explain='char_explain.png',
-                  serious='char_serious.png', proud='char_proud.png',
-                  blink='char_blink.png')
+                  serious='char_serious.png', proud='char_proud.png')
+
+# まばたき画像は「その表情と同じポーズ」でないと、0.1秒だけ姿勢が跳ねる。
+# 用意できている表情にだけ差し込む。増やしたいときはここにファイル名を足す。
+BLINK_FILES = dict(explain='char_blink.png')
 
 BLINKS = [1.9, 4.6, 7.2, 10.1, 13.4, 16.0, 19.2, 22.1, 25.0, 28.4,
           31.2, 34.1, 37.0, 40.2, 43.5, 46.1]
@@ -323,11 +326,14 @@ def placeholder():
 
 
 def char_img(s, t):
-    for b in BLINKS:
-        if b <= t < b + BLINK_LEN:
-            im = load(FACE_FILES['blink'])
-            if im is not None: return im
-    return load(FACE_FILES.get(s.get('face', 'explain'))) or placeholder()
+    face = s.get('face', 'explain')
+    bf = BLINK_FILES.get(face)
+    if bf:
+        for b in BLINKS:
+            if b <= t < b + BLINK_LEN:
+                im = load(bf)
+                if im is not None: return im
+    return load(FACE_FILES.get(face)) or placeholder()
 
 
 def draw_char(canvas, s, t):
@@ -343,9 +349,13 @@ def draw_char(canvas, s, t):
                                 int(H*CHAR_FOOT) - th + int(7*(1-e))))
 
 
+STICK_FACES = ('explain',)   # 手を上げているポーズだけ棒を持たせる
+
 def draw_pointer(canvas, s, t):
+    if s.get('face') not in STICK_FACES:
+        return
     hx, hy = int(W*HAND[0]), int(H*HAND[1])
-    ang = -52.0
+    ang = -58.0
     if s.get('tap'):
         d0 = (t - s['t']) - 0.34
         if -0.10 <= d0 < 0:   ang += 6.0 * (d0+0.10)/0.10
