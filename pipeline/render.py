@@ -51,6 +51,10 @@ HAND = (0.472, 0.774)   # char_explain の上げた手の実測値
 
 TELOP_Y     = 0.700      # テロップの上端（下から20%のUI帯を避ける）
 TELOP_SIZE  = 84
+TELOP_STROKE = 5         # 黒フチ。太すぎるとテンプレ感が出る
+STAGGER     = 0.55       # 黒板の要素を出す間隔（小さい変化のリズム）
+POP_AT      = 0.38       # テロップの強調語が跳ねる時刻（ショット頭から）
+POP_LEN     = 0.16
 LOGO        = True
 
 
@@ -233,14 +237,19 @@ def parts(text):
     return out
 
 
-def rich(d, x, y, text, fnt, base, hi, stroke=0, scol=BLACK, anchor_c=False):
+def rich(d, x, y, text, fnt, base, hi, stroke=0, scol=BLACK, anchor_c=False,
+         hifnt=None):
+    """{ } で囲んだ語だけ色を変える。hifnt を渡すと、その語だけ別サイズで描く。"""
     segs = parts(text)
-    total = sum(d.textlength(s, font=fnt) for s, _ in segs)
+    hf = hifnt or fnt
+    total = sum(d.textlength(s, font=(hf if h else fnt)) for s, h in segs)
     cx = x - total / 2 if anchor_c else x
     for s, is_hi in segs:
-        d.text((cx, y), s, font=fnt, fill=(hi if is_hi else base),
+        f = hf if is_hi else fnt
+        dy = -(hf.size - fnt.size) * 0.42 if (is_hi and hifnt is not None) else 0
+        d.text((cx, y + dy), s, font=f, fill=(hi if is_hi else base),
                stroke_width=stroke, stroke_fill=scol)
-        cx += d.textlength(s, font=fnt)
+        cx += d.textlength(s, font=f)
     return total
 
 
@@ -308,8 +317,9 @@ def draw_content(canvas, s, t, kind):
     y = a[1] + max(0, int(((a[3]-a[1]) - total) * (0.5 if kind == 'board' else 0.30)))
 
     d = ImageDraw.Draw(canvas)
-    for r in rows:
-        p = wipe(0.10, local)
+    for ri, r in enumerate(rows):
+        # 1つずつ間を置いて出す。これが「小さい変化」の本体。
+        p = wipe(0.10 + ri * STAGGER, local)
         if r[0] == 'fig':
             _, img, tw, th, anim = r
             f = img.resize((tw, th), Image.LANCZOS)
@@ -489,10 +499,17 @@ def title_shot(s, t):
 
 # ------------------------------------------------------------- テロップ・ロゴ
 
-def draw_telop(canvas, s):
+def draw_telop(canvas, s, t=None):
     txt = s.get('tele', '')
     if not txt: return
     fnt = tfont(TELOP_SIZE)
+    # 強調語だけ一瞬大きくする（画面のどこかが常に動いている状態を作る）
+    hifnt = None
+    if t is not None:
+        d0 = (t - s['t']) - POP_AT
+        if 0 <= d0 < POP_LEN:
+            k = math.sin(math.pi * d0 / POP_LEN)
+            hifnt = tfont(int(TELOP_SIZE * (1 + 0.14 * k)))
     d = ImageDraw.Draw(canvas)
     # 長い行は2行に折る
     segs = parts(txt)
@@ -510,13 +527,13 @@ def draw_telop(canvas, s):
             marked = rw
             for h in hi_set:
                 if h in marked: marked = marked.replace(h, '{'+h+'}')
-            rich(dl, W//2, y, marked, fnt, WHITE, MUSTARD, 7, BLACK, True)
+            rich(dl, W//2, y, marked, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
             canvas.alpha_composite(lay)
             y += int(TELOP_SIZE*1.34)
     else:
         lay = Image.new('RGBA', (W, H), (0,0,0,0))
         dl = ImageDraw.Draw(lay)
-        rich(dl, W//2, int(H*TELOP_Y), txt, fnt, WHITE, MUSTARD, 7, BLACK, True)
+        rich(dl, W//2, int(H*TELOP_Y), txt, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
         canvas.alpha_composite(lay)
 
 
@@ -543,12 +560,17 @@ def draw_logo(canvas, t):
 
 def apply_zoom(im, s, t):
     p = min(1.0, max(0.0, (t - s['t']) / s['dur']))
+    # ショットの中ほどで一段だけ寄る。カットを増やさずに変化を足す。
+    q = (t - s['t']) - s['dur'] * 0.55
+    if q < 0:      step = 0.0
+    elif q < 0.30: step = 0.016 * (1 - (1 - q / 0.30) ** 2)
+    else:          step = 0.016
     z = s['zoom']
     Z = 1.075
-    if z == 'in':    k, ox, oy = 1 + (Z-1)*p,      0.5, 0.5
-    elif z == 'out': k, ox, oy = Z - (Z-1)*p,      0.5, 0.5
-    elif z == 'left':  k, ox, oy = Z, 0.34 + 0.30*p, 0.5
-    else:              k, ox, oy = Z, 0.66 - 0.30*p, 0.5
+    if z == 'in':    k, ox, oy = 1 + (Z-1)*p + step, 0.5, 0.5
+    elif z == 'out': k, ox, oy = Z - (Z-1)*p + step, 0.5, 0.5
+    elif z == 'left':  k, ox, oy = Z + step, 0.34 + 0.30*p, 0.5
+    else:              k, ox, oy = Z + step, 0.66 - 0.30*p, 0.5
     bw, bh = int(W*k), int(H*k)
     big = im.resize((bw, bh), Image.LANCZOS)
     x = int((bw - W) * ox); y = int((bh - H) * oy)
@@ -568,14 +590,14 @@ def render_frame(t):
     if k == 'face':
         frame = face_shot(s, t)
         frame = apply_zoom(frame, s, t)
-        draw_telop(frame, s); draw_logo(frame, t)
+        draw_telop(frame, s, t); draw_logo(frame, t)
         return frame.convert('RGB')
 
     if k == 'board':
         frame = bg_board().copy()
         draw_content(frame, s, t, 'board')
         frame = apply_zoom(frame, s, t)
-        draw_telop(frame, s); draw_logo(frame, t)
+        draw_telop(frame, s, t); draw_logo(frame, t)
         return frame.convert('RGB')
 
     frame = bg_wide().copy()
@@ -583,7 +605,7 @@ def render_frame(t):
     draw_pointer(frame, s, t)
     draw_char(frame, s, t)
     frame = apply_zoom(frame, s, t)
-    draw_telop(frame, s); draw_logo(frame, t)
+    draw_telop(frame, s, t); draw_logo(frame, t)
     return frame.convert('RGB')
 
 

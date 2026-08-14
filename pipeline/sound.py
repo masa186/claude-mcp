@@ -153,8 +153,15 @@ def se_events():
             prev = render.SHOTS[i-1]
             章 = s['kind'] == 'title' or prev['kind'] == 'title'
             ev.append((s['t'], 'don' if 章 else 'whoosh'))
-        if s.get('board') or s.get('fig'):
-            ev.append((s['t'] + 0.10, 'chalk'))
+        # 黒板の要素は1つずつ時間差で出るようになったので、その1つ1つに音を当てる。
+        # 「映像の動きと同時に鳴らす」のが目的で、数を稼ぐためではない。
+        rows = len(s.get('board') or []) + (1 if s.get('fig') else 0)
+        for ri in range(rows):
+            at = s['t'] + 0.10 + ri * render.STAGGER
+            if at < s['t'] + s['dur'] - 0.12:
+                ev.append((at, 'chalk'))
+        # 強調語のポップにも音を当てたくなるが、チョーク音と役割が重なって
+        # ごちゃつく。ここは鳴らさない（SEは種類も数も絞る）。
         if s.get('tap'):
             ev.append((s['t'] + 0.34, 'ton'))
     return sorted(ev)
