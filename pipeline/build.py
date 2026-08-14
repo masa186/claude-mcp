@@ -13,6 +13,28 @@ import render, sound
 FF = ie.get_ffmpeg_exe()
 OUT = 'ep01.mp4'
 
+DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'docs')
+
+# ---------------------------------------------------------------- 声（先に）
+# 絵より先に音を決める。そうしないと尺に収まらない行を早口にするしかなく、
+# クチパクも波形に合わせられない。
+import voice
+VOICE, NAR = 'voice.wav', 'narration.wav'
+if os.path.exists(NAR):
+    print('声: %s（自分で録ったもの）' % NAR)
+    nar = NAR
+else:
+    audio = voice.collect(render.SHOTS)
+    if audio:
+        voice.fit(render.SHOTS, audio)
+        render.DURATION = render.build()
+        voice.write(VOICE, render.SHOTS, audio, render.DURATION)
+    nar = VOICE if os.path.exists(VOICE) else None
+if nar:
+    render.MOUTH_ENV = voice.envelope(nar, render.FPS, render.DURATION)
+voice.dump_text(render.SHOTS, os.path.join(DOCS, 'narration_ep01.txt'))
+print('尺 %.1f秒' % render.DURATION, flush=True)
+
 # ---------------------------------------------------------------- 映像
 os.makedirs('frames', exist_ok=True)
 n = int(render.DURATION * render.FPS)
@@ -28,11 +50,6 @@ print('frames done %.0fs' % (time.time() - t0), flush=True)
 
 # ---------------------------------------------------------------- 音
 sound.write_wav('se.wav', sound.build_track(render.DURATION))
-
-import voice
-if '--voice' in sys.argv or not os.path.exists('voice.wav'):
-    voice.build('voice.wav')
-nar = sound.narration_path('narration.wav', 'voice.wav')
 
 cmd = [FF, '-y', '-framerate', str(render.FPS), '-i', 'frames/%05d.png',
        '-i', 'se.wav']

@@ -18,6 +18,7 @@ from render import MUSTARD, CRIMSON
 FF = ie.get_ffmpeg_exe()
 OUT = 'ep02.mp4'
 FRAMES = 'frames2'
+HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'docs')
 
 # tele … 画面に出すテロップ（黒板が主役のショットでは自動で出ない）
 # say  … ナレーションだけの台詞。画面には出さない
@@ -38,7 +39,7 @@ render.SHOTS = [
       board=[dict(text='学校の説明', size=118)], tele='学校ではこう習う。'),
  # 図を止めたまま置くと「矢印がある」としか読めなかったので、
  # 上下の空気を実際に走らせて、着かないところまで見せる
- dict(dur=2.4, kind='board', fig=('wingrace/', 1.15, None),
+ dict(dur=2.4, kind='board', fig=('wingrace/', 1.15, 'hold'),
       board=[dict(text='上と下、同時に着く？', size=94)],
       say='上と下に分かれた空気が、後ろで同時に出会うから浮く、と。'),
  dict(dur=1.5, kind='board',
@@ -93,6 +94,26 @@ render.SHOTS = [
 render.DURATION = render.build()
 render.OUT = FRAMES
 
+# ---- 声を先に用意する。
+# 絵より先に音を決めないと、(1) 尺に収まらない行を早口にするしかなくなり、
+# (2) クチパクを波形に合わせられない。順番はここが肝。
+import voice
+VOICE = 'voice2.wav'
+NAR = 'narration2.wav'          # 自分で録ったものがあれば最優先
+if os.path.exists(NAR):
+    print('声: %s（自分で録ったもの）' % NAR)
+    nar = NAR
+else:
+    audio = voice.collect(render.SHOTS)
+    if audio:
+        voice.fit(render.SHOTS, audio)          # 収まらない行はショットを伸ばす
+        render.DURATION = render.build()        # 伸ばしたぶん位置を計算し直す
+        voice.write(VOICE, render.SHOTS, audio, render.DURATION)
+    nar = VOICE if os.path.exists(VOICE) else None
+if nar:
+    render.MOUTH_ENV = voice.envelope(nar, render.FPS, render.DURATION)
+voice.dump_text(render.SHOTS, os.path.join(HERE_DOCS, 'narration_ep02.txt'))
+
 n = int(render.DURATION * render.FPS)
 print('尺 %.1f秒 / %dショット / 平均 %.2f秒'
       % (render.DURATION, len(render.SHOTS), render.DURATION / len(render.SHOTS)))
@@ -129,12 +150,6 @@ for i in range(n if AUDIO_ONLY else 0, n):
         print('  %d/%d  %.0fs' % (i, n, time.time()-t0), flush=True)
 
 sound.write_wav('se2.wav', sound.build_track(render.DURATION))
-
-# 自分で録った narration2.wav があればそれを使う。無ければ合成する。
-import voice
-if '--voice' in sys.argv or not os.path.exists('voice2.wav'):
-    voice.build('voice2.wav')
-nar = sound.narration_path('narration2.wav', 'voice2.wav')
 
 cmd = [FF, '-y', '-framerate', str(render.FPS), '-i', FRAMES + '/%05d.png', '-i', 'se2.wav']
 labels, filt, idx = ['[1:a]'], [], 1

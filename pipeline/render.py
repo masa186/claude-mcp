@@ -192,9 +192,29 @@ FACE_FILES = dict(surprise='char_surprise.png', explain='char_explain.png',
                   serious='char_serious.png', proud='char_proud.png',
                   point='char_point.png', arms='char_arms.png')
 
-# 口を開けた差分がある表情は、喋っている間だけ口をパクパクさせる。
-MOUTH_FILES = dict(point='char_point_open.png')
-MOUTH_HZ = 6.5
+# クチパク用の「口だけ開けた絵」。表情名 → ファイル名。
+#
+# 空にしてある。char_point と char_point_open は口だけの差分ではなく、
+# 顔の向きも腕も違う別の絵だった。並べて切り替えると口ではなく頭が跳ねる。
+# ここに入れていいのは「同じポーズ・同じ大きさで、口だけ開いた絵」だけ。
+# 用意できたら、たとえばこう書けばその表情がパクパクする:
+#   MOUTH_FILES = dict(explain='char_explain_open.png',
+#                      surprise='char_surprise_open.png', ...)
+MOUTH_FILES = {}
+
+# ナレーションから作った「このコマは口を開けているか」の並び。
+# voice.envelope() が入れる。これがあると、決まった速さではなく
+# 実際に声が出ているところで口が開く。
+MOUTH_ENV = None
+MOUTH_HZ = 6.5           # 波形が無いときの代わり（一定の速さでパクパク）
+
+
+def mouth_open(t):
+    """その時刻に口を開けているか。波形が無ければ None。"""
+    if MOUTH_ENV is None:
+        return None
+    i = int(t * FPS)
+    return bool(MOUTH_ENV[i]) if 0 <= i < len(MOUTH_ENV) else False
 
 # まばたき画像は「その表情と同じポーズ」でないと、0.1秒だけ姿勢が跳ねる。
 # 用意できている表情にだけ差し込む。増やしたいときはここにファイル名を足す。
@@ -338,7 +358,10 @@ def draw_content(canvas, s, t, kind):
         name, scale, spin = s['fig']
         # 名前が「/」で終わるものは clips/ の連番。空気が曲がる動きなど、
         # 1枚絵では伝わらないものはここで再生する。
-        img = seq_frame(name, local) if name.endswith('/') else load(name)
+        img = (seq_frame(name, local, spin == 'hold') if name.endswith('/')
+               else load(name))
+        if spin == 'hold':
+            spin = None
         if img is not None:
             tw = int((a[2]-a[0]) * scale)
             th = int(img.height * tw / img.width)
@@ -472,10 +495,13 @@ def placeholder():
 
 def char_img(s, t):
     face = s.get('face', 'explain')
-    # 喋っている間（テロップが出ている間）だけ口を動かす
+    # 声が出ているコマだけ口を開ける（波形が無ければ一定の速さで代用）
     mf = MOUTH_FILES.get(face)
-    if mf and s.get('tele'):
-        if int((t - s['t']) * MOUTH_HZ * 2) % 2:
+    if mf:
+        op = mouth_open(t)
+        if op is None:
+            op = bool(s.get('tele')) and int((t - s['t']) * MOUTH_HZ * 2) % 2
+        if op:
             im = load(mf)
             if im is not None: return im
     bf = BLINK_FILES.get(face)
@@ -491,13 +517,19 @@ def ease_out(x):
     return 1 - (1 - x) ** 3
 
 
-def seq_frame(name, local):
+def seq_frame(name, local, hold=False):
     """clips/<名前>/ の連番を図として再生する。矢印1本では伝わらない
-    「空気が実際に曲がる」ような動きは、連番で見せるしかない。"""
+    「空気が実際に曲がる」ような動きは、連番で見せるしかない。
+
+    hold=True … 最後まで行ったらそこで止める。オチのある図（同時に着かない）は
+    ショットが連番より長いと頭から巻き戻ってしまい、結論が消える。"""
     fs = clip_frames(name.rstrip('/'))
     if not fs:
         return None
-    return clip_frame(name.rstrip('/'), int(local * FPS))
+    i = int(local * FPS)
+    if hold:
+        i = min(i, len(fs) - 1)
+    return clip_frame(name.rstrip('/'), i)
 
 
 def count_text(it, local):
@@ -552,7 +584,8 @@ def draw_char(canvas, s, t):
     local = t - s['t']
 
     br = 1.0 + 0.009 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))   # 呼吸
-    sway = 1.4 * math.sin(2*math.pi*(t % 4.3)/4.3)                     # ゆっくり左右に傾く
+    # 以前ここで体を±1.4度ゆっくり傾けていたが、首が動いているように見えて
+    # 気持ち悪かった。絵が1枚しかないので、傾けても生き物っぽくはならない。
 
     e = ease_out(min(1.0, local / 0.14))          # カット頭の立ち上がり
     lift = int(46 * (1 - e))                      # 下からスッと上がる
@@ -568,8 +601,6 @@ def draw_char(canvas, s, t):
     tw = int(W * CHAR_W_RATIO * sc / sq)
     th = int(img.height * (W * CHAR_W_RATIO * sc) * sq / img.width)
     im = img.resize((max(tw, 2), max(th, 2)), Image.LANCZOS)
-    if abs(sway) > 0.05:
-        im = im.rotate(sway, resample=Image.BICUBIC, expand=True)
     canvas.alpha_composite(im, (int(W*CHAR_CX) - im.width//2,
                                 int(H*CHAR_FOOT) - im.height + lift - int(hop)))
 

@@ -337,12 +337,6 @@ def volume_expr(scale=1.0):
     return e
 
 
-def narration_path(*cands):
-    """自分で録った声を最優先。無ければ合成した声を使う。"""
-    for p in cands:
-        if p and os.path.exists(p):
-            return p
-    return None
 
 
 def main():
