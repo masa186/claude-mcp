@@ -1,9 +1,14 @@
 """第2話「飛行機はなぜ飛ぶ」を書き出す。
 
-第1話との違いは、黒板が「スクリーン」になって実写が流れること。
+前の版は「空気を下に曲げる → 作用・反作用 → 揚力」と言葉で繋いでいたが、
+それだと『で？なんで機体が上がるの？』が残る。
+今回は、視聴者が体で知っている「車の窓から手を出すと腕が持っていかれる」を
+先に見せてから翼に戻す。因果はここで繋がる。
+
   python3 ep02.py           全部書き出し
   python3 ep02.py --audio   フレームはそのままで音だけ組み直す
   python3 ep02.py --sheet   全ショットの確認シート
+  python3 ep02.py --script  ナレーション原稿を出す
 """
 import os, sys, time, subprocess, math
 import imageio_ffmpeg as ie
@@ -14,65 +19,67 @@ FF = ie.get_ffmpeg_exe()
 OUT = 'ep02.mp4'
 FRAMES = 'frames2'
 
+# tele … 画面に出すテロップ（黒板が主役のショットでは自動で出ない）
+# say  … ナレーションだけの台詞。画面には出さない
 render.SHOTS = [
- # ---- フック 0〜2.6
- dict(sec='hook', dur=1.6, kind='face', face='surprise',
+ # ---- フック
+ dict(sec='hook', dur=1.8, kind='face', face='surprise', se='don',
       tele='bro、{飛行機ってなんで飛ぶ}？'),
  dict(dur=1.0, kind='title', title='学校の説明\n実は{間違い}'),
 
- # ---- 実物を見せる 2.6〜6.8
+ # ---- 実物
  dict(sec='setup', dur=2.2, kind='screen', clip='plane', face='point',
-      tele='これ。今も{どこかで飛んでる}。'),
- dict(dur=2.0, kind='screen', clip='plane2', face='explain', roll=False,
-      tele='なんで{何百トンの鉄}が浮く？'),
+      tele='これ、{何百トン}ある。'),
+ dict(dur=1.8, kind='screen', clip='plane2', face='explain', roll=False,
+      tele='それが浮いてる。'),
 
- # ---- 翼にズーム 6.8〜12.8
- dict(sec='how', dur=1.6, kind='wide', face='point',
-      board=['カギは','{翼}だけ'], tele='ここ見て。カギは{翼}。'),
- dict(dur=2.2, kind='screen', clip='wing', face='explain',
-      tele='これが翼。'),
- dict(dur=2.2, kind='screen', clip='wing', face='serious', roll=False,
-      tele='この板だけで{全部}持ち上げる。'),
-
- # ---- 間違った説明 12.8〜19.3
- dict(dur=1.5, kind='wide', face='serious',
-      board=[dict(text='学校の説明', size=120)], tele='学校ではこう習う。'),
+ # ---- 学校の説明は成り立たない
+ dict(sec='how', dur=1.5, kind='wide', face='serious',
+      board=[dict(text='学校の説明', size=118)], tele='学校ではこう習う。'),
  dict(dur=2.0, kind='board', fig=('10_wing_wrong.png', 1.00, 'pulse:1.2'),
-      tele='{上の空気が速くなる}から浮く、と。'),
+      say='翼の上は道が長いから空気が速くなって、それで浮くと。'),
  dict(dur=1.6, kind='board',
-      board=[dict(text='同時に\nゴールしない', size=124, color=CRIMSON)],
-      tele='でもこの2つ、{同時に着かない。}'),
- dict(dur=1.4, kind='face', face='explain', tele='つまりこの説明、{成り立たない。}'),
+      board=[dict(text='同時に\n着かない', size=126, color=CRIMSON)],
+      say='でも上と下の空気、同時には着かない。'),
+ dict(dur=1.4, kind='face', face='explain', tele='この説明、{成り立たない}。'),
 
- # ---- 反例 19.3〜22.6
- dict(sec='example', dur=2.2, kind='screen', clip='prop', face='point',
-      tele='じゃあこれ、どう説明する？'),
- dict(dur=1.1, kind='title', title='答えは\n{もっと単純}'),
+ # ---- ここで体の記憶に繋げる（前の版で抜けていたところ）
+ dict(sec='example', dur=1.9, kind='face', face='point', se='whoosh',
+      tele='{車の窓}から手、出したことある？'),
+ dict(dur=1.6, kind='board',
+      board=[dict(text='手を{下}に傾ける', size=112)],
+      say='手のひらを、少し下に傾ける。'),
+ dict(dur=1.7, kind='board', beat=True,
+      board=[dict(text='腕が{上}に\n持っていかれる', size=120, color=MUSTARD)],
+      say='そうすると、腕が上にぐっと持っていかれる。'),
+ dict(dur=1.4, kind='face', face='explain', tele='{あれと同じ}ことしてる。'),
 
- # ---- 正しい説明 22.6〜29.6
- dict(dur=2.2, kind='board', fig=('11_wing_lift.png', 1.00, 'pulse:0.9'),
-      tele='翼は空気を{下に曲げてる}。'),
- dict(dur=1.8, kind='board',
-      board=['空気を{下へ}', 'その反作用で{上へ}'],
-      tele='下に押した分、{上へ返る}。'),
- dict(dur=1.6, kind='wide', face='arms',
-      board=[dict(text='作用・反作用', size=124, color=MUSTARD)],
-      tele='ただの{作用・反作用}。'),
- dict(dur=1.4, kind='face', face='explain', tele='だから{背面飛行}でも飛べる。'),
+ # ---- 翼に戻す
+ dict(dur=2.0, kind='screen', clip='wing', face='point',
+      tele='翼も、やってることは同じ。'),
+ dict(dur=2.3, kind='board', fig=('airflow/', 1.00, None),
+      say='ぶつかった空気は、翼に沿って下へ曲がって出ていく。'),
+ dict(dur=2.3, kind='board', fig=('airlift/', 1.00, None), beat=True, beat_at=0.5,
+      say='空気を下に押した分だけ、翼は上に押し返される。'),
+ dict(dur=1.7, kind='board',
+      board=['空気を{下へ}', '翼が{上へ}'],
+      say='空気が下、翼が上。'),
 
- # ---- オチ 29.6〜34.2
- dict(sec='punch', dur=1.0, kind='title', title='つまり'),
+ # ---- オチ
+ dict(sec='punch', dur=1.6, kind='face', face='proud', se='don',
+      tele='これが{揚力}。'),
+ dict(dur=1.0, kind='title', title='つまり'),
  dict(dur=2.0, kind='board',
-      board=[dict(text='空気を\n下に殴ってる', size=150, color=MUSTARD)],
-      tele='飛行機は{空気を下に殴ってる}。'),
- dict(dur=1.6, kind='face', face='proud', tele='飛行機、{普通にすごくね？}'),
+      board=[dict(text='空気を\n下に殴ってる', size=148, color=MUSTARD)],
+      say='飛行機は、空気を下に殴って進んでる。'),
+ dict(dur=1.5, kind='face', face='proud', tele='{普通にすごくね？}'),
 
- # ---- 予告 34.2〜38.4
- dict(sec='next', dur=2.0, kind='wide', face='proud',
+ # ---- 予告
+ dict(sec='next', dur=1.9, kind='wide', face='proud',
       board=['次は','{電子レンジ}'], tele='次は電子レンジ。'),
- dict(dur=2.2, kind='board',
-      board=[dict(text='食べ物を\n温めてない', size=132, color=CRIMSON)],
-      tele='あれ、{食べ物を温めてない}。'),
+ dict(dur=2.0, kind='board',
+      board=[dict(text='食べ物を\n温めてない', size=130, color=CRIMSON)],
+      say='あれ、食べ物を温めてない。'),
 ]
 render.DURATION = render.build()
 render.OUT = FRAMES
@@ -80,8 +87,17 @@ render.OUT = FRAMES
 n = int(render.DURATION * render.FPS)
 print('尺 %.1f秒 / %dショット / 平均 %.2f秒'
       % (render.DURATION, len(render.SHOTS), render.DURATION / len(render.SHOTS)))
-long = [(i+1, s['dur']) for i, s in enumerate(render.SHOTS) if s['dur'] > 2.3]
-print('2.3秒を超えるショット:', long if long else 'なし')
+long = [(i+1, s['dur']) for i, s in enumerate(render.SHOTS) if s['dur'] > 2.4]
+print('2.4秒超のショット:', long if long else 'なし')
+ev = sound.se_events()
+print('効果音 %d個 / 平均 %.2f秒に1回' % (len(ev), render.DURATION / max(len(ev), 1)))
+
+if '--script' in sys.argv:
+    for s in render.SHOTS:
+        line = s.get('say') or s.get('tele', '')
+        if line:
+            print('%5.1fs  %s' % (s['t'], line.replace('{', '').replace('}', '')))
+    sys.exit()
 
 if '--sheet' in sys.argv:
     from PIL import Image

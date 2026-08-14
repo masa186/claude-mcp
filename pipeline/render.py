@@ -57,6 +57,12 @@ POP_AT      = 0.38       # テロップの強調語が跳ねる時刻（ショ�
 POP_LEN     = 0.16
 LOGO        = True
 
+# 視線を1箇所に絞るためのルール。
+# 黒板そのものを見せているときにテロップを出すと、視聴者が
+# 「黒板と字幕のどっちを読めばいいのか」で迷う。
+# 黒板が主役のショット（board / title）ではテロップを出さない。
+TELOP_KINDS = ('face', 'screen', 'wide')
+
 
 # ------------------------------------------------------------- フォント
 
@@ -457,6 +463,15 @@ def ease_out(x):
     return 1 - (1 - x) ** 3
 
 
+def seq_frame(name, local):
+    """clips/<名前>/ の連番を図として再生する。矢印1本では伝わらない
+    「空気が実際に曲がる」ような動きは、連番で見せるしかない。"""
+    fs = clip_frames(name.rstrip('/'))
+    if not fs:
+        return None
+    return clip_frame(name.rstrip('/'), int(local * FPS))
+
+
 def count_text(it, local):
     """数字を0から一気に回して、決めた値で止める。
     「1秒に24億回」を文字で置くだけだと読み飛ばされるが、
@@ -593,6 +608,8 @@ def title_shot(s, t):
 # ------------------------------------------------------------- テロップ・ロゴ
 
 def draw_telop(canvas, s, t=None):
+    if s['kind'] not in TELOP_KINDS and not s.get('tele_force'):
+        return
     txt = s.get('tele', '')
     if not txt: return
     fnt = tfont(TELOP_SIZE)

@@ -195,28 +195,44 @@ def real_se(kind):
 # ------------------------------------------------------------- 配置
 
 def se_events():
-    """(秒, 音の種類) の一覧を SHOTS から作る。
+    """(秒, 音の種類) を SHOTS から作る。
 
-    参考動画は音の立ち上がりが 0.75〜0.89秒に1回。カットの切り替わりだけでは
-    足りないので、黒板に文字や図が出る瞬間にもチョークの音を置いて密度を埋める。
+    以前は「画面が切り替わるたびに鳴らす」にしていたが、それだと音に意味が
+    なくなり、同じ「すぅ」が延々続いて癖のように聞こえる。
+    音は動きに対して鳴らす。動きのないところは鳴らさない。
+
+      whoosh … 何かが入ってくる／動く（スクリーンが降りる・映像が入る・
+                空気が流れ出す）
+      pop    … 図や答えが「出現」する
+      don    … 答え・重要な結論。ショットに beat=True を書いたときだけ
+      無音   … ふつうの説明
     """
     ev = []
     for i, s in enumerate(render.SHOTS):
-        if i > 0:
-            prev = render.SHOTS[i-1]
-            章 = s['kind'] == 'title' or prev['kind'] == 'title'
-            ev.append((s['t'], 'don' if 章 else 'whoosh'))
-        # 文字が出るたびに音を鳴らすと、紙を破るような音が延々続いて耳障りになる。
-        # 鳴らすのは「2つ目以降の要素が出るとき」だけに絞る。
+        k = s['kind']
+        # 明示指定が最優先
+        if 'se' in s:
+            if s['se']:
+                ev.append((s['t'] + s.get('se_at', 0.02), s['se']))
+        elif k == 'screen' and s.get('roll', True):
+            ev.append((s['t'] + 0.02, 'whoosh'))      # スクリーンが降りてくる
+        elif k == 'title':
+            ev.append((s['t'] + 0.02, 'don'))         # 章が変わる
+        elif s.get('fig') and str(s['fig'][0]).endswith('/'):
+            ev.append((s['t'] + 0.02, 'whoosh'))      # 動きのある図が始まる
+        elif s.get('fig') or s.get('board'):
+            ev.append((s['t'] + 0.10, 'chalk'))       # 図や文字が出る＝ポン
+
+        if s.get('beat'):
+            ev.append((s['t'] + s.get('beat_at', 0.34), 'don'))
+        if s.get('tap'):
+            ev.append((s['t'] + 0.34, 'ton'))
+        # 2つ目以降の要素が出るときだけ、追加でポンを鳴らす
         rows = len(s.get('board') or []) + (1 if s.get('fig') else 0)
         for ri in range(1, rows):
             at = s['t'] + 0.10 + ri * render.STAGGER
             if at < s['t'] + s['dur'] - 0.12:
                 ev.append((at, 'chalk'))
-        # 強調語のポップにも音を当てたくなるが、チョーク音と役割が重なって
-        # ごちゃつく。ここは鳴らさない（SEは種類も数も絞る）。
-        if s.get('tap'):
-            ev.append((s['t'] + 0.34, 'ton'))
     return sorted(ev)
 
 
