@@ -1,0 +1,12 @@
+# 生成物（mkpng.py / render.py が実行時に作る）
+pipeline/assets/
+pipeline/frames/
+
+# Python
+__pycache__/
+*.pyc
+
+# 動画・音声の作業ファイル
+*.mp4
+*.wav
+*.mp3
