@@ -32,7 +32,7 @@ def env(n, attack=0.004, decay=0.12, power=2.2):
 
 
 def whoosh(dur=0.13):
-    """カットの切り替わり。短く「スッ」。"""
+    """カットの切り替わり。短く「スッ」。参考動画の重心1900Hz付近に寄せてある。"""
     n = int(SR * dur)
     t = np.arange(n) / SR
     noise = np.random.default_rng(7).normal(0, 1, n)
@@ -47,13 +47,34 @@ def whoosh(dur=0.13):
 
 
 def don(dur=0.30):
-    """章の切り替わり（title）。低い「ドン」。"""
+    """章の切り替わり（title）。低音だけだとスマホで聞こえないので、
+    参考動画に合わせて中高域の当たりを重ねる。"""
     n = int(SR * dur)
     t = np.arange(n) / SR
-    f = 92 * np.exp(-t * 7) + 46
+    f = 170 * np.exp(-t * 8) + 78
     body = np.sin(2 * np.pi * np.cumsum(f) / SR)
-    click = np.random.default_rng(3).normal(0, 1, n) * np.exp(-t * 190) * 0.35
-    return (body * 0.85 + click) * env(n, 0.002, dur, 1.7) * 0.55
+    bright = (np.sin(2 * np.pi * 1750 * t) + np.sin(2 * np.pi * 2400 * t) * 0.6) \
+             * np.exp(-t * 34) * 0.42
+    click = np.random.default_rng(3).normal(0, 1, n) * np.exp(-t * 150) * 0.40
+    return (body * 0.62 + bright + click) * env(n, 0.002, dur, 1.7) * 0.55
+
+
+def chalk(dur=0.26):
+    """黒板に文字が書かれる音。カリカリという細かい擦れ。
+    参考動画は音の立ち上がりが0.8秒に1回あるので、この音で密度を埋める。"""
+    n = int(SR * dur)
+    t = np.arange(n) / SR
+    rng = np.random.default_rng(23)
+    grains = np.zeros(n)
+    step = int(SR * 0.011)
+    for i in range(0, n - step, step):
+        g = rng.normal(0, 1, step) * np.hanning(step)
+        grains[i:i+step] += g * (0.5 + 0.5 * rng.random())
+    y = np.zeros(n); acc = 0.0
+    for i in range(n):                      # ハイパスで「カリッ」を残す
+        acc += 0.42 * (grains[i] - acc)
+        y[i] = grains[i] - acc
+    return y * env(n, 0.006, dur, 1.3) * 0.16
 
 
 def ton(dur=0.10):
@@ -69,13 +90,19 @@ def ton(dur=0.10):
 # ------------------------------------------------------------- 配置
 
 def se_events():
-    """(秒, 音の種類) の一覧を SHOTS から作る。"""
+    """(秒, 音の種類) の一覧を SHOTS から作る。
+
+    参考動画は音の立ち上がりが 0.75〜0.89秒に1回。カットの切り替わりだけでは
+    足りないので、黒板に文字や図が出る瞬間にもチョークの音を置いて密度を埋める。
+    """
     ev = []
     for i, s in enumerate(render.SHOTS):
         if i > 0:
             prev = render.SHOTS[i-1]
             章 = s['kind'] == 'title' or prev['kind'] == 'title'
             ev.append((s['t'], 'don' if 章 else 'whoosh'))
+        if s.get('board') or s.get('fig'):
+            ev.append((s['t'] + 0.10, 'chalk'))
         if s.get('tap'):
             ev.append((s['t'] + 0.34, 'ton'))
     return sorted(ev)
@@ -84,7 +111,7 @@ def se_events():
 def build_track(dur):
     n = int(SR * dur) + SR
     track = np.zeros(n)
-    sounds = dict(whoosh=whoosh(), don=don(), ton=ton())
+    sounds = dict(whoosh=whoosh(), don=don(), ton=ton(), chalk=chalk())
     for t, kind in se_events():
         s = sounds[kind]
         i = int(SR * t)
@@ -106,14 +133,37 @@ def write_wav(path, mono):
 
 # ------------------------------------------------------------- BGMの音量設計
 
-BGM_PLAN = [
-    (0.0,  3.4,  0.00, 'フック — 無音。音がないと逆に注意が向く'),
-    (3.4,  28.0, 0.18, '本編 — 軽快に、邪魔をしない'),
-    (28.0, 35.8, 0.22, '具体例 — 一段上げる'),
-    (35.8, 37.1, 0.00, 'オチ直前 — 完全に無音。ここが一番効く'),
-    (37.1, 42.5, 0.25, 'オチ — 盛り上げる'),
-    (42.5, 99.0, 0.14, '予告 — 落として余韻'),
+# 参考動画2本を解析したところ、0.35秒以上の無音は1箇所も無かった。
+# 完全に落とすと「切れた」と感じさせるので、下げ切らずに絞る形に変更。
+_LEVELS = [
+    ('hook',    0.10, 'フック — かなり絞る。テロップと声に集中させる'),
+    ('setup',   0.18, '本編 — 軽快に、邪魔をしない'),
+    ('how',     0.18, '仕組み — そのまま'),
+    ('example', 0.22, '具体例 — 一段上げる'),
+    ('punch',   0.26, 'オチ — 盛り上げる（直前の title で一度絞る）'),
+    ('next',    0.14, '予告 — 落として余韻'),
 ]
+
+
+def bgm_plan():
+    """秒数を手で書かず、SHOTS の区切りから組み立てる。台本を変えても追従する。"""
+    tm = render.section_times()
+    plan, keys = [], [k for k, _, _ in _LEVELS if k in tm]
+    for i, key in enumerate(keys):
+        lv  = next(v for k, v, _ in _LEVELS if k == key)
+        why = next(w for k, _, w in _LEVELS if k == key)
+        start = tm[key]
+        end   = tm[keys[i+1]] if i+1 < len(keys) else render.DURATION
+        if key == 'punch':
+            # オチの直前（title のあいだ）だけ絞る。無音にはしない
+            duck = next(s['dur'] for s in render.SHOTS if s.get('sec') == 'punch')
+            plan.append((start, start+duck, 0.07, 'オチ直前 — ぐっと絞る（無音にはしない）'))
+            start += duck
+        plan.append((start, end, lv, why))
+    return plan
+
+
+BGM_PLAN = bgm_plan()
 
 
 def volume_expr():
@@ -139,6 +189,7 @@ def main():
     c = Counter(k for _, k in ev)
     print('効果音トラック  %.1f秒  %d個  平均 %.2f秒に1回' % (dur, len(ev), dur/len(ev)))
     print('  スッ（カット切替） %d' % c['whoosh'])
+    print('  カリ（文字を書く） %d' % c['chalk'])
     print('  ドン（章の切替）   %d' % c['don'])
     print('  トン（棒で叩く）   %d' % c['ton'])
     print('  -> se.wav')

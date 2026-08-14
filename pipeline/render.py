@@ -92,69 +92,83 @@ def load(n):
 #   zoom  : 'in' / 'out' / 'left' / 'right' （省略時は自動で交互）
 
 SHOTS = [
- # ---- フック 0.0〜3.4
- dict(dur=1.5, kind='wide',  face='surprise', board=['電子レンジは','{何を温めてる？}'],
-      tele='電子レンジって、'),
+ # ---- フック
+ dict(sec='hook', dur=1.5, kind='wide', face='surprise',
+      board=['電子レンジは','{何を温めてる？}'], tele='電子レンジって、'),
  dict(dur=1.1, kind='face',  face='surprise', tele='{何を温めてる}と思う？'),
  dict(dur=0.8, kind='title', title='ほぼ全員\n間違えます'),
 
- # ---- 匂わせ 3.4〜9.4
- dict(dur=1.6, kind='wide',  face='explain', board=['正解は'], tele='正解は、'),
+ # ---- 匂わせ
+ dict(sec='setup', dur=1.5, kind='wide', face='explain', board=['正解は'], tele='正解は、'),
  dict(dur=1.5, kind='board', board=['{食べ物じゃない}'], tele='{食べ物じゃありません。}'),
- dict(dur=1.4, kind='face',  face='explain', tele='中に入っている、'),
+ dict(dur=1.3, kind='face',  face='explain', tele='中に入っている、'),
  dict(dur=1.5, kind='board', board=[dict(text='水', size=300, color=MUSTARD)],
       tele='{水}です。', tap=True),
 
- # ---- 仕組み① 9.4〜20.0
- dict(dur=1.6, kind='wide',  face='serious', board=['電子レンジが','出しているのは'],
-      tele='電子レンジが出しているのは、'),
- dict(dur=1.8, kind='board', board=[dict(text='マイクロ波', size=140, color=MUSTARD)],
-      tele='{マイクロ波}という、'),
- dict(dur=1.5, kind='wide',  face='serious', board=['目に見えない','電波'],
-      tele='目に見えない電波。'),
- dict(dur=2.0, kind='board', fig=('01_water_molecule.png', .58, 1.1),
+ # ---- 仕組み①
+ dict(sec='how', dur=1.5, kind='wide', face='serious',
+      board=['電子レンジが','出しているのは'], tele='電子レンジが出しているのは、'),
+ dict(dur=1.6, kind='board', fig=('04_microwave.png', 1.00, None),
+      tele='奥から{電波}を出して、'),
+ dict(dur=1.6, kind='board', board=[dict(text='マイクロ波', size=140, color=MUSTARD)],
+      tele='{マイクロ波}といいます。'),
+ dict(dur=1.5, kind='board', fig=('05_wave.png', .92, None),
+      board=[dict(text='目に見えない', size=88)], tele='目に見えない波です。'),
+ dict(dur=1.8, kind='board', fig=('01_water_molecule.png', .52, 1.1),
       tele='これを浴びると、水の分子が'),
- dict(dur=1.9, kind='board', fig=('01_water_molecule.png', .40, 0.45),
-      board=[dict(text='ぐるぐる回る', size=110)], tele='{猛烈に}回りはじめます。'),
- dict(dur=1.8, kind='wide',  face='serious',
+ dict(dur=1.7, kind='board', fig=('06_flip.png', 1.00, None),
+      tele='{ぐるん、ぐるん}と向きを変える。'),
+ dict(dur=1.6, kind='wide',  face='serious',
       board=[dict(text='1秒に\n24億回', size=150, color=MUSTARD)],
-      tele='一秒間に、{24億回}。', tap=True),
+      tele='その回数、一秒間に{24億回}。', tap=True),
 
- # ---- 仕組み② 20.0〜28.2
- dict(dur=1.4, kind='face',  face='explain', tele='向きを変えるたびに、'),
- dict(dur=2.0, kind='board', fig=('02_collision.png', .92, None),
+ # ---- 仕組み②
+ dict(dur=1.3, kind='face',  face='explain', tele='向きを変えるたびに、'),
+ dict(dur=1.9, kind='board', fig=('02_collision.png', .92, None),
       tele='隣の分子と{ぶつかり合う。}'),
- dict(dur=1.6, kind='wide',  face='explain',
+ dict(dur=1.5, kind='wide',  face='explain',
       board=[dict(text='ぶつかる → 熱', size=96, color=CRIMSON)],
       tele='そこで{熱}が生まれて、', tap=True),
- dict(dur=1.6, kind='board', board=['食べ物を','{内側から}温める'],
+ dict(dur=1.5, kind='board', board=['食べ物を','{内側から}温める'],
       tele='食べ物を内側から温めている。'),
- dict(dur=1.6, kind='face',  face='explain', tele='つまり、外から温めてない。'),
+ dict(dur=1.4, kind='face',  face='explain', tele='つまり、外から温めてない。'),
 
- # ---- 具体例 28.2〜35.8
- dict(dur=0.9, kind='title', title='ここで\n1つ気づく'),
- dict(dur=1.7, kind='wide',  face='explain', board=['じゃあ','{お皿}は？'],
+ # ---- 具体例
+ dict(sec='example', dur=0.9, kind='title', title='ここで\n1つ気づく'),
+ dict(dur=1.6, kind='wide',  face='explain', board=['じゃあ','{お皿}は？'],
       tele='じゃあ、{お皿}はどうなる？'),
- dict(dur=1.6, kind='board', board=[dict(text='温まらない', size=150, color=MUSTARD)],
-      tele='水分がないので、{温まりません。}', tap=True),
- dict(dur=1.7, kind='face',  face='explain', tele='お皿が熱いのは、'),
- dict(dur=1.7, kind='wide',  face='explain', board=['食べ物から','熱が移っただけ'],
+ dict(dur=1.7, kind='board', fig=('07_plate_food.png', 1.00, None),
+      tele='お皿には{水がない。}'),
+ dict(dur=1.5, kind='board', board=[dict(text='温まらない', size=150, color=MUSTARD)],
+      tele='だから{温まりません。}', tap=True),
+ dict(dur=1.4, kind='face',  face='explain', tele='お皿が熱いのは、'),
+ dict(dur=1.6, kind='board', fig=('08_heat_move.png', 1.00, None),
       tele='食べ物から{熱が移っただけ}なんです。'),
 
- # ---- オチ 35.8〜42.5
- dict(dur=1.3, kind='title', title='つまり'),
- dict(dur=1.7, kind='wide',  face='proud', board=['{温めてない}'],
+ # ---- オチ
+ dict(sec='punch', dur=1.2, kind='title', title='つまり'),
+ dict(dur=1.6, kind='wide',  face='proud', board=['{温めてない}'],
       tele='電子レンジは、温めているんじゃない。'),
- dict(dur=2.2, kind='board', board=[dict(text='水を\n暴れさせてる', size=160, color=MUSTARD)],
+ dict(dur=2.1, kind='board', board=[dict(text='水を\n暴れさせてる', size=160, color=MUSTARD)],
       tele='{水を暴れさせている}だけなんです。', tap=True),
- dict(dur=1.5, kind='face',  face='proud', tele=''),
+ dict(dur=1.4, kind='face',  face='proud', tele=''),
 
- # ---- 予告 42.5〜47.5
- dict(dur=2.4, kind='wide',  face='proud', board=['次は','{飛行機}'],
+ # ---- 予告
+ dict(sec='next', dur=2.1, kind='wide', face='proud', board=['次は','{飛行機}'],
       tele='次は、飛行機がなんで飛ぶのか。'),
- dict(dur=2.6, kind='board', board=[dict(text='学校の説明は\n間違い', size=120, color=CRIMSON)],
+ dict(dur=2.3, kind='board', board=[dict(text='学校の説明は\n間違い', size=120, color=CRIMSON)],
       tele='学校で習ったあの説明、{実は間違いです。}'),
 ]
+
+
+def section_times():
+    """BGMの音量を切り替える境目を SHOTS から拾う（秒を手で書かないため）。"""
+    out = {}
+    for s in SHOTS:
+        if s.get('sec') and s['sec'] not in out:
+            out[s['sec']] = s['t']
+    return out
+
 
 FACE_FILES = dict(surprise='char_surprise.png', explain='char_explain.png',
                   serious='char_serious.png', proud='char_proud.png')
