@@ -49,7 +49,7 @@ TEXT_BOX  = (BOARD_BOX[0]+46, BOARD_BOX[1]+54, BOARD_BOX[2]-46, BOARD_BOX[3]-40)
 CHAR_W_RATIO, CHAR_CX, CHAR_FOOT = 0.50, 0.235, 0.985
 HAND = (0.472, 0.774)   # char_explain の上げた手の実測値
 
-TELOP_Y     = 0.560      # テロップの上端（下から20%のUI帯を避ける）
+TELOP_Y     = 0.480      # テロップの上端（下から20%のUI帯を避ける）
 TELOP_SIZE  = 84
 TELOP_STROKE = 5         # 黒フチ。太すぎるとテンプレ感が出る
 STAGGER     = 0.55       # 黒板の要素を出す間隔（小さい変化のリズム）
@@ -281,7 +281,7 @@ def bg_wide():
     return _bg['wide']
 
 
-def vignette(im, strength=0.42):
+def vignette(im, strength=0.62):
     """中央を明るく、周辺を落とす。全面が同じ色だと平板に見えるので、
     面の中に明暗を作る。参考動画は明るい画素と暗い画素の差が大きい。"""
     import numpy as np
@@ -289,7 +289,7 @@ def vignette(im, strength=0.42):
     h, w = a.shape[:2]
     yy, xx = np.mgrid[0:h, 0:w]
     r = np.sqrt(((xx - w*0.5)/(w*0.62))**2 + ((yy - h*0.42)/(h*0.72))**2)
-    k = np.clip(1.18 - strength * r**1.6, 0.45, 1.35)[..., None]
+    k = np.clip(1.42 - strength * r**1.5, 0.38, 1.55)[..., None]
     a[..., :3] = np.clip(a[..., :3] * k, 0, 255)
     return Image.fromarray(a.astype('uint8'), 'RGBA')
 
@@ -366,7 +366,8 @@ def draw_content(canvas, s, t, kind):
             for ln in it['text'].split('\n'):
                 lay = Image.new('RGBA', (W, H), (0,0,0,0))
                 dl = ImageDraw.Draw(lay)
-                x0 = (a[0]+a[2])//2 if ctr else a[0]
+                slide = int(46 * (1 - p) ** 2)      # 出るときに左から滑り込む
+                x0 = ((a[0]+a[2])//2 if ctr else a[0]) - slide
                 wid = rich(dl, x0, y, ln, fnt, col, MUSTARD, anchor_c=ctr)
                 if p < 1:
                     left = x0 - wid/2 if ctr else a[0]
@@ -707,11 +708,12 @@ def apply_zoom(im, s, t):
     elif q < 0.30: step = 0.016 * (1 - (1 - q / 0.30) ** 2)
     else:          step = 0.016
     z = s['zoom']
-    Z = 1.19
-    if z == 'in':    k, ox, oy = 1 + (Z-1)*p + step, 0.5, 0.5
-    elif z == 'out': k, ox, oy = Z - (Z-1)*p + step, 0.5, 0.5
-    elif z == 'left':  k, ox, oy = Z + step, 0.18 + 0.64*p, 0.5
-    else:              k, ox, oy = Z + step, 0.82 - 0.64*p, 0.5
+    Z = 1.34
+    drift = 0.06 * math.sin(2*math.pi*((t - s['t']) / max(s['dur'],.01)) * 0.5)
+    if z == 'in':    k, ox, oy = 1 + (Z-1)*p + step, 0.5, 0.5 + drift
+    elif z == 'out': k, ox, oy = Z - (Z-1)*p + step, 0.5, 0.5 - drift
+    elif z == 'left':  k, ox, oy = Z + step, 0.08 + 0.84*p, 0.5
+    else:              k, ox, oy = Z + step, 0.92 - 0.84*p, 0.5
     bw, bh = int(W*k), int(H*k)
     big = im.resize((bw, bh), Image.LANCZOS)
     x = int((bw - W) * ox); y = int((bh - H) * oy)
