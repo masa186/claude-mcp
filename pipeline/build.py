@@ -6,7 +6,7 @@
   narration.wav ナレーション
   bgm.mp3       BGM。音量は sound.volume_expr() で自動で上下する
 """
-import os, time, subprocess
+import os, time, subprocess, sys
 import imageio_ffmpeg as ie
 import render, sound
 
@@ -16,8 +16,11 @@ OUT = 'ep01.mp4'
 # ---------------------------------------------------------------- 映像
 os.makedirs('frames', exist_ok=True)
 n = int(render.DURATION * render.FPS)
+AUDIO_ONLY = '--audio' in sys.argv and len(os.listdir('frames')) >= n
+if AUDIO_ONLY:
+    print('フレームは既にあるので音だけ組み直す', flush=True)
 t0 = time.time()
-for i in range(n):
+for i in range(0 if not AUDIO_ONLY else n, n):
     render.render_frame(i / render.FPS).save('frames/%05d.png' % i)
     if i % 100 == 0:
         print('  %d/%d  %.0fs' % (i, n, time.time() - t0), flush=True)
@@ -44,8 +47,11 @@ if os.path.exists('bgm.mp3'):
     filt.append("[%d:a]volume='%s':eval=frame[b]" % (idx, sound.volume_expr()))
     labels.append('[b]')
 
-mix = ''.join(labels) + 'amix=inputs=%d:duration=first:normalize=0[a]' % len(labels)
-cmd += ['-filter_complex', ';'.join(filt + [mix]), '-map', '0:v', '-map', '[a]']
+mix = ''.join(labels) + 'amix=inputs=%d:duration=first:normalize=0[m]' % len(labels)
+# 効果音とBGMが重なるとピークが1を超える。level=disabled にしないと
+# alimiter が上限まで持ち上げ直してしまい、かえって大きくなる。
+lim = '[m]alimiter=limit=0.85:level=disabled:attack=3:release=60[a]'
+cmd += ['-filter_complex', ';'.join(filt + [mix, lim]), '-map', '0:v', '-map', '[a]']
 cmd += ['-c:v', 'libx264', '-preset', 'medium', '-crf', '19',
         '-pix_fmt', 'yuv420p', '-r', str(render.FPS),
         '-c:a', 'aac', '-b:a', '192k', '-shortest', OUT]

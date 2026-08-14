@@ -239,7 +239,7 @@ def build_track(dur):
 
     banks = {}
     used_real = []
-    for k, f, pk in (('whoosh', whoosh, 0.42), ('don', don, 0.62),
+    for k, f, pk in (('whoosh', whoosh, 0.36), ('don', don, 0.50),
                      ('ton', ton, 0.55), ('chalk', chalk, 0.26)):
         r = real_se(k)
         if r is not None:
