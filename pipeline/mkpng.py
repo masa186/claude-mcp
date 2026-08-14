@@ -262,4 +262,8 @@ c.render(OUT + '/08_heat_move.png')
 import mkanim
 mkanim.stills()
 
+# 口を開けた絵（クチパク用）
+import mklips
+mklips.build()
+
 print('完了 → ' + OUT)

@@ -193,14 +193,14 @@ FACE_FILES = dict(surprise='char_surprise.png', explain='char_explain.png',
                   point='char_point.png', arms='char_arms.png')
 
 # クチパク用の「口だけ開けた絵」。表情名 → ファイル名。
-#
-# 空にしてある。char_point と char_point_open は口だけの差分ではなく、
-# 顔の向きも腕も違う別の絵だった。並べて切り替えると口ではなく頭が跳ねる。
-# ここに入れていいのは「同じポーズ・同じ大きさで、口だけ開いた絵」だけ。
-# 用意できたら、たとえばこう書けばその表情がパクパクする:
-#   MOUTH_FILES = dict(explain='char_explain_open.png',
-#                      surprise='char_surprise_open.png', ...)
-MOUTH_FILES = {}
+# mklips.py が char_arms の口を移植して作る（無ければ静かに口を閉じたまま）。
+# char_point は顔の向きが違うので対象外。ここに入れると頭が跳ねる。
+MOUTH_FILES = dict(explain='char_explain_mouth.png',
+                   proud='char_proud_mouth.png',
+                   serious='char_serious_mouth.png',
+                   surprise='char_surprise_mouth.png')
+# まばたきと重なったとき用
+BLINK_MOUTH = dict(explain='char_blink_mouth.png')
 
 # ナレーションから作った「このコマは口を開けているか」の並び。
 # voice.envelope() が入れる。これがあると、決まった速さではなく
@@ -495,22 +495,24 @@ def placeholder():
 
 def char_img(s, t):
     face = s.get('face', 'explain')
+
     # 声が出ているコマだけ口を開ける（波形が無ければ一定の速さで代用）
-    mf = MOUTH_FILES.get(face)
-    if mf:
-        op = mouth_open(t)
-        if op is None:
-            op = bool(s.get('tele')) and int((t - s['t']) * MOUTH_HZ * 2) % 2
-        if op:
-            im = load(mf)
-            if im is not None: return im
-    bf = BLINK_FILES.get(face)
-    if bf:
-        for b in BLINKS:
-            if b <= t < b + BLINK_LEN:
-                im = load(bf)
-                if im is not None: return im
-    return load(FACE_FILES.get(face)) or placeholder()
+    op = mouth_open(t)
+    if op is None:
+        op = bool(s.get('tele')) and bool(int((t - s['t']) * MOUTH_HZ * 2) % 2)
+    blinking = any(b <= t < b + BLINK_LEN for b in BLINKS)
+
+    # まばたき×口の4通りを、あるものから順に選ぶ
+    cands = []
+    if blinking and op: cands.append(BLINK_MOUTH.get(face))
+    if blinking:        cands.append(BLINK_FILES.get(face))
+    if op:              cands.append(MOUTH_FILES.get(face))
+    cands.append(FACE_FILES.get(face))
+    for c in cands:
+        im = load(c) if c else None
+        if im is not None:
+            return im
+    return placeholder()
 
 
 def ease_out(x):

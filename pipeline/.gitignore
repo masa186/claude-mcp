@@ -32,5 +32,9 @@ clips/*.png
 # ---- もらった素材（置いておく）
 # コンテナが片付くと消えるので、これだけはリポジトリに入れる
 !assets/char_*.png
+# mklips.py が作る口だけ差し替えた絵
+assets/char_*_mouth.png
 !se/*.wav
 !bgm.mp3
+lips_sheet.png
+voicevox/
