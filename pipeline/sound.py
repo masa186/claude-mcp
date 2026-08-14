@@ -350,8 +350,8 @@ def main():
         print('  %5.1f〜%5.1f秒  音量 %3d%%   %s' % (s, min(e, dur), v*100, why))
     print('\nffmpeg にそのまま貼る式:')
     print("  volume='" + volume_expr() + "':eval=frame")
-    print('\n※ BGMは2曲使う。本編用を bgm.mp3、オチ用を bgm_climax.mp3 に。')
-    print('  1曲を音量で上下させても盛り上がりは作れません。')
+    print('\n※ BGMは bgm.mp3 の1曲。オチで曲を変えない代わりに、')
+    print('  オチ直前で7%まで絞ってから26%に上げる落差で持ち上げる。')
 
 
 if __name__ == '__main__':
