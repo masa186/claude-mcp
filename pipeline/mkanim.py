@@ -45,17 +45,28 @@ def frame(i, show_lift=False, show_flow=True):
     p = i / N
 
     if show_flow:
-        rows = (215, 255, 295, 335)            # 翼の上を通る流れ
-        below = (455, 500)                     # 翼の下を通る流れ
+        # 粒を増やし、太さと濃さをばらつかせる。等間隔・同じ太さの点線は
+        # どうしても素人っぽく見えるので、流れとして密度に幅を持たせる。
+        rows  = (200, 232, 264, 296, 328)      # 翼の上を通る流れ
+        below = (452, 486, 520)                # 翼の下を通る流れ
+        lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        dl = ImageDraw.Draw(lay)
         for k, y0 in enumerate(rows + below):
-            for j in range(5):
-                s = (p + j / 5 + k * 0.04) % 1.0
+            for j in range(7):
+                s = (p + j / 7 + k * 0.031) % 1.0
                 x, y = path(y0, s)
-                if x < -20 or x > W + 20:
+                if x < -40 or x > W + 40:
                     continue
-                # 進行方向に少し伸ばした粒（速度が見える）
-                x2, y2 = path(y0, max(0.0, s - 0.022))
-                d.line([x2, y2, x, y], fill=CHALK, width=12)
+                # 速いところほど尾を長く引く（速度が目で分かる）
+                x1, y1 = path(y0, max(0.0, s - 0.016))
+                x2, y2 = path(y0, max(0.0, s - 0.034))
+                fast = min(1.0, math.hypot(x1 - x2, y1 - y2) / 26.0)
+                al = int(90 + 150 * (0.45 + 0.55 * fast))
+                wdt = int(7 + 6 * fast)
+                dl.line([x2, y2, x, y], fill=CHALK[:3] + (al,), width=wdt)
+                dl.ellipse([x-wdt*0.6, y-wdt*0.6, x+wdt*0.6, y+wdt*0.6],
+                           fill=CHALK[:3] + (min(255, al + 60),))
+        im.alpha_composite(lay)
 
     d.polygon(WING, fill=CHALK)                # 翼
     d.line([(680, 342), (775, 390)], fill=CHALK, width=16)

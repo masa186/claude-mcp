@@ -33,7 +33,7 @@ OUT    = os.path.join(HERE, 'frames')
 
 W, H, FPS = 1080, 1920, 30
 
-CHALK   = (239, 233, 218, 255)
+CHALK   = (250, 247, 238, 255)
 MUSTARD = (223, 164, 43, 255)
 CRIMSON = (206, 78, 55, 255)
 BOARD   = (61, 106, 90, 255)
@@ -49,7 +49,7 @@ TEXT_BOX  = (BOARD_BOX[0]+46, BOARD_BOX[1]+54, BOARD_BOX[2]-46, BOARD_BOX[3]-40)
 CHAR_W_RATIO, CHAR_CX, CHAR_FOOT = 0.50, 0.235, 0.985
 HAND = (0.472, 0.774)   # char_explain の上げた手の実測値
 
-TELOP_Y     = 0.725      # テロップの上端（下から20%のUI帯を避ける）
+TELOP_Y     = 0.560      # テロップの上端（下から20%のUI帯を避ける）
 TELOP_SIZE  = 84
 TELOP_STROKE = 5         # 黒フチ。太すぎるとテンプレ感が出る
 STAGGER     = 0.55       # 黒板の要素を出す間隔（小さい変化のリズム）
@@ -77,9 +77,8 @@ FONT_TELOP = pick('/usr/share/fonts/opentype/mplus/Mplus1-Black.otf',
                   '/usr/share/fonts/opentype/mplus/Mplus1-ExtraBold.otf',
                   '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc',
                   '/usr/share/fonts/truetype/fonts-japanese-gothic.ttf')
-FONT_BOARD = pick('/usr/share/fonts/opentype/mplus/Mplus1-Bold.otf',
-                  '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc',
-                  '/usr/share/fonts/truetype/fonts-japanese-gothic.ttf')
+# 黒板もテロップも同じ書体にする。2書体混ぜると素人っぽく見える。
+FONT_BOARD = FONT_TELOP
 if not FONT_TELOP:
     raise SystemExit('日本語フォントがありません。Colabなら:\n'
                      '  !apt-get -qq install fonts-mplus')
@@ -278,8 +277,21 @@ def bg_wide():
     d.rounded_rectangle([BOARD_BOX[0]-16, BOARD_BOX[1]-16,
                          BOARD_BOX[2]+16, BOARD_BOX[3]+16], 8, fill=WOOD)
     d.rectangle(list(BOARD_BOX), fill=BOARD)
-    _bg['wide'] = im
-    return im
+    _bg['wide'] = vignette(im, 0.30)
+    return _bg['wide']
+
+
+def vignette(im, strength=0.42):
+    """中央を明るく、周辺を落とす。全面が同じ色だと平板に見えるので、
+    面の中に明暗を作る。参考動画は明るい画素と暗い画素の差が大きい。"""
+    import numpy as np
+    a = np.array(im).astype(np.float32)
+    h, w = a.shape[:2]
+    yy, xx = np.mgrid[0:h, 0:w]
+    r = np.sqrt(((xx - w*0.5)/(w*0.62))**2 + ((yy - h*0.42)/(h*0.72))**2)
+    k = np.clip(1.18 - strength * r**1.6, 0.45, 1.35)[..., None]
+    a[..., :3] = np.clip(a[..., :3] * k, 0, 255)
+    return Image.fromarray(a.astype('uint8'), 'RGBA')
 
 
 def bg_board():
@@ -289,8 +301,8 @@ def bg_board():
     d = ImageDraw.Draw(im)
     d.rectangle([0, 0, W, 26], fill=WOOD)
     d.rectangle([0, H-26, W, H], fill=WOOD)
-    _bg['board'] = im
-    return im
+    _bg['board'] = vignette(im)
+    return _bg['board']
 
 
 # ------------------------------------------------------------- 黒板の中身
@@ -567,9 +579,9 @@ def draw_pointer(canvas, s, t):
             hx + L*math.cos(r),     hy + L*math.sin(r)], fill=CHALK, width=11)
 
 
-FACE_HEAD  = 0.40    # 中身の高さのうち、頭とみなす割合
-FACE_FILL  = 1.16    # 頭を画面幅の何倍にするか
-FACE_CY    = 0.33    # 顔の中心を画面のどの高さに置くか
+FACE_HEAD  = 0.66    # 中身の高さのうち、切り出す割合（胸から上）
+FACE_FILL  = 0.86    # 切り出した絵を画面幅の何倍にするか
+FACE_CY    = 0.36    # 切り出した絵の中心を画面のどの高さに置くか
 
 
 def face_shot(s, t):
@@ -592,13 +604,10 @@ def face_shot(s, t):
 
     br = 1.0 + 0.012 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))
     e = ease_out(min(1.0, local / 0.22))
-    k = (W * FACE_FILL) / head.width * br * (1 + 0.03*(1-e))
+    push = 1 + 0.10 * min(1.0, local / max(s['dur'], .01))   # ずっとゆっくり寄る
+    k = (W * FACE_FILL) / head.width * br * push * (1 + 0.03*(1-e))
     head = head.resize((max(2, int(head.width*k)), max(2, int(head.height*k))),
                        Image.LANCZOS)
-    tilt = 1.1 * math.sin(2*math.pi*(t % 3.7)/3.7)
-    if abs(tilt) > 0.05:
-        head = head.rotate(tilt, resample=Image.BICUBIC, expand=True)
-
     im = Image.new('RGBA', (W, H), BOARD)
     im.alpha_composite(head, (W//2 - head.width//2,
                               int(H*FACE_CY) - head.height//2 + int(30*(1-e))))
@@ -698,11 +707,11 @@ def apply_zoom(im, s, t):
     elif q < 0.30: step = 0.016 * (1 - (1 - q / 0.30) ** 2)
     else:          step = 0.016
     z = s['zoom']
-    Z = 1.075
+    Z = 1.19
     if z == 'in':    k, ox, oy = 1 + (Z-1)*p + step, 0.5, 0.5
     elif z == 'out': k, ox, oy = Z - (Z-1)*p + step, 0.5, 0.5
-    elif z == 'left':  k, ox, oy = Z + step, 0.34 + 0.30*p, 0.5
-    else:              k, ox, oy = Z + step, 0.66 - 0.30*p, 0.5
+    elif z == 'left':  k, ox, oy = Z + step, 0.18 + 0.64*p, 0.5
+    else:              k, ox, oy = Z + step, 0.82 - 0.64*p, 0.5
     bw, bh = int(W*k), int(H*k)
     big = im.resize((bw, bh), Image.LANCZOS)
     x = int((bw - W) * ox); y = int((bh - H) * oy)
