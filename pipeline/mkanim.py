@@ -336,6 +336,63 @@ def f_same(i):
     return im.resize((W, H), Image.LANCZOS)
 
 
+# ---------------------------------------------------------------- 背面飛行
+
+def f_invert(i):
+    """逆さまでも飛ぶ、を見せる図。
+
+    「翼の形（上が長い）から浮く」が本当なら、ひっくり返した瞬間に
+    落ちなければならない。実際は落ちない。ここが学校の説明への一番強い反証で、
+    かつ「じゃあ何で浮いてんの？」への引きになる。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.30))) ** 3
+
+    cy = 330
+    aoa = 0.30                      # 逆さまのぶん、機首を大きく上げている
+    nose, tail = 190, 700
+
+    def surf(x, up):
+        """上下をひっくり返した翼。ふくらみが下に来る。"""
+        t = min(1.0, max(0.0, (x - nose) / (tail - nose)))
+        base = cy - (x - nose) * aoa
+        if up:
+            return base - 5 - 13 * math.sin(math.pi * t ** 0.95)
+        return base + 5 + 58 * math.sin(math.pi * t ** 0.60)
+
+    # 空気。翼を過ぎたら下へ抜ける（向きは他の図と同じ）
+    for r, dy0 in enumerate((-150, -108, -66, -24, 30, 74)):
+        for j in range(3):
+            s0 = (p * 1.1 + j / 3 + r * 0.06) % 1.0
+            x = -120 + s0 * (W + 240)
+            y0 = cy + dy0
+            k = math.exp(-abs(dy0) / 120.0)
+            def yy(xq):
+                if xq < nose:
+                    return y0
+                return y0 + (xq - nose) * 0.44 * k * e
+            pts = [(x - 26 * m, yy(x - 26 * m)) for m in range(6)]
+            if pts[0][0] < -70 or pts[0][0] > W + 70:
+                continue
+            for m in range(5):
+                line(d, [pts[m], pts[m+1]], CHALK, 8.5 - m * 1.0,
+                     int(230 * (1 - m / 5) ** 1.2))
+            dot(d, pts[0][0], pts[0][1], 4.6, CHALK, 240)
+
+    poly = [(x, surf(x, True)) for x in range(nose, tail + 1, 8)]
+    poly += [(x, surf(x, False)) for x in range(tail, nose - 1, -8)]
+    d.polygon([(x * SS, y * SS) for x, y in poly], fill=CHALK + (255,))
+    # 逆さまの目印として、尾を上に出す
+    line(d, [(tail, (surf(tail, True) + surf(tail, False)) / 2),
+             (tail + 92, (surf(tail, True) + surf(tail, False)) / 2 - 46)], CHALK, 13)
+
+    arrow(d, 420, cy - 100, 420, cy - 232, HEAT, 22, 52, int(255 * e))
+    label(d, 62, 116, '逆さま', 52, DIM, 225, anchor='lm')
+    return im.resize((W, H), Image.LANCZOS)
+
+
 # ---------------------------------------------------------------- 書き出し
 
 def dump(name, fn):
@@ -481,5 +538,6 @@ if __name__ == '__main__':
     dump('aoa', f_aoa)
     dump('hand', f_hand)
     dump('same', f_same)
+    dump('invert', f_invert)
     stills()
     print('完了 → ' + OUT)

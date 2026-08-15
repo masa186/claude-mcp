@@ -23,21 +23,39 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 # tele … 画面に出すテロップ（黒板が主役のショットでは自動で出ない）
 # say  … ナレーションだけの台詞。画面には出さない
 render.SHOTS = [
- # ---- フック。
- # 「学校で習ったやつは間違い」は、何を習ったか見せない限りフリが回収されない。
- # 回収に数秒使うより、前提を作らないほうが速い。
+ # ---- フック
  dict(sec='hook', dur=1.8, kind='face', face='surprise', se='don',
       tele='bro、{飛行機ってなんで飛ぶ}？'),
  dict(dur=1.0, kind='title', title='9割が\n{勘違いしてる}'),
 
- # ---- 問いを完成させる
+ # ---- 問い
  dict(sec='setup', dur=2.0, kind='screen', clip='plane', face='point',
       tele='これ、{何百トン}ある。'),
- dict(dur=2.0, kind='screen', clip='plane2', face='explain', roll=False,
+ dict(dur=1.8, kind='screen', clip='plane2', face='explain', roll=False,
       tele='そんな重いのに、{なんで落ちない}？'),
 
- # ---- すぐ体の記憶へ
- dict(sec='example', dur=1.4, kind='face', face='point', se='whoosh',
+ # ---- 勘違いを名指しする。ここを削ると「9割が勘違い」の煽りが嘘になる
+ dict(sec='how', dur=1.8, kind='face', face='serious',
+      tele='{翼の形}のおかげ、って習ったやろ？'),
+ dict(dur=2.4, kind='stage', scene='wrong', face='serious',
+      fig=('wingrace/', 1.02, 'hold'), add='上の空気が{速いから}',
+      say='上の面は道が長いから、空気が速くなる。'),
+ dict(dur=1.8, kind='stage', scene='wrong', face='serious', beat=True,
+      add=dict(text='{×} これ、ウソ', color=CRIMSON),
+      say='これ、ウソです。'),
+
+ # ---- 一番強い反証。ここが「え、たしかに」の山
+ dict(sec='proof', dur=1.6, kind='face', face='point', se='whoosh',
+      tele='だってこれ、{どう説明すんの}？'),
+ dict(dur=2.2, kind='stage', scene='inv', face='explain',
+      fig=('invert/', 1.02, None), add='{逆さま}でも飛ぶ',
+      say='戦闘機、ひっくり返ったままでも飛ぶ。'),
+ dict(dur=2.0, kind='stage', scene='inv', face='serious',
+      add=dict(text='形が理由なら{落ちるはず}', color=CRIMSON),
+      say='翼の形が理由なら、落ちるはずやろ。'),
+
+ # ---- 本当の理由へ。体の記憶から入る
+ dict(sec='example', dur=1.4, kind='face', face='point',
       tele='{これ}見て。'),
  dict(dur=2.0, kind='stage', scene='hand', face='explain',
       fig=('hand/', 1.02, 'hold'), add='手を{下}に傾ける',
@@ -46,14 +64,14 @@ render.SHOTS = [
       add=dict(text='{腕が上に}！', color=MUSTARD),
       say='腕、上にぐっと持っていかれるやろ。'),
 
- # ---- 橋。「同じ」は1回だけ言う。3回続けるとテンポが死ぬ
+ # ---- 橋。「同じ」は1回だけ
  dict(sec='bridge', dur=1.6, kind='screen', clip='wing', face='point',
       tele='飛行機の{翼}も、'),
  dict(dur=2.2, kind='stage', scene='same', face='explain',
       fig=('same/', 1.02, None), add='{これと全く同じ}',
-      say='これと全く同じことをしてる。'),
+      say='これと全く同じことをしてる。形やない。傾きや。'),
 
- # ---- 本題。「上向きだから押し返す」の1パーツを足して繋げる
+ # ---- 因果を3段で
  dict(sec='lift', dur=1.8, kind='stage', scene='lift', face='explain',
       fig=('aoa/', 1.02, 'hold'), add='翼は{上向き}',
       say='翼はほんの少し、上を向いてる。'),
@@ -82,7 +100,8 @@ render.SHOTS = [
 # 章タイトルは左上に出しっぱなしにする。参考動画はこれで「いまどの話か」を
 # 常に示していた。ショットが変わっても迷子にならない。
 # 章タイトルは短く。読ませるものではなく、いまどの話かの目印
-render.CHAPTERS = {'hook': '', 'setup': '', 'example': '車の窓',
+render.CHAPTERS = {'hook': '', 'setup': '', 'how': '習ったやつ',
+                   'proof': '逆さま', 'example': '車の窓',
                    'bridge': '手と翼', 'lift': '翼', 'punch': '', 'next': ''}
 render.DURATION = render.build()
 render.OUT = FRAMES
