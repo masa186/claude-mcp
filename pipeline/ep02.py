@@ -23,10 +23,12 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 # tele … 画面に出すテロップ（黒板が主役のショットでは自動で出ない）
 # say  … ナレーションだけの台詞。画面には出さない
 render.SHOTS = [
- # ---- フック
+ # ---- フック。
+ # 「学校で習ったやつは間違い」は、何を習ったか見せない限りフリが回収されない。
+ # 回収に数秒使うより、前提を作らないほうが速い。
  dict(sec='hook', dur=1.8, kind='face', face='surprise', se='don',
       tele='bro、{飛行機ってなんで飛ぶ}？'),
- dict(dur=1.0, kind='title', title='学校の説明\n実は{間違い}'),
+ dict(dur=1.0, kind='title', title='9割が\n{勘違いしてる}'),
 
  # ---- 問いを完成させる
  dict(sec='setup', dur=2.0, kind='screen', clip='plane', face='point',
@@ -34,12 +36,7 @@ render.SHOTS = [
  dict(dur=2.0, kind='screen', clip='plane2', face='explain', roll=False,
       tele='そんな重いのに、{なんで落ちない}？'),
 
- # ---- 同着説は figure ごと捨てて、1ショットで否定するだけにした。
- # 知らない人には「何の話？」で、前提の共有に数秒使うのが一番効く離脱ポイント。
- dict(dur=1.5, kind='face', face='serious',
-      tele='学校で習ったやつ、{あれ間違い}。'),
-
- # ---- すぐ体の記憶へワープする
+ # ---- すぐ体の記憶へ
  dict(sec='example', dur=1.4, kind='face', face='point', se='whoosh',
       tele='{これ}見て。'),
  dict(dur=2.0, kind='stage', scene='hand', face='explain',
@@ -49,26 +46,25 @@ render.SHOTS = [
       add=dict(text='{腕が上に}！', color=MUSTARD),
       say='腕、上にぐっと持っていかれるやろ。'),
 
- # ---- 橋
- dict(dur=1.3, kind='face', face='explain', tele='{翼も同じ}。'),
- dict(sec='bridge', dur=2.2, kind='stage', scene='same', face='explain',
-      fig=('same/', 1.02, None), add='どっちも{同じ}',
-      say='どっちも、空気を下に押してる。'),
+ # ---- 橋。「同じ」は1回だけ言う。3回続けるとテンポが死ぬ
+ dict(sec='bridge', dur=1.6, kind='screen', clip='wing', face='point',
+      tele='飛行機の{翼}も、'),
+ dict(dur=2.2, kind='stage', scene='same', face='explain',
+      fig=('same/', 1.02, None), add='{これと全く同じ}',
+      say='これと全く同じことをしてる。'),
 
- # ---- 本題。原因 → 効果 → 結果。画面の言葉は記号だけ
- dict(sec='lift', dur=1.8, kind='screen', clip='wing', face='point',
-      tele='翼がやってんのも{これ}。'),
- dict(dur=1.6, kind='stage', scene='lift', face='explain',
-      fig=('aoa/', 1.02, 'hold'), add='翼 {↗}',
-      say='翼はちょっと上向き。'),
+ # ---- 本題。「上向きだから押し返す」の1パーツを足して繋げる
+ dict(sec='lift', dur=1.8, kind='stage', scene='lift', face='explain',
+      fig=('aoa/', 1.02, 'hold'), add='翼は{上向き}',
+      say='翼はほんの少し、上を向いてる。'),
  dict(dur=2.4, kind='stage', scene='lift', face='explain',
-      fig=('airflow/', 1.02, None), add='空気 {↓}',
-      say='当たった空気は、下へぶっ飛んでいく。'),
+      fig=('airflow/', 1.02, None), add='空気を{下}に押す',
+      say='だから、ぶつかった空気を下に押し返す。'),
  dict(dur=2.2, kind='stage', scene='lift', face='proud', beat=True, beat_at=0.5,
-      fig=('airlift/', 1.02, None), add=dict(text='翼 {↑}', color=MUSTARD),
-      say='下に押した分だけ、翼は上に押し返される。'),
+      fig=('airlift/', 1.02, None), add=dict(text='翼は{上}へ', color=MUSTARD),
+      say='その分だけ、翼は上に持ち上がる。'),
 
- # ---- オチ。専門用語は出さない。ここが一番強い言葉
+ # ---- オチ
  dict(sec='punch', dur=0.9, kind='title', title='つまり'),
  dict(dur=2.2, kind='board', se='don',
       board=[dict(text='空気を\n下に殴ってる', size=156, color=MUSTARD)],
