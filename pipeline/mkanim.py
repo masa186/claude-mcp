@@ -232,55 +232,107 @@ def f_airflow(i, lift=False):
 
 
 def f_wingrace(i):
-    """学校の説明の反証。同時に出発 → 同時には着かない。"""
+    """学校の説明の反証。
+
+    前の版は流線・注記を全部載せていたので、この図を読むこと自体が
+    新しい勉強になっていた。見るべきものを2つの点だけに絞る。
+    """
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     p = i / N
 
-    # 通る道を薄く敷いておく（どこを見ればいいかを先に示す）
-    for y0, col in ((258, DIM), (432, DIM)):
-        pts = [at(y0, t / 60.0) for t in range(61)]
-        line(d, pts, col, 3, 90)
-
     draw_wing(d)
+    dashed(d, LE, 150, LE, 560, DIM, 4, 18, 150)
+    dashed(d, TE, 150, TE, 560, DIM, 4, 18, 150)
+    label(d, LE + 40, 120, '同時に出発', 44, CHALK, 235)
+    label(d, TE - 26, 120, 'ゴール', 44, CHALK, 235)
 
-    # 出発線とゴール線
-    dashed(d, LE, 96, LE, 578, DIM, 3, 16, 150)
-    dashed(d, TE, 96, TE, 578, DIM, 3, 16, 150)
-    label(d, LE + 42, 68, '同時に出発', 42, CHALK, 235)
-    label(d, TE - 28, 68, 'ゴール', 42, CHALK, 235)
-
-    # 上の粒と下の粒。s=0 で前縁、s=1 で後縁に着くように正規化する
     def s_of(y0, frac):
         xs, cum = table(y0)
-        def cum_at(xt):
+        def c_at(xt):
             for a, b, ca, cb in zip(xs, xs[1:], cum, cum[1:]):
                 if a <= xt <= b:
                     return ca + (cb - ca) * (xt - a) / (b - a)
             return cum[-1]
-        c0, c1 = cum_at(LE), cum_at(TE)
+        c0, c1 = c_at(LE), c_at(TE)
         return c0 + (c1 - c0) * frac
 
-    run = min(1.0, p / 0.72)                 # 0.72 で上の粒がゴール
-    up_x, up_y = at(258, s_of(258, run))
-    # 上の空気のほうが速い。上がゴールしたとき、下はまだ3割ほど手前にいる
-    dn_x, dn_y = at(432, s_of(432, run * 0.70))
-
-    # オチの赤文字が出たら、説明用の注記は引っ込める（重ならないように）
-    la = int(210 * (1.0 if run < 1.0 else max(0.0, 1 - (p - 0.72) / 0.08)))
-    if la > 6:
-        label(d, 348, 158, '上を通る空気', 42, DIM, la)
-        label(d, 348, 552, '下を通る空気', 42, DIM, la)
-
-    dot(d, up_x, up_y, 17, HEAT)
-    dot(d, dn_x, dn_y, 17, GOLD)
+    run = min(1.0, p / 0.70)
+    ux, uy = at(258, s_of(258, run))
+    dx_, dy_ = at(432, s_of(432, run * 0.66))
+    dot(d, ux, uy, 21, HEAT)
+    dot(d, dx_, dy_, 21, GOLD)
 
     if run >= 1.0:
-        # 上は着いた。下はまだ手前 → そこにズレが見えている
-        a = int(255 * min(1.0, (p - 0.72) / 0.10))
-        arrow(d, dn_x + 24, dn_y, TE - 6, dn_y, HEAT, 9, 28, a)
-        label(d, (dn_x + TE) / 2, dn_y - 44, 'まだ着いてない', 42, HEAT, a)
-        label(d, 450, 612, '「同時に着く」は起きない', 52, HEAT, a)
+        a = int(255 * min(1.0, (p - 0.70) / 0.10))
+        # 大きな×。ここが結論なので、細かい注記より記号を大きく出す
+        # 言葉は黒板の行が持つ。図は記号だけにして、同じことを二度言わない
+        cx, cy, r = 470, 566, 52
+        line(d, [(cx - r, cy - r), (cx + r, cy + r)], HEAT, 18, a)
+        line(d, [(cx + r, cy - r), (cx - r, cy + r)], HEAT, 18, a)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+# ---------------------------------------------------------------- 手と翼を並べる
+
+def f_same(i):
+    """手と翼を1枚に並べて、同じことが起きているのを見せる。
+
+    「あれと同じ」は言葉で言っても伝わらない。並べて、同じ向きに空気が抜けて
+    同じ向きに力が出るところを同時に見せると、比べるまでもなく分かる。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.35))) ** 3
+
+    def body(cy, kind):
+        if kind == 'hand':
+            ang = math.radians(-18)
+            hx, hy = 560, cy
+            px = hx - 150 * math.cos(ang)
+            py = hy - 150 * math.sin(ang)
+            capsule(d, 700, cy + 16, hx, hy, 40, CHALK)
+            capsule(d, hx + 10, hy + 2, px, py, 34, CHALK)
+            return px, hx
+        pts = [(x, upper(x)) for x in range(LE, TE + 1, 8)]
+        pts += [(x, lower(x)) for x in range(TE, LE - 1, -8)]
+        k = 0.62
+        poly = [(300 + (x - LE) * k, cy + (y - CY) * k) for x, y in pts]
+        d.polygon([(x * SS, y * SS) for x, y in poly], fill=CHALK + (255,))
+        return 300, 300 + (TE - LE) * k
+
+    def half(cy, kind):
+        nose = 410 if kind == 'hand' else 300
+        # 空気を先に描いて、そのあと本体を上に重ねる。順番を逆にすると
+        # 線が手や翼を突き抜けて見える
+        for r, dy0 in enumerate((-76, -44, -14, 18, 48)):
+            for j in range(3):
+                s0 = (p * 1.15 + j / 3 + r * 0.07) % 1.0
+                x = -120 + s0 * (W + 240)
+                y0 = cy + dy0
+                k = math.exp(-abs(dy0) / 90.0)
+                def yy(xq):
+                    if xq < nose:
+                        return y0
+                    return y0 + (xq - nose) * 0.55 * k * e
+                pts = [(x - 24 * m, yy(x - 24 * m)) for m in range(6)]
+                if pts[0][0] < -70 or pts[0][0] > W + 70:
+                    continue
+                for m in range(5):
+                    line(d, [pts[m], pts[m+1]], CHALK, 8.5 - m * 1.0,
+                         int(235 * (1 - m / 5) ** 1.2))
+                dot(d, pts[0][0], pts[0][1], 4.6, CHALK, 240)
+
+        n2, tail_x = body(cy, kind)
+        arrow(d, (n2 + tail_x) / 2, cy - 46, (n2 + tail_x) / 2, cy - 132,
+              HEAT, 17, 42, int(255 * e))
+
+    label(d, 62, 66, '手', 56, DIM, 225, anchor='lm')
+    label(d, 62, 368, '翼', 56, DIM, 225, anchor='lm')
+    half(190, 'hand')
+    dashed(d, 60, 320, 840, 320, DIM, 3, 20, 90)
+    half(492, 'wing')
     return im.resize((W, H), Image.LANCZOS)
 
 
@@ -428,5 +480,6 @@ if __name__ == '__main__':
     dump('airlift', lambda i: f_airflow(i, lift=True))
     dump('aoa', f_aoa)
     dump('hand', f_hand)
+    dump('same', f_same)
     stills()
     print('完了 → ' + OUT)
