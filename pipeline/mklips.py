@@ -101,8 +101,42 @@ def sheet(path=None):
     sh.save(path); print('  ' + path)
 
 
+# 逆に「口を閉じた絵」を作る側。
+# char_arms と char_point_open は口が開いた状態が元絵なので、
+# そのままではクチパクの「閉じ」が無い。閉じた口を char_proud から借りる。
+CLOSED_SRC = 'char_proud.png'
+CLOSED_TARGETS = [('char_arms', 'char_arms_closed'),
+                  ('char_point_open', 'char_point_closed')]
+
+
+def build_closed(verbose=True):
+    src = Image.open(os.path.join(ASSETS, CLOSED_SRC)).convert('RGBA')
+    patch = src.crop(BOX)
+    made, skipped = [], []
+    for name, out in CLOSED_TARGETS:
+        p = os.path.join(ASSETS, name + '.png')
+        if not os.path.exists(p):
+            continue
+        im = Image.open(p).convert('RGBA')
+        if im.size != src.size:
+            skipped.append(name); continue
+        d, dx, dy = offset(src, im)
+        if d > THR:
+            skipped.append('%s(顔が別物 差%.1f)' % (name, d)); continue
+        g = im.copy()
+        g.paste(patch, (BOX[0]+dx, BOX[1]+dy))
+        g.save(os.path.join(ASSETS, out + '.png'))
+        made.append(out + '.png')
+    if verbose:
+        print('  口を閉じた絵 %d枚: %s' % (len(made), ' '.join(made)))
+        if skipped:
+            print('  飛ばした: ' + ' '.join(skipped))
+    return made
+
+
 if __name__ == '__main__':
-    print('口を開けた絵を作成中...')
+    print('口の差分を作成中...')
     build()
+    build_closed()
     if '--sheet' in sys.argv:
         sheet()

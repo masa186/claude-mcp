@@ -136,6 +136,45 @@ def chalk(v=0):
     return tail(y, (0.019,), (0.18,)) * 0.26
 
 
+def reveal(v=0):
+    """答え・否定が出る瞬間の「キラン」。倍音を整数比から少しずらして、
+    ベルにも金物にも寄りすぎない位置に置く。"""
+    n = int(SR * 0.55)
+    y = modal(n, (1180 + 30*v, 1790, 2410, 3260, 4380),
+                 (0.55, 0.40, 0.26, 0.15, 0.08),
+                 (5.0, 6.5, 8.5, 11.0, 15.0))
+    y += modal(n, (590, 880), (0.22, 0.14), (4.0, 5.5))     # 下の芯
+    y *= env(n, 0.002, 0.9)
+    return tail(lowpass(y, 6200), (0.031, 0.057, 0.092), (0.30, 0.20, 0.12)) * 0.40
+
+
+def impact(v=0):
+    """オチの一撃。ドンより重く、余韻を長めに取る。"""
+    n = int(SR * 0.70)
+    t = np.arange(n) / SR
+    f = (150 + 14*v) * np.exp(-t * 11) + 52
+    sub = np.sin(2 * math.pi * np.cumsum(f) / SR) * np.exp(-t * 4.2)
+    body = modal(n, (240, 390, 620, 1050), (0.5, 0.34, 0.22, 0.12), (9, 13, 18, 26))
+    hit = lowpass(bandnoise(int(SR*0.07), 700, 2600, 0.45, 41 + v), 2400)
+    y = sub * 0.62 + body * 1.1
+    y[:len(hit)] += hit * 0.34
+    y = lowpass(y * env(n, 0.002, 1.2), 4200)
+    return tail(y, (0.034, 0.061, 0.098), (0.36, 0.24, 0.15)) * 0.55
+
+
+def rise(v=0):
+    """溜め。次に何か出るぞ、と思わせる上昇音。"""
+    n = int(SR * 0.85)
+    t = np.arange(n) / SR
+    f = 260 + 520 * (t / t[-1]) ** 1.7
+    y = np.sin(2 * math.pi * np.cumsum(f) / SR) * 0.5
+    y += np.sin(2 * math.pi * np.cumsum(f * 1.5) / SR) * 0.22
+    y += lowpass(bandnoise(n, 900, 3400, 0.35, 53 + v), 3600) * 0.5
+    y *= np.linspace(0, 1, n) ** 1.4
+    y[-int(SR*0.06):] *= np.linspace(1, 0, int(SR*0.06))
+    return tail(lowpass(y, 5200), (0.026, 0.048), (0.22, 0.13)) * 0.34
+
+
 VARIANTS = 3          # 毎回まったく同じ波形だと機械っぽく聞こえる
 
 SE_DIR = os.path.join(HERE, 'se')
@@ -146,8 +185,11 @@ SE_DIR = os.path.join(HERE, 'se')
 #   se/don.wav     章の切り替わり・重要な答え
 #   se/tap.wav     指し棒で黒板を叩く
 #   se/rise.wav    溜め（ズームの前）
+#   se/reveal.wav  答え・否定が出る（キラン）
+#   se/impact.wav  オチの一撃
 REAL = dict(whoosh='whoosh.wav', chalk='pop.wav', don='don.wav',
-            ton='tap.wav', rise='rise.wav')
+            ton='tap.wav', rise='rise.wav',
+            reveal='reveal.wav', impact='impact.wav')
 
 
 def load_wav(path):
@@ -166,7 +208,8 @@ def load_wav(path):
 
 # 役割ごとの最大の長さ。効果音は0.75秒に1回鳴るので、長い音をそのまま
 # 重ねると濁る。頭を残して尻をフェードで落とす。
-MAXLEN = dict(whoosh=0.70, chalk=0.45, don=1.20, ton=0.50, rise=1.60)
+MAXLEN = dict(whoosh=0.70, chalk=0.45, don=1.20, ton=0.50, rise=1.60,
+              reveal=1.10, impact=1.40)
 
 
 def trim(x, sec):
@@ -260,7 +303,9 @@ def build_track(dur):
     banks = {}
     used_real = []
     for k, f, pk in (('whoosh', whoosh, 0.36), ('don', don, 0.50),
-                     ('ton', ton, 0.55), ('chalk', chalk, 0.26)):
+                     ('ton', ton, 0.55), ('chalk', chalk, 0.26),
+                     ('reveal', reveal, 0.42), ('impact', impact, 0.58),
+                     ('rise', rise, 0.40)):
         rs = real_se(k)
         if rs is not None:
             bank = []
@@ -358,11 +403,12 @@ def main():
     print('  ドン（章の切替）   %d' % c['don'])
     print('  トン（棒で叩く）   %d' % c['ton'])
     real = dict(getattr(build_track, 'used_real', []))
-    名 = dict(whoosh='シュッ', chalk='ポン', don='ドン', ton='コツ')
+    名 = dict(whoosh='シュッ', chalk='ポン', don='ドン', ton='コツ',
+              reveal='キラン', impact='ドンッ', rise='溜め')
     if real:
         print('  本物の音を使用: ' + '  '.join(
             名.get(k, k) + ('（%d種）' % n if n > 1 else '') for k, n in real.items()))
-    if len(real) < 4:
+    if len(real) < len(名):
         print('  合成音のまま: ' + '  '.join(名[k] for k in 名 if k not in real))
     print('  -> se.wav')
 

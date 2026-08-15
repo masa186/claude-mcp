@@ -24,11 +24,16 @@ HTS = '/usr/share/hts-voice/nitech-jp-atr503-m001/nitech_jp_atr503_m001.htsvoice
 # -a  声道の長さ。小さいほど細く若い声
 # -fm 音の高さ（半音）
 # -jf 抑揚
+# 青山龍星は低くて太い男声。Open JTalk でそこに寄せるなら、
+# 声道を長く（-a を大きく）して、音の高さを下げる（-fm を負に）。
 PRESETS = {
-    'otter':  dict(a=0.47, fm=2.2, jf=1.35),
+    'ryusei': dict(a=0.61, fm=-4.0, jf=1.15),   # 低く太い（青山龍星寄り。既定）
+    'deep':   dict(a=0.58, fm=-2.5, jf=1.25),   # 低め。少し抑揚を残す
+    'otter':  dict(a=0.47, fm=2.2, jf=1.35),    # 前の声（軽い）
     'calm':   dict(a=0.54, fm=0.0, jf=1.00),
     'bright': dict(a=0.42, fm=4.0, jf=1.55),
 }
+DEFAULT = 'ryusei'
 
 # open_jtalk の -r は 1.0 が「かなりゆっくり」。実測で 1.75 前後が
 # 日本語のふつうのナレーション速度（1秒あたり9〜10モーラ）になる。
@@ -123,7 +128,7 @@ def from_voicevox(shots):
 
 # ------------------------------------------------------------- 割り付け
 
-def collect(shots, preset='otter'):
+def collect(shots, preset=DEFAULT):
     """各行の音を用意する。VOICEVOX があればそちら、無ければ合成。"""
     vv = from_voicevox(shots)
     if vv is not None:
@@ -235,13 +240,13 @@ def dump_text(shots, path):
 def demo(path=None):
     import sound
     path = path or os.path.join(HERE, 'voice_demo.wav')
-    txt = '飛行機は、空気を下に殴って進んでる。これが揚力。'
+    txt = '飛行機は、空気を下に殴って飛んでる。普通にすごくね。'
     gap = np.zeros(int(SR * 0.6))
     parts = []
-    for name in ('otter', 'calm', 'bright'):
+    for name in ('ryusei', 'deep', 'otter'):
         parts += [_synth(txt, NATURAL, PRESETS[name]), gap]
     sound.write_wav(path, np.concatenate(parts))
-    print('聞き比べ → %s（otter / calm / bright の順）' % path)
+    print('聞き比べ → %s（ryusei / deep / otter の順）' % path)
 
 
 if __name__ == '__main__':

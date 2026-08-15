@@ -41,17 +41,17 @@ render.SHOTS = [
       fig=('wingrace/', 1.02, 'hold'), add='上の空気が{速いから}',
       say='上の面は道が長いから、空気が速くなる。'),
  dict(dur=1.8, kind='stage', scene='wrong', face='serious', beat=True,
-      add=dict(text='{×} これ、ウソ', color=CRIMSON),
+      se='reveal', add=dict(text='{×} これ、ウソ', color=CRIMSON),
       say='これ、ウソです。'),
 
  # ---- 一番強い反証。ここが「え、たしかに」の山
  dict(sec='proof', dur=1.6, kind='face', face='point', se='whoosh',
       tele='だってこれ、{どう説明すんの}？'),
  dict(dur=2.2, kind='stage', scene='inv', face='explain',
-      fig=('invert/', 1.02, None), add='{逆さま}でも飛ぶ',
+      se='rise', fig=('invert/', 1.02, None), add='{逆さま}でも飛ぶ',
       say='戦闘機、ひっくり返ったままでも飛ぶ。'),
  dict(dur=2.0, kind='stage', scene='inv', face='serious',
-      add=dict(text='形が理由なら{落ちるはず}', color=CRIMSON),
+      se='reveal', add=dict(text='形が理由なら{落ちるはず}', color=CRIMSON),
       say='翼の形が理由なら、落ちるはずやろ。'),
 
  # ---- 本当の理由へ。体の記憶から入る
@@ -61,7 +61,7 @@ render.SHOTS = [
       fig=('hand/', 1.02, 'hold'), add='手を{下}に傾ける',
       say='車の窓から手を出して、手のひらを下に傾ける。'),
  dict(dur=1.9, kind='stage', scene='hand', face='explain', beat=True,
-      add=dict(text='{腕が上に}！', color=MUSTARD),
+      se='reveal', add=dict(text='{腕が上に}！', color=MUSTARD),
       say='腕、上にぐっと持っていかれるやろ。'),
 
  # ---- 橋。「同じ」は1回だけ
@@ -84,7 +84,7 @@ render.SHOTS = [
 
  # ---- オチ
  dict(sec='punch', dur=0.9, kind='title', title='つまり'),
- dict(dur=2.2, kind='board', se='don',
+ dict(dur=2.2, kind='board', se='impact',
       board=[dict(text='空気を\n下に殴ってる', size=156, color=MUSTARD)],
       say='飛行機は、空気を下に殴って飛んでる。'),
  dict(dur=1.6, kind='face', face='proud', tele='{普通にすごくね？}'),

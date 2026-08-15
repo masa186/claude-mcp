@@ -188,9 +188,12 @@ def section_times():
     return out
 
 
+# 表情名 → 「口を閉じた絵」。クチパクの土台になるので、必ず閉じた口を指す。
+# char_point（顔が右を向いた絵）は口だけの差分が作れないので使わない。
+# 代わりに char_point_open（正面・指さし）の口を閉じた版を mklips.py が作る。
 FACE_FILES = dict(surprise='char_surprise.png', explain='char_explain.png',
                   serious='char_serious.png', proud='char_proud.png',
-                  point='char_point.png', arms='char_arms.png')
+                  point='char_point_closed.png', arms='char_arms_closed.png')
 
 # クチパク用の「口だけ開けた絵」。表情名 → ファイル名。
 # mklips.py が char_arms の口を移植して作る（無ければ静かに口を閉じたまま）。
@@ -198,7 +201,9 @@ FACE_FILES = dict(surprise='char_surprise.png', explain='char_explain.png',
 MOUTH_FILES = dict(explain='char_explain_mouth.png',
                    proud='char_proud_mouth.png',
                    serious='char_serious_mouth.png',
-                   surprise='char_surprise_mouth.png')
+                   surprise='char_surprise_mouth.png',
+                   point='char_point_open.png',      # もらった絵をそのまま使う
+                   arms='char_arms.png')
 # まばたきと重なったとき用
 BLINK_MOUTH = dict(explain='char_blink_mouth.png')
 
