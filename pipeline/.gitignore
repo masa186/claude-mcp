@@ -24,6 +24,8 @@ assets/[0-9]*_*.png
 clips/airflow/
 clips/airlift/
 clips/wingrace/
+clips/aoa/
+clips/hand/
 
 # 元の動画。大きいので置かない（prep_clips.py で連番を作り直せる）
 clips/src*.mp4
