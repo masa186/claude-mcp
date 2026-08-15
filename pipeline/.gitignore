@@ -26,6 +26,7 @@ clips/airlift/
 clips/wingrace/
 clips/aoa/
 clips/hand/
+clips/same/
 
 # 元の動画。大きいので置かない（prep_clips.py で連番を作り直せる）
 clips/src*.mp4
