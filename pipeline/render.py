@@ -789,13 +789,16 @@ def apply_zoom(im, s, t):
 #   補足 … 字幕（下・小さめ。音声の書き起こしであって見出しではない）
 #   目印 … 章タイトル（左上に出しっぱなし）
 
-STAGE_BOX  = (0.100, 0.130, 0.900, 0.560)   # 図の置き場（画面比）
-STAGE_BOT  = 0.700                          # 積み上がる行の下端（ここは動かさない）
-STAGE_LH   = 114                            # 行の高さ（px）
-STAGE_SIZE = 84
+STAGE_BOX  = (0.085, 0.115, 0.915, 0.545)   # 図の置き場（画面比）
+STAGE_BOT  = 0.760                          # 積み上がる行の下端（ここは動かさない）
+STAGE_LH   = 148                            # 行の高さ（px）
+STAGE_SIZE = 112                            # 短い言葉を大きく。読ませない
 STAGE_MAX  = 3                              # 積むのは3行まで。それ以上は古いのを捨てる
-CHAR_STAGE = dict(w=0.40, cx=0.815, foot=1.035)   # 右下。下端で切れる
-SUB_Y      = 0.792                          # 字幕の位置
+CHAR_STAGE = dict(w=0.34, cx=0.845, foot=1.075)   # 右下。下端で切れる
+# 画面下の長文テロップは廃止した。短尺の視聴者は2行以上出た時点で読むのをやめる。
+# 細かい説明は全部ナレーションに持たせて、画面には短い言葉だけを大きく出す。
+SUB_ON     = False
+SUB_Y      = 0.792                          # 字幕の位置（SUB_ON のときだけ）
 SUB_SIZE   = 50
 CHAP_XY    = (0.058, 0.043)
 CHAP_SIZE  = 52
@@ -840,6 +843,8 @@ def draw_chapter(canvas, s):
 
 def draw_sub(canvas, s):
     """字幕。見出しではないので小さく、下に置く。"""
+    if not SUB_ON:
+        return
     txt = (s.get('sub') or s.get('say') or '').replace('{', '').replace('}', '')
     if not txt:
         return
@@ -908,6 +913,7 @@ def stage_shot(s, t):
     # ここまで（背景と図）だけを寄せる。文字とカワウソは動かさない。
     # 参考動画はレイアウトが1pxも動かないので、視聴者が毎回探さなくて済む。
     frame = apply_zoom(frame, s, t)
+    draw_char_small(frame, s, t)
 
     # 結論の行は消さずに積む。1枚の画面の中で話が進んでいく形にする
     rows = [(x, x['add']) for x in seq if x.get('add')][-STAGE_MAX:]
@@ -931,7 +937,6 @@ def stage_shot(s, t):
         frame.alpha_composite(lay)
         y += STAGE_LH
 
-    draw_char_small(frame, s, t)
     draw_sub(frame, s); draw_chapter(frame, s)
     return frame.convert('RGB')
 
