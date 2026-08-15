@@ -234,7 +234,7 @@ def build():
         z = ZOOM_CYCLE[i % len(ZOOM_CYCLE)]
         # 文字のあるショットで横に振ると、端の字が切れる。
         # 寄り／引きなら倍率が変わり続けるので、切らずに動きだけ稼げる。
-        if s['kind'] in ('board', 'wide') and z in ('left', 'right'):
+        if s['kind'] in ('board', 'wide', 'stage') and z in ('left', 'right'):
             z = 'in' if z == 'left' else 'out'
         s.setdefault('zoom', z)
         t += s['dur']
@@ -758,7 +758,7 @@ def apply_zoom(im, s, t):
     # 寄りと振りの幅は、そのショットに文字があるかで変える。
     # 1.34倍で端まで振ると、見えるのは元の横幅の 53% しかない。
     # 黒板の文字はそこからはみ出して切れるので、文字ショットは控えめにする。
-    text_shot = s['kind'] in ('board', 'wide')
+    text_shot = s['kind'] in ('board', 'wide', 'stage')
     Z, PAN = (1.26, 0.30) if text_shot else (1.34, 0.84)
     drift = (0.03 if text_shot else 0.06) * \
         math.sin(2*math.pi*((t - s['t']) / max(s['dur'],.01)) * 0.5)
@@ -775,9 +775,173 @@ def apply_zoom(im, s, t):
 
 # ------------------------------------------------------------- 1フレーム
 
+# ------------------------------------------------------------- 舞台（stage）
+#
+# 336万再生の長尺解説を実測したところ、1秒ごとの画面変化はこうだった:
+#   ほぼ同じ 92〜96%  /  一部だけ変わる 3〜5%  /  全面入れ替え 0〜3%
+# つまりあの見やすさは「よく動くから」ではない。レイアウトが動かないまま
+# 中身が1つずつ足されていくから、視聴者は毎回どこを見るか探さなくていい。
+#
+# こちらは短尺なので止めはしないが、役割の分け方はそのまま持ってくる:
+#   主役 … 画面中央の図
+#   補助 … 図の下に1行ずつ積み上がる結論
+#   案内 … カワウソ（右下に小さく固定。主役にしない）
+#   補足 … 字幕（下・小さめ。音声の書き起こしであって見出しではない）
+#   目印 … 章タイトル（左上に出しっぱなし）
+
+STAGE_BOX  = (0.100, 0.130, 0.900, 0.560)   # 図の置き場（画面比）
+STAGE_BOT  = 0.700                          # 積み上がる行の下端（ここは動かさない）
+STAGE_LH   = 114                            # 行の高さ（px）
+STAGE_SIZE = 84
+STAGE_MAX  = 3                              # 積むのは3行まで。それ以上は古いのを捨てる
+CHAR_STAGE = dict(w=0.40, cx=0.815, foot=1.035)   # 右下。下端で切れる
+SUB_Y      = 0.792                          # 字幕の位置
+SUB_SIZE   = 50
+CHAP_XY    = (0.058, 0.043)
+CHAP_SIZE  = 52
+CHAPTERS   = {}                             # sec名 → 章タイトル（各話で入れる）
+
+
+def scene_shots(s):
+    """同じ scene の、先頭から自分までのショット。ここまでに出た要素が舞台に残る。"""
+    sc = s.get('scene')
+    if not sc:
+        return [s]
+    out = []
+    for x in SHOTS:
+        if x.get('scene') == sc:
+            out.append(x)
+            if x is s:
+                break
+    return out
+
+
+def chapter_of(s):
+    """自分より前（自分を含む）で最後に指定された sec の章タイトル。"""
+    lab = None
+    for x in SHOTS:
+        if x.get('sec') in CHAPTERS:
+            lab = CHAPTERS[x['sec']]
+        if x is s:
+            break
+    return lab
+
+
+def draw_chapter(canvas, s):
+    lab = chapter_of(s)
+    if not lab:
+        return
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    dl = ImageDraw.Draw(lay)
+    dl.text((int(W*CHAP_XY[0]), int(H*CHAP_XY[1])), lab, font=tfont(CHAP_SIZE),
+            fill=CHALK, stroke_width=4, stroke_fill=(24, 42, 36, 220))
+    canvas.alpha_composite(lay)
+
+
+def draw_sub(canvas, s):
+    """字幕。見出しではないので小さく、下に置く。"""
+    txt = (s.get('sub') or s.get('say') or '').replace('{', '').replace('}', '')
+    if not txt:
+        return
+    fnt = tfont(SUB_SIZE)
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    dl = ImageDraw.Draw(lay)
+    cx, maxw = int(W*0.44), int(W*0.80)
+    rows, cur = [], ''
+    for ch in txt:
+        if dl.textlength(cur + ch, font=fnt) > maxw and len(rows) < 1:
+            rows.append(cur); cur = ''
+        cur += ch
+    rows.append(cur)
+    y = int(H*SUB_Y)
+    for r in rows[:2]:
+        dl.text((cx, y), r, font=fnt, fill=WHITE, anchor='mm',
+                stroke_width=5, stroke_fill=BLACK)
+        y += int(SUB_SIZE*1.32)
+    canvas.alpha_composite(lay)
+
+
+def draw_char_small(canvas, s, t):
+    """案内役としてのカワウソ。右下に小さく、下端で切れる位置に置く。
+    主役は図なので、ここは動かしすぎない。"""
+    img = char_img(s, t)
+    local = t - s['t']
+    br = 1.0 + 0.008 * (0.5 - 0.5*math.cos(2*math.pi*(t % 2.6)/2.6))
+    e = ease_out(min(1.0, local / 0.16))
+    tw = int(W * CHAR_STAGE['w'] * br)
+    th = int(img.height * tw / img.width)
+    im = img.resize((max(tw, 2), max(th, 2)), Image.LANCZOS)
+    canvas.alpha_composite(im, (int(W*CHAR_STAGE['cx']) - im.width//2,
+                                int(H*CHAR_STAGE['foot']) - im.height + int(26*(1-e))))
+
+
+def stage_shot(s, t):
+    frame = bg_board().copy()
+    seq = scene_shots(s)
+    local = t - s['t']
+    a = (int(W*STAGE_BOX[0]), int(H*STAGE_BOX[1]),
+         int(W*STAGE_BOX[2]), int(H*STAGE_BOX[3]))
+
+    # 図は scene のあいだ出しっぱなし。新しい fig が来たらそこで差し替わる
+    figspec, fig_at = None, 0.0
+    for x in seq:
+        if x.get('fig'):
+            figspec, fig_at = x['fig'], x['t']
+    if figspec:
+        name, scale, anim = figspec
+        img = (seq_frame(name, t - fig_at, anim == 'hold') if name.endswith('/')
+               else load(name))
+        if img is not None:
+            tw = min(int((a[2]-a[0]) * scale), int(W*0.79))
+            th = int(img.height * tw / img.width)
+            if th > a[3]-a[1]:
+                th = a[3]-a[1]; tw = int(img.width * th / img.height)
+            f = img.resize((tw, th), Image.LANCZOS)
+            if anim and anim != 'hold':
+                f = animate_fig(f, anim, t - fig_at)
+            p = wipe(LEADIN, t - fig_at, 0.20)
+            if p < 1:
+                f.putalpha(f.getchannel('A').point(lambda v: int(v*p)))
+            frame.alpha_composite(f, ((a[0]+a[2])//2 - tw//2,
+                                      (a[1]+a[3])//2 - th//2))
+
+    # ここまで（背景と図）だけを寄せる。文字とカワウソは動かさない。
+    # 参考動画はレイアウトが1pxも動かないので、視聴者が毎回探さなくて済む。
+    frame = apply_zoom(frame, s, t)
+
+    # 結論の行は消さずに積む。1枚の画面の中で話が進んでいく形にする
+    rows = [(x, x['add']) for x in seq if x.get('add')][-STAGE_MAX:]
+    # 下から積む。新しい行がいつも同じ高さに出るので、視線が迷わない
+    y = int(H*STAGE_BOT) - STAGE_LH * (len(rows) - 1)
+    d = ImageDraw.Draw(frame)
+    for x, item in rows:
+        it = item if isinstance(item, dict) else dict(text=item)
+        size = fit_size(it['text'], it.get('size', STAGE_SIZE), int(W*0.84))
+        newest = (x is s)
+        p = wipe(LEADIN, t - x['t'], 0.22) if newest else 1.0
+        if p <= 0:
+            continue
+        lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        dl = ImageDraw.Draw(lay)
+        slide = int(40 * (1-p)**2)
+        rich(dl, W//2 - slide, y, it['text'], font(size),
+             it.get('color', CHALK), MUSTARD, anchor_c=True)
+        al = int(255 * (1.0 if newest else 0.52) * min(1.0, p*1.4))
+        lay.putalpha(lay.getchannel('A').point(lambda v: v*al//255))
+        frame.alpha_composite(lay)
+        y += STAGE_LH
+
+    draw_char_small(frame, s, t)
+    draw_sub(frame, s); draw_chapter(frame, s)
+    return frame.convert('RGB')
+
+
 def render_frame(t):
     s = shot_at(t)
     k = s['kind']
+
+    if k == 'stage':
+        return stage_shot(s, t)
 
     if k == 'title':
         frame = title_shot(s, t)

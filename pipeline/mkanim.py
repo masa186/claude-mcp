@@ -296,6 +296,119 @@ def dump(name, fn):
     print('  %-12s %d枚  %dx%d' % (name, N, W, H))
 
 
+
+# ---------------------------------------------------------------- 迎え角
+
+AOA_SHOW = 0.26             # 図では迎え角を誇張する。実物の5度は画面上で見えない
+
+
+def f_aoa(i):
+    """翼が「少し上を向いている」ことだけを見せる図。
+    ここを言葉で済ませると、次の『なぜ下に曲がるのか』が宙に浮く。"""
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    e = 1 - (1 - min(1.0, i / (N * 0.5))) ** 3      # 水平から起こしていく
+
+    global AOA
+    keep = AOA
+    AOA = -AOA_SHOW * e                              # 前縁を上げる（符号が逆）
+    cy = CY + 40
+
+    # 進む向きの基準線。これが無いと「傾いている」が比べられない
+    dashed(d, 110, cy, 830, cy, DIM, 4, 18, 150)
+    label(d, 118, cy + 44, '進む向き', 38, DIM, 210, anchor='lm')
+    arrow(d, 740, cy, 830, cy, DIM, 6, 24, 150)
+
+    # 傾きの目印（翼弦線）
+    x0, y0 = LE, cy
+    x1, y1 = TE, cy + (TE - LE) * AOA
+    line(d, [(x0, y0), (x1, y1)], GOLD, 5, int(220 * e))
+
+    dy = 40
+    draw_wing(d)
+    AOA = keep
+
+    if e > 0.4:
+        al = int(255 * (e - 0.4) / 0.6)
+        label(d, 470, cy - 190, '少しだけ上を向いている', 46, GOLD, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+# ---------------------------------------------------------------- 車の窓の手
+
+def capsule(d, x1, y1, x2, y2, w, color, alpha=255):
+    """丸い端の棒。腕や手のひらはこれで描くと、板に見えない。"""
+    line(d, [(x1, y1), (x2, y2)], color, w, alpha)
+    dot(d, x1, y1, w / 2, color, alpha)
+    dot(d, x2, y2, w / 2, color, alpha)
+
+
+def f_hand(i):
+    """車の窓から手を出したときの図。
+
+    翼の図とわざと同じ見た目にしてある（空気は左から右、当たって下へ、
+    赤い矢印は上へ）。同じ絵に見えることが、そのまま『同じことが起きている』
+    という説明になる。言葉で「あれと同じ」と言うより早い。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    e = 1 - (1 - min(1.0, i / (N * 0.5))) ** 3
+    up = 58 * e
+    ang = math.radians(-18 * e)
+
+    sy = 356 - up                       # 手首の高さ
+    hx, hy = 470, sy - 8
+    px = hx - 176 * math.cos(ang)
+    py = hy - 176 * math.sin(ang)
+    pmid = (px + hx) / 2
+
+    def path(y0, x):
+        """手のひらを過ぎたら下へ抜ける。翼の図と同じ考え方。"""
+        k = math.exp(-abs(y0 - py) / 130.0)
+        if x < px:
+            return y0
+        return y0 + (x - px) * 0.52 * k * e
+
+    # 曲がっていないときの高さ（比べる基準）
+    ref = 268
+    dashed(d, hx + 30, ref, 866, ref, DIM, 3, 15, 110)
+
+    # 空気
+    for k, y0 in enumerate((176, 216, 256, 300)):
+        for j in range(4):
+            s0 = ((i / N) * 1.15 + j / 4 + k * 0.06) % 1.0
+            x = -120 + s0 * (W + 240)
+            pts = [(x - 22 * m, path(y0, x - 22 * m)) for m in range(7)]
+            if pts[0][0] < -60 or pts[0][0] > W + 60:
+                continue
+            def inside_window(q):
+                return 706 < q[0] < 888 and 140 < q[1] < 472
+            for m in range(6):
+                if inside_window(pts[m]) or inside_window(pts[m+1]):
+                    continue                      # 窓の中を空気が突き抜けて見えるのを防ぐ
+                al = int(230 * (1 - m / 6) ** 1.4)
+                line(d, [pts[m], pts[m+1]], CHALK, 9 - m * 0.9, al)
+            if not inside_window(pts[0]):
+                dot(d, pts[0][0], pts[0][1], 4.6, CHALK, 235)
+
+    # 車の窓（右）。腕より先に描いて、腕が手前に来るようにする
+    d.rounded_rectangle([716 * SS, 150 * SS, 878 * SS, 462 * SS], 30 * SS,
+                        outline=DIM + (200,), width=9 * SS)
+    label(d, 797, 116, '車の窓', 38, DIM, 210)
+
+    # 腕と手のひら
+    capsule(d, 786, sy + 18, hx, hy, 58, CHALK)
+    capsule(d, hx + 14, hy + 4, px, py, 50, CHALK)
+
+    # 下へ抜ける空気と、持っていかれる腕
+    if e > 0.25:
+        al = int(255 * min(1.0, (e - 0.25) / 0.35))
+        arrow(d, 612, 452, 748, 528, GOLD, 13, 38, al)
+        arrow(d, pmid, py - 58, pmid, py - 208, HEAT, 22, 52, al)
+        label(d, pmid, py - 250, '腕が上へ', 46, HEAT, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
 ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets')
 
 
@@ -313,5 +426,7 @@ if __name__ == '__main__':
     dump('wingrace', f_wingrace)
     dump('airflow', lambda i: f_airflow(i, lift=False))
     dump('airlift', lambda i: f_airflow(i, lift=True))
+    dump('aoa', f_aoa)
+    dump('hand', f_hand)
     stills()
     print('完了 → ' + OUT)

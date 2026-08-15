@@ -224,7 +224,7 @@ def se_events():
             ev.append((s['t'] + 0.02, 'don'))         # 章が変わる
         elif s.get('fig') and str(s['fig'][0]).endswith('/'):
             ev.append((s['t'] + 0.02, 'whoosh'))      # 動きのある図が始まる
-        elif s.get('fig') or s.get('board'):
+        elif s.get('fig') or s.get('board') or s.get('add'):
             ev.append((s['t'] + render.LEADIN, 'chalk'))   # 図や文字が出る＝ポン
 
         if s.get('beat'):

@@ -23,7 +23,7 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 # tele … 画面に出すテロップ（黒板が主役のショットでは自動で出ない）
 # say  … ナレーションだけの台詞。画面には出さない
 render.SHOTS = [
- # ---- フック
+ # ---- フック（ここだけカワウソを主役にする）
  dict(sec='hook', dur=1.8, kind='face', face='surprise', se='don',
       tele='bro、{飛行機ってなんで飛ぶ}？'),
  dict(dur=1.0, kind='title', title='学校の説明\n実は{間違い}'),
@@ -34,46 +34,41 @@ render.SHOTS = [
  dict(dur=1.8, kind='screen', clip='plane2', face='explain', roll=False,
       tele='それが浮いてる。'),
 
- # ---- 学校の説明は成り立たない
- dict(sec='how', dur=1.4, kind='wide', face='serious',
-      board=[dict(text='学校の説明', size=118)], tele='学校ではこう習う。'),
- # 図を止めたまま置くと「矢印がある」としか読めなかったので、
- # 上下の空気を実際に走らせて、着かないところまで見せる
- dict(dur=2.4, kind='board', fig=('wingrace/', 1.15, 'hold'),
-      board=[dict(text='上と下、同時に着く？', size=94)],
+ # ---- 学校の説明は成り立たない（1つの舞台の上で話が進む）
+ dict(sec='how', dur=1.5, kind='stage', scene='wrong', face='serious',
+      fig=('wingrace/', 1.02, 'hold'), say='学校ではこう習う。'),
+ dict(dur=2.6, kind='stage', scene='wrong', face='serious',
+      add='上と下、{同時に着く}？',
       say='上と下に分かれた空気が、後ろで同時に出会うから浮く、と。'),
- dict(dur=1.5, kind='board',
-      board=[dict(text='実際は\n上が先に着く', size=124, color=CRIMSON)],
-      say='実際は、上のほうが先に着く。'),
- dict(dur=1.3, kind='face', face='explain', tele='この説明、{成り立たない}。'),
+ dict(dur=1.8, kind='stage', scene='wrong', face='serious',
+      add=dict(text='実際は{上}が先に着く', color=CRIMSON),
+      say='でも実際は、上のほうが先に着く。'),
+ dict(dur=1.4, kind='face', face='explain', tele='この説明、{成り立たない}。'),
 
- # ---- ここで体の記憶に繋げる（前の版で抜けていたところ）
+ # ---- 体の記憶に繋げる
  dict(sec='example', dur=1.9, kind='face', face='point', se='whoosh',
       tele='{車の窓}から手、出したことある？'),
- dict(dur=1.6, kind='board',
-      board=[dict(text='手を{下}に傾ける', size=112)],
+ dict(dur=1.8, kind='stage', scene='hand', face='explain',
+      fig=('hand/', 1.02, 'hold'), add='手を{下}に傾ける',
       say='手のひらを、少し下に傾ける。'),
- dict(dur=1.7, kind='board', beat=True,
-      board=[dict(text='腕が{上}に\n持っていかれる', size=120, color=MUSTARD)],
+ dict(dur=1.8, kind='stage', scene='hand', face='explain', beat=True,
+      add=dict(text='腕が{上}に持っていかれる', color=MUSTARD),
       say='そうすると、腕が上にぐっと持っていかれる。'),
  dict(dur=1.4, kind='face', face='explain', tele='{あれと同じ}ことしてる。'),
 
- # ---- 翼に戻す
+ # ---- 翼に戻す（ここが本題。舞台を替えずに図と結論を1つずつ足す）
  dict(dur=2.0, kind='screen', clip='wing', face='point',
       tele='翼も、やってることは同じ。'),
- # 「なぜ空気が下に曲がるのか」を飛ばすと、次の反作用が宙に浮く
- dict(dur=1.6, kind='board',
-      board=[dict(text='翼は少し\n上を向いてる', size=118)],
+ dict(sec='lift', dur=1.8, kind='stage', scene='lift', face='explain',
+      fig=('aoa/', 1.02, 'hold'), add='翼は少し{上}を向いてる',
       say='翼は、ほんの少しだけ上を向いている。'),
- dict(dur=2.4, kind='board', fig=('airflow/', 1.15, None),
-      board=[dict(text='空気が{下}へ曲がる', size=104)],
-      say='ぶつかった空気は、翼に沿って下へ曲がって出ていく。'),
- dict(dur=2.4, kind='board', fig=('airlift/', 1.15, None), beat=True, beat_at=0.6,
-      board=[dict(text='だから翼は{上}へ', size=104, color=MUSTARD)],
+ dict(dur=2.4, kind='stage', scene='lift', face='explain',
+      fig=('airflow/', 1.02, None), add='空気が{下}へ曲がる',
+      say='だからぶつかった空気は、翼に沿って下へ曲がって出ていく。'),
+ dict(dur=2.4, kind='stage', scene='lift', face='proud', beat=True, beat_at=0.6,
+      fig=('airlift/', 1.02, None),
+      add=dict(text='だから翼は{上}へ', color=MUSTARD),
       say='空気を下に押した分だけ、翼は上に押し返される。'),
- dict(dur=1.7, kind='board',
-      board=['空気を{下へ}', '翼が{上へ}'],
-      say='空気が下、翼が上。'),
 
  # ---- オチ
  dict(sec='punch', dur=1.6, kind='face', face='proud', se='don',
@@ -91,6 +86,12 @@ render.SHOTS = [
       board=[dict(text='食べ物を\n温めてない', size=130, color=CRIMSON)],
       say='あれ、食べ物を温めてない。'),
 ]
+
+# 章タイトルは左上に出しっぱなしにする。参考動画はこれで「いまどの話か」を
+# 常に示していた。ショットが変わっても迷子にならない。
+render.CHAPTERS = {'hook': '', 'setup': '飛行機は浮いている',
+                   'how': '学校の説明', 'example': '手を出してみる',
+                   'lift': 'なぜ浮くのか', 'punch': '', 'next': '次回'}
 render.DURATION = render.build()
 render.OUT = FRAMES
 
