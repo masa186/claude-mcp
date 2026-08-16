@@ -338,7 +338,20 @@ def se_events():
             at = s['t'] + render.LEADIN
             if not any(abs(at - e[0]) < 0.10 for e in ev):
                 ev.append((at, 'pa'))
+
+        # 長いショットの途中に、小さい音をひとつ置く。
+        # 40本の記録では「間を持たせる時」に音を置くのが15本。頻度の最多帯は
+        # 1.1〜1.5秒に1回で、こちらはカットに音を置いてもまだ1.8秒に1回だった。
+        # 足りないぶんは、頭に1発しか無い長いショットの真ん中に入る。
+        # 台本を書き換えても自動で追従するように、秒数は手で書かない。
+        if s['dur'] >= FILL_MIN:
+            at = s['t'] + s['dur'] * 0.52
+            if not any(abs(at - e[0]) < 0.55 for e in ev):
+                ev.append((at, 'pa', 0.5))      # 主張しない音量で
     return sorted(ev)
+
+
+FILL_MIN = 2.3        # これより長いショットは、途中にもう1つ音を置く
 
 
 def build_track(dur):
@@ -377,9 +390,11 @@ def build_track(dur):
         else:
             banks[k] = [shape(f(v), peak=pk) for v in range(VARIANTS)]
     build_track.used_real = used_real
-    for j, (t, kind) in enumerate(se_events()):
+    for j, e in enumerate(se_events()):
+        t, kind = e[0], e[1]
+        g = e[2] if len(e) > 2 else 1.0        # 3つ目があれば音量。間を埋める音は小さく
         bank = banks[kind]
-        s = bank[j % len(bank)]                # 合成音のときは変種を巡回させる
+        s = bank[j % len(bank)] * g            # 合成音のときは変種を巡回させる
         i = int(SR * t)
         track[i:i+len(s)] += s[:max(0, len(track)-i)]
     peak = np.abs(track).max()
