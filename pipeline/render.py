@@ -737,14 +737,13 @@ def draw_telop(canvas, s, t=None):
             marked = rw
             for h in hi_set:
                 if h in marked: marked = marked.replace(h, '{'+h+'}')
-            plate(canvas, W//2, y + size//2,
-                  int(d.textlength(rw, font=fnt)), size)
+            plate(canvas, rich_box(W//2, y, marked, fnt, TELOP_STROKE, True, hifnt))
             rich(dl, W//2, y, marked, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
             canvas.alpha_composite(lay)
             y += int(size*1.34)
     else:
         y = int(H*ty)
-        plate(canvas, W//2, y + size//2, int(d.textlength(plain, font=fnt)), size)
+        plate(canvas, rich_box(W//2, y, txt, fnt, TELOP_STROKE, True, hifnt))
         lay = Image.new('RGBA', (W, H), (0,0,0,0))
         dl = ImageDraw.Draw(lay)
         rich(dl, W//2, y, txt, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
@@ -875,20 +874,52 @@ def pop(p):
     return 0.62 + 0.44 * e - 0.06 * math.sin(math.pi * e)
 
 
-PLATE_PAD = (34, 18)     # 板の余白（横, 縦）
+PLATE_PAD = (34, 14)     # 板の余白（横, 縦）
 PLATE_COL = (14, 20, 17, 150)
 
 
-def plate(canvas, cx, cy, w, h, alpha=1.0):
-    """文字の下に敷く半透明の板。背景が図でも実写でも読めるようにする。"""
-    if alpha <= 0:
+def rich_box(x, y, text, fnt, stroke=0, anchor_c=False, hifnt=None,
+             shadow=SHADOW):
+    """rich() が実際に紙に乗せる範囲を返す。板の位置合わせに使う。
+
+    フォントの「サイズ」と、実際に描かれる高さは別物。明朝の128ptで測ると
+    インクは y+31 から y+175 に乗る（高さ144）。サイズから cy = y+64 と
+    当てずっぽうに置くと、板が文字より40pxほど上にずれる。
+    強調語で別サイズを使うときは横幅も変わるので、そこも数え直す。
+    """
+    d = _measure
+    segs = parts(text)
+    hf = hifnt or fnt
+    total = sum(d.textlength(s, font=(hf if h else fnt)) for s, h in segs)
+    cx = x - total / 2 if anchor_c else x
+    box = None
+    for s, is_hi in segs:
+        f = hf if is_hi else fnt
+        dy = -(hf.size - fnt.size) * 0.42 if (is_hi and hifnt is not None) else 0
+        b = d.textbbox((cx, y + dy), s, font=f, stroke_width=stroke)
+        box = b if box is None else (min(box[0], b[0]), min(box[1], b[1]),
+                                     max(box[2], b[2]), max(box[3], b[3]))
+        cx += d.textlength(s, font=f)
+    if box is None:
+        return None
+    # 影は文字の右下に落ちる。板からはみ出すと浮いて見えるので中に入れる
+    return (box[0], box[1], box[2] + (shadow[0] if shadow else 0),
+            box[3] + (shadow[1] if shadow else 0))
+
+
+def plate(canvas, box, alpha=1.0):
+    """文字の下に敷く半透明の板。背景が図でも実写でも読めるようにする。
+
+    box は rich_box() が返した実際のインクの範囲。
+    """
+    if alpha <= 0 or box is None:
         return
+    x0, y0, x1, y1 = box
     lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    r = int(min(h, 90) * 0.34)
+    r = int(min(y1 - y0, 90) * 0.34)
     ImageDraw.Draw(lay).rounded_rectangle(
-        [cx - w//2 - PLATE_PAD[0], cy - h//2 - PLATE_PAD[1],
-         cx + w//2 + PLATE_PAD[0], cy + h//2 + PLATE_PAD[1]],
-        radius=r, fill=PLATE_COL)
+        [x0 - PLATE_PAD[0], y0 - PLATE_PAD[1],
+         x1 + PLATE_PAD[0], y1 + PLATE_PAD[1]], radius=r, fill=PLATE_COL)
     if alpha < 1:
         lay.putalpha(lay.getchannel('A').point(lambda v: int(v*alpha)))
     canvas.alpha_composite(lay)
@@ -1055,11 +1086,11 @@ def stage_shot(s, t):
         k = pop(p) if newest else 1.0
         fs = max(24, int(size * k))
         fnt = font(fs)
-        wid = _measure.textlength(''.join(x for x, _ in parts(it['text'])), font=fnt)
         # 字が大きくなるぶん上に伸ばして、行の中心を動かさない
         ly = y - int((fs - size) * 0.5)
         al = (1.0 if newest else 0.52) * min(1.0, p*1.4)
-        plate(frame, W//2, ly + fs//2, int(wid), fs, al * 0.85)
+        # 板は実際に描かれる範囲から作る。サイズから作ると文字とずれる
+        plate(frame, rich_box(W//2, ly, it['text'], fnt, 7, True), al * 0.85)
         lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         dl = ImageDraw.Draw(lay)
         rich(dl, W//2, ly, it['text'], fnt,
