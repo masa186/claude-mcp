@@ -28,6 +28,8 @@ HTS = '/usr/share/hts-voice/nitech-jp-atr503-m001/nitech_jp_atr503_m001.htsvoice
 # 声道を長く（-a を大きく）して、音の高さを下げる（-fm を負に）。
 PRESETS = {
     'ryusei': dict(a=0.61, fm=-4.0, jf=1.15),   # 低く太い（青山龍星寄り。既定）
+    # 決め台詞だけ上げる。全部同じ抑揚だと、どこが山か分からない
+    'punch':  dict(a=0.58, fm=-1.0, jf=1.70),
     'deep':   dict(a=0.58, fm=-2.5, jf=1.25),   # 低め。少し抑揚を残す
     'otter':  dict(a=0.47, fm=2.2, jf=1.35),    # 前の声（軽い）
     'calm':   dict(a=0.54, fm=0.0, jf=1.00),
@@ -137,8 +139,12 @@ def collect(shots, preset=DEFAULT):
     if not available():
         return {}
     print('  声: Open JTalk の合成（仮）')
-    p = PRESETS[preset]
-    return {i: _synth(t, NATURAL, p) for i, t in lines(shots)}
+    out = {}
+    for i, t in lines(shots):
+        # ショットに voice='punch' と書いてあれば、その行だけ別の声色にする
+        name = shots[i].get('voice', preset)
+        out[i] = _synth(t, NATURAL, PRESETS.get(name, PRESETS[preset]))
+    return out
 
 
 def fit(shots, audio):
