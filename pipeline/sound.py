@@ -202,6 +202,41 @@ def dodon(v=0):
     return y * 0.86
 
 
+def wind(dur, seed=7):
+    """実写の飛行機に敷く環境音。風とエンジンの唸り。
+
+    こちらの動画と伸びている14本を並べて見比べたところ、環境音（飛行機の音・
+    水の音・筆の音）を敷いているのが7本あり、こちらは1つも無かった。
+    効果音は「点」で鳴るが、環境音は「面」で鳴る。実写が出ている数秒だけでも
+    敷くと、絵と音が同じ場所にある感じが出る。
+    """
+    n = int(SR * dur)
+    rng = np.random.default_rng(seed)
+    # 風：低い帯のノイズ。ゆっくり強弱をつけないと「サー」という無機質な音になる
+    air = lowpass(rng.normal(0, 1, n), 900, 2)
+    t = np.arange(n) / SR
+    swell = 0.55 + 0.45 * np.sin(2*math.pi*0.23*t + 1.1) * np.sin(2*math.pi*0.07*t)
+    # エンジン：低い唸り。倍音を少しずらして単調な正弦に聞こえないようにする
+    hum = (np.sin(2*math.pi*78*t) * 0.5 + np.sin(2*math.pi*117.5*t) * 0.22
+           + np.sin(2*math.pi*163*t) * 0.10)
+    y = air * swell * 2.2 + hum * 0.30
+    # 出入りをなめらかに。切り替わりで「ブツッ」と入ると逆に安っぽい
+    f = int(SR * 0.28)
+    y[:f] *= np.linspace(0, 1, f)
+    y[-f:] *= np.linspace(1, 0, f)
+    m = np.abs(y).max()
+    return y * (0.11 / m) if m > 0 else y
+
+
+def amb_events():
+    """(開始秒, 長さ) … 環境音を敷く区間。実写が出ているショットだけ。"""
+    out = []
+    for s in render.SHOTS:
+        if s.get('amb', s.get('clip') is not None):
+            out.append((s['t'], s['dur'] + 0.35))   # 少し引っぱって次に繋ぐ
+    return out
+
+
 VARIANTS = 3          # 毎回まったく同じ波形だと機械っぽく聞こえる
 
 SE_DIR = os.path.join(HERE, 'se')
@@ -408,6 +443,10 @@ def build_track(dur):
         s = bank[j % len(bank)] * g            # 合成音のときは変種を巡回させる
         i = int(SR * t)
         track[i:i+len(s)] += s[:max(0, len(track)-i)]
+    for k, (t0, d) in enumerate(amb_events()):
+        y = wind(d, seed=7 + k)
+        i = int(SR * t0)
+        track[i:i+len(y)] += y[:max(0, len(track)-i)]
     peak = np.abs(track).max()
     if peak > 0.95:
         track *= 0.95 / peak
