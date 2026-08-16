@@ -88,7 +88,9 @@ render.SHOTS = [
       fig=('airflow/', 1.02, None), add='空気を{下}に押す',
       se_more=[(0.95, 'whoosh')],
       say='当たった空気を下に押し返す。'),
- dict(dur=1.9, kind='stage', scene='lift', face='proud',
+ # ここだけ3行。上向き→下に押す→上へ の3つが並んでいること自体が説明の
+ # 中身なので、2行にすると話の筋が画面から消える。
+ dict(dur=1.9, kind='stage', scene='lift', face='proud', stack=3,
       se='rise', fig=('airlift/', 1.02, None),
       se_more=[(1.05, 'reveal')],
       add=dict(text='翼は{上}へ', color=MUSTARD),
