@@ -191,7 +191,10 @@ if os.path.exists('bgm.mp3'):
     # 声が乗るぶんBGMを下げる。ここを下げないと台詞が埋もれる
     # 動画を見せたら「BGMが小さくて疾走感が出ていない」と言われた。
     # ナレーションを邪魔しない範囲で少し上げる。
-    filt.append("[%d:a]volume='%s':eval=frame[b]"
+    # 声も効果音もモノラルなので、そのまま混ぜると全体の左右差が3%しかなく
+    # 「BGMがモノラル」と聞こえる。BGMだけ広げると、真ん中に声、両脇に音楽、
+    # という置き方になって、音量を上げずに聞き取りやすさが上がる。
+    filt.append("[%d:a]extrastereo=m=1.8,volume='%s':eval=frame[b]"
                 % (idx, sound.volume_expr(0.64 if nar else 1.0)))
     labels.append('[b]')
 print('音: 効果音' + ('＋声(%s)' % nar if nar else '') +
