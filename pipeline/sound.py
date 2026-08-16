@@ -175,6 +175,33 @@ def rise(v=0):
     return tail(lowpass(y, 5200), (0.026, 0.048), (0.22, 0.13)) * 0.34
 
 
+def pa(v=0):
+    """文字が出る瞬間の「パッ」。伸びているショート40本のうち20本で聞こえた音。
+
+    黒板のチョーク音は、実際にチョークで書いている board のときだけ使う。
+    stage の行は板の上に浮いている字なので、擦れではなく破裂音のほうが合う。
+    ポンより短く、キランより低い。ここが空いていた。
+    """
+    n = int(SR * 0.14)
+    click = lowpass(bandnoise(int(SR*0.012), 1800, 6000, 0.5, 61 + v), 7000)
+    body = modal(n, (900 + 40*v, 1520, 2340), (0.55, 0.30, 0.16), (34, 46, 62))
+    y = body * env(n, 0.001, 2.6)
+    y[:len(click)] += click * 0.42
+    return tail(lowpass(y, 7000), (0.011, 0.021), (0.20, 0.11)) * 0.30
+
+
+def dodon(v=0):
+    """決め台詞の「ドドン」。40本の記録では、決め台詞に低音の二連打が15本、
+    キランが10本。こちらは一撃しか持っていなかったので足す。"""
+    gap = int(SR * 0.115)
+    a, b = impact(v), impact(v + 1)
+    n = gap + len(b)
+    y = np.zeros(n)
+    y[:len(a)] += a * 0.72          # 1発目は軽く
+    y[gap:gap+len(b)] += b          # 2発目で決める
+    return y * 0.86
+
+
 VARIANTS = 3          # 毎回まったく同じ波形だと機械っぽく聞こえる
 
 SE_DIR = os.path.join(HERE, 'se')
@@ -188,7 +215,7 @@ SE_DIR = os.path.join(HERE, 'se')
 #   se/reveal.wav  答え・否定が出る（キラン）
 #   se/impact.wav  オチの一撃
 REAL = dict(whoosh='whoosh.wav', chalk='pop.wav', don='don.wav',
-            ton='tap.wav', rise='rise.wav',
+            ton='tap.wav', rise='rise.wav', pa='pa.wav', dodon='dodon.wav',
             reveal='reveal.wav', impact='impact.wav')
 
 
@@ -209,7 +236,7 @@ def load_wav(path):
 # 役割ごとの最大の長さ。効果音は0.75秒に1回鳴るので、長い音をそのまま
 # 重ねると濁る。頭を残して尻をフェードで落とす。
 MAXLEN = dict(whoosh=0.70, chalk=0.45, don=1.20, ton=0.50, rise=1.60,
-              reveal=1.10, impact=1.40)
+              reveal=1.10, impact=1.40, pa=0.35, dodon=1.60)
 
 
 def trim(x, sec):
@@ -244,19 +271,25 @@ def real_se(kind):
 def se_events():
     """(秒, 音の種類) を SHOTS から作る。
 
-    以前は「画面が切り替わるたびに鳴らす」にしていたが、それだと音に意味が
-    なくなり、同じ「すぅ」が延々続いて癖のように聞こえる。
-    音は動きに対して鳴らす。動きのないところは鳴らさない。
+    伸びているショート40本を1本ずつ聞いた記録（~/yt-analysis/data/sound.md）で
+    分かったこと:
+      ・音を置く瞬間は「文字が出る時」40/40、「画面が切り替わる時」38/40。
+        つまりカットには例外なく音が付いている
+      ・頻度は 1.1〜1.5秒に1回が最多（12本）。こちらは 2.2秒に1回で遅かった
+      ・決め台詞は低音の二連打（ドドン）15本 ＞ キラン 10本
+    以前は「意味のあるところだけ鳴らす」にしていたが、それは鳴らしすぎを
+    避けるための判断で、実測は逆だった。カットには必ず音を置く。
 
-      whoosh … 何かが入ってくる／動く（スクリーンが降りる・映像が入る・
-                空気が流れ出す）
-      pop    … 図や答えが「出現」する
-      don    … 答え・重要な結論。ショットに beat=True を書いたときだけ
-      無音   … ふつうの説明
+      whoosh … 何かが入ってくる／動く（スクリーンが降りる・映像が入る）
+      pa     … 板の上に浮いた文字が出る（40本中20本で聞こえた「パッ」）
+      chalk  … 黒板にチョークで書かれる。board のときだけ
+      dodon  … 決め台詞の二連打
+      reveal … 答え・否定が出る（キラン）
     """
     ev = []
     for i, s in enumerate(render.SHOTS):
         k = s['kind']
+        n0 = len(ev)
         # 明示指定が最優先
         if 'se' in s:
             if s['se']:
@@ -265,10 +298,19 @@ def se_events():
             ev.append((s['t'] + 0.02, 'whoosh'))      # スクリーンが降りてくる
         elif k == 'title':
             ev.append((s['t'] + 0.02, 'don'))         # 章が変わる
-        elif s.get('fig') and str(s['fig'][0]).endswith('/'):
-            ev.append((s['t'] + 0.02, 'whoosh'))      # 動きのある図が始まる
-        elif s.get('fig') or s.get('board') or s.get('add'):
-            ev.append((s['t'] + render.LEADIN, 'chalk'))   # 図や文字が出る＝ポン
+        elif s.get('board'):
+            ev.append((s['t'] + render.LEADIN, 'chalk'))   # チョークで書く
+        elif s.get('add'):
+            # 文字が主役。図も同時に入るが、音は文字に当てる。
+            # 図の「シュッ」を先に取ると、40本すべてがやっていた
+            # 「文字が出る瞬間の音」が消えてしまう（13ms差は同じ音に聞こえる）。
+            ev.append((s['t'] + render.LEADIN, 'pa'))
+        elif s.get('fig'):
+            ev.append((s['t'] + 0.02, 'whoosh'))      # 図だけのときは図に当てる
+        # se=None と自分で書いたショット以外は、カットに必ず音を置く。
+        # 38/40 がそうしていた。ここが頻度の差になっていた。
+        if len(ev) == n0 and s.get('se', True) is not None:
+            ev.append((s['t'] + 0.02, 'whoosh'))
 
         # se_more=[(秒, 種類), ...] … 1ショットの途中で追加で鳴らす。
         # 絵が2秒動き続けるのに音が頭の1発だけだと、目と耳がばらばらに感じる。
@@ -285,7 +327,7 @@ def se_events():
         for ri in range(1, rows):
             at = s['t'] + render.LEADIN + ri * render.STAGGER
             if at < s['t'] + s['dur'] - 0.06:
-                ev.append((at, 'chalk'))
+                ev.append((at, 'chalk' if s.get('board') else 'pa'))
 
         # 文字が出るコマに必ず音を置く。
         # 伸びているショート30本を1本ずつ見た記録で、「プロっぽさ」の
@@ -295,7 +337,7 @@ def se_events():
         if s.get('add'):
             at = s['t'] + render.LEADIN
             if not any(abs(at - e[0]) < 0.10 for e in ev):
-                ev.append((at, 'chalk'))
+                ev.append((at, 'pa'))
     return sorted(ev)
 
 
@@ -321,7 +363,8 @@ def build_track(dur):
     for k, f, pk in (('whoosh', whoosh, 0.36), ('don', don, 0.50),
                      ('ton', ton, 0.55), ('chalk', chalk, 0.26),
                      ('reveal', reveal, 0.42), ('impact', impact, 0.58),
-                     ('rise', rise, 0.40)):
+                     ('rise', rise, 0.40), ('pa', pa, 0.30),
+                     ('dodon', dodon, 0.60)):
         rs = real_se(k)
         if rs is not None:
             bank = []
@@ -382,11 +425,16 @@ def bgm_plan():
         why = next(w for k, _, w in _LEVELS if k == key)
         start = tm[key]
         end   = tm[keys[i+1]] if i+1 < len(keys) else render.DURATION
-        if key == 'punch':
-            # オチの直前（title のあいだ）だけ絞る。無音にはしない
-            duck = next(s['dur'] for s in render.SHOTS if s.get('sec') == 'punch')
-            plan.append((start, start+duck, 0.07, 'オチ直前 — ぐっと絞る（無音にはしない）'))
-            start += duck
+        if key == 'punch' and plan:
+            # オチの直前をひと呼吸だけ絞る。無音にはしない。
+            # 以前は「つまり」の暗転のあいだ絞っていたが、その暗転を外したので
+            # 尺をショットから取ると、オチ本体をまるごと絞ってしまう。
+            # 前の区間の尻を削る形に変えた。
+            duck = 0.35
+            ps, pe, plv, pw = plan[-1]
+            if pe - ps > duck:
+                plan[-1] = (ps, pe - duck, plv, pw)
+                plan.append((pe - duck, pe, 0.07, 'オチ直前 — ひと呼吸絞る'))
         plan.append((start, end, lv, why))
     return plan
 

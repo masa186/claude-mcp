@@ -97,7 +97,7 @@ render.SHOTS = [
  # ---- オチ
  # 「つまり」の暗転は外した。翼が持ち上がった勢いのまま結論へ直結させる。
  # 動画を見せたら、ここの1.5秒で「終わった」と錯覚して離脱すると指摘された。
- dict(sec='punch', dur=2.0, kind='board', se='impact', flash=True,
+ dict(sec='punch', dur=2.0, kind='board', se='dodon', flash=True,
       board=[dict(text='空気を\n下に殴ってる', size=160, color=MUSTARD)],
       voice='punch', say='飛行機は、空気を下に殴って飛んでる。'),
  dict(dur=1.4, kind='face', face='proud', tele='{普通にすごくね？}'),
