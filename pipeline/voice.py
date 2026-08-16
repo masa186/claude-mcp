@@ -233,7 +233,7 @@ def write(path, shots, audio, duration):
 
 # ------------------------------------------------------------- 口の開き具合
 
-MIN_RUN = 2          # 開き／閉じは最低2コマ続ける（1コマ交互はチラついて見える）
+MIN_RUN = 3          # 開き／閉じは最低3コマ続ける（1〜2コマ交互はチラついて読めない）
 
 
 def envelope(path, fps, duration):
@@ -257,8 +257,10 @@ def envelope(path, fps, duration):
     if not len(voiced):
         return np.zeros(n, dtype=bool)
     thr = np.median(voiced)
-    # 開くほうは高め、閉じるほうは低めにして、境目でのバタつきを止める
-    hi, lo = thr * 1.15, thr * 0.72
+    # 開くほうは高め、閉じるほうは低めにして、境目でのバタつきを止める。
+    # 以前は 1.15 / 0.72 で、喋っている間も口が開くのは34%しかなく、
+    # 「たまに動く」ようにしか見えなかった。喋っている所はしっかり開ける。
+    hi, lo = thr * 0.92, thr * 0.52
     open_ = np.zeros(n, dtype=bool)
     st = False
     for i, v in enumerate(env):

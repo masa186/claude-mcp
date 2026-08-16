@@ -153,8 +153,15 @@ def arrow(d, x1, y1, x2, y2, color, width=11, head=34, alpha=255):
 
 
 def label(d, x, y, text, size=36, color=CHALK, alpha=255, anchor='mm', face=None):
+    """図の中の注釈。フチを付けて、線や流れの上に来ても読めるようにする。
+
+    スマホの実寸で読めないと指摘された。黒板の緑にグレーだと、
+    背景と明度が近すぎて溶ける。色を白か黄に上げ、さらにフチで浮かせる。
+    """
     d.text((x * SS, y * SS), text, font=font(size * SS, face or GOTHIC),
-           fill=tuple(color) + (alpha,), anchor=anchor)
+           fill=tuple(color) + (alpha,), anchor=anchor,
+           stroke_width=max(2, int(size * SS * 0.055)),
+           stroke_fill=(18, 34, 28, min(alpha, 210)))
 
 
 def fade(p, a=0.12, b=0.88):
@@ -218,7 +225,7 @@ def f_airflow(i, lift=False):
     # 位置もぶつかる。ここは「どれだけ曲がったか」を測って見せるだけ。
     # 濃さは時間で変えない。ショットが連番より長いと2周目に入って、
     # フェードインを入れていると継ぎ目でパッと消えるため。
-    label(d, 62, 140, '空気', 40, DIM, 210, anchor='lm')
+    label(d, 62, 140, '空気', 60, CHALK, 255, anchor='lm')
     arrow(d, 806, ry + 8, 806, stream_y(ry, 806) - 8, GOLD, 9, 28)
     arrow(d, 590, 486, 750, 546, GOLD, 13, 38)
 
@@ -244,8 +251,8 @@ def f_wingrace(i):
     draw_wing(d)
     dashed(d, LE, 150, LE, 560, DIM, 4, 18, 150)
     dashed(d, TE, 150, TE, 560, DIM, 4, 18, 150)
-    label(d, LE + 40, 120, '同時に出発', 44, CHALK, 235)
-    label(d, TE - 26, 120, 'ゴール', 44, CHALK, 235)
+    label(d, LE + 40, 120, '同時に出発', 62, CHALK, 255)
+    label(d, TE - 26, 120, 'ゴール', 62, CHALK, 255)
 
     def s_of(y0, frac):
         xs, cum = table(y0)
@@ -328,8 +335,8 @@ def f_same(i):
         arrow(d, (n2 + tail_x) / 2, cy - 46, (n2 + tail_x) / 2, cy - 132,
               HEAT, 17, 42, int(255 * e))
 
-    label(d, 62, 66, '手', 56, DIM, 225, anchor='lm')
-    label(d, 62, 368, '翼', 56, DIM, 225, anchor='lm')
+    label(d, 62, 66, '手', 78, GOLD, 255, anchor='lm')
+    label(d, 62, 368, '翼', 78, GOLD, 255, anchor='lm')
     half(190, 'hand')
     dashed(d, 60, 320, 840, 320, DIM, 3, 20, 90)
     half(492, 'wing')
@@ -389,7 +396,7 @@ def f_invert(i):
              (tail + 92, (surf(tail, True) + surf(tail, False)) / 2 - 46)], CHALK, 13)
 
     arrow(d, 420, cy - 100, 420, cy - 232, HEAT, 22, 52, int(255 * e))
-    label(d, 62, 116, '逆さま', 52, DIM, 225, anchor='lm')
+    label(d, 62, 116, '逆さま', 72, CHALK, 255, anchor='lm')
     return im.resize((W, H), Image.LANCZOS)
 
 
@@ -425,7 +432,7 @@ def f_aoa(i):
 
     # 進む向きの基準線。これが無いと「傾いている」が比べられない
     dashed(d, 110, cy, 830, cy, DIM, 4, 18, 150)
-    label(d, 118, cy + 44, '進む向き', 38, DIM, 210, anchor='lm')
+    label(d, 118, cy + 44, '進む向き', 56, CHALK, 255, anchor='lm')
     arrow(d, 740, cy, 830, cy, DIM, 6, 24, 150)
 
     # 傾きの目印（翼弦線）
@@ -439,7 +446,7 @@ def f_aoa(i):
 
     if e > 0.4:
         al = int(255 * (e - 0.4) / 0.6)
-        label(d, 470, cy - 190, '少しだけ上を向いている', 46, GOLD, al)
+        label(d, 470, cy - 190, '少しだけ上を向いている', 64, GOLD, al)
     return im.resize((W, H), Image.LANCZOS)
 
 
@@ -503,7 +510,7 @@ def f_hand(i):
     # 車の窓（右）。腕より先に描いて、腕が手前に来るようにする
     d.rounded_rectangle([716 * SS, 150 * SS, 878 * SS, 462 * SS], 30 * SS,
                         outline=DIM + (200,), width=9 * SS)
-    label(d, 797, 116, '車の窓', 38, DIM, 210)
+    label(d, 797, 116, '車の窓', 56, CHALK, 255)
 
     # 腕と手のひら
     capsule(d, 786, sy + 18, hx, hy, 58, CHALK)
@@ -514,7 +521,7 @@ def f_hand(i):
         al = int(255 * min(1.0, (e - 0.25) / 0.35))
         arrow(d, 612, 452, 748, 528, GOLD, 13, 38, al)
         arrow(d, pmid, py - 58, pmid, py - 208, HEAT, 22, 52, al)
-        label(d, pmid, py - 250, '腕が上へ', 46, HEAT, al)
+        label(d, pmid, py - 250, '腕が上へ', 68, HEAT, al)
     return im.resize((W, H), Image.LANCZOS)
 
 

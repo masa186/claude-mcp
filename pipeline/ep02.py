@@ -25,7 +25,7 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 render.SHOTS = [
  # ---- 0〜3秒。実測した人気ショート8本すべてが、ここで実写＋巨大文字＋強い音を
  # 同時に出していた。問いかけではなく、いきなり結論を殴りつける。
- dict(sec='hook', dur=1.5, kind='screen', clip='plane', face='serious',
+ dict(sec='hook', dur=1.5, kind='screen', clip='plane', face='surprise',
       roll=False, se='impact', tele='{9割が勘違いしてる}'),
  dict(dur=1.5, kind='stage', scene='cold', face='serious',
       se='reveal', fig=('invert/', 1.02, None), add='翼の形は{関係ない}',
@@ -63,7 +63,8 @@ render.SHOTS = [
       fig=('hand/', 1.02, 'hold'), add='手を{下}に傾ける',
       say='車の窓から手を出して、下に傾ける。'),
  dict(dur=1.6, kind='stage', scene='hand', face='explain', beat=True,
-      se='reveal', add=dict(text='{腕が上に}！', color=MUSTARD),
+      se='reveal', fig=('hand/', 1.02, None),
+      add=dict(text='{腕が上に}！', color=MUSTARD),
       voice='punch', say='腕、上に持ってかれるやろ。'),
 
  # ---- 橋。ここで実写の翼を1.2秒だけ差し込んで視覚を変える
@@ -99,7 +100,7 @@ render.SHOTS = [
  # ---- オチ
  # 「つまり」の暗転は外した。翼が持ち上がった勢いのまま結論へ直結させる。
  # 動画を見せたら、ここの1.5秒で「終わった」と錯覚して離脱すると指摘された。
- dict(sec='punch', dur=2.0, kind='board', se='dodon', flash=True,
+ dict(sec='punch', dur=2.0, kind='board', se='dodon', flash=True, hush=0.30,
       board=[dict(text='空気を\n下に殴ってる', size=160, color=MUSTARD)],
       voice='punch', say='飛行機は、空気を下に殴って飛んでる。'),
  dict(dur=1.4, kind='face', face='proud', tele='{普通にすごくね？}'),

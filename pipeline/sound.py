@@ -348,7 +348,18 @@ def se_events():
             at = s['t'] + s['dur'] * 0.52
             if not any(abs(at - e[0]) < 0.55 for e in ev):
                 ev.append((at, 'pa', 0.5))      # 主張しない音量で
+
+    # hush=秒 … そのショットの直前をひと拍だけ本当に無音にする。
+    # ラウドネスレンジが3.9LUで平坦だと指摘された。決め台詞の前に間を空けると、
+    # 同じ音量でも言葉が重く聞こえる。BGMも bgm_plan 側で同じ幅だけ落とす。
+    for t0, h in hush_windows():
+        ev = [e for e in ev if not (t0 - h <= e[0] < t0)]
     return sorted(ev)
+
+
+def hush_windows():
+    """(そのショットの開始秒, 直前を黙らせる長さ) の一覧。"""
+    return [(s['t'], s['hush']) for s in render.SHOTS if s.get('hush')]
 
 
 FILL_MIN = 2.3        # これより長いショットは、途中にもう1つ音を置く
@@ -441,15 +452,18 @@ def bgm_plan():
         start = tm[key]
         end   = tm[keys[i+1]] if i+1 < len(keys) else render.DURATION
         if key == 'punch' and plan:
-            # オチの直前をひと呼吸だけ絞る。無音にはしない。
+            # オチの直前をひと呼吸だけ落とす。
             # 以前は「つまり」の暗転のあいだ絞っていたが、その暗転を外したので
             # 尺をショットから取ると、オチ本体をまるごと絞ってしまう。
             # 前の区間の尻を削る形に変えた。
-            duck = 0.35
+            # 幅は台本側の hush に合わせる。効果音もそこは止まるので、
+            # 本当にひと拍だけ音が消える。
+            duck = next((h for t0, h in hush_windows()
+                         if abs(t0 - start) < 0.01), 0.30)
             ps, pe, plv, pw = plan[-1]
             if pe - ps > duck:
                 plan[-1] = (ps, pe - duck, plv, pw)
-                plan.append((pe - duck, pe, 0.07, 'オチ直前 — ひと呼吸絞る'))
+                plan.append((pe - duck, pe, 0.0, 'オチ直前 — ひと拍だけ黙る'))
         plan.append((start, end, lv, why))
     return plan
 
