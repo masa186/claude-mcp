@@ -418,35 +418,66 @@ def dump(name, fn):
 AOA_SHOW = 0.26             # 図では迎え角を誇張する。実物の5度は画面上で見えない
 
 
+def _wing_at(d, cy, aoa, le, te):
+    """指定の高さ・傾き・長さで翼を1枚描く。globals を一時的に差し替えるだけ。"""
+    global CY, AOA, LE, TE
+    keep = (CY, AOA, LE, TE)
+    CY, AOA, LE, TE = cy, aoa, le, te
+    draw_wing(d)
+    CY, AOA, LE, TE = keep
+
+
+def _air(d, cy, aoa, le, te, bend, alpha=255):
+    """翼に当たる空気を横線で描く。bend なら翼の後ろで下へ曲げる。"""
+    for dy in (-66, 66):
+        y = cy + dy
+        y2 = y + (te - le) * aoa * 0.55
+        dashed(d, 34, y, le - 12, y, CHALK, 5, 22, alpha)
+        line(d, [(le - 12, y), (te, y2)], CHALK, 5, alpha)
+        if bend:
+            line(d, [(te, y2), (te + 150, y2 + 74)], GOLD, 7, alpha)
+        else:
+            line(d, [(te, y2), (te + 150, y2)], CHALK, 5, alpha)
+
+
 def f_aoa(i):
-    """翼が「少し上を向いている」ことだけを見せる図。
-    ここを言葉で済ませると、次の『なぜ下に曲がるのか』が宙に浮く。"""
+    """傾けない翼と、傾けた翼を上下に並べて比べる図。
+
+    伸びているショート40本の図の作り方を数えたら、前後の比較が23本、
+    矢印が24本、色分けが22本だった。こちらは「傾いている」ことを1枚で
+    見せるだけで、比べる相手が無かった。何が違うから浮くのかは、
+    並べないと分からない。上＝まっすぐで何も起きない、下＝傾けると
+    空気が下へ・翼が上へ。色は空気を黄、翼を赤で対にする。
+    """
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    e = 1 - (1 - min(1.0, i / (N * 0.5))) ** 3      # 水平から起こしていく
+    e = 1 - (1 - min(1.0, i / (N * 0.45))) ** 3      # 下段を水平から起こす
 
-    global AOA
-    keep = AOA
-    AOA = -AOA_SHOW * e                              # 前縁を上げる（符号が逆）
-    cy = CY + 40
+    L, T = 190, 560              # この図だけ翼を短くして、右に説明の場所を作る
+    TOP, BOT = 122, 452
 
-    # 進む向きの基準線。これが無いと「傾いている」が比べられない
-    dashed(d, 110, cy, 830, cy, DIM, 4, 18, 150)
-    label(d, 118, cy + 44, '進む向き', 56, CHALK, 255, anchor='lm')
-    arrow(d, 740, cy, 830, cy, DIM, 6, 24, 150)
+    # ── 上段：傾けていない翼。空気はまっすぐ通り抜ける
+    _air(d, TOP, 0.0, L, T, False, 200)
+    _wing_at(d, TOP, 0.0, L, T)
+    label(d, 34, 26, 'まっすぐ', 48, CHALK, 235, anchor='lm')
+    label(d, 786, TOP, '浮かない', 46, DIM, 225)
 
-    # 傾きの目印（翼弦線）
-    x0, y0 = LE, cy
-    x1, y1 = TE, cy + (TE - LE) * AOA
-    line(d, [(x0, y0), (x1, y1)], GOLD, 5, int(220 * e))
+    # 上下を分ける線。比べていることを目で分からせる
+    dashed(d, 24, 292, 876, 292, DIM, 3, 16, 110)
 
-    dy = 40
-    draw_wing(d)
-    AOA = keep
+    # ── 下段：少し上を向けた翼。空気が下へ、翼が上へ
+    aoa = -AOA_SHOW * e
+    _air(d, BOT, aoa, L, T, e > 0.5, 235)
+    dashed(d, L, BOT, T + 96, BOT, DIM, 4, 18, 120)      # 水平の基準
+    _wing_at(d, BOT, aoa, L, T)
+    label(d, 34, 606, '少し上を向ける', 50, GOLD, 255, anchor='lm')
 
-    if e > 0.4:
-        al = int(255 * (e - 0.4) / 0.6)
-        label(d, 470, cy - 190, '少しだけ上を向いている', 64, GOLD, al)
+    # 言葉は下の行（翼は上向き／空気を下に押す／翼は上へ）が言うので、
+    # 図では色と向きだけにする。同じ言葉を2か所で読ませない。
+    if e > 0.55:
+        al = int(255 * (e - 0.55) / 0.45)
+        arrow(d, 132, BOT + 4, 132, BOT - 104, HEAT, 12, 36, al)   # 翼は上（赤）
+        arrow(d, 796, BOT + 74, 796, BOT + 168, GOLD, 11, 34, al)  # 空気は下（黄）
     return im.resize((W, H), Image.LANCZOS)
 
 
