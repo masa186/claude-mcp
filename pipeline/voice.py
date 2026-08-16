@@ -130,12 +130,40 @@ def from_voicevox(shots):
 
 # ------------------------------------------------------------- 割り付け
 
+def resample(x, src, dst=SR):
+    if src == dst or not len(x):
+        return x
+    return np.interp(np.linspace(0, len(x)-1, int(len(x)*dst/src)),
+                     np.arange(len(x)), x)
+
+
+def from_gemini(shots):
+    """Gemini の音声合成。Open JTalk より人の声に近いので、あればこちらを使う。"""
+    try:
+        import gtts
+    except Exception:
+        return None
+    if not gtts.available():
+        return None
+    ls = lines(shots)
+    # 無料枠は1日10リクエストしかないので、台本ぜんぶを1回で合成して切り分ける
+    segs = gtts.say_script([t for _, t in ls])
+    if segs is None:
+        return None
+    return {i: trim_silence(resample(x, gtts.SR))
+            for (i, _), x in zip(ls, segs)}
+
+
 def collect(shots, preset=DEFAULT):
-    """各行の音を用意する。VOICEVOX があればそちら、無ければ合成。"""
+    """各行の音を用意する。自分で録った声 > VOICEVOX > Gemini > Open JTalk。"""
     vv = from_voicevox(shots)
     if vv is not None:
         print('  声: VOICEVOX（voicevox/ の %d本）' % len(vv))
         return vv
+    g = from_gemini(shots)
+    if g is not None:
+        print('  声: Gemini の音声合成（%d行）' % len(g))
+        return g
     if not available():
         return {}
     print('  声: Open JTalk の合成（仮）')

@@ -9,3 +9,6 @@ __pycache__/
 
 # 素材そのものは pipeline/.gitignore 側で除外を解除している。
 # コンテナは使い捨てなので、もらった素材はリポジトリに置いておかないと消える。
+
+# Gemini TTS のキャッシュ（作り直せる）
+pipeline/.ttscache/

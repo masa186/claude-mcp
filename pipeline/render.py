@@ -797,7 +797,7 @@ def apply_zoom(im, s, t):
 STAGE_BOX  = (0.085, 0.115, 0.915, 0.545)   # 図の置き場（画面比）
 STAGE_BOT  = 0.760                          # 積み上がる行の下端（ここは動かさない）
 STAGE_LH   = 148                            # 行の高さ（px）
-STAGE_SIZE = 112                            # 短い言葉を大きく。読ませない
+STAGE_SIZE = 128                            # 短い言葉を大きく。読ませない
 STAGE_MAX  = 3                              # 積むのは3行まで。それ以上は古いのを捨てる
 CHAR_STAGE = dict(w=0.34, cx=0.845, foot=1.075)   # 右下。下端で切れる
 # 画面下の長文テロップは廃止した。短尺の視聴者は2行以上出た時点で読むのをやめる。
@@ -935,8 +935,10 @@ def stage_shot(s, t):
         lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         dl = ImageDraw.Draw(lay)
         slide = int(40 * (1-p)**2)
+        # 実測した人気ショートは8本中8本が、背景の上に載る巨大テロップだった。
+        # 黒板に書いた文字に見えると弱いので、フチを付けて前面に浮かせる。
         rich(dl, W//2 - slide, y, it['text'], font(size),
-             it.get('color', CHALK), MUSTARD, anchor_c=True)
+             it.get('color', CHALK), MUSTARD, 7, BLACK, True)
         al = int(255 * (1.0 if newest else 0.52) * min(1.0, p*1.4))
         lay.putalpha(lay.getchannel('A').point(lambda v: v*al//255))
         frame.alpha_composite(lay)

@@ -23,85 +23,83 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 # tele … 画面に出すテロップ（黒板が主役のショットでは自動で出ない）
 # say  … ナレーションだけの台詞。画面には出さない
 render.SHOTS = [
- # ---- 冒頭。問いかけではなく否定から入る。
- # 「なぜ〜？」型は実測で上位に入らない（全体36%→上位10%）。
- # 逆さま飛行の絵を最初の1.5秒に置いて、常識をいきなり壊す。
- dict(sec='hook', dur=1.6, kind='stage', scene='cold', face='serious',
+ # ---- 0〜3秒。実測した人気ショート8本すべてが、ここで実写＋巨大文字＋強い音を
+ # 同時に出していた。問いかけではなく、いきなり結論を殴りつける。
+ dict(sec='hook', dur=1.5, kind='screen', clip='plane', face='serious',
+      roll=False, se='impact', tele='{9割が勘違いしてる}'),
+ dict(dur=1.5, kind='stage', scene='cold', face='serious',
       se='reveal', fig=('invert/', 1.02, None), add='翼の形は{関係ない}',
       say='飛行機、翼の形で飛んでるんちゃう。'),
- dict(dur=1.3, kind='face', face='surprise', se='don',
-      tele='{9割が勘違いしてる}'),
 
- # ---- 問い。テロップは1行に収まる長さだけ（11文字が折り返しの境目）
- dict(sec='setup', dur=1.8, kind='screen', clip='plane', face='point',
-      tele='これ{何百トン}ある。'),
- dict(dur=1.8, kind='screen', clip='plane2', face='explain', roll=False,
-      tele='{なんで落ちない}？'),
+ # ---- 問い。カットは1〜2秒で切る
+ dict(sec='setup', dur=1.5, kind='screen', clip='plane2', face='point',
+      se='whoosh', tele='これ{何百トン}ある。'),
+ dict(dur=1.4, kind='face', face='surprise', tele='{なんで落ちない}？'),
 
  # ---- 勘違いを名指しする
- dict(sec='how', dur=1.5, kind='face', face='serious',
+ dict(sec='how', dur=1.4, kind='face', face='serious',
       tele='{翼の形}のおかげ？'),
  dict(dur=1.8, kind='stage', scene='wrong', face='serious',
       fig=('wingrace/', 1.02, 'hold'), add='上の空気が{速いから}',
       say='上の面は道が長いから空気が速くなる、と。'),
- dict(dur=1.6, kind='stage', scene='wrong', face='serious', beat=True,
+ dict(dur=1.5, kind='stage', scene='wrong', face='serious', beat=True,
       se='reveal', add=dict(text='{×} これ、ウソ', color=CRIMSON),
       voice='punch', say='これ、ウソ。'),
 
- # ---- 反証。ここが一番強い瞬間なので、音と表情で立てる
- dict(sec='proof', dur=1.4, kind='face', face='point', se='whoosh',
+ # ---- 反証。一番強い瞬間なので、実写を挟んでから見せる
+ dict(sec='proof', dur=1.2, kind='face', face='point', se='whoosh',
       tele='じゃあ{これ}は？'),
- dict(dur=2.2, kind='stage', scene='inv', face='surprise',
+ dict(dur=1.9, kind='stage', scene='inv', face='surprise',
       se='rise', fig=('invert/', 1.02, None), add='{逆さま}でも飛ぶ',
-      say='戦闘機、ひっくり返ったままでも飛ぶ。'),
- dict(dur=1.8, kind='stage', scene='inv', face='serious',
+      say='戦闘機、ひっくり返っても飛ぶ。'),
+ dict(dur=1.6, kind='stage', scene='inv', face='serious',
       se='reveal', add=dict(text='形が理由なら{落ちる}', color=CRIMSON),
-      say='形が理由なら、落ちるはずやろ。'),
+      voice='punch', say='形が理由なら落ちるやろ。'),
 
  # ---- 本当の理由
- dict(sec='example', dur=1.3, kind='face', face='point',
+ dict(sec='example', dur=1.2, kind='face', face='point',
       tele='{これ}見て。'),
- dict(dur=2.0, kind='stage', scene='hand', face='explain',
+ dict(dur=1.9, kind='stage', scene='hand', face='explain',
       fig=('hand/', 1.02, 'hold'), add='手を{下}に傾ける',
       say='車の窓から手を出して、下に傾ける。'),
- dict(dur=1.8, kind='stage', scene='hand', face='explain', beat=True,
+ dict(dur=1.6, kind='stage', scene='hand', face='explain', beat=True,
       se='reveal', add=dict(text='{腕が上に}！', color=MUSTARD),
-      voice='punch', say='腕、上に持っていかれるやろ。'),
+      voice='punch', say='腕、上に持ってかれるやろ。'),
 
- # ---- 橋
- dict(sec='bridge', dur=1.5, kind='screen', clip='wing', face='point',
-      tele='飛行機の{翼}も、'),
- dict(dur=2.0, kind='stage', scene='same', face='explain',
+ # ---- 橋。ここで実写の翼を1.2秒だけ差し込んで視覚を変える
+ dict(sec='bridge', dur=1.2, kind='screen', clip='wing', face='point',
+      se='whoosh', tele='飛行機の{翼}も、'),
+ dict(dur=1.8, kind='stage', scene='same', face='explain',
       fig=('same/', 1.02, None), add='{これと全く同じ}',
-      say='これと全く同じことしてる。形やない、傾きや。'),
+      say='これと全く同じ。形やない、傾きや。'),
 
- # ---- 因果を3段で。最後は上昇音を当てる
- dict(sec='lift', dur=1.6, kind='stage', scene='lift', face='explain',
+ # ---- 因果を3段。1.5〜2秒で切る
+ dict(sec='lift', dur=1.5, kind='stage', scene='lift', face='explain',
       fig=('aoa/', 1.02, 'hold'), add='翼は{上向き}',
-      say='翼はほんの少し上を向いてる。'),
- dict(dur=2.2, kind='stage', scene='lift', face='explain',
+      say='翼はほんの少し上向き。'),
+ dict(dur=2.0, kind='stage', scene='lift', face='explain',
       fig=('airflow/', 1.02, None), add='空気を{下}に押す',
-      say='だから当たった空気を下に押し返す。'),
- dict(dur=2.0, kind='stage', scene='lift', face='proud',
+      say='当たった空気を下に押し返す。'),
+ dict(dur=1.9, kind='stage', scene='lift', face='proud',
       se='rise', fig=('airlift/', 1.02, None),
       add=dict(text='翼は{上}へ', color=MUSTARD),
       say='その分だけ、翼は上に持ち上がる。'),
 
  # ---- オチ
- dict(sec='punch', dur=0.8, kind='title', title='つまり'),
- dict(dur=2.2, kind='board', se='impact',
-      board=[dict(text='空気を\n下に殴ってる', size=156, color=MUSTARD)],
+ dict(sec='punch', dur=0.7, kind='title', title='つまり'),
+ dict(dur=2.0, kind='board', se='impact',
+      board=[dict(text='空気を\n下に殴ってる', size=160, color=MUSTARD)],
       voice='punch', say='飛行機は、空気を下に殴って飛んでる。'),
- dict(dur=1.5, kind='face', face='proud', tele='{普通にすごくね？}'),
+ dict(dur=1.4, kind='face', face='proud', tele='{普通にすごくね？}'),
 
- # ---- 予告。断定で終わらず、問いを残してコメントに落とす
- dict(sec='next', dur=1.8, kind='board',
+ # ---- 予告。問いを残して終える
+ dict(sec='next', dur=1.5, kind='board',
       board=[dict(text='次は\n{電子レンジ}', size=130)],
       say='次は電子レンジ。'),
- dict(dur=1.8, kind='board',
+ dict(dur=1.6, kind='board', se='reveal',
       board=[dict(text='食べ物を\n温めてない', size=130, color=CRIMSON)],
-      say='あれ、食べ物を温めてない。'),
- dict(dur=1.8, kind='face', face='surprise', se='reveal',
+      voice='punch', say='あれ、食べ物を温めてない。'),
+ dict(dur=1.6, kind='face', face='surprise',
       voice='punch', tele='{じゃあ何温めてる}？'),
 ]
 
