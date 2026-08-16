@@ -16,6 +16,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, '.ttscache')
 HOST = 'https://generativelanguage.googleapis.com'
 MODEL = os.environ.get('GEMINI_TTS_MODEL', 'gemini-3.1-flash-tts-preview')
+# 無料枠は「モデルごとに1日いくつ」。1つ尽きても声の名前（Charon）は
+# どのモデルにも入っているので、同じ声のまま次のモデルで続けられる。
+MODELS = [MODEL] + [m for m in ('gemini-2.5-flash-preview-tts',
+                                'gemini-2.5-pro-preview-tts') if m != MODEL]
 SR = 24000                      # このモデルが返すのは 24kHz モノラル PCM
 
 # 低めの男声を中心に。gtts.py --demo で聞き比べて選ぶ
@@ -47,9 +51,9 @@ def available():
     return bool(key())
 
 
-def _post(body, timeout=240):
+def _post(body, model, timeout=420):
     r = urllib.request.Request(
-        HOST + '/v1beta/models/%s:generateContent' % MODEL,
+        HOST + '/v1beta/models/%s:generateContent' % model,
         data=json.dumps(body).encode(), method='POST',
         headers={'Content-Type': 'application/json', 'x-goog-api-key': key()})
     with urllib.request.urlopen(r, timeout=timeout) as resp:
@@ -76,21 +80,33 @@ def say(text, voice=None, style=None):
                 'responseModalities': ['AUDIO'],
                 'speechConfig': {'voiceConfig': {
                     'prebuiltVoiceConfig': {'voiceName': voice}}}}}
-    for attempt in range(5):
-        try:
-            d = _post(body)
+    pcm = None
+    for mi, model in enumerate(MODELS):
+        for attempt in range(3):
+            try:
+                d = _post(body, model)
+            except Exception as e:
+                code = getattr(e, 'code', None)
+                if code == 429:
+                    print('    %s は今日の枠切れ → 次のモデルへ' % model)
+                    break
+                if attempt == 2 or (code and code not in (500, 503)):
+                    print('    TTS失敗(%s): %s' % (model, e))
+                    break
+                time.sleep(5 * (attempt + 1))
+                continue
+            try:
+                part = d['candidates'][0]['content']['parts'][0]
+                blob = part.get('inlineData') or part.get('inline_data')
+                pcm = base64.b64decode(blob['data'])
+            except (KeyError, IndexError, TypeError):
+                pcm = None
             break
-        except Exception as e:
-            code = getattr(e, 'code', None)
-            if attempt == 4 or (code and code not in (429, 500, 503)):
-                print('    TTS失敗: %s' % e)
-                return np.zeros(0)
-            time.sleep(5 * (attempt + 1))
-    try:
-        part = d['candidates'][0]['content']['parts'][0]
-        blob = part.get('inlineData') or part.get('inline_data')
-        pcm = base64.b64decode(blob['data'])
-    except (KeyError, IndexError, TypeError):
+        if pcm:
+            if mi:
+                print('    声: %s で合成（%s は枠切れ）' % (model, MODELS[0]))
+            break
+    if not pcm:
         return np.zeros(0)
     with wave.open(p, 'wb') as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)

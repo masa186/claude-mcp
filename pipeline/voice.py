@@ -176,19 +176,37 @@ def collect(shots, preset=DEFAULT):
 
 
 def fit(shots, audio):
-    """尺に収まらない行はショットを伸ばす。早口にはしない。"""
+    """尺に収まらない行はショットを伸ばす。早口にはしない。
+
+    1行の声が1ショットに収まりきらないときは、次のショットにまたがせる。
+    台詞の途中でカットが変わるのは編集としてふつうで、むしろ4秒5秒を
+    1枚の絵で持たせるより見やすい。またげるのは「自分の台詞を持たない
+    ショット」だけ。声が重なると何も聞き取れなくなる。
+    """
     grew = []
     for i, x in audio.items():
         if not len(x):
             continue
         need = HEAD + len(x)/SR + TAIL
-        if shots[i]['dur'] < need - 0.02:
-            grew.append((i, shots[i]['dur'], need))
-            shots[i]['dur'] = math.ceil(need * 30) / 30.0     # コマ単位に丸める
+        # 次に台詞があるショットの手前まで、この声が使える。
+        # ただし章タイトルは「わざと置いた間」なので、そこへは食い込ませない。
+        j = i
+        while (j + 1 < len(shots) and not len(audio.get(j + 1, ()))
+               and shots[j + 1].get('kind') != 'title'
+               and not shots[j + 1].get('nospan')):
+            j += 1
+        room = sum(shots[k]['dur'] for k in range(i, j + 1))
+        if room >= need - 0.02:
+            continue
+        # 足りないぶんは、またいだ最後のショットに足す
+        add = need - room
+        grew.append((j, shots[j]['dur'], shots[j]['dur'] + add, j != i))
+        shots[j]['dur'] = math.ceil((shots[j]['dur'] + add) * 30) / 30.0
     if grew:
         print('  声に合わせて %d ショットを伸ばした' % len(grew))
-        for i, a, b in grew:
+        for i, a, b, spans in grew:
             flag = '  ← 長い。台本を割ったほうがいい' if b > MAX_DUR else ''
+            flag += '（前のショットからまたいでいる）' if spans else ''
             print('    #%02d  %.2f→%.2f秒%s' % (i+1, a, b, flag))
     return shots
 

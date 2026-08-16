@@ -280,6 +280,16 @@ def se_events():
             at = s['t'] + render.LEADIN + ri * render.STAGGER
             if at < s['t'] + s['dur'] - 0.06:
                 ev.append((at, 'chalk'))
+
+        # 文字が出るコマに必ず音を置く。
+        # 伸びているショート30本を1本ずつ見た記録で、「プロっぽさ」の
+        # 一番の理由に挙がったのが『映像・文字・効果音がぴたりと合っている』
+        # （10本）だった。ここまでの分岐だと、fig や se を明示したショットの
+        # 文字は無音で出てしまう。同じ時刻に既に音があるときだけ足さない。
+        if s.get('add'):
+            at = s['t'] + render.LEADIN
+            if not any(abs(at - e[0]) < 0.10 for e in ev):
+                ev.append((at, 'chalk'))
     return sorted(ev)
 
 

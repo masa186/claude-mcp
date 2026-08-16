@@ -273,19 +273,32 @@ def parts(text):
     return out
 
 
+# 影。伸びているショート30本を1本ずつ見た記録では、フチが30本中30本、
+# 影が29本。フチだけだと文字が背景に貼り付いて見え、影を付けると浮く。
+# ここが素人との差として一番はっきり数字に出ていた。
+SHADOW = (7, 8, (0, 0, 0, 135))
+
+
 def rich(d, x, y, text, fnt, base, hi, stroke=0, scol=BLACK, anchor_c=False,
-         hifnt=None):
+         hifnt=None, shadow=SHADOW):
     """{ } で囲んだ語だけ色を変える。hifnt を渡すと、その語だけ別サイズで描く。"""
     segs = parts(text)
     hf = hifnt or fnt
     total = sum(d.textlength(s, font=(hf if h else fnt)) for s, h in segs)
-    cx = x - total / 2 if anchor_c else x
-    for s, is_hi in segs:
-        f = hf if is_hi else fnt
-        dy = -(hf.size - fnt.size) * 0.42 if (is_hi and hifnt is not None) else 0
-        d.text((cx, y + dy), s, font=f, fill=(hi if is_hi else base),
-               stroke_width=stroke, stroke_fill=scol)
-        cx += d.textlength(s, font=f)
+    x0 = x - total / 2 if anchor_c else x
+    # 影を先に一周描いてから、本体を上に重ねる
+    for is_shadow in ((True, False) if shadow else (False,)):
+        cx = x0
+        for s, is_hi in segs:
+            f = hf if is_hi else fnt
+            dy = -(hf.size - fnt.size) * 0.42 if (is_hi and hifnt is not None) else 0
+            if is_shadow:
+                d.text((cx + shadow[0], y + dy + shadow[1]), s, font=f,
+                       fill=shadow[2], stroke_width=stroke, stroke_fill=shadow[2])
+            else:
+                d.text((cx, y + dy), s, font=f, fill=(hi if is_hi else base),
+                       stroke_width=stroke, stroke_fill=scol)
+            cx += d.textlength(s, font=f)
     return total
 
 
@@ -695,14 +708,17 @@ def draw_telop(canvas, s, t=None):
         return
     txt = s.get('tele', '')
     if not txt: return
-    fnt = tfont(TELOP_SIZE)
+    # 出はじめだけ大きめから縮めて収める。ただ現れるより目が止まる
+    ent = pop(wipe(LEADIN, (t - s['t']), POP_IN)) if t is not None else 1.0
+    size = max(24, int(TELOP_SIZE * ent))
+    fnt = tfont(size)
     # 強調語だけ一瞬大きくする（画面のどこかが常に動いている状態を作る）
     hifnt = None
     if t is not None:
         d0 = (t - s['t']) - POP_AT
         if 0 <= d0 < POP_LEN:
             k = math.sin(math.pi * d0 / POP_LEN)
-            hifnt = tfont(int(TELOP_SIZE * (1 + 0.14 * k)))
+            hifnt = tfont(int(size * (1 + 0.14 * k)))
     d = ImageDraw.Draw(canvas)
     ty = TELOP_Y_FACE if s['kind'] == 'face' else TELOP_Y
     # 長い行は2行に折る
@@ -714,20 +730,24 @@ def draw_telop(canvas, s, t=None):
         cut = cut+1 if cut > 3 else half
         rows = [plain[:cut], plain[cut:]]
         hi_set = set(x for x, h in segs if h)
-        y = int(H*ty) - int(TELOP_SIZE*0.67)
+        y = int(H*ty) - int(size*0.67)
         for rw in rows:
             lay = Image.new('RGBA', (W, H), (0,0,0,0))
             dl = ImageDraw.Draw(lay)
             marked = rw
             for h in hi_set:
                 if h in marked: marked = marked.replace(h, '{'+h+'}')
+            plate(canvas, W//2, y + size//2,
+                  int(d.textlength(rw, font=fnt)), size)
             rich(dl, W//2, y, marked, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
             canvas.alpha_composite(lay)
-            y += int(TELOP_SIZE*1.34)
+            y += int(size*1.34)
     else:
+        y = int(H*ty)
+        plate(canvas, W//2, y + size//2, int(d.textlength(plain, font=fnt)), size)
         lay = Image.new('RGBA', (W, H), (0,0,0,0))
         dl = ImageDraw.Draw(lay)
-        rich(dl, W//2, int(H*ty), txt, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
+        rich(dl, W//2, y, txt, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
         canvas.alpha_composite(lay)
 
 
@@ -759,6 +779,12 @@ def apply_zoom(im, s, t):
     if q < 0:      step = 0.0
     elif q < 0.30: step = 0.016 * (1 - (1 - q / 0.30) ** 2)
     else:          step = 0.016
+    # カットの頭で寄りを少しだけ行き過ぎさせて戻す。30本の記録で
+    # 単純なカット以外の切り替えは15本、その内訳の1位がこのズームだった
+    # （11本。フラッシュは3本しかない）。派手さより、これが効く。
+    d0 = t - s['t']
+    if 0 <= d0 < PUNCH_LEN:
+        step += PUNCH_AMP * (1 - d0 / PUNCH_LEN) ** 2
     z = s['zoom']
     # 寄りと振りの幅は、そのショットに文字があるかで変える。
     # 1.34倍で端まで振ると、見えるのは元の横幅の 53% しかない。
@@ -776,6 +802,96 @@ def apply_zoom(im, s, t):
     big = im.resize((bw, bh), Image.LANCZOS)
     x = int((bw - W) * ox); y = int((bh - H) * oy)
     return big.crop((x, y, x+W, y+H))
+
+
+# --------------------------------------------------- 切り替えと当たりの演出
+#
+# 伸びているショート30本を Gemini に1本ずつ見せて、編集の手つきだけを
+# 書き出させた（yt-analysis/data/craft_raw.md）。素人との差はここに出ていた:
+#   ・切り替えが単純なカットだけではない。白フラッシュが一番多い
+#   ・文字が「ポン」と出る。ただ現れるのではなく、大きめから縮んで収まる
+#   ・文字に黒フチと影、その下に半透明の板。背景が何であっても読める
+#   ・決め所で画面が揺れる
+# どれも1コマずつ描くこちらの作り方で実装できる。順に足す。
+
+FLASH_LEN  = 0.12        # 白フラッシュの長さ（秒）
+FLASH_MAX  = 0.42        # 一番白いときの混ぜ具合。1.0 は真っ白で目に痛い
+SHAKE_LEN  = 0.22        # 揺れの長さ
+SHAKE_AMP  = 14          # 揺れ幅（px）
+PUNCH_LEN  = 0.20        # カット頭の寄りの当て（秒）
+PUNCH_AMP  = 0.032       # その寄り幅（倍率）
+# 文字の出し方は30本中26本が「ポンと一瞬で出る」だった。拡大しながらは4本。
+# なので伸び縮みは見せる演出ではなく、4コマで収める“当て”にする。
+POP_IN     = 0.13        # 文字が出そろうまで（秒）
+_WHITE_IM  = {}
+
+
+def apply_flash(im, s, t):
+    """一瞬だけ画面を白く飛ばす。
+
+    30本のうちフラッシュを使っていたのは3本だけだった。全部のカットに
+    入れると安っぽくなる。話が裏返る所（flash=True と書いた所）だけ。
+    """
+    if not s.get('flash'):
+        return im
+    d = t - s['t']
+    if d < 0 or d >= FLASH_LEN:
+        return im
+    k = FLASH_MAX * (1 - d / FLASH_LEN) ** 2
+    w = _WHITE_IM.get(im.mode)
+    if w is None:
+        w = _WHITE_IM[im.mode] = Image.new(im.mode, (W, H), (255, 255, 255)
+                                           if im.mode == 'RGB' else WHITE)
+    return Image.blend(im, w, k)
+
+
+def apply_shake(im, s, t):
+    """決め台詞の頭で画面を短く揺らす。音の一撃と合わせると効く。"""
+    if not s.get('shake', s.get('se') == 'impact'):
+        return im
+    d = t - s['t']
+    if d < 0 or d >= SHAKE_LEN:
+        return im
+    a = SHAKE_AMP * (1 - d / SHAKE_LEN) ** 2
+    dx = int(round(a * math.sin(d * 2*math.pi * 13)))
+    dy = int(round(a * math.cos(d * 2*math.pi * 9)))
+    if not dx and not dy:
+        return im
+    # ずらすと端に穴が空くので、少し大きく描いてから切り出す
+    pad = SHAKE_AMP + 2
+    big = im.resize((W + 2*pad, H + 2*pad), Image.LANCZOS)
+    return big.crop((pad+dx, pad+dy, pad+dx+W, pad+dy+H))
+
+
+def pop(p):
+    """0→1 の進み具合を、行き過ぎて戻る倍率に変える。
+
+    ただ出すのと、いったん大きく出してから収めるのとでは、
+    同じ0.2秒でも目の止まり方が違う。30本中ほとんどがこれをやっていた。
+    """
+    if p >= 1:
+        return 1.0
+    e = 1 - (1 - p) ** 3                 # 立ち上がりを速く
+    return 0.62 + 0.44 * e - 0.06 * math.sin(math.pi * e)
+
+
+PLATE_PAD = (34, 18)     # 板の余白（横, 縦）
+PLATE_COL = (14, 20, 17, 150)
+
+
+def plate(canvas, cx, cy, w, h, alpha=1.0):
+    """文字の下に敷く半透明の板。背景が図でも実写でも読めるようにする。"""
+    if alpha <= 0:
+        return
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    r = int(min(h, 90) * 0.34)
+    ImageDraw.Draw(lay).rounded_rectangle(
+        [cx - w//2 - PLATE_PAD[0], cy - h//2 - PLATE_PAD[1],
+         cx + w//2 + PLATE_PAD[0], cy + h//2 + PLATE_PAD[1]],
+        radius=r, fill=PLATE_COL)
+    if alpha < 1:
+        lay.putalpha(lay.getchannel('A').point(lambda v: int(v*alpha)))
+    canvas.alpha_composite(lay)
 
 
 # ------------------------------------------------------------- 1フレーム
@@ -929,18 +1045,26 @@ def stage_shot(s, t):
         it = item if isinstance(item, dict) else dict(text=item)
         size = fit_size(it['text'], it.get('size', STAGE_SIZE), int(W*0.84))
         newest = (x is s)
-        p = wipe(LEADIN, t - x['t'], 0.22) if newest else 1.0
+        p = wipe(LEADIN, t - x['t'], POP_IN) if newest else 1.0
         if p <= 0:
             continue
-        lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-        dl = ImageDraw.Draw(lay)
-        slide = int(40 * (1-p)**2)
         # 実測した人気ショートは8本中8本が、背景の上に載る巨大テロップだった。
         # 黒板に書いた文字に見えると弱いので、フチを付けて前面に浮かせる。
-        rich(dl, W//2 - slide, y, it['text'], font(size),
+        # 出し方はスライドをやめて「大きめから縮んで収まる」にした。
+        # 30本の記録で一番多かったのがこれ。目が止まる位置がはっきりする。
+        k = pop(p) if newest else 1.0
+        fs = max(24, int(size * k))
+        fnt = font(fs)
+        wid = _measure.textlength(''.join(x for x, _ in parts(it['text'])), font=fnt)
+        # 字が大きくなるぶん上に伸ばして、行の中心を動かさない
+        ly = y - int((fs - size) * 0.5)
+        al = (1.0 if newest else 0.52) * min(1.0, p*1.4)
+        plate(frame, W//2, ly + fs//2, int(wid), fs, al * 0.85)
+        lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        dl = ImageDraw.Draw(lay)
+        rich(dl, W//2, ly, it['text'], fnt,
              it.get('color', CHALK), MUSTARD, 7, BLACK, True)
-        al = int(255 * (1.0 if newest else 0.52) * min(1.0, p*1.4))
-        lay.putalpha(lay.getchannel('A').point(lambda v: v*al//255))
+        lay.putalpha(lay.getchannel('A').point(lambda v: int(v*al)))
         frame.alpha_composite(lay)
         y += STAGE_LH
 
@@ -948,22 +1072,27 @@ def stage_shot(s, t):
     return frame.convert('RGB')
 
 
+def _finish(frame, s, t):
+    """揺れ → 白フラッシュ の順で仕上げる。
+    フラッシュは切り替えの合図なので、揺れた後の絵に被せる。"""
+    return apply_flash(apply_shake(frame.convert('RGB'), s, t), s, t)
+
+
 def render_frame(t):
     s = shot_at(t)
     k = s['kind']
 
     if k == 'stage':
-        return stage_shot(s, t)
+        return _finish(stage_shot(s, t), s, t)
 
     if k == 'title':
-        frame = title_shot(s, t)
-        return apply_zoom(frame, s, t).convert('RGB')
+        return _finish(apply_zoom(title_shot(s, t), s, t), s, t)
 
     if k == 'face':
         frame = face_shot(s, t)
         frame = apply_zoom(frame, s, t)
         draw_telop(frame, s, t); draw_logo(frame, t)
-        return frame.convert('RGB')
+        return _finish(frame, s, t)
 
     if k == 'screen':
         frame = bg_wide().copy()
@@ -971,14 +1100,14 @@ def render_frame(t):
         draw_char(frame, s, t)
         frame = apply_zoom(frame, s, t)
         draw_telop(frame, s, t); draw_logo(frame, t)
-        return frame.convert('RGB')
+        return _finish(frame, s, t)
 
     if k == 'board':
         frame = bg_board().copy()
         draw_content(frame, s, t, 'board')
         frame = apply_zoom(frame, s, t)
         draw_telop(frame, s, t); draw_logo(frame, t)
-        return frame.convert('RGB')
+        return _finish(frame, s, t)
 
     frame = bg_wide().copy()
     draw_content(frame, s, t, 'wide')
@@ -986,7 +1115,7 @@ def render_frame(t):
     draw_char(frame, s, t)
     frame = apply_zoom(frame, s, t)
     draw_telop(frame, s, t); draw_logo(frame, t)
-    return frame.convert('RGB')
+    return _finish(frame, s, t)
 
 
 # ------------------------------------------------------------- 実行

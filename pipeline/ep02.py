@@ -29,7 +29,7 @@ render.SHOTS = [
       roll=False, se='impact', tele='{9割が勘違いしてる}'),
  dict(dur=1.5, kind='stage', scene='cold', face='serious',
       se='reveal', fig=('invert/', 1.02, None), add='翼の形は{関係ない}',
-      say='飛行機、翼の形で飛んでるんちゃう。'),
+      say='飛行機、翼の形で飛んでないねん。'),
 
  # ---- 問い。カットは1〜2秒で切る
  dict(sec='setup', dur=1.5, kind='screen', clip='plane2', face='point',
@@ -43,14 +43,14 @@ render.SHOTS = [
       fig=('wingrace/', 1.02, 'hold'), add='上の空気が{速いから}',
       say='上の面は道が長いから空気が速くなる、と。'),
  dict(dur=1.5, kind='stage', scene='wrong', face='serious', beat=True,
-      se='reveal', add=dict(text='{×} これ、ウソ', color=CRIMSON),
+      se='reveal', flash=True, add=dict(text='{×} これ、ウソ', color=CRIMSON),
       voice='punch', say='これ、ウソ。'),
 
  # ---- 反証。一番強い瞬間なので、実写を挟んでから見せる
  dict(sec='proof', dur=1.2, kind='face', face='point', se='whoosh',
       tele='じゃあ{これ}は？'),
  dict(dur=1.9, kind='stage', scene='inv', face='surprise',
-      se='rise', fig=('invert/', 1.02, None), add='{逆さま}でも飛ぶ',
+      se='rise', flash=True, fig=('invert/', 1.02, None), add='{逆さま}でも飛ぶ',
       say='戦闘機、ひっくり返っても飛ぶ。'),
  dict(dur=1.6, kind='stage', scene='inv', face='serious',
       se='reveal', add=dict(text='形が理由なら{落ちる}', color=CRIMSON),
@@ -69,9 +69,14 @@ render.SHOTS = [
  # ---- 橋。ここで実写の翼を1.2秒だけ差し込んで視覚を変える
  dict(sec='bridge', dur=1.2, kind='screen', clip='wing', face='point',
       se='whoosh', tele='飛行機の{翼}も、'),
- dict(dur=1.8, kind='stage', scene='same', face='explain',
+ dict(dur=2.0, kind='stage', scene='same', face='explain',
       fig=('same/', 1.02, None), add='{これと全く同じ}',
       say='これと全く同じ。形やない、傾きや。'),
+ # 上の台詞の後半「形やない、傾きや」はこのカットに乗る。
+ # 1枚の絵で5秒持たせるより、言葉の切れ目でカットを割るほうが見やすい。
+ # 台詞を持たないショットなので、voice.fit がここまで声をまたがせてくれる。
+ dict(dur=1.7, kind='stage', scene='same', face='serious', se='reveal',
+      add=dict(text='形やない、{傾き}', color=MUSTARD)),
 
  # ---- 因果を3段。1.5〜2秒で切る
  dict(sec='lift', dur=1.5, kind='stage', scene='lift', face='explain',
@@ -87,7 +92,7 @@ render.SHOTS = [
 
  # ---- オチ
  dict(sec='punch', dur=0.7, kind='title', title='つまり'),
- dict(dur=2.0, kind='board', se='impact',
+ dict(dur=2.0, kind='board', se='impact', flash=True,
       board=[dict(text='空気を\n下に殴ってる', size=160, color=MUSTARD)],
       voice='punch', say='飛行機は、空気を下に殴って飛んでる。'),
  dict(dur=1.4, kind='face', face='proud', tele='{普通にすごくね？}'),
