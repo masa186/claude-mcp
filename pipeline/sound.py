@@ -270,6 +270,12 @@ def se_events():
         elif s.get('fig') or s.get('board') or s.get('add'):
             ev.append((s['t'] + render.LEADIN, 'chalk'))   # 図や文字が出る＝ポン
 
+        # se_more=[(秒, 種類), ...] … 1ショットの途中で追加で鳴らす。
+        # 絵が2秒動き続けるのに音が頭の1発だけだと、目と耳がばらばらに感じる。
+        for at, name in s.get('se_more', ()):
+            if at < s['dur'] - 0.06:
+                ev.append((s['t'] + at, name))
+
         if s.get('beat'):
             ev.append((s['t'] + s.get('beat_at', 0.34), 'don'))
         if s.get('tap'):

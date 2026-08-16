@@ -82,17 +82,22 @@ render.SHOTS = [
  dict(sec='lift', dur=1.5, kind='stage', scene='lift', face='explain',
       fig=('aoa/', 1.02, 'hold'), add='翼は{上向き}',
       say='翼はほんの少し上向き。'),
+ # 空気が流れ出したあとも音が続くように、途中でもう一発入れる。
+ # ここは絵が動いているのに無音に近いと、目と耳がばらばらに感じる。
  dict(dur=2.0, kind='stage', scene='lift', face='explain',
       fig=('airflow/', 1.02, None), add='空気を{下}に押す',
+      se_more=[(0.95, 'whoosh')],
       say='当たった空気を下に押し返す。'),
  dict(dur=1.9, kind='stage', scene='lift', face='proud',
       se='rise', fig=('airlift/', 1.02, None),
+      se_more=[(1.05, 'reveal')],
       add=dict(text='翼は{上}へ', color=MUSTARD),
       say='その分だけ、翼は上に持ち上がる。'),
 
  # ---- オチ
- dict(sec='punch', dur=0.7, kind='title', title='つまり'),
- dict(dur=2.0, kind='board', se='impact', flash=True,
+ # 「つまり」の暗転は外した。翼が持ち上がった勢いのまま結論へ直結させる。
+ # 動画を見せたら、ここの1.5秒で「終わった」と錯覚して離脱すると指摘された。
+ dict(sec='punch', dur=2.0, kind='board', se='impact', flash=True,
       board=[dict(text='空気を\n下に殴ってる', size=160, color=MUSTARD)],
       voice='punch', say='飛行機は、空気を下に殴って飛んでる。'),
  dict(dur=1.4, kind='face', face='proud', tele='{普通にすごくね？}'),
@@ -181,8 +186,10 @@ if nar:
 if os.path.exists('bgm.mp3'):
     idx += 1; cmd += ['-stream_loop', '-1', '-i', 'bgm.mp3']
     # 声が乗るぶんBGMを下げる。ここを下げないと台詞が埋もれる
+    # 動画を見せたら「BGMが小さくて疾走感が出ていない」と言われた。
+    # ナレーションを邪魔しない範囲で少し上げる。
     filt.append("[%d:a]volume='%s':eval=frame[b]"
-                % (idx, sound.volume_expr(0.55 if nar else 1.0)))
+                % (idx, sound.volume_expr(0.64 if nar else 1.0)))
     labels.append('[b]')
 print('音: 効果音' + ('＋声(%s)' % nar if nar else '') +
       ('＋BGM' if os.path.exists('bgm.mp3') else ''), flush=True)
