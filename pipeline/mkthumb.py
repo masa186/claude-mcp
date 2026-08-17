@@ -4,9 +4,22 @@
 チャンネルの一覧と検索結果ではサムネが出る。1本見た人が2本目に行くかは
 そこで決まるので、動画と同じ色・同じ書体で揃えておく。
 
-伸びているショートのサムネそのものは取れなかった（i.ytimg.com が
-組織のポリシーで遮断されている）。代わりに、同じ40本で測った
-「画面の文字の置き方」をそのまま当てる（docs/text.md）:
+サムネの画像そのものは取れない（i.ytimg.com が組織のポリシーで遮断）。
+そこで、伸びているショート20本の「1コマ目」を Gemini に見せて数えた
+（docs/firstframe.md）。ショートはフィードで1コマ目が出るので、
+そこが実質のサムネになる。分かったこと:
+  ・文字は20本中20本にある。10〜20文字がボリュームゾーン
+  ・フチか背景板 18/20
+  ・位置は上部13・中央5・下部2 → 上寄せ
+  ・顔があるのは10/20。写すときは画面の4〜8割と大きく
+  ・背景は実写13・イラスト7。そして明るい16 / 暗い4
+  ・続きを見たくなる要素の1位は「9割が知らない」系のフレーズ 8/20
+
+一番外していたのが明るさ。黒板は暗い側の少数派なので、実写クリップが
+ある回はそれを背景に使って明るくする。文字の下の板は暗いままでいい
+（明るい背景の上では、むしろ暗い板のほうが読める）。
+
+同じ40本で測った「画面の文字の置き方」も引き続き当てる（docs/text.md）:
   ・フチ 30/30本、影 29/30本 → 両方付ける
   ・色は白35本・黄18本 → 白地に黄の強調
   ・同時に2行が23本で最多 → 2行に収める
@@ -31,16 +44,18 @@ W, H = 1080, 1920
 # 各話。fig は clips/ の連番か assets/ の1枚
 EPS = [
     # 図は「色が付いていて太いもの」を選ぶ。線画は親指の大きさでは消える。
+    # bg  … 'clip:名前' なら実写を背景に敷いて明るくする。無ければ黒板
+    # lines … 1行目に煽り、2行目に結論。合計10〜20文字に収める
     dict(file='thumb_ep02.png', label='飛行機',
-         lines=['翼の形は', '関係ない'],
-         fig=('aoa/', 60), face='surprise'),
+         bg='clip:plane', lines=['9割が勘違い', '翼の形は関係ない'],
+         fig=None, face='surprise'),
     dict(file='thumb_ep01.png', label='電子レンジ',
-         lines=['食べ物を', '温めてない'],
+         bg='board', lines=['9割が勘違い', '食べ物を温めてない'],
          fig=('02_collision.png', None), face='surprise'),
 ]
 
 TOP = 0.055          # 文字の上端（上寄せ。実測は上〜中央が33/40本）
-SIZE = 190           # 動画の128より大きい。一覧では親指の大きさで見られる
+SIZE = 168           # 動画の128より大きい。一覧では親指の大きさで見られる
 LH = 1.16            # 行送り（文字の高さに対する倍率）
 # カワウソは大きく。一覧の実寸では、図より顔のほうが先に認識される。
 # Gemini に人気動画と見比べさせたとき、こちらの強みとして挙がったのが
@@ -58,11 +73,26 @@ def figure(spec):
     return render.load(name)
 
 
+def background(ep):
+    """実写があれば敷いて明るくする。1コマ目の実測で明るい16／暗い4だった。"""
+    spec = ep.get('bg', 'board')
+    if not spec.startswith('clip:'):
+        return render.bg_board().copy()
+    d = os.path.join(render.CLIP_DIR, spec.split(':', 1)[1])
+    fs = sorted(os.listdir(d))
+    src = Image.open(os.path.join(d, fs[len(fs) // 3])).convert('RGBA')
+    # 縦画面を埋めるように、中央を切って引き伸ばす
+    k = max(W / src.width, H / src.height)
+    src = src.resize((int(src.width * k), int(src.height * k)), Image.LANCZOS)
+    src = src.crop(((src.width - W) // 2, 0, (src.width + W) // 2, H))
+    return src
+
+
 def thumb(ep):
-    im = render.bg_board().copy()
+    im = background(ep)
 
     # 図は中ほどに大きく置く。文字と重ならない高さに収める
-    fig = figure(ep['fig'])
+    fig = figure(ep['fig']) if ep.get('fig') else None
     if fig is not None:
         tw = int(W * 0.90)
         th = int(fig.height * tw / fig.width)
