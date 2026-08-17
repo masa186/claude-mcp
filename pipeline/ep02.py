@@ -36,31 +36,28 @@ render.SHOTS = [
       se='whoosh', tele='これ{何百トン}ある。'),
  dict(dur=1.4, kind='face', face='surprise', tele='{なんで落ちない}？'),
 
- # ---- 勘違いを名指しする
- dict(sec='how', dur=1.4, kind='face', face='serious',
-      tele='{翼の形}のおかげ？'),
- dict(dur=1.8, kind='stage', scene='wrong', face='serious',
+ # ---- 勘違いを名指しして、すぐ潰す。
+ # 40本を数えたら、誤解の否定をやっているのは16本で、うち1〜3秒が10本、
+ # 一番長いものでも10秒だった（docs/decide.md）。ここに15秒使っていたのは
+ # 明らかに長い。3ショット・約6秒に畳んで、浮いた分をオチと予告に回す。
+ dict(sec='how', dur=1.8, kind='stage', scene='wrong', face='serious',
       fig=('wingrace/', 1.02, 'hold'), add='上の空気が{速いから}',
-      say='上の面は道が長いから空気が速くなる、と。'),
+      say='翼の形のおかげ、って習うやろ。'),
  dict(dur=1.5, kind='stage', scene='wrong', face='serious', beat=True,
       se='reveal', flash=True, add=dict(text='{×} これ、ウソ', color=CRIMSON),
-      voice='punch', say='これ、ウソ。'),
-
- # ---- 反証。一番強い瞬間なので、実写を挟んでから見せる
- dict(sec='proof', dur=1.2, kind='face', face='point', se='whoosh',
-      tele='じゃあ{これ}は？'),
- dict(dur=1.9, kind='stage', scene='inv', face='surprise',
+      voice='punch', say='あれ、ウソやねん。'),
+ dict(sec='proof', dur=1.9, kind='stage', scene='inv', face='surprise',
       se='rise', flash=True, fig=('invert/', 1.02, None), add='{逆さま}でも飛ぶ',
-      say='戦闘機、ひっくり返っても飛ぶ。'),
- dict(dur=1.6, kind='stage', scene='inv', face='serious',
-      se='reveal', add=dict(text='形が理由なら{落ちる}', color=CRIMSON),
-      voice='punch', say='形が理由なら落ちるやろ。'),
+      say='戦闘機、逆さまでも飛ぶやろ。'),
 
  # ---- 本当の理由
  dict(sec='example', dur=1.2, kind='face', face='point',
       tele='{これ}見て。'),
- dict(dur=1.9, kind='stage', scene='hand', face='explain',
-      fig=('hand/', 1.02, 'hold'), add='手を{下}に傾ける',
+ # ここは実写にした。もらった素材3本を Gemini に見せて選ばせたところ、
+ # 「風で腕が持ち上がる」は線画より実写のほうが伝わる、と出た。
+ # clip があるショットには環境音（風）が自動で乗るので、絵と音も揃う。
+ dict(dur=1.9, kind='screen', clip='carhand', face='explain',
+      se='whoosh', tele='手を{下}に傾ける',
       say='車の窓から手を出して、下に傾ける。'),
  dict(dur=1.6, kind='stage', scene='hand', face='explain', beat=True,
       se='reveal', fig=('hand/', 1.02, None),
