@@ -1,6 +1,7 @@
 # ---- 作り直せるもの（置かない）
-frames/
-frames2/
+# 書き出した連番。話ごとに frames1 / frames2 … と増えるので、まとめて外す。
+# 1本ぶんで1300枚あり、動画から作り直せるものなのでリポジトリには置かない。
+frames*/
 se.wav
 se2.wav
 se_preview.wav
