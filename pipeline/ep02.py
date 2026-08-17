@@ -104,8 +104,10 @@ render.SHOTS = [
  dict(sec='next', dur=1.5, kind='board',
       board=[dict(text='次は\n{電子レンジ}', size=130)],
       say='次は電子レンジ。'),
+ # 次回予告の核なので、ここが読めないと引きが働かない。
+ # 赤は黒板の緑と明るさが近く、実測1.40:1。同じ動画で使っている黄に替える。
  dict(dur=1.6, kind='board', se='reveal', shake=True,
-      board=[dict(text='食べ物を\n温めてない', size=130, color=CRIMSON)],
+      board=[dict(text='食べ物を\n温めてない', size=130, color=MUSTARD)],
       voice='punch', say='あれ、食べ物を温めてない。'),
  dict(dur=1.6, kind='face', face='surprise',
       voice='punch', tele='{じゃあ何温めてる}？'),

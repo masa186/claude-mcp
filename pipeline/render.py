@@ -425,7 +425,14 @@ def draw_content(canvas, s, t, kind):
                 dl = ImageDraw.Draw(lay)
                 slide = int(46 * (1 - p) ** 2)      # 出るときに左から滑り込む
                 x0 = ((a[0]+a[2])//2 if ctr else a[0]) - slide
-                wid = rich(dl, x0, y, ln, fnt, col, MUSTARD, anchor_c=ctr)
+                # 黒フチを入れる。ここだけフチ無しで描いていたので、
+                # 黒板の緑に対して明るさの差がほとんど無かった。
+                # 実測で赤は1.40:1、黄でも2.78:1（見出しの目安は3:1）。
+                # 色だけで差を付けると、赤緑の見分けが付きにくい人には読めない。
+                # フチを入れれば、色に頼らず明るさで輪郭が出る。
+                wid = rich(dl, x0, y, ln, fnt, col, MUSTARD,
+                           stroke=max(5, it['size'] // 20), scol=BLACK,
+                           anchor_c=ctr)
                 if p < 1:
                     left = x0 - wid/2 if ctr else a[0]
                     m = Image.new('L', (W, H), 0)
