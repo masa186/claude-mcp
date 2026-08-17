@@ -568,6 +568,130 @@ def stills():
     print('  10_wing_wrong.png / 11_wing_lift.png')
 
 
+
+
+# ---------------------------------------------------------------- 電子レンジ
+#
+# 第2話（飛行機）の実データで分かったこと: 43.2%が冒頭で消え、残った人は
+# 75%見てループしていた。つまり中身は効いている。効いた理由のひとつが
+# 「図が動いていた」ことなので、電子レンジの図も静止画から連番に作り直す。
+#
+# 40本の実測で図の作り方は 矢印24・前後の比較23・色分け22・拡大18 だった。
+# 比較（f_plate）と色分け（水は青、熱は赤）をここでも使う。
+
+WATER = (108, 168, 214)      # 水の分子。青
+HOT   = (224, 92, 66)        # 熱。赤（HEAT と同じ系統）
+
+
+def molecule(d, cx, cy, ang, r=34, alpha=255, col=None):
+    """水の分子。酸素1つに水素2つ。向きが分かるように非対称に描く。"""
+    col = col or WATER
+    d.ellipse([(cx-r)*SS, (cy-r)*SS, (cx+r)*SS, (cy+r)*SS],
+              fill=tuple(col) + (alpha,))
+    for s in (-1, 1):
+        a = ang + s * 0.92                      # 実際の水分子の角度に寄せる
+        hx, hy = cx + math.cos(a) * r * 1.5, cy + math.sin(a) * r * 1.5
+        d.ellipse([(hx-r*.58)*SS, (hy-r*.58)*SS, (hx+r*.58)*SS, (hy+r*.58)*SS],
+                  fill=tuple(CHALK) + (alpha,))
+        line(d, [(cx, cy), (hx, hy)], col, 7, alpha)
+
+
+GRID = [(x, y) for y in (250, 400) for x in (250, 420, 590, 760)]
+
+
+def f_spin(i):
+    """マイクロ波が来ると、水の分子がいっせいに向きを変える図。
+
+    「電波が水を回す」が言葉だけだと入らない。波が左から通り過ぎるのに
+    合わせて分子が反転するところを見せると、因果が目で追える。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    label(d, 62, 96, '水の分子', 60, WATER, 255, anchor='lm')
+
+    # マイクロ波。左から右へ流れる波。分子はこれに合わせて向きを変える
+    wx = -200 + (W + 400) * p
+    for k in range(3):
+        xs = []
+        for t in range(0, W + 1, 8):
+            ph = (t - wx) / 150.0
+            xs.append((t, 150 + k * 6 + math.sin(ph) * 42 * math.exp(-abs(t-wx)/420)))
+        line(d, xs, GOLD, 5, 150 - k * 40)
+
+    for gx, gy in GRID:
+        # 波が通り過ぎた分子ほど、大きく振れる
+        near = math.exp(-abs(gx - wx) / 260.0)
+        ang = math.sin(p * 2*math.pi * 3 + gx * 0.01) * 2.2 * near - math.pi/2
+        molecule(d, gx, gy, ang, 34, 255)
+    if p > 0.45:
+        al = int(255 * min(1.0, (p - 0.45) / 0.25))
+        label(d, 470, 560, 'ぐるんぐるん 向きを変える', 62, GOLD, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_bump(i):
+    """向きを変えた分子が隣とぶつかって、そこが熱くなる図。"""
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    label(d, 62, 96, 'ぶつかる', 60, CHALK, 255, anchor='lm')
+
+    for k, (gx, gy) in enumerate(GRID):
+        w = 2*math.pi * 2.2 * p + k * 1.1
+        dx, dy = math.cos(w) * 26, math.sin(w * 1.3) * 20
+        ang = math.sin(w) * 2.4 - math.pi/2
+        # ぶつかった瞬間だけ赤く光らせる。色で「ここで熱が出た」と分かる
+        hit = max(0.0, math.sin(w)) ** 6
+        col = tuple(int(WATER[c] + (HOT[c] - WATER[c]) * hit) for c in range(3))
+        if hit > 0.35:
+            r = 46 + 26 * hit
+            d.ellipse([(gx+dx-r)*SS, (gy+dy-r)*SS, (gx+dx+r)*SS, (gy+dy+r)*SS],
+                      fill=tuple(HOT) + (int(70 * hit),))
+        molecule(d, gx + dx, gy + dy, ang, 34, 255, col)
+
+    if p > 0.4:
+        al = int(255 * min(1.0, (p - 0.4) / 0.25))
+        arrow(d, 470, 520, 470, 452, HOT, 11, 34, al)
+        label(d, 470, 570, 'これが熱', 66, HOT, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_plate(i):
+    """お皿と食べ物を並べて比べる図。上＝水なし、下＝水あり。
+
+    40本の実測で「前後の比較」は23本。飛行機でこれを入れたら効いたので
+    ここでも使う。お皿が温まらない理由が、並べるだけで分かる。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.5))) ** 3
+
+    # ── 上：お皿。水の分子が無いので、波が来ても何も起きない
+    label(d, 40, 60, 'お皿', 60, CHALK, 235, anchor='lm')
+    capsule(d, 210, 160, 620, 160, 34, CHALK, 220)
+    label(d, 760, 160, '水なし', 54, DIM, 235)
+    if e > 0.5:
+        label(d, 465, 246, '温まらない', 60, DIM, int(255*(e-0.5)/0.5))
+
+    dashed(d, 24, 320, 876, 320, DIM, 3, 16, 110)
+
+    # ── 下：食べ物。中に水があるので、そこが熱くなる
+    label(d, 40, 372, '食べ物', 60, CHALK, 255, anchor='lm')
+    capsule(d, 210, 470, 620, 470, 34, CHALK, 220)
+    for k, gx in enumerate((270, 370, 470, 570)):
+        w = 2*math.pi * 2.0 * p + k
+        hit = max(0.0, math.sin(w)) ** 5 * e
+        col = tuple(int(WATER[c] + (HOT[c] - WATER[c]) * hit) for c in range(3))
+        molecule(d, gx, 470, math.sin(w) * 2.0 - math.pi/2, 22, 255, col)
+    if e > 0.5:
+        al = int(255 * (e - 0.5) / 0.5)
+        label(d, 760, 470, '水あり', 54, GOLD, al)
+        label(d, 465, 566, 'ここが熱くなる', 62, HOT, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
     dump('wingrace', f_wingrace)
@@ -577,5 +701,8 @@ if __name__ == '__main__':
     dump('hand', f_hand)
     dump('same', f_same)
     dump('invert', f_invert)
+    dump('spin', f_spin)          # 電子レンジ：分子が向きを変える
+    dump('bump', f_bump)          # 電子レンジ：ぶつかって熱になる
+    dump('plate', f_plate)        # 電子レンジ：皿と食べ物を比べる
     stills()
     print('完了 → ' + OUT)
