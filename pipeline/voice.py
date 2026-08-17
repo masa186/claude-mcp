@@ -147,9 +147,11 @@ def from_gemini(shots):
         return None
     ls = lines(shots)
     # 無料枠は1日10リクエストしかないので、台本ぜんぶを1回で合成して切り分ける
-    segs = gtts.say_script([t for _, t in ls])
+    texts = [t for _, t in ls]
+    segs = gtts.say_script(texts)
     if segs is None:
         return None
+    gtts.check(texts, segs)          # 切り分けを外していたら気づけるように
     return {i: trim_silence(resample(x, gtts.SR))
             for (i, _), x in zip(ls, segs)}
 

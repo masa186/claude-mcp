@@ -60,7 +60,20 @@ def _post(body, model, timeout=420):
         return json.load(resp)
 
 
-def say(text, voice=None, style=None):
+def voiced_seconds(x, sr=None):
+    """実際に声が出ている秒数。末尾の長い無音に騙されないため。"""
+    sr = sr or SR
+    w = int(sr * 0.05)
+    n = len(x) // w
+    if not n:
+        return 0.0
+    rms = np.array([np.sqrt(np.mean(x[i*w:(i+1)*w] ** 2)) for i in range(n)])
+    if rms.max() <= 0:
+        return 0.0
+    return float((rms > rms.max() * 0.12).sum()) * 0.05
+
+
+def say(text, voice=None, style=None, expect=None):
     """1行を合成して float 配列（44.1kHz換算前の 24kHz）で返す。
 
     同じ台本で何度もレンダリングするので、結果はディスクに残す。
@@ -69,6 +82,9 @@ def say(text, voice=None, style=None):
     voice = voice or VOICE
     style = style or STYLE
     os.makedirs(CACHE, exist_ok=True)
+    # expect … だいたい何秒返るはずか。これを外れた音はキャッシュしない。
+    # 実際に「6行ぶん頼んだのに3秒だけ喋って215秒の無音」という応答が返り、
+    # それがキャッシュに残って、作り直しても同じ壊れた音が出続けた。
     h = hashlib.sha1(('%s|%s|%s|%s' % (MODEL, voice, style, text)).encode()).hexdigest()[:16]
     p = os.path.join(CACHE, h + '.wav')
     if os.path.exists(p):
@@ -108,28 +124,75 @@ def say(text, voice=None, style=None):
             break
     if not pcm:
         return np.zeros(0)
+    x = np.frombuffer(pcm, dtype='<i2') / 32768
+    if expect and voiced_seconds(x) < expect * 0.45:
+        print('    応答が短すぎる（声 %.1f秒 / 期待 %.1f秒）。捨てて作り直す'
+              % (voiced_seconds(x), expect))
+        return np.zeros(0)              # キャッシュしない
     with wave.open(p, 'wb') as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
         w.writeframes(pcm)
     return np.frombuffer(pcm, dtype='<i2') / 32768
 
 
-def say_script(texts, voice=None, style=None, gap='。……。'):
-    """台本ぜんぶを1回で合成して、無音で切り分ける。
+def say_script(texts, voice=None, style=None, gap='。……………。', batch=7):
+    """台本を数回に分けて合成し、無音で切り分ける。
 
-    無料枠はこのモデルで1日10リクエストしかない。1行1リクエストだと
-    20行の台本で即座に尽きる。まとめて投げて、あとで切る。
-    行間に「……」を入れておくと、そこに分かりやすい間ができる。
+    以前は台本ぜんぶを1リクエストで投げていた。無料枠が1日10回しかないので
+    回数を最小にしたかったからだが、20行を1回で投げると切れ目が19か所になり、
+    「行間の無音が、行の中の句点の無音より必ず長い」という前提が崩れる。
+    実際に1か所ずれて、「飛行機の翼も、」のショットに次の行の
+    「これと全く同じ」が乗っていた。
+
+    7行ずつに分けると切れ目は6か所で済み、外しにくい。外しても被害は
+    そのまとまりの中だけに収まる。3リクエストなら枠にも収まる。
     """
-    joined = ('\n' + gap + '\n').join(texts)
-    x = say(joined, voice=voice, style=style)
-    if not len(x):
-        return None
-    segs = split_silence(x, len(texts))
-    if segs is None:
-        print('    切り分け失敗（%d行に分けられなかった）' % len(texts))
-        return None
-    return segs
+    out = []
+    i = 0
+    while i < len(texts):
+        n = batch
+        segs = None
+        # うまくいかなければ、まとまりを小さくして測り直す。
+        # 以前は1つでも失敗すると全部を捨てて合成音声に落ちていたが、
+        # それだと成功した分まで無駄になり、声が丸ごと別物になってしまう。
+        while n >= 1:
+            part = texts[i:i+n]
+            joined = ('\n' + gap + '\n').join(part)
+            x = say(joined, voice=voice, style=style, expect=_expect(part))
+            if len(x):
+                segs = split_silence(x, len(part)) if len(part) > 1 else [x]
+            if segs is not None:
+                break
+            print('    %d〜%d行目がうまく切れない。%d行ずつに縮めて試す'
+                  % (i+1, i+len(part), max(1, n // 2)))
+            n = n // 2
+        if segs is None:
+            return None
+        out += segs
+        i += len(segs)
+    return out
+
+
+def _expect(part):
+    """この行たちなら、だいたい何秒の音が返るはずか。"""
+    return sum(len(t) for t in part) * 0.17
+
+
+def check(texts, segs, sr=None):
+    """行の長さと音の長さが釣り合っているかを見る。
+
+    切り分けを外すと、ある行が異様に長く、隣が短くなる。
+    黙って書き出すと、そのまま動画に乗ってしまうので、ここで気づけるようにする。
+    """
+    sr = sr or SR
+    r = [len(x) / sr / max(len(t), 1) for t, x in zip(texts, segs)]
+    med = sorted(r)[len(r) // 2]
+    bad = [(i, texts[i], r[i] / med) for i in range(len(r))
+           if r[i] > med * 2.0 or r[i] < med * 0.45]
+    for i, t, k in bad:
+        print('    %d行目「%s」が中央値の%.1f倍。切り分けを外している疑い'
+              % (i + 1, t[:18], k))
+    return not bad
 
 
 def split_silence(x, want, min_gap=0.22):
