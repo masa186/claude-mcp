@@ -30,11 +30,20 @@ render.SHOTS = [
  # ---- 冒頭2秒。ここだけが弱点だと実データで分かっている。
  # 飛行機は「実写＋巨大文字＋一撃音」で始めて43.2%に消えられた。
  # 今回は最初の一言を問いではなく断定にして、1秒以内に2回画面を変える。
- dict(sec='hook', dur=1.4, kind='board', se='dodon', flash=True, shake=True,
-      board=[dict(text='電子レンジは\n温めてない', size=150, color=MUSTARD)],
-      voice='punch', say='電子レンジ、食べ物を温めてないねん。'),
- dict(dur=1.5, kind='face', face='surprise', se='reveal',
-      tele='{えっ}てなるやろ'),
+ # 0秒から図を動かす。伸びているショート21本を測ったら、0秒の時点で
+ # 既に何かが動いているのが18本、止まっているのは3本だけだった。
+ # 最初これを board（動かない黒板に文字だけ）にしていて、
+ # 一番多い項目を外していた。head=0 で声も0秒から出す（20/21がそう）。
+ dict(sec='hook', dur=1.4, kind='stage', scene='cold', face='surprise',
+      se='dodon', flash=True, shake=True, head=0.0,
+      fig=('spin/', 1.02, None), add='電子レンジは{温めてない}',
+      voice='punch', say='電子レンジ、温めてへん。'),
+ # 1本目の台詞を18文字で書いたら、声に合わせてショットが3.34秒に伸び、
+ # 2秒までに一度も切り替わらなくなった。実測は中央値1回。12文字に詰めて、
+ # 2つ目の言葉をこちらに回すと、1.5秒あたりで切り替わる。
+ dict(dur=1.6, kind='face', face='surprise', se='reveal',
+      voice='punch', tele='{食べ物}ちゃうねん'),
+ dict(dur=1.5, kind='face', face='explain', tele='{えっ}てなるやろ'),
 
  # ---- 誤解を名指しする
  dict(sec='how', dur=1.7, kind='stage', scene='wrong', face='serious',

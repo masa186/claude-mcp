@@ -279,7 +279,7 @@ def fit(shots, audio):
     for i, x in audio.items():
         if not len(x):
             continue
-        need = HEAD + len(x)/SR + TAIL
+        need = shots[i].get('head', HEAD) + len(x)/SR + TAIL
         # 次に台詞があるショットの手前まで、この声が使える。
         # ただし章タイトルは「わざと置いた間」なので、そこへは食い込ませない。
         j = i
@@ -314,7 +314,8 @@ def write(path, shots, audio, duration):
         if m > 0:
             # 決め台詞だけ持ち上げる。全部同じ音量だと、どこが山か耳で分からない
             x = x * ((0.74 if shots[i].get('voice') == 'punch' else 0.60) / m)
-        j = int(SR * (shots[i]['t'] + HEAD))
+        # 21本中20本が0秒から喋り始めていた。冒頭だけ head=0 にできる
+        j = int(SR * (shots[i]['t'] + shots[i].get('head', HEAD)))
         track[j:j+len(x)] += x[:max(0, len(track)-j)]
     pk = np.abs(track).max()
     if pk > 0.90:
