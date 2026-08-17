@@ -249,6 +249,10 @@ SE_DIR = os.path.join(HERE, 'se')
 #   se/rise.wav    溜め（ズームの前）
 #   se/reveal.wav  答え・否定が出る（キラン）
 #   se/impact.wav  オチの一撃
+# pa0.wav は pop.wav の複製。124本の実測で一番多い音が「ポン」（85本）で、
+# 文字が出る瞬間に当てるのが定石だった。こちらはポンを黒板に書くショットだけに
+# 絞っていたので、全体で1回しか鳴っていなかった。文字の枠にポンを入れて、
+# 一番よく鳴る場所を実測の多数派に合わせる。
 REAL = dict(whoosh='whoosh.wav', chalk='pop.wav', don='don.wav',
             ton='tap.wav', rise='rise.wav', pa='pa.wav', dodon='dodon.wav',
             reveal='reveal.wav', impact='impact.wav')
@@ -272,6 +276,37 @@ def load_wav(path):
 # 重ねると濁る。頭を残して尻をフェードで落とす。
 MAXLEN = dict(whoosh=0.70, chalk=0.45, don=1.20, ton=0.50, rise=1.60,
               reveal=1.10, impact=1.40, pa=0.35, dodon=1.60)
+
+
+def centroid(x):
+    w = np.abs(np.fft.rfft(x * np.hanning(len(x))))
+    fr = np.fft.rfftfreq(len(x), 1 / SR)
+    return (w * fr).sum() / (w.sum() + 1e-9)
+
+
+def tilt(x, target=3200.0):
+    """明るすぎる音の高域を落として、束の中で浮かないようにする。"""
+    if len(x) < 64 or centroid(x) <= target:
+        return x
+    for fc in (9000, 7000, 5600, 4600, 3800, 3200, 2700, 2300):
+        x = lowpass(x, fc)
+        if centroid(x) <= target:
+            break
+    return x
+
+
+# 体感の音量をここに合わせる。ピーク値ではなく実効値で揃えるための係数。
+RMS_OF_PEAK = 0.16
+
+
+def level(x, peak):
+    """実効値（RMS）で音量を揃える。最後にピークだけ念のため抑える。"""
+    r = np.sqrt(np.mean(x ** 2))
+    if r <= 0:
+        return x
+    y = x * (peak * RMS_OF_PEAK / r)
+    m = np.abs(y).max()
+    return y * (0.98 / m) if m > 0.98 else y
 
 
 def trim(x, sec):
@@ -429,8 +464,15 @@ def build_track(dur):
             bank = []
             for r in rs:
                 r = trim(r, MAXLEN.get(k, 0.8))
-                m = np.abs(r).max()
-                bank.append(r * (pk / m) if m > 0 else r)  # 音量だけ揃える。加工しない
+                # 実素材も同じ耳で揃える。以前はここを「加工しない」にしていて、
+                # 結果、束の周波数の重心が112Hz〜10071Hz（90倍）に散らばった。
+                # キランが9232Hz、溜めが10071Hz。参考動画のアタックの重心は
+                # 約1900Hzなので、この2つだけ極端に硬く、耳に刺さっていた。
+                # 素材の持ち味は残したいので、上限は3200Hzと緩めにする。
+                r = tilt(r, 3200.0)
+                # 音量はピークではなく体感（RMS）で揃える。ピークだけ合わせると
+                # 実測で体感が5倍ばらつき、特定の音だけ飛び出して聞こえる。
+                bank.append(level(r, pk))
             banks[k] = bank
             used_real.append((k, len(bank)))
         else:
