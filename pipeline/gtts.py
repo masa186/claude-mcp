@@ -161,6 +161,11 @@ def say_script(texts, voice=None, style=None, gap='。……………。', batch
             x = say(joined, voice=voice, style=style, expect=_expect(part))
             if len(x):
                 segs = split_silence(x, len(part)) if len(part) > 1 else [x]
+            # 切れたつもりでも、行の長さと釣り合っていなければ外している。
+            # 失敗（None）だけを見ていた頃は、ここをすり抜けて動画に乗った。
+            if segs is not None and not balanced(part, segs):
+                print('    %d〜%d行目の切れ目がずれている' % (i+1, i+len(part)))
+                segs = None
             if segs is not None:
                 break
             print('    %d〜%d行目がうまく切れない。%d行ずつに縮めて試す'
@@ -171,6 +176,21 @@ def say_script(texts, voice=None, style=None, gap='。……………。', batch
         out += segs
         i += len(segs)
     return out
+
+
+def balanced(texts, segs, sr=None):
+    """各行の「音の秒数 ÷ 文字数」が揃っているか。1行なら常に真。
+
+    切れ目を1つ外すと、片方が伸びて隣が縮む。比を見れば分かる。
+    """
+    if len(texts) < 2:
+        return True
+    sr = sr or SR
+    r = [len(x) / sr / max(len(t), 1) for t, x in zip(texts, segs)]
+    med = sorted(r)[len(r) // 2]
+    if med <= 0:
+        return False
+    return all(0.5 * med <= v <= 1.9 * med for v in r)
 
 
 def _expect(part):
