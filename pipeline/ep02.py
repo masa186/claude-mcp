@@ -70,11 +70,9 @@ render.SHOTS = [
  dict(dur=2.0, kind='stage', scene='same', face='explain',
       fig=('same/', 1.02, None), add='{これと全く同じ}',
       say='これと全く同じ。形やない、傾きや。'),
- # 上の台詞の後半「形やない、傾きや」はこのカットに乗る。
- # 1枚の絵で5秒持たせるより、言葉の切れ目でカットを割るほうが見やすい。
- # 台詞を持たないショットなので、voice.fit がここまで声をまたがせてくれる。
- dict(dur=1.1, kind='stage', scene='same', face='serious', se='reveal',
-      add=dict(text='形やない、{傾き}', color=MUSTARD)),
+ # 「形やない、傾き」の文字だけのカットは外した。
+ # 12行目の音声が前半しか無く、ここが1.7秒まるごと無声になって
+ # 「ずれている」と感じる原因になっていた。字は次の3段が引き取る。
 
  # ---- 因果を3段。1.5〜2秒で切る
  dict(sec='lift', dur=1.5, kind='stage', scene='lift', face='explain',

@@ -49,10 +49,17 @@ def available():
     return bool(OJT) and os.path.exists(DIC) and os.path.exists(HTS)
 
 
+# 合成音声が読み違える語。画面に出す字は変えず、読ませる字だけ差し替える。
+# 「逆さま」を「ぎゃくさま」と読んでいた。
+YOMI = {'逆さま': 'さかさま'}
+
+
 def clean(text):
     """テロップ用の { } を外し、読み上げに向かない記号を落とす。"""
     t = text.replace('{', '').replace('}', '').replace('\n', '、')
     t = t.replace('bro、', 'ブロ、').replace('bro', 'ブロ')
+    for a, b in YOMI.items():
+        t = t.replace(a, b)
     t = re.sub(r'[「」『』]', '', t)
     return t.strip()
 
@@ -176,8 +183,28 @@ def resample(x, src, dst=SR):
                      np.arange(len(x)), x)
 
 
+LINE_DIR = os.path.join(HERE, '.voicelines')
+
+
+def _line_file(text):
+    import gtts, hashlib
+    h = hashlib.sha1(('%s|%s|%s' % (gtts.MODEL, gtts.VOICE, text)).encode())
+    return os.path.join(LINE_DIR, h.hexdigest()[:16] + '.wav')
+
+
+def _save_line(path, x):
+    os.makedirs(LINE_DIR, exist_ok=True)
+    import sound
+    sound.write_wav(path, x)
+
+
 def from_gemini(shots):
-    """Gemini の音声合成。Open JTalk より人の声に近いので、あればこちらを使う。"""
+    """Gemini の音声合成。Open JTalk より人の声に近いので、あればこちらを使う。
+
+    行ごとにディスクへ残す。以前はまとめて投げた「かたまり」単位でしか
+    キャッシュしていなかったので、台本の1語を直すと全行が作り直しになり、
+    1日10回の枠にすぐぶつかっていた。行単位なら、直した行だけ録り直せる。
+    """
     try:
         import gtts
     except Exception:
@@ -185,14 +212,38 @@ def from_gemini(shots):
     if not gtts.available():
         return None
     ls = lines(shots)
-    # 無料枠は1日10リクエストしかないので、台本ぜんぶを1回で合成して切り分ける
     texts = [t for _, t in ls]
-    segs = gtts.say_script(texts)
-    if segs is None:
+    # 読みを直す前の文でも引けるようにしておく。枠が尽きて録り直せない日でも、
+    # 前の音（読みは違うが中身はある）で穴を空けずに書き出せる。
+    keep, globals()['YOMI'] = YOMI, {}
+    raw = [t for _, t in lines(shots)]
+    globals()['YOMI'] = keep
+    have, missing = {}, []
+    for k, t in enumerate(texts):
+        f = _line_file(t)
+        if os.path.exists(f):
+            have[k] = read_wav(f)
+        else:
+            missing.append(k)
+    if missing:
+        print('  %d行はそのまま使い、%d行だけ作る' % (len(have), len(missing)))
+        segs = gtts.say_script([texts[k] for k in missing])
+        if segs is None:
+            for k in missing:
+                g = _line_file(raw[k])
+                if raw[k] != texts[k] and os.path.exists(g):
+                    have[k] = read_wav(g)
+                    print('    %d行目は読みを直す前の音で代用（枠が戻ったら録り直す）' % (k+1))
+            if not have:
+                return None
+        else:
+            for k, x in zip(missing, segs):
+                y = squeeze(trim_silence(resample(x, gtts.SR), 0.010))
+                _save_line(_line_file(texts[k]), y)
+                have[k] = y
+    if not have:
         return None
-    gtts.check(texts, segs)          # 切り分けを外していたら気づけるように
-    return {i: squeeze(trim_silence(resample(x, gtts.SR), 0.010))
-            for (i, _), x in zip(ls, segs)}
+    return {i: have.get(k, np.zeros(0)) for k, (i, _) in enumerate(ls)}
 
 
 def collect(shots, preset=DEFAULT):

@@ -12,3 +12,6 @@ __pycache__/
 
 # Gemini TTS のキャッシュ（作り直せる）
 pipeline/.ttscache/
+
+# 行ごとの音声キャッシュ（APIから作り直せる）
+pipeline/.voicelines/
