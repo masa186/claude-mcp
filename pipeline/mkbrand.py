@@ -54,24 +54,24 @@ def icon(size=800):
     """
     im = board_bg(size, size)
     face = render.load('char_proud.png')
-    # 胸から上だけを切り出す。全身を入れると顔が小さすぎて誰か分からない
-    # 上の余白（額の上）は詰める。丸く切られるので、顔が円に対して
-     # 小さいと一覧で誰か分からなくなる
-    crop = face.crop((int(face.width * 0.09), int(face.height * 0.045),
-                      int(face.width * 0.91), int(face.height * 0.395)))
+    # 顔の下半分を絶対に削らないこと。
+    # 前は切った下端をぼかして黒板に溶かしていたが、そのぼかしが
+    # 顎と口ひげまで食っていた。ぼかしはやめて、体が枠の下から
+    # はみ出すところまで深く切る。丸く抜かれるので、はみ出しは自然に消える。
+    x0, x1 = int(face.width * 0.09), int(face.width * 0.91)
+    y0 = int(face.height * 0.045)                 # 額の上の余白だけ詰める
+    top = int(size * 0.07)
+    # はみ出す高さになるまで、切る下端を伸ばしていく
+    y1 = int(face.height * 0.42)
+    while y1 < face.height:
+        k = (size * 1.02) / (x1 - x0)
+        if top + (y1 - y0) * k >= size + 8:       # 枠の下を確実に越える
+            break
+        y1 += 12
+    crop = face.crop((x0, y0, x1, y1))
     k = (size * 1.02) / crop.width
     crop = crop.resize((int(crop.width * k), int(crop.height * k)), Image.LANCZOS)
-    # 切った下端をぼかして黒板に溶かす。そのまま貼ると胸のあたりで
-    # 白い帯がまっすぐ切れて、切り抜き損じに見える
-    a = crop.getchannel('A')
-    fade = Image.new('L', crop.size, 255)
-    fd = ImageDraw.Draw(fade)
-    h = int(crop.height * 0.16)
-    for i in range(h):
-        y = crop.height - h + i
-        fd.line([(0, y), (crop.width, y)], fill=int(255 * (1 - i / h) ** 1.4))
-    crop.putalpha(Image.composite(a, Image.new('L', crop.size, 0), fade))
-    im.paste(crop, (size // 2 - crop.width // 2, int(size * 0.09)), crop)
+    im.paste(crop, (size // 2 - crop.width // 2, top), crop)
     return im
 
 
