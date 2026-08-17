@@ -175,7 +175,31 @@ def say_script(texts, voice=None, style=None, gap='。……………。', batch
             return None
         out += segs
         i += len(segs)
-    return out
+    return repair(texts, out, voice, style)
+
+
+def repair(texts, segs, voice=None, style=None):
+    """台本ぜんぶを見渡して、明らかに長さの合わない行だけ単独で合成し直す。
+
+    まとまりの中では釣り合っていても、台本全体で見ると外れている行が残る。
+    切れ目のせいで隣に食われた行と、食った行の両方が出る。
+    その行だけ1本で合成すれば切れ目が無いので、必ず正しい長さになる。
+    リクエストは外れた行の数だけしか増えない。
+    """
+    r = [len(x) / SR / max(len(t), 1) for t, x in zip(texts, segs)]
+    med = sorted(r)[len(r) // 2]
+    if med <= 0:
+        return segs
+    for i, v in enumerate(r):
+        if 0.55 * med <= v <= 1.8 * med:
+            continue
+        print('    %d行目「%s」を単独で作り直す（中央値の%.1f倍）'
+              % (i + 1, texts[i][:16], v / med))
+        x = say(texts[i], voice=voice, style=style,
+                expect=len(texts[i]) * med * 0.6)
+        if len(x):
+            segs[i] = x
+    return segs
 
 
 def balanced(texts, segs, sr=None):
