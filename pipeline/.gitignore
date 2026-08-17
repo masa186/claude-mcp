@@ -41,3 +41,7 @@ assets/char_*_mouth.png
 !bgm.mp3
 lips_sheet.png
 voicevox/
+
+# チャンネルのアイコンとバナー（mkbrand.py で作り直せるが、
+# 上げたものと同じものを残しておきたい）
+!brand/*.png
