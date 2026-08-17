@@ -82,6 +82,45 @@ def read_wav(path):
     return x
 
 
+MAXGAP = 0.20        # 台詞の途中に許す無音の長さ（秒）
+
+
+def squeeze(x, thr=0.010, maxgap=MAXGAP):
+    """台詞の途中の長すぎる無音を詰める。
+
+    合成音声は、句読点のところで実際の人よりずっと長く止まることがある。
+    「その分だけ、翼は上に持ち上がる。」に0.65秒の空白が入っていて、
+    そのせいでショットが5.3秒に伸び、そこが動画で一番止まって見える区間に
+    なっていた。喋っていない時間を削るだけなので、声そのものは変わらない。
+    """
+    if not len(x):
+        return x
+    w = int(SR * 0.02)
+    n = len(x) // w
+    if n < 2:
+        return x
+    rms = np.array([np.sqrt(np.mean(x[i*w:(i+1)*w] ** 2)) for i in range(n)])
+    if rms.max() <= 0:
+        return x
+    quiet = rms < max(thr, rms.max() * 0.06)
+    keep = np.ones(n, dtype=bool)
+    lim = max(1, int(maxgap / 0.02))
+    i = 0
+    while i < n:
+        if quiet[i]:
+            j = i
+            while j < n and quiet[j]:
+                j += 1
+            if j - i > lim:
+                keep[i + lim // 2: j - (lim - lim // 2)] = False
+            i = j
+        else:
+            i += 1
+    if keep.all():
+        return x
+    return np.concatenate([x[i*w:(i+1)*w] for i in range(n) if keep[i]])
+
+
 def trim_silence(x, thr=0.006):
     """前後の無音を落とす。頭に無音が残ると、絵と声がずれる。"""
     if not len(x):
@@ -152,7 +191,7 @@ def from_gemini(shots):
     if segs is None:
         return None
     gtts.check(texts, segs)          # 切り分けを外していたら気づけるように
-    return {i: trim_silence(resample(x, gtts.SR))
+    return {i: squeeze(trim_silence(resample(x, gtts.SR), 0.010))
             for (i, _), x in zip(ls, segs)}
 
 
@@ -222,7 +261,8 @@ def write(path, shots, audio, duration):
             continue
         m = np.abs(x).max()
         if m > 0:
-            x = x * (0.62 / m)
+            # 決め台詞だけ持ち上げる。全部同じ音量だと、どこが山か耳で分からない
+            x = x * ((0.74 if shots[i].get('voice') == 'punch' else 0.60) / m)
         j = int(SR * (shots[i]['t'] + HEAD))
         track[j:j+len(x)] += x[:max(0, len(track)-j)]
     pk = np.abs(track).max()

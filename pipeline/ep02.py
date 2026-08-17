@@ -73,7 +73,7 @@ render.SHOTS = [
  # 上の台詞の後半「形やない、傾きや」はこのカットに乗る。
  # 1枚の絵で5秒持たせるより、言葉の切れ目でカットを割るほうが見やすい。
  # 台詞を持たないショットなので、voice.fit がここまで声をまたがせてくれる。
- dict(dur=1.7, kind='stage', scene='same', face='serious', se='reveal',
+ dict(dur=1.1, kind='stage', scene='same', face='serious', se='reveal',
       add=dict(text='形やない、{傾き}', color=MUSTARD)),
 
  # ---- 因果を3段。1.5〜2秒で切る
@@ -84,7 +84,7 @@ render.SHOTS = [
  # ここは絵が動いているのに無音に近いと、目と耳がばらばらに感じる。
  dict(dur=2.0, kind='stage', scene='lift', face='explain',
       fig=('airflow/', 1.02, None), add='空気を{下}に押す',
-      se_more=[(0.95, 'whoosh')],
+      se_more=[(0.95, 'whoosh')], shake=True,
       say='当たった空気を下に押し返す。'),
  # ここだけ3行。上向き→下に押す→上へ の3つが並んでいること自体が説明の
  # 中身なので、2行にすると話の筋が画面から消える。
@@ -106,7 +106,7 @@ render.SHOTS = [
  dict(sec='next', dur=1.5, kind='board',
       board=[dict(text='次は\n{電子レンジ}', size=130)],
       say='次は電子レンジ。'),
- dict(dur=1.6, kind='board', se='reveal',
+ dict(dur=1.6, kind='board', se='reveal', shake=True,
       board=[dict(text='食べ物を\n温めてない', size=130, color=CRIMSON)],
       voice='punch', say='あれ、食べ物を温めてない。'),
  dict(dur=1.6, kind='face', face='surprise',
