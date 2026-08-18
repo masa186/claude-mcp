@@ -112,9 +112,16 @@ def clean(text):
 
 
 def lines(shots):
-    """(ショット番号, 読む文) を返す。say があれば say、無ければ tele。"""
+    """(ショット番号, 読む文) を返す。say があれば say、無ければ tele。
+
+    mute=True のショットは字だけ出して読まない。前の行の声がまたいで
+    くる「間」のカットに使う。声を持たないカットでも画面から字が
+    消えないので、決め台詞の途中で切り替えても読む物が残る。
+    """
     out = []
     for i, s in enumerate(shots):
+        if s.get('mute'):
+            continue
         t = clean(s.get('say') or s.get('tele') or '')
         if t:
             out.append((i, t))

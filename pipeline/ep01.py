@@ -42,7 +42,8 @@ render.SHOTS = [
  # この行は「オチの読み方」にしたら声が2.3秒になり、1枚で持たせると
  # 2秒まで一度も画が変わらなくなった。実測では21本中18本が0〜2秒に
  # 1回は切り替えている。文の途中でカットが変わるのは編集としてふつう。
- dict(dur=1.4, kind='board', se='whoosh', fig=('spin/', 1.02, None)),
+ dict(dur=1.4, kind='board', se='whoosh', fig=('spin/', 1.02, None),
+      board=[dict(text='{温めてない}', size=132, color=MUSTARD)]),
  # 1本目の台詞を18文字で書いたら、声に合わせてショットが3.34秒に伸び、
  # 2秒までに一度も切り替わらなくなった。実測は中央値1回。12文字に詰めて、
  # 2つ目の言葉をこちらに回すと、1.5秒あたりで切り替わる。
@@ -60,7 +61,8 @@ render.SHOTS = [
       voice='punch', tame=0.45, say='あれ、火もヒーターも使てへん。'),
  # 決め台詞の前に0.45秒のタメを置いたぶん、この行は1枚で3.7秒になった。
  # 台詞のないビートへまたがせて、言い終わりで切り替える。
- dict(dur=1.6, kind='face', face='surprise', se='whoosh'),
+ dict(dur=1.6, kind='face', face='surprise', se='whoosh',
+      mute=True, tele='{火もヒーターも}使てへん'),
 
  # ---- 本当に起きていること。図は動かす
  dict(sec='what', dur=1.9, kind='stage', scene='wave', face='explain',
@@ -110,7 +112,12 @@ render.SHOTS = [
       board=[dict(text='水を\n暴れさせてる', size=160, color=MUSTARD)],
       voice='punch', tame=0.45, say='電子レンジは、水を暴れさせてるだけ。'),
  # ここが一番の山。1枚だと4.6秒あった。言い切ったところで引きの画に変える。
- dict(dur=1.8, kind='wide', face='arms', se='whoosh', board=['{暴れさせてる}']),
+ # 引きの画（wide）にすると、この話に1回しか出ない画面の作りになり、
+ # 下半分が白い床で空いた。顔の寄りに変える。
+ # mute=True は、読まずに字だけ出す指定。声は前の行がまたいでくるので、
+ # 決め台詞の途中でカットが変わっても、読む字が画面に残る。
+ dict(dur=1.8, kind='face', face='point', se='whoosh',
+      mute=True, tele='{暴れさせてる}だけ'),
  # ---- おまけの一撃。数字を出しているのは実測で18/21本、こちらは24億回の
  # 1つだけだった。笑い・軽口があるのも8/21本で、こちらは0だった。
  # 「ポケットのチョコが溶けた」は有名だがピーナッツバー説もあり諸説ある。
