@@ -671,7 +671,7 @@ def f_plate(i):
     # ── 上：お皿。水の分子が無いので、波が来ても何も起きない
     label(d, 40, 60, 'お皿', 60, CHALK, 235, anchor='lm')
     capsule(d, 210, 160, 620, 160, 34, CHALK, 220)
-    label(d, 760, 160, '水なし', 54, DIM, 235)
+    label(d, 748, 160, '水も油もなし', 46, DIM, 235)
     if e > 0.5:
         label(d, 465, 246, '温まらない', 60, DIM, int(255*(e-0.5)/0.5))
 
@@ -687,7 +687,7 @@ def f_plate(i):
         molecule(d, gx, 470, math.sin(w) * 2.0 - math.pi/2, 22, 255, col)
     if e > 0.5:
         al = int(255 * (e - 0.5) / 0.5)
-        label(d, 760, 470, '水あり', 54, GOLD, al)
+        label(d, 748, 470, '水と油あり', 48, GOLD, al)
         label(d, 465, 566, 'ここが熱くなる', 62, HOT, al)
     return im.resize((W, H), Image.LANCZOS)
 

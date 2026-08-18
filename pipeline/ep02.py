@@ -28,8 +28,8 @@ render.SHOTS = [
  dict(sec='hook', dur=1.5, kind='screen', clip='plane', face='surprise',
       roll=False, se='impact', tele='{9割が勘違いしてる}'),
  dict(dur=1.5, kind='stage', scene='cold', face='serious',
-      se='reveal', fig=('invert/', 1.02, None), add='翼の形は{関係ない}',
-      say='飛行機、翼の形で飛んでないねん。'),
+      se='reveal', fig=('invert/', 1.02, None), add='翼の形{だけ}やない',
+      say='飛行機、翼の形だけで飛んでへんねん。'),
 
  # ---- 問い。カットは1〜2秒で切る
  dict(sec='setup', dur=1.5, kind='screen', clip='plane2', face='point',
@@ -69,7 +69,7 @@ render.SHOTS = [
       se='whoosh', tele='飛行機の{翼}も、'),
  dict(dur=2.0, kind='stage', scene='same', face='explain',
       fig=('same/', 1.02, None), add='{これと全く同じ}',
-      say='これと全く同じ。形やない、傾きや。'),
+      say='これと全く同じ。効いてるのは傾きや。'),
  # 「形やない、傾き」の文字だけのカットは外した。
  # 12行目の音声が前半しか無く、ここが1.7秒まるごと無声になって
  # 「ずれている」と感じる原因になっていた。字は次の3段が引き取る。

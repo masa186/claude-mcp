@@ -47,19 +47,19 @@ render.SHOTS = [
 
  # ---- 誤解を名指しする
  dict(sec='how', dur=1.7, kind='stage', scene='wrong', face='serious',
-      fig=('spin/', 1.02, 'hold'), add='熱が{出てる}わけやない',
-      say='中で熱が出てる、と思うやろ。'),
+      fig=('spin/', 1.02, 'hold'), add='中で{火}を使ってる？',
+      say='中で火が出てる、と思うやろ。'),
  dict(dur=1.5, kind='stage', scene='wrong', face='serious', beat=True,
-      se='reveal', flash=True, add=dict(text='{×} 熱は出てない', color=CRIMSON),
-      voice='punch', say='あれ、熱は一切出てへん。'),
+      se='reveal', flash=True, add=dict(text='{×} 火は使ってない', color=CRIMSON),
+      voice='punch', say='あれ、火もヒーターも使てへん。'),
 
  # ---- 本当に起きていること。図は動かす
  dict(sec='what', dur=1.9, kind='stage', scene='wave', face='explain',
       fig=('spin/', 1.02, None), add='出てるのは{電波}',
       say='出てるのは電波や。マイクロ波。'),
  dict(dur=2.0, kind='stage', scene='wave', face='explain',
-      se_more=[(0.95, 'whoosh')], add='水だけが{反応する}',
-      say='これ、水にだけ効く。'),
+      se_more=[(0.95, 'whoosh')], add='{水と油}が反応する',
+      say='これ、水と油に効くねん。'),
 
  # ---- 数字。上位120本中50本が数字を入れていた
  dict(sec='num', dur=1.3, kind='face', face='point',
@@ -75,15 +75,15 @@ render.SHOTS = [
       fig=('bump/', 1.02, None), add='隣と{ぶつかる}',
       say='そんだけ動いたら、隣とぶつかる。'),
  dict(dur=1.9, kind='stage', scene='heat', face='explain', beat=True,
-      se='reveal', add=dict(text='{摩擦}で熱くなる', color=MUSTARD),
-      voice='punch', say='その摩擦が、熱の正体や。'),
+      se='reveal', add=dict(text='こすれて{熱くなる}', color=MUSTARD),
+      voice='punch', say='こすれ合って、熱が出るんや。'),
 
  # ---- 予言を置く。飛行機の「逆さまでも飛ぶ」と同じ確かめられる反証
  dict(sec='test', dur=1.3, kind='face', face='point', se='whoosh',
       tele='ほな{お皿}は？'),
  dict(dur=2.0, kind='stage', scene='plate', face='serious',
-      fig=('plate/', 1.02, 'hold'), add='お皿に水は{ない}',
-      say='お皿には水が入ってへん。'),
+      fig=('plate/', 1.02, 'hold'), add='お皿は{水も油も}ない',
+      say='お皿には、その水も油もない。'),
  dict(dur=1.7, kind='stage', scene='plate', face='serious', beat=True,
       se='reveal', flash=True,
       add=dict(text='なら{温まらんはず}', color=CRIMSON),
