@@ -51,7 +51,9 @@ EPS = [
          fig=None, face='surprise'),
     dict(file='thumb_ep01.png', label='電子レンジ',
          bg='board', lines=['9割が勘違い', '食べ物を温めてない'],
-         fig=('02_collision.png', None), face='surprise'),
+         # 02_collision.png は白い線画で、一覧の親指サイズでは消えていた。
+         # 動画で使っている色付きの分子（spin/）に差し替える。
+         fig=('spin/', 10), face='surprise'),
 ]
 
 TOP = 0.055          # 文字の上端（上寄せ。実測は上〜中央が33/40本）
