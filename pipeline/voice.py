@@ -30,6 +30,8 @@ PRESETS = {
     'ryusei': dict(a=0.61, fm=-4.0, jf=1.15),   # 低く太い（青山龍星寄り。既定）
     # 決め台詞だけ上げる。全部同じ抑揚だと、どこが山か分からない
     'punch':  dict(a=0.58, fm=-1.0, jf=1.70),
+    # フリ（疑問）。結論ほど張らず、地の文より少し抑揚を付ける
+    'ask':    dict(a=0.60, fm=-2.0, jf=1.45),
     'deep':   dict(a=0.58, fm=-2.5, jf=1.25),   # 低め。少し抑揚を残す
     'otter':  dict(a=0.47, fm=2.2, jf=1.35),    # 前の声（軽い）
     'calm':   dict(a=0.54, fm=0.0, jf=1.00),
@@ -185,11 +187,44 @@ def resample(x, src, dst=SR):
 
 LINE_DIR = os.path.join(HERE, '.voicelines')
 
+# 画面に出す読み方の名前
+STYLE_NAME = {'': '地の文', 'ask': 'フリ（疑問）', 'punch': 'オチ（結論）'}
 
-def _line_file(text):
+
+def _style_of(shot):
+    """ショットの voice= を、演技指示の名前に直す。書いてなければ地の文。"""
+    import gtts
+    name = shot.get('voice')
+    return name if name in gtts.STYLES else ''
+
+
+def _line_file(text, style=''):
     import gtts, hashlib
-    h = hashlib.sha1(('%s|%s|%s' % (gtts.MODEL, gtts.VOICE, text)).encode())
-    return os.path.join(LINE_DIR, h.hexdigest()[:16] + '.wav')
+    # 地の文の鍵は昔の形のまま。ここに空の style を足すと、すでに録った
+    # 行が全部ハッシュ違いになり、直していない行まで作り直しになる。
+    k = '%s|%s|%s' % (gtts.MODEL, gtts.VOICE, text)
+    if style:
+        k += '|' + style
+    return os.path.join(LINE_DIR, hashlib.sha1(k.encode()).hexdigest()[:16] + '.wav')
+
+
+def _borrow(have, k, texts, raw, sty):
+    """枠が尽きて録り直せない行を、前に録った近い音で埋める。
+
+    読み方が違っても、無音や Open JTalk の合成音に落ちるよりはましで、
+    しかも「その行だけ声が別人」にならない。枠が戻った日に録り直せば済む。
+    """
+    for t, st, why in ((raw[k], sty[k], '読みを直す前の音'),
+                       (texts[k], '', '前の読み方の音'),
+                       (raw[k], '', '前の読み方の音')):
+        if (t, st) == (texts[k], sty[k]):
+            continue
+        g = _line_file(t, st)
+        if os.path.exists(g):
+            have[k] = read_wav(g)
+            print('    %d行目は%sで代用（枠が戻ったら録り直す）' % (k + 1, why))
+            return True
+    return False
 
 
 def _save_line(path, x):
@@ -213,6 +248,7 @@ def from_gemini(shots):
         return None
     ls = lines(shots)
     texts = [t for _, t in ls]
+    sty = [_style_of(shots[i]) for i, _ in ls]
     # 読みを直す前の文でも引けるようにしておく。枠が尽きて録り直せない日でも、
     # 前の音（読みは違うが中身はある）で穴を空けずに書き出せる。
     keep, globals()['YOMI'] = YOMI, {}
@@ -220,26 +256,27 @@ def from_gemini(shots):
     globals()['YOMI'] = keep
     have, missing = {}, []
     for k, t in enumerate(texts):
-        f = _line_file(t)
+        f = _line_file(t, sty[k])
         if os.path.exists(f):
             have[k] = read_wav(f)
         else:
             missing.append(k)
     if missing:
         print('  %d行はそのまま使い、%d行だけ作る' % (len(have), len(missing)))
-        segs = gtts.say_script([texts[k] for k in missing])
-        if segs is None:
-            for k in missing:
-                g = _line_file(raw[k])
-                if raw[k] != texts[k] and os.path.exists(g):
-                    have[k] = read_wav(g)
-                    print('    %d行目は読みを直す前の音で代用（枠が戻ったら録り直す）' % (k+1))
-            if not have:
-                return None
-        else:
-            for k, x in zip(missing, segs):
+        # 読み方ごとにまとめて投げる。1リクエストに付けられる演技指示は
+        # 1つだけなので、疑問と結論を同じ塊に混ぜると片方の指示が消える。
+        for name in sorted(set(sty[k] for k in missing)):
+            grp = [k for k in missing if sty[k] == name]
+            print('    %s %d行' % (STYLE_NAME.get(name, name), len(grp)))
+            segs = gtts.say_script([texts[k] for k in grp],
+                                   style=gtts.STYLES.get(name))
+            if segs is None:
+                for k in grp:
+                    _borrow(have, k, texts, raw, sty)
+                continue
+            for k, x in zip(grp, segs):
                 y = squeeze(trim_silence(resample(x, gtts.SR), 0.010))
-                _save_line(_line_file(texts[k]), y)
+                _save_line(_line_file(texts[k], sty[k]), y)
                 have[k] = y
     if not have:
         return None
@@ -303,6 +340,10 @@ def fit(shots, audio):
     return shots
 
 
+# 読み方ごとの音量。オチ > フリ > 地の文
+LEVEL = {'punch': 0.74, 'ask': 0.66, None: 0.60}
+
+
 def write(path, shots, audio, duration):
     """ショットの頭に貼って1本にまとめる。"""
     import sound
@@ -312,8 +353,9 @@ def write(path, shots, audio, duration):
             continue
         m = np.abs(x).max()
         if m > 0:
-            # 決め台詞だけ持ち上げる。全部同じ音量だと、どこが山か耳で分からない
-            x = x * ((0.74 if shots[i].get('voice') == 'punch' else 0.60) / m)
+            # 読み方に合わせて音量も段を付ける。全部同じだと、どこが山か
+            # 耳で分からない。フリは結論の一段下に置いて、落差を作る。
+            x = x * (LEVEL.get(shots[i].get('voice'), LEVEL[None]) / m)
         # 21本中20本が0秒から喋り始めていた。冒頭だけ head=0 にできる
         j = int(SR * (shots[i]['t'] + shots[i].get('head', HEAD)))
         track[j:j+len(x)] += x[:max(0, len(track)-j)]

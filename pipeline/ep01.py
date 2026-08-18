@@ -34,21 +34,27 @@ render.SHOTS = [
  # 既に何かが動いているのが18本、止まっているのは3本だけだった。
  # 最初これを board（動かない黒板に文字だけ）にしていて、
  # 一番多い項目を外していた。head=0 で声も0秒から出す（20/21がそう）。
- dict(sec='hook', dur=1.4, kind='stage', scene='cold', face='surprise',
+ dict(sec='hook', dur=1.1, kind='stage', scene='cold', face='surprise',
       se='dodon', flash=True, shake=True, head=0.0,
       fig=('spin/', 1.02, None), add='電子レンジは{温めてない}',
       voice='punch', say='電子レンジ、温めてへん。'),
+ # 台詞を持たないビート。1行目の声はここへまたがる（voice.fit がやる）。
+ # この行は「オチの読み方」にしたら声が2.3秒になり、1枚で持たせると
+ # 2秒まで一度も画が変わらなくなった。実測では21本中18本が0〜2秒に
+ # 1回は切り替えている。文の途中でカットが変わるのは編集としてふつう。
+ dict(dur=1.4, kind='board', se='whoosh', fig=('spin/', 1.02, None)),
  # 1本目の台詞を18文字で書いたら、声に合わせてショットが3.34秒に伸び、
  # 2秒までに一度も切り替わらなくなった。実測は中央値1回。12文字に詰めて、
  # 2つ目の言葉をこちらに回すと、1.5秒あたりで切り替わる。
  dict(dur=1.6, kind='face', face='surprise', se='reveal',
       voice='punch', tele='{食べ物}ちゃうねん'),
- dict(dur=1.5, kind='face', face='explain', tele='{えっ}てなるやろ'),
+ dict(dur=1.5, kind='face', face='explain',
+      voice='ask', tele='{えっ}てなるやろ'),
 
  # ---- 誤解を名指しする
  dict(sec='how', dur=1.7, kind='stage', scene='wrong', face='serious',
       fig=('spin/', 1.02, 'hold'), add='中で{火}を使ってる？',
-      say='中で火が出てる、と思うやろ。'),
+      voice='ask', say='中で火が出てる、と思うやろ。'),
  dict(dur=1.5, kind='stage', scene='wrong', face='serious', beat=True,
       se='reveal', flash=True, add=dict(text='{×} 火は使ってない', color=CRIMSON),
       voice='punch', say='あれ、火もヒーターも使てへん。'),
@@ -80,7 +86,7 @@ render.SHOTS = [
 
  # ---- 予言を置く。飛行機の「逆さまでも飛ぶ」と同じ確かめられる反証
  dict(sec='test', dur=1.3, kind='face', face='point', se='whoosh',
-      tele='ほな{お皿}は？'),
+      voice='ask', tele='ほな{お皿}は？'),
  dict(dur=2.0, kind='stage', scene='plate', face='serious',
       fig=('plate/', 1.02, 'hold'), add='お皿は{水も油も}ない',
       say='お皿には、その水も油もない。'),
@@ -91,7 +97,7 @@ render.SHOTS = [
 
  # ---- 回収。誰もが経験している矛盾を解く
  dict(sec='ans', dur=1.5, kind='face', face='surprise',
-      tele='でも{熱いやん}'),
+      voice='ask', tele='でも{熱いやん}'),
  dict(dur=2.0, kind='stage', scene='ans', face='explain',
       fig=('plate/', 1.02, None), add='食べ物から{移っただけ}',
       say='あれ、食べ物から熱が移っただけや。'),
@@ -100,7 +106,8 @@ render.SHOTS = [
  dict(sec='punch', dur=2.1, kind='board', se='dodon', flash=True, hush=0.30,
       board=[dict(text='水を\n暴れさせてる', size=160, color=MUSTARD)],
       voice='punch', say='電子レンジは、水を暴れさせてるだけ。'),
- dict(dur=1.4, kind='face', face='proud', tele='{知らんかったやろ}'),
+ dict(dur=1.4, kind='face', face='proud',
+      voice='ask', tele='{知らんかったやろ}'),
 
  # ---- 予告。第3話へ。飛行機はもう出しているので、そこには戻さない
  dict(sec='next', dur=1.5, kind='board',
@@ -110,7 +117,7 @@ render.SHOTS = [
       board=[dict(text='冷やしてない', size=140, color=MUSTARD)],
       voice='punch', say='あれ、冷やしてないねん。'),
  dict(dur=1.6, kind='face', face='surprise',
-      voice='punch', tele='{どういうこと}？'),
+      voice='ask', tele='{どういうこと}？'),
 ]
 
 render.CHAPTERS = {'hook': '', 'how': '習ったやつ', 'what': '正体',
