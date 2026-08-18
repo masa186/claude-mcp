@@ -25,6 +25,9 @@ SR = 24000                      # このモデルが返すのは 24kHz モノラ
 # 低めの男声を中心に。gtts.py --demo で聞き比べて選ぶ
 VOICES = ['Charon', 'Orus', 'Algenib', 'Rasalgethi', 'Iapetus', 'Sadaltager']
 VOICE = os.environ.get('GEMINI_VOICE', 'Charon')
+# 視聴者役の声。カワウソの先生とは別人に聞こえる必要がある。
+# revoice.py --audition で候補を並べて、Charon から一番遠いものを選ぶ。
+VOICE_VIEWER = os.environ.get('GEMINI_VOICE_VIEWER', 'Iapetus')
 
 # 声の演技指示。ここが VOICEVOX に無い利点で、行ごとに口調を変えられる。
 # 台本は「フリ（疑問）→ 説明 → オチ（結論）」の繰り返しでできている。

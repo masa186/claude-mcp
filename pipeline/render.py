@@ -216,11 +216,18 @@ BLINK_MOUTH = dict(explain='char_blink_mouth.png')
 MOUTH_ENV = None
 MOUTH_HZ = 6.5           # 波形が無いときの代わり（一定の速さでパクパク）
 
+# 口を閉じたままにする時間帯。カワウソ以外（視聴者役）が喋っている所。
+# 波形は1本にまとめてあるので、これが無いと誰の声でも先生の口が動く。
+MOUTH_MUTE = []
+
 
 def mouth_open(t):
     """その時刻に口を開けているか。波形が無ければ None。"""
     if MOUTH_ENV is None:
         return None
+    for a, b in MOUTH_MUTE:
+        if a <= t < b:
+            return False
     i = int(t * FPS)
     return bool(MOUTH_ENV[i]) if 0 <= i < len(MOUTH_ENV) else False
 

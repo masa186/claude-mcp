@@ -49,8 +49,11 @@ render.SHOTS = [
  # 2つ目の言葉をこちらに回すと、1.5秒あたりで切り替わる。
  dict(dur=1.6, kind='face', face='surprise', se='reveal',
       voice='punch', tele='{食べ物}ちゃうねん'),
- dict(dur=1.5, kind='face', face='explain',
-      voice='ask', tele='{えっ}てなるやろ'),
+ # ここから視聴者役（who='viewer'）。別の声で喋る。
+ # 読み方を指示で分けると声そのものが別人になってしまったので、
+ # だったら初めから別人にする。実測でも41本中20本が2人以上だった。
+ dict(dur=1.5, kind='face', face='surprise', who='viewer',
+      voice='ask', tele='{え、なんで}？'),
 
  # ---- 誤解を名指しする
  dict(sec='how', dur=1.7, kind='stage', scene='wrong', face='serious',
@@ -78,8 +81,8 @@ render.SHOTS = [
  dict(dur=2.0, kind='stage', scene='num', face='surprise', se='rise',
       fig=('spin/', 1.02, None), add='1秒に{24億回}',
       say='一秒間に、二十四億回。'),
- dict(dur=1.4, kind='face', face='surprise', beat=True,
-      voice='punch', tele='{多すぎる}'),
+ dict(dur=1.4, kind='face', face='surprise', beat=True, who='viewer',
+      voice='ask', tele='{多すぎるやろ}'),
 
  # ---- 因果。ここが密度の山
  dict(sec='heat', dur=1.8, kind='stage', scene='heat', face='explain',
@@ -101,7 +104,7 @@ render.SHOTS = [
       voice='punch', tame=0.45, say='ほな、温まらんはずやろ。'),
 
  # ---- 回収。誰もが経験している矛盾を解く
- dict(sec='ans', dur=1.5, kind='face', face='surprise',
+ dict(sec='ans', dur=1.5, kind='face', face='surprise', who='viewer',
       voice='ask', tele='でも{熱いやん}'),
  dict(dur=2.0, kind='stage', scene='ans', face='explain',
       fig=('plate/', 1.02, None), add='食べ物から{移っただけ}',
@@ -124,7 +127,9 @@ render.SHOTS = [
  # 溶けた物は断定せず「お菓子」にして、確かな1945年だけ数字で出す。
  dict(sec='bonus', dur=2.4, kind='board', se='reveal', flash=True,
       board=[dict(text='{1945年}\nポケットの\nお菓子が溶けた', size=104)],
-      mute=True, say='これ見つかったん、お菓子が溶けたからやで。'),
+      mute=True, say='これ見つかったん、お菓子が溶けたからやで。'),  # TODO 枠が戻ったら mute を外す
+ dict(dur=1.4, kind='face', face='surprise', who='viewer',
+      voice='ask', tele='{そんな理由で}？'),
  dict(dur=1.4, kind='face', face='proud',
       voice='ask', tele='{知らんかったやろ}'),
 
@@ -159,6 +164,9 @@ else:
     nar = VOICE if os.path.exists(VOICE) else None
 if nar:
     render.MOUTH_ENV = voice.envelope(nar, render.FPS, render.DURATION)
+    # 視聴者役が喋っているあいだは先生の口を閉じておく。
+    # 波形は1本にまとめてあるので、これが無いと誰の声でも口が動く。
+    render.MOUTH_MUTE = voice.mouth_mute(render.SHOTS)
 voice.dump_text(render.SHOTS, os.path.join(HERE_DOCS, 'narration_ep01.txt'))
 
 n = int(render.DURATION * render.FPS)
