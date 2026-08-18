@@ -57,7 +57,10 @@ render.SHOTS = [
       voice='ask', say='中で火が出てる、と思うやろ。'),
  dict(dur=1.5, kind='stage', scene='wrong', face='serious', beat=True,
       se='reveal', flash=True, add=dict(text='{×} 火は使ってない', color=CRIMSON),
-      voice='punch', say='あれ、火もヒーターも使てへん。'),
+      voice='punch', tame=0.45, say='あれ、火もヒーターも使てへん。'),
+ # 決め台詞の前に0.45秒のタメを置いたぶん、この行は1枚で3.7秒になった。
+ # 台詞のないビートへまたがせて、言い終わりで切り替える。
+ dict(dur=1.6, kind='face', face='surprise', se='whoosh'),
 
  # ---- 本当に起きていること。図は動かす
  dict(sec='what', dur=1.9, kind='stage', scene='wave', face='explain',
@@ -93,7 +96,7 @@ render.SHOTS = [
  dict(dur=1.7, kind='stage', scene='plate', face='serious', beat=True,
       se='reveal', flash=True,
       add=dict(text='なら{温まらんはず}', color=CRIMSON),
-      voice='punch', say='ほな、温まらんはずやろ。'),
+      voice='punch', tame=0.45, say='ほな、温まらんはずやろ。'),
 
  # ---- 回収。誰もが経験している矛盾を解く
  dict(sec='ans', dur=1.5, kind='face', face='surprise',
@@ -105,7 +108,16 @@ render.SHOTS = [
  # ---- オチ
  dict(sec='punch', dur=2.1, kind='board', se='dodon', flash=True, hush=0.30,
       board=[dict(text='水を\n暴れさせてる', size=160, color=MUSTARD)],
-      voice='punch', say='電子レンジは、水を暴れさせてるだけ。'),
+      voice='punch', tame=0.45, say='電子レンジは、水を暴れさせてるだけ。'),
+ # ここが一番の山。1枚だと4.6秒あった。言い切ったところで引きの画に変える。
+ dict(dur=1.8, kind='wide', face='arms', se='whoosh', board=['{暴れさせてる}']),
+ # ---- おまけの一撃。数字を出しているのは実測で18/21本、こちらは24億回の
+ # 1つだけだった。笑い・軽口があるのも8/21本で、こちらは0だった。
+ # 「ポケットのチョコが溶けた」は有名だがピーナッツバー説もあり諸説ある。
+ # 溶けた物は断定せず「お菓子」にして、確かな1945年だけ数字で出す。
+ dict(sec='bonus', dur=2.4, kind='board', se='reveal', flash=True,
+      board=[dict(text='{1945年}\nポケットの\nお菓子が溶けた', size=104)],
+      voice='ask', say='これ見つかったん、お菓子が溶けたからやで。'),
  dict(dur=1.4, kind='face', face='proud',
       voice='ask', tele='{知らんかったやろ}'),
 
@@ -115,14 +127,13 @@ render.SHOTS = [
       say='次は冷蔵庫。'),
  dict(dur=1.6, kind='board', se='reveal', shake=True,
       board=[dict(text='冷やしてない', size=140, color=MUSTARD)],
-      voice='punch', say='あれ、冷やしてないねん。'),
- dict(dur=1.6, kind='face', face='surprise',
-      voice='ask', tele='{どういうこと}？'),
+      voice='punch', tame=0.45, say='あれ、冷やしてないねん。'),
 ]
 
 render.CHAPTERS = {'hook': '', 'how': '習ったやつ', 'what': '正体',
                    'num': '24億回', 'heat': '熱の正体',
-                   'test': 'お皿', 'ans': 'お皿', 'punch': '', 'next': ''}
+                   'test': 'お皿', 'ans': 'お皿', 'punch': '',
+                   'bonus': '', 'next': ''}
 render.DURATION = render.build()
 render.OUT = FRAMES
 

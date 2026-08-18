@@ -44,6 +44,51 @@ DEFAULT = 'ryusei'
 NATURAL = 1.75
 HEAD = 0.06          # カットの頭から何秒後に喋り出すか
 TAIL = 0.14          # 次のカットに食い込ませない余白
+
+# 読み方ごとの「タメ」と「速さ」。
+# 合成の指示文だけでは差が耳に届かなかった（語尾 +1.8半音 / 0.0 / +1.7半音
+# まで測れているのに「声が変わってない」と言われた）。
+#
+# 伸びているショート41本のナレーションを1本ずつ聞いて数えたら、決め台詞を
+# 立てている手はこうだった（複数回答）:
+#     声が大きい 33本 / 直前に間 32本 / 直後に間 18本 / ゆっくり 17本
+#     速い 3本 / 変わらない 1本
+# 一番長い無音は中央値 0.5秒で、置き場所は決め台詞の前が最多（15本）。
+# 全体の喋る速さは「速い」が30/41本。
+# 高い11本／低い9本と割れていたので、高さは追わない。半音や dB より、
+# 間と速さのほうがはるかに効く。ここは合成に頼らず自分で作る。
+# 実測の中央値は 0.5秒だが、向こうは1本に決め台詞が1つ。こちらは9つあるので
+# 全部に 0.5秒を入れると間延びして、逆にどれも立たなくなる。
+# 既定は短くしておいて、本当の山だけ台本側で tame=0.45 と書いて伸ばす。
+PAUSE = {'punch': 0.20, 'ask': 0.12}     # 喋り出す前に置く無音
+HOLD  = {'punch': 0.30, 'ask': 0.18}     # 言い終わってから次に行くまでの無音
+# 1.0より小さいと遅く・低くなる。地の文を少し速めたのは「速い」が30/41本で、
+# こちらの実測が 5.7〜6.0字/秒とやや遅かったため。
+RATE  = {'punch': 0.92, 'ask': 1.06, None: 1.05}
+
+
+def _head(shot):
+    """カットの頭から喋り出すまでの秒数。決め台詞の前だけ長く取る。"""
+    if 'head' in shot:
+        return shot['head']      # 台本が明示している所は動かさない（冒頭の0秒など）
+    return HEAD + shot.get('tame', PAUSE.get(shot.get('voice'), 0.0))
+
+
+def _tail(shot):
+    """言い終わってから次のカットまでに残す無音。"""
+    return max(TAIL, HOLD.get(shot.get('voice'), 0.0))
+
+
+def stretch(x, rate):
+    """速さを変える。同時に高さも変わる（遅くすると低くなる）。
+
+    速さだけ変える方法もあるが、決め台詞は「遅く、低く」で1つの印象なので、
+    まとめて動かしたほうが狙いに合う。
+    """
+    if rate == 1.0 or not len(x):
+        return x
+    n = int(len(x) / rate)
+    return np.interp(np.linspace(0, len(x)-1, n), np.arange(len(x)), x)
 MAX_DUR = 4.2        # これ以上長いショットは絵がもたない。台本を割るべき合図
 
 
@@ -286,16 +331,32 @@ def from_gemini(shots):
     return {i: have.get(k, np.zeros(0)) for k, (i, _) in enumerate(ls)}
 
 
+def shape(shots, audio):
+    """読み方ごとに速さを変える。合成し直さずに付けられる差。
+
+    キャッシュには素のままの音を残しておいて、ここで毎回かけ直す。
+    加工した音を残すと、匙加減を変えるたびに録り直しになる。
+    """
+    n = 0
+    for i, x in list(audio.items()):
+        r = RATE.get(shots[i].get('voice'), 1.0)
+        if r != 1.0 and len(x):
+            audio[i] = stretch(x, r); n += 1
+    if n:
+        print('  %d行の速さを読み方に合わせて変えた' % n)
+    return audio
+
+
 def collect(shots, preset=DEFAULT):
     """各行の音を用意する。自分で録った声 > VOICEVOX > Gemini > Open JTalk。"""
     vv = from_voicevox(shots)
     if vv is not None:
         print('  声: VOICEVOX（voicevox/ の %d本）' % len(vv))
-        return vv
+        return shape(shots, vv)
     g = from_gemini(shots)
     if g is not None:
         print('  声: Gemini の音声合成（%d行）' % len(g))
-        return g
+        return shape(shots, g)
     if not available():
         return {}
     print('  声: Open JTalk の合成（仮）')
@@ -304,7 +365,7 @@ def collect(shots, preset=DEFAULT):
         # ショットに voice='punch' と書いてあれば、その行だけ別の声色にする
         name = shots[i].get('voice', preset)
         out[i] = _synth(t, NATURAL, PRESETS.get(name, PRESETS[preset]))
-    return out
+    return shape(shots, out)
 
 
 def fit(shots, audio):
@@ -319,7 +380,7 @@ def fit(shots, audio):
     for i, x in audio.items():
         if not len(x):
             continue
-        need = shots[i].get('head', HEAD) + len(x)/SR + TAIL
+        need = _head(shots[i]) + len(x)/SR + _tail(shots[i])
         # 次に台詞があるショットの手前まで、この声が使える。
         # ただし章タイトルは「わざと置いた間」なので、そこへは食い込ませない。
         j = i
@@ -343,8 +404,11 @@ def fit(shots, audio):
     return shots
 
 
-# 読み方ごとの音量。オチ > フリ > 地の文
-LEVEL = {'punch': 0.74, 'ask': 0.66, None: 0.60}
+# 読み方ごとの音量。1.8dB では足りなかった。実測で一番多い手（33/41本）が
+# 「声が大きい」なので、ここを 3.7dB まで広げる。
+# フリは地の文と同じ音量に置く。フリは語尾の上がりで、オチは音量と間で、
+# それぞれ違う手を使って目立たせる。3つを同じ手で並べても段にならない。
+LEVEL = {'punch': 0.92, 'ask': 0.60, None: 0.60}
 
 
 def write(path, shots, audio, duration):
@@ -360,7 +424,7 @@ def write(path, shots, audio, duration):
             # 耳で分からない。フリは結論の一段下に置いて、落差を作る。
             x = x * (LEVEL.get(shots[i].get('voice'), LEVEL[None]) / m)
         # 21本中20本が0秒から喋り始めていた。冒頭だけ head=0 にできる
-        j = int(SR * (shots[i]['t'] + shots[i].get('head', HEAD)))
+        j = int(SR * (shots[i]['t'] + _head(shots[i])))
         track[j:j+len(x)] += x[:max(0, len(track)-j)]
     pk = np.abs(track).max()
     if pk > 0.90:
