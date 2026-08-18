@@ -204,7 +204,10 @@ def _line_file(text, style=''):
     # 行が全部ハッシュ違いになり、直していない行まで作り直しになる。
     k = '%s|%s|%s' % (gtts.MODEL, gtts.VOICE, text)
     if style:
-        k += '|' + style
+        # 鍵に入れるのは演技指示の「中身」。名前（'ask'）だけで作ると、
+        # 指示を書き直しても古い音を引き当ててしまい、直したつもりで
+        # 何も変わらない。中身で作れば、書き直した読み方だけ録り直る。
+        k += '|' + gtts.STYLES.get(style, style)
     return os.path.join(LINE_DIR, hashlib.sha1(k.encode()).hexdigest()[:16] + '.wav')
 
 
