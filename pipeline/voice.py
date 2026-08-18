@@ -62,11 +62,19 @@ TAIL = 0.14          # 次のカットに食い込ませない余白
 # 既定は短くしておいて、本当の山だけ台本側で tame=0.45 と書いて伸ばす。
 PAUSE = {'punch': 0.20, 'ask': 0.12}     # 喋り出す前に置く無音
 HOLD  = {'punch': 0.30, 'ask': 0.18}     # 言い終わってから次に行くまでの無音
-# 1.0より小さいと遅くなる（高さは変わらない）。
-# 地の文とフリは触らない。実測で「速い」が30/41本だったので一度は全体を
-# 5%速めたが、加工の要らない行にまで手を入れる理由としては弱い。
-# 触るのは決め台詞だけにして、残り13行は録れたままの音をそのまま使う。
-RATE  = {'punch': 0.92, 'ask': 1.0, None: 1.0}
+# 速さの加工はやめた（全部 1.0）。
+# 「まだ声が混じって聞こえる」と言われて、原因を1つずつ潰していった:
+#   モデル違い  → いまの19行は全部 gemini-3.1-flash-tts-preview。揃っている
+#   演技指示違い → いまは1種類だけ。揃っている
+#   録音回の違い → まとまりどうしの距離 0.32 に対し、まとまりの中のばらつき
+#                  0.53。回ごとに声が変わってはいない
+#   WSOLA のざらつき → 周期成分と雑音の比は +0.7dB で、むしろ良くなっている
+# ここまでで、こちらがいじれる所は全部つぶれた。それでも聞こえるなら、
+# 残っているのは合成そのもののブレ。だったら波形に触る加工は外しておく。
+# 決め台詞は「間」と「音量」で立てる。実測でも上位はその2つだった
+# （声が大きい33本 / 直前に間32本 / ゆっくりは17本）。
+# 間は無音を置くだけ、音量は掛けるだけで、どちらも声そのものは変わらない。
+RATE  = {'punch': 1.0, 'ask': 1.0, None: 1.0}
 
 
 def _head(shot):
@@ -309,6 +317,77 @@ def _line_file(text, style='', model=None, who=None):
         # 何も変わらない。中身で作れば、書き直した読み方だけ録り直る。
         k += '|' + gtts.STYLES.get(style, style)
     return os.path.join(LINE_DIR, hashlib.sha1(k.encode()).hexdigest()[:16] + '.wav')
+
+
+def _ltas(x, nb=32):
+    """長時間平均スペクトル。声の持ち主の癖が出る。行の長さに引きずられにくい。"""
+    v = x[np.abs(x) > 0.01]
+    if len(v) < 4096:
+        return None
+    W = 2048
+    w = np.hanning(W)
+    acc = np.zeros(W // 2 + 1)
+    n = 0
+    for i in range(0, len(v) - W, W // 2):
+        acc += np.abs(np.fft.rfft(v[i:i + W] * w))
+        n += 1
+    S = acc / n
+    fr = np.fft.rfftfreq(W, 1 / SR)
+    ed = np.logspace(np.log10(80), np.log10(8000), nb + 1)
+    e = np.log10(np.array([S[(fr >= a) & (fr < b)].sum()
+                           for a, b in zip(ed[:-1], ed[1:])]) + 1e-9)
+    return (e - e.mean()) / (e.std() + 1e-9)
+
+
+def takes(text, style_texts):
+    """その台詞について手元にある録音を全部返す。
+
+    同じ台詞でも、モデル・演技指示・声名の組み合わせのぶんだけ別々に
+    録れている。どれか1つしか見ないと、たまたま別人の回を掴む。
+    """
+    import gtts, hashlib
+    out = []
+    for m in gtts.MODELS:
+        for st in [''] + list(style_texts):
+            for w in {gtts.VOICE, gtts.VOICE_VIEWER}:
+                k = '%s|%s|%s' % (m, w, text)
+                if st:
+                    k += '|' + style_texts[st]
+                f = os.path.join(LINE_DIR,
+                                 hashlib.sha1(k.encode()).hexdigest()[:16] + '.wav')
+                if os.path.exists(f):
+                    out.append(f)
+    return out
+
+
+def pick_takes(texts, style_texts):
+    """行ごとに録音が何本かあるとき、一番そろう組み合わせを選ぶ。
+
+    録り直せない日の逃げ道。1本の中で声が変わるのが一番聞き苦しいので、
+    「どの回を使うか」だけで、そろい方をできるだけ良くする。
+    全体の平均に近い回を各行で選び、平均を取り直す、を繰り返す。
+    """
+    cand = []
+    for t in texts:
+        fs = takes(t, style_texts)
+        vs = [(f, _ltas(read_wav(f))) for f in fs]
+        cand.append([(f, v) for f, v in vs if v is not None])
+    if not any(len(c) > 1 for c in cand):
+        return None
+    sel = [c[0] for c in cand if c]
+    for _ in range(8):
+        c0 = np.mean([v for _, v in sel], 0)
+        new = []
+        for c in cand:
+            if not c:
+                continue
+            new.append(min(c, key=lambda fv: float(np.linalg.norm(fv[1] - c0))))
+        if [f for f, _ in new] == [f for f, _ in sel]:
+            break
+        sel = new
+    c0 = np.mean([v for _, v in sel], 0)
+    d = float(np.mean([np.linalg.norm(v - c0) for _, v in sel]))
+    return [f for f, _ in sel], d
 
 
 def _borrow(have, k, texts, raw, sty, who, model=None):

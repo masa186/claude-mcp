@@ -53,7 +53,7 @@ render.SHOTS = [
  # 読み方を指示で分けると声そのものが別人になってしまったので、
  # だったら初めから別人にする。実測でも41本中20本が2人以上だった。
  dict(dur=1.5, kind='face', face='surprise', who='viewer',
-      voice='ask', tele='{え、なんで}？'),
+      voice='ask', tele='{え、なんで}？', solo=dict(tele='{えっ}てなるやろ')),
 
  # ---- 誤解を名指しする
  dict(sec='how', dur=1.7, kind='stage', scene='wrong', face='serious',
@@ -82,7 +82,7 @@ render.SHOTS = [
       fig=('spin/', 1.02, None), add='1秒に{24億回}',
       say='一秒間に、二十四億回。'),
  dict(dur=1.4, kind='face', face='surprise', beat=True, who='viewer',
-      voice='ask', tele='{多すぎるやろ}'),
+      voice='ask', tele='{多すぎるやろ}', solo=dict(tele='{多すぎる}')),
 
  # ---- 因果。ここが密度の山
  dict(sec='heat', dur=1.8, kind='stage', scene='heat', face='explain',
@@ -128,7 +128,7 @@ render.SHOTS = [
  dict(sec='bonus', dur=2.4, kind='board', se='reveal', flash=True,
       board=[dict(text='{1945年}\nポケットの\nお菓子が溶けた', size=104)],
       mute=True, say='これ見つかったん、お菓子が溶けたからやで。'),  # TODO 枠が戻ったら mute を外す
- dict(dur=1.4, kind='face', face='surprise', who='viewer',
+ dict(dur=1.4, kind='face', face='surprise', who='viewer', viewer_only=True,
       voice='ask', tele='{そんな理由で}？'),
  dict(dur=1.4, kind='face', face='proud',
       voice='ask', tele='{知らんかったやろ}'),
@@ -141,6 +141,15 @@ render.SHOTS = [
       board=[dict(text='冷やしてない', size=140, color=MUSTARD)],
       voice='punch', tame=0.45, say='あれ、冷やしてないねん。'),
 ]
+
+# 視聴者役を別の声にする版は、声を録り直せる日に TWO_VOICES=1 で入れる。
+# 今日は新しい3つの台詞の音がまだ無い（TTSは3モデルとも枠切れ）ので、
+# 音がある言い方に戻し、ツッコミの1カットは外しておく。
+if os.environ.get('TWO_VOICES') != '1':
+    render.SHOTS = [x for x in render.SHOTS if not x.get('viewer_only')]
+    for x in render.SHOTS:
+        x.pop('who', None)
+        x.update(x.pop('solo', {}))
 
 render.CHAPTERS = {'hook': '', 'how': '習ったやつ', 'what': '正体',
                    'num': '24億回', 'heat': '熱の正体',
