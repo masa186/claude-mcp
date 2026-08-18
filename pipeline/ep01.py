@@ -124,7 +124,7 @@ render.SHOTS = [
  # 溶けた物は断定せず「お菓子」にして、確かな1945年だけ数字で出す。
  dict(sec='bonus', dur=2.4, kind='board', se='reveal', flash=True,
       board=[dict(text='{1945年}\nポケットの\nお菓子が溶けた', size=104)],
-      voice='ask', say='これ見つかったん、お菓子が溶けたからやで。'),
+      mute=True, say='これ見つかったん、お菓子が溶けたからやで。'),
  dict(dur=1.4, kind='face', face='proud',
       voice='ask', tele='{知らんかったやろ}'),
 
