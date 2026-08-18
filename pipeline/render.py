@@ -351,6 +351,20 @@ def wipe(t0, t, dur=0.22):
     return 0.0 if t < t0 else min(1.0, (t - t0) / dur)
 
 
+def entry(t0, t, dur=0.22, delay=0.0):
+    """カットの頭の出し方。0→1 の進み具合を返す。
+
+    動画の1コマ目（t0<=0）だけは、最初から出し切った状態にする。
+    LEADIN（1コマの間）も POP_IN（出そろうまで）も 0秒に効かせると、
+    何も描かれていない黒板が1コマ目に入る。そこにフラッシュもかかるので、
+    白く飛んだ空の板が1枚だけ挟まって見える。
+    実測では伸びている21本中18本が、0秒の時点で既に何かが動いていた。
+    """
+    if t0 <= 0.0:
+        return 1.0
+    return wipe(LEADIN + delay, t - t0, dur)
+
+
 def board_area(kind):
     if kind == 'board':
         return (SAFE_X0, int(H*.19), SAFE_X1, int(H*.79))
@@ -406,7 +420,7 @@ def draw_content(canvas, s, t, kind):
     d = ImageDraw.Draw(canvas)
     for ri, r in enumerate(rows):
         # 1つずつ間を置いて出す。これが「小さい変化」の本体。
-        p = wipe(LEADIN + ri * STAGGER, local)
+        p = entry(s['t'], t, 0.22, ri * STAGGER)
         if r[0] == 'fig':
             _, img, tw, th, anim = r
             f = img.resize((tw, th), Image.LANCZOS)
@@ -719,7 +733,7 @@ def draw_telop(canvas, s, t=None):
     txt = s.get('tele', '')
     if not txt: return
     # 出はじめだけ大きめから縮めて収める。ただ現れるより目が止まる
-    ent = pop(wipe(LEADIN, (t - s['t']), POP_IN)) if t is not None else 1.0
+    ent = pop(entry(s['t'], t, POP_IN)) if t is not None else 1.0
     size = max(24, int(TELOP_SIZE * ent))
     fnt = tfont(size)
     # 強調語だけ一瞬大きくする（画面のどこかが常に動いている状態を作る）
@@ -1095,7 +1109,7 @@ def stage_shot(s, t):
             f = img.resize((tw, th), Image.LANCZOS)
             if anim and anim != 'hold':
                 f = animate_fig(f, anim, t - fig_at)
-            p = wipe(LEADIN, t - fig_at, 0.20)
+            p = entry(fig_at, t, 0.20)
             if p < 1:
                 f.putalpha(f.getchannel('A').point(lambda v: int(v*p)))
             frame.alpha_composite(f, ((a[0]+a[2])//2 - tw//2,
@@ -1115,7 +1129,7 @@ def stage_shot(s, t):
         it = item if isinstance(item, dict) else dict(text=item)
         size = fit_size(it['text'], it.get('size', STAGE_SIZE), int(W*0.84))
         newest = (x is s)
-        p = wipe(LEADIN, t - x['t'], POP_IN) if newest else 1.0
+        p = entry(x['t'], t, POP_IN) if newest else 1.0
         if p <= 0:
             continue
         # 実測した人気ショートは8本中8本が、背景の上に載る巨大テロップだった。

@@ -96,11 +96,16 @@ def voiced_seconds(x, sr=None):
     return float((rms > rms.max() * 0.12).sum()) * 0.05
 
 
-def say(text, voice=None, style=None, expect=None):
+def say(text, voice=None, style=None, expect=None, model=None):
     """1行を合成して float 配列（44.1kHz換算前の 24kHz）で返す。
 
     同じ台本で何度もレンダリングするので、結果はディスクに残す。
     毎回APIを叩くと遅いし、無料枠もすぐ尽きる。
+
+    model を渡すと、そのモデルだけを使う。落ちても次のモデルへ行かない。
+    枠が尽きた行だけ別のモデルで作ると、声の名前（Charon）が同じでも
+    まったく違う人の声になり、1本の中に何人も混ざる。実際にそうなって
+    いて、22行の高さが 85〜223Hz（16.7半音）に散らばっていた。
     """
     voice = voice or VOICE
     style = style or STYLE
@@ -108,7 +113,8 @@ def say(text, voice=None, style=None, expect=None):
     # expect … だいたい何秒返るはずか。これを外れた音はキャッシュしない。
     # 実際に「6行ぶん頼んだのに3秒だけ喋って215秒の無音」という応答が返り、
     # それがキャッシュに残って、作り直しても同じ壊れた音が出続けた。
-    h = hashlib.sha1(('%s|%s|%s|%s' % (MODEL, voice, style, text)).encode()).hexdigest()[:16]
+    use = [model] if model else MODELS
+    h = hashlib.sha1(('%s|%s|%s|%s' % (use[0], voice, style, text)).encode()).hexdigest()[:16]
     p = os.path.join(CACHE, h + '.wav')
     if os.path.exists(p):
         with wave.open(p) as w:
@@ -120,14 +126,15 @@ def say(text, voice=None, style=None, expect=None):
                 'speechConfig': {'voiceConfig': {
                     'prebuiltVoiceConfig': {'voiceName': voice}}}}}
     pcm = None
-    for mi, model in enumerate(MODELS):
+    for mi, model in enumerate(use):
         for attempt in range(3):
             try:
                 d = _post(body, model)
             except Exception as e:
                 code = getattr(e, 'code', None)
                 if code == 429:
-                    print('    %s は今日の枠切れ → 次のモデルへ' % model)
+                    print('    %s は今日の枠切れ%s'
+                          % (model, '' if len(use) == 1 else ' → 次のモデルへ'))
                     break
                 if attempt == 2 or (code and code not in (500, 503)):
                     print('    TTS失敗(%s): %s' % (model, e))
@@ -143,7 +150,7 @@ def say(text, voice=None, style=None, expect=None):
             break
         if pcm:
             if mi:
-                print('    声: %s で合成（%s は枠切れ）' % (model, MODELS[0]))
+                print('    声: %s で合成（%s は枠切れ）' % (model, use[0]))
             break
     if not pcm:
         return np.zeros(0)
@@ -158,7 +165,8 @@ def say(text, voice=None, style=None, expect=None):
     return np.frombuffer(pcm, dtype='<i2') / 32768
 
 
-def say_script(texts, voice=None, style=None, gap='。……………。', batch=7):
+def say_script(texts, voice=None, style=None, gap='。……………。', batch=7,
+               model=None):
     """台本を数回に分けて合成し、無音で切り分ける。
 
     以前は台本ぜんぶを1リクエストで投げていた。無料枠が1日10回しかないので
@@ -181,7 +189,8 @@ def say_script(texts, voice=None, style=None, gap='。……………。', batch
         while n >= 1:
             part = texts[i:i+n]
             joined = ('\n' + gap + '\n').join(part)
-            x = say(joined, voice=voice, style=style, expect=_expect(part))
+            x = say(joined, voice=voice, style=style, expect=_expect(part),
+                    model=model)
             if len(x):
                 segs = split_silence(x, len(part)) if len(part) > 1 else [x]
             # 切れたつもりでも、行の長さと釣り合っていなければ外している。
@@ -198,10 +207,10 @@ def say_script(texts, voice=None, style=None, gap='。……………。', batch
             return None
         out += segs
         i += len(segs)
-    return repair(texts, out, voice, style)
+    return repair(texts, out, voice, style, model)
 
 
-def repair(texts, segs, voice=None, style=None):
+def repair(texts, segs, voice=None, style=None, model=None):
     """台本ぜんぶを見渡して、明らかに長さの合わない行だけ単独で合成し直す。
 
     まとまりの中では釣り合っていても、台本全体で見ると外れている行が残る。
@@ -218,7 +227,7 @@ def repair(texts, segs, voice=None, style=None):
             continue
         print('    %d行目「%s」を単独で作り直す（中央値の%.1f倍）'
               % (i + 1, texts[i][:16], v / med))
-        x = say(texts[i], voice=voice, style=style,
+        x = say(texts[i], voice=voice, style=style, model=model,
                 expect=len(texts[i]) * med * 0.6)
         if len(x):
             segs[i] = x

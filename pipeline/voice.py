@@ -281,11 +281,11 @@ def _style_of(shot):
     return name if name in gtts.STYLES else ''
 
 
-def _line_file(text, style=''):
+def _line_file(text, style='', model=None):
     import gtts, hashlib
     # 地の文の鍵は昔の形のまま。ここに空の style を足すと、すでに録った
     # 行が全部ハッシュ違いになり、直していない行まで作り直しになる。
-    k = '%s|%s|%s' % (gtts.MODEL, gtts.VOICE, text)
+    k = '%s|%s|%s' % (model or gtts.MODEL, gtts.VOICE, text)
     if style:
         # 鍵に入れるのは演技指示の「中身」。名前（'ask'）だけで作ると、
         # 指示を書き直しても古い音を引き当ててしまい、直したつもりで
@@ -294,7 +294,7 @@ def _line_file(text, style=''):
     return os.path.join(LINE_DIR, hashlib.sha1(k.encode()).hexdigest()[:16] + '.wav')
 
 
-def _borrow(have, k, texts, raw, sty):
+def _borrow(have, k, texts, raw, sty, model=None):
     """枠が尽きて録り直せない行を、前に録った近い音で埋める。
 
     読み方が違っても、無音や Open JTalk の合成音に落ちるよりはましで、
@@ -305,7 +305,7 @@ def _borrow(have, k, texts, raw, sty):
                        (raw[k], '', '前の読み方の音')):
         if (t, st) == (texts[k], sty[k]):
             continue
-        g = _line_file(t, st)
+        g = _line_file(t, st, model)
         if os.path.exists(g):
             have[k] = read_wav(g)
             print('    %d行目は%sで代用（枠が戻ったら録り直す）' % (k + 1, why))
@@ -340,32 +340,74 @@ def from_gemini(shots):
     keep, globals()['YOMI'] = YOMI, {}
     raw = [t for _, t in lines(shots)]
     globals()['YOMI'] = keep
-    have, missing = {}, []
-    for k, t in enumerate(texts):
-        f = _line_file(t, sty[k])
-        if os.path.exists(f):
-            have[k] = read_wav(f)
-        else:
-            missing.append(k)
-    if missing:
-        print('  %d行はそのまま使い、%d行だけ作る' % (len(have), len(missing)))
-        # 読み方ごとにまとめて投げる。1リクエストに付けられる演技指示は
-        # 1つだけなので、疑問と結論を同じ塊に混ぜると片方の指示が消える。
-        for name in sorted(set(sty[k] for k in missing)):
-            grp = [k for k in missing if sty[k] == name]
-            print('    %s %d行' % (STYLE_NAME.get(name, name), len(grp)))
-            segs = gtts.say_script([texts[k] for k in grp],
-                                   style=gtts.STYLES.get(name))
-            if segs is None:
-                for k in grp:
-                    _borrow(have, k, texts, raw, sty)
-                continue
-            for k, x in zip(grp, segs):
-                y = squeeze(trim_silence(resample(x, gtts.SR), 0.010))
-                _save_line(_line_file(texts[k], sty[k]), y)
-                have[k] = y
+    # 1本の中の全部の行を、必ず「同じ1つのモデル」から取る。
+    # 声の名前（Charon）が同じでも、モデルが違えば別人の声になる。
+    # 行ごとに枠切れで別のモデルへ落ちていたせいで、22行の高さが
+    # 85〜223Hz（16.7半音）に散らばり、1本の中に3人の男の声が混ざっていた。
+    #
+    # 「手持ちが一番多いモデル」を選ぶのでは駄目だった。手持ちが多いのは
+    # 昨日まで使っていたモデルで、そのモデルは今日の枠が尽きている。
+    # 全部を揃えられるモデルを順に探して、最初に揃った所で止める。
+    best = None
+    for model in gtts.MODELS:
+        have, missing = {}, []
+        for k, t in enumerate(texts):
+            f = _line_file(t, sty[k], model)
+            if os.path.exists(f):
+                have[k] = read_wav(f)
+            else:
+                missing.append(k)
+        if missing:
+            print('  %s: %d行はそのまま使い、%d行を作る'
+                  % (model, len(have), len(missing)))
+            # 読み方ごとにまとめて投げる。1リクエストに付けられる演技指示は
+            # 1つだけなので、疑問と結論を同じ塊に混ぜると片方の指示が消える。
+            for name in sorted(set(sty[k] for k in missing)):
+                grp = [k for k in missing if sty[k] == name]
+                print('    %s %d行' % (STYLE_NAME.get(name, name), len(grp)))
+                segs = gtts.say_script([texts[k] for k in grp],
+                                       style=gtts.STYLES.get(name), model=model)
+                if segs is None:
+                    continue
+                for k, x in zip(grp, segs):
+                    y = squeeze(trim_silence(resample(x, gtts.SR), 0.010))
+                    _save_line(_line_file(texts[k], sty[k], model), y)
+                    have[k] = y
+        if best is None or len(have) > len(best[1]):
+            best = (model, have)
+        if len(have) == len(texts):
+            print('  声のモデル: %s（%d行すべて同じ声）' % (model, len(texts)))
+            return {i: have.get(k, np.zeros(0)) for k, (i, _) in enumerate(ls)}
+        print('  %s では %d/%d行どまり。次のモデルを試す'
+              % (model, len(have), len(texts)))
+
+    # どのモデルでも全部は揃わなかった。ここで行ごとに手当たり次第
+    # 埋めると、同じ役割の行どうしで声が変わって一番ばらばらに聞こえる。
+    # せめて「読み方ごとに1つのモデル」へ寄せる。地の文はこの声、
+    # 決め台詞はこの声、と筋が通っていれば聞ける。
+    have, used = {}, {}
+    for name in sorted(set(sty)):
+        grp = [k for k in range(len(texts)) if sty[k] == name]
+        for m in gtts.MODELS:
+            fs = [_line_file(texts[k], name, m) for k in grp]
+            if all(os.path.exists(f) for f in fs):
+                for k, f in zip(grp, fs):
+                    have[k] = read_wav(f)
+                used[name] = m
+                break
+    for k in range(len(texts)):
+        if k not in have:
+            _borrow(have, k, texts, raw, sty, best[0])
     if not have:
         return None
+    if used:
+        print('  声が %d種類に分かれた（今日の枠では1種類に揃えられない）:'
+              % len(set(used.values())))
+        for name, m in used.items():
+            print('    %-10s %s' % (STYLE_NAME.get(name, name), m))
+    if len(have) < len(texts):
+        print('  ※ %d行が埋まらなかった' % (len(texts) - len(have)))
+    print('  ※ 枠が戻った日にもう一度走らせると、1つのモデルに揃う')
     return {i: have.get(k, np.zeros(0)) for k, (i, _) in enumerate(ls)}
 
 
