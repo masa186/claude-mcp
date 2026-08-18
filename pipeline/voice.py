@@ -62,9 +62,11 @@ TAIL = 0.14          # 次のカットに食い込ませない余白
 # 既定は短くしておいて、本当の山だけ台本側で tame=0.45 と書いて伸ばす。
 PAUSE = {'punch': 0.20, 'ask': 0.12}     # 喋り出す前に置く無音
 HOLD  = {'punch': 0.30, 'ask': 0.18}     # 言い終わってから次に行くまでの無音
-# 1.0より小さいと遅く・低くなる。地の文を少し速めたのは「速い」が30/41本で、
-# こちらの実測が 5.7〜6.0字/秒とやや遅かったため。
-RATE  = {'punch': 0.92, 'ask': 1.06, None: 1.05}
+# 1.0より小さいと遅くなる（高さは変わらない）。
+# 地の文とフリは触らない。実測で「速い」が30/41本だったので一度は全体を
+# 5%速めたが、加工の要らない行にまで手を入れる理由としては弱い。
+# 触るのは決め台詞だけにして、残り13行は録れたままの音をそのまま使う。
+RATE  = {'punch': 0.92, 'ask': 1.0, None: 1.0}
 
 
 def _head(shot):
@@ -79,16 +81,45 @@ def _tail(shot):
     return max(TAIL, HOLD.get(shot.get('voice'), 0.0))
 
 
-def stretch(x, rate):
-    """速さを変える。同時に高さも変わる（遅くすると低くなる）。
+def stretch(x, rate, win=2048, tol=600):
+    """速さだけ変える。声の高さは変えない。
 
-    速さだけ変える方法もあるが、決め台詞は「遅く、低く」で1つの印象なので、
-    まとめて動かしたほうが狙いに合う。
+    はじめは間引き／水増しで済ませていたが、それだと速さと一緒に高さも
+    動く。0.92倍にすると声が 1.3半音下がり、地の文（そのまま）と決め台詞が
+    交互に来ると、行ごとに声の高さが変わって「同じ人が喋っていない」
+    ように聞こえた。実際に聞いた人の「ごちゃごちゃ」はこれ。
+
+    波形を窓で切って、貼る位置を少しずらしながら重ねていく（WSOLA）。
+    貼る先は、直前の窓のつづきと一番よく合う所を相関で探す。周期を
+    崩さずに詰めたり伸ばしたりできるので、高さは変わらない。
     """
-    if rate == 1.0 or not len(x):
+    if rate == 1.0 or len(x) < win * 2:
         return x
-    n = int(len(x) / rate)
-    return np.interp(np.linspace(0, len(x)-1, n), np.arange(len(x)), x)
+    hs = win // 2                      # 貼る側の歩幅（固定）
+    ha = int(round(hs * rate))         # 拾う側の歩幅。rate>1 で大きい＝速くなる
+    w = np.hanning(win)
+    n = int(len(x) / rate) + win
+    out, norm = np.zeros(n), np.zeros(n)
+    ref = x[hs:hs + win].copy()        # 次に来るはずの波形
+    p, j = 0, 0
+    while p + win < len(x) and j + win < n:
+        lo = max(0, p - tol)
+        hi = min(len(x) - win, p + tol)
+        if hi > lo:
+            # lo〜hi のどこに貼るのが一番なめらかか、まとめて相関を取る
+            c = np.correlate(x[lo:hi + win], ref, 'valid')
+            k = lo + int(np.argmax(c))
+        else:
+            k = min(p, max(0, len(x) - win))
+        out[j:j + win] += x[k:k + win] * w
+        norm[j:j + win] += w
+        ref = x[k + hs:k + hs + win]
+        if len(ref) < win:             # 端。次の窓が作れないので終わり
+            break
+        j += hs
+        p = k + ha
+    norm[norm < 1e-6] = 1.0
+    return (out / norm)[:int(len(x) / rate)]
 MAX_DUR = 4.2        # これ以上長いショットは絵がもたない。台本を割るべき合図
 
 
