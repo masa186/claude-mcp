@@ -49,10 +49,12 @@ render.SHOTS = [
  # 2つ目の言葉をこちらに回すと、1.5秒あたりで切り替わる。
  dict(dur=1.6, kind='face', face='surprise', se='reveal',
       voice='punch', tele='{食べ物}ちゃうねん'),
- # ここから視聴者役（who='viewer'）。別の声で喋る。
+ # ここから視聴者役（who='viewer'）。別の声で、テロップも色と位置を変える。
+ # 表情は口を閉じたもの（serious）にする。surprise の絵は元から口が開いていて、
+ # 別の声が喋っているのに先生が喋っているように見えていた。
  # 読み方を指示で分けると声そのものが別人になってしまったので、
  # だったら初めから別人にする。実測でも41本中20本が2人以上だった。
- dict(dur=1.5, kind='face', face='surprise', who='viewer',
+ dict(dur=1.5, kind='face', face='serious', who='viewer',
       voice='ask', tele='{え、なんで}？', solo=dict(tele='{えっ}てなるやろ')),
 
  # ---- 誤解を名指しする
@@ -82,7 +84,7 @@ render.SHOTS = [
  dict(dur=2.0, kind='stage', scene='num', face='surprise', se='rise',
       fig=('spin/', 1.02, None), add='1秒に{24億回}',
       say='一秒間に、二十四億回。'),
- dict(dur=1.4, kind='face', face='surprise', beat=True, who='viewer',
+ dict(dur=1.4, kind='face', face='serious', beat=True, who='viewer',
       voice='ask', tele='{多すぎるやろ}', solo=dict(tele='{多すぎる}')),
 
  # ---- 因果。ここが密度の山
@@ -105,7 +107,7 @@ render.SHOTS = [
       voice='punch', tame=0.45, say='ほな、温まらんはずやろ。'),
 
  # ---- 回収。誰もが経験している矛盾を解く
- dict(sec='ans', dur=1.5, kind='face', face='surprise', who='viewer',
+ dict(sec='ans', dur=1.5, kind='face', face='serious', who='viewer',
       voice='ask', tele='でも{熱いやん}'),
  dict(dur=2.0, kind='stage', scene='ans', face='explain',
       fig=('plate/', 1.02, 'hold'), add='食べ物から{移っただけ}',
@@ -133,7 +135,7 @@ render.SHOTS = [
  dict(sec='bonus', dur=2.4, kind='board', se='reveal', flash=True,
       board=[dict(text='{1945年}\nポケットの\nお菓子が溶けた', size=104)],
       mute=True, say='これ見つかったん、お菓子が溶けたからやで。'),  # TODO 枠が戻ったら mute を外す
- dict(dur=1.4, kind='face', face='surprise', who='viewer', viewer_only=True,
+ dict(dur=1.4, kind='face', face='serious', who='viewer', viewer_only=True,
       voice='ask', tele='{そんな理由で}？'),
  dict(dur=1.4, kind='face', face='proud',
       voice='ask', tele='{知らんかったやろ}'),

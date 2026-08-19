@@ -53,6 +53,18 @@ HAND = (0.472, 0.774)   # char_explain の上げた手の実測値
 
 TELOP_Y     = 0.480      # テロップの上端（下から20%のUI帯を避ける）
 TELOP_Y_FACE = 0.620     # 顔アップのときだけ下げる。口の上に字が乗ると読みにくい
+# 視聴者役が喋るときのテロップ。先生とは色も位置も変える。
+# 掛け合いのあるショート14本を1本ずつ見たら、14本とも「明らかに別人と
+# 分かる声」で、13本は画面にも印を出していた（テロップの色9本・
+# 話者の絵7本・テロップの位置7本）。印が無いのは1本だけ。
+# こちらは声だけ変えて画に何も出していなかったので「たまに知らん声が出る」
+# と言われた。多い順の上位2つ（色・位置）をそのまま当てる。
+TELOP_Y_VIEWER = 0.500   # 先生（顔アップは0.620）より上。ただし目や鼻には
+                         # かぶせない。0.315まで上げたら顔を隠してしまった
+VIEWER_INK  = (150, 214, 240, 255)   # 水色。先生の白と混ざらない
+VIEWER_HI   = (255, 236, 150, 255)
+VIEWER_PLATE = (16, 44, 62, 165)     # 板も青寄りにする
+VIEWER_TAG  = '視聴者'
 TELOP_SIZE  = 84
 TELOP_STROKE = 6         # 黒フチ
 STAGGER     = 0.40       # 黒板の要素を出す間隔（小さい変化のリズム）
@@ -751,7 +763,12 @@ def draw_telop(canvas, s, t=None):
             k = math.sin(math.pi * d0 / POP_LEN)
             hifnt = tfont(int(size * (1 + 0.14 * k)))
     d = ImageDraw.Draw(canvas)
-    ty = TELOP_Y_FACE if s['kind'] == 'face' else TELOP_Y
+    # 視聴者役の台詞は、色と位置の両方を変える。声だけ変えても
+    # 「誰が喋っているのか」は画面から分からない。
+    vw = s.get('who') == 'viewer'
+    ink, hi = (VIEWER_INK, VIEWER_HI) if vw else (WHITE, MUSTARD)
+    pcol = VIEWER_PLATE if vw else None
+    ty = TELOP_Y_VIEWER if vw else (TELOP_Y_FACE if s['kind'] == 'face' else TELOP_Y)
     # 長い行は2行に折る
     segs = parts(txt)
     plain = ''.join(x for x, _ in segs)
@@ -768,16 +785,27 @@ def draw_telop(canvas, s, t=None):
             marked = rw
             for h in hi_set:
                 if h in marked: marked = marked.replace(h, '{'+h+'}')
-            plate(canvas, rich_box(W//2, y, marked, fnt, TELOP_STROKE, True, hifnt))
-            rich(dl, W//2, y, marked, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
+            plate(canvas, rich_box(W//2, y, marked, fnt, TELOP_STROKE, True, hifnt),
+                  col=pcol)
+            rich(dl, W//2, y, marked, fnt, ink, hi, TELOP_STROKE, BLACK, True, hifnt)
             canvas.alpha_composite(lay)
             y += int(size*1.34)
     else:
         y = int(H*ty)
-        plate(canvas, rich_box(W//2, y, txt, fnt, TELOP_STROKE, True, hifnt))
+        plate(canvas, rich_box(W//2, y, txt, fnt, TELOP_STROKE, True, hifnt), col=pcol)
         lay = Image.new('RGBA', (W, H), (0,0,0,0))
         dl = ImageDraw.Draw(lay)
-        rich(dl, W//2, y, txt, fnt, WHITE, MUSTARD, TELOP_STROKE, BLACK, True, hifnt)
+        rich(dl, W//2, y, txt, fnt, ink, hi, TELOP_STROKE, BLACK, True, hifnt)
+        canvas.alpha_composite(lay)
+    if vw:
+        # 誰が喋っているかを一言だけ出す。実測で「話者の絵」が7本あったが、
+        # 視聴者役の絵は持っていないので、名札で代える。
+        tf = tfont(38)
+        ty2 = int(H*ty) - 52
+        lay = Image.new('RGBA', (W, H), (0,0,0,0))
+        plate(canvas, rich_box(W//2, ty2, VIEWER_TAG, tf, 4, True), col=VIEWER_PLATE)
+        rich(ImageDraw.Draw(lay), W//2, ty2, VIEWER_TAG, tf, VIEWER_INK, VIEWER_INK,
+             4, BLACK, True)
         canvas.alpha_composite(lay)
 
 
@@ -938,7 +966,7 @@ def rich_box(x, y, text, fnt, stroke=0, anchor_c=False, hifnt=None,
             box[3] + (shadow[1] if shadow else 0))
 
 
-def plate(canvas, box, alpha=1.0):
+def plate(canvas, box, alpha=1.0, col=None):
     """文字の下に敷く半透明の板。背景が図でも実写でも読めるようにする。
 
     box は rich_box() が返した実際のインクの範囲。
@@ -950,7 +978,7 @@ def plate(canvas, box, alpha=1.0):
     r = int(min(y1 - y0, 90) * 0.34)
     ImageDraw.Draw(lay).rounded_rectangle(
         [x0 - PLATE_PAD[0], y0 - PLATE_PAD[1],
-         x1 + PLATE_PAD[0], y1 + PLATE_PAD[1]], radius=r, fill=PLATE_COL)
+         x1 + PLATE_PAD[0], y1 + PLATE_PAD[1]], radius=r, fill=col or PLATE_COL)
     if alpha < 1:
         lay.putalpha(lay.getchannel('A').point(lambda v: int(v*alpha)))
     canvas.alpha_composite(lay)
