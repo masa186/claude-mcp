@@ -31,7 +31,9 @@ SAMPLE = 'え、なんでなん。ほんまに？'
 def shots():
     src = open(EPISODE, encoding='utf-8').read()
     body = src[src.index('render.SHOTS = ['):src.index('render.CHAPTERS')]
-    ns = {'render': render, 'MUSTARD': render.MUSTARD, 'CRIMSON': render.CRIMSON}
+    # 台本の末尾に TWO_VOICES の切り替えが入っているので os も渡す
+    ns = {'render': render, 'MUSTARD': render.MUSTARD,
+          'CRIMSON': render.CRIMSON, 'os': os}
     exec(body, ns)
     render.DURATION = render.build()
     return render.SHOTS

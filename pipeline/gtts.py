@@ -26,8 +26,13 @@ SR = 24000                      # このモデルが返すのは 24kHz モノラ
 VOICES = ['Charon', 'Orus', 'Algenib', 'Rasalgethi', 'Iapetus', 'Sadaltager']
 VOICE = os.environ.get('GEMINI_VOICE', 'Charon')
 # 視聴者役の声。カワウソの先生とは別人に聞こえる必要がある。
-# revoice.py --audition で候補を並べて、Charon から一番遠いものを選ぶ。
-VOICE_VIEWER = os.environ.get('GEMINI_VOICE_VIEWER', 'Iapetus')
+# 候補を実際に4行ずつ合成して、カワウソ18行の中心からの距離を測った
+# （長時間平均スペクトル）。カワウソ自身のばらつきが 0.54 なので、
+# そこを超えないと「同じ人の言い方の違い」に埋もれる。
+#   Leda    1.22  ← これにする。ばらつきの2倍以上離れている
+#   Iapetus 0.54     ちょうど埋もれる。最初これを既定にしていた
+#   Puck    0.50     埋もれる
+VOICE_VIEWER = os.environ.get('GEMINI_VOICE_VIEWER', 'Leda')
 
 # 声の演技指示。ここが VOICEVOX に無い利点で、行ごとに口調を変えられる。
 # 台本は「フリ（疑問）→ 説明 → オチ（結論）」の繰り返しでできている。
