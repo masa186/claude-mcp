@@ -60,7 +60,8 @@ render.SHOTS = [
       fig=('spin/', 1.02, 'hold'), add='中で{火}を使ってる？',
       voice='ask', say='中で火が出てる、と思うやろ。'),
  dict(dur=1.5, kind='stage', scene='wrong', face='serious', beat=True,
-      se='reveal', flash=True, add=dict(text='{×} 火は使ってない', color=CRIMSON),
+      se='reveal', flash=True, fig=('spin/', 1.02, None),
+      add=dict(text='{×} 火は使ってない', color=CRIMSON),
       voice='punch', tame=0.45, say='あれ、火もヒーターも使てへん。'),
  # 決め台詞の前に0.45秒のタメを置いたぶん、この行は1枚で3.7秒になった。
  # 台詞のないビートへまたがせて、言い終わりで切り替える。
@@ -99,7 +100,7 @@ render.SHOTS = [
       fig=('plate/', 1.02, 'hold'), add='お皿は{水も油も}ない',
       say='お皿には、その水も油もない。'),
  dict(dur=1.7, kind='stage', scene='plate', face='serious', beat=True,
-      se='reveal', flash=True,
+      se='reveal', flash=True, fig=('plate/', 1.02, 'hold'),
       add=dict(text='なら{温まらんはず}', color=CRIMSON),
       voice='punch', tame=0.45, say='ほな、温まらんはずやろ。'),
 
@@ -107,11 +108,15 @@ render.SHOTS = [
  dict(sec='ans', dur=1.5, kind='face', face='surprise', who='viewer',
       voice='ask', tele='でも{熱いやん}'),
  dict(dur=2.0, kind='stage', scene='ans', face='explain',
-      fig=('plate/', 1.02, None), add='食べ物から{移っただけ}',
+      fig=('plate/', 1.02, 'hold'), add='食べ物から{移っただけ}',
       say='あれ、食べ物から熱が移っただけや。'),
 
  # ---- オチ
- dict(sec='punch', dur=2.1, kind='board', se='dodon', flash=True, hush=0.30,
+ # 一番の山なのに2.1秒まったく動いていなかった（コマ間の変化 0.5）。
+ # 揺れは0.22秒しか続かないので、後ろで分子を暴れさせ続ける。
+ # 「水を暴れさせてる」と言いながら画が止まっているのが一番おかしい。
+ dict(sec='punch', dur=2.1, kind='board', se='dodon', flash=True, shake=True,
+      hush=0.30, fig=('spin/', 0.86, None),
       board=[dict(text='水を\n暴れさせてる', size=160, color=MUSTARD)],
       voice='punch', tame=0.45, say='電子レンジは、水を暴れさせてるだけ。'),
  # ここが一番の山。1枚だと4.6秒あった。言い切ったところで引きの画に変える。

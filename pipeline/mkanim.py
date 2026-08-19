@@ -581,6 +581,7 @@ def stills():
 
 WATER = (108, 168, 214)      # 水の分子。青
 HOT   = (224, 92, 66)        # 熱。赤（HEAT と同じ系統）
+WAVE  = (231, 178, 62)       # マイクロ波。金
 
 
 def molecule(d, cx, cy, ang, r=34, alpha=255, col=None):
@@ -668,6 +669,19 @@ def f_plate(i):
     p = i / N
     e = 1 - (1 - min(1.0, i / (N * 0.5))) ** 3
 
+    # 電波を左から流す。動いていたのは半径22の分子4つだけで、コマ間の
+    # 差が 0.5 しか出ず、実測では静止画と同じ扱いになっていた
+    # （画面に5.9秒出ているのに動きゼロ）。
+    # 「同じ電波が両方に当たっているのに、下だけ反応する」が図の主旨なので、
+    # その電波を大きく描いて流す。端から端まで動く物が要る。
+    for row in (160, 470):
+        for k in range(3):
+            x = ((p * 1.6 + k / 3.0) % 1.0) * (W + 180) - 90
+            for j in range(3):
+                d.arc([int((x - 46 + j*13) * SS), int((row - 54) * SS),
+                       int((x + 46 + j*13) * SS), int((row + 54) * SS)],
+                      -60, 60, fill=WAVE + (int(150 * e),), width=int(5 * SS))
+
     # ── 上：お皿。水の分子が無いので、波が来ても何も起きない
     label(d, 40, 60, 'お皿', 60, CHALK, 235, anchor='lm')
     capsule(d, 210, 160, 620, 160, 34, CHALK, 220)
@@ -680,11 +694,15 @@ def f_plate(i):
     # ── 下：食べ物。中に水があるので、そこが熱くなる
     label(d, 40, 372, '食べ物', 60, CHALK, 255, anchor='lm')
     capsule(d, 210, 470, 620, 470, 34, CHALK, 220)
+    # 分子は大きくして上下にも揺らす。小さく回るだけでは動いて見えない。
     for k, gx in enumerate((270, 370, 470, 570)):
         w = 2*math.pi * 2.0 * p + k
         hit = max(0.0, math.sin(w)) ** 5 * e
         col = tuple(int(WATER[c] + (HOT[c] - WATER[c]) * hit) for c in range(3))
-        molecule(d, gx, 470, math.sin(w) * 2.0 - math.pi/2, 22, 255, col)
+        gy = 470 + math.sin(w * 2 + k) * 9 * e
+        if hit > 0.35:                      # ぶつかった瞬間だけ光る
+            dot(d, gx, gy, int(30 + 26 * hit), HOT, int(90 * hit))
+        molecule(d, gx, gy, math.sin(w) * 2.0 - math.pi/2, 30, 255, col)
     if e > 0.5:
         al = int(255 * (e - 0.5) / 0.5)
         label(d, 748, 470, '水と油あり', 48, GOLD, al)
