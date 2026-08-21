@@ -776,6 +776,76 @@ def f_rete(i, swap=False):
     return im.resize((W, H), Image.LANCZOS)
 
 
+# ---------------------------------------------------------------- 冷蔵庫
+
+def f_pump(i, back=False):
+    """冷蔵庫。庫内の熱を管が拾って、外へ運んで捨てる図。
+
+    伝えたいのは1つ。「冷たさを作っているのではなく、熱を運び出している」。
+    最初は管を箱の外に描いていたが、それだと「中の熱を拾う」が絵に出ない。
+    管は庫内を通してから外へ出す。
+
+    back=True … 裏側だけを強調する。実際に40〜50度になる所。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.35))) ** 3
+
+    BX0, BY0, BX1, BY1 = 80, 150, 520, 540      # 庫内
+    OX = 730                                     # 外（裏）
+    LO, HI = BY1 - 90, BY0 + 90                  # 管の下段・上段
+
+    d.rounded_rectangle([BX0*SS, BY0*SS, BX1*SS, BY1*SS], radius=18*SS,
+                        outline=CHALK + (240,), width=int(7*SS))
+    label(d, (BX0+BX1)//2, BY0 - 46, '庫内', 50, COLD, int(240*e))
+    label(d, OX, BY0 - 46, '外（裏）', 50, HEAT, int(240*e))
+
+    # 拾われる前の熱。管の下段のまわりに漂わせる
+    for k in range(4):
+        a2 = int(200 * e * max(0.0, math.sin(2*math.pi*(p*1.1 - k*0.19))))
+        dot(d, 150 + k*95, LO - 66 - 26*math.sin(p*6.28 + k), 18, HEAT, a2)
+
+    # 管の一周。庫内の下を右へ → 外で上へ → 庫内へ戻る
+    path = [(BX0+55, LO), (OX, LO), (OX, HI), (BX0+55, HI), (BX0+55, LO)]
+    for a, b in zip(path, path[1:]):
+        # 75では黒板の上で消えていた。管が見えないと話が伝わらない
+        line(d, [a, b], (236, 232, 220), 30, 165)
+
+    # 裏側の放熱
+    if e > 0.4:
+        al = int(210 * (e - 0.4) / 0.6)
+        for k in range(4):
+            yy = HI + 40 + k * 84
+            w = 2*math.pi * 1.6 * p + k
+            arrow(d, OX + 44, yy, OX + 44 + 66 + 16*math.sin(w), yy,
+                  HEAT, 9, 26, al)
+        if back:
+            label(d, OX + 40, BY1 + 6, '40〜50度', 54, HEAT, al)
+
+    # 粒。庫内で熱を拾って赤くなり、外で放して青くなる
+    L = [math.hypot(b[0]-a[0], b[1]-a[1]) for a, b in zip(path, path[1:])]
+    tot = sum(L)
+    for j in range(8):
+        s0 = (p * 1.15 + j / 8.0) % 1.0
+        dist = s0 * tot
+        x, y = path[0]
+        for (a, b), ln in zip(zip(path, path[1:]), L):
+            if dist <= ln:
+                x = a[0] + (b[0]-a[0]) * dist/ln
+                y = a[1] + (b[1]-a[1]) * dist/ln
+                break
+            dist -= ln
+        f = L[0] / tot                      # 庫内の下段が終わる位置
+        g = (L[0] + L[1]) / tot             # 外の縦が終わる位置
+        if s0 < f:      warm = s0 / f                     # 拾いながら温まる
+        elif s0 < g:    warm = 1.0 - (s0 - f) / (g - f)   # 外で放して冷える
+        else:           warm = 0.0                        # 冷たいまま戻る
+        c = tuple(int(COLD[k] + (WARM[k]-COLD[k]) * warm) for k in range(3))
+        dot(d, x, y, 21, c, int(255*e))
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
     dump('wingrace', f_wingrace)
@@ -790,5 +860,7 @@ if __name__ == '__main__':
     dump('plate', f_plate)        # 電子レンジ：皿と食べ物を比べる
     dump('rete', f_rete)                            # ペンギン：熱を渡し合う
     dump('rete0', lambda i: f_rete(i, swap=True))   # ペンギン：渡さない場合
+    dump('pump', f_pump)                            # 冷蔵庫：熱を運び出す
+    dump('pumpb', lambda i: f_pump(i, back=True))   # 冷蔵庫：裏が40〜50度
     stills()
     print('完了 → ' + OUT)
