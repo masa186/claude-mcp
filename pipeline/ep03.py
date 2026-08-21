@@ -35,7 +35,7 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 render.SHOTS = [
  # ---- 0〜2秒。ここだけが弱点だと2本ぶんの実データで分かっている。
  # 実写・明るい・「9割」系の3つを同時に置く。第2話と同じ型。
- dict(sec='hook', dur=1.2, kind='screen', clip='peng2', face='surprise',
+ dict(short=True, sec='hook', dur=1.2, kind='screen', clip='peng2', face='surprise',
       roll=False, se='impact', head=0.0,
       voice='punch', tele='{9割が知らない}',
       say='ペンギンの足、氷とおんなじ温度やねん。'),
@@ -43,18 +43,18 @@ render.SHOTS = [
  # 1行目は声にすると3.2秒あり、1枚で持たせると3秒まで画が変わらない。
  # 第1話でこれをやって冒頭離脱71.1%だった。実測では21本中18本が
  # 0〜2秒に1回は切り替えている。ここは別の実写に切り替える。
- dict(dur=2.1, kind='screen', clip='peng', se='whoosh',
+ dict(short=True, dur=2.1, kind='screen', clip='peng', se='whoosh',
       mute=True, tele='{氷とおんなじ}温度'),
- dict(dur=1.4, kind='face', face='surprise', se='reveal',
+ dict(short=True, dur=1.4, kind='face', face='surprise', se='reveal',
       voice='punch', tele='{0度}やで'),
- dict(dur=1.4, kind='face', face='serious', who='viewer',
+ dict(short=True, dur=1.4, kind='face', face='serious', who='viewer',
       voice='ask', tele='{え、凍らへんの}？'),
 
  # ---- 誤解を名指しする
- dict(sec='how', dur=1.9, kind='stage', scene='wrong', face='serious',
+ dict(short=True, sec='how', dur=1.9, kind='stage', scene='wrong', face='serious',
       fig=('rete0/', 1.02, None), add='血が{凍らへん成分}？',
       voice='ask', say='凍らん成分が入ってる、と思うやろ。'),
- dict(dur=1.6, kind='stage', scene='wrong', face='serious', beat=True,
+ dict(short=True, dur=1.6, kind='stage', scene='wrong', face='serious', beat=True,
       se='reveal', flash=True, fig=('rete0/', 1.02, None),
       add=dict(text='{×} そんなもんは無い', color=CRIMSON),
       voice='punch', tame=0.45, say='そんなもんは入ってへん。'),
@@ -64,10 +64,10 @@ render.SHOTS = [
       se='whoosh', tele='足は{ほんまに冷たい}'),
 
  # ---- 仕組み。ここが山
- dict(dur=2.0, kind='stage', scene='rete', face='explain',
+ dict(short=True, dur=2.0, kind='stage', scene='rete', face='explain',
       fig=('rete/', 1.02, None), add='足の付け根で{熱を渡す}',
       say='足の付け根で、熱を渡してんねん。'),
- dict(dur=2.0, kind='stage', scene='rete', face='explain',
+ dict(short=True, dur=2.0, kind='stage', scene='rete', face='explain',
       fig=('rete/', 1.02, None), add='{行き}が{帰り}を温める',
       say='足へ行く温かい血が、戻る冷たい血を温め直す。'),
  # この行は1枚で4.7秒あった。台詞を持たないビートへまたがせて割る
@@ -77,7 +77,7 @@ render.SHOTS = [
  # ---- 数字。上位120本中50本が数字を入れていた
  dict(sec='num', dur=1.3, kind='face', face='point',
       tele='からだは{38度}'),
- dict(dur=1.7, kind='stage', scene='num', face='surprise', se='rise',
+ dict(short=True, dur=1.7, kind='stage', scene='num', face='surprise', se='rise',
       fig=('rete/', 1.02, None), add='足は{0度}',
       voice='punch', say='足は、ゼロ度。'),
  dict(dur=1.3, kind='face', face='surprise', who='viewer',
@@ -93,7 +93,7 @@ render.SHOTS = [
       voice='punch', say='冷たい血がそのまま帰って、体温が逃げる。'),
 
  # ---- オチ
- dict(sec='punch', dur=2.1, kind='board', se='dodon', flash=True, shake=True,
+ dict(short=True, sec='punch', dur=2.1, kind='board', se='dodon', flash=True, shake=True,
       hush=0.30, fig=('rete/', 0.86, None),
       board=[dict(text='わざと\n冷たいまま', size=150, color=MUSTARD)],
       voice='punch', tame=0.45,
@@ -112,6 +112,19 @@ render.SHOTS = [
       voice='punch', say='あれ、冷やしてないねん。'),
 ]
 
+# TikTok用の短縮版。フル視聴が 5.14%（電子レンジ）/ 7.69%（飛行機）しか
+# なく、いいねは「最後まで見た人の11〜16%」から出ていた。つまり、いいねが
+# 少ないのではなく完走する人が少ない。尺を半分にすれば完走者は増える。
+# YouTube側は 46〜60秒の帯が中央値2,700回/日で一番高いので、長い版を残す。
+if os.environ.get('SHORT') == '1':
+    render.SHOTS = [x for x in render.SHOTS if x.get('short')]
+    OUT = 'ep03s.mp4'
+    FRAMES = 'frames3s'
+    VOICE_FILE = 'voice3s.wav'
+    SE_FILE = 'se3s.wav'
+else:
+    VOICE_FILE, SE_FILE = 'voice3.wav', 'se3.wav'
+
 if os.environ.get('TWO_VOICES') != '1':
     render.SHOTS = [x for x in render.SHOTS if not x.get('viewer_only')]
     for x in render.SHOTS:
@@ -125,7 +138,7 @@ render.DURATION = render.build()
 render.OUT = FRAMES
 
 import voice
-VOICE = 'voice3.wav'
+VOICE = VOICE_FILE
 audio = voice.collect(render.SHOTS)
 if audio:
     voice.fit(render.SHOTS, audio)
@@ -157,9 +170,9 @@ for i in range(n):
     if i % 100 == 0:
         print('  %d/%d  %.0fs' % (i, n, time.time()-t0), flush=True)
 
-sound.write_wav('se3.wav', sound.build_track(render.DURATION))
+sound.write_wav(SE_FILE, sound.build_track(render.DURATION))
 
-cmd = [FF, '-y', '-framerate', str(render.FPS), '-i', FRAMES + '/%05d.png', '-i', 'se3.wav']
+cmd = [FF, '-y', '-framerate', str(render.FPS), '-i', FRAMES + '/%05d.png', '-i', SE_FILE]
 labels, filt, idx = ['[1:a]'], [], 1
 if nar:
     idx += 1; cmd += ['-i', nar]; labels.append('[%d:a]' % idx)
