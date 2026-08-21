@@ -49,6 +49,9 @@ EPS = [
     dict(file='thumb_ep02.png', label='飛行機',
          bg='clip:plane', lines=['9割が勘違い', '翼の形は関係ない'],
          fig=None, face='surprise'),
+    dict(file='thumb_ep03.png', label='ペンギン',
+         bg='clip:peng2', lines=['9割が知らない', '足は0度でも凍らない'],
+         fig=None, face='surprise'),
     dict(file='thumb_ep01.png', label='電子レンジ',
          bg='board', lines=['9割が勘違い', '食べ物を温めてない'],
          # 02_collision.png は白い線画で、一覧の親指サイズでは消えていた。
