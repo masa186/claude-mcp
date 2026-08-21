@@ -710,6 +710,72 @@ def f_plate(i):
     return im.resize((W, H), Image.LANCZOS)
 
 
+# ---------------------------------------------------------------- ペンギンの足
+
+COLD = (96, 156, 214)        # 冷たい血。青
+WARM = (222, 88, 62)         # 温かい血。赤
+
+
+def _blood(d, x, y, r, warm, alpha=255):
+    """血の粒。温かいほど赤、冷たいほど青。"""
+    c = tuple(int(COLD[k] + (WARM[k] - COLD[k]) * warm) for k in range(3))
+    dot(d, x, y, r, c, alpha)
+
+
+def f_rete(i, swap=False):
+    """ペンギンの足の付け根。行きの血と帰りの血が並んで熱を渡し合う図。
+
+    伝えたいのは1つだけ。「足へ行く温かい血が、足から戻る冷たい血を
+    温め直している」。だから、上から下へ降りる赤い粒と、下から上へ
+    のぼる青い粒を、隣り合わせに置いて、その間で熱をやり取りさせる。
+
+    swap=True … 仕組みが無い場合。熱が渡らず、冷たい血がそのまま
+    胴体へ帰る。前後の比較は実測40本中23本が使っていた。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.35))) ** 3
+
+    TOP, BOT = 120, 560              # 胴体側 / 足側
+    XA, XB = 330, 560                # 行き（動脈）と帰り（静脈）のx
+
+    # 胴体と足の帯
+    capsule(d, 120, TOP - 46, 780, TOP - 46, 54, CHALK, 60)
+    label(d, 120, TOP - 46, 'からだ 38度', 46, CHALK, 235, anchor='lm')
+    capsule(d, 250, BOT + 52, 650, BOT + 52, 46, CHALK, 55)
+    label(d, 250, BOT + 52, '足 0度', 46, COLD, 240, anchor='lm')
+
+    # 血管
+    capsule(d, XA, TOP, XA, BOT, 40, (236, 232, 220), 45)
+    capsule(d, XB, TOP, XB, BOT, 40, (236, 232, 220), 45)
+    label(d, XA, TOP - 104, '行き', 44, WARM, int(235*e))
+    label(d, XB, TOP - 104, '帰り', 44, COLD, int(235*e))
+
+    # 熱を渡す矢印。仕組みが有るときだけ、行き→帰りへ横に渡る
+    if not swap:
+        for k in range(4):
+            yy = TOP + 70 + k * 118
+            a = int(210 * e * (0.45 + 0.55 * max(0.0, math.sin(2*math.pi*(p*1.4 - k*0.12)))))
+            arrow(d, XA + 34, yy, XB - 34, yy, GOLD, 8, 26, a)
+
+    # 粒。行きは上から下へ、下るほど冷える。帰りは下から上へ、のぼるほど温まる
+    for j in range(6):
+        s0 = (p * 1.1 + j / 6.0) % 1.0
+        y = TOP + (BOT - TOP) * s0
+        _blood(d, XA, y, 17, 1.0 - s0, int(255 * e))
+        y2 = BOT - (BOT - TOP) * s0
+        # 仕組みが無ければ、帰りは冷たいまま上まで行く
+        warm = 0.0 if swap else s0
+        _blood(d, XB, y2, 17, warm, int(255 * e))
+
+    if swap and e > 0.6:
+        # TOP-150 は画面外（y=-30）だった。血管の間の空きに置く
+        label(d, 450, (TOP + BOT) // 2, '体温が逃げる', 52, WARM,
+              int(255 * (e - 0.6) / 0.4))
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
     dump('wingrace', f_wingrace)
@@ -722,5 +788,7 @@ if __name__ == '__main__':
     dump('spin', f_spin)          # 電子レンジ：分子が向きを変える
     dump('bump', f_bump)          # 電子レンジ：ぶつかって熱になる
     dump('plate', f_plate)        # 電子レンジ：皿と食べ物を比べる
+    dump('rete', f_rete)                            # ペンギン：熱を渡し合う
+    dump('rete0', lambda i: f_rete(i, swap=True))   # ペンギン：渡さない場合
     stills()
     print('完了 → ' + OUT)
