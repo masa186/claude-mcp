@@ -247,6 +247,8 @@ def repair(texts, segs, voice=None, style=None, model=None):
     for i, v in enumerate(r):
         if 0.55 * med <= v <= 1.8 * med:
             continue
+        if len(texts[i]) < SHORT_LINE:
+            continue      # 短い行は比が当てにならない。録り直しても同じ
         print('    %d行目「%s」を単独で作り直す（中央値の%.1f倍）'
               % (i + 1, texts[i][:16], v / med))
         x = say(texts[i], voice=voice, style=style, model=model,
@@ -254,6 +256,10 @@ def repair(texts, segs, voice=None, style=None, model=None):
         if len(x):
             segs[i] = x
     return segs
+
+
+# これより短い行は、切れ目の検査から外す（前後の無音の割合が大きすぎる）
+SHORT_LINE = 7
 
 
 def balanced(texts, segs, sr=None):
@@ -268,7 +274,13 @@ def balanced(texts, segs, sr=None):
     med = sorted(r)[len(r) // 2]
     if med <= 0:
         return False
-    return all(0.5 * med <= v <= 1.9 * med for v in r)
+    # 短い行は、前後のわずかな無音が全体に占める割合が大きく、
+    # 「秒数÷文字数」が必ず外れる。「しかも」（3文字）や「つまり。」（4文字）を
+    # この検査にかけると、切れ目が合っていても不合格になり、合成し直しになる。
+    # 実際にそれで16回ぶんの枠を捨てていた。短い行は判定から外す。
+    ok = [0.5 * med <= v <= 1.9 * med
+          for t, v in zip(texts, r) if len(t) >= SHORT_LINE]
+    return all(ok) if ok else True
 
 
 def _expect(part):
