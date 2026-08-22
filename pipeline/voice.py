@@ -486,7 +486,7 @@ def from_gemini(shots):
     # 埋めると、同じ役割の行どうしで声が変わって一番ばらばらに聞こえる。
     # せめて「読み方ごとに1つのモデル」へ寄せる。地の文はこの声、
     # 決め台詞はこの声、と筋が通っていれば聞ける。
-    have, used = {}, {}
+    have, used = dict(best[1]), {}   # {} に作り直すと、取れていた行を捨ててしまう
     for key in sorted(set(zip(who, sty))):
         w, name = key
         grp = [k for k in range(len(texts)) if (who[k], sty[k]) == key]
@@ -508,7 +508,16 @@ def from_gemini(shots):
         for name, m in used.items():
             print('    %-10s %s' % (STYLE_NAME.get(name, name), m))
     if len(have) < len(texts):
-        print('  ※ %d行が埋まらなかった' % (len(texts) - len(have)))
+        n = len(texts) - len(have)
+        print('  ※ %d行が埋まらなかった' % n)
+        # 埋まらない行はそのまま無音になる。17/22行が無音の動画を
+        # 書き出してしまったので、ここで止める。
+        if n > len(texts) * 0.25 and os.environ.get('ALLOW_GAPS') != '1':
+            raise SystemExit(
+                '\n%d/%d行が無音になります。書き出しを止めました。'
+                '\nGemini の枠が戻ってから、もう一度走らせてください。'
+                '\n（穴あきのまま書き出すなら ALLOW_GAPS=1 を付ける）'
+                % (n, len(texts)))
     print('  ※ 枠が戻った日にもう一度走らせると、1つのモデルに揃う')
     return {i: have.get(k, np.zeros(0)) for k, (i, _) in enumerate(ls)}
 
@@ -541,7 +550,15 @@ def collect(shots, preset=DEFAULT):
         return shape(shots, g)
     if not available():
         return {}
-    print('  声: Open JTalk の合成（仮）')
+    if os.environ.get('ALLOW_ROBOT') != '1':
+        # ここへ落ちたことに気づかずに書き出して、ロボット声のまま動画を
+        # 出してしまった。合成できなかったら止める。どうしても仮の音で
+        # 確認したいときだけ ALLOW_ROBOT=1 を付ける。
+        raise SystemExit(
+            '\n合成音声が1行も取れませんでした。'
+            '\nGemini の枠が戻ってから、もう一度走らせてください。'
+            '\n（仮のロボット声で書き出すなら ALLOW_ROBOT=1 を付ける）')
+    print('  声: Open JTalk の合成（仮。ALLOW_ROBOT=1 が付いている）')
     out = {}
     for i, t in lines(shots):
         # ショットに voice='punch' と書いてあれば、その行だけ別の声色にする
