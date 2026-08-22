@@ -49,6 +49,9 @@ EPS = [
     dict(file='thumb_ep02.png', label='飛行機',
          bg='clip:plane', lines=['9割が勘違い', '翼の形は関係ない'],
          fig=None, face='surprise'),
+    dict(file='thumb_ep05.png', label='冷蔵庫',
+         bg='board', lines=['開けっぱなしにしたら', '部屋は涼しくなる？'],
+         fig=('pumpb/', 45), face='surprise'),
     # 冷蔵庫の実写がまだ無いので黒板。届いたら bg='clip:fridge' にする。
     # 20本の実測では 実写13/20・明るい16/20 で、黒板は少数派。
     dict(file='thumb_ep04.png', label='冷蔵庫',
