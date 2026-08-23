@@ -44,14 +44,23 @@ HOOK = (dict(sec='hook', dur=2.4, kind='screen', clip='fridge', face='surprise',
              voice='punch', tele='{開けっぱなし}で部屋は涼しなる？',
              say='冷蔵庫、開けっぱなしにしたら部屋は涼しなるか。')
         if HAS_CLIP else
-        dict(sec='hook', dur=2.4, kind='stage', scene='q', face='surprise',
-             se='impact', flash=True, shake=True, head=0.0,
-             fig=('pump/', 1.02, None),
-             add='{開けっぱなし}で部屋は涼しなる？',
+        # 上位14本の冒頭2秒を測ったら、一番大きいものが画面の60%（中央値）を
+        # 占めていた。こちらの黒板の冒頭は12%しか埋まっていない。
+        # 最初の切り替えも向こうは0.8秒（中央値）、こちらは1.2〜1.5秒だった。
+        # 板の巨大文字で埋めて、0.8秒で切り替える。
+        # フラッシュは0コマ目を白く飛ばして、一番見せたい字が読めなくなる。
+        # 上位14本は0.0秒の時点で中身がはっきり写っている。ここでは使わない。
+        dict(sec='hook', dur=0.8, kind='board',
+             se='impact', shake=True, head=0.0, hush=0.0,
+             board=[dict(text='開けっぱなしで\n部屋は\n涼しなる？', size=178,
+                         color=MUSTARD)],
              voice='punch', say='冷蔵庫、開けっぱなしにしたら部屋は涼しなるか。'))
 
 render.SHOTS = [
  HOOK,
+ # 1行目の声はここへまたがる。0.8秒で切り替えるための受け皿。
+ dict(short=True, dur=2.6, kind='stage', scene='q', face='surprise',
+      fig=('pump/', 1.02, None), add='{開けっぱなし}にしたら？'),
  dict(short=True, dur=1.5, kind='face', face='point',
       voice='punch', tele='{どっちやと思う}？'),
 
