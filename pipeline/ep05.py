@@ -39,8 +39,11 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 # 冷蔵庫の実写がまだ無い（素材サイトはこの環境から取れない）。
 # 実測では0〜2秒に実写を出しているのが7/10本。届いたら差し替える。
 HAS_CLIP = os.path.isdir('clips/fridge') and os.listdir('clips/fridge')
-HOOK = (dict(sec='hook', dur=2.4, kind='screen', clip='fridge', face='surprise',
-             roll=False, se='impact', head=0.0,
+# 4本もらった中から fridge を選んだ。明るさ147・彩り75で一番明るく、
+# 一目で冷蔵庫と分かる（実測では1コマ目が明るいものが16/20本）。
+# 尺は0.8秒。上位14本の最初の切り替えは中央値0.8秒だった。
+HOOK = (dict(sec='hook', dur=0.8, kind='screen', clip='fridge', face='surprise',
+             roll=False, se='impact', head=0.0, hush=0.0,
              voice='punch', tele='{開けっぱなし}で部屋は涼しなる？',
              say='冷蔵庫、開けっぱなしにしたら部屋は涼しなるか。')
         if HAS_CLIP else
@@ -96,8 +99,9 @@ render.SHOTS = [
  dict(short=True, dur=1.4, kind='face', face='point', tele='{ここまでは}ええな'),
 
  # ---- 段階3。扉を開けると、その熱はどこへ行くのか
- dict(short=True, sec='s3', dur=2.0, kind='stage', scene='s3', face='serious',
-      fig=('pump/', 1.02, None), add='扉を開けたら{どこへ}？',
+ # ここが話の分かれ目。実写に戻して、扉が開いている絵を見せる
+ dict(short=True, sec='s3', dur=2.0, kind='screen', clip='fridge2',
+      face='serious', se='whoosh', tele='扉を開けたら{どこへ}？',
       say='ほな、扉を開けたら、その熱はどこ行く。'),
  dict(short=True, dur=2.1, kind='stage', scene='s3', face='serious', beat=True,
       se='reveal', flash=True, fig=('pump/', 1.02, None),
