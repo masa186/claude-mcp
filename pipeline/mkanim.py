@@ -846,6 +846,45 @@ def f_pump(i, back=False):
     return im.resize((W, H), Image.LANCZOS)
 
 
+def f_evap(i):
+    """打ち水。水が気体になるとき、地面の熱を持っていく図。
+
+    第5話は「打ち水したら涼しいやろ」と口で言うだけで、絵にしていなかった。
+    例えは音だけで流れて、画面はずっと同じ管の図のままだった。
+    ここを絵にすると、たとえが効くのと、同じ画が続くのを断つのと、
+    両方が一度に片づく。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.3))) ** 3
+
+    GY = 470                                    # 地面
+    capsule(d, 60, GY, 840, GY, 40, CHALK, 70)
+    label(d, 450, GY + 76, '地面', 46, DIM, int(235 * e))
+
+    # 地面に残る熱。水が持っていくぶんだけ減る
+    for k in range(6):
+        ph = (p * 1.3 + k / 6.0) % 1.0
+        al = int(220 * e * max(0.0, 1 - ph * 1.6))
+        dot(d, 150 + k * 110, GY - 30, 26, HEAT, al)
+
+    # 水の粒が上がりながら小さくなって消える。赤い熱を連れていく
+    for k in range(6):
+        ph = (p * 1.3 + k / 6.0) % 1.0
+        x = 150 + k * 110 + 18 * math.sin(ph * 6.0 + k)
+        y = GY - 40 - ph * 300
+        r = int(36 * (1 - ph * 0.65))
+        al = int(245 * e * max(0.0, 1 - ph))
+        if ph > 0.10:
+            dot(d, x, y, r, WATER, al)
+            dot(d, x + 7, y - 9, max(5, r // 3), HEAT, int(al * 0.9))
+
+    label(d, 450, 90, '水が気体になるとき', 52, CHALK, int(240 * e))
+    label(d, 450, 168, '熱を持っていく', 56, GOLD, int(240 * e))
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
     dump('wingrace', f_wingrace)
@@ -862,5 +901,6 @@ if __name__ == '__main__':
     dump('rete0', lambda i: f_rete(i, swap=True))   # ペンギン：渡さない場合
     dump('pump', f_pump)                            # 冷蔵庫：熱を運び出す
     dump('pumpb', lambda i: f_pump(i, back=True))   # 冷蔵庫：裏が40〜50度
+    dump('evap', f_evap)                            # 冷蔵庫：打ち水
     stills()
     print('完了 → ' + OUT)

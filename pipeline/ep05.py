@@ -83,18 +83,30 @@ render.SHOTS = [
       tele='そもそも{冷気}は作れへん'),
  dict(short=True, dur=1.9, kind='face', face='explain',
       tele='{打ち水}したら涼しいやろ'),
- dict(short=True, dur=2.1, kind='stage', scene='s2', face='explain',
-      se='reveal', fig=('pump/', 1.02, None),
+ # 同じ scene で図も同じ大きさのまま4つ並べていたら、13.6〜25.5秒の
+ # 11.9秒がカットの検出できない一枚絵になっていた（コマ間の動き0.97）。
+ # 場面を割ると積んだ札が消えるので、カットのたびに画がはっきり変わる。
+ # 図の大きさも変えて、同じ絵が続かないようにする。
+ # 打ち水は口で言うだけで絵にしていなかった。ここだけ別の図にすると、
+ # たとえが効くのと、同じ管の図が9秒続くのを断つのが一度に片づく。
+ dict(short=True, dur=2.1, kind='stage', scene='s2a', face='explain',
+      se='reveal', fig=('evap/', 1.10, None),
       add='液体が気体になると{熱を奪う}',
       say='液体が気体になるとき、熱を奪うねん。'),
- dict(short=True, dur=2.0, kind='stage', scene='s2', face='explain',
-      fig=('pump/', 1.02, None), add='管が{熱を拾う}',
+ # scene を割っても図の大きさを変えても、画はほとんど変わらなかった。
+ # 図の幅は W×0.79 で頭打ちになるので、1.10 も 0.84 も同じ大きさに潰れる。
+ # stage を4つ続けること自体が原因。stage と board を交互にする。
+ # board は figure が全画面に出る別の作りなので、カットごとに画が変わる。
+ dict(short=True, dur=2.0, kind='board', se='whoosh',
+      fig=('pump/', 1.00, None),
+      board=[dict(text='管が{熱を拾う}', size=104)],
       say='冷蔵庫は、それを管の中でやってる。'),
- dict(short=True, dur=2.2, kind='stage', scene='s2', face='explain',
+ dict(short=True, dur=2.2, kind='stage', scene='s2c', face='explain',
       fig=('pump/', 1.02, None), add='庫内の熱を{裏から外へ}',
       say='冷蔵庫は、庫内の熱を裏から外に出してる。'),
- dict(short=True, dur=2.0, kind='stage', scene='s2', face='surprise', se='rise',
-      fig=('pumpb/', 1.02, None), add='裏は{40〜50度}',
+ dict(short=True, dur=2.0, kind='board', se='rise', flash=True,
+      fig=('pumpb/', 1.00, None),
+      board=[dict(text='裏は{40〜50度}', size=112, color=MUSTARD)],
       voice='punch', say='だから裏は、四十度から五十度ある。'),
  dict(short=True, dur=1.4, kind='face', face='point', tele='{ここまでは}ええな'),
 
@@ -113,7 +125,7 @@ render.SHOTS = [
       say='動かす電気も、ぜんぶ熱になって足される。'),
 
  # ---- ここで回収。実測の中央値は44.5秒、40秒以降が7/10本
- dict(short=True, sec='ans', dur=1.5, kind='board',
+ dict(short=True, sec='ans', dur=1.5, kind='board', fig=('pump/', 0.80, None),
       board=[dict(text='つまり', size=140)],
       say='つまり。'),
  dict(short=True, dur=2.2, kind='board', se='dodon', flash=True, shake=True,
@@ -125,10 +137,12 @@ render.SHOTS = [
  dict(dur=1.5, kind='face', face='proud', tele='{逆やってん}'),
 
  # ---- 予告
- dict(sec='next', dur=1.5, kind='board',
+ # 締めの板は動きがゼロだった（0.58）。後ろで図を回し続ける
+ dict(sec='next', dur=1.5, kind='board', fig=('pump/', 0.72, None),
       board=[dict(text='次は\n{ラクダ}', size=130)],
       say='次はラクダ。'),
  dict(dur=1.6, kind='board', se='reveal', shake=True,
+      fig=('pumpb/', 0.72, None),
       board=[dict(text='水をためてない', size=126, color=MUSTARD)],
       voice='punch', say='あのコブ、水ちゃうねん。'),
 ]
