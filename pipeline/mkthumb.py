@@ -34,7 +34,7 @@
 import os
 from PIL import Image, ImageDraw
 import render
-from render import CHALK, MUSTARD, BLACK
+from render import CHALK, MUSTARD, BLACK, CRIMSON
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'brand')
@@ -49,11 +49,13 @@ EPS = [
     dict(file='thumb_ep02.png', label='飛行機',
          bg='clip:plane', lines=['9割が勘違い', '翼の形は関係ない'],
          fig=None, face='surprise'),
-    # 実写が届いたので背景に敷く。20本の実測は 実写13/20・明るい16/20 で、
-    # 黒板は少数派だった。図は消す（実写の上に重ねると両方読めない）。
+    # 実写4本（fridge/2/3/4）を1コマずつ見比べたが、どれも「野菜のアップ」
+    # 「海外の業務用ガラス扉」で、親指サイズでは冷蔵庫と読めなかった。
+    # 背景はいちばん明るい fridge のまま使い、太い輪郭のアイコンを重ねて
+    # 「これは冷蔵庫の話だ」を一目で伝える。
     dict(file='thumb_ep05.png', label='冷蔵庫',
          bg='clip:fridge', lines=['開けっぱなしにしたら', '部屋は涼しくなる？'],
-         fig=None, face='surprise'),
+         fig=('icon:fridge', 0), face='surprise'),
     # 冷蔵庫の実写がまだ無いので黒板。届いたら bg='clip:fridge' にする。
     # 20本の実測では 実写13/20・明るい16/20 で、黒板は少数派。
     dict(file='thumb_ep04.png', label='冷蔵庫',
@@ -78,8 +80,66 @@ LH = 1.16            # 行送り（文字の高さに対する倍率）
 CHAR = dict(w=0.66, cx=0.70, foot=1.03)
 
 
+ICE = (140, 210, 245, 255)
+
+def fridge_icon(w, h):
+    """一目で「冷蔵庫」と分かる簡易アイコン。実写(iyxtimg不可)の代わりに描く。
+
+    第5話は実写4本を1コマずつ見比べたが、どれも「野菜のアップ」「海外の
+    業務用ガラス扉冷蔵庫」で、サムネの親指サイズでは冷蔵庫と読めなかった
+    （視聴者コメント相当のAI講評でも同じ指摘）。実写を諦めて、太い輪郭の
+    アイコンに切り替える。板を敷いて、どんな背景の上でも潰れないようにする。
+    """
+    S = 4
+    im = Image.new('RGBA', (w * S, h * S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    W2, H2 = w * S, h * S
+
+    # 背景の板（実写の上に乗せても輪郭が潰れないように）
+    pad = int(W2 * 0.02)
+    d.rounded_rectangle((pad, pad, W2 - pad, H2 - pad), radius=int(W2 * 0.08),
+                         fill=(255, 255, 255, 235), outline=BLACK, width=int(W2 * 0.012))
+
+    # 本体
+    bx0, by0 = int(W2 * 0.24), int(H2 * 0.10)
+    bx1, by1 = int(W2 * 0.76), int(H2 * 0.90)
+    ow = max(6, int(W2 * 0.020))
+    d.rounded_rectangle((bx0, by0, bx1, by1), radius=int(W2 * 0.035),
+                         fill=(250, 250, 252, 255), outline=BLACK, width=ow)
+
+    # 冷凍室と冷蔵室の仕切り線
+    split_y = by0 + int((by1 - by0) * 0.32)
+    d.line((bx0 + ow, split_y, bx1 - ow, split_y), fill=BLACK, width=ow)
+
+    # 取っ手（縦バー）。両室とも右寄りに1本ずつ
+    hx = bx1 - int((bx1 - bx0) * 0.14)
+    hw = max(4, int(W2 * 0.012))
+    d.rounded_rectangle((hx - hw, by0 + int((split_y - by0) * 0.20),
+                          hx + hw, split_y - int((split_y - by0) * 0.18)),
+                         radius=hw, fill=BLACK)
+    d.rounded_rectangle((hx - hw, split_y + int((by1 - split_y) * 0.10),
+                          hx + hw, by1 - int((by1 - split_y) * 0.10)),
+                         radius=hw, fill=BLACK)
+
+    # ひんやりを示す水色のギザギザ（雪）を扉のすき間に
+    zig_y = split_y
+    zx0, zx1 = bx0 + int(W2 * 0.06), hx - int(W2 * 0.05)
+    n = 5
+    pts = []
+    for i in range(n + 1):
+        x = zx0 + (zx1 - zx0) * i / n
+        y = zig_y + (-1 if i % 2 == 0 else 1) * int(H2 * 0.02)
+        pts.append((x, y))
+    d.line(pts, fill=ICE, width=max(4, int(W2 * 0.014)), joint='curve')
+
+    im = im.resize((w, h), Image.LANCZOS)
+    return im
+
+
 def figure(spec):
     name, idx = spec
+    if name == 'icon:fridge':
+        return fridge_icon(680, 680)
     if name.endswith('/'):
         fs = render.clip_frames(name.rstrip('/')) if False else None
         d = os.path.join(render.CLIP_DIR, name.rstrip('/'))
