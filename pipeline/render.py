@@ -68,6 +68,9 @@ VIEWER_TAG  = '視聴者'
 TELOP_SIZE  = 84
 TELOP_STROKE = 6         # 黒フチ
 STAGGER     = 0.40       # 黒板の要素を出す間隔（小さい変化のリズム）
+POP         = 0.22       # 1つの要素が出そろうまで。話ごとに上書きできる。
+                         # ショットを短くした回でこれが長いと、カットの頭に
+                         # 何も無い黒板が続いて、切り替わったことが画に出ない。
 LEADIN      = 0.033      # カットしてから1つ目が出るまで（1コマ）。
                          # ここが0.1秒あると、カットのたびに一拍空いて重く見える
 POP_AT      = 0.38       # テロップの強調語が跳ねる時刻（ショット頭から）
@@ -439,7 +442,7 @@ def draw_content(canvas, s, t, kind):
     d = ImageDraw.Draw(canvas)
     for ri, r in enumerate(rows):
         # 1つずつ間を置いて出す。これが「小さい変化」の本体。
-        p = entry(s['t'], t, 0.22, ri * STAGGER)
+        p = entry(s['t'], t, POP, ri * STAGGER)
         if r[0] == 'fig':
             _, img, tw, th, anim = r
             f = img.resize((tw, th), Image.LANCZOS)
