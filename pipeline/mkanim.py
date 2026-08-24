@@ -798,6 +798,20 @@ def f_pump(i, back=False):
 
     d.rounded_rectangle([BX0*SS, BY0*SS, BX1*SS, BY1*SS], radius=18*SS,
                         outline=CHALK + (240,), width=int(7*SS))
+    # 「庫内」の四角だけでは箱にしか見えない、というのが第5話の講評での
+    # 一番はっきりした指摘だった。箱の中は管のアニメで埋まっているので、
+    # 上の空き帯（管の上段より上）に小さな冷蔵庫の絵を1つ添えるだけにする。
+    # 文字を読まなくても「この箱＝冷蔵庫」と分かる（サムネのアイコン化と同じ発想）。
+    ix0, iy0, ix1, iy1 = BX0 + 22, BY0 + 12, BX0 + 176, BY0 + 84
+    ia = int(235 * e)
+    d.rounded_rectangle([ix0*SS, iy0*SS, ix1*SS, iy1*SS], radius=9*SS,
+                        outline=COLD + (ia,), width=int(5*SS))
+    isplit = iy0 + int((iy1 - iy0) * 0.34)
+    line(d, [(ix0 + 7, isplit), (ix1 - 7, isplit)], COLD, 4, ia)
+    ihx = ix1 - 18
+    for hy0, hy1 in ((iy0 + 9, isplit - 7), (isplit + 7, iy1 - 9)):
+        d.rounded_rectangle([(ihx-4)*SS, hy0*SS, (ihx+4)*SS, hy1*SS], radius=4*SS,
+                            fill=COLD + (ia,))
     label(d, (BX0+BX1)//2, BY0 - 46, '庫内', 50, COLD, int(240*e))
     label(d, OX, BY0 - 46, '外（裏）', 50, HEAT, int(240*e))
 
