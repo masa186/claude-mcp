@@ -406,9 +406,42 @@ def fit_size(text, size, maxw):
     return size
 
 
+
+# 図を貼る「板」。黒板の上に一段暗い面を置いて、そこに図と文字をまとめる。
+#
+# 参考にしている3人・6本を測ったら、画面の埋まりが66〜85%だった。
+# こちらは30%で、内訳を見ると board のショットが11.6%しかない（face は50.4%）。
+# 黒板の緑が広いまま空いているのが原因で、動きやカットの速さは共通点ではなかった
+# （6本の動きは0.29〜9.04と30倍ばらついていて、静止83%の回も伸びている）。
+#
+# 白い紙を敷くとチョークの白い線が消えるので、板より暗い面にする。
+# コントラストが上がって図も読みやすくなる。
+CARD_ON   = False        # 話ごとに render.CARD_ON = True で入れる
+CARD_PAD  = 0.030        # 描画領域の外側に足す余白（画面幅に対する比）
+CARD_DARK = 0.62         # 黒板の色に掛ける倍率。1.0で黒板と同じ
+CARD_EDGE = (214, 226, 214, 90)
+
+
+def draw_card(canvas, kind):
+    """図と文字の下に敷く面。board / stage のときだけ。"""
+    if not CARD_ON or kind not in ('board', 'stage'):
+        return
+    a = board_area(kind)
+    pad = int(W * CARD_PAD)
+    box = (max(4, a[0] - pad), max(4, a[1] - pad),
+           min(W - 4, a[2] + pad), min(H - 4, a[3] + pad))
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    col = tuple(int(c * CARD_DARK) for c in BOARD[:3]) + (236,)
+    d.rounded_rectangle(box, radius=int(W * 0.035), fill=col,
+                        outline=CARD_EDGE, width=5)
+    canvas.alpha_composite(lay)
+
+
 def draw_content(canvas, s, t, kind):
     a = board_area(kind)
     local = t - s['t']
+    draw_card(canvas, kind)
     rows = []
 
     if s.get('fig'):
