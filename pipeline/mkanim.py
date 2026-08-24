@@ -28,6 +28,14 @@ GOLD  = (231, 178, 62)
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'clips')
 
+
+# 第6話の図から、図そのもののフェードインをやめた。
+# ショートはフィードで1コマ目がサムネになるのに、e が i=0 で 0 になるので、
+# 動画の0.0秒がほぼ空の黒板になっていた（参考4本は0.0秒から全部映っている）。
+# カットの頭の出し方は render.py の entry() が持っているので、
+# 図の側で二重にフェードする必要はない。
+NOFADE = 1.0
+
 # ---------------------------------------------------------------- 翼の形
 LE, TE = 150, 700           # 前縁・後縁のx
 CY     = 330                # 前縁の高さ
@@ -924,7 +932,7 @@ def f_kiku(i):
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     p = i / N
-    e = 1 - (1 - min(1.0, i / (N * 0.25))) ** 3
+    e = NOFADE            # 1コマ目を空にしないため、図側ではフェードしない
 
     GY = 520
     capsule(d, 80, GY, 820, GY, 34, CHALK, 70)
@@ -976,7 +984,7 @@ def f_stick(i, long=False, done=True):
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     p = i / N
-    e = 1 - (1 - min(1.0, i / (N * 0.22))) ** 3
+    e = NOFADE            # 1コマ目を空にしないため、図側ではフェードしない
 
     if not long:
         X0, X1, Y = 70, 830, 360
@@ -1038,7 +1046,7 @@ def f_coil(i, hours=True):
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     p = i / N
-    e = 1 - (1 - min(1.0, i / (N * 0.2))) ** 3
+    e = NOFADE            # 1コマ目を空にしないため、図側ではフェードしない
     # 図は72コマ（2.4秒）で1周する作りだが、第6話はショットを1.4〜2.4秒に
     # 詰めたので、見せたい状態に届く前にカットが変わっていた。
     # 実際、答えの「これが蚊取り線香」で渦が未完成のまま切れていた。
@@ -1091,7 +1099,7 @@ def f_pyre(i):
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     p = i / N
-    e = 1 - (1 - min(1.0, i / (N * 0.25))) ** 3
+    e = NOFADE            # 1コマ目を空にしないため、図側ではフェードしない
 
     Y = 500
     dot(d, 190, Y, 20, EMBER, int(245 * e))
@@ -1127,7 +1135,7 @@ def f_powder(i, done=True):
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     p = i / N
-    e = 1 - (1 - min(1.0, i / (N * 0.22))) ** 3
+    e = NOFADE            # 1コマ目を空にしないため、図側ではフェードしない
 
     Y = 400
     capsule(d, 60, Y + 52, 840, Y + 52, 30, CHALK, 60)

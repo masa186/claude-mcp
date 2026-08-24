@@ -202,6 +202,51 @@ def dodon(v=0):
     return y * 0.86
 
 
+
+# ------------------------------- 物の音（第7話から）
+#
+# 参考チャンネル4本を1本ずつ聞いた記録では、4本とも効果音が「物の音」だった
+# （金属の打撃・水流・ドリル・火花・ビー玉の擦れ）。こちらは黒板なので
+# 物が映っていない、と一度は諦めたが、それは間違いだった。
+# 図が描いているのは火・折れる棒・落ちる蚊で、どれも音を持っている。
+# 「ポン」「シュッ」のような編集の音だけでは、絵と音がつながらない。
+
+def crackle(v=0):
+    """火がパチパチいう音。短い破裂を不等間隔で重ねる。
+
+    等間隔に置くと機械の音になる。実際の焚き火は間隔がばらばらなので、
+    乱数で散らして、1粒ずつ高さも変える。"""
+    rng = np.random.default_rng(90 + v)
+    n = int(SR * 0.42)
+    y = np.zeros(n)
+    for _ in range(9):
+        at = int(rng.uniform(0, 0.36) * SR)
+        ln = int(SR * rng.uniform(0.004, 0.012))
+        pop = rng.normal(0, 1, ln) * env(ln, 0.0008, 3.4)
+        pop = lowpass(pop, rng.uniform(1600, 4200))
+        y[at:at+ln] += pop * rng.uniform(0.35, 1.0)
+    return tail(y, (0.013, 0.028), (0.22, 0.12))
+
+
+def snap(v=0):
+    """棒がパキッと折れる音。乾いた破裂＋木の胴鳴り。"""
+    n = int(SR * 0.26)
+    crack = np.random.default_rng(70 + v).normal(0, 1, n) * env(n, 0.0006, 6.0)
+    crack = lowpass(crack, 3400)
+    body = modal(n, (300 + 24*v, 640, 1180), (0.9, 0.5, 0.25), (46, 62, 88))
+    body *= env(n, 0.0009, 3.0)
+    return tail(crack * 0.85 + body * 0.6, (0.017, 0.031), (0.26, 0.14))
+
+
+def drop(v=0):
+    """小さいものがポトッと落ちる音。低めで短く、余韻を残さない。"""
+    n = int(SR * 0.16)
+    y = modal(n, (170 + 12*v, 340, 520), (1.0, 0.42, 0.18), (58, 78, 108))
+    y *= env(n, 0.0012, 3.6)
+    thud = lowpass(np.random.default_rng(50 + v).normal(0, 1, n), 900)
+    return tail(y + thud * 0.30 * env(n, 0.001, 6.0), (0.011,), (0.18,))
+
+
 def wind(dur, seed=7):
     """実写の飛行機に敷く環境音。風とエンジンの唸り。
 
@@ -458,7 +503,9 @@ def build_track(dur):
                      ('ton', ton, 0.55), ('chalk', chalk, 0.26),
                      ('reveal', reveal, 0.42), ('impact', impact, 0.58),
                      ('rise', rise, 0.40), ('pa', pa, 0.30),
-                     ('dodon', dodon, 0.60)):
+                     ('dodon', dodon, 0.60),
+                     ('crackle', crackle, 0.26), ('snap', snap, 0.52),
+                     ('drop', drop, 0.34)):
         rs = real_se(k)
         if rs is not None:
             bank = []
