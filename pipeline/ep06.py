@@ -36,118 +36,160 @@ FF = ie.get_ffmpeg_exe()
 HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'docs')
 
 render.SHOTS = [
- # ============ つかみ（0〜4秒）。現象だけ見せる。名前は最後まで出さない
+ # ============ つかみ（0〜5秒）。現象だけ見せる。名前は最後まで出さない
  # 向こうの4本は全部「動いているものが最初から映っている」。
  # こちらも、燃えている所と蚊が落ちる所を0秒から動かす。
- dict(sec='hook', dur=1.5, kind='board', se='impact', head=0.0, hush=0.0,
+ #
+ # 声を持たないショットを挟んで、1行の声を2枚にまたがせている。
+ # 実測で分かったこと: 声に合わせてショットが伸びると、寄りの速度が
+ # 1/尺で落ちるので、長いショットほど画が止まって見える。
+ # 30ショット77秒（1カット3.87秒）では、参考4本のどれより遅かった。
+ # 行を分けずにショットだけ割れば、合成をやり直さずにカットを増やせる。
+ dict(sec='hook', dur=1.4, kind='board', se='impact', head=0.0, hush=0.0,
       fig=('kiku/', 1.00, None),
       board=[dict(text='この草を{燃やすと}', size=118, color=MUSTARD)],
       voice='punch', say='この草な、燃やすとおもろいねん。'),
- dict(short=True, dur=2.0, kind='stage', scene='q', face='surprise',
+ dict(dur=1.4, kind='face', face='point', se='pa', tele='{おもろい}ことが起きる'),
+ dict(short=True, dur=1.5, kind='stage', scene='q', face='surprise',
       se='reveal', fig=('kiku/', 1.02, None), add='蚊が{ぽとぽと落ちる}',
       say='飛んでる蚊が、ぽとぽと落ちる。'),
- dict(short=True, dur=1.3, kind='face', face='point',
-      voice='punch', tele='{なんでや}と思う？'),
+ dict(short=True, dur=1.2, kind='board', se='pa', fig=('kiku/', 0.74, None),
+      board=[dict(text='{ぽとぽと}', size=126, color=MUSTARD)]),
+ dict(short=True, dur=1.5, kind='face', face='point',
+      voice='punch', tele='{なんでや}と思う？', say='なんでやと思う？'),
 
- # ============ 段1：なぜ効くのか（4〜14秒）
- dict(short=True, sec='s1', dur=1.6, kind='face', face='explain',
+ # ============ 段1：なぜ効くのか（5〜18秒）
+ dict(short=True, sec='s1', dur=1.5, kind='face', face='explain',
       tele='この草は{除虫菊}', say='この草は、除虫菊いうねん。'),
- dict(short=True, dur=1.9, kind='board', se='whoosh',
+ dict(short=True, dur=1.3, kind='board', se='pa', fig=('kiku/', 0.80, None),
+      board=[dict(text='{除虫菊}', size=132, color=MUSTARD)]),
+ dict(short=True, dur=1.7, kind='board', se='whoosh',
       fig=('pyre/', 1.00, None),
-      board=[dict(text='熱で{気体}になる', size=104)],
+      board=[dict(text='火の熱で', size=104)],
       say='火の熱で、中の成分が気体になる。'),
- dict(short=True, dur=1.9, kind='stage', scene='s1', face='explain',
+ dict(short=True, dur=1.6, kind='face', face='explain', se='pa',
+      tele='中の成分が{気体}になる'),
+ dict(short=True, dur=1.7, kind='stage', scene='s1', face='explain',
       se='reveal', fig=('pyre/', 1.02, None), add='蚊の{神経}に効く',
       say='それが蚊の神経に効いて、飛ばれへんようになる。'),
+ dict(short=True, dur=1.9, kind='face', face='surprise', se='pa',
+      tele='{飛ばれへん}ようになる'),
  # 裏取りで一番強く出た注意点をここで潰しておく
- dict(short=True, dur=1.5, kind='face', face='serious',
+ dict(short=True, dur=2.1, kind='face', face='serious',
       tele='{煙}でいぶしてるんちゃう', say='煙でいぶしてるんとちゃうで。'),
 
- # ============ 段2：失敗その1（14〜25秒）粉のままは一瞬で終わる
+ # ============ 段2：失敗その1（18〜28秒）粉のままは一瞬で終わる
  dict(short=True, sec='s2', dur=1.5, kind='face', face='point',
       tele='ほな{粉}のまま燃やす？', say='ほな、粉のまま燃やしたらええやん。'),
- dict(short=True, dur=2.1, kind='board', se='rise',
+ dict(short=True, dur=1.2, kind='board', se='pa', fig=('powder/', 0.78, None),
+      board=[dict(text='やってみた', size=118)]),
+ dict(short=True, dur=1.7, kind='board', se='rise',
       fig=('powder/', 1.00, None),
-      board=[dict(text='粉のまま', size=110)],
+      board=[dict(text='ぼっと燃えて', size=110)],
       say='やってみたら、ぼっと燃えて、'),
- dict(short=True, dur=1.8, kind='stage', scene='s2', face='surprise',
+ dict(short=True, dur=1.7, kind='stage', scene='s2', face='surprise',
       se='dodon', flash=True, fig=('powder/', 1.02, None),
       add=dict(text='{一瞬}で終わり', color=CRIMSON),
       voice='punch', say='一瞬で終わり。'),
- dict(short=True, dur=1.6, kind='face', face='explain',
+ dict(short=True, dur=1.5, kind='face', face='explain',
       tele='そこで{練り固めた}', say='そこで、線香に練り込んで固めた。'),
+ dict(short=True, dur=1.5, kind='board', se='pa', fig=('stick/', 0.76, None),
+      board=[dict(text='線香に{練り込む}', size=104)]),
 
- # ============ 段3：失敗その2（25〜37秒）棒は40分で消える
- dict(short=True, sec='s3', dur=1.9, kind='board', se='whoosh',
+ # ============ 段3：失敗その2（28〜40秒）棒は40分で消える
+ dict(short=True, sec='s3', dur=1.6, kind='board', se='whoosh',
       fig=('stick/', 1.00, None),
       board=[dict(text='{棒}にした', size=116, color=MUSTARD)],
       say='まっすぐな棒。これが最初の形や。'),
- dict(short=True, dur=2.0, kind='stage', scene='s3', face='explain',
+ dict(short=True, dur=1.5, kind='face', face='explain', se='pa',
+      tele='これが{最初の形}'),
+ dict(short=True, dur=1.7, kind='stage', scene='s3', face='explain',
       se='reveal', fig=('stick/', 1.02, None), add='端から{燃えていく}',
       say='端に火をつけたら、ゆっくり燃えていく。'),
- dict(short=True, dur=1.8, kind='board', se='dodon', flash=True,
+ dict(short=True, dur=1.3, kind='face', face='serious', se='pa',
+      tele='{ゆっくり}燃えていく'),
+ dict(short=True, dur=1.7, kind='board', se='dodon', flash=True,
       fig=('stick/', 1.00, None),
       board=[dict(text='{40分}で消えた', size=112, color=CRIMSON)],
       voice='punch', say='けど、四十分で消えた。'),
- dict(short=True, dur=1.5, kind='face', face='serious',
+ dict(short=True, dur=2.4, kind='face', face='serious',
       tele='夜は{もたへん}', say='これでは、寝てる間もたへん。'),
 
- # ============ 段4：失敗その3（37〜49秒）長くしたら折れる
- dict(short=True, sec='s4', dur=1.6, kind='face', face='point',
+ # ============ 段4：失敗その3（40〜53秒）長くしたら折れる
+ dict(short=True, sec='s4', dur=1.7, kind='face', face='point',
       tele='ほな{長く}したら？', say='ほな、長くしたらええやん。'),
- dict(short=True, dur=2.0, kind='board', se='rise',
+ dict(short=True, dur=1.6, kind='board', se='rise',
       fig=('stickl/', 1.00, None),
       board=[dict(text='長くした', size=110)],
       say='のばした。確かに長持ちする。'),
- dict(short=True, dur=2.0, kind='stage', scene='s4', face='surprise',
+ dict(short=True, dur=1.3, kind='face', face='explain', se='pa',
+      tele='確かに{長持ちする}'),
+ dict(short=True, dur=1.7, kind='stage', scene='s4', face='surprise',
       se='dodon', flash=True, fig=('stickl/', 1.02, None),
       add=dict(text='自分の重さで{折れる}', color=CRIMSON),
       voice='punch', say='でも、自分の重さで折れる。'),
- dict(short=True, dur=1.8, kind='stage', scene='s4', face='serious',
+ dict(short=True, dur=1.5, kind='face', face='serious', se='pa',
+      tele='{折れる}'),
+ dict(short=True, dur=1.7, kind='stage', scene='s4', face='serious',
       se='pa', fig=('stickl/', 1.02, None), add='置く{場所}も無い',
       say='まっすぐのままやと、置く場所も無い。'),
- dict(short=True, dur=1.4, kind='face', face='serious',
+ dict(short=True, dur=1.5, kind='face', face='serious',
       tele='{行き詰まった}', say='ここで行き詰まった。'),
 
- # ============ 段5：解決（49〜62秒）巻く
- dict(short=True, sec='s5', dur=1.7, kind='face', face='explain',
+ # ============ 段5：解決（53〜65秒）巻く
+ dict(short=True, sec='s5', dur=1.6, kind='face', face='explain',
       tele='奥さんが{見た}もの', say='そこで、奥さんがあるもんを見た。'),
- dict(short=True, dur=1.8, kind='board', se='whoosh',
+ dict(short=True, dur=1.4, kind='board', se='pa',
+      board=[dict(text='あるもん', size=126)]),
+ dict(short=True, dur=1.9, kind='board', se='whoosh',
       board=[dict(text='とぐろを巻いた\n{ヘビ}', size=112, color=MUSTARD)],
       voice='punch', say='とぐろを巻いた、ヘビや。'),
- dict(short=True, dur=2.2, kind='board', se='rise',
+ dict(short=True, dur=1.6, kind='board', se='rise',
       fig=('coil/', 1.00, None),
       board=[dict(text='{巻いたら}どうなる', size=104)],
       say='長い線を、ぐるぐるに巻いたらどうなる。'),
- dict(short=True, dur=2.1, kind='stage', scene='s5', face='surprise',
+ dict(short=True, dur=1.4, kind='face', face='point', se='pa',
+      tele='長い線を{ぐるぐる}に'),
+ dict(short=True, dur=1.6, kind='stage', scene='s5', face='surprise',
       se='reveal', fig=('coil/', 1.02, None), add='同じ場所に{長い線}',
       say='同じ場所に、めちゃくちゃ長い線が収まる。'),
+ dict(short=True, dur=1.5, kind='face', face='surprise', se='pa',
+      tele='{同じ場所}に収まる'),
 
- # ============ 答え（62〜69秒）。尺の86%。向こうの中央値は88%
+ # ============ 答え（65〜73秒）
  dict(short=True, sec='ans', dur=1.4, kind='board',
-      fig=('coil/', 0.80, None),
+      fig=('coil/', 0.78, None),
       board=[dict(text='結果', size=132)],
       say='結果。'),
  dict(short=True, dur=2.2, kind='board', se='dodon', flash=True, shake=True,
       hush=0.30, fig=('coil/', 1.00, None),
       board=[dict(text='{7時間}もつ', size=150, color=MUSTARD)],
       voice='punch', say='七時間、もつようになった。'),
- dict(short=True, dur=2.3, kind='stage', scene='ans', face='proud',
+ dict(short=True, dur=2.4, kind='stage', scene='ans', face='proud',
       se='reveal', fig=('coil/', 1.02, None),
       add=dict(text='これが{蚊取り線香}', color=MUSTARD),
       voice='punch', say='これが、蚊取り線香や。'),
  dict(dur=1.7, kind='face', face='explain',
       tele='{1902年}・日本で完成', say='千九百二年、日本で完成した形や。'),
+ dict(dur=1.8, kind='board', se='pa', fig=('coil/', 0.84, None),
+      board=[dict(text='日本で{完成}', size=118, color=MUSTARD)]),
 
- # ============ 予告（69〜72秒）
- dict(sec='next', dur=1.5, kind='board', fig=('coil/', 0.70, None),
+ # ============ 予告（73〜77秒）
+ dict(sec='next', dur=1.5, kind='board', fig=('kiku/', 0.70, None),
       board=[dict(text='次は\n{ラクダ}', size=126)],
       say='次はラクダ。'),
  dict(dur=1.6, kind='board', se='reveal', shake=True,
-      fig=('kiku/', 0.70, None),
+      fig=('pyre/', 0.70, None),
       board=[dict(text='水をためてない', size=122, color=MUSTARD)],
       voice='punch', say='あのコブ、水ちゃうねん。'),
 ]
+
+# say を持たないショットは読ませない。前の行の声がここへまたがってくる。
+# これを付け忘れると voice.lines() が tele を読んでしまい、
+# 「間を作るために挟んだカット」が全部しゃべり出して尺が95秒に膨らんだ。
+for _s in render.SHOTS:
+    if not _s.get('say'):
+        _s['mute'] = True
 
 if os.environ.get('SHORT') == '1':
     render.SHOTS = [render.SHOTS[0]] + [x for x in render.SHOTS[1:] if x.get('short')]
