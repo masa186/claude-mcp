@@ -195,9 +195,11 @@ if os.environ.get('SHORT') == '1':
     render.SHOTS = [render.SHOTS[0]] + [x for x in render.SHOTS[1:] if x.get('short')]
     OUT, FRAMES = 'ep06s.mp4', 'frames6s'
     VOICE_FILE, SE_FILE = 'voice6s.wav', 'se6s.wav'
+    NAR_TXT = 'narration_ep06s.txt'
 else:
     OUT, FRAMES = 'ep06.mp4', 'frames6'
     VOICE_FILE, SE_FILE = 'voice6.wav', 'se6.wav'
+    NAR_TXT = 'narration_ep06.txt'
 
 # 章の見出し。向こうは章を出さないが、こちらは「いま何段目か」が
 # 分からないと黒板だけの画で迷子になる。段の名前は結論を言わないものにする。
@@ -223,7 +225,7 @@ if audio:
 nar = VOICE_FILE if os.path.exists(VOICE_FILE) else None
 if nar:
     render.MOUTH_ENV = voice.envelope(nar, render.FPS, render.DURATION)
-voice.dump_text(render.SHOTS, os.path.join(HERE_DOCS, 'narration_ep06.txt'))
+voice.dump_text(render.SHOTS, os.path.join(HERE_DOCS, NAR_TXT))
 
 n = int(render.DURATION * render.FPS)
 ansat = [s['t'] for s in render.SHOTS if s.get('sec') == 'ans']
