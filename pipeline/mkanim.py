@@ -899,6 +899,251 @@ def f_evap(i):
     return im.resize((W, H), Image.LANCZOS)
 
 
+# ------------------------------------------------- 蚊取り線香（第6話）
+
+KILL = (150, 214, 240)       # 効いている印。冷たい青
+SMOKE = (206, 210, 200)      # 煙
+EMBER = (238, 132, 58)       # 火種
+
+
+def _mosquito(d, x, y, r, col, alpha, wing=0.0):
+    """蚊。点と羽根2本だけ。小さく描くので、これ以上細かくしても潰れる。"""
+    dot(d, x, y, r, col, alpha)
+    for s in (-1, 1):
+        line(d, [(x, y - r * 0.2),
+                 (x + s * r * 2.1, y - r * (1.1 + 0.5 * math.sin(wing)))],
+             col, max(2, r * 0.34), int(alpha * 0.75))
+
+
+def f_kiku(i):
+    """除虫菊を燃やすと蚊が落ちる図。第6話のつかみ。
+
+    ここで見せたいのは1つだけ。「この草の煙で、飛んでいる蚊が落ちる」。
+    仕組み（ピレトリン）は次の図に回す。ここは現象だけ。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.25))) ** 3
+
+    GY = 520
+    capsule(d, 80, GY, 820, GY, 34, CHALK, 70)
+
+    # 皿の上で燃える粉
+    d.rounded_rectangle([300*SS, (GY-34)*SS, 600*SS, (GY-6)*SS], radius=12*SS,
+                        outline=CHALK + (int(220*e),), width=int(6*SS))
+    for k in range(7):
+        fx = 322 + k * 43
+        fy = GY - 44 - 12 * abs(math.sin(p * 7.0 + k))
+        dot(d, fx, fy, 13 + 4 * math.sin(p * 9 + k * 2), EMBER, int(235 * e))
+
+    # 煙。左右に揺れながら上へ抜ける
+    for k in range(9):
+        ph = (p * 0.9 + k / 9.0) % 1.0
+        sx = 450 + 130 * math.sin(ph * 3.4 + k * 0.8) * ph
+        sy = GY - 60 - ph * 430
+        sr = 16 + 30 * ph
+        dot(d, sx, sy, sr, SMOKE, int(62 * e * max(0.0, 1 - ph) ** 0.9))
+
+    # 蚊。上のほうを飛んでいて、煙に当たると落ちる。
+    # 最初は12pxで描いていたが、縮小するとただの点で「蚊が落ちた」が読めない。
+    # 落ちる側は色も変えて、飛んでいる個体とひと目で見分けられるようにする。
+    for k in range(4):
+        ph = (p * 0.75 + k / 4.0) % 1.0
+        x = 175 + k * 185 + 26 * math.sin(p * 6.0 + k * 1.7)
+        if ph < 0.5:                        # まだ飛んでいる
+            y = 132 + 34 * math.sin(p * 8.0 + k)
+            _mosquito(d, x, y, 26, CHALK, int(245 * e), p * 22 + k)
+        else:                               # 落ちる
+            f = (ph - 0.5) / 0.5
+            y = 132 + (GY - 86 - 132) * (f * f)
+            _mosquito(d, x + 40 * f, y, 26, KILL, int(248 * e), 0.0)
+            if f > 0.85:                    # 落ちた所に印
+                dot(d, x + 40 * f, GY - 22, 9, KILL, int(210 * e))
+
+    label(d, 450, 58, 'この草を燃やすと', 66, CHALK, int(240 * e))
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_stick(i, long=False):
+    """棒状の蚊取り線香が燃え尽きる図。失敗を絵で見せる。
+
+    long=True … 長くした棒。持つと自分の重さで折れる。
+
+    「40分しかもたない」を字で言うだけでは弱い。
+    端から端まで実際に燃え切って、火が消えるところまで見せる。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.22))) ** 3
+
+    if not long:
+        X0, X1, Y = 70, 830, 360
+        burn = X0 + (X1 - X0) * min(1.0, p * 1.25)
+        # 燃え残り
+        capsule(d, burn, Y, X1, Y, 42, CHALK, int(240 * e))
+        # 灰
+        if burn > X0:
+            capsule(d, X0, Y, burn, Y, 38, DIM, int(130 * e))
+        if p < 0.82:
+            dot(d, burn, Y, 30, EMBER, int(252 * e))
+            for k in range(3):
+                ph = (p * 2.2 + k / 3.0) % 1.0
+                dot(d, burn + 8 * math.sin(ph * 5), Y - 26 - ph * 120,
+                    12 + 20 * ph, SMOKE, int(90 * e * (1 - ph)))
+        else:
+            label(d, 450, Y + 128, '消えた', 82, HEAT, int(250 * e))
+        label(d, 450, 74, '棒にした', 66, CHALK, int(235 * e))
+        label(d, 450, 178, '40分', 104, GOLD, int(245 * e))
+    else:
+        # 長くした棒。たわんで、途中で折れる
+        X0, X1, Y = 90, 810, 330
+        br = max(0.0, (p - 0.45) / 0.30)          # 折れの進み
+        sag = 52 * min(1.0, p * 2.2)
+        if br <= 0:
+            pts = [(X0 + (X1-X0)*t/16,
+                    Y + sag * math.sin(math.pi * t/16)) for t in range(17)]
+            line(d, pts, CHALK, 34, int(240 * e))
+            dot(d, X0, Y, 17, CHALK, int(240*e)); dot(d, X1, Y, 17, CHALK, int(240*e))
+        else:
+            f = min(1.0, br)
+            mid = (X0 + X1) / 2
+            for s0, s1 in ((X0, mid - 12), (mid + 12, X1)):
+                pts = [(s0 + (s1-s0)*t/8,
+                        Y + sag * math.sin(math.pi * (s0 + (s1-s0)*t/8 - X0)/(X1-X0))
+                        + 165 * f * f) for t in range(9)]
+                line(d, pts, CHALK, 34, int(240 * e))
+            for k in range(5):                     # 折れた粉
+                dot(d, mid - 56 + k*28, Y + 66 + 190*f*f + 18*math.sin(k+p*6),
+                    11, DIM, int(210 * e * f))
+            if f > 0.55:
+                label(d, 450, Y + 232, '折れる', 82, HEAT, int(250 * e * (f-0.55)/0.45))
+        label(d, 450, 66, '長くしたら？', 66, CHALK, int(235 * e))
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_coil(i):
+    """渦巻きに巻く図。第6話の答え。
+
+    「同じ長さが、同じ場所に収まる」を一目で出したい。
+    そこで、まっすぐな棒を左に置いたまま、右で同じ長さを巻いていく。
+    棒の長さと渦の線の長さは、実際に同じ値から出している。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.2))) ** 3
+    grow = min(1.0, p * 1.35)
+
+    # 渦。アルキメデスの渦巻き r = a + b*θ
+    # 半径109px（直径218）で描いていたら、黒板に貼ったとき豆粒だった。
+    # 900x640のキャンバスを使い切る大きさにする。巻き数も実物に寄せて4.5周。
+    CX, CY = 450, 284
+    a, b = 24.0, 23.0
+    TH = 9.0 * math.pi
+    pts, acc, prev = [], 0.0, None
+    steps = 260
+    for s in range(steps + 1):
+        th = TH * s / steps
+        r = a + b * th / (2 * math.pi) * 2.0
+        x, y = CX + r * math.cos(th), CY + r * math.sin(th)
+        if prev: acc += math.hypot(x - prev[0], y - prev[1])
+        prev = (x, y); pts.append((x, y, acc))
+    total = acc
+    keep = [(x, y) for x, y, s in pts if s <= total * grow]
+    if len(keep) > 1:
+        line(d, keep, CHALK, 26, int(242 * e))
+        # 火は外側の端から。実物もそう燃える
+        hx, hy = keep[-1]
+        dot(d, hx, hy, 26, EMBER, int(252 * e))
+
+    label(d, 450, 46, 'ぐるぐるに巻いたら', 66, CHALK, int(240 * e))
+    if grow > 0.9:
+        al = int(250 * e * (grow - 0.9) / 0.1)
+        label(d, 450, 578, '7時間', 96, GOLD, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_pyre(i):
+    """熱で成分が気体になって、蚊の神経に届く図。仕組みの段。
+
+    「煙でいぶしている」のではない、というのが裏取りで一番強く出た注意点。
+    煙（灰色）と、成分（青い粒）を別の色で描いて、
+    効いているのは青いほうだと絵で分けておく。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.25))) ** 3
+
+    Y = 500
+    dot(d, 190, Y, 20, EMBER, int(245 * e))
+    label(d, 190, Y + 72, '熱', 60, EMBER, int(235 * e))
+
+    # 灰色の煙。ただの運び手なので、目立たせない。
+    # 最初は 18〜52px・不透明度70 で描いたら、主役の青い粒を白く塗り潰していた。
+    for k in range(7):
+        ph = (p * 1.0 + k / 7.0) % 1.0
+        dot(d, 150 + ph * 240 + 20*math.sin(ph*6+k), Y - 40 - ph * 260,
+            14 + 20 * ph, SMOKE, int(38 * e * (1 - ph)))
+
+    # 青い成分。これが効いているほう。煙より大きく、濃く描く
+    for k in range(7):
+        ph = (p * 1.15 + k / 7.0) % 1.0
+        x = 190 + ph * 520
+        y = Y - 30 - ph * 340 + 22 * math.sin(ph * 7.5 + k)
+        dot(d, x, y, 23, KILL, int(248 * e * min(1.0, (1 - ph) * 2.4)))
+
+    _mosquito(d, 762, 158, 34, CHALK if p < 0.5 else KILL, int(248 * e),
+              p * 20 if p < 0.5 else 0.0)
+    label(d, 450, 58, '気体になった成分が', 66, CHALK, int(238 * e))
+    label(d, 700, 250, '神経に効く', 60, KILL, int(238 * e))
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_powder(i):
+    """粉のまま燃やすと、一瞬で燃え尽きる図。失敗その1。
+
+    棒（f_stick）と同じ画面の作りにしてある。同じ場所で同じように燃えて、
+    片方は一瞬、片方は40分。並べたときに違いだけが見えるようにする。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = 1 - (1 - min(1.0, i / (N * 0.22))) ** 3
+
+    Y = 400
+    capsule(d, 60, Y + 52, 840, Y + 52, 30, CHALK, 60)
+
+    burn = min(1.0, p * 1.9)               # 燃え広がり
+    if burn < 1.0:
+        # 残っている粉の山。燃えたぶんだけ低くなる
+        left = 1 - burn
+        for k in range(18):
+            hx = 190 + k * 33
+            hh = 86 * left * math.sin(math.pi * (k + 0.5) / 18) ** 0.6
+            if hh > 2:
+                dot(d, hx, Y + 34 - hh * 0.5, max(7, hh * 0.62), CHALK, int(235 * e))
+        # 炎
+        for k in range(12):
+            fx = 188 + k * 50 + 10 * math.sin(p * 14 + k)
+            fy = Y - 6 - 78 * abs(math.sin(p * 11 + k * 1.3)) - 46 * burn
+            dot(d, fx, fy, 27 + 13 * math.sin(p * 13 + k), EMBER, int(248 * e))
+    else:
+        for k in range(14):                 # 灰だけ残る
+            dot(d, 210 + k * 42, Y + 38, 10, DIM, int(155 * e))
+        label(d, 450, Y + 152, '一瞬で終わり', 80, HEAT, int(252 * e))
+
+    for k in range(6):                      # 煙
+        ph = (p * 1.6 + k / 6.0) % 1.0
+        dot(d, 450 + 130 * math.sin(ph * 4 + k) * ph, Y - 80 - ph * 300,
+            20 + 40 * ph, SMOKE, int(70 * e * (1 - ph) * (1 - burn * 0.7)))
+
+    label(d, 450, 60, '粉のまま燃やしたら', 62, CHALK, int(238 * e))
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
     dump('wingrace', f_wingrace)
@@ -916,5 +1161,11 @@ if __name__ == '__main__':
     dump('pump', f_pump)                            # 冷蔵庫：熱を運び出す
     dump('pumpb', lambda i: f_pump(i, back=True))   # 冷蔵庫：裏が40〜50度
     dump('evap', f_evap)                            # 冷蔵庫：打ち水
+    dump('kiku', f_kiku)                            # 蚊取り：草を燃やすと蚊が落ちる
+    dump('pyre', f_pyre)                            # 蚊取り：熱で気体になった成分が効く
+    dump('stick', f_stick)                          # 蚊取り：棒は40分で消える
+    dump('stickl', lambda i: f_stick(i, long=True))  # 蚊取り：長くすると折れる
+    dump('powder', f_powder)                        # 蚊取り：粉のままは一瞬
+    dump('coil', f_coil)                            # 蚊取り：巻いたら7時間
     stills()
     print('完了 → ' + OUT)
