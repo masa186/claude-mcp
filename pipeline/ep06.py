@@ -78,6 +78,10 @@ render.SHOTS = [
  dict(short=True, dur=2.1, kind='face', face='serious',
       tele='{煙}でいぶしてるんちゃう', say='煙でいぶしてるんとちゃうで。'),
 
+ # 図は「結末の前」と「結末」で別の連番を使う。1つの連番で速く進めたら、
+ # ナレーションが「長くしたら」「のばした。確かに長持ちする」と言っている
+ # 裏で、図がもう「折れる」と出していた。絵のほうが先に答えを言ってしまう。
+ # powder/stick/stickl/coil が途中まで、powder2/stick2/stickb/coil2 が結末。
  # ============ 段2：失敗その1（18〜28秒）粉のままは一瞬で終わる
  dict(short=True, sec='s2', dur=1.5, kind='face', face='point',
       tele='ほな{粉}のまま燃やす？', say='ほな、粉のまま燃やしたらええやん。'),
@@ -88,7 +92,7 @@ render.SHOTS = [
       board=[dict(text='ぼっと燃えて', size=110)],
       say='やってみたら、ぼっと燃えて、'),
  dict(short=True, dur=1.7, kind='stage', scene='s2', face='surprise',
-      se='dodon', flash=True, fig=('powder/', 1.02, None),
+      se='dodon', flash=True, fig=('powder2/', 1.02, None),
       add=dict(text='{一瞬}で終わり', color=CRIMSON),
       voice='punch', say='一瞬で終わり。'),
  dict(short=True, dur=1.5, kind='face', face='explain',
@@ -109,7 +113,7 @@ render.SHOTS = [
  dict(short=True, dur=1.3, kind='face', face='serious', se='pa',
       tele='{ゆっくり}燃えていく'),
  dict(short=True, dur=1.7, kind='board', se='dodon', flash=True,
-      fig=('stick/', 1.00, None),
+      fig=('stick2/', 1.00, None),
       board=[dict(text='{40分}で消えた', size=112, color=CRIMSON)],
       voice='punch', say='けど、四十分で消えた。'),
  dict(short=True, dur=2.4, kind='face', face='serious',
@@ -125,13 +129,13 @@ render.SHOTS = [
  dict(short=True, dur=1.3, kind='face', face='explain', se='pa',
       tele='確かに{長持ちする}'),
  dict(short=True, dur=1.7, kind='stage', scene='s4', face='surprise',
-      se='dodon', flash=True, fig=('stickl/', 1.02, None),
+      se='dodon', flash=True, fig=('stickb/', 1.02, None),
       add=dict(text='自分の重さで{折れる}', color=CRIMSON),
       voice='punch', say='でも、自分の重さで折れる。'),
  dict(short=True, dur=1.5, kind='face', face='serious', se='pa',
       tele='{折れる}'),
  dict(short=True, dur=1.7, kind='stage', scene='s4', face='serious',
-      se='pa', fig=('stickl/', 1.02, None), add='置く{場所}も無い',
+      se='pa', fig=('stickb/', 1.02, None), add='置く{場所}も無い',
       say='まっすぐのままやと、置く場所も無い。'),
  dict(short=True, dur=1.5, kind='face', face='serious',
       tele='{行き詰まった}', say='ここで行き詰まった。'),
@@ -162,16 +166,16 @@ render.SHOTS = [
       board=[dict(text='結果', size=132)],
       say='結果。'),
  dict(short=True, dur=2.2, kind='board', se='dodon', flash=True, shake=True,
-      hush=0.30, fig=('coil/', 1.00, None),
+      hush=0.30, fig=('coil2/', 1.00, None),
       board=[dict(text='{7時間}もつ', size=150, color=MUSTARD)],
       voice='punch', say='七時間、もつようになった。'),
  dict(short=True, dur=2.4, kind='stage', scene='ans', face='proud',
-      se='reveal', fig=('coil/', 1.02, None),
+      se='reveal', fig=('coil2/', 1.02, None),
       add=dict(text='これが{蚊取り線香}', color=MUSTARD),
       voice='punch', say='これが、蚊取り線香や。'),
  dict(dur=1.7, kind='face', face='explain',
       tele='{1902年}・日本で完成', say='千九百二年、日本で完成した形や。'),
- dict(dur=1.8, kind='board', se='pa', fig=('coil/', 0.84, None),
+ dict(dur=1.8, kind='board', se='pa', fig=('coil2/', 0.84, None),
       board=[dict(text='日本で{完成}', size=118, color=MUSTARD)]),
 
  # ============ 予告（73〜77秒）

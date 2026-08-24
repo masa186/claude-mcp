@@ -965,7 +965,7 @@ def f_kiku(i):
     return im.resize((W, H), Image.LANCZOS)
 
 
-def f_stick(i, long=False):
+def f_stick(i, long=False, done=True):
     """棒状の蚊取り線香が燃え尽きる図。失敗を絵で見せる。
 
     long=True … 長くした棒。持つと自分の重さで折れる。
@@ -980,15 +980,16 @@ def f_stick(i, long=False):
 
     if not long:
         X0, X1, Y = 70, 830, 360
-        # 1.25 だと燃え切るのが1.92秒後で、1.7秒のショットでは
-        # 「消えた」が一度も画面に出ていなかった
-        burn = X0 + (X1 - X0) * min(1.0, p * 1.9)
+        # done=False … 燃えている途中まで。「棒にした」と言っている間に
+        # 図が「消えた」を出さないようにする
+        prog = min(1.0, p * 1.9) if done else min(0.45, p * 0.7)
+        burn = X0 + (X1 - X0) * prog
         # 燃え残り
         capsule(d, burn, Y, X1, Y, 42, CHALK, int(240 * e))
         # 灰
         if burn > X0:
             capsule(d, X0, Y, burn, Y, 38, DIM, int(130 * e))
-        if p < 0.56:
+        if prog < 0.99:
             dot(d, burn, Y, 30, EMBER, int(252 * e))
             for k in range(3):
                 ph = (p * 2.2 + k / 3.0) % 1.0
@@ -1001,8 +1002,9 @@ def f_stick(i, long=False):
     else:
         # 長くした棒。たわんで、途中で折れる
         X0, X1, Y = 90, 810, 330
-        br = max(0.0, (p - 0.25) / 0.22)          # 折れの進み（0.45起点では
-                                                  # 1.7秒のショットに収まらなかった）
+        # done=False … 折らない。「のばした。確かに長持ちする」の裏で
+        # 図が先に折れて「折れる」と出していた
+        br = max(0.0, (p - 0.25) / 0.22) if done else 0.0
         sag = 52 * min(1.0, p * 2.2)
         if br <= 0:
             pts = [(X0 + (X1-X0)*t/16,
@@ -1026,7 +1028,7 @@ def f_stick(i, long=False):
     return im.resize((W, H), Image.LANCZOS)
 
 
-def f_coil(i):
+def f_coil(i, hours=True):
     """渦巻きに巻く図。第6話の答え。
 
     「同じ長さが、同じ場所に収まる」を一目で出したい。
@@ -1071,7 +1073,9 @@ def f_coil(i):
         dot(d, hx, hy, 26, EMBER, int(252 * e))
 
     label(d, 450, 46, 'ぐるぐるに巻いたら', 66, CHALK, int(240 * e))
-    if grow > 0.55:
+    # hours=False … 「7時間」を出さない。巻いている最中のナレーションの裏で
+    # 答えの数字が先に出てしまうため
+    if hours and grow > 0.55:
         al = int(250 * e * min(1.0, (grow - 0.55) / 0.25))
         label(d, 450, 578, '7時間', 96, GOLD, al)
     return im.resize((W, H), Image.LANCZOS)
@@ -1114,7 +1118,7 @@ def f_pyre(i):
     return im.resize((W, H), Image.LANCZOS)
 
 
-def f_powder(i):
+def f_powder(i, done=True):
     """粉のまま燃やすと、一瞬で燃え尽きる図。失敗その1。
 
     棒（f_stick）と同じ画面の作りにしてある。同じ場所で同じように燃えて、
@@ -1128,8 +1132,10 @@ def f_powder(i):
     Y = 400
     capsule(d, 60, Y + 52, 840, Y + 52, 30, CHALK, 60)
 
-    burn = min(1.0, p * 2.6)               # 燃え広がり（1.9では1.7秒の
-                                           # ショット内に燃え尽きなかった）
+    # done=False … 燃えている途中までしか進めない。
+    # ナレーションが「ぼっと燃えて」と言っている間に図が「一瞬で終わり」を
+    # 出してしまい、絵のほうが先に結末を言っていた（第6話の初稿）。
+    burn = min(1.0, p * 2.6) if done else min(0.55, p * 0.9)
     if burn < 1.0:
         # 残っている粉の山。燃えたぶんだけ低くなる
         left = 1 - burn
@@ -1176,9 +1182,13 @@ if __name__ == '__main__':
     dump('evap', f_evap)                            # 冷蔵庫：打ち水
     dump('kiku', f_kiku)                            # 蚊取り：草を燃やすと蚊が落ちる
     dump('pyre', f_pyre)                            # 蚊取り：熱で気体になった成分が効く
-    dump('stick', f_stick)                          # 蚊取り：棒は40分で消える
-    dump('stickl', lambda i: f_stick(i, long=True))  # 蚊取り：長くすると折れる
-    dump('powder', f_powder)                        # 蚊取り：粉のままは一瞬
-    dump('coil', f_coil)                            # 蚊取り：巻いたら7時間
+    dump('stick', lambda i: f_stick(i, done=False))     # 蚊取り：棒が燃えている途中
+    dump('stick2', f_stick)                         # 蚊取り：燃え切って消えた
+    dump('stickl', lambda i: f_stick(i, long=True, done=False))  # 蚊取り：長い棒（折れる前）
+    dump('stickb', lambda i: f_stick(i, long=True))     # 蚊取り：長い棒が折れる
+    dump('powder', lambda i: f_powder(i, done=False))   # 蚊取り：粉が燃えている途中
+    dump('powder2', f_powder)                       # 蚊取り：燃え尽きて一瞬で終わり
+    dump('coil', lambda i: f_coil(i, hours=False))      # 蚊取り：巻いている（数字なし）
+    dump('coil2', f_coil)                           # 蚊取り：巻き終わって7時間
     stills()
     print('完了 → ' + OUT)
