@@ -980,13 +980,15 @@ def f_stick(i, long=False):
 
     if not long:
         X0, X1, Y = 70, 830, 360
-        burn = X0 + (X1 - X0) * min(1.0, p * 1.25)
+        # 1.25 だと燃え切るのが1.92秒後で、1.7秒のショットでは
+        # 「消えた」が一度も画面に出ていなかった
+        burn = X0 + (X1 - X0) * min(1.0, p * 1.9)
         # 燃え残り
         capsule(d, burn, Y, X1, Y, 42, CHALK, int(240 * e))
         # 灰
         if burn > X0:
             capsule(d, X0, Y, burn, Y, 38, DIM, int(130 * e))
-        if p < 0.82:
+        if p < 0.56:
             dot(d, burn, Y, 30, EMBER, int(252 * e))
             for k in range(3):
                 ph = (p * 2.2 + k / 3.0) % 1.0
@@ -999,7 +1001,8 @@ def f_stick(i, long=False):
     else:
         # 長くした棒。たわんで、途中で折れる
         X0, X1, Y = 90, 810, 330
-        br = max(0.0, (p - 0.45) / 0.30)          # 折れの進み
+        br = max(0.0, (p - 0.25) / 0.22)          # 折れの進み（0.45起点では
+                                                  # 1.7秒のショットに収まらなかった）
         sag = 52 * min(1.0, p * 2.2)
         if br <= 0:
             pts = [(X0 + (X1-X0)*t/16,
@@ -1034,7 +1037,10 @@ def f_coil(i):
     d = ImageDraw.Draw(im)
     p = i / N
     e = 1 - (1 - min(1.0, i / (N * 0.2))) ** 3
-    grow = min(1.0, p * 1.35)
+    # 図は72コマ（2.4秒）で1周する作りだが、第6話はショットを1.4〜2.4秒に
+    # 詰めたので、見せたい状態に届く前にカットが変わっていた。
+    # 実際、答えの「これが蚊取り線香」で渦が未完成のまま切れていた。
+    grow = min(1.0, p * 3.0)
 
     # 渦。アルキメデスの渦巻き r = a + b*θ
     # 半径109px（直径218）で描いていたら、黒板に貼ったとき豆粒だった。
@@ -1054,13 +1060,19 @@ def f_coil(i):
     keep = [(x, y) for x, y, s in pts if s <= total * grow]
     if len(keep) > 1:
         line(d, keep, CHALK, 26, int(242 * e))
-        # 火は外側の端から。実物もそう燃える
-        hx, hy = keep[-1]
+        # 火は外側の端から。実物もそう燃える。
+        # 巻き終わったあとは、外から内へ火が進むところを見せ続ける
+        if grow < 1.0:
+            hx, hy = keep[-1]
+        else:
+            burn = min(0.999, max(0.0, (p - 0.34) / 0.66))
+            k = int((len(pts) - 1) * (1.0 - burn))
+            hx, hy = pts[k][0], pts[k][1]
         dot(d, hx, hy, 26, EMBER, int(252 * e))
 
     label(d, 450, 46, 'ぐるぐるに巻いたら', 66, CHALK, int(240 * e))
-    if grow > 0.9:
-        al = int(250 * e * (grow - 0.9) / 0.1)
+    if grow > 0.55:
+        al = int(250 * e * min(1.0, (grow - 0.55) / 0.25))
         label(d, 450, 578, '7時間', 96, GOLD, al)
     return im.resize((W, H), Image.LANCZOS)
 
@@ -1116,7 +1128,8 @@ def f_powder(i):
     Y = 400
     capsule(d, 60, Y + 52, 840, Y + 52, 30, CHALK, 60)
 
-    burn = min(1.0, p * 1.9)               # 燃え広がり
+    burn = min(1.0, p * 2.6)               # 燃え広がり（1.9では1.7秒の
+                                           # ショット内に燃え尽きなかった）
     if burn < 1.0:
         # 残っている粉の山。燃えたぶんだけ低くなる
         left = 1 - burn
