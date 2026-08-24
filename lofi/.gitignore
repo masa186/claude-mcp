@@ -1,0 +1,10 @@
+out/frames/
+out/segment.mp4
+out/video_long.mp4
+out/otter_lofi_10min.mp4
+out/analysis.png
+out/frame_test.jpg
+out/head_check.jpg
+out/motion_check.jpg
+out/otter_grid.png
+__pycache__/
