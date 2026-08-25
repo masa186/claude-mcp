@@ -54,13 +54,13 @@ render.SHOTS = [
 
  # ============ 仕組み（5〜13秒）
  dict(sec='why', dur=3.0, kind='board', se='pa', fig=('jar/', 0.62, None),
-      board=[dict(text='熱いまま詰めて\n冷えると{真空}', size=88)],
+      board=[dict(text='冷えると中は{真空}', size=96)],
       say='熱いまま詰めて、冷めたら中が真空になる。'),
  dict(dur=2.5, kind='board', se='dodon', flash=True, fig=('jar/', 1.02, None),
       board=[dict(text='大気圧が{上から}', size=96, color=MUSTARD)],
       voice='punch', say='そこへ大気圧が、上から押しつけとる。'),
  dict(dur=2.5, kind='board', se='reveal', fig=('jarfix/', 1.02, None),
-      board=[dict(text='やることは{空気を入れる}', size=84, color=MUSTARD)],
+      board=[dict(text='{空気}を入れるだけ', size=96, color=MUSTARD)],
       say='やることは一つ。空気を入れたるだけや。'),
 
  # ============ 答え（13〜20秒）実写に戻す

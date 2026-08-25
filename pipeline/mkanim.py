@@ -1369,63 +1369,64 @@ def f_jar(i, fix=False):
     """瓶のフタ。大気圧が上から押している図と、空気を入れて解ける図。
 
     fix=False  真空のまま。上から矢印が押している
-    fix=True   縁に隙間を作って空気が入る。矢印が消える
+    fix=True   縁に隙間を作って空気が入る
+
+    文字はこの図の中に置かない。黒板側の board が同じことを言うので、
+    二重になるうえ、図を小さくしてしまう。900x640を目一杯使う
+    （第6話で渦巻きを直径218pxで描いて豆粒になった件と同じ轍）。
 
     温めて膨張させる説明は採らない。ソーダ石灰ガラス(9.0e-6)と鋼(12e-6)の
     差は1.3倍しかなく、径82mmを60度上げても0.015mmにしかならない。
-    フタがアルミかブリキかで結論が変わってしまう。
     真空が押す力（大気圧×真空度×面積）は材質に依存しないので、そちらで語る。
     """
     im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     p = i / N
     e = NOFADE
-    CX, JT, JB = 450, 300, 560         # 瓶の中心・肩・底
-    HW = 150                            # 瓶の半径
-    LW, LY = 174, 296                   # フタの半径・高さ
+    CX = 450
+    HW, LW = 232, 272          # 瓶の半径・フタの半径
+    JT, JB = 268, 604          # 瓶の肩・底
+    LY = 250                   # フタの高さ
 
-    # ---- 瓶（断面）
-    line(d, [(CX-HW, JT+30), (CX-HW, JB), (CX+HW, JB), (CX+HW, JT+30)],
-         CHALK, 13, int(238*e))
-    line(d, [(CX-HW, JT+30), (CX-HW+16, JT)], CHALK, 13, int(238*e))
-    line(d, [(CX+HW, JT+30), (CX+HW-16, JT)], CHALK, 13, int(238*e))
-    # 中身
-    for k in range(7):
-        y = JB - 26 - k*22
-        w = HW - 26 - (2 if k % 2 else 10)
-        line(d, [(CX-w, y), (CX+w, y)], GOLD, 9, int(150*e))
-
-    # ---- 隙間（fix のとき、途中から開く）
     gap = 0.0
     if fix:
-        gap = 26 * min(1.0, max(0.0, (p - 0.18) / 0.30))
+        gap = 34 * min(1.0, max(0.0, (p - 0.15) / 0.28))
+    ly = LY - gap
+
+    # ---- 瓶（断面）
+    line(d, [(CX-HW, JT+34), (CX-HW, JB), (CX+HW, JB), (CX+HW, JT+34)],
+         CHALK, 15, int(240*e))
+    line(d, [(CX-HW, JT+34), (CX-HW+20, JT)], CHALK, 15, int(240*e))
+    line(d, [(CX+HW, JT+34), (CX+HW-20, JT)], CHALK, 15, int(240*e))
+    # 中身（ジャム）
+    for k in range(9):
+        y = JB - 30 - k*32
+        w = HW - 30 - (4 if k % 2 else 16)
+        line(d, [(CX-w, y), (CX+w, y)], GOLD, 12, int(158*e))
 
     # ---- フタ
-    ly = LY - gap
-    line(d, [(CX-LW, ly), (CX+LW, ly)], CHALK, 17, int(250*e))
-    line(d, [(CX-LW, ly), (CX-LW, ly+34)], CHALK, 15, int(250*e))
-    line(d, [(CX+LW, ly), (CX+LW, ly+34)], CHALK, 15, int(250*e))
+    line(d, [(CX-LW, ly), (CX+LW, ly)], CHALK, 20, int(252*e))
+    line(d, [(CX-LW, ly), (CX-LW, ly+44)], CHALK, 17, int(252*e))
+    line(d, [(CX+LW, ly), (CX+LW, ly+44)], CHALK, 17, int(252*e))
 
     if not fix:
-        # ---- 真空。上から押す矢印3本
-        for k, x in enumerate((CX-104, CX, CX+104)):
-            a = min(1.0, max(0.0, (p*3.2) - k*0.22))
+        # 上から押す大気圧。5本にして「押されている」を強くする
+        for k, x in enumerate((CX-176, CX-88, CX, CX+88, CX+176)):
+            a = min(1.0, max(0.0, (p*3.4) - k*0.14))
             if a > 0:
-                arrow(d, x, ly-186, x, ly-40, GOLD, 13, 38, int(250*e*a))
-        label(d, CX, TOP_Y + 26, '中は真空', 62, CHALK, int(236*e))
-        if p > 0.42:
-            al = int(254 * e * min(1.0, (p-0.42)/0.22))
-            label(d, CX, BOT_Y - 6, '16kgで押さえられてる', 74, GOLD, al)
+                arrow(d, x, 62, x, ly - 34, GOLD, 15, 42, int(252*e*a))
     else:
-        # ---- 空気が横から入る
-        if gap > 1:
-            a = min(1.0, (p-0.18)/0.22)
-            arrow(d, CX-LW-150, ly+14, CX-LW-12, ly+14, GOLD, 13, 36, int(252*e*a))
-            arrow(d, CX+LW+150, ly+14, CX+LW+12, ly+14, GOLD, 13, 36, int(252*e*a))
-        label(d, CX, TOP_Y + 26, '縁を少し起こす', 62, CHALK, int(236*e))
-        if p > 0.52:
-            al = int(254 * e * min(1.0, (p-0.52)/0.20))
-            label(d, CX, BOT_Y - 6, '空気が入ったら0kg', 74, GOLD, al)
+        # 横から入る空気
+        if gap > 2:
+            a = min(1.0, (p-0.15)/0.20)
+            # 矢印の尻は枠の内側に収める。CX+LW=722 なので +206 では
+            # 928 になって900の外へ出ていた（実測で枠の明るさ247）。
+            arrow(d, CX-LW-152, ly+18, CX-LW-16, ly+18, GOLD, 15, 42, int(252*e*a))
+            arrow(d, CX+LW+152, ly+18, CX+LW+16, ly+18, GOLD, 15, 42, int(252*e*a))
+        # 隙間を強調する短い縦線
+        if gap > 10:
+            for sx in (CX-LW, CX+LW):
+                line(d, [(sx, ly+46), (sx, ly+46+int(gap))], GOLD, 9, int(220*e))
     return im.resize((W, H), Image.LANCZOS)
 
 
