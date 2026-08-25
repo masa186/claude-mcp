@@ -15,7 +15,27 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, '.ttscache')
 HOST = 'https://generativelanguage.googleapis.com'
-MODEL = os.environ.get('GEMINI_TTS_MODEL', 'gemini-3.1-flash-tts-preview')
+def _pinned_model():
+    """声のモデルを決める。環境変数 → .ttsmodel → 既定 の順。
+
+    .ttsmodel を挟むのは、解析用に voice を直接 import する使い捨ての
+    スクリプトからも同じモデルが引かれるようにするため。台本の中で
+    os.environ.setdefault しても、台本を通さない経路では効かない。
+    実際に2回、既定の 3.1 で36行を作り直して枠を無駄にした
+    （書き出し済みの動画と声が変わるので、そのまま出すと事故になる）。
+    """
+    v = os.environ.get('GEMINI_TTS_MODEL')
+    if v:
+        return v
+    f = os.path.join(HERE, '.ttsmodel')
+    if os.path.exists(f):
+        v = open(f, encoding='utf-8').read().strip()
+        if v:
+            return v
+    return 'gemini-3.1-flash-tts-preview'
+
+
+MODEL = _pinned_model()
 # 無料枠は「モデルごとに1日いくつ」。1つ尽きても声の名前（Charon）は
 # どのモデルにも入っているので、同じ声のまま次のモデルで続けられる。
 MODELS = [MODEL] + [m for m in ('gemini-2.5-flash-preview-tts',
