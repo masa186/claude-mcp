@@ -1171,6 +1171,200 @@ def f_powder(i, done=True):
     return im.resize((W, H), Image.LANCZOS)
 
 
+# ------------------------------------------------- 缶詰（第7話）
+
+TIN  = (206, 210, 214)       # ブリキ
+RUST = (176, 116, 74)        # 錆
+SPARK = (250, 214, 120)      # 火花
+
+# 900x640 のどこまで使ってよいか。第6話で、図が小さいまま黒板に貼られて
+# 豆粒になった。ラベルも枠外へ出ていた。上下の余白をここで決めておく。
+TOP_Y, BOT_Y = 54, 576       # 見出し・オチのラベルの高さ
+
+
+def _can(d, cx, cy, w, h, alpha=255, col=TIN, lid=True):
+    """缶の側面図。上の楕円が蓋。"""
+    d.rounded_rectangle([(cx-w/2)*SS, (cy-h/2)*SS, (cx+w/2)*SS, (cy+h/2)*SS],
+                        radius=int(w*0.06*SS), fill=tuple(col)+(int(alpha*0.30),),
+                        outline=tuple(col)+(alpha,), width=int(11*SS))
+    if lid:
+        d.ellipse([(cx-w/2)*SS, (cy-h/2-w*0.13)*SS, (cx+w/2)*SS, (cy-h/2+w*0.13)*SS],
+                  fill=tuple(col)+(int(alpha*0.42),),
+                  outline=tuple(col)+(alpha,), width=int(11*SS))
+
+
+def f_thick(i, fail=True):
+    """分厚い缶をハンマーとノミで叩く図。失敗その1。
+
+    fail=False … まだ「開かない」を出さない。ナレーションが結末を言う前に
+    図が答えを出してしまうのを防ぐ（第6話で踏んだ穴）。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = NOFADE
+
+    CX, CY = 330, 390
+    _can(d, CX, CY, 400, 330, int(242*e))
+    label(d, CX, CY + 30, '分厚い鉄', 72, TIN, int(238*e))
+
+    # ノミ。缶の蓋に当てたまま
+    chx, chy = CX + 40, CY - 200
+    line(d, [(chx, chy - 96), (chx, chy)], TIN, 30, int(242*e))
+    d.polygon([(chx-24)*SS, chy*SS, (chx+24)*SS, chy*SS,
+               chx*SS, (chy+38)*SS], fill=TIN + (int(242*e),))
+
+    # ハンマー。振り下ろして当たる。枠から出ない範囲で動かす
+    swing = abs(math.sin(p * math.pi * 3.0))
+    # 振り上げた位置で枠から出ないよう、上端を測って決めた
+    hy = 96 + 94 * swing
+    hx = chx + 210
+    line(d, [(hx, hy + 74), (hx - 52, hy - 30)], RUST, 26, int(238*e))
+    d.rounded_rectangle([(hx-96)*SS, (hy-82)*SS, (hx+40)*SS, (hy-8)*SS],
+                        radius=12*SS, fill=(140, 146, 152, int(242*e)))
+
+    if swing > 0.86:                              # 当たった瞬間の火花
+        for k in range(9):
+            a2 = k / 9 * 2 * math.pi
+            r = 66 + 26 * math.sin(k * 1.7)
+            dot(d, chx + r*math.cos(a2), chy + r*math.sin(a2), 13,
+                SPARK, int(235*e))
+
+    label(d, 450, TOP_Y, 'ハンマーとノミで叩け', 66, CHALK, int(240*e))
+    if fail and p > 0.30:
+        al = int(252 * e * min(1.0, (p - 0.30) / 0.12))
+        label(d, 640, BOT_Y - 120, '開かない', 96, HEAT, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_shoot(i, fail=True):
+    """銃で撃って開ける図。失敗その2。中身が飛び散る。"""
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = NOFADE
+    CX, CY = 600, 370
+    fly = min(1.0, p * 4.0)                       # 弾が飛ぶ（0.6秒で着弾）
+    hit = min(1.0, max(0.0, (p - 0.25) / 0.14))   # 着弾後の飛び散り
+
+    _can(d, CX, CY, 380, 330, int(242*e))
+
+    if fly < 1.0:
+        bx = 120 + (CX - 240 - 120) * fly
+        line(d, [(max(60, bx - 70), CY), (bx, CY)], SPARK, 15, int(245*e))
+        dot(d, bx, CY, 15, SPARK, int(252*e))
+    else:
+        dot(d, CX - 175, CY, 30 * min(1.0, hit*2), (20, 26, 24), int(255*e))
+        for k in range(11):
+            a2 = math.pi + (k / 11 - 0.5) * 1.9
+            r = 70 + 250 * hit * (0.55 + 0.45 * math.sin(k * 2.1))
+            x = CX - 175 + r*math.cos(a2)
+            y = CY + r*math.sin(a2) * 0.75
+            dot(d, max(46, x), y, 17 + 9*math.sin(k), RUST,
+                int(238*e*(1 - hit*0.20)))
+
+    label(d, 450, TOP_Y, '銃で撃ってみた', 66, CHALK, int(240*e))
+    if fail and hit > 0.5:
+        al = int(252 * e * min(1.0, (hit - 0.5) / 0.3))
+        label(d, 450, BOT_Y, '中身が飛び散る', 88, HEAT, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_lever(i, fail=True):
+    """てこ式の缶切り。失敗その3。刃を刺してこじ開けるので危ない。"""
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = NOFADE
+    CX, CY = 430, 400
+    _can(d, CX, CY, 430, 250, int(240*e), lid=False)
+
+    LY = CY - 125
+    RX, RY = 215, 66
+    d.ellipse([(CX-RX)*SS, (LY-RY)*SS, (CX+RX)*SS, (LY+RY)*SS],
+              fill=TIN + (72,), outline=TIN + (int(240*e),), width=int(11*SS))
+
+    prog = min(1.0, p * 2.6)
+    steps = max(2, int(30 * prog))
+    pts = []
+    for s in range(steps + 1):
+        a2 = math.pi * (0.12 + 1.30 * prog * s / steps)
+        jag = 16 if s % 2 else -16
+        pts.append((CX + (RX + jag) * math.cos(a2), LY + (RY + jag*0.4) * math.sin(a2)))
+    if len(pts) > 1:
+        line(d, pts, HEAT, 13, int(235*e))
+    bx, by = pts[-1]
+    line(d, [(bx, by), (bx + 130, by - 175)], RUST, 28, int(242*e))
+    d.polygon([(bx-19)*SS, (by-19)*SS, (bx+19)*SS, (by-19)*SS,
+               bx*SS, (by+34)*SS], fill=TIN + (int(248*e),))
+
+    label(d, 450, TOP_Y, '刃を刺してこじ開ける', 66, CHALK, int(240*e))
+    if fail and prog > 0.55:
+        al = int(252 * e * min(1.0, (prog - 0.55) / 0.28))
+        label(d, 450, BOT_Y, '危なすぎる', 88, HEAT, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_wheel(i, done=True):
+    """回転刃の缶切り。答え。縁を転がってきれいに切る。"""
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = NOFADE
+    CX, CY = 430, 330
+    RX, RY = 250, 88
+
+    d.ellipse([(CX-RX)*SS, (CY-RY)*SS, (CX+RX)*SS, (CY+RY)*SS],
+              fill=TIN + (66,), outline=TIN + (int(242*e),), width=int(12*SS))
+    d.rounded_rectangle([(CX-RX)*SS, CY*SS, (CX+RX)*SS, (CY+170)*SS],
+                        radius=16*SS, fill=TIN + (46,),
+                        outline=TIN + (int(232*e),), width=int(12*SS))
+
+    prog = min(1.0, p * 2.8) if done else min(0.40, p * 0.85)
+    steps = max(2, int(50 * prog))
+    pts = [(CX + RX*math.cos(math.pi*(1 + 2*prog*s/steps)),
+            CY + RY*math.sin(math.pi*(1 + 2*prog*s/steps))) for s in range(steps+1)]
+    if len(pts) > 1:
+        line(d, pts, GOLD, 14, int(248*e))
+    ex, ey = pts[-1]
+    dot(d, ex, ey, 34, TIN, int(250*e))
+    for k in range(8):
+        a2 = p * 16 + k / 8 * 2 * math.pi
+        line(d, [(ex + 20*math.cos(a2), ey + 20*math.sin(a2)),
+                 (ex + 38*math.cos(a2), ey + 38*math.sin(a2))], (58, 64, 68), 8,
+             int(242*e))
+    line(d, [(ex, ey), (ex + 44, ey - 148)], RUST, 26, int(242*e))
+
+    label(d, 450, TOP_Y, '刃を転がして切る', 66, CHALK, int(242*e))
+    if done and prog > 0.8:
+        al = int(252 * e * min(1.0, (prog - 0.8) / 0.15))
+        label(d, 450, BOT_Y, 'きれいに開く', 92, GOLD, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
+def f_years(i):
+    """1810年から1858年まで48年。年月が飛ぶ場面。"""
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = NOFADE
+    Y = 380
+    X0, X1 = 130, 770
+    line(d, [(X0, Y), (X1, Y)], CHALK, 14, int(150*e))
+    for x, t in ((X0, '1810'), (X1, '1858')):
+        dot(d, x, Y, 24, CHALK, int(248*e))
+        label(d, x, Y + 90, t, 74, CHALK, int(242*e))
+    prog = min(1.0, p * 2.4)
+    px = X0 + (X1 - X0) * prog
+    line(d, [(X0, Y), (px, Y)], GOLD, 18, int(248*e))
+    dot(d, px, Y, 30, GOLD, int(254*e))
+    label(d, 450, TOP_Y + 40, '缶詰ができてから', 66, CHALK, int(240*e))
+    if prog > 0.45:
+        al = int(254 * e * min(1.0, (prog - 0.45) / 0.25))
+        label(d, 450, Y - 108, '48年', 130, GOLD, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
     dump('wingrace', f_wingrace)
@@ -1198,5 +1392,14 @@ if __name__ == '__main__':
     dump('powder2', f_powder)                       # 蚊取り：燃え尽きて一瞬で終わり
     dump('coil', lambda i: f_coil(i, hours=False))      # 蚊取り：巻いている（数字なし）
     dump('coil2', f_coil)                           # 蚊取り：巻き終わって7時間
+    dump('thick', lambda i: f_thick(i, fail=False))     # 缶詰：叩いている途中
+    dump('thick2', f_thick)                         # 缶詰：開かない
+    dump('shoot', lambda i: f_shoot(i, fail=False))     # 缶詰：撃っている途中
+    dump('shoot2', f_shoot)                         # 缶詰：中身が飛び散る
+    dump('lever', lambda i: f_lever(i, fail=False))     # 缶詰：てこ式（途中）
+    dump('lever2', f_lever)                         # 缶詰：危なすぎる
+    dump('wheel', lambda i: f_wheel(i, done=False))     # 缶詰：回転刃（途中）
+    dump('wheel2', f_wheel)                         # 缶詰：きれいに開く
+    dump('years', f_years)                          # 缶詰：1810→1858の48年
     stills()
     print('完了 → ' + OUT)
