@@ -47,13 +47,16 @@ render.SHOTS = [
       voice='punch', tele='{48年間}開けられへん',
       say='これな、四十八年間、開けられへんかってん。'),
  # ここだけ声を置かない。前の行が2.6秒まで伸びて、このショットを覆う。
- dict(dur=1.4, kind='screen', clip='cansV', full=True, face='serious', se='pa',
+ # 声の無い1.4秒なので、画のほうで持たせる。cansV は棚を舐めるだけで
+ # 手前に瓶が来てしまい、缶に見えなかった。缶を充填している canlineV と
+ # 入れ替えた（液が落ちるので動きもある）。
+ dict(dur=1.4, kind='screen', clip='canlineV', full=True, face='serious', se='pa',
       tele='{48年間}'),
  dict(short=True, dur=1.6, kind='face', face='point',
       voice='punch', tele='{なんで}か分かる？', say='なんでか分かるか。'),
 
  # ============ 段1：缶詰が先にできた（4.5〜16秒）
- dict(short=True, sec='s1', dur=1.6, kind='screen', clip='canlineV',
+ dict(short=True, sec='s1', dur=1.6, kind='screen', clip='cansV',
       full=True, face='explain', se='whoosh',
       tele='缶詰は{1810年}', say='缶詰ができたんが、千八百十年。'),
  dict(short=True, dur=1.4, kind='board', se='pa', fig=('years/', 0.76, None),
