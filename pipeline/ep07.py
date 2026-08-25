@@ -39,29 +39,28 @@ FF = ie.get_ffmpeg_exe()
 HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'docs')
 
 render.SHOTS = [
- # ============ つかみ（0〜6秒）
- # 参考6本の共通点は「画面の埋まり66〜85%」だけだった（動きは0.29〜9.04と
- # 30倍ばらついていて共通点ではない）。0秒に実写を置いて画面を埋める。
- # 0秒は全面に敷く。フィードではここがサムネになる。
- # 参考6本の埋まりは66〜85%、スクリーンに映す作りだと実写は画面の27%にしか
- # ならない。文字も「開／けられへん」と語の途中で折り返していたので短くした。
- dict(sec='hook', dur=1.5, kind='screen', clip='cansV', full=True, face='surprise',
+ # ============ つかみ（0〜4.5秒）
+ # 0秒はフィードのサムネになる。cans（棚と紙袋）は白っぽくて何の動画か
+ # 分からなかったので、缶がぎっしり詰まった cans2 と入れ替えた。
+ dict(sec='hook', dur=1.5, kind='screen', clip='cans2V', full=True, face='surprise',
       roll=False, se='impact', head=0.0, hush=0.0,
       voice='punch', tele='{48年間}開けられへん',
       say='これな、四十八年間、開けられへんかってん。'),
- dict(dur=1.4, kind='screen', clip='cans2V', full=True, face='serious', se='pa',
+ # ここだけ声を置かない。前の行が2.6秒まで伸びて、このショットを覆う。
+ dict(dur=1.4, kind='screen', clip='cansV', full=True, face='serious', se='pa',
       tele='{48年間}'),
  dict(short=True, dur=1.6, kind='face', face='point',
       voice='punch', tele='{なんで}か分かる？', say='なんでか分かるか。'),
 
- # ============ 段1：缶詰が先にできた（6〜16秒）
+ # ============ 段1：缶詰が先にできた（4.5〜16秒）
  dict(short=True, sec='s1', dur=1.6, kind='screen', clip='canlineV',
       full=True, face='explain', se='whoosh',
       tele='缶詰は{1810年}', say='缶詰ができたんが、千八百十年。'),
  dict(short=True, dur=1.4, kind='board', se='pa', fig=('years/', 0.76, None),
-      board=[dict(text='{1810年}', size=126, color=MUSTARD)]),
+      board=[dict(text='{1810年}', size=126, color=MUSTARD)],
+      say='戦争に持っていく食べ物のためや。'),
  dict(short=True, dur=1.5, kind='face', face='explain', se='pa',
-      tele='戦争の{食料}のために'),
+      tele='{イギリス海軍}が使うてた', say='イギリスの海軍が使うてた。'),
  dict(short=True, dur=1.8, kind='board', se='tick',
       fig=('years/', 1.00, None),
       board=[dict(text='缶切りは{1858年}', size=104, color=MUSTARD)],
@@ -73,7 +72,7 @@ render.SHOTS = [
  dict(short=True, dur=1.6, kind='face', face='serious',
       tele='中身が先、{開け方}が後', say='中身が先にできて、開け方が後やねん。'),
 
- # ============ 段2：失敗その1（16〜27秒）叩いても開かない
+ # ============ 段2：失敗その1（16〜28秒）叩いても開かない
  # 図は「途中」と「結末」で連番を分ける。ナレーションが結末を言う前に
  # 図が答えを出すと、絵のほうが先にオチを割ってしまう（第6話で踏んだ穴）。
  dict(short=True, sec='s2', dur=1.7, kind='screen', clip='oldcan',
@@ -84,9 +83,10 @@ render.SHOTS = [
       board=[dict(text='{ハンマーとノミ}で', size=100)],
       say='缶に、ハンマーとノミで開けろ、と書いてあった。'),
  dict(short=True, dur=1.5, kind='board', se='clang', fig=('thick/', 1.02, None),
-      board=[dict(text='と、缶に{書いてあった}', size=96)]),
+      board=[dict(text='ふちを{ぐるっと}切れ', size=96)],
+      say='ふちを、ぐるっと切れと。'),
  dict(short=True, dur=1.5, kind='face', face='surprise', se='pa',
-      tele='{そう書いてあった}'),
+      tele='{道具}は付いてへん', say='道具は付いてへんかった。'),
  dict(short=True, dur=1.8, kind='stage', scene='s2', face='serious',
       se='warn', flash=True, fig=('thick2/', 1.02, None),
       add=dict(text='{開かない}', color=CRIMSON),
@@ -94,14 +94,15 @@ render.SHOTS = [
  dict(short=True, dur=1.6, kind='face', face='serious',
       tele='兵隊が{怪我}をした', say='兵隊が怪我をするほどやった。'),
 
- # ============ 段3：失敗その2（27〜38秒）銃で撃つ
+ # ============ 段3：失敗その2（28〜37秒）銃で撃つ
  dict(short=True, sec='s3', dur=1.6, kind='face', face='point',
       tele='ほな{撃ったろ}', say='ほな、撃ったろ、いうことになる。'),
  dict(short=True, dur=1.7, kind='screen', clip='rustyV', full=True, face='surprise',
       se='gun', tele='銃剣で刺して、{銃で撃つ}',
       say='銃剣で刺したり、銃で撃ったりした。'),
  dict(short=True, dur=1.4, kind='board', se='gun', fig=('shoot/', 1.00, None),
-      board=[dict(text='{銃剣}で刺す', size=112)]),
+      board=[dict(text='{石}で叩き割る者も', size=104)],
+      say='石で叩き割る者もおった。'),
  dict(short=True, dur=1.8, kind='board', se='gun',
       fig=('shoot2/', 1.00, None),
       board=[dict(text='穴は{開く}', size=110)],
@@ -111,15 +112,15 @@ render.SHOTS = [
       add=dict(text='{中身が飛び散る}', color=CRIMSON),
       voice='punch', say='中身が飛び散ってまう。'),
 
- # ============ 段4：失敗その3（38〜50秒）てこ式の缶切り
+ # ============ 段4：失敗その3（37〜50秒）てこ式の缶切り
  dict(short=True, sec='s4', dur=1.9, kind='board', se='rise',
       fig=('lever/', 1.00, None),
       board=[dict(text='{1858年}やっと', size=108, color=MUSTARD)],
       say='千八百五十八年。やっと缶切りができた。'),
  dict(short=True, dur=1.5, kind='face', face='surprise', se='pa',
-      tele='{やっと}缶切りができた'),
+      tele='{ウォーナー}が作った', say='アメリカの、ウォーナーが作った。'),
  dict(short=True, dur=1.6, kind='face', face='explain', se='pa',
-      tele='刃を{刺して}こじ開ける'),
+      tele='刃の形は{銃剣}と同じ', say='刃の形は、銃剣とほぼ同じや。'),
  dict(short=True, dur=1.8, kind='stage', scene='s4', face='surprise',
       se='tear', fig=('lever2/', 1.02, None), add='縁が{ギザギザ}になる',
       say='刃を刺して、ぐいっとこじ開ける。'),
@@ -139,14 +140,14 @@ render.SHOTS = [
       board=[dict(text='刃を{転がす}', size=112, color=MUSTARD)],
       say='刃を、縁の上で転がしたらどうや。'),
  dict(short=True, dur=1.5, kind='face', face='explain', se='pa',
-      tele='{転がしたら}どうや'),
+      tele='ふちに{引っ掛けて}', say='缶のふちに、引っ掛けて。'),
  dict(short=True, dur=1.6, kind='face', face='surprise', se='pa',
-      tele='縁の上を{転がす}'),
+      tele='刃が{ふちの上}を走る', say='刃が、ふちの上を走る。'),
  dict(short=True, dur=1.9, kind='stage', scene='s5', face='surprise',
       se='ratchet', fig=('wheel2/', 1.02, None), add='ぐるっと{一周}',
       say='ぐるっと一周、缶を回すだけ。'),
 
- # ============ 答え（62〜72秒）。参考4本の中央値は尺の88%
+ # ============ 答え（62〜73秒）。参考4本の中央値は尺の88%
  dict(short=True, sec='ans', dur=1.5, kind='board',
       fig=('wheel2/', 0.78, None),
       board=[dict(text='結果', size=132)],
@@ -155,17 +156,22 @@ render.SHOTS = [
       hush=0.30, fig=('wheel2/', 1.00, None),
       board=[dict(text='{きれいに開く}', size=136, color=MUSTARD)],
       voice='punch', say='誰でも、きれいに開けられる。'),
- dict(short=True, dur=2.2, kind='screen', clip='pulltabV', full=True, face='proud',
-      se='pssh', tele='これが{今の缶切り}の形',
+ # 実写のプルタブは缶切りではない。ここで「これが今の缶切りの形」と
+ # 言うと、答えに出した回転刃と画が食い違う。台詞は黒板の回転刃の上で言う。
+ dict(short=True, dur=1.8, kind='board', se='pa', fig=('wheel2/', 1.02, None),
+      board=[dict(text='これが{今の缶切り}の形', size=104, color=MUSTARD)],
       voice='punch', say='これが、今の缶切りの形や。'),
- dict(dur=1.6, kind='board', se='pa', fig=('wheel2/', 0.82, None),
-      board=[dict(text='今の{缶切り}の形', size=110, color=MUSTARD)]),
  dict(dur=1.9, kind='face', face='explain',
       tele='{1870年}・回転刃の発明', say='千八百七十年、回転刃の発明やった。'),
+ dict(dur=1.7, kind='screen', clip='pulltabV', full=True, face='proud',
+      se='pssh', tele='今は{片手}でも開く',
+      say='今は、片手でも開けられる。'),
  # 締め。参考6本は6本とも次回予告をせず、その回の中で完結していた
  dict(dur=2.0, kind='screen', clip='pulltab2V', full=True, face='proud', se='reveal',
       tele='開け方は{60年}かかって完成した',
       say='開け方が決まるまで、六十年かかってん。'),
+ # 声を置かないのは、この最後の1枚と冒頭の1枚だけ。参考1本目も、
+ # 黙るのは落ちの絵の上だけだった（書き起こしの[無音]は2回、どちらも落ち）。
  dict(dur=1.7, kind='board', se='dodon', shake=True,
       fig=('years/', 0.86, None),
       board=[dict(text='開け方だけで\n{60年}', size=120, color=MUSTARD)]),
