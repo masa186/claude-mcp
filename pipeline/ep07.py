@@ -31,6 +31,13 @@
   python3 ep07.py --script  ナレーション原稿を出す
 """
 import os, sys, time, subprocess
+# 声のモデルをここで固定する。gtts は取り込まれた時点で環境変数を読むので、
+# voice を import するより前に置く必要がある。
+#
+# 固定していないと、既定の gemini-3.1-flash-tts-preview から順に試して
+# 「全行が揃うモデル」を選ぶ。キャッシュに26行あった 2.5 ではなく 3.1 で
+# 36行を作り直してしまい、出した動画と声の違う音声ができる（実際にやった）。
+os.environ.setdefault('GEMINI_TTS_MODEL', 'gemini-2.5-flash-preview-tts')
 import imageio_ffmpeg as ie
 import render, sound
 from render import MUSTARD, CRIMSON
