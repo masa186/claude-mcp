@@ -165,7 +165,7 @@ render.SHOTS = [
       board=[dict(text='これが{今の缶切り}の形', size=104, color=MUSTARD)],
       voice='punch', say='これが、今の缶切りの形や。'),
  dict(dur=1.9, kind='face', face='explain',
-      tele='{1870年}・回転刃の発明', say='千八百七十年、回転刃の発明やった。'),
+      tele='{1870年}回転刃の発明', say='千八百七十年、回転刃の発明やった。'),
  dict(dur=1.7, kind='screen', clip='pulltabV', full=True, face='proud',
       se='pssh', tele='今は{片手}でも開く',
       say='今は、片手でも開けられる。'),

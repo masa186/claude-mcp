@@ -843,9 +843,19 @@ def draw_telop(canvas, s, t=None):
     segs = parts(txt)
     plain = ''.join(x for x, _ in segs)
     if d.textlength(plain, font=fnt) > W*0.88:
-        half = len(plain)//2
-        cut = plain.rfind('、', 0, half+6)
-        cut = cut+1 if cut > 3 else half
+        # 折り返す位置は、語の切れ目から選ぶ。真ん中で機械的に切ると
+        # 「48年間開／けられへん」のように語の途中で折れ、強調の
+        # かたまりも半分に割れる。候補は「読点の後ろ」と
+        # 「{ } の境目」で、真ん中に一番近いものを採る。
+        half = len(plain)/2.0
+        cand = [i+1 for i, ch in enumerate(plain) if ch == '、']
+        acc = 0
+        for x, _ in segs:
+            acc += len(x)
+            if 0 < acc < len(plain):
+                cand.append(acc)
+        cand = [c for c in cand if 1 < c < len(plain)-1]
+        cut = min(cand, key=lambda c: abs(c-half)) if cand else int(half)
         rows = [plain[:cut], plain[cut:]]
         hi_set = set(x for x, h in segs if h)
         y = int(H*ty) - int(size*0.67)
