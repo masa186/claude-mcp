@@ -78,7 +78,7 @@ render.SHOTS = [
  # ============ 段2：失敗その1（16〜28秒）叩いても開かない
  # 図は「途中」と「結末」で連番を分ける。ナレーションが結末を言う前に
  # 図が答えを出すと、絵のほうが先にオチを割ってしまう（第6話で踏んだ穴）。
- dict(short=True, sec='s2', dur=1.7, kind='screen', clip='oldcan',
+ dict(short=True, sec='s2', tame=0.35, dur=1.7, kind='screen', clip='oldcan',
       face='explain', se='whoosh',
       tele='昔の缶は{分厚い鉄}', say='昔の缶は、分厚い鉄でできてた。'),
  dict(short=True, dur=1.8, kind='board', se='clang',
@@ -98,7 +98,7 @@ render.SHOTS = [
       tele='兵隊が{怪我}をした', say='兵隊が怪我をするほどやった。'),
 
  # ============ 段3：失敗その2（28〜37秒）銃で撃つ
- dict(short=True, sec='s3', dur=1.6, kind='face', face='point',
+ dict(short=True, sec='s3', tame=0.35, dur=1.6, kind='face', face='point',
       tele='ほな{撃ったろ}', say='ほな、撃ったろ、いうことになる。'),
  dict(short=True, dur=1.7, kind='screen', clip='rustyV', full=True, face='surprise',
       se='gun', tele='銃剣で刺して、{銃で撃つ}',
@@ -116,7 +116,7 @@ render.SHOTS = [
       voice='punch', say='中身が飛び散ってまう。'),
 
  # ============ 段4：失敗その3（37〜50秒）てこ式の缶切り
- dict(short=True, sec='s4', dur=1.9, kind='board', se='rise',
+ dict(short=True, sec='s4', tame=0.35, dur=1.9, kind='board', se='rise',
       fig=('lever/', 1.00, None),
       board=[dict(text='{1858年}やっと', size=108, color=MUSTARD)],
       say='千八百五十八年。やっと缶切りができた。'),
@@ -136,7 +136,7 @@ render.SHOTS = [
       say='家では使えん。店の人が開けてくれてた。'),
 
  # ============ 段5：解決（50〜62秒）回転刃
- dict(short=True, sec='s5', dur=1.7, kind='face', face='point',
+ dict(short=True, sec='s5', tame=0.35, dur=1.7, kind='face', face='point',
       tele='{刺す}んやなくて', say='そこで、刺すんやなくて、'),
  dict(short=True, dur=1.8, kind='board', se='ratchet',
       fig=('wheel/', 1.00, None),
@@ -198,6 +198,11 @@ else:
 # カットの頭に「何も無い黒板」が入る。
 render.STAGGER = 0.13
 render.POP = 0.08
+# テロップの既定は84で、黒板の文字（96〜136）より小さい。顔アップの
+# ショットは「カワウソ＋小さい字＋空の黒板」になり、画面の埋まりが
+# 参考5本目（無限の机・73.6秒）の46%に対して28%しかなかった。
+# 顔アップに図は置けないので、字のほうを黒板と同じ大きさに上げる。
+render.TELOP_SIZE = 104
 # 図と文字の下に板を敷く。参考6本の画面の埋まりは66〜85%、第6話は30.1%で、
 # 内訳では board のショットが11.6%だった。
 render.CARD_ON = True
