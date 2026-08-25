@@ -48,6 +48,8 @@ CLIPS = {
     'rustyV':  ('clips/src16.mp4', 2.0, 3.5, 1.0),
     'pulltabV':('clips/src14.mp4', 3.0, 3.5, 1.0),
     'pulltab2V':('clips/src17.mp4', 2.0, 3.0, 1.0),
+    'jarV':    ('clips/src20.mp4', 1.0, 3.0, 1.0),   # 瓶のフタを握る（縦素材）
+    'jaropenV':('clips/src20.mp4', 12.5, 3.0, 1.0),  # フタが外れる瞬間（縦素材）
 }
 
 
@@ -55,7 +57,8 @@ CLIPS = {
 # あとから縦に切り直すと、横長のときに端しか残らない。
 # 実際、錆缶の回は草しか映らなくなっていた。
 VW, VH = 720, 1280
-VERT = {'cansV', 'cans2V', 'canlineV', 'rustyV', 'pulltabV', 'pulltab2V'}
+VERT = {'cansV', 'cans2V', 'canlineV', 'rustyV', 'pulltabV', 'pulltab2V',
+        'jarV', 'jaropenV'}
 
 
 def prep(name, src, ss, dur, zoom=1.0):
