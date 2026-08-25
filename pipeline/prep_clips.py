@@ -40,7 +40,22 @@ CLIPS = {
     'rusty':   ('clips/src16.mp4', 2.0, 3.5, 1.0),  # 吊るされた錆缶（縦素材）
     'pulltab': ('clips/src14.mp4', 3.0, 3.5, 1.0),  # プルタブで開ける手元（縦素材）
     'pulltab2':('clips/src17.mp4', 2.0, 3.0, 1.0),  # 別アングル（縦素材）
+    # 全面に敷く用（9:16で切る）。0秒はフィードでサムネになるので、
+    # ここだけは画面いっぱいに実写を出す
+    'cansV':   ('clips/src18.mp4', 2.0, 3.5, 1.0),
+    'cans2V':  ('clips/src19.mp4', 0.5, 3.0, 1.0),
+    'canlineV':('clips/src13.mp4', 1.0, 3.0, 1.0),
+    'rustyV':  ('clips/src16.mp4', 2.0, 3.5, 1.0),
+    'pulltabV':('clips/src14.mp4', 3.0, 3.5, 1.0),
+    'pulltab2V':('clips/src17.mp4', 2.0, 3.0, 1.0),
 }
+
+
+# 全面に敷く用は縦（9:16）で切り出す。スクリーンに映す用の16:9を
+# あとから縦に切り直すと、横長のときに端しか残らない。
+# 実際、錆缶の回は草しか映らなくなっていた。
+VW, VH = 720, 1280
+VERT = {'cansV', 'cans2V', 'canlineV', 'rustyV', 'pulltabV', 'pulltab2V'}
 
 
 def prep(name, src, ss, dur, zoom=1.0):
@@ -49,9 +64,13 @@ def prep(name, src, ss, dur, zoom=1.0):
     if os.listdir(out):
         print('  %-8s 既にあり' % name)
         return
-    # 中央を切って16:9に合わせる
-    vf = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d"
-          % (int(W*zoom), int(H*zoom), W, H))
+    if name in VERT:
+        vf = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d"
+              % (int(VW*zoom), int(VH*zoom), VW, VH))
+    else:
+        # 中央を切って16:9に合わせる
+        vf = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d"
+              % (int(W*zoom), int(H*zoom), W, H))
     subprocess.run([FF, '-y', '-v', 'error', '-ss', str(ss), '-t', str(dur),
                     '-i', src, '-vf', vf + ',fps=30',
                     '-q:v', '3', out + '/%04d.jpg'], check=True)

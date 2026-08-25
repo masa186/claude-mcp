@@ -578,6 +578,40 @@ def draw_screen(canvas, s, t):
     d.rectangle([x0 - 6, y0 + vis, x0 + sw + 6, y0 + vis + 9], fill=(96, 86, 72, 255))
 
 
+
+def draw_screen_full(canvas, s, t):
+    """実写を画面いっぱいに敷く。教室の枠を外す使い方。
+
+    参考にしている3チャンネル6本を測ると、画面の埋まりが66〜85%だった
+    （こちらの第6話は30.1%）。動きの中央値は0.29〜9.04と30倍ばらついていて
+    共通点ではなかったが、埋まりだけは6本とも同じ帯にいる。
+    スクリーンに映す作りだと実写は画面の27%にしかならないので、
+    ここぞという所――特にフィードでサムネになる0秒――は全面に敷く。
+    """
+    local = t - s['t']
+    img = clip_frame(s['clip'], int(local * FPS))
+    if img is None:
+        return
+    k = 1.0 + 0.05 * min(1.0, local / max(s['dur'], .01))   # ゆっくり寄る
+    sw, sh = int(W * k), int(H * k)
+    src = img.convert('RGBA')
+    # 縦画面を埋めるように、短いほうに合わせて中央を切る
+    r = max(sw / src.width, sh / src.height)
+    src = src.resize((int(src.width * r), int(src.height * r)), Image.LANCZOS)
+    src = src.crop(((src.width - sw) // 2, (src.height - sh) // 2,
+                    (src.width - sw) // 2 + sw, (src.height - sh) // 2 + sh))
+    canvas.paste(src.crop(((sw - W) // 2, (sh - H) // 2,
+                           (sw - W) // 2 + W, (sh - H) // 2 + H)), (0, 0))
+    # 下半分を軽く暗くする。テロップを乗せても読めるように
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    dl = ImageDraw.Draw(lay)
+    for i in range(24):
+        y = int(H * (0.52 + 0.48 * i / 24))
+        dl.rectangle([0, y, W, H], fill=(10, 14, 12, 7))
+    canvas.alpha_composite(lay)
+
+
+
 # ------------------------------------------------------------- キャラ
 
 def placeholder():
@@ -1250,8 +1284,12 @@ def render_frame(t):
         return _finish(frame, s, t)
 
     if k == 'screen':
-        frame = bg_wide().copy()
-        draw_screen(frame, s, t)
+        if s.get('full'):
+            frame = Image.new('RGBA', (W, H), (18, 22, 20, 255))
+            draw_screen_full(frame, s, t)
+        else:
+            frame = bg_wide().copy()
+            draw_screen(frame, s, t)
         draw_char(frame, s, t)
         frame = apply_zoom(frame, s, t)
         draw_telop(frame, s, t); draw_logo(frame, t)
