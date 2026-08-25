@@ -327,6 +327,26 @@ def tick(v=0):
     return tail(y, (0.012,), (0.16,))
 
 
+
+def gun(v=0):
+    """銃声。実素材（se/gun*.wav）がある前提の受け皿。
+    兵士が缶を銃で撃って開けていた、という段で使う。"""
+    n = int(SR * 0.55)
+    body = lowpass(np.random.default_rng(11 + v).normal(0, 1, n), 1400)
+    body *= env(n, 0.0004, 2.6)
+    crack = np.random.default_rng(12 + v).normal(0, 1, n) * env(n, 0.0003, 9.0)
+    return tail(body * 0.9 + crack * 0.5, (0.022, 0.041), (0.28, 0.16))
+
+
+def warn(v=0):
+    """警告音。失敗した所で鳴らす。"""
+    n = int(SR * 0.50)
+    t = np.arange(n) / SR
+    y = np.sign(np.sin(2 * math.pi * (720 + 40 * v) * t)) * 0.5
+    y *= (np.sin(2 * math.pi * 7 * t) > 0)          # 断続させる
+    return tail(lowpass(y, 2600) * env(n, 0.004, 1.2), (0.015,), (0.18,))
+
+
 def wind(dur, seed=7):
     """実写の飛行機に敷く環境音。風とエンジンの唸り。
 
@@ -380,7 +400,9 @@ SE_DIR = os.path.join(HERE, 'se')
 # 一番よく鳴る場所を実測の多数派に合わせる。
 REAL = dict(whoosh='whoosh.wav', chalk='pop.wav', don='don.wav',
             ton='tap.wav', rise='rise.wav', pa='pa.wav', dodon='dodon.wav',
-            reveal='reveal.wav', impact='impact.wav', tick='tick.wav')
+            reveal='reveal.wav', impact='impact.wav', tick='tick.wav',
+            clang='clang.wav', ratchet='ratchet.wav', pssh='pssh.wav',
+            gun='gun.wav', warn='warn.wav')
 
 
 def load_wav(path):
@@ -588,7 +610,8 @@ def build_track(dur):
                      ('drop', drop, 0.34),
                      ('clang', clang, 0.56), ('tear', tear, 0.40),
                      ('ratchet', ratchet, 0.38), ('pssh', pssh, 0.34),
-                     ('tick', tick, 0.34)):
+                     ('tick', tick, 0.34),
+                     ('gun', gun, 0.60), ('warn', warn, 0.36)):
         rs = real_se(k)
         if rs is not None:
             bank = []
