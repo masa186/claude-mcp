@@ -1365,8 +1365,74 @@ def f_years(i):
     return im.resize((W, H), Image.LANCZOS)
 
 
+def f_jar(i, fix=False):
+    """瓶のフタ。大気圧が上から押している図と、空気を入れて解ける図。
+
+    fix=False  真空のまま。上から矢印が押している
+    fix=True   縁に隙間を作って空気が入る。矢印が消える
+
+    温めて膨張させる説明は採らない。ソーダ石灰ガラス(9.0e-6)と鋼(12e-6)の
+    差は1.3倍しかなく、径82mmを60度上げても0.015mmにしかならない。
+    フタがアルミかブリキかで結論が変わってしまう。
+    真空が押す力（大気圧×真空度×面積）は材質に依存しないので、そちらで語る。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = NOFADE
+    CX, JT, JB = 450, 300, 560         # 瓶の中心・肩・底
+    HW = 150                            # 瓶の半径
+    LW, LY = 174, 296                   # フタの半径・高さ
+
+    # ---- 瓶（断面）
+    line(d, [(CX-HW, JT+30), (CX-HW, JB), (CX+HW, JB), (CX+HW, JT+30)],
+         CHALK, 13, int(238*e))
+    line(d, [(CX-HW, JT+30), (CX-HW+16, JT)], CHALK, 13, int(238*e))
+    line(d, [(CX+HW, JT+30), (CX+HW-16, JT)], CHALK, 13, int(238*e))
+    # 中身
+    for k in range(7):
+        y = JB - 26 - k*22
+        w = HW - 26 - (2 if k % 2 else 10)
+        line(d, [(CX-w, y), (CX+w, y)], GOLD, 9, int(150*e))
+
+    # ---- 隙間（fix のとき、途中から開く）
+    gap = 0.0
+    if fix:
+        gap = 26 * min(1.0, max(0.0, (p - 0.18) / 0.30))
+
+    # ---- フタ
+    ly = LY - gap
+    line(d, [(CX-LW, ly), (CX+LW, ly)], CHALK, 17, int(250*e))
+    line(d, [(CX-LW, ly), (CX-LW, ly+34)], CHALK, 15, int(250*e))
+    line(d, [(CX+LW, ly), (CX+LW, ly+34)], CHALK, 15, int(250*e))
+
+    if not fix:
+        # ---- 真空。上から押す矢印3本
+        for k, x in enumerate((CX-104, CX, CX+104)):
+            a = min(1.0, max(0.0, (p*3.2) - k*0.22))
+            if a > 0:
+                arrow(d, x, ly-186, x, ly-40, GOLD, 13, 38, int(250*e*a))
+        label(d, CX, TOP_Y + 26, '中は真空', 62, CHALK, int(236*e))
+        if p > 0.42:
+            al = int(254 * e * min(1.0, (p-0.42)/0.22))
+            label(d, CX, BOT_Y - 6, '16kgで押さえられてる', 74, GOLD, al)
+    else:
+        # ---- 空気が横から入る
+        if gap > 1:
+            a = min(1.0, (p-0.18)/0.22)
+            arrow(d, CX-LW-150, ly+14, CX-LW-12, ly+14, GOLD, 13, 36, int(252*e*a))
+            arrow(d, CX+LW+150, ly+14, CX+LW+12, ly+14, GOLD, 13, 36, int(252*e*a))
+        label(d, CX, TOP_Y + 26, '縁を少し起こす', 62, CHALK, int(236*e))
+        if p > 0.52:
+            al = int(254 * e * min(1.0, (p-0.52)/0.20))
+            label(d, CX, BOT_Y - 6, '空気が入ったら0kg', 74, GOLD, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
+    dump('jar', lambda i: f_jar(i, fix=False))
+    dump('jarfix', lambda i: f_jar(i, fix=True))
     dump('wingrace', f_wingrace)
     dump('airflow', lambda i: f_airflow(i, lift=False))
     dump('airlift', lambda i: f_airflow(i, lift=True))
