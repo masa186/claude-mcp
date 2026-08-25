@@ -308,6 +308,25 @@ def pssh(v=0):
     return tail(air * 0.8 + pop * 0.5, (0.014,), (0.18,))
 
 
+
+def tick(v=0):
+    """時間が経つ音。実素材（se/tick*.wav）がある前提の受け皿。
+
+    「48年間」のように年月が飛ぶ場面で使う。合成側は保険なので、
+    等間隔の小さい打撃を並べただけの素朴なものにしてある。"""
+    n = int(SR * 1.4)
+    y = np.zeros(n)
+    step = int(SR * 0.20)
+    for k in range(7):
+        at = k * step
+        ln = min(int(SR * 0.06), n - at)
+        if ln <= 0:
+            break
+        c = modal(ln, (1180, 2360, 3900), (1.0, 0.4, 0.2), (70, 96, 130))
+        y[at:at+ln] += c * env(ln, 0.0006, 5.0) * (0.75 if k % 2 else 1.0)
+    return tail(y, (0.012,), (0.16,))
+
+
 def wind(dur, seed=7):
     """実写の飛行機に敷く環境音。風とエンジンの唸り。
 
@@ -361,7 +380,7 @@ SE_DIR = os.path.join(HERE, 'se')
 # 一番よく鳴る場所を実測の多数派に合わせる。
 REAL = dict(whoosh='whoosh.wav', chalk='pop.wav', don='don.wav',
             ton='tap.wav', rise='rise.wav', pa='pa.wav', dodon='dodon.wav',
-            reveal='reveal.wav', impact='impact.wav')
+            reveal='reveal.wav', impact='impact.wav', tick='tick.wav')
 
 
 def load_wav(path):
@@ -568,7 +587,8 @@ def build_track(dur):
                      ('crackle', crackle, 0.26), ('snap', snap, 0.52),
                      ('drop', drop, 0.34),
                      ('clang', clang, 0.56), ('tear', tear, 0.40),
-                     ('ratchet', ratchet, 0.38), ('pssh', pssh, 0.34)):
+                     ('ratchet', ratchet, 0.38), ('pssh', pssh, 0.34),
+                     ('tick', tick, 0.34)):
         rs = real_se(k)
         if rs is not None:
             bank = []
