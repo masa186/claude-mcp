@@ -160,9 +160,15 @@ def span(a_lab, b_lab, mid, head=''):
 
 
 # ---------------------------------------------------------------- 大きい数字
-def huge(value, sub='', head=''):
-    """数字を1つだけ、画面いっぱいに。オチの1枚に使う。"""
-    spec = dict(v=value, sub=sub, head=head)
+def huge(value, sub='', head='', sub_at=0.30):
+    """数字を1つだけ、画面いっぱいに。オチの1枚に使う。
+
+    sub_at は添え書きが出てくる位置（0〜1）。既定では少し遅らせて、
+    数字を先に読ませる。ただし動画の1コマ目に使うときは 0 にすること。
+    一覧に出るのは1コマ目なので、そこで添え書きが消えていると
+    「7.5倍」だけが浮いて、何と比べているのか分からない。
+    """
+    spec = dict(v=value, sub=sub, head=head, at=sub_at)
     name = _dir('huge', spec)
 
     def draw(i):
@@ -176,8 +182,9 @@ def huge(value, sub='', head=''):
         k *= 1 + 0.035 * _m.sin(2 * _m.pi * (2.4 * i / N))
         y = 330 + _bob(i, 7, 1.5)
         label(d, 450, y, str(value), int(190 * k), GOLD, int(254 * e))
-        if sub and p > 0.30:
-            al = int(246 * e * min(1.0, (p - 0.30) / 0.22))
+        if sub and p >= sub_at:
+            al = int(246 * e * min(1.0, (p - sub_at) / 0.22)) if sub_at > 0 \
+                 else int(246 * e)
             label(d, 450, BOT_Y - 40, sub, 72, CHALK, al)
         return im.resize((W, H), Image.LANCZOS)
     return _dump(name, draw)

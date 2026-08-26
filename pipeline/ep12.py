@@ -59,7 +59,7 @@ render.SHOTS = [
  # この回はそこに数字を置くために作っている。白飛びさせたら本末転倒。
  dict(sec='hook', dur=1.8, kind='board', se='impact',
       roll=False, head=0.0, hush=0.0,
-      fig=(fig.huge('7.5倍', sub='交通事故より多い'), 1.02, None),
+      fig=(fig.huge('7.5倍', sub='交通事故より多い', sub_at=0.0), 1.02, None),
       board=[dict(text='風呂で死ぬ人は', size=104, color=CRIMSON)],
       voice='punch', say='風呂で死ぬ人は、交通事故の七・五倍や。'),
  dict(dur=2.0, kind='board', se='dodon', fig=(F_HOOK, 1.02, None),
