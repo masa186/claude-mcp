@@ -184,9 +184,16 @@ def huge(value, sub='', head=''):
 
 
 # ---------------------------------------------------------------- 対決
-def versus(left, right, win=None, head=''):
-    """左右にくらべる。win='r' で右が勝つ（金色になる）。"""
-    spec = dict(l=left, r=right, w=win, head=head)
+def versus(left, right, win=None, head='', col=None):
+    """左右にくらべる。win='r' なら右を目立たせる。
+
+    色を選べるようにした理由。金色は他の図では「これが答え」の色で
+    使っている。危ないほうを指す図で金色を使うと、
+    「42度で10分」が推奨の側に見えてしまう。
+    危険を指すときは col=HEAT のように赤を渡すこと。
+    """
+    col = col or GOLD
+    spec = dict(l=left, r=right, w=win, head=head, c=col)
     name = _dir('vs', spec)
 
     def draw(i):
@@ -198,16 +205,16 @@ def versus(left, right, win=None, head=''):
         for side, txt in ((-1, left), (1, right)):
             cx = 450 + side * 200
             side_win = (win == 'r' and side > 0) or (win == 'l' and side < 0)
-            col = GOLD if (side_win and p > 0.42) else CHALK
+            ink = col if (side_win and p > 0.42) else CHALK
             al = int(248 * e * min(1.0, max(0.0, p * 3 - (0 if side < 0 else 0.3))))
             for j, ln in enumerate(txt.split('\n')[:2]):
-                label(d, cx, 300 + j * 84, ln, 74, col, al)
+                label(d, cx, 300 + j * 84, ln, 78, ink, al)
         if p > 0.42 and win:
             al = int(250 * e * min(1.0, (p - 0.42) / 0.24))
             cx = 450 + (200 if win == 'r' else -200)
             g = 6 * _m.sin(2 * _m.pi * (2.2 * i / N))
             _rrect(d, (cx - 190 - g, 232 - g, cx + 190 + g, 452 + g), 26,
-                   outline=GOLD + (al,), width=9)
+                   outline=col + (al,), width=11)
         return im.resize((W, H), Image.LANCZOS)
     return _dump(name, draw)
 
@@ -226,9 +233,11 @@ def steps(labels, head=''):
         im, d = _canvas()
         p, e = i / N, NOFADE
         if head:
-            label(d, 450, TOP_Y + 30, head, 60, CHALK, int(234 * e))
+            label(d, 450, TOP_Y + 26, head, 68, CHALK, int(234 * e))
         n = len(labels)
-        y0, dy = 250, 118
+        # 板に載せて縮むと、70では小さかった。実測の埋まりも
+        # 参考6本の中央値25.8%に対して17.9%しか無い。文字を大きくして詰める。
+        y0, dy = 236, 142
         # 今どの段に光を当てるか。尺を n 等分して順に移る
         cur = min(n - 1, int(p * n * 1.15))
         for k, t in enumerate(labels):
@@ -239,9 +248,9 @@ def steps(labels, head=''):
             y = y0 + k * dy + _bob(i, 5 if on else 2.5, 1.4, k * 1.1)
             col = GOLD if on else DIM
             r = 18 + (5 * _m.sin(2 * _m.pi * (2.2 * i / N)) if on else 0)
-            dot(d, 190, y, r, col, int(244 * e * a))
-            sz = int(70 * (_overshoot((i / N - k * 0.16) / 0.16) if a < 1 else 1))
-            label(d, 232, y, t, sz, CHALK if on else DIM, int(248 * e * a), anchor='lm')
+            dot(d, 152, y, r, col, int(244 * e * a))
+            sz = int(88 * (_overshoot((i / N - k * 0.16) / 0.16) if a < 1 else 1))
+            label(d, 200, y, t, sz, CHALK if on else DIM, int(248 * e * a), anchor='lm')
         return im.resize((W, H), Image.LANCZOS)
     return _dump(name, draw)
 

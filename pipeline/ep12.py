@@ -46,15 +46,19 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 F_HOOK = fig.bar([('交通事故', 2547, None), ('お風呂', 19000, HEAT)],
                  unit='人', head='1年で亡くなる人')
 F_LIST = fig.steps(['熱すぎる湯', '長風呂', '飲酒後'], head='してはいけない')
-F_TEMP = fig.versus('41度まで', '42度で\n10分', win='r', head='湯の温度')
+# 危ないほうを指すので赤。金色は他の図で「これが答え」に使っている
+F_TEMP = fig.versus('41度まで', '42度で\n10分', win='r', head='湯の温度', col=HEAT)
 F_TIME = fig.huge('38度', sub='体温がここまで上がる')
 F_SUM  = fig.steps(['湯は41度まで', 'つかるのは10分', '飲んだら入らない'],
                    head='これだけ')
 
 render.SHOTS = [
  # ============ フック（0〜4秒）数字を画面いっぱいに置く
+ # フラッシュはここでは使わない。apply_flash は頭が一番白いので、
+ # 1コマ目が真っ白に飛ぶ。一覧に出るのはその1コマ目で、
+ # この回はそこに数字を置くために作っている。白飛びさせたら本末転倒。
  dict(sec='hook', dur=1.8, kind='board', se='impact',
-      roll=False, head=0.0, hush=0.0, flash=True,
+      roll=False, head=0.0, hush=0.0,
       fig=(fig.huge('7.5倍', sub='交通事故より多い'), 1.02, None),
       board=[dict(text='風呂で死ぬ人は', size=104, color=CRIMSON)],
       voice='punch', say='風呂で死ぬ人は、交通事故の七・五倍や。'),
