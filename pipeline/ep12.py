@@ -99,11 +99,22 @@ render.SHOTS = [
       voice='punch', tele='抜けるまで{入らない}',
       say='抜けるまで、入ったらあかん。'),
 
- # ============ 締め（22〜25秒）ループへ返す
- dict(sec='end', dur=2.2, kind='board', se='reveal',
+ # ============ 締め（22〜26秒）
+ # ここが一番大事。ショートは最後まで行くと自動で頭へ戻り、
+ # ループぶんも再生時間に数えられる。
+ # 「これだけ覚えといて」では戻る理由が無い。冒頭の「1日52人」へ
+ # 返して、頭の数字がもう一度意味を持つようにする。
+ dict(sec='end', dur=2.0, kind='board', se='reveal',
       fig=(F_SUM, 1.02, None),
       board=[dict(text='この{3つ}だけ', size=116, color=MUSTARD)],
-      voice='punch', say='これだけ覚えといて。'),
+      say='この三つだけ。'),
+ dict(dur=2.2, kind='face', face='serious',
+      se='dodon', voice='punch', tele='今日、{どれかやってへん}？',
+      say='今日、どれかやってへんか。'),
+ dict(dur=2.0, kind='board', se='impact', flash=True,
+      fig=(fig.huge('52人', sub='今日も、どこかで'), 1.02, None),
+      board=[dict(text='1日{52人}', size=120, color=CRIMSON)],
+      voice='punch', say='一日、五十二人やからな。'),
 ]
 
 for _s in render.SHOTS:
