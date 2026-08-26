@@ -40,7 +40,7 @@ HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 
 render.SHOTS = [
  # ============ つかみ（0〜5秒）実写だけ。黒板は出さない
- dict(short=True, sec='hook', dur=2.0, kind='screen', clip='wing',
+ dict(short=True, sec='hook', dur=2.0, kind='screen', clip='wing', full=True,
       face='surprise', roll=False, se='impact', head=0.0, hush=0.0,
       voice='punch', tele='窓に{小さい穴}',
       say='飛行機の窓、小さい穴が開いてるん知ってるか。'),
@@ -49,11 +49,11 @@ render.SHOTS = [
       say='高度一万メートルやで。なんで穴開けんねん。'),
 
  # ============ 段1：かかっている力（5〜11秒）
- dict(short=True, sec='s1', tame=0.30, dur=1.8, kind='screen', clip='plane',
+ dict(short=True, sec='s1', tame=0.30, dur=1.8, kind='screen', clip='plane', full=True,
       face='explain', se='whoosh',
       tele='外の気圧は地上の{4分の1}', say='外の気圧は、地上の四分の一しかない。'),
  dict(short=True, dur=2.0, kind='board', se='dodon', flash=True,
-      fig=('win_panes/', 0.86, None),
+      fig=('win_panes/', 0.80, None),
       board=[dict(text='窓1枚に{300キロ}', size=112, color=MUSTARD)],
       voice='punch', say='窓一枚に、約三百キロかかっとる。'),
 
@@ -62,8 +62,13 @@ render.SHOTS = [
       fig=('win_panes/', 1.02, None),
       board=[dict(text='ガラスは{3枚}', size=124)],
       say='あの窓、ガラスが三枚ある。'),
+ # 黒板が17秒続くと、文字と矢印しか変わらず画が止まる（実測でカット7回）。
+ # 顔アップは埋まり47%で黒板とは全く違う画になるので、間に挟んで割る。
+ # 声は前の行がまたぐので、合成の枠を使わない。
+ dict(short=True, dur=1.2, kind='face', face='surprise', se='pa',
+      tele='{3枚}もあるん？'),
  dict(short=True, dur=2.2, kind='board', se='warn',
-      fig=('win_nohole/', 1.02, None),
+      fig=('win_nohole/', 1.14, None),
       board=[dict(text='穴が無いと{決まらない}', size=88, color=CRIMSON)],
       say='穴が無かったら、どの一枚が支えとるか決まらへん。'),
 
@@ -76,6 +81,8 @@ render.SHOTS = [
       fig=('win_hole/', 1.02, None),
       board=[dict(text='中央は{力ゼロ}', size=118, color=MUSTARD)],
       say='中央の窓には、力がかからんようになる。'),
+ dict(short=True, dur=1.2, kind='face', face='surprise', se='pa',
+      tele='{ゼロ}？'),
 
  # ============ 落ち（23〜31秒）
  dict(short=True, sec='end', tame=0.30, dur=2.2, kind='board', se='impact',
@@ -83,12 +90,12 @@ render.SHOTS = [
       board=[dict(text='外側が{割れても}', size=110, color=CRIMSON)],
       voice='punch', say='やから、外側が割れても、'),
  dict(short=True, dur=2.2, kind='board', se='dodon',
-      fig=('win_break/', 1.02, None),
+      fig=('win_break/', 1.14, None),
       board=[dict(text='無傷の{中央}が支える', size=92, color=MUSTARD)],
       say='無傷の中央が、そのまま代わりに支える。'),
  dict(dur=1.6, kind='face', face='serious',
       tele='あの穴な、', say='あの穴な、'),
- dict(short=True, dur=2.2, kind='screen', clip='wing', face='proud',
+ dict(short=True, dur=2.2, kind='screen', clip='wing', full=True, face='proud',
       se='reveal', voice='punch', tele='{割れる前提}で開けてある',
       say='割れる前提で開けてあんねん。'),
 ]
