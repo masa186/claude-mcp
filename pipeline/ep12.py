@@ -30,7 +30,10 @@
     30秒 約75% ／ 25秒 約78% ／ 20秒 約81%
 """
 import os, sys, time, subprocess
-os.environ.setdefault('GEMINI_TTS_MODEL', 'gemini-2.5-flash-preview-tts')
+# 2.5-flash / 2.5-pro とも今日の枠が尽きている（両方 429 を確認）。
+# 声は Charon のままだが、第11話までの 2.5-flash とは別モデルなので
+# 声質がわずかに変わる。枠が戻ったら 2.5-flash に戻して録り直す。
+os.environ.setdefault('GEMINI_TTS_MODEL', 'gemini-3.1-flash-tts-preview')
 import imageio_ffmpeg as ie
 import render, sound, fig
 from render import MUSTARD, CRIMSON
