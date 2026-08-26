@@ -50,6 +50,8 @@ CLIPS = {
     'pulltab2V':('clips/src17.mp4', 2.0, 3.0, 1.0),
     'jarV':    ('clips/src20.mp4', 1.0, 3.0, 1.0),   # 瓶のフタを握る（縦素材）
     'jaropenV':('clips/src20.mp4', 9.6, 2.6, 1.0),   # フタが外れる瞬間（縦素材）
+    'opencanV':('clips/src21.mp4', 1.2, 3.2, 1.0),   # プルタブ缶が開いて中身が出る（縦）
+    'sabaV':   ('clips/src22.mp4', 2.0, 2.6, 1.0),   # 缶の中身の寄り（縦）
     # 画の変化量を0.1秒ごとに測ったら最大は10.1秒だった（3.65）。
     # 12.5秒からでは外した後しか映らないので、9.6秒から取る。
 }
@@ -60,7 +62,7 @@ CLIPS = {
 # 実際、錆缶の回は草しか映らなくなっていた。
 VW, VH = 720, 1280
 VERT = {'cansV', 'cans2V', 'canlineV', 'rustyV', 'pulltabV', 'pulltab2V',
-        'jarV', 'jaropenV'}
+        'jarV', 'jaropenV', 'opencanV', 'sabaV'}
 
 
 def prep(name, src, ss, dur, zoom=1.0):
