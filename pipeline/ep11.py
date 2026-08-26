@@ -10,6 +10,14 @@
     生き物   80本  29,067回 0.15倍
     掛け算にする。ジャンルは変えず、「危ない」を足すだけ。
 
+■ 尺 ── 第10話の実測で較正した
+    第7話  84.2秒 平均0:48 → 維持率 57.0%
+    第10話 34.4秒 平均0:25 → 維持率 72.7%
+    2点に合う離脱の時定数は T=67秒。ただし短い側でモデルが5.5ポイント
+    甘いので、そこを引いた見込みは
+      30秒 約75% ／ 25秒 約78% ／ 20秒 約81%
+    7〜8割を狙うので25秒前後にする。48.6秒では71%どまり。
+
 ■ 型 ── デカデカ!デカボー（開設6ヶ月・102本・登録11.4万・中央160万回）
     伸びた12本が全部「◯◯3選」。尺の中央は82秒。1日1.0本。
       500万 お風呂でしてはいけないこと3選
@@ -56,76 +64,61 @@ F_SUM  = fig.steps(['卵は24kgで破裂', 'ぶどうは火花', '飲み物は�
                    head='入れたらあかん')
 
 render.SHOTS = [
- # ============ つかみ（0〜5秒）
- dict(short=True, sec='hook', dur=2.0, kind='face', face='surprise',
+ # ============ つかみ（0〜3.5秒）
+ # 第10話は「視聴を継続」が52.7%→44.0%に落ちた。つかみが弱かった。
+ # 3つ全部を最初の3秒で見せて、「どれか一つは自分に当たる」を作る。
+ dict(sec='hook', dur=1.6, kind='face', face='surprise',
       roll=False, se='impact', head=0.0, hush=0.0,
-      voice='punch', tele='レンジに入れたら{あかん}もん',
+      voice='punch', tele='レンジに入れたら{あかん}3つ',
       say='電子レンジに入れたら、あかんもん三つ。'),
- dict(short=True, dur=1.8, kind='board', se='pa', fig=(F_LIST, 1.02, None),
-      board=[dict(text='{3つ}', size=136, color=MUSTARD)],
-      say='知らんかったら、たぶんやってる。'),
+ dict(dur=1.8, kind='board', se='pa', fig=(F_LIST, 1.02, None),
+      board=[dict(text='{卵・ぶどう・飲み物}', size=88, color=MUSTARD)],
+      say='卵、ぶどう、温めた飲み物。'),
 
- # ============ ① 卵（5〜18秒）
- dict(short=True, sec='s1', tame=0.30, dur=1.8, kind='face', face='point',
+ # ============ 1つ目 卵（3.5〜10秒）
+ dict(sec='s1', dur=1.6, kind='face', face='point',
       se='ton', voice='punch', tele='{1つ目}　卵', say='一つ目、卵。'),
- dict(short=True, dur=2.2, kind='face', face='explain',
-      tele='殻の中で{水蒸気}になる', say='中の水が、水蒸気になる。'),
- dict(short=True, dur=2.4, kind='face', face='serious',
-      tele='体積が{1700倍}', say='水蒸気になると、体積が千七百倍や。'),
- dict(short=True, dur=2.6, kind='board', se='dodon', flash=True,
+ dict(dur=2.2, kind='face', face='explain',
+      tele='水が{水蒸気}になって{1700倍}', say='中の水が水蒸気になって、千七百倍にふくらむ。'),
+ dict(dur=2.4, kind='board', se='dodon', flash=True,
       fig=(F_EGG, 1.02, None),
       board=[dict(text='殻に{24キロ}', size=124, color=CRIMSON)],
       voice='punch', say='逃げ場が無いから、殻に二十四キロかかる。'),
- dict(short=True, dur=2.2, kind='face', face='serious',
-      tele='{出した後}に破裂する', say='しかも、出した後に破裂することがある。'),
 
- # ============ ② ぶどう（18〜31秒）
- dict(short=True, sec='s2', tame=0.30, dur=1.8, kind='face', face='point',
+ # ============ 2つ目 ぶどう（10〜17秒）
+ dict(sec='s2', dur=1.6, kind='face', face='point',
       se='ton', voice='punch', tele='{2つ目}　ぶどう', say='二つ目、ぶどう。'),
- dict(short=True, dur=2.2, kind='face', face='surprise',
-      tele='2粒並べると{火花}', say='二粒並べると、火花が出る。'),
- dict(short=True, dur=2.6, kind='board', se='warn',
+ dict(dur=2.2, kind='board', se='warn',
       fig=(F_WAVE, 1.02, None),
       board=[dict(text='波長が{14mm}に縮む', size=96, color=MUSTARD)],
-      say='電波はぶどうの中で、波長が十四ミリまで縮む。'),
- dict(short=True, dur=2.4, kind='face', face='explain',
-      tele='粒の大きさと{ぴったり}', say='それが、粒の大きさとちょうど合う。'),
- dict(short=True, dur=2.4, kind='face', face='serious',
-      se='impact', voice='punch', tele='実験で{12台}壊れた',
-      say='研究では、電子レンジが十二台壊れた。'),
+      say='電波がぶどうの中で、十四ミリまで縮む。'),
+ dict(dur=2.2, kind='face', face='surprise',
+      se='impact', voice='punch', tele='粒と共振して{火花}',
+      say='粒の大きさと共振して、火花が出る。'),
 
- # ============ ③ 突沸（31〜44秒）
- dict(short=True, sec='s3', tame=0.30, dur=2.0, kind='face', face='point',
-      se='ton', voice='punch', tele='{3つ目}　温めた飲み物', say='三つ目、温めた飲み物。'),
- dict(short=True, dur=2.4, kind='face', face='explain',
-      tele='100度でも{沸かない}', say='レンジは静かに温めるから、百度でも沸かへん。'),
- dict(short=True, dur=2.4, kind='face', face='surprise',
-      tele='砂糖を入れた{瞬間}', say='そこへ砂糖を入れた瞬間、'),
- dict(short=True, dur=2.6, kind='board', se='dodon', flash=True, shake=True,
+ # ============ 3つ目 突沸（17〜22秒）
+ dict(sec='s3', dur=1.8, kind='face', face='point',
+      se='ton', voice='punch', tele='{3つ目}　温めた飲み物',
+      say='三つ目、温めた飲み物。'),
+ dict(dur=2.4, kind='board', se='dodon', flash=True, shake=True,
       fig=(F_BOIL, 1.02, None),
-      board=[dict(text='{1.5リットル}噴き出す', size=100, color=CRIMSON)],
-      voice='punch', say='一気に沸いて、一・五リットルぶん噴き上がる。'),
+      board=[dict(text='砂糖で{1.5リットル}噴く', size=92, color=CRIMSON)],
+      voice='punch', say='百度でも沸かへんから、砂糖を入れた瞬間に噴き上がる。'),
 
- # ============ 締め（44〜52秒）
- dict(short=True, sec='end', tame=0.30, dur=2.4, kind='board', se='reveal',
+ # ============ 締め（22〜25秒）ここでループへ返す
+ dict(sec='end', dur=2.0, kind='board', se='reveal',
       fig=(F_SUM, 1.02, None),
       board=[dict(text='この{3つ}', size=128, color=MUSTARD)],
-      say='卵と、ぶどうと、温めた飲み物。'),
- dict(short=True, dur=2.2, kind='face', face='proud',
-      voice='punch', tele='{全部}うちにある', say='全部、うちにあるやつやで。'),
+      voice='punch', say='全部、うちにあるやつやで。'),
 ]
 
 for _s in render.SHOTS:
     if not _s.get('say'):
         _s['mute'] = True
 
-if os.environ.get('SHORT') == '1':
-    render.SHOTS = [x for x in render.SHOTS if x.get('short')]
-    OUT, FRAMES = 'ep11s.mp4', 'frames11s'
-    VOICE_FILE, SE_FILE = 'voice11s.wav', 'se11s.wav'
-else:
-    OUT, FRAMES = 'ep11.mp4', 'frames11'
-    VOICE_FILE, SE_FILE = 'voice11.wav', 'se11.wav'
+# 本編がもう25秒なので、短縮版は作らない。YouTubeもTikTokも同じ1本で出す。
+OUT, FRAMES = 'ep11.mp4', 'frames11'
+VOICE_FILE, SE_FILE = 'voice11.wav', 'se11.wav'
 
 render.STAGGER = 0.13
 render.POP = 0.08
