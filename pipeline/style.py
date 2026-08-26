@@ -43,3 +43,20 @@ def font(size, face=None):
     if key not in _cache:
         _cache[key] = ImageFont.truetype(face[0], size, index=face[1])
     return _cache[key]
+
+def missing(text, face=None):
+    """そのフォントに無い字を返す。豆腐（□）で出る前に気づくため。
+
+    第11話で「①②③」が全部 □ になった。Mplus1-Bold（図の注釈用）に
+    丸数字が入っていない。書き出してから気づくと1本まるごと無駄になる。
+    """
+    from PIL import ImageFont
+    f = font(40, face or GOTHIC)
+    try:
+        cmap = f.font.getbestcmap() if hasattr(f, 'font') else None
+    except Exception:
+        cmap = None
+    if not cmap:
+        return ''
+    return ''.join(sorted(set(c for c in text
+                              if ord(c) not in cmap and not c.isspace())))

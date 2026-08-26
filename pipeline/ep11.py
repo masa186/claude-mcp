@@ -44,7 +44,9 @@ FF = ie.get_ffmpeg_exe()
 HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'docs')
 
 # ---- 使い回しの図。引数を渡すだけ。描き直していない
-F_LIST = fig.steps(['① 卵', '② ぶどう', '③ 温めた飲み物'], head='入れたらあかん')
+# 丸数字（①②③）は Mplus1-Bold に無く、豆腐（□）になった。
+# 図の注釈フォントは GOTHIC＝Mplus1-Bold なので、丸数字は使わない。
+F_LIST = fig.steps(['1  卵', '2  ぶどう', '3  温めた飲み物'], head='入れたらあかん')
 F_EGG  = fig.huge('24kg', sub='殻を内側から押す力')
 F_WAVE = fig.bar([('空気の中', 122, None), ('ぶどうの中', 14, GOLD)],
                  unit='mm', head='電波の波長')
@@ -65,7 +67,7 @@ render.SHOTS = [
 
  # ============ ① 卵（5〜18秒）
  dict(short=True, sec='s1', tame=0.30, dur=1.8, kind='face', face='point',
-      se='ton', voice='punch', tele='①{卵}', say='一つ目、卵。'),
+      se='ton', voice='punch', tele='{1つ目}　卵', say='一つ目、卵。'),
  dict(short=True, dur=2.2, kind='face', face='explain',
       tele='殻の中で{水蒸気}になる', say='中の水が、水蒸気になる。'),
  dict(short=True, dur=2.4, kind='face', face='serious',
@@ -79,7 +81,7 @@ render.SHOTS = [
 
  # ============ ② ぶどう（18〜31秒）
  dict(short=True, sec='s2', tame=0.30, dur=1.8, kind='face', face='point',
-      se='ton', voice='punch', tele='②{ぶどう}', say='二つ目、ぶどう。'),
+      se='ton', voice='punch', tele='{2つ目}　ぶどう', say='二つ目、ぶどう。'),
  dict(short=True, dur=2.2, kind='face', face='surprise',
       tele='2粒並べると{火花}', say='二粒並べると、火花が出る。'),
  dict(short=True, dur=2.6, kind='board', se='warn',
@@ -94,7 +96,7 @@ render.SHOTS = [
 
  # ============ ③ 突沸（31〜44秒）
  dict(short=True, sec='s3', tame=0.30, dur=2.0, kind='face', face='point',
-      se='ton', voice='punch', tele='③{温めた飲み物}', say='三つ目、温めた飲み物。'),
+      se='ton', voice='punch', tele='{3つ目}　温めた飲み物', say='三つ目、温めた飲み物。'),
  dict(short=True, dur=2.4, kind='face', face='explain',
       tele='100度でも{沸かない}', say='レンジは静かに温めるから、百度でも沸かへん。'),
  dict(short=True, dur=2.4, kind='face', face='surprise',
