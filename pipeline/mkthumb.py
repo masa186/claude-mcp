@@ -35,6 +35,7 @@ import os
 from PIL import Image, ImageDraw
 import render
 from render import CHALK, MUSTARD, BLACK, CRIMSON
+import math as _m
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'brand')
@@ -43,6 +44,12 @@ W, H = 1080, 1920
 
 # 各話。fig は clips/ の連番か assets/ の1枚
 EPS = [
+    # 第12話。フックの数字をそのままサムネに出す。答え（3つの守りかた）は
+    # 書かない。伸びた参考4本は題名にもサムネにも答えを書いていなかった。
+    # 実写が無いので、浴槽＋振り切れた温度計のアイコンで「熱さの話」だと示す。
+    dict(file='thumb_ep12.png', label='風呂',
+         bg='board', lines=['交通事故の7.5倍', '風呂で死ぬ人'],
+         fig=('icon:bath', 0), face='serious'),
     # 第10話。陰キャの憧れ707本で、題名に「なぜ」が入ると1.77倍だった。
     # サムネは題名と役割を分ける。題名が「なぜ」を言うので、サムネは
     # 「え、穴？」という違和感だけを見せる。答え（外側が全部受け持つ）は書かない。
@@ -203,12 +210,87 @@ def fridge_icon(w, h):
     return im
 
 
+HOT = (240, 120, 70, 255)
+
+def bath_icon(w, h):
+    """一目で「風呂」と分かるアイコン。湯気と、赤く振り切れた温度計を添える。
+
+    第12話の背景に使える実写が手元に無い。第5話で実写の冷蔵庫が親指サイズ
+    では冷蔵庫に見えなかったのと同じ理由で、太い輪郭で描いたほうが読める。
+    温度計を入れるのは、文字（交通事故の7.5倍）だけだと「なぜ風呂で死ぬのか」
+    の手掛かりが画に無いため。熱さが原因だと1枚で分かるようにする。
+    """
+    S = 4
+    im = Image.new('RGBA', (w * S, h * S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    W2, H2 = w * S, h * S
+    ow = max(6, int(W2 * 0.020))
+
+    pad = int(W2 * 0.02)
+    d.rounded_rectangle((pad, pad, W2 - pad, H2 - pad), radius=int(W2 * 0.08),
+                        fill=(255, 255, 255, 235), outline=BLACK, width=int(W2 * 0.012))
+
+    # 湯船（浴槽の断面）。下半分に置いて、上を湯気に空ける
+    # 一覧の実寸（幅160px）で見ると、湯船が小さくて板の白が目立っていた。
+    # 湯船を広げて、白い余白を減らす。
+    tx0, tx1 = int(W2 * 0.11), int(W2 * 0.89)
+    ty0, ty1 = int(H2 * 0.47), int(H2 * 0.86)
+    d.rounded_rectangle((tx0, ty0, tx1, ty1), radius=int(W2 * 0.10),
+                        fill=(250, 250, 252, 255), outline=BLACK, width=ow)
+
+    # 湯。ふちより少し下まで入れて、水面を波線で描く
+    wy = ty0 + int((ty1 - ty0) * 0.26)
+    d.rounded_rectangle((tx0 + ow, wy, tx1 - ow, ty1 - ow), radius=int(W2 * 0.08),
+                        fill=(250, 150, 110, 255))
+    pts = []
+    n = 7
+    for i in range(n + 1):
+        x = tx0 + ow + (tx1 - tx0 - 2 * ow) * i / n
+        pts.append((x, wy + (-1 if i % 2 == 0 else 1) * int(H2 * 0.012)))
+    d.line(pts, fill=BLACK, width=max(4, int(W2 * 0.012)), joint='curve')
+
+    # 脚
+    for fx in (tx0 + int((tx1 - tx0) * 0.16), tx1 - int((tx1 - tx0) * 0.16)):
+        d.rounded_rectangle((fx - ow, ty1, fx + ow * 2, ty1 + int(H2 * 0.05)),
+                            radius=ow, fill=BLACK)
+
+    # 湯気。3本の曲線を上へ
+    for k, sx in enumerate((0.34, 0.50, 0.66)):
+        x = int(W2 * sx)
+        top = int(H2 * (0.16 + 0.04 * (k % 2)))
+        cur = []
+        steps = 14
+        for i in range(steps + 1):
+            t = i / steps
+            y = ty0 - int((ty0 - top) * t)
+            cur.append((x + int(W2 * 0.035 * _m.sin(t * 3.4 * _m.pi)), y))
+        d.line(cur, fill=(150, 150, 158, 255),
+               width=max(4, int(W2 * 0.026)), joint='curve')
+
+    # 温度計。赤が上まで振り切れている
+    mx = int(W2 * 0.82)
+    my0, my1 = int(H2 * 0.09), int(H2 * 0.42)
+    r = int(W2 * 0.075)
+    d.rounded_rectangle((mx - r // 2, my0, mx + r // 2, my1),
+                        radius=r // 2, fill=(255, 255, 255, 255),
+                        outline=BLACK, width=ow)
+    d.ellipse((mx - r, my1 - r // 2, mx + r, my1 + r * 3 // 2),
+              fill=HOT, outline=BLACK, width=ow)
+    d.rounded_rectangle((mx - r // 4, my0 + ow * 2, mx + r // 4, my1),
+                        radius=r // 4, fill=HOT)
+
+    im = im.resize((w, h), Image.LANCZOS)
+    return im
+
+
 def figure(spec):
     name, idx = spec
     if name == 'icon:fridge':
         return fridge_icon(680, 680)
     if name == 'icon:window':
         return window_icon(560, 700)
+    if name == 'icon:bath':
+        return bath_icon(680, 680)
     if name.endswith('/'):
         fs = render.clip_frames(name.rstrip('/')) if False else None
         d = os.path.join(render.CLIP_DIR, name.rstrip('/'))
