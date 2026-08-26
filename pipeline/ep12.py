@@ -80,7 +80,7 @@ render.SHOTS = [
  dict(dur=2.2, kind='board', se='dodon', flash=True,
       fig=(F_TIME, 1.02, None),
       board=[dict(text='42度で10分\n{体温38度}', size=104, color=CRIMSON)],
-      voice='punch', say='四十二度やと、体温が三十八度まで上がる。'),
+      voice='punch', say='四十二度で、体温が三十八度まで上がる。'),
 
  # ============ 2つ目 長風呂（12〜17秒）
  dict(sec='s2', dur=1.6, kind='face', face='point',
