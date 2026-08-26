@@ -20,6 +20,38 @@ OUT = M.OUT
 TOP_Y, BOT_Y = 54, 576
 
 
+# ---------------------------------------------------------------- 動かす
+# 化け学のふしぎ（参考2）は 0.29秒/カット・動き11.55 だった。
+# こちらの第10話は 2.87秒/カット・動き3.53 で、10倍の開きがある。
+# ショットを増やすだけでは届かない。図そのものが動き続ける必要がある。
+#
+# 出そろったら止まる、をやめる。出たあとも小刻みに動かす。
+import math as _m
+
+
+def _bob(i, amp=6.0, hz=1.6, phase=0.0):
+    """ゆっくり上下する。要素ごとに位相をずらすと、画面全体が呼吸する。"""
+    return amp * _m.sin(2 * _m.pi * (hz * i / N) + phase)
+
+
+def _pop_in(i, at, span=0.18):
+    """0→1。at(0..1) から span かけて出る。行き過ぎてから戻る。"""
+    p = i / N
+    t = (p - at) / span
+    if t <= 0:
+        return 0.0
+    if t >= 1:
+        return 1.0
+    return 1 - (1 - t) ** 3
+
+
+def _overshoot(t):
+    """1.0 を少し超えてから戻る倍率。出た瞬間だけ大きく見せる。"""
+    if t >= 1:
+        return 1.0
+    return 1 + 0.28 * _m.sin(_m.pi * t)
+
+
 def _dir(kind, spec):
     key = hashlib.sha1((kind + json.dumps(spec, ensure_ascii=False,
                                           sort_keys=True, default=str)).encode()).hexdigest()[:10]
@@ -81,7 +113,11 @@ def bar(items, unit='', head=''):
             # 高さの上限。base(520) から値ラベル(46)を引いた位置が、
             # 見出し(TOP_Y+30, 高さ62)の下端より上に来ると重なる。
             # 90+300 だと 84 になって「もつ時間420分」と重なっていた。
-            h = int((70 + 260 * (val / mx) ** 0.5) * grow)
+            h = (70 + 260 * (val / mx) ** 0.5) * grow
+            # 伸びきったら止まる、をやめる。わずかに脈打たせる
+            if grow >= 1:
+                h *= 1 + 0.022 * _m.sin(2 * _m.pi * (2.0 * i / N) + k * 1.7)
+            h = int(h)
             c = col or DIM
             bw = int(gap * 0.34)
             _rrect(d, (cx - bw, base - h, cx + bw, base), 12,
@@ -114,7 +150,8 @@ def span(a_lab, b_lab, mid, head=''):
         prog = min(1.0, p * 2.4)
         px = X0 + (X1 - X0) * prog
         line(d, [(X0, Y), (px, Y)], GOLD, 18, int(248 * e))
-        dot(d, px, Y, 30, GOLD, int(252 * e))
+        rr = 30 + 6 * _m.sin(2 * _m.pi * (2.6 * i / N))
+        dot(d, px, Y, rr, GOLD, int(252 * e))
         if prog > 0.45:
             al = int(252 * e * min(1.0, (prog - 0.45) / 0.25))
             label(d, 450, Y - 104, mid, 124, GOLD, al)
@@ -133,8 +170,12 @@ def huge(value, sub='', head=''):
         p, e = i / N, NOFADE
         if head:
             label(d, 450, TOP_Y + 34, head, 60, CHALK, int(232 * e))
-        k = 1.0 + 0.16 * max(0.0, 1 - p * 4)      # 出はじめだけ大きく
-        label(d, 450, 330, str(value), int(190 * k), GOLD, int(254 * e))
+        # 出はじめに行き過ぎてから戻り、そのあとも脈打たせる。
+        # 止まった数字は0.3秒で見飽きる。
+        k = _overshoot(min(1.0, p / 0.16)) if p < 0.16 else 1.0
+        k *= 1 + 0.035 * _m.sin(2 * _m.pi * (2.4 * i / N))
+        y = 330 + _bob(i, 7, 1.5)
+        label(d, 450, y, str(value), int(190 * k), GOLD, int(254 * e))
         if sub and p > 0.30:
             al = int(246 * e * min(1.0, (p - 0.30) / 0.22))
             label(d, 450, BOT_Y - 40, sub, 72, CHALK, al)
@@ -164,7 +205,8 @@ def versus(left, right, win=None, head=''):
         if p > 0.42 and win:
             al = int(250 * e * min(1.0, (p - 0.42) / 0.24))
             cx = 450 + (200 if win == 'r' else -200)
-            _rrect(d, (cx - 190, 232, cx + 190, 452), 26,
+            g = 6 * _m.sin(2 * _m.pi * (2.2 * i / N))
+            _rrect(d, (cx - 190 - g, 232 - g, cx + 190 + g, 452 + g), 26,
                    outline=GOLD + (al,), width=9)
         return im.resize((W, H), Image.LANCZOS)
     return _dump(name, draw)
@@ -172,7 +214,11 @@ def versus(left, right, win=None, head=''):
 
 # ---------------------------------------------------------------- 手順
 def steps(labels, head=''):
-    """3つの段を順に出す。失敗→改良の連鎖に使う。"""
+    """3つの段を順に出す。出たあとも止めない。
+
+    「今どれの話か」を光で示すと、画面が常に変わり続ける。
+    化け学（参考2）は0.29秒/カットで、止まっている時間が無かった。
+    """
     spec = dict(s=list(labels), head=head)
     name = _dir('step', spec)
 
@@ -183,18 +229,19 @@ def steps(labels, head=''):
             label(d, 450, TOP_Y + 30, head, 60, CHALK, int(234 * e))
         n = len(labels)
         y0, dy = 250, 118
+        # 今どの段に光を当てるか。尺を n 等分して順に移る
+        cur = min(n - 1, int(p * n * 1.15))
         for k, t in enumerate(labels):
-            a = min(1.0, max(0.0, (p * 2.8) - k * 0.30))
+            a = _pop_in(i, k * 0.16, 0.16)
             if a <= 0:
                 continue
-            y = y0 + k * dy
-            last = (k == n - 1)
-            col = GOLD if last else CHALK
-            dot(d, 190, y, 18, col, int(240 * e * a))
-            label(d, 232, y, t, 70, col, int(246 * e * a), anchor='lm')
-            if k < n - 1 and a > 0.7:
-                arrow(d, 190, y + 26, 190, y + dy - 26, DIM, 9, 26,
-                      int(180 * e * (a - 0.7) / 0.3))
+            on = (k == cur)
+            y = y0 + k * dy + _bob(i, 5 if on else 2.5, 1.4, k * 1.1)
+            col = GOLD if on else DIM
+            r = 18 + (5 * _m.sin(2 * _m.pi * (2.2 * i / N)) if on else 0)
+            dot(d, 190, y, r, col, int(244 * e * a))
+            sz = int(70 * (_overshoot((i / N - k * 0.16) / 0.16) if a < 1 else 1))
+            label(d, 232, y, t, sz, CHALK if on else DIM, int(248 * e * a), anchor='lm')
         return im.resize((W, H), Image.LANCZOS)
     return _dump(name, draw)
 
