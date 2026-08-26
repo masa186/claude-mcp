@@ -5,6 +5,8 @@
 | YouTube | `pipeline/ep10.mp4` | 34.4秒 | 14 | 18.3秒（尺の53%） |
 | TikTok | `pipeline/ep10s.mp4` | 32.8秒 | 13 | 17.9秒（尺の55%） |
 
+サムネ `pipeline/brand/thumb_ep10.png`
+
 ### ダウンロード
 
     YouTube用
@@ -12,6 +14,28 @@
 
     TikTok用
     https://raw.githubusercontent.com/masa186/claude-mcp/claude/otter-video-monetization-frvk65/pipeline/ep10s.mp4
+
+    サムネ
+    https://raw.githubusercontent.com/masa186/claude-mcp/claude/otter-video-monetization-frvk65/pipeline/brand/thumb_ep10.png
+
+## サムネ
+
+    文字   飛行機の窓 ／ この穴、わざと
+    背景   wing（窓から見た主翼。明るさ163で手持ちの実写で最明）
+    アイコン 窓の断面＋穴＋赤い矢印
+
+**題名とサムネで役割を分ける。** 題名が「なぜ」を言うので、
+サムネは「え、穴？」という違和感だけを見せる。
+答え（外側の1枚が全部受け持つ）は書かない。
+無限の机で伸びた4本は、題名にもサムネにも答えを書いていなかった。
+
+**アイコンを重ねた理由。** 背景の wing には穴が映っていない。
+文字だけだと「この穴」が何を指すか分からないので、窓の断面を描いて
+赤い矢印で穴を指す。第5話で実写の冷蔵庫が親指サイズで冷蔵庫に
+見えなかったときと同じ手当て。
+
+最初に描いた穴は親指サイズでは点にしか見えなかったので、
+半径を 0.058 → 0.082、矢印も太くして描き直した。
 
 ---
 

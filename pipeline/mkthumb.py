@@ -43,6 +43,14 @@ W, H = 1080, 1920
 
 # 各話。fig は clips/ の連番か assets/ の1枚
 EPS = [
+    # 第10話。陰キャの憧れ707本で、題名に「なぜ」が入ると1.77倍だった。
+    # サムネは題名と役割を分ける。題名が「なぜ」を言うので、サムネは
+    # 「え、穴？」という違和感だけを見せる。答え（外側が全部受け持つ）は書かない。
+    # 背景は wing（窓から見た主翼・明るさ163で手持ち最明）。
+    # ただし wing に穴は映っていないので、窓のアイコンを重ねて穴を指す。
+    dict(file='thumb_ep10.png', label='飛行機の窓',
+         bg='clip:wing', lines=['飛行機の窓', 'この穴、わざと'],
+         fig=('icon:window', 0), face='surprise'),
     # 図は「色が付いていて太いもの」を選ぶ。線画は親指の大きさでは消える。
     # bg  … 'clip:名前' なら実写を背景に敷いて明るくする。無ければ黒板
     # lines … 1行目に煽り、2行目に結論。合計10〜20文字に収める
@@ -95,6 +103,51 @@ CHAR = dict(w=0.66, cx=0.70, foot=1.03)
 
 
 ICE = (140, 210, 245, 255)
+
+def window_icon(w, h):
+    """飛行機の窓のアイコン。真ん中のガラスの穴を矢印で指す。
+
+    背景の wing（窓から見た主翼）には穴が映っていないので、
+    文字だけだと「この穴」が何を指すか分からない。第5話で冷蔵庫の
+    実写が親指サイズで冷蔵庫に見えなかったときと同じ手当て。
+    板を敷いて、どんな背景の上でも輪郭が潰れないようにする。
+    """
+    S = 4
+    im = Image.new('RGBA', (w * S, h * S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    W2, H2 = w * S, h * S
+
+    pad = int(W2 * 0.02)
+    d.rounded_rectangle((pad, pad, W2 - pad, H2 - pad), radius=int(W2 * 0.08),
+                        fill=(255, 255, 255, 238), outline=BLACK, width=int(W2 * 0.012))
+
+    # 窓（角の丸い縦長。旅客機の窓の形）
+    ow = max(6, int(W2 * 0.024))
+    wx0, wy0 = int(W2 * 0.28), int(H2 * 0.13)
+    wx1, wy1 = int(W2 * 0.72), int(H2 * 0.87)
+    d.rounded_rectangle((wx0, wy0, wx1, wy1), radius=int(W2 * 0.20),
+                        fill=(176, 214, 240, 255), outline=BLACK, width=ow)
+    # 内側の枠（ガラスが何枚も入っている感じ）
+    m = int(W2 * 0.055)
+    d.rounded_rectangle((wx0 + m, wy0 + m, wx1 - m, wy1 - m),
+                        radius=int(W2 * 0.155), outline=BLACK, width=max(4, ow // 2))
+
+    # 穴。ここが主役なので大きめの黒丸にする
+    cx, cy = (wx0 + wx1) // 2, int(H2 * 0.66)
+    # 親指サイズで穴が点にしか見えなかったので大きくする。
+    # この穴が見えないと「この穴、わざと」の文字が何も指さない。
+    r = int(W2 * 0.082)
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=BLACK)
+
+    # 穴を指す矢印（右から）
+    ax0, ax1 = int(W2 * 0.95), cx + int(r * 2.1)
+    aw = max(6, int(W2 * 0.040))
+    d.line((ax0, cy, ax1, cy), fill=CRIMSON, width=aw)
+    hd = int(W2 * 0.072)
+    d.polygon([(ax1 - hd, cy), (ax1 + hd // 2, cy - hd * 3 // 4),
+               (ax1 + hd // 2, cy + hd * 3 // 4)], fill=CRIMSON)
+    return im.resize((w, h), Image.LANCZOS)
+
 
 def fridge_icon(w, h):
     """一目で「冷蔵庫」と分かる簡易アイコン。実写(iyxtimg不可)の代わりに描く。
@@ -154,6 +207,8 @@ def figure(spec):
     name, idx = spec
     if name == 'icon:fridge':
         return fridge_icon(680, 680)
+    if name == 'icon:window':
+        return window_icon(560, 700)
     if name.endswith('/'):
         fs = render.clip_frames(name.rstrip('/')) if False else None
         d = os.path.join(render.CLIP_DIR, name.rstrip('/'))
