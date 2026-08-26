@@ -74,23 +74,20 @@ render.SHOTS = [
       se='ton', voice='punch', tele='{1つ目}　熱すぎる湯',
       say='一つ目、熱すぎる湯。'),
  dict(dur=2.2, kind='board', se='warn',
-      fig=(F_TEMP, 1.02, None),
+      fig=(F_TEMP, 1.02, None), tele='{消費者庁}の目安',
       board=[dict(text='目安は{41度まで}', size=104, color=MUSTARD)],
-      say='消費者庁の目安は、四十一度まで。'),
+      say='目安は、四十一度まで。'),
  dict(dur=2.2, kind='board', se='dodon', flash=True,
       fig=(F_TIME, 1.02, None),
       board=[dict(text='42度で10分\n{体温38度}', size=104, color=CRIMSON)],
-      voice='punch', say='四十二度で十分つかると、体温が三十八度近くまで上がる。'),
+      voice='punch', say='四十二度やと、体温が三十八度まで上がる。'),
 
  # ============ 2つ目 長風呂（12〜17秒）
  dict(sec='s2', dur=1.6, kind='face', face='point',
       se='ton', voice='punch', tele='{2つ目}　長風呂',
       say='二つ目、長風呂。'),
  dict(dur=2.2, kind='face', face='serious',
-      tele='つかるのは{10分}まで', say='つかるのは、十分までが目安や。'),
- dict(dur=2.0, kind='face', face='surprise',
-      se='warn', voice='punch', tele='急に{立ち上がらない}',
-      say='そのあと、急に立ち上がったらあかん。'),
+      tele='つかるのは{10分}まで', say='つかるのは十分まで。'),
 
  # ============ 3つ目 飲酒後（17〜22秒）
  dict(sec='s3', dur=1.8, kind='face', face='point',
