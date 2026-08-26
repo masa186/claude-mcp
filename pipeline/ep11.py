@@ -79,22 +79,22 @@ render.SHOTS = [
  dict(sec='s1', dur=1.6, kind='face', face='point',
       se='ton', voice='punch', tele='{1つ目}　卵', say='一つ目、卵。'),
  dict(dur=2.2, kind='face', face='explain',
-      tele='水が{水蒸気}になって{1700倍}', say='中の水が水蒸気になって、千七百倍にふくらむ。'),
+      tele='水蒸気になって{1700倍}', say='中の水が、千七百倍にふくらむ。'),
  dict(dur=2.4, kind='board', se='dodon', flash=True,
       fig=(F_EGG, 1.02, None),
-      board=[dict(text='殻に{24キロ}', size=124, color=CRIMSON)],
-      voice='punch', say='逃げ場が無いから、殻に二十四キロかかる。'),
+      board=[dict(text='逃げ場が無い\n殻に{24キロ}', size=104, color=CRIMSON)],
+      voice='punch', say='殻に、二十四キロかかる。'),
 
  # ============ 2つ目 ぶどう（10〜17秒）
  dict(sec='s2', dur=1.6, kind='face', face='point',
       se='ton', voice='punch', tele='{2つ目}　ぶどう', say='二つ目、ぶどう。'),
  dict(dur=2.2, kind='board', se='warn',
       fig=(F_WAVE, 1.02, None),
-      board=[dict(text='波長が{14mm}に縮む', size=96, color=MUSTARD)],
-      say='電波がぶどうの中で、十四ミリまで縮む。'),
+      board=[dict(text='ぶどうの中で\n{14mm}に縮む', size=104, color=MUSTARD)],
+      say='電波が、十四ミリまで縮む。'),
  dict(dur=2.2, kind='face', face='surprise',
       se='impact', voice='punch', tele='粒と共振して{火花}',
-      say='粒の大きさと共振して、火花が出る。'),
+      say='粒と共振して、火花。'),
 
  # ============ 3つ目 突沸（17〜22秒）
  dict(sec='s3', dur=1.8, kind='face', face='point',
@@ -102,8 +102,8 @@ render.SHOTS = [
       say='三つ目、温めた飲み物。'),
  dict(dur=2.4, kind='board', se='dodon', flash=True, shake=True,
       fig=(F_BOIL, 1.02, None),
-      board=[dict(text='砂糖で{1.5リットル}噴く', size=92, color=CRIMSON)],
-      voice='punch', say='百度でも沸かへんから、砂糖を入れた瞬間に噴き上がる。'),
+      board=[dict(text='100度でも沸かへん\n砂糖で{1.5リットル}', size=84, color=CRIMSON)],
+      voice='punch', say='砂糖を入れた瞬間、噴き上がる。'),
 
  # ============ 締め（22〜25秒）ここでループへ返す
  dict(sec='end', dur=2.0, kind='board', se='reveal',
