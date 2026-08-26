@@ -1430,8 +1430,101 @@ def f_jar(i, fix=False):
     return im.resize((W, H), Image.LANCZOS)
 
 
+# ---------------------------------------------------------------- 飛行機の窓
+# 断面を上から見た形。左が外、右が客室。ガラス3枚を縦の帯で描く。
+WX1, WX2, WX3 = 292, 448, 604      # 外側・中央・内側
+WYT, WYB = 196, 470                # ガラスの上下
+WHOLE = 336                        # 中央の穴の中心の高さ
+
+
+def _pane(d, x, e, broken=False, alpha=250):
+    """ガラス1枚。broken=True でひび割れにする。"""
+    if not broken:
+        line(d, [(x, WYT), (x, WYB)], CHALK, 20, int(alpha*e))
+        return
+    ys = [WYT, 248, 286, 330, 372, 414, WYB]
+    dx = [0, 16, -14, 20, -18, 12, 0]
+    for k in range(len(ys)-1):
+        line(d, [(x+dx[k], ys[k]), (x+dx[k+1], ys[k+1])], HEAT, 18, int(alpha*e))
+
+
+def _hole(d, x, e):
+    """中央のガラスに開いた穴。帯を切って空ける。"""
+    line(d, [(x, WYT), (x, WHOLE-26)], CHALK, 20, int(250*e))
+    line(d, [(x, WHOLE+26), (x, WYB)], CHALK, 20, int(250*e))
+    dot(d, x, WHOLE, 15, GOLD, int(254*e))
+
+
+def f_window(i, mode='panes'):
+    """飛行機の窓の断面。
+
+    mode='panes'   ガラスが3枚あることだけ見せる
+    mode='nohole'  穴が無い場合。力がどの1枚にかかるか決まらない
+    mode='hole'    穴があると外側の1枚が全部受け持ち、中央は力ゼロ
+    mode='break'   外側が割れて、無傷の中央が交代する
+
+    裏取り：中央のガラスに開いた穴はブリードホール。機内と窓の隙間の
+    気圧を揃えて、外側のガラスに与圧を受け持たせる（ねとらぼ・TABIZINE）。
+    巡航中の気圧差は0.52気圧、23×33cmの窓で約318kgf。
+    """
+    im = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    p = i / N
+    e = NOFADE
+
+    label(d, 96, WYT - 54, '外', 60, DIM, int(226*e))
+    label(d, 806, WYT - 54, '客室', 60, DIM, int(226*e))
+
+    if mode == 'break':
+        _pane(d, WX1, e, broken=True)
+    else:
+        _pane(d, WX1, e)
+    if mode in ('hole', 'break'):
+        _hole(d, WX2, e)
+    else:
+        _pane(d, WX2, e)
+    _pane(d, WX3, e, alpha=170)
+
+    if mode == 'panes':
+        for x, t in ((WX1, '外側'), (WX2, '中央'), (WX3, '内側')):
+            label(d, x, WYB + 52, t, 48, DIM, int(224*e))
+        return im.resize((W, H), Image.LANCZOS)
+
+    # 客室側から押す力。どこまで届くかを mode で変える
+    ys = (250, 336, 422)
+    for k, y in enumerate(ys):
+        a = min(1.0, max(0.0, (p*3.0) - k*0.16))
+        if a <= 0:
+            continue
+        if mode == 'nohole':
+            # 3枚のどれで止まるか決まらない。矢印を3枚それぞれで止める
+            tip = (WX3, WX2, WX1)[k] + 30
+            arrow(d, 800, y, tip, y, GOLD, 14, 40, int(240*e*a))
+        elif mode == 'hole':
+            # 穴を通って外側まで届く
+            arrow(d, 800, y, WX1 + 30, y, GOLD, 14, 40, int(248*e*a))
+        else:  # break
+            arrow(d, 800, y, WX2 + 30, y, HEAT, 14, 40, int(250*e*a))
+
+    if mode == 'nohole':
+        label(d, 450, BOT_Y - 4, 'どれが支える？', 76, CHALK, int(238*e))
+    elif mode == 'hole':
+        # 「力ゼロ」を中央の下に置いたら、下の見出しと重なった。
+        # 図の中の文字は1つだけにして、残りは黒板の board に言わせる。
+        if p > 0.40:
+            al = int(252 * e * min(1.0, (p-0.40)/0.22))
+            label(d, 450, BOT_Y - 4, '外側が全部受け持つ', 72, GOLD, al)
+    else:
+        if p > 0.34:
+            al = int(252 * e * min(1.0, (p-0.34)/0.22))
+            label(d, 450, BOT_Y - 4, '中央が交代する', 76, HEAT, al)
+    return im.resize((W, H), Image.LANCZOS)
+
+
 if __name__ == '__main__':
     print('黒板アニメを書き出し中...')
+    for _m in ('panes', 'nohole', 'hole', 'break'):
+        dump('win_' + _m, (lambda m: lambda i: f_window(i, m))(_m))
     dump('jar', lambda i: f_jar(i, fix=False))
     dump('jarfix', lambda i: f_jar(i, fix=True))
     dump('wingrace', f_wingrace)
