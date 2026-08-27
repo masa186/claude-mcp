@@ -42,6 +42,12 @@ from mkanim import GOLD, HEAT
 FF = ie.get_ffmpeg_exe()
 HERE_DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'docs')
 
+# 図の揺れを止める。数字は止まっていないと読めない。
+# 動きが足りないと思って揺らしたが、参考6本を測り直したら
+# 向こうの普段の動きは 1.55〜1.91 でこちらの 1.58 と同じだった。
+# 違うのは変化の大きさで、揺らして埋まるものではなかった。
+fig.LIVE = 0.0
+
 # 図は描き直さない。引数を変えるだけ
 F_HOOK = fig.bar([('交通事故', 2547, None), ('お風呂', 19000, HEAT)],
                  unit='人', head='1年で亡くなる人')
@@ -112,13 +118,6 @@ render.SHOTS = [
       fig=(F_SUM, 1.02, None),
       board=[dict(text='この{3つ}だけ', size=116, color=MUSTARD)],
       say='この三つだけ。'),
- dict(dur=2.2, kind='face', face='serious',
-      se='dodon', voice='punch', tele='今日、{どれかやってへん}？',
-      say='今日、どれかやってへんか。'),
- dict(dur=2.0, kind='board', se='impact', flash=True,
-      fig=(fig.huge('52人', sub='今日も、どこかで'), 1.02, None),
-      board=[dict(text='1日{52人}', size=120, color=CRIMSON)],
-      voice='punch', say='一日、五十二人やからな。'),
 ]
 
 for _s in render.SHOTS:
@@ -127,7 +126,13 @@ for _s in render.SHOTS:
 
 OUT, FRAMES = 'ep12.mp4', 'frames12'
 VOICE_FILE, SE_FILE = 'voice12.wav', 'se12.wav'
+SE_VOL, NAR_VOL, LUFS = 0.42, 1.0, -12.0
 
+# 顔のカットで画面の84%を横切って振っていた。1.6秒のカットの中で
+# カワウソの面積が2.3〜4.3倍に変わる量で、「ドアップで右左に動く意味が
+# 分からん」と言われた所。寄りも振りも大きく落とす。
+render.FACE_Z, render.FACE_PAN, render.FACE_DRIFT = 1.10, 0.14, 0.0
+render.TEXT_Z, render.TEXT_PAN, render.TEXT_DRIFT = 1.06, 0.10, 0.0
 render.STAGGER = 0.13
 render.POP = 0.08
 render.CARD_ON = True
@@ -170,16 +175,24 @@ for i in range(n):
 
 sound.write_wav(SE_FILE, sound.build_track(render.DURATION))
 cmd = [FF, '-y', '-framerate', str(render.FPS), '-i', FRAMES + '/%05d.png', '-i', SE_FILE]
-labels, filt, idx = ['[1:a]'], [], 1
+# 効果音を下げ、声を上げる。実測で、200msごとの音量が中央値より
+# 6dB以上大きい区間が 13.9% あった（参考5本の中央値は4.5%）。
+# しかも全体は -13.9LUFS と参考(-12.0)より小さい。
+# 「効果音がうるさい」と「ナレーションが小さい」が同時に起きていた。
+filt = ["[1:a]volume=%.2f[se]" % SE_VOL]
+labels, idx = ['[se]'], 1
 if nar:
-    idx += 1; cmd += ['-i', nar]; labels.append('[%d:a]' % idx)
+    idx += 1; cmd += ['-i', nar]
+    filt.append("[%d:a]volume=%.2f[nar]" % (idx, NAR_VOL))
+    labels.append('[nar]')
 if os.path.exists('bgm.mp3'):
     idx += 1; cmd += ['-stream_loop', '-1', '-i', 'bgm.mp3']
     filt.append("[%d:a]extrastereo=m=1.8,volume='%s':eval=frame[b]"
                 % (idx, sound.volume_expr(0.64 if nar else 1.0)))
     labels.append('[b]')
 mix = ''.join(labels) + 'amix=inputs=%d:duration=first:normalize=0[m]' % len(labels)
-lim = '[m]alimiter=limit=0.85:level=disabled:attack=3:release=60[a]'
+lim = ('[m]alimiter=limit=0.90:level=disabled:attack=3:release=60[lm];'
+       '[lm]loudnorm=I=%.1f:TP=-1.5:LRA=9[a]' % LUFS)
 cmd += ['-filter_complex', ';'.join(filt + [mix, lim]), '-map', '0:v', '-map', '[a]',
         '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p',
         '-r', str(render.FPS), '-c:a', 'aac', '-b:a', '192k', '-shortest', OUT]

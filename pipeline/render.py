@@ -910,6 +910,14 @@ def draw_logo(canvas, t):
 
 # ------------------------------------------------------------- ズーム
 
+# 寄りと振りの量。第12話の実測で、1.6秒の顔カットの中でカワウソの
+# 面積が2.3〜4.3倍に変わっていた。振り幅 0.84 は画面の84%を横切る量で、
+# 実績のある編集者から「キャラがドアップで右左に動く意味が分からん」と
+# 指摘された所。既定は今までのままにして、話ごとに下げられるようにする。
+FACE_Z, FACE_PAN, FACE_DRIFT = 1.34, 0.84, 0.06
+TEXT_Z, TEXT_PAN, TEXT_DRIFT = 1.26, 0.30, 0.03
+
+
 def apply_zoom(im, s, t):
     p = min(1.0, max(0.0, (t - s['t']) / s['dur']))
     # ショットの中ほどで一段だけ寄る。カットを増やさずに変化を足す。
@@ -928,8 +936,8 @@ def apply_zoom(im, s, t):
     # 1.34倍で端まで振ると、見えるのは元の横幅の 53% しかない。
     # 黒板の文字はそこからはみ出して切れるので、文字ショットは控えめにする。
     text_shot = s['kind'] in ('board', 'wide', 'stage')
-    Z, PAN = (1.26, 0.30) if text_shot else (1.34, 0.84)
-    drift = (0.03 if text_shot else 0.06) * \
+    Z, PAN = (TEXT_Z, TEXT_PAN) if text_shot else (FACE_Z, FACE_PAN)
+    drift = (TEXT_DRIFT if text_shot else FACE_DRIFT) * \
         math.sin(2*math.pi*((t - s['t']) / max(s['dur'],.01)) * 0.5)
     c0 = 0.5 - PAN/2
     if z == 'in':    k, ox, oy = 1 + (Z-1)*p + step, 0.5, 0.5 + drift
