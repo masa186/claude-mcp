@@ -126,7 +126,13 @@ for _s in render.SHOTS:
 
 OUT, FRAMES = 'ep12.mp4', 'frames12'
 VOICE_FILE, SE_FILE = 'voice12.wav', 'se12.wav'
-SE_VOL, NAR_VOL, LUFS = 0.42, 1.0, -12.0
+SE_VOL, LUFS = 0.42, -11.0
+# 声の段差を潰す。実測で分かったのは、突き出ていたのは効果音ではなく
+# ナレーション自身だった（声だけで突出16.4%／効果音だけなら-19.8LUFSで
+# もともと声より6dB下）。効果音を0.28倍まで落としても数字が動かず、
+# 声を圧縮した途端に 15.8% → 3.3% まで下がった。
+# 決め台詞だけ音量を上げる作りが、行ごとの段差になっていた。
+NAR_COMP = 'acompressor=threshold=0.10:ratio=2.5:attack=10:release=200:makeup=1.5'
 
 # 顔のカットで画面の84%を横切って振っていた。1.6秒のカットの中で
 # カワウソの面積が2.3〜4.3倍に変わる量で、「ドアップで右左に動く意味が
@@ -183,7 +189,7 @@ filt = ["[1:a]volume=%.2f[se]" % SE_VOL]
 labels, idx = ['[se]'], 1
 if nar:
     idx += 1; cmd += ['-i', nar]
-    filt.append("[%d:a]volume=%.2f[nar]" % (idx, NAR_VOL))
+    filt.append("[%d:a]%s[nar]" % (idx, NAR_COMP))
     labels.append('[nar]')
 if os.path.exists('bgm.mp3'):
     idx += 1; cmd += ['-stream_loop', '-1', '-i', 'bgm.mp3']
@@ -191,8 +197,8 @@ if os.path.exists('bgm.mp3'):
                 % (idx, sound.volume_expr(0.64 if nar else 1.0)))
     labels.append('[b]')
 mix = ''.join(labels) + 'amix=inputs=%d:duration=first:normalize=0[m]' % len(labels)
-lim = ('[m]alimiter=limit=0.90:level=disabled:attack=3:release=60[lm];'
-       '[lm]loudnorm=I=%.1f:TP=-1.5:LRA=9[a]' % LUFS)
+lim = ('[m]alimiter=limit=0.92:level=disabled:attack=3:release=60[lm];'
+       '[lm]loudnorm=I=%.1f:TP=-1.5:LRA=7[a]' % LUFS)
 cmd += ['-filter_complex', ';'.join(filt + [mix, lim]), '-map', '0:v', '-map', '[a]',
         '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p',
         '-r', str(render.FPS), '-c:a', 'aac', '-b:a', '192k', '-shortest', OUT]
