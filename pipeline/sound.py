@@ -347,6 +347,33 @@ def warn(v=0):
     return tail(lowpass(y, 2600) * env(n, 0.004, 1.2), (0.015,), (0.18,))
 
 
+
+def swap(v=0):
+    """場面の切り替わりに置く一撃。切り抜きの型で一番よく鳴っている音。
+
+    SMPクリップの実物から背景を差し引いて測ったら、
+    低音19.7% / 中音21.5% / 高音58.8%、一番強いのが100Hz だった。
+    Vine Boom のような低音だけの音ではなく、
+    100Hz の重い一撃の上に高音の破裂を重ねた形。
+    切り替わりの85ms後に、背景の13.9倍の大きさで鳴っていた。
+
+    配合は、その3つの帯域の割合に合わせて探した（ずれ0.3）。
+    ※ 手本は元動画から背景を引いた推定なので、同じ音ではない。
+       「同じ役割・同じ聞こえ方の音」を自前で作ったもの。
+    """
+    n = int(SR * 0.34)
+    t = np.arange(n) / SR
+    body = (np.sin(2 * np.pi * 100 * t) * np.exp(-t * 26)
+            + 0.45 * np.sin(2 * np.pi * 62 * t) * np.exp(-t * 20))
+    rng = np.random.RandomState(v + 41)
+    nz = rng.randn(n)
+    hi = (nz - lowpass(nz, 2600)) * np.exp(-t * 34)
+    mid = bandnoise(n, 250, 2400, 1.0, v + 7) * np.exp(-t * 26)
+    x = 2 * body + 0.4 * hi + 1.6 * mid
+    x[:int(SR * 0.003)] *= np.linspace(0, 1, int(SR * 0.003))
+    return x / max(np.abs(x).max(), 1e-9)
+
+
 def wind(dur, seed=7):
     """実写の飛行機に敷く環境音。風とエンジンの唸り。
 
