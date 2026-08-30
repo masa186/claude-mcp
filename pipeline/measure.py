@@ -14,7 +14,7 @@
   ※ 埋まりは必ず黒の上に重ねてから測る。convert('L') は透明を捨てるので、
      アルファ付きのまま測ると余白まで「埋まっている」ことになる。
 """
-import os, sys, subprocess
+import os, sys, re, subprocess
 import numpy as np
 import imageio_ffmpeg as ie
 
@@ -23,10 +23,28 @@ CUT = 18          # この値を超えた差を「切り替わり」と見なす
 FILL = 60         # 中央値の色からこれだけ離れたら「何か描いてある」
 
 
-def frames(path):
+def fps_of(path):
+    """実際のコマ数/秒を読む。
+
+    30fps を決め打ちしていたら、60fps の動画で尺が2倍・秒/カットが2倍に
+    出てしまった。参考と自作を並べる物差しなので、ここは必ず実測する。
+    """
+    o = subprocess.run([ie.get_ffmpeg_exe(), '-i', path],
+                       capture_output=True, text=True).stderr
+    m = re.findall(r'([\d.]+) fps', o)
+    return float(m[0]) if m else 30.0
+
+
+def frames(path, at=30.0):
+    """秒あたり at コマに揃えて読む。
+
+    60fps の動画をそのまま読むと、隣り合うコマの間隔が半分になるので
+    「動き」が小さく出る。30fps の参考と並べられなくなるため、
+    どの動画も同じ時間間隔に落としてから測る。
+    """
     ff = ie.get_ffmpeg_exe()
     p = subprocess.Popen(
-        [ff, '-v', 'error', '-i', path, '-vf', f'scale={W}:{H}',
+        [ff, '-v', 'error', '-i', path, '-vf', f'fps={at},scale={W}:{H}',
          '-f', 'rawvideo', '-pix_fmt', 'gray', '-'],
         stdout=subprocess.PIPE)
     n = W * H
@@ -45,7 +63,7 @@ def measure(path):
     d = np.array([np.abs(fs[i] - fs[i - 1]).mean() for i in range(1, len(fs))])
     fill = np.array([(np.abs(f - np.median(f)) > FILL).mean() for f in fs])
     cuts = int((d > CUT).sum())
-    sec = len(fs) / 30.0
+    sec = len(fs) / 30.0        # frames() で30コマ/秒に揃えている
     return dict(尺=sec, コマ=len(fs), 動き=float(np.median(d)),
                 カット=cuts, 秒每カット=sec / cuts if cuts else float('inf'),
                 埋まり=float(fill.mean()) * 100)
