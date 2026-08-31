@@ -11,10 +11,16 @@ for p in ('/root/yt-analysis/.env', os.path.join(os.path.dirname(os.path.abspath
             k,_,v=line.strip().partition('=')
             if k and v: os.environ.setdefault(k,v.strip())
 
-def ask(vid, prompt, model=None):
-    body=json.dumps({'contents':[{'parts':[
-        {'file_data':{'file_uri':'https://www.youtube.com/watch?v='+vid}},
-        {'text':prompt}]}],
+def ask(vid, prompt, model=None, start=None, end=None):
+    """start/end に "1:23:45" を渡すと、その区間だけを見せられる。
+    11時間の配信から場面を探すのに要る。"""
+    part = {'file_data': {'file_uri': 'https://www.youtube.com/watch?v=' + vid}}
+    if start or end:
+        md = {}
+        if start: md['startOffset'] = start
+        if end:   md['endOffset'] = end
+        part['videoMetadata'] = md
+    body=json.dumps({'contents':[{'parts':[part,{'text':prompt}]}],
         'generationConfig':{'temperature':0.3,'maxOutputTokens':4000}}).encode()
     r=urllib.request.Request(HOST+'/v1beta/models/%s:generateContent'%(model or MODEL),
         data=body, headers={'x-goog-api-key':os.environ['GEMINI_API_KEY'],
@@ -25,4 +31,6 @@ def ask(vid, prompt, model=None):
     except Exception: return json.dumps(j,ensure_ascii=False)[:1200]
 
 if __name__=='__main__':
-    print(ask(sys.argv[1], sys.argv[2]))
+    a=sys.argv[1:]
+    print(ask(a[0], a[1], start=(a[2] if len(a)>2 else None),
+              end=(a[3] if len(a)>3 else None)))
