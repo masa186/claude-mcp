@@ -11,6 +11,48 @@ if not os.path.exists(FF):
     FF = 'ffmpeg'
 
 
+def find_band(src, fps=2, w=200):
+    """字幕帯が縦のどこにあるかを自動で探す。
+
+    動画ごとに高さが違う（47%のものも70%のものもある）ので、
+    固定値で切ると丸ごと取り落とす。
+
+    顔カメラも明るくて動くので、明るさだけでは区別できない。
+    **字は「振り切った明るい点のすぐ横に黒フチがある」**のが特徴なので、
+    それを数える。肌や空にはこの並びが出ない。
+    """
+    probe = subprocess.run([FF, '-v', 'error', '-i', src, '-vf', f'scale={w}:-1',
+        '-frames:v', '1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
+        capture_output=True).stdout
+    h = len(probe) // (w * 3)
+    raw = subprocess.run([FF, '-v', 'error', '-i', src, '-vf',
+        f'fps={fps},scale={w}:-1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
+        capture_output=True).stdout
+    n = len(raw) // (w * h * 3)
+    a = np.frombuffer(raw[:n*w*h*3], np.uint8).reshape(n, h, w, 3).astype(np.float32)
+    mx = a.max(axis=3)
+    bright = mx > 180
+    dark = mx < 60
+    # 横に±4px 以内に黒フチがあるか
+    near = np.zeros_like(dark)
+    for k in range(1, 5):
+        near[:, :, k:] |= dark[:, :, :-k]
+        near[:, :, :-k] |= dark[:, :, k:]
+    txt = (bright & near).mean(axis=2)            # コマ×行
+    txt = txt[:, :]
+    score = ((txt > 0.02) & (txt < 0.45)).mean(axis=0)
+    score[:int(h*0.22)] = 0                       # 上の固定タイトルを除く
+    score[int(h*0.88):] = 0                       # 下の黒帯を除く
+    win = max(4, int(h*0.06))
+    best, bi = -1, int(h*0.63)
+    for i in range(int(h*0.22), int(h*0.88)-win):
+        v = score[i:i+win].sum()
+        if v > best:
+            best, bi = v, i
+    lo = max(0.22, bi/h - 0.02)
+    return round(lo, 3), round(min(0.88, lo + win/h + 0.045), 3)
+
+
 def scan(src, out, lo=0.63, hi=0.77, fps=10, w=180):
     probe = subprocess.run([FF, '-v', 'error', '-i', src, '-vf',
         f'crop=iw:ih*{hi-lo}:0:ih*{lo},scale={w}:-1', '-frames:v', '1',
@@ -49,6 +91,9 @@ def scan(src, out, lo=0.63, hi=0.77, fps=10, w=180):
 
 
 if __name__ == '__main__':
-    scan(sys.argv[1], sys.argv[2],
-         float(sys.argv[3]) if len(sys.argv) > 3 else 0.63,
-         float(sys.argv[4]) if len(sys.argv) > 4 else 0.77)
+    if len(sys.argv) > 4:
+        lo, hi = float(sys.argv[3]), float(sys.argv[4])
+    else:
+        lo, hi = find_band(sys.argv[1])
+        print(f"字幕帯を自動検出: {lo*100:.1f}%〜{hi*100:.1f}%")
+    scan(sys.argv[1], sys.argv[2], lo, hi)
