@@ -1,0 +1,48 @@
+# ---- 作り直せるもの（置かない）
+# 書き出した連番。話ごとに frames1 / frames2 … と増えるので、まとめて外す。
+# 1本ぶんで1300枚あり、動画から作り直せるものなのでリポジトリには置かない。
+frames*/
+se.wav
+se2.wav
+se_preview.wav
+se_chosen.wav
+voice.wav
+voice2.wav
+voice_demo.wav
+narration_script.txt
+ep01.mp4
+ep02.mp4
+build.log
+build2.log
+ref/
+cand/
+cand2/
+
+# mkpng.py / mkanim.py が作る図
+assets/[0-9]*_*.png
+
+# mkanim.py が作る連番
+clips/airflow/
+clips/airlift/
+clips/wingrace/
+clips/aoa/
+clips/hand/
+clips/same/
+
+# 元の動画。大きいので置かない（prep_clips.py で連番を作り直せる）
+clips/src*.mp4
+clips/*.png
+
+# ---- もらった素材（置いておく）
+# コンテナが片付くと消えるので、これだけはリポジトリに入れる
+!assets/char_*.png
+# mklips.py が作る口だけ差し替えた絵
+assets/char_*_mouth.png
+!se/*.wav
+!bgm.mp3
+lips_sheet.png
+voicevox/
+
+# チャンネルのアイコンとバナー（mkbrand.py で作り直せるが、
+# 上げたものと同じものを残しておきたい）
+!brand/*.png

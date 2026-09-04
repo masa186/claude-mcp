@@ -1,0 +1,790 @@
+"""
+効果音トラックを作る ＋ BGMの音量設計を出す
+=============================================
+render.py の SHOTS から、カットの切り替わりと指し棒のタップを拾って
+効果音を鳴らした1本のWAVを書き出す。効果音そのものもここで合成するので、
+素材をどこかから拾ってくる必要はない。
+
+  python3 sound.py              # se.wav を書き出し、BGMの音量式を表示
+  python3 sound.py --preview    # 効果音3種だけを並べた確認用WAVも書き出す
+
+出てくるもの:
+  se.wav   … 動画と同じ長さの効果音トラック（ナレーションとBGMに重ねる）
+  BGMの音量オートメーション式（ffmpeg の volume= にそのまま貼る）
+"""
+import os, wave, argparse, math, glob
+import numpy as np
+import render
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+SR = 44100
+
+
+# ------------------------------------------------------------- 効果音の合成
+
+def env(n, attack=0.004, power=2.2):
+    a = max(1, int(SR * attack))
+    e = np.ones(n)
+    e[:a] = np.linspace(0, 1, a)
+    e[a:] = (1 - np.linspace(0, 1, n - a)) ** power
+    return e
+
+
+def tail(x, times=(0.021, 0.037, 0.058), gains=(0.30, 0.19, 0.11)):
+    """短い残響。合成音が「ペラい」と感じるのは、ほぼ余韻が無いから。"""
+    out = np.zeros(len(x) + int(SR * 0.20))
+    out[:len(x)] = x
+    for tt, g in zip(times, gains):
+        d = int(SR * tt)
+        out[d:d+len(x)] += x * g
+    dec = np.exp(-np.arange(len(out)) / (SR * 0.075))
+    return out * dec
+
+
+def lowpass(x, fc, poles=2):
+    """高域を落として重心を下げる。合成音が安く聞こえる一番の原因は
+    「シャリついた高域ばかりで芯が無い」こと。"""
+    k = 1 - math.exp(-2 * math.pi * fc / SR)
+    y = x.copy()
+    for _ in range(poles):
+        acc = 0.0
+        out = np.empty_like(y)
+        for i in range(len(y)):
+            acc += k * (y[i] - acc)
+            out[i] = acc
+        y = out
+    return y
+
+
+def bandnoise(n, f0, f1, q, seed):
+    """共振する帯域を f0→f1 へ動かしながらノイズを通す。whoosh の芯になる。"""
+    rng = np.random.default_rng(seed)
+    x = rng.normal(0, 1, n)
+    y = np.zeros(n)
+    lp = bp = 0.0
+    for i in range(n):
+        f = f0 + (f1 - f0) * (i / n)
+        k = min(0.99, 2 * math.pi * f / SR)
+        hp = x[i] - lp - q * bp
+        bp += k * hp
+        lp += k * bp
+        y[i] = bp
+    return y / (np.abs(y).max() + 1e-9)
+
+
+def modal(n, freqs, gains, decays):
+    """減衰する正弦を重ねる。木や金属の「当たり」はこれで出る。"""
+    t = np.arange(n) / SR
+    y = np.zeros(n)
+    for f, g, d in zip(freqs, gains, decays):
+        y += g * np.sin(2 * math.pi * f * t) * np.exp(-t * d)
+    return y
+
+
+def whoosh(v=0):
+    """カットの切り替わり。空気が抜ける「シュッ」。"""
+    dur = 0.16 + 0.02 * v
+    n = int(SR * dur)
+    core = lowpass(bandnoise(n, 500 + 90*v, 1900 + 200*v, 0.32, 7 + v), 2200)
+    body = modal(n, (190 + 16*v, 330), (0.60, 0.34), (22, 30))
+    y = (core * 1.5 + body) * env(n, 0.006, 2.0)
+    return tail(y, (0.017, 0.031), (0.26, 0.15)) * 0.34
+
+
+def don(v=0):
+    """章の切り替わり。低域だけだとスマホで鳴らないので中高域を重ねる。"""
+    dur = 0.42
+    n = int(SR * dur)
+    t = np.arange(n) / SR
+    f = (190 + 20*v) * np.exp(-t * 9) + 72
+    sub = np.sin(2 * math.pi * np.cumsum(f) / SR) * np.exp(-t * 7)
+    mid = modal(n, (430, 690, 1180, 1900), (0.62, 0.44, 0.30, 0.16), (16, 22, 30, 38))
+    hit = lowpass(bandnoise(int(SR*0.05), 900, 2400, 0.5, 31 + v), 2600)
+    y = sub * 0.42 + mid * 1.5
+    y[:len(hit)] += hit * 0.30
+    y = lowpass(y * env(n, 0.002, 1.5), 5200)
+    return tail(y, (0.028, 0.049, 0.077), (0.34, 0.22, 0.13)) * 0.5
+
+
+def ton(v=0):
+    """指し棒が黒板を叩く音。木の当たりなので倍音は整数比にしない。"""
+    n = int(SR * 0.22)
+    body = modal(n, (430 + 22*v, 1080, 1720, 2540),
+                    (0.66, 0.30, 0.15, 0.07), (30, 44, 58, 78))
+    click = lowpass(bandnoise(int(SR*0.02), 1200, 3000, 0.6, 11 + v), 3000)
+    y = body * env(n, 0.0008, 2.4)
+    y[:len(click)] += click * 0.22
+    return tail(lowpass(y, 5000), (0.013, 0.026), (0.24, 0.13)) * 0.42
+
+
+def chalk(v=0):
+    """黒板に文字が書かれる音。細かい擦れの粒。"""
+    dur = 0.30
+    n = int(SR * dur)
+    rng = np.random.default_rng(23 + v)
+    grains = np.zeros(n)
+    step = int(SR * 0.0095)
+    for i in range(0, n - step, step):
+        grains[i:i+step] += rng.normal(0, 1, step) * np.hanning(step) * (0.4 + 0.6*rng.random())
+    y = np.zeros(n); acc = 0.0
+    for i in range(n):
+        acc += 0.40 * (grains[i] - acc)
+        y[i] = grains[i] - acc
+    y = lowpass(y, 1150) * 7.0                          # 12kHz のシャリつきを落とす
+    y += modal(n, (300, 520), (0.16, 0.09), (12, 18))   # 芯を足す
+    y *= env(n, 0.008, 1.1)
+    return tail(y, (0.019,), (0.18,)) * 0.26
+
+
+def reveal(v=0):
+    """答え・否定が出る瞬間の「キラン」。倍音を整数比から少しずらして、
+    ベルにも金物にも寄りすぎない位置に置く。"""
+    n = int(SR * 0.55)
+    y = modal(n, (1180 + 30*v, 1790, 2410, 3260, 4380),
+                 (0.55, 0.40, 0.26, 0.15, 0.08),
+                 (5.0, 6.5, 8.5, 11.0, 15.0))
+    y += modal(n, (590, 880), (0.22, 0.14), (4.0, 5.5))     # 下の芯
+    y *= env(n, 0.002, 0.9)
+    return tail(lowpass(y, 6200), (0.031, 0.057, 0.092), (0.30, 0.20, 0.12)) * 0.40
+
+
+def impact(v=0):
+    """オチの一撃。ドンより重く、余韻を長めに取る。"""
+    n = int(SR * 0.70)
+    t = np.arange(n) / SR
+    f = (150 + 14*v) * np.exp(-t * 11) + 52
+    sub = np.sin(2 * math.pi * np.cumsum(f) / SR) * np.exp(-t * 4.2)
+    body = modal(n, (240, 390, 620, 1050), (0.5, 0.34, 0.22, 0.12), (9, 13, 18, 26))
+    hit = lowpass(bandnoise(int(SR*0.07), 700, 2600, 0.45, 41 + v), 2400)
+    y = sub * 0.62 + body * 1.1
+    y[:len(hit)] += hit * 0.34
+    y = lowpass(y * env(n, 0.002, 1.2), 4200)
+    return tail(y, (0.034, 0.061, 0.098), (0.36, 0.24, 0.15)) * 0.55
+
+
+def rise(v=0):
+    """溜め。次に何か出るぞ、と思わせる上昇音。"""
+    n = int(SR * 0.85)
+    t = np.arange(n) / SR
+    f = 260 + 520 * (t / t[-1]) ** 1.7
+    y = np.sin(2 * math.pi * np.cumsum(f) / SR) * 0.5
+    y += np.sin(2 * math.pi * np.cumsum(f * 1.5) / SR) * 0.22
+    y += lowpass(bandnoise(n, 900, 3400, 0.35, 53 + v), 3600) * 0.5
+    y *= np.linspace(0, 1, n) ** 1.4
+    y[-int(SR*0.06):] *= np.linspace(1, 0, int(SR*0.06))
+    return tail(lowpass(y, 5200), (0.026, 0.048), (0.22, 0.13)) * 0.34
+
+
+def pa(v=0):
+    """文字が出る瞬間の「パッ」。伸びているショート40本のうち20本で聞こえた音。
+
+    黒板のチョーク音は、実際にチョークで書いている board のときだけ使う。
+    stage の行は板の上に浮いている字なので、擦れではなく破裂音のほうが合う。
+    ポンより短く、キランより低い。ここが空いていた。
+    """
+    n = int(SR * 0.14)
+    click = lowpass(bandnoise(int(SR*0.012), 1800, 6000, 0.5, 61 + v), 7000)
+    body = modal(n, (900 + 40*v, 1520, 2340), (0.55, 0.30, 0.16), (34, 46, 62))
+    y = body * env(n, 0.001, 2.6)
+    y[:len(click)] += click * 0.42
+    return tail(lowpass(y, 7000), (0.011, 0.021), (0.20, 0.11)) * 0.30
+
+
+def dodon(v=0):
+    """決め台詞の「ドドン」。40本の記録では、決め台詞に低音の二連打が15本、
+    キランが10本。こちらは一撃しか持っていなかったので足す。"""
+    gap = int(SR * 0.115)
+    a, b = impact(v), impact(v + 1)
+    n = gap + len(b)
+    y = np.zeros(n)
+    y[:len(a)] += a * 0.72          # 1発目は軽く
+    y[gap:gap+len(b)] += b          # 2発目で決める
+    return y * 0.86
+
+
+
+# ------------------------------- 物の音（第7話から）
+#
+# 参考チャンネル4本を1本ずつ聞いた記録では、4本とも効果音が「物の音」だった
+# （金属の打撃・水流・ドリル・火花・ビー玉の擦れ）。こちらは黒板なので
+# 物が映っていない、と一度は諦めたが、それは間違いだった。
+# 図が描いているのは火・折れる棒・落ちる蚊で、どれも音を持っている。
+# 「ポン」「シュッ」のような編集の音だけでは、絵と音がつながらない。
+
+def crackle(v=0):
+    """火がパチパチいう音。短い破裂を不等間隔で重ねる。
+
+    等間隔に置くと機械の音になる。実際の焚き火は間隔がばらばらなので、
+    乱数で散らして、1粒ずつ高さも変える。"""
+    rng = np.random.default_rng(90 + v)
+    n = int(SR * 0.42)
+    y = np.zeros(n)
+    for _ in range(9):
+        at = int(rng.uniform(0, 0.36) * SR)
+        ln = int(SR * rng.uniform(0.004, 0.012))
+        pop = rng.normal(0, 1, ln) * env(ln, 0.0008, 3.4)
+        pop = lowpass(pop, rng.uniform(1600, 4200))
+        y[at:at+ln] += pop * rng.uniform(0.35, 1.0)
+    return tail(y, (0.013, 0.028), (0.22, 0.12))
+
+
+def snap(v=0):
+    """棒がパキッと折れる音。乾いた破裂＋木の胴鳴り。"""
+    n = int(SR * 0.26)
+    crack = np.random.default_rng(70 + v).normal(0, 1, n) * env(n, 0.0006, 6.0)
+    crack = lowpass(crack, 3400)
+    body = modal(n, (300 + 24*v, 640, 1180), (0.9, 0.5, 0.25), (46, 62, 88))
+    body *= env(n, 0.0009, 3.0)
+    return tail(crack * 0.85 + body * 0.6, (0.017, 0.031), (0.26, 0.14))
+
+
+def drop(v=0):
+    """小さいものがポトッと落ちる音。低めで短く、余韻を残さない。"""
+    n = int(SR * 0.16)
+    y = modal(n, (170 + 12*v, 340, 520), (1.0, 0.42, 0.18), (58, 78, 108))
+    y *= env(n, 0.0012, 3.6)
+    thud = lowpass(np.random.default_rng(50 + v).normal(0, 1, n), 900)
+    return tail(y + thud * 0.30 * env(n, 0.001, 6.0), (0.011,), (0.18,))
+
+
+# ------------------------------- 金属の音（第7話・缶詰）
+#
+# 効果音ラボで探してもらったが「金属を叩く」「缶切りを回す」は見つからなかった。
+# 金属の当たりは modal()（減衰する正弦の重ね合わせ）で作れる。
+# 木や皮と違うのは、倍音が整数比から外れていること。そこをずらすと金属になる。
+
+def clang(v=0):
+    """分厚い鉄を叩く音。缶が硬くて開かない段で使う。
+
+    倍音を 1 : 2.76 : 5.40 : 8.93 に置く。円板の振動の実際の比に近い。
+    整数比（1:2:3）にすると鐘ではなく太鼓に聞こえる。"""
+    n = int(SR * 0.62)
+    f0 = 196.0 + 11 * v
+    y = modal(n, (f0, f0*2.76, f0*5.40, f0*8.93, f0*13.3),
+              (1.0, 0.66, 0.42, 0.26, 0.14), (7.0, 9.5, 13.0, 18.0, 26.0))
+    y *= env(n, 0.0007, 1.1)
+    hit = lowpass(np.random.default_rng(30 + v).normal(0, 1, n) *
+                  env(n, 0.0005, 9.0), 2600)
+    return tail(y * 0.9 + hit * 0.5, (0.019, 0.034, 0.052), (0.30, 0.19, 0.11))
+
+
+def tear(v=0):
+    """金属を切り裂く音。てこ式の缶切りでこじ開ける段。
+
+    帯域を上へ動かすノイズに、薄い金属の鳴りを混ぜる。"""
+    n = int(SR * 0.46)
+    rip = bandnoise(n, 900, 3400, 0.55, 40 + v) * env(n, 0.004, 1.5)
+    ring = modal(n, (620 + 30*v, 1490, 2380), (0.5, 0.32, 0.18), (14, 20, 28))
+    ring *= env(n, 0.006, 1.8)
+    return tail(rip * 0.85 + ring * 0.45, (0.015, 0.029), (0.24, 0.13))
+
+
+def ratchet(v=0):
+    """缶切りを回すゴリゴリ。答えの段で使う。
+
+    等間隔の小さい打撃を並べる。実物は歯が缶の縁を噛んでいく音なので、
+    1粒ずつわずかに高さを変えて、機械の連続音に聞こえないようにする。"""
+    n = int(SR * 0.70)
+    y = np.zeros(n)
+    rng = np.random.default_rng(60 + v)
+    step = int(SR * 0.052)
+    for k in range(12):
+        at = k * step + int(rng.uniform(-0.004, 0.004) * SR)
+        if at < 0 or at >= n - 100:
+            continue
+        ln = min(int(SR * 0.045), n - at)
+        f0 = 430 * (1 + 0.05 * rng.normal())
+        c = modal(ln, (f0, f0*2.9, f0*5.1), (1.0, 0.5, 0.25), (52, 70, 96))
+        c *= env(ln, 0.0006, 4.2)
+        y[at:at+ln] += c * rng.uniform(0.7, 1.0)
+    return tail(y, (0.012, 0.024), (0.20, 0.10))
+
+
+def pssh(v=0):
+    """缶が開いて空気が抜ける音。完成の瞬間。"""
+    n = int(SR * 0.40)
+    air = bandnoise(n, 5200, 1500, 0.9, 20 + v) * env(n, 0.003, 1.9)
+    pop = modal(n, (240, 700), (0.7, 0.3), (60, 90)) * env(n, 0.0008, 6.0)
+    return tail(air * 0.8 + pop * 0.5, (0.014,), (0.18,))
+
+
+
+def tick(v=0):
+    """時間が経つ音。実素材（se/tick*.wav）がある前提の受け皿。
+
+    「48年間」のように年月が飛ぶ場面で使う。合成側は保険なので、
+    等間隔の小さい打撃を並べただけの素朴なものにしてある。"""
+    n = int(SR * 1.4)
+    y = np.zeros(n)
+    step = int(SR * 0.20)
+    for k in range(7):
+        at = k * step
+        ln = min(int(SR * 0.06), n - at)
+        if ln <= 0:
+            break
+        c = modal(ln, (1180, 2360, 3900), (1.0, 0.4, 0.2), (70, 96, 130))
+        y[at:at+ln] += c * env(ln, 0.0006, 5.0) * (0.75 if k % 2 else 1.0)
+    return tail(y, (0.012,), (0.16,))
+
+
+
+def gun(v=0):
+    """銃声。実素材（se/gun*.wav）がある前提の受け皿。
+    兵士が缶を銃で撃って開けていた、という段で使う。"""
+    n = int(SR * 0.55)
+    body = lowpass(np.random.default_rng(11 + v).normal(0, 1, n), 1400)
+    body *= env(n, 0.0004, 2.6)
+    crack = np.random.default_rng(12 + v).normal(0, 1, n) * env(n, 0.0003, 9.0)
+    return tail(body * 0.9 + crack * 0.5, (0.022, 0.041), (0.28, 0.16))
+
+
+def warn(v=0):
+    """警告音。失敗した所で鳴らす。"""
+    n = int(SR * 0.50)
+    t = np.arange(n) / SR
+    y = np.sign(np.sin(2 * math.pi * (720 + 40 * v) * t)) * 0.5
+    y *= (np.sin(2 * math.pi * 7 * t) > 0)          # 断続させる
+    return tail(lowpass(y, 2600) * env(n, 0.004, 1.2), (0.015,), (0.18,))
+
+
+
+def swap(v=0):
+    """場面の切り替わりに置く一撃。切り抜きの型で一番よく鳴っている音。
+
+    SMPクリップの実物から背景を差し引いて測ったら、
+    低音19.7% / 中音21.5% / 高音58.8%、一番強いのが100Hz だった。
+    Vine Boom のような低音だけの音ではなく、
+    100Hz の重い一撃の上に高音の破裂を重ねた形。
+    切り替わりの85ms後に、背景の13.9倍の大きさで鳴っていた。
+
+    配合は、その3つの帯域の割合に合わせて探した（ずれ0.3）。
+    ※ 手本は元動画から背景を引いた推定なので、同じ音ではない。
+       「同じ役割・同じ聞こえ方の音」を自前で作ったもの。
+    """
+    n = int(SR * 0.34)
+    t = np.arange(n) / SR
+    body = (np.sin(2 * np.pi * 100 * t) * np.exp(-t * 26)
+            + 0.45 * np.sin(2 * np.pi * 62 * t) * np.exp(-t * 20))
+    rng = np.random.RandomState(v + 41)
+    nz = rng.randn(n)
+    hi = (nz - lowpass(nz, 2600)) * np.exp(-t * 34)
+    mid = bandnoise(n, 250, 2400, 1.0, v + 7) * np.exp(-t * 26)
+    x = 2 * body + 0.4 * hi + 1.6 * mid
+    x[:int(SR * 0.003)] *= np.linspace(0, 1, int(SR * 0.003))
+    return x / max(np.abs(x).max(), 1e-9)
+
+
+def wind(dur, seed=7):
+    """実写の飛行機に敷く環境音。風とエンジンの唸り。
+
+    こちらの動画と伸びている14本を並べて見比べたところ、環境音（飛行機の音・
+    水の音・筆の音）を敷いているのが7本あり、こちらは1つも無かった。
+    効果音は「点」で鳴るが、環境音は「面」で鳴る。実写が出ている数秒だけでも
+    敷くと、絵と音が同じ場所にある感じが出る。
+    """
+    n = int(SR * dur)
+    rng = np.random.default_rng(seed)
+    # 風：低い帯のノイズ。ゆっくり強弱をつけないと「サー」という無機質な音になる
+    air = lowpass(rng.normal(0, 1, n), 900, 2)
+    t = np.arange(n) / SR
+    swell = 0.55 + 0.45 * np.sin(2*math.pi*0.23*t + 1.1) * np.sin(2*math.pi*0.07*t)
+    # エンジン：低い唸り。倍音を少しずらして単調な正弦に聞こえないようにする
+    hum = (np.sin(2*math.pi*78*t) * 0.5 + np.sin(2*math.pi*117.5*t) * 0.22
+           + np.sin(2*math.pi*163*t) * 0.10)
+    y = air * swell * 2.2 + hum * 0.30
+    # 出入りをなめらかに。切り替わりで「ブツッ」と入ると逆に安っぽい
+    f = int(SR * 0.28)
+    y[:f] *= np.linspace(0, 1, f)
+    y[-f:] *= np.linspace(1, 0, f)
+    m = np.abs(y).max()
+    return y * (0.11 / m) if m > 0 else y
+
+
+def amb_events():
+    """(開始秒, 長さ) … 環境音を敷く区間。実写が出ているショットだけ。"""
+    out = []
+    for s in render.SHOTS:
+        if s.get('amb', s.get('clip') is not None):
+            out.append((s['t'], s['dur'] + 0.35))   # 少し引っぱって次に繋ぐ
+    return out
+
+
+VARIANTS = 3          # 毎回まったく同じ波形だと機械っぽく聞こえる
+
+SE_DIR = os.path.join(HERE, 'se')
+
+# 本物の効果音があればそちらを使う。合成音はあくまで代役。
+#   se/whoosh.wav  カットの切り替わり・映像が入る
+#   se/pop.wav     文字・図が出る
+#   se/don.wav     章の切り替わり・重要な答え
+#   se/tap.wav     指し棒で黒板を叩く
+#   se/rise.wav    溜め（ズームの前）
+#   se/reveal.wav  答え・否定が出る（キラン）
+#   se/impact.wav  オチの一撃
+# pa0.wav は pop.wav の複製。124本の実測で一番多い音が「ポン」（85本）で、
+# 文字が出る瞬間に当てるのが定石だった。こちらはポンを黒板に書くショットだけに
+# 絞っていたので、全体で1回しか鳴っていなかった。文字の枠にポンを入れて、
+# 一番よく鳴る場所を実測の多数派に合わせる。
+REAL = dict(whoosh='whoosh.wav', chalk='pop.wav', don='don.wav',
+            ton='tap.wav', rise='rise.wav', pa='pa.wav', dodon='dodon.wav',
+            reveal='reveal.wav', impact='impact.wav', tick='tick.wav',
+            clang='clang.wav', ratchet='ratchet.wav', pssh='pssh.wav',
+            gun='gun.wav', warn='warn.wav')
+
+
+def load_wav(path):
+    """44.1kHz モノラルに揃えて読む。"""
+    with wave.open(path, 'rb') as w:
+        ch, sw, sr, n = w.getnchannels(), w.getsampwidth(), w.getframerate(), w.getnframes()
+        raw = w.readframes(n)
+    x = np.frombuffer(raw, dtype='<i2').astype(np.float64) / 32768
+    if ch > 1:
+        x = x.reshape(-1, ch).mean(axis=1)
+    if sr != SR:                                   # 直線補間で十分
+        x = np.interp(np.linspace(0, len(x)-1, int(len(x)*SR/sr)),
+                      np.arange(len(x)), x)
+    return x
+
+
+# 役割ごとの最大の長さ。効果音は0.75秒に1回鳴るので、長い音をそのまま
+# 重ねると濁る。頭を残して尻をフェードで落とす。
+MAXLEN = dict(whoosh=0.70, chalk=0.45, don=1.20, ton=0.50, rise=1.60,
+              reveal=1.10, impact=1.40, pa=0.35, dodon=1.60)
+
+
+def centroid(x):
+    w = np.abs(np.fft.rfft(x * np.hanning(len(x))))
+    fr = np.fft.rfftfreq(len(x), 1 / SR)
+    return (w * fr).sum() / (w.sum() + 1e-9)
+
+
+def tilt(x, target=3200.0):
+    """明るすぎる音の高域を落として、束の中で浮かないようにする。"""
+    if len(x) < 64 or centroid(x) <= target:
+        return x
+    for fc in (9000, 7000, 5600, 4600, 3800, 3200, 2700, 2300):
+        x = lowpass(x, fc)
+        if centroid(x) <= target:
+            break
+    return x
+
+
+# 体感の音量をここに合わせる。ピーク値ではなく実効値で揃えるための係数。
+RMS_OF_PEAK = 0.16
+
+
+def level(x, peak):
+    """実効値（RMS）で音量を揃える。最後にピークだけ念のため抑える。"""
+    r = np.sqrt(np.mean(x ** 2))
+    if r <= 0:
+        return x
+    y = x * (peak * RMS_OF_PEAK / r)
+    m = np.abs(y).max()
+    return y * (0.98 / m) if m > 0.98 else y
+
+
+def trim(x, sec):
+    n = int(SR * sec)
+    if len(x) <= n:
+        return x
+    y = x[:n].copy()
+    f = int(SR * 0.08)
+    y[-f:] *= np.linspace(1, 0, f)
+    return y
+
+
+def real_se(kind):
+    """se/pop.wav / se/pop2.wav / se/pop3.wav … と置くと順番に鳴らす。
+    同じ波形が延々続くと、効果音は「癖」として耳につく。
+    増やしたいときはファイルを足すだけでいい。"""
+    f = REAL.get(kind)
+    if not f:
+        return None
+    base = os.path.splitext(f)[0]
+    xs = []
+    for p in sorted(glob.glob(os.path.join(SE_DIR, base + '*.wav'))):
+        try:
+            xs.append(load_wav(p))
+        except Exception:
+            pass
+    return xs or None
+
+
+# ------------------------------------------------------------- 配置
+
+def se_events():
+    """(秒, 音の種類) を SHOTS から作る。
+
+    伸びているショート40本を1本ずつ聞いた記録（~/yt-analysis/data/sound.md）で
+    分かったこと:
+      ・音を置く瞬間は「文字が出る時」40/40、「画面が切り替わる時」38/40。
+        つまりカットには例外なく音が付いている
+      ・頻度は 1.1〜1.5秒に1回が最多（12本）。こちらは 2.2秒に1回で遅かった
+      ・決め台詞は低音の二連打（ドドン）15本 ＞ キラン 10本
+    以前は「意味のあるところだけ鳴らす」にしていたが、それは鳴らしすぎを
+    避けるための判断で、実測は逆だった。カットには必ず音を置く。
+
+      whoosh … 何かが入ってくる／動く（スクリーンが降りる・映像が入る）
+      pa     … 板の上に浮いた文字が出る（40本中20本で聞こえた「パッ」）
+      chalk  … 黒板にチョークで書かれる。board のときだけ
+      dodon  … 決め台詞の二連打
+      reveal … 答え・否定が出る（キラン）
+    """
+    ev = []
+    for i, s in enumerate(render.SHOTS):
+        k = s['kind']
+        n0 = len(ev)
+        # 明示指定が最優先
+        if 'se' in s:
+            if s['se']:
+                ev.append((s['t'] + s.get('se_at', 0.02), s['se']))
+        elif k == 'screen' and s.get('roll', True):
+            ev.append((s['t'] + 0.02, 'whoosh'))      # スクリーンが降りてくる
+        elif k == 'title':
+            ev.append((s['t'] + 0.02, 'don'))         # 章が変わる
+        elif s.get('board'):
+            ev.append((s['t'] + render.LEADIN, 'chalk'))   # チョークで書く
+        elif s.get('add'):
+            # 文字が主役。図も同時に入るが、音は文字に当てる。
+            # 図の「シュッ」を先に取ると、40本すべてがやっていた
+            # 「文字が出る瞬間の音」が消えてしまう（13ms差は同じ音に聞こえる）。
+            ev.append((s['t'] + render.LEADIN, 'pa'))
+        elif s.get('fig'):
+            ev.append((s['t'] + 0.02, 'whoosh'))      # 図だけのときは図に当てる
+        # se=None と自分で書いたショット以外は、カットに必ず音を置く。
+        # 38/40 がそうしていた。ここが頻度の差になっていた。
+        if len(ev) == n0 and s.get('se', True) is not None:
+            ev.append((s['t'] + 0.02, 'whoosh'))
+
+        # se_more=[(秒, 種類), ...] … 1ショットの途中で追加で鳴らす。
+        # 絵が2秒動き続けるのに音が頭の1発だけだと、目と耳がばらばらに感じる。
+        for at, name in s.get('se_more', ()):
+            if at < s['dur'] - 0.06:
+                ev.append((s['t'] + at, name))
+
+        if s.get('beat'):
+            ev.append((s['t'] + s.get('beat_at', 0.34), 'don'))
+        if s.get('tap'):
+            ev.append((s['t'] + 0.34, 'ton'))
+        # 2つ目以降の要素が出るときだけ、追加でポンを鳴らす
+        rows = len(s.get('board') or []) + (1 if s.get('fig') else 0)
+        for ri in range(1, rows):
+            at = s['t'] + render.LEADIN + ri * render.STAGGER
+            if at < s['t'] + s['dur'] - 0.06:
+                ev.append((at, 'chalk' if s.get('board') else 'pa'))
+
+        # 文字が出るコマに必ず音を置く。
+        # 伸びているショート30本を1本ずつ見た記録で、「プロっぽさ」の
+        # 一番の理由に挙がったのが『映像・文字・効果音がぴたりと合っている』
+        # （10本）だった。ここまでの分岐だと、fig や se を明示したショットの
+        # 文字は無音で出てしまう。同じ時刻に既に音があるときだけ足さない。
+        if s.get('add'):
+            at = s['t'] + render.LEADIN
+            if not any(abs(at - e[0]) < 0.10 for e in ev):
+                ev.append((at, 'pa'))
+
+        # 長いショットの途中に、小さい音をひとつ置く。
+        # 40本の記録では「間を持たせる時」に音を置くのが15本。頻度の最多帯は
+        # 1.1〜1.5秒に1回で、こちらはカットに音を置いてもまだ1.8秒に1回だった。
+        # 足りないぶんは、頭に1発しか無い長いショットの真ん中に入る。
+        # 台本を書き換えても自動で追従するように、秒数は手で書かない。
+        if s['dur'] >= FILL_MIN:
+            at = s['t'] + s['dur'] * 0.52
+            if not any(abs(at - e[0]) < 0.55 for e in ev):
+                ev.append((at, 'pa', 0.5))      # 主張しない音量で
+
+    # hush=秒 … そのショットの直前をひと拍だけ本当に無音にする。
+    # ラウドネスレンジが3.9LUで平坦だと指摘された。決め台詞の前に間を空けると、
+    # 同じ音量でも言葉が重く聞こえる。BGMも bgm_plan 側で同じ幅だけ落とす。
+    for t0, h in hush_windows():
+        ev = [e for e in ev if not (t0 - h <= e[0] < t0)]
+    return sorted(ev)
+
+
+def hush_windows():
+    """(そのショットの開始秒, 直前を黙らせる長さ) の一覧。"""
+    return [(s['t'], s['hush']) for s in render.SHOTS if s.get('hush')]
+
+
+FILL_MIN = 2.3        # これより長いショットは、途中にもう1つ音を置く
+
+
+def build_track(dur):
+    n = int(SR * dur) + SR
+    track = np.zeros(n)
+    # 参考動画のアタックは周波数重心が約1900Hz。合成音は放っておくと高域に
+    # 寄って「安っぽい」音になるので、最後に全部を同じ処理に通して揃える。
+    def shape(x, target=2000.0, peak=0.55):
+        for fc in (9000, 7000, 5600, 4600, 3800, 3200, 2700, 2300, 2000, 1700):
+            y = lowpass(x, fc)
+            w = np.abs(np.fft.rfft(y * np.hanning(len(y))))
+            fr = np.fft.rfftfreq(len(y), 1 / SR)
+            if (w * fr).sum() / (w.sum() + 1e-9) <= target:
+                x = y
+                break
+            x = y
+        m = np.abs(x).max()
+        return x * (peak / m) if m > 0 else x
+
+    banks = {}
+    used_real = []
+    for k, f, pk in (('whoosh', whoosh, 0.36), ('don', don, 0.50),
+                     ('ton', ton, 0.55), ('chalk', chalk, 0.26),
+                     ('reveal', reveal, 0.42), ('impact', impact, 0.58),
+                     ('rise', rise, 0.40), ('pa', pa, 0.30),
+                     ('dodon', dodon, 0.60),
+                     ('crackle', crackle, 0.26), ('snap', snap, 0.52),
+                     ('drop', drop, 0.34),
+                     ('clang', clang, 0.56), ('tear', tear, 0.40),
+                     ('ratchet', ratchet, 0.38), ('pssh', pssh, 0.34),
+                     ('tick', tick, 0.34),
+                     ('gun', gun, 0.60), ('warn', warn, 0.36)):
+        rs = real_se(k)
+        if rs is not None:
+            bank = []
+            for r in rs:
+                r = trim(r, MAXLEN.get(k, 0.8))
+                # 実素材も同じ耳で揃える。以前はここを「加工しない」にしていて、
+                # 結果、束の周波数の重心が112Hz〜10071Hz（90倍）に散らばった。
+                # キランが9232Hz、溜めが10071Hz。参考動画のアタックの重心は
+                # 約1900Hzなので、この2つだけ極端に硬く、耳に刺さっていた。
+                # 素材の持ち味は残したいので、上限は3200Hzと緩めにする。
+                r = tilt(r, 3200.0)
+                # 音量はピークではなく体感（RMS）で揃える。ピークだけ合わせると
+                # 実測で体感が5倍ばらつき、特定の音だけ飛び出して聞こえる。
+                bank.append(level(r, pk))
+            banks[k] = bank
+            used_real.append((k, len(bank)))
+        else:
+            banks[k] = [shape(f(v), peak=pk) for v in range(VARIANTS)]
+    build_track.used_real = used_real
+    for j, e in enumerate(se_events()):
+        t, kind = e[0], e[1]
+        g = e[2] if len(e) > 2 else 1.0        # 3つ目があれば音量。間を埋める音は小さく
+        bank = banks[kind]
+        s = bank[j % len(bank)] * g            # 合成音のときは変種を巡回させる
+        i = int(SR * t)
+        track[i:i+len(s)] += s[:max(0, len(track)-i)]
+    for k, (t0, d) in enumerate(amb_events()):
+        y = wind(d, seed=7 + k)
+        i = int(SR * t0)
+        track[i:i+len(y)] += y[:max(0, len(track)-i)]
+    peak = np.abs(track).max()
+    if peak > 0.95:
+        track *= 0.95 / peak
+    return track[:int(SR * dur)]
+
+
+def write_wav(path, mono):
+    data = np.clip(mono, -1, 1)
+    pcm = (data * 32767).astype('<i2')
+    stereo = np.repeat(pcm[:, None], 2, axis=1).tobytes()
+    with wave.open(path, 'wb') as w:
+        w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
+        w.writeframes(stereo)
+
+
+# ------------------------------------------------------------- BGMの音量設計
+
+# 参考動画2本を解析したところ、0.35秒以上の無音は1箇所も無かった。
+# 完全に落とすと「切れた」と感じさせるので、下げ切らずに絞る形に変更。
+# 曲は1本しかないので、切り替えの代わりに音量で起伏をつける。
+# 「否定」で一度沈めて、「解決編」で上げると、同じ曲でも展開が出る。
+_LEVELS = [
+    ('hook',    0.10, 'フック — かなり絞る。声に集中させる'),
+    ('setup',   0.16, '問い — 軽快に、邪魔をしない'),
+    ('how',     0.13, '勘違いの提示 — 一度沈める'),
+    ('proof',   0.20, '反証 — 上げる。ここが山のひとつ'),
+    ('example', 0.20, '体の記憶 — そのまま'),
+    ('bridge',  0.24, '橋 — 解決編に入るので上げる'),
+    ('lift',    0.28, '本題 — 一番上げる'),
+    ('punch',   0.30, 'オチ — 最大（直前の title で一度絞る）'),
+    ('next',    0.14, '予告 — 落として余韻'),
+]
+
+
+def bgm_plan():
+    """秒数を手で書かず、SHOTS の区切りから組み立てる。台本を変えても追従する。"""
+    tm = render.section_times()
+    plan, keys = [], [k for k, _, _ in _LEVELS if k in tm]
+    for i, key in enumerate(keys):
+        lv  = next(v for k, v, _ in _LEVELS if k == key)
+        why = next(w for k, _, w in _LEVELS if k == key)
+        start = tm[key]
+        end   = tm[keys[i+1]] if i+1 < len(keys) else render.DURATION
+        if key == 'punch' and plan:
+            # オチの直前をひと呼吸だけ落とす。
+            # 以前は「つまり」の暗転のあいだ絞っていたが、その暗転を外したので
+            # 尺をショットから取ると、オチ本体をまるごと絞ってしまう。
+            # 前の区間の尻を削る形に変えた。
+            # 幅は台本側の hush に合わせる。効果音もそこは止まるので、
+            # 本当にひと拍だけ音が消える。
+            duck = next((h for t0, h in hush_windows()
+                         if abs(t0 - start) < 0.01), 0.30)
+            ps, pe, plv, pw = plan[-1]
+            if pe - ps > duck:
+                plan[-1] = (ps, pe - duck, plv, pw)
+                plan.append((pe - duck, pe, 0.0, 'オチ直前 — ひと拍だけ黙る'))
+        plan.append((start, end, lv, why))
+    return plan
+
+
+BGM_PLAN = bgm_plan()
+
+
+def volume_expr(scale=1.0):
+    """ffmpeg の volume= にそのまま貼れる式を作る。
+    scale は全体の掛け算。声を乗せるときは 0.6 くらいまで下げる。"""
+    e = '%.2f' % (BGM_PLAN[-1][2] * scale)
+    for a, b, v, _ in reversed(BGM_PLAN[:-1]):
+        e = "if(lt(t,%.2f),%.2f,%s)" % (b, v * scale, e)
+    return e
+
+
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--preview', action='store_true')
+    a = ap.parse_args()
+
+    dur = render.DURATION
+    ev = se_events()
+    track = build_track(dur)
+    p = os.path.join(HERE, 'se.wav')
+    write_wav(p, track)
+
+    from collections import Counter
+    c = Counter(k for _, k in ev)
+    print('効果音トラック  %.1f秒  %d個  平均 %.2f秒に1回' % (dur, len(ev), dur/len(ev)))
+    print('  スッ（カット切替） %d' % c['whoosh'])
+    print('  カリ（文字を書く） %d' % c['chalk'])
+    print('  ドン（章の切替）   %d' % c['don'])
+    print('  トン（棒で叩く）   %d' % c['ton'])
+    real = dict(getattr(build_track, 'used_real', []))
+    名 = dict(whoosh='シュッ', chalk='ポン', don='ドン', ton='コツ',
+              reveal='キラン', impact='ドンッ', rise='溜め')
+    if real:
+        print('  本物の音を使用: ' + '  '.join(
+            名.get(k, k) + ('（%d種）' % n if n > 1 else '') for k, n in real.items()))
+    if len(real) < len(名):
+        print('  合成音のまま: ' + '  '.join(名[k] for k in 名 if k not in real))
+    print('  -> se.wav')
+
+    if a.preview:
+        gap = np.zeros(SR//3)
+        demo = np.concatenate([whoosh(), gap, chalk(), gap, don(), gap, ton(), gap])
+        write_wav(os.path.join(HERE, 'se_preview.wav'), demo)
+        print('  -> se_preview.wav（シュッ / カリ / ドン / トン の順に4つ）')
+
+    print('\nBGMの音量設計')
+    for s, e, v, why in BGM_PLAN:
+        print('  %5.1f〜%5.1f秒  音量 %3d%%   %s' % (s, min(e, dur), v*100, why))
+    print('\nffmpeg にそのまま貼る式:')
+    print("  volume='" + volume_expr() + "':eval=frame")
+    print('\n※ BGMは bgm.mp3 の1曲。オチで曲を変えない代わりに、')
+    print('  オチ直前で7%まで絞ってから26%に上げる落差で持ち上げる。')
+
+
+if __name__ == '__main__':
+    main()
