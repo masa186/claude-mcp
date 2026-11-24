@@ -93,3 +93,8 @@
 ```json
 {"no":13,"id":"Yb4XjY7uhKw","title_main":"力強すぎ","top_telop":"お金欲しさに首を切る","creator":"不明（アニメーション）","material":"アニメーション寸劇（ブラックユーモア）","hook_type":"流行のネタの小道具＋モザイクで隠す","hook_sec":3.0,"narr_start":0.27,"narr_lines":1,"narr_chars_per_sec":7.3,"narr_pattern":"〜に目が眩んだ〇〇の末路が〜すぎます","ending_type":"やりすぎの自業自得＋第三者のリアクション字幕","loop":"冒頭のドアのひもを終盤で回収","scores":{"hook":7,"narration":7,"telop":8,"story":8,"material":8,"edit":8,"ending":7,"total":7.5}}
 ```
+
+#### Gemini による追記（横断分析の後に取得。参考扱い）
+
+- モデル: gemini-3.5-flash-lite
+- 最後は「窓の外から怯えた表情で室内を見つめる歯の妖精」「サイレンの音」「妖精ドン引き」の字幕、と判定。本文と一致（サイレンの音は本文では確認していない）。上部テロップは読み取れず空。

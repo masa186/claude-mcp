@@ -92,3 +92,8 @@
 ```json
 {"no":14,"id":"3NGJSpc1k7A","title_main":"どんまい。","top_telop":"犯される襲撃者","creator":"不明（アニメーション、#13と同じ画風）","material":"アニメーション寸劇（因果応報・下ネタ寄り）","hook_type":"迫る顔＋結末の先出し＋伏せ字の下ネタ","hook_sec":2.0,"narr_start":0.27,"narr_lines":2,"narr_chars_per_sec":7.4,"narr_pattern":"〜しようとした結果、この男は〜することになります","ending_type":"因果応報＋下ネタの一言＋テロップと同じ言葉で締める","loop":"最後の顔が冒頭と同じ構図","scores":{"hook":9,"narration":8,"telop":8,"story":8,"material":8,"edit":8,"ending":8,"total":8.5}}
 ```
+
+#### Gemini による追記（横断分析の後に取得。参考扱い）
+
+- モデル: gemini-3.6-flash
+- 上部テロップ「犯される襲撃者」は一致。最後は「ゴーレムに捕まり怯える襲撃者、字幕『犯される襲撃者』、ムーディーなサックスのBGMと悲鳴」と判定。本文と一致（サックスのBGMは本文では確認していない）。
