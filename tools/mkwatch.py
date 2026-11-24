@@ -47,7 +47,10 @@ def call(model, vid):
     with urllib.request.urlopen(r, timeout=300) as resp:
         j = json.loads(resp.read())
     txt = ''.join(p.get('text', '') for p in j['candidates'][0]['content']['parts'])
-    return json.loads(txt)
+    out = json.loads(txt)
+    if isinstance(out, list):            # モデルによっては [ {...} ] で返す
+        out = out[0] if out and isinstance(out[0], dict) else {'_raw': out}
+    return out
 
 
 def watch(vid, rounds=8):
