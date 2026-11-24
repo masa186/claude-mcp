@@ -45,7 +45,14 @@ if __name__ == '__main__':
             continue
         t = time.time()
         a = load(v['path'])
-        r = dict(id=v['id'], ja=run(m, a, 'ja', True), en=run(m, a, 'en', False))
+        try:
+            ja = run(m, a, 'ja', True)
+        except IndexError:
+            # 語ごとの時刻合わせが空の区間で落ちることがある（faster-whisper の find_alignment）。
+            # そのときは語の時刻なしで取り直す。
+            ja = run(m, a, 'ja', False)
+            ja['no_word_times'] = True
+        r = dict(id=v['id'], ja=ja, en=run(m, a, 'en', False))
         json.dump(r, open(p, 'w'), ensure_ascii=False, indent=1)
         print('%s %s %.0fs' % (v['no'], v['id'], time.time() - t), flush=True)
     print('済', flush=True)
