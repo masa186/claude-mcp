@@ -1,0 +1,893 @@
+{
+ "id": "ldGtosTpMyw",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 3.28,
+    "text": "$1000万円の機械を使いマイクラの世界へ行くドリーム",
+    "no_speech": 0.0,
+    "logprob": -0.34,
+    "words": [
+     [
+      0.0,
+      0.14,
+      "$"
+     ],
+     [
+      0.14,
+      0.7,
+      "1000"
+     ],
+     [
+      0.7,
+      0.94,
+      "万"
+     ],
+     [
+      0.94,
+      1.14,
+      "円"
+     ],
+     [
+      1.14,
+      1.24,
+      "の"
+     ],
+     [
+      1.24,
+      1.38,
+      "機"
+     ],
+     [
+      1.38,
+      1.5,
+      "械"
+     ],
+     [
+      1.5,
+      1.6,
+      "を"
+     ],
+     [
+      1.6,
+      1.8,
+      "使"
+     ],
+     [
+      1.8,
+      1.92,
+      "い"
+     ],
+     [
+      1.92,
+      2.06,
+      "マ"
+     ],
+     [
+      2.06,
+      2.1,
+      "イ"
+     ],
+     [
+      2.1,
+      2.2,
+      "ク"
+     ],
+     [
+      2.2,
+      2.26,
+      "ラ"
+     ],
+     [
+      2.26,
+      2.36,
+      "の"
+     ],
+     [
+      2.36,
+      2.62,
+      "世界"
+     ],
+     [
+      2.62,
+      2.78,
+      "へ"
+     ],
+     [
+      2.78,
+      2.9,
+      "行"
+     ],
+     [
+      2.9,
+      2.94,
+      "く"
+     ],
+     [
+      2.94,
+      3.12,
+      "ド"
+     ],
+     [
+      3.12,
+      3.16,
+      "リ"
+     ],
+     [
+      3.16,
+      3.28,
+      "ーム"
+     ]
+    ]
+   },
+   {
+    "start": 30.0,
+    "end": 31.92,
+    "text": "I've escaped, you'll never find me",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      30.0,
+      30.12,
+      "I"
+     ],
+     [
+      30.12,
+      30.24,
+      "'ve"
+     ],
+     [
+      30.24,
+      30.68,
+      " escaped,"
+     ],
+     [
+      30.96,
+      31.04,
+      " you"
+     ],
+     [
+      31.04,
+      31.14,
+      "'ll"
+     ],
+     [
+      31.14,
+      31.28,
+      " never"
+     ],
+     [
+      31.28,
+      31.62,
+      " find"
+     ],
+     [
+      31.62,
+      31.92,
+      " me"
+     ]
+    ]
+   },
+   {
+    "start": 31.92,
+    "end": 33.58,
+    "text": "I'm find me",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      31.92,
+      32.14,
+      "I"
+     ],
+     [
+      32.14,
+      32.98,
+      "'m"
+     ],
+     [
+      32.98,
+      33.3,
+      " find"
+     ],
+     [
+      33.3,
+      33.58,
+      " me"
+     ]
+    ]
+   },
+   {
+    "start": 33.58,
+    "end": 36.04,
+    "text": "This is literally not even a big place, this is a small forest",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      33.58,
+      33.9,
+      "This"
+     ],
+     [
+      33.9,
+      34.04,
+      " is"
+     ],
+     [
+      34.04,
+      34.22,
+      " literally"
+     ],
+     [
+      34.22,
+      34.46,
+      " not"
+     ],
+     [
+      34.46,
+      34.6,
+      " even"
+     ],
+     [
+      34.6,
+      34.7,
+      " a"
+     ],
+     [
+      34.7,
+      34.84,
+      " big"
+     ],
+     [
+      34.84,
+      35.16,
+      " place,"
+     ],
+     [
+      35.28,
+      35.28,
+      " this"
+     ],
+     [
+      35.28,
+      35.34,
+      " is"
+     ],
+     [
+      35.34,
+      35.48,
+      " a"
+     ],
+     [
+      35.48,
+      35.66,
+      " small"
+     ],
+     [
+      35.66,
+      36.04,
+      " forest"
+     ]
+    ]
+   },
+   {
+    "start": 36.04,
+    "end": 36.82,
+    "text": "I've escaped",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      36.04,
+      36.24,
+      "I"
+     ],
+     [
+      36.24,
+      36.32,
+      "'ve"
+     ],
+     [
+      36.32,
+      36.82,
+      " escaped"
+     ]
+    ]
+   },
+   {
+    "start": 36.82,
+    "end": 38.4,
+    "text": "I've gotta be sneaking somewhere",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      36.82,
+      37.2,
+      "I"
+     ],
+     [
+      37.2,
+      37.28,
+      "'ve"
+     ],
+     [
+      37.28,
+      37.42,
+      " gotta"
+     ],
+     [
+      37.42,
+      37.6,
+      " be"
+     ],
+     [
+      37.6,
+      37.94,
+      " sneaking"
+     ],
+     [
+      37.94,
+      38.4,
+      " somewhere"
+     ]
+    ]
+   },
+   {
+    "start": 38.4,
+    "end": 40.34,
+    "text": "I'm at the end portal right now, I'm going to the end",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      38.4,
+      38.72,
+      "I"
+     ],
+     [
+      38.72,
+      38.76,
+      "'m"
+     ],
+     [
+      38.76,
+      38.86,
+      " at"
+     ],
+     [
+      38.86,
+      38.98,
+      " the"
+     ],
+     [
+      38.98,
+      39.06,
+      " end"
+     ],
+     [
+      39.06,
+      39.28,
+      " portal"
+     ],
+     [
+      39.28,
+      39.46,
+      " right"
+     ],
+     [
+      39.46,
+      39.56,
+      " now,"
+     ],
+     [
+      39.64,
+      39.78,
+      " I"
+     ],
+     [
+      39.78,
+      39.8,
+      "'m"
+     ],
+     [
+      39.8,
+      39.98,
+      " going"
+     ],
+     [
+      39.98,
+      40.08,
+      " to"
+     ],
+     [
+      40.08,
+      40.14,
+      " the"
+     ],
+     [
+      40.14,
+      40.34,
+      " end"
+     ]
+    ]
+   },
+   {
+    "start": 40.34,
+    "end": 41.82,
+    "text": "You can't even run that far",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      40.34,
+      40.68,
+      "You"
+     ],
+     [
+      40.68,
+      40.78,
+      " can"
+     ],
+     [
+      40.78,
+      40.84,
+      "'t"
+     ],
+     [
+      40.84,
+      41.0,
+      " even"
+     ],
+     [
+      41.0,
+      41.3,
+      " run"
+     ],
+     [
+      41.3,
+      41.52,
+      " that"
+     ],
+     [
+      41.52,
+      41.82,
+      " far"
+     ]
+    ]
+   },
+   {
+    "start": 41.82,
+    "end": 42.84,
+    "text": "Where are you?",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      41.82,
+      42.26,
+      "Where"
+     ],
+     [
+      42.26,
+      42.52,
+      " are"
+     ],
+     [
+      42.52,
+      42.84,
+      " you?"
+     ]
+    ]
+   },
+   {
+    "start": 43.14,
+    "end": 44.26,
+    "text": "Oh my god, Dream!",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      43.14,
+      43.42,
+      "Oh"
+     ],
+     [
+      43.42,
+      43.56,
+      " my"
+     ],
+     [
+      43.56,
+      43.94,
+      " god,"
+     ],
+     [
+      44.08,
+      44.26,
+      " Dream!"
+     ]
+    ]
+   },
+   {
+    "start": 44.68,
+    "end": 45.16,
+    "text": "You wanna go?",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      44.68,
+      44.78,
+      "You"
+     ],
+     [
+      44.78,
+      44.88,
+      " wanna"
+     ],
+     [
+      44.88,
+      45.16,
+      " go?"
+     ]
+    ]
+   },
+   {
+    "start": 45.58,
+    "end": 45.88,
+    "text": "No",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      45.58,
+      45.88,
+      "No"
+     ]
+    ]
+   },
+   {
+    "start": 45.88,
+    "end": 46.9,
+    "text": "Oh yeah, it is",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      45.88,
+      46.32,
+      "Oh"
+     ],
+     [
+      46.32,
+      46.48,
+      " yeah,"
+     ],
+     [
+      46.56,
+      46.64,
+      " it"
+     ],
+     [
+      46.64,
+      46.9,
+      " is"
+     ]
+    ]
+   },
+   {
+    "start": 46.9,
+    "end": 47.6,
+    "text": "Oh my god",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      46.9,
+      47.18,
+      "Oh"
+     ],
+     [
+      47.18,
+      47.48,
+      " my"
+     ],
+     [
+      47.48,
+      47.6,
+      " god"
+     ]
+    ]
+   },
+   {
+    "start": 47.6,
+    "end": 50.14,
+    "text": "Dream, Dream, you're dead",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      47.6,
+      47.7,
+      "D"
+     ],
+     [
+      47.7,
+      48.54,
+      "ream,"
+     ],
+     [
+      48.76,
+      49.6,
+      " Dream,"
+     ],
+     [
+      49.76,
+      49.78,
+      " you"
+     ],
+     [
+      49.78,
+      49.86,
+      "'re"
+     ],
+     [
+      49.86,
+      50.14,
+      " dead"
+     ]
+    ]
+   },
+   {
+    "start": 50.56,
+    "end": 50.94,
+    "text": "No",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      50.56,
+      50.94,
+      "No"
+     ]
+    ]
+   },
+   {
+    "start": 50.94,
+    "end": 51.34,
+    "text": "No",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      50.94,
+      51.34,
+      "No"
+     ]
+    ]
+   },
+   {
+    "start": 51.34,
+    "end": 51.98,
+    "text": "No",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      51.34,
+      51.98,
+      "No"
+     ]
+    ]
+   },
+   {
+    "start": 51.98,
+    "end": 52.66,
+    "text": "Yeah",
+    "no_speech": 0.0,
+    "logprob": -0.42,
+    "words": [
+     [
+      51.98,
+      52.66,
+      "Yeah"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 3.4,
+    "text": "I'm going to go to the world of $1,000,000,000",
+    "no_speech": 0.0,
+    "logprob": -0.8
+   },
+   {
+    "start": 30.0,
+    "end": 30.78,
+    "text": "I've escaped.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 30.96,
+    "end": 31.92,
+    "text": "You'll never find me.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 32.82,
+    "end": 33.68,
+    "text": "I'm fine, me.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 33.82,
+    "end": 35.16,
+    "text": "This is literally not even a big place.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 35.24,
+    "end": 36.0,
+    "text": "This is a small forest.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 36.2,
+    "end": 36.82,
+    "text": "I've escaped.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 37.16,
+    "end": 38.38,
+    "text": "You've got to be sneaking somewhere.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 38.62,
+    "end": 39.6,
+    "text": "I'm at the end portal right now.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 39.7,
+    "end": 40.36,
+    "text": "I'm going to the end.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 40.58,
+    "end": 41.86,
+    "text": "You can't even run that far.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 42.08,
+    "end": 42.84,
+    "text": "Where are you?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 43.26,
+    "end": 43.94,
+    "text": "Oh, my God.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 44.12,
+    "end": 44.4,
+    "text": "Dream.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 44.7,
+    "end": 45.16,
+    "text": "You want to go?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 45.7,
+    "end": 45.92,
+    "text": "No.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 46.18,
+    "end": 46.52,
+    "text": "Oh, yeah.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 46.94,
+    "end": 47.3,
+    "text": "Oh, my God.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 47.3,
+    "end": 48.04,
+    "text": "No, there's all of it.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 48.18,
+    "end": 48.54,
+    "text": "Dream.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 49.28,
+    "end": 50.16,
+    "text": "Dream, you're dead.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 50.4,
+    "end": 50.74,
+    "text": "You're dead.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 50.76,
+    "end": 51.02,
+    "text": "No.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 51.28,
+    "end": 51.7,
+    "text": "You're dead.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 51.88,
+    "end": 52.16,
+    "text": "No.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 52.46,
+    "end": 52.74,
+    "text": "Yeah.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   }
+  ]
+ }
+}
