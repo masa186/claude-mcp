@@ -1,0 +1,25 @@
+{
+ "id": "tdwKZ17Cpzs",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 1.76,
+   "text": "彼に子供を任せるとこうなります",
+   "no_speech": 0.0
+  },
+  {
+   "start": 1.76,
+   "end": 4.98,
+   "text": "Excuse me sir, would you mind switching seats with my son?",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 8.35,
+   "end": 15.35,
+   "text": "Of course, so he likes the outside, huh?",
+   "no_speech": 0.0
+  }
+ ]
+}
