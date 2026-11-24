@@ -1,0 +1,791 @@
+{
+ "id": "ZoQjGe7_Kl8",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 1.46,
+    "text": "I'mma smoke you up!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      0.0,
+      0.2,
+      "I"
+     ],
+     [
+      0.2,
+      0.2,
+      "'m"
+     ],
+     [
+      0.2,
+      1.32,
+      "ma"
+     ],
+     [
+      1.32,
+      1.44,
+      " smoke"
+     ],
+     [
+      1.44,
+      1.46,
+      " you"
+     ],
+     [
+      1.46,
+      1.46,
+      " up!"
+     ]
+    ]
+   },
+   {
+    "start": 1.48,
+    "end": 3.0,
+    "text": "I'mma smoke you up!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      1.48,
+      1.48,
+      "I"
+     ],
+     [
+      1.48,
+      1.48,
+      "'m"
+     ],
+     [
+      1.48,
+      2.2,
+      "ma"
+     ],
+     [
+      2.2,
+      2.72,
+      " smoke"
+     ],
+     [
+      2.72,
+      2.86,
+      " you"
+     ],
+     [
+      2.86,
+      3.06,
+      " up!"
+     ]
+    ]
+   },
+   {
+    "start": 3.64,
+    "end": 4.8,
+    "text": "What happened to my village?",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      3.64,
+      3.82,
+      "What"
+     ],
+     [
+      3.82,
+      4.08,
+      " happened"
+     ],
+     [
+      4.08,
+      4.24,
+      " to"
+     ],
+     [
+      4.24,
+      4.38,
+      " my"
+     ],
+     [
+      4.38,
+      4.8,
+      " village?"
+     ]
+    ]
+   },
+   {
+    "start": 5.26,
+    "end": 6.64,
+    "text": "Bro, they killed my villagers!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      5.26,
+      5.54,
+      "Bro,"
+     ],
+     [
+      5.7,
+      5.78,
+      " they"
+     ],
+     [
+      5.78,
+      6.0,
+      " killed"
+     ],
+     [
+      6.0,
+      6.18,
+      " my"
+     ],
+     [
+      6.18,
+      6.64,
+      " villagers!"
+     ]
+    ]
+   },
+   {
+    "start": 7.08,
+    "end": 8.3,
+    "text": "Oh wait, yo, you're alive!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      7.08,
+      7.44,
+      "Oh"
+     ],
+     [
+      7.44,
+      7.52,
+      " wait,"
+     ],
+     [
+      7.62,
+      7.72,
+      " yo,"
+     ],
+     [
+      7.78,
+      7.86,
+      " you"
+     ],
+     [
+      7.86,
+      7.94,
+      "'re"
+     ],
+     [
+      7.94,
+      8.3,
+      " alive!"
+     ]
+    ]
+   },
+   {
+    "start": 8.44,
+    "end": 9.44,
+    "text": "I'm so alive!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      8.44,
+      8.6,
+      "I"
+     ],
+     [
+      8.6,
+      8.62,
+      "'m"
+     ],
+     [
+      8.62,
+      8.88,
+      " so"
+     ],
+     [
+      8.88,
+      9.44,
+      " alive!"
+     ]
+    ]
+   },
+   {
+    "start": 10.74,
+    "end": 11.54,
+    "text": "Noooo!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      10.74,
+      11.14,
+      "N"
+     ],
+     [
+      11.14,
+      11.54,
+      "oooo!"
+     ]
+    ]
+   },
+   {
+    "start": 12.38,
+    "end": 13.58,
+    "text": "I gotta find who did this.",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      12.38,
+      12.62,
+      "I"
+     ],
+     [
+      12.62,
+      12.76,
+      " gotta"
+     ],
+     [
+      12.76,
+      13.02,
+      " find"
+     ],
+     [
+      13.02,
+      13.14,
+      " who"
+     ],
+     [
+      13.14,
+      13.3,
+      " did"
+     ],
+     [
+      13.3,
+      13.58,
+      " this."
+     ]
+    ]
+   },
+   {
+    "start": 13.86,
+    "end": 14.76,
+    "text": "Wait, another survivor!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      13.86,
+      13.98,
+      "Wait,"
+     ],
+     [
+      14.1,
+      14.34,
+      " another"
+     ],
+     [
+      14.34,
+      14.76,
+      " survivor!"
+     ]
+    ]
+   },
+   {
+    "start": 15.14,
+    "end": 15.62,
+    "text": "What the f-",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      15.14,
+      15.28,
+      "What"
+     ],
+     [
+      15.28,
+      15.42,
+      " the"
+     ],
+     [
+      15.42,
+      15.52,
+      " f"
+     ],
+     [
+      15.52,
+      15.62,
+      "-"
+     ]
+    ]
+   },
+   {
+    "start": 15.62,
+    "end": 23.24,
+    "text": "Your village was easy to destroy.",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      15.62,
+      16.1,
+      "Your"
+     ],
+     [
+      16.1,
+      21.82,
+      " village"
+     ],
+     [
+      21.82,
+      22.1,
+      " was"
+     ],
+     [
+      22.1,
+      22.54,
+      " easy"
+     ],
+     [
+      22.54,
+      22.74,
+      " to"
+     ],
+     [
+      22.74,
+      23.24,
+      " destroy."
+     ]
+    ]
+   },
+   {
+    "start": 23.62,
+    "end": 25.2,
+    "text": "So you destroyed my village!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      23.62,
+      23.8,
+      "So"
+     ],
+     [
+      23.8,
+      24.08,
+      " you"
+     ],
+     [
+      24.08,
+      24.52,
+      " destroyed"
+     ],
+     [
+      24.52,
+      24.76,
+      " my"
+     ],
+     [
+      24.76,
+      25.2,
+      " village!"
+     ]
+    ]
+   },
+   {
+    "start": 25.48,
+    "end": 26.68,
+    "text": "I'mma smoke you up!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      25.48,
+      25.68,
+      "I"
+     ],
+     [
+      25.68,
+      25.78,
+      "'m"
+     ],
+     [
+      25.78,
+      25.84,
+      "ma"
+     ],
+     [
+      25.84,
+      26.14,
+      " smoke"
+     ],
+     [
+      26.14,
+      26.34,
+      " you"
+     ],
+     [
+      26.34,
+      26.68,
+      " up!"
+     ]
+    ]
+   },
+   {
+    "start": 26.88,
+    "end": 28.78,
+    "text": "Try and hit me with your best shot!",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      26.88,
+      26.96,
+      "T"
+     ],
+     [
+      26.96,
+      27.12,
+      "ry"
+     ],
+     [
+      27.12,
+      27.26,
+      " and"
+     ],
+     [
+      27.26,
+      27.44,
+      " hit"
+     ],
+     [
+      27.44,
+      27.62,
+      " me"
+     ],
+     [
+      27.62,
+      27.82,
+      " with"
+     ],
+     [
+      27.82,
+      27.98,
+      " your"
+     ],
+     [
+      27.98,
+      28.3,
+      " best"
+     ],
+     [
+      28.3,
+      28.78,
+      " shot!"
+     ]
+    ]
+   },
+   {
+    "start": 30.28,
+    "end": 33.4,
+    "text": "なぜならばこれで終わりだからだ",
+    "no_speech": 0.0,
+    "logprob": -0.49,
+    "words": [
+     [
+      30.28,
+      30.88,
+      "な"
+     ],
+     [
+      30.88,
+      31.02,
+      "ぜ"
+     ],
+     [
+      31.02,
+      31.22,
+      "なら"
+     ],
+     [
+      31.22,
+      31.42,
+      "ば"
+     ],
+     [
+      31.42,
+      32.48,
+      "これで"
+     ],
+     [
+      32.48,
+      32.74,
+      "終"
+     ],
+     [
+      32.74,
+      32.9,
+      "わ"
+     ],
+     [
+      32.9,
+      32.92,
+      "り"
+     ],
+     [
+      32.92,
+      33.18,
+      "だから"
+     ],
+     [
+      33.18,
+      33.4,
+      "だ"
+     ]
+    ]
+   },
+   {
+    "start": 34.0,
+    "end": 37.26,
+    "text": "KJ20の地獄か",
+    "no_speech": 0.0,
+    "logprob": -0.49,
+    "words": [
+     [
+      34.0,
+      34.6,
+      "K"
+     ],
+     [
+      34.6,
+      34.94,
+      "J"
+     ],
+     [
+      34.94,
+      36.0,
+      "20"
+     ],
+     [
+      36.0,
+      36.46,
+      "の"
+     ],
+     [
+      36.46,
+      36.6,
+      "地"
+     ],
+     [
+      36.6,
+      36.88,
+      "獄"
+     ],
+     [
+      36.88,
+      37.26,
+      "か"
+     ]
+    ]
+   },
+   {
+    "start": 41.82,
+    "end": 43.58,
+    "text": "厳重な作品",
+    "no_speech": 0.0,
+    "logprob": -0.49,
+    "words": [
+     [
+      41.82,
+      42.42,
+      "厳"
+     ],
+     [
+      42.42,
+      42.74,
+      "重"
+     ],
+     [
+      42.74,
+      42.92,
+      "な"
+     ],
+     [
+      42.92,
+      43.24,
+      "作"
+     ],
+     [
+      43.24,
+      43.58,
+      "品"
+     ]
+    ]
+   },
+   {
+    "start": 45.52,
+    "end": 47.02,
+    "text": "ドキドキ",
+    "no_speech": 0.0,
+    "logprob": -0.49,
+    "words": [
+     [
+      45.52,
+      46.12,
+      "ド"
+     ],
+     [
+      46.12,
+      46.72,
+      "キ"
+     ],
+     [
+      46.72,
+      46.86,
+      "ド"
+     ],
+     [
+      46.86,
+      47.02,
+      "キ"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.0,
+    "text": "I'm gonna smoke you up!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 2.0,
+    "end": 3.0,
+    "text": "I'm gonna smoke you up!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 3.0,
+    "end": 5.0,
+    "text": "What happened to my village?",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 5.0,
+    "end": 7.0,
+    "text": "Bro, they killed my villagers!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 7.0,
+    "end": 8.0,
+    "text": "Wait, yo, you're alive!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 8.0,
+    "end": 9.0,
+    "text": "I'm so alive!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 11.0,
+    "end": 12.0,
+    "text": "Nooooo!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 12.0,
+    "end": 14.0,
+    "text": "I gotta find who did this.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 14.0,
+    "end": 15.0,
+    "text": "Wait, another survivor!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 15.0,
+    "end": 16.0,
+    "text": "What the f-",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 16.0,
+    "end": 17.0,
+    "text": "RAAAAAAA!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 21.0,
+    "end": 23.0,
+    "text": "Your village was easy to destroy.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 23.0,
+    "end": 25.0,
+    "text": "So you destroyed my village!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 25.0,
+    "end": 27.0,
+    "text": "I'mma smoke you up!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 27.0,
+    "end": 29.0,
+    "text": "Try and hit me with your best shot!",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 29.0,
+    "end": 30.1,
+    "text": "Wait, what?",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 30.1,
+    "end": 30.78,
+    "text": "Get ready!",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   }
+  ]
+ }
+}
