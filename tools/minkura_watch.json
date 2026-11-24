@@ -34,5 +34,23 @@
   "needs_context": false,
   "why": "超人的な反射神経という誰もが驚く要素が視覚的にわかりやすいから",
   "_model": "gemini-flash-lite-latest"
+ },
+ "VciK4xivTxs": {
+  "source": "不明",
+  "lang": "日本語",
+  "drdonut": false,
+  "kind": "ネタ・ミーム",
+  "f0_2_visual": "マイクラの画面で複数のゾンビがプレイヤーの拠点に迫っており、右上ワイプにヘッドホンをつけた男性の驚いた顔が映っている。",
+  "f0_2_text": "IQ200のゾンビ 朝になった瞬間がヤバい",
+  "hook": "IQ200のゾンビが朝になった瞬間にとんでもない行動を見せる。",
+  "payoff": "朝にして燃やそうとしたところ、ゾンビがヘルメットを被って太陽を克服してしまった。",
+  "payoff_sec": 10,
+  "narration": "合成音声の女性",
+  "subtitles": "多い、白や黄色など目立つ色を使用",
+  "music": "BGMと驚いたときの効果音あり",
+  "loop": false,
+  "needs_context": false,
+  "why": "マイクラのシステムである「朝になるとゾンビが燃える」という常識を覆す意外な展開のため、マイクラを知る人なら誰でも楽しめる。",
+  "_model": "gemini-flash-lite-latest"
  }
 }
