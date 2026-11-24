@@ -1,0 +1,38 @@
+{
+ "Qi9bd5pXdbs": {
+  "source": "WadZee",
+  "lang": "英語",
+  "drdonut": false,
+  "kind": "ネタ・ミーム",
+  "f0_2_visual": "完成した木造拠点の室内からドアを開けて外へ出る様子と、左上の配信者のワイプ",
+  "f0_2_text": "何時間もかけた拠点\n裏の山を見て絶望する\nRegret The Location\n拠点が\n５秒後\nマイクラ最大の\n後悔が訪れる",
+  "hook": "何時間もかけて拠点を建てた直後、裏の山を見てマイクラ最大の後悔をすることになる。",
+  "payoff": "裏山を登ると超絶景の山岳カルデラと村が広がっており、平凡な森の中に建ててしまったことに絶望する。",
+  "payoff_sec": 18,
+  "narration": "合成音声の女性（ずんだもん風）",
+  "subtitles": "多い（上部に固定の赤黒タイトル、中央下に白文字のセリフ字幕）",
+  "music": "穏やかなBGMから徐々にショック・哀愁を誘うBGMへ変化",
+  "loop": false,
+  "needs_context": false,
+  "why": "時間をかけて家を建てた直後に、すぐ隣に遥かに素晴らしい絶景ロケーションを発見するというマイクラ共通の絶望あるあるだから。",
+  "_model": "gemini-3.8-flash"
+ },
+ "5tzR55V-TIo": {
+  "source": "不明",
+  "lang": "日本語",
+  "drdonut": false,
+  "kind": "リアクション",
+  "f0_2_visual": "マイクラのPvP画面と左上のプレイヤーの顔",
+  "f0_2_text": "絶対に逃げられない罠 世界最強の反射神経",
+  "hook": "絶対に逃げられない罠から脱出する瞬間を見せる",
+  "payoff": "JudeLowのトラップに反応して0.43秒で脱出する",
+  "payoff_sec": 7,
+  "narration": "合成音声の女性",
+  "subtitles": "多い、白や黄色など色分けされている",
+  "music": "ゲーム音と効果音のみ",
+  "loop": false,
+  "needs_context": false,
+  "why": "超人的な反射神経という誰もが驚く要素が視覚的にわかりやすいから",
+  "_model": "gemini-flash-lite-latest"
+ }
+}
