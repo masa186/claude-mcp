@@ -1,0 +1,31 @@
+{
+ "id": "0ZPbHZ12VSA",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 3.0,
+   "text": "マイクラ版ワンダムに乗り怪物を倒すエイジーサポート",
+   "no_speech": 0.0
+  },
+  {
+   "start": 3.0,
+   "end": 5.0,
+   "text": "ヨ! What is going on outside?",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 45.22,
+   "end": 47.22,
+   "text": "日本語のナレーション",
+   "no_speech": 0.0
+  },
+  {
+   "start": 47.22,
+   "end": 49.22,
+   "text": "日本語のナレーション",
+   "no_speech": 0.0
+  }
+ ]
+}
