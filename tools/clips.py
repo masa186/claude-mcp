@@ -24,16 +24,29 @@ def load_env():
 
 
 def key():
+    """手元に鍵があればそれを使う。無ければ None。
+
+    鍵はコンテナ内のファイルに置くと巻き戻しで消える（/root/yt-analysis/.env が実際に消えた）。
+    今は環境のネットワークシークレットに保存し、通信の途中で
+    X-Goog-Api-Key ヘッダーとして差し込まれる形にしている。
+    """
     for k in ('YOUTUBE_API_KEY', 'YT_API_KEY', 'GOOGLE_API_KEY'):
         if os.environ.get(k):
             return os.environ[k]
-    raise SystemExit('YouTube の API キーが見つからない')
+    return None
 
 
 def get(ep, **p):
-    p['key'] = key()
-    with urllib.request.urlopen(HOST + ep + '?' + urllib.parse.urlencode(p),
-                                timeout=60) as r:
+    k = key()
+    headers = {}
+    if k:
+        p['key'] = k
+    else:
+        # 本物の鍵は環境側が差し込む。ここに入れるのは置き換えられる仮の値
+        headers['X-Goog-Api-Key'] = 'placeholder-replaced-by-proxy'
+    req = urllib.request.Request(HOST + ep + '?' + urllib.parse.urlencode(p),
+                                 headers=headers)
+    with urllib.request.urlopen(req, timeout=60) as r:
         return json.loads(r.read())
 
 
