@@ -96,3 +96,9 @@
 ```json
 {"no":2,"id":"4dFAPRHYvk8","title_main":"凄すぎ","top_telop":"意外と簡単な／超巨大トラップ","creator":"JudeLow","material":"トラップ（大会企画）","hook_type":"仕掛けの先見せ＋規模の数字","hook_sec":2.0,"narr_start":0.27,"narr_lines":1,"narr_chars_per_sec":8.3,"narr_pattern":"何を使い何人をどうする誰（体言止め1文）","ending_type":"予告どおりの成功＋ツッコミ字幕","loop":"なし","scores":{"hook":7,"narration":7,"telop":8,"story":6,"material":7,"edit":7,"ending":6,"total":6.5}}
 ```
+
+#### Gemini による追記（個別分析を書いた後に取得。参考扱い）
+
+- モデル: gemini-3.5-flash-lite
+- 上部テロップ「意外と簡単な 超巨大トラップ」は一致。BGM は「アップテンポで緊張感とコミカルさのある洋楽風」、最後は「エドいトラップ」と骸骨マーク・歓声の余韻と判定。
+- 声の種類の判定は動画によって「女性の合成音声」「男性の合成音声」と割れていて、**声の性別は確定できない**（同じチャンネルの同じナレーターと思われるのに判定が一致しない）。

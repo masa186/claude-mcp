@@ -90,3 +90,9 @@
 ```json
 {"no":12,"id":"mRndDDRWz00","title_main":"ドキッとなる瞬間","top_telop":"俺の8年が...!!","creator":"Chino's Animated（アニメーション）","material":"アニメーション（漫画調）","hook_type":"積み上げた時間の数字＋すぐ喪失","hook_sec":1.7,"narr_start":0.27,"narr_lines":1,"narr_chars_per_sec":8.0,"narr_pattern":"〇年間〜した〇〇が台無しになる瞬間（体言止め）","ending_type":"クリフハンガー（結末を見せず暗転）","loop":"暗転から冒頭へつながる","scores":{"hook":9,"narration":8,"telop":8,"story":8,"material":8,"edit":8,"ending":7,"total":8.5}}
 ```
+
+#### Gemini による追記（個別分析を書いた後に取得。参考扱い）
+
+- モデル: gemini-3.5-flash-lite
+- 上部テロップは一致。最後は暗転と「(逃げろ…!!)」で終わる、と本文と同じ判定。
+- 声の種類の判定は動画によって「女性の合成音声」「男性の合成音声」と割れていて、**声の性別は確定できない**（同じチャンネルの同じナレーターと思われるのに判定が一致しない）。

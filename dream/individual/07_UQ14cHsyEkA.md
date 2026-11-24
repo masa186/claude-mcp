@@ -95,3 +95,9 @@
 ```json
 {"no":7,"id":"UQ14cHsyEkA","title_main":"形が完全にあれ。","top_telop":"ネオアームストロング／アームストロング砲","creator":"Grox","material":"寸劇（クラフト・実験）","hook_type":"オチの画の先出し＋高速カット＋元ネタの引用","hook_sec":1.5,"narr_start":0.27,"narr_lines":2,"narr_chars_per_sec":7.0,"narr_pattern":"〜するGrox（体言止め）＋最後に感想","ending_type":"作ったものに倒される＋ツッコミ字幕＋ナレーションの感想","loop":"冒頭の画を31.8秒で回収","scores":{"hook":7,"narration":8,"telop":6,"story":8,"material":8,"edit":9,"ending":7,"total":7.5}}
 ```
+
+#### Gemini による追記（個別分析を書いた後に取得。参考扱い）
+
+- モデル: gemini-3.6-flash
+- 上部テロップは一致。BGM は「軽快なコメディ風→Grox が負けた後に悲しげな曲」。最後のナレーション「最高に狂ってますね」も一致。
+- 声の種類の判定は動画によって「女性の合成音声」「男性の合成音声」と割れていて、**声の性別は確定できない**（同じチャンネルの同じナレーターと思われるのに判定が一致しない）。

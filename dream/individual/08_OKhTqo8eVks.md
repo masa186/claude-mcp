@@ -93,3 +93,9 @@
 ```json
 {"no":8,"id":"OKhTqo8eVks","title_main":"キラだから。","top_telop":"ぜーんぶ計画通り","creator":"LookOut3D（アニメーション）","material":"アニメーション寸劇（DEATH NOTEのパロディ）","hook_type":"人物のレッテル＋失敗の予告＋赤い画面","hook_sec":1.8,"narr_start":0.27,"narr_lines":1,"narr_chars_per_sec":7.3,"narr_pattern":"この〇〇は〜を間違えました（1文）","ending_type":"自滅→黒幕の種明かし（どんでん返し）","loop":"冒頭のぶつかる場面が計画の始まり","scores":{"hook":8,"narration":8,"telop":8,"story":9,"material":8,"edit":8,"ending":9,"total":8.5}}
 ```
+
+#### Gemini による追記（個別分析を書いた後に取得。参考扱い）
+
+- モデル: gemini-3.6-flash
+- 上部テロップは一致。**BGM に『DEATH NOTE』風の重厚な不穏なコーラス**と判定（元ネタのパロディを音でも合わせている）。最後のメガネの村人と「計画通り」も一致。
+- 声の種類の判定は動画によって「女性の合成音声」「男性の合成音声」と割れていて、**声の性別は確定できない**（同じチャンネルの同じナレーターと思われるのに判定が一致しない）。

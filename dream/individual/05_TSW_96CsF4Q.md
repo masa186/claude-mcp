@@ -94,3 +94,9 @@
 ```json
 {"no":5,"id":"TSW_96CsF4Q","title_main":"java版スケルトンの復讐劇","top_telop":"java版スケルトンは／弱くない!!","creator":"不明（スケルトン視点の寸劇、相手はRymie）","material":"寸劇（視点のひねり）","hook_type":"敵が主人公の設定＋〜するとこうなります","hook_sec":3.0,"narr_start":0.27,"narr_lines":2,"narr_chars_per_sec":8.0,"narr_pattern":"〜すると、こうなります＋最後に問いかけ","ending_type":"復讐成功＋視聴者への問いかけ","loop":"なし","scores":{"hook":8,"narration":8,"telop":8,"story":9,"material":8,"edit":7,"ending":8,"total":8}}
 ```
+
+#### Gemini による追記（個別分析を書いた後に取得。参考扱い）
+
+- モデル: gemini-3-flash-preview
+- 上部テロップは一致。かわされる場面に「コミカルなピコピコ音」、最後は視聴者への問いかけ、と本文と同じ判定。
+- 声の種類の判定は動画によって「女性の合成音声」「男性の合成音声」と割れていて、**声の性別は確定できない**（同じチャンネルの同じナレーターと思われるのに判定が一致しない）。

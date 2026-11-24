@@ -93,3 +93,9 @@
 ```json
 {"no":9,"id":"vTPcburl6o8","title_main":"サイコパス","top_telop":"世界一残酷なデスゲーム","creator":"LookOut3D（アニメーション）","material":"アニメーション寸劇（ブラックユーモア）","hook_type":"結末の画の先出し（燃える・叫ぶ）→平和な画への落差","hook_sec":1.5,"narr_start":0.27,"narr_lines":1,"narr_chars_per_sec":7.7,"narr_pattern":"〜な部屋を脱出する〇〇（設定の体言止め1文）","ending_type":"ゴールが罠（希望→絶望）","loop":"なし","scores":{"hook":8,"narration":7,"telop":8,"story":8,"material":8,"edit":7,"ending":9,"total":8}}
 ```
+
+#### Gemini による追記（個別分析を書いた後に取得。参考扱い）
+
+- モデル: gemini-flash-lite-latest
+- 上部テロップは一致。最後の「嘘だろ…」と溶岩の部屋も一致。
+- 声の種類の判定は動画によって「女性の合成音声」「男性の合成音声」と割れていて、**声の性別は確定できない**（同じチャンネルの同じナレーターと思われるのに判定が一致しない）。

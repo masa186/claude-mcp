@@ -91,3 +91,9 @@
 ```json
 {"no":4,"id":"tCQ6I8gQHLM","title_main":"ちょっと試してみたくなるやつ","top_telop":"殺意が高すぎるキツネ","creator":"顔出し配信者（名前不明）","material":"検証・小ネタ","hook_type":"禁止の言い方＋反応顔の先出し","hook_sec":1.3,"narr_start":0.27,"narr_lines":1,"narr_chars_per_sec":8.0,"narr_pattern":"禁止型（〜してはいけません）1文","ending_type":"予告どおりの惨事＋豆知識字幕","loop":"短く、最後の空から最初の村へ戻る","scores":{"hook":8,"narration":7,"telop":8,"story":7,"material":7,"edit":7,"ending":7,"total":7}}
 ```
+
+#### Gemini による追記（個別分析を書いた後に取得。参考扱い）
+
+- モデル: gemini-3-flash-preview
+- 上部テロップは一致。**BGM の後半はジョン・セナの入場曲（The Time is Now）**と判定。英語の書き起こし「And his name is John Cena!」（8秒）と合う。吹き飛ぶ場面でこの曲を流すネットのミームを使っている。
+- 声の種類の判定は動画によって「女性の合成音声」「男性の合成音声」と割れていて、**声の性別は確定できない**（同じチャンネルの同じナレーターと思われるのに判定が一致しない）。
