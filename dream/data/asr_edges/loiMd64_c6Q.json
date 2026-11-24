@@ -1,0 +1,31 @@
+{
+ "id": "loiMd64_c6Q",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 2.54,
+   "text": "彼はありえない方法でクリースワンを退治します",
+   "no_speech": 0.0
+  },
+  {
+   "start": 2.54,
+   "end": 4.7,
+   "text": "OK, there we go",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 28.43,
+   "end": 32.53,
+   "text": "You're canceled, Mojang's now removing you from the game, little man",
+   "no_speech": 0.0
+  },
+  {
+   "start": 32.53,
+   "end": 33.85,
+   "text": "See ya, chum!",
+   "no_speech": 0.0
+  }
+ ]
+}

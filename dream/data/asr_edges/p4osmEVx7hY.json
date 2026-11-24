@@ -1,0 +1,31 @@
+{
+ "id": "p4osmEVx7hY",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 5.0,
+   "text": "エイヨチー ウラビカに追われるグロックスでさ",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 55.39,
+   "end": 57.77,
+   "text": "ドウンイエロー",
+   "no_speech": 0.0
+  },
+  {
+   "start": 57.77,
+   "end": 61.63,
+   "text": "вет船 이런ネージ",
+   "no_speech": 0.0
+  },
+  {
+   "start": 61.63,
+   "end": 62.27,
+   "text": "There's a lake!",
+   "no_speech": 0.0
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "id": "0iK0gxEUo0U",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 2.48,
+   "text": "マイクラの世界にやってきたボードナムズイですか",
+   "no_speech": 0.0
+  },
+  {
+   "start": 2.48,
+   "end": 4.96,
+   "text": "ランチ、I'm making grilled puffer fish",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 69.53,
+   "end": 76.29,
+   "text": "こんなことをする料理人は滅多にいないでしょうね",
+   "no_speech": 0.0
+  }
+ ]
+}
