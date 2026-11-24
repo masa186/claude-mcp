@@ -89,6 +89,11 @@ def show(v):
             print('  %6.2f-%6.2f %s%s' % (s['start'], s['end'], s['text'], flag))
     else:
         print('[書き起こし] まだ無い')
+    ed = j('asr_edges', vid)
+    if ed:
+        print('[書き起こし・冒頭5秒と最後7秒を日本語指定で再書き起こし]')
+        for s in ed['head'] + ed['tail']:
+            print('  %6.2f-%6.2f %s' % (s['start'], s['end'], s['text']))
     at = j('audiotag', vid)
     if at:
         t = tag_summary(at)
