@@ -195,7 +195,13 @@ def write_coverage_md(path, coll, coverage, videos, transcripts, sources, channe
     a('')
     a('| 項目 | コード | 理由 |')
     a('|---|---|---|')
+    n_exact = sum(1 for v in videos if any(o.get('observed_at') for o in v['views']))
     for item, code, why in NOT_ANALYZABLE:
+        if item == 'どの再生数が最新か' and n_exact:
+            # API の取得結果が入った後は、日時が分からないのではなく「代表値をまだ決めていない」
+            a(f'| 代表とする再生数 | — | {n_exact}本に取得日時付きの観測（YouTube API）があるが、'
+              f'代表値（どの時点の再生数を使うか）は段階4で決める。値はすべて時点ごとの観測として残している |')
+            continue
         a(f'| {item} | `{code}` | {why} |')
 
     a('')

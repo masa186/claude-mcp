@@ -107,11 +107,18 @@ def integrated(tmp_path_factory, monkeypatch):
     out = tmp_path_factory.mktemp('out')
     imp = tmp_path_factory.mktemp('imp')
     res = build_dataset.build(out=str(out), imports_dir=str(imp), snapshots_dir=str(base))
-    return {'res': res, 'out': out, 'base': base, 'gone': gone, 'imp': imp}
+    # 比較の基準：取得結果なしで作った段階1のデータ（本物の mcshorts/data は使わない。
+    # 本物には実際の API の観測が入っているので、偽の取得結果だけの組み立てと比べると「消えた」と誤判定する）
+    stage1 = tmp_path_factory.mktemp('stage1')
+    build_dataset.build(out=str(stage1), imports_dir=str(imp), snapshots_dir=str(tmp_path_factory.mktemp('nosnap')))
+    return {'res': res, 'out': out, 'base': base, 'gone': gone, 'imp': imp, 'stage1': stage1}
 
 
 def test_stage1_data_is_preserved(integrated):
-    assert integrate.verify_preserved(os.path.join(MCS, 'data'), str(integrated['out'] / 'data')) == []
+    stage1_data = str(integrated['stage1'] / 'data')
+    rows = [json.loads(l) for l in open(os.path.join(stage1_data, 'videos.jsonl'), encoding='utf-8')]
+    assert len(rows) == 405 and not any(s.startswith('yt_') for r in rows for s in r['in_sources'])  # 段階1だけ
+    assert integrate.verify_preserved(stage1_data, str(integrated['out'] / 'data')) == []
 
 
 def test_exact_time_observations_are_added(integrated):
@@ -149,18 +156,20 @@ def test_likes_zero_vs_null_is_reported_not_rewritten():
 
 
 def test_integrate_applies_only_after_check(integrated, tmp_path):
+    """反映先は、テストの中で作った段階1のデータの写し（本物の mcshorts/data には書かない）。"""
+    stage1 = integrated['stage1']
     target = tmp_path / 'target'
-    shutil.copytree(os.path.join(MCS, 'data'), target / 'data')
-    shutil.copytree(os.path.join(MCS, 'reports'), target / 'reports')
+    shutil.copytree(stage1 / 'data', target / 'data')
+    shutil.copytree(stage1 / 'reports', target / 'reports')
     r = integrate.run(apply=False, target=str(target), imports_dir=str(integrated['imp']),
                       snapshots_dir=str(integrated['base']))
     assert r['problems'] == [] and r['applied'] is False and r['changed']['data']
-    assert integrate.verify_preserved(os.path.join(MCS, 'data'), str(target / 'data')) == []
-    assert filecmp_same(os.path.join(MCS, 'data'), str(target / 'data'))   # まだ変わっていない
+    assert filecmp_same(str(stage1 / 'data'), str(target / 'data'))   # まだ変わっていない
     r = integrate.run(apply=True, target=str(target), imports_dir=str(integrated['imp']),
                       snapshots_dir=str(integrated['base']))
     assert r['applied'] is True
-    assert integrate.verify_preserved(os.path.join(MCS, 'data'), str(target / 'data')) == []
+    assert integrate.verify_preserved(str(stage1 / 'data'), str(target / 'data')) == []
+    assert not filecmp_same(str(stage1 / 'data'), str(target / 'data'))   # 反映された
 
 
 def test_integrate_refuses_when_records_would_be_lost(integrated, tmp_path):
