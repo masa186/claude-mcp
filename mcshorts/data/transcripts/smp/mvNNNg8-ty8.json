@@ -1,0 +1,965 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "マイクラでどんな高さから落ちてもたった1個のブロックで生き延びる方法、ドリームがマンハント中使った裏技です。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "マイクラでプレイヤーが落ちるときサーバーは落下距離を記録する。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 13,
+     "text": "しかし落下中に一瞬でも上方向に移動すると落下距離が0になる。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 18,
+     "text": "つまりもしも着地する直前にジャンプできれば落下ダメージを無効化できる。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "ただ地面にいないと当然ジャンプできないよな。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 25,
+     "text": "そうなるとサーバーは落下ダメージを適用してしまう。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 28,
+     "text": "ただサーバーを騙せば話は別だ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 30,
+     "text": "サーバーは絶対にプレイヤーの生死を決めつけない。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 32,
+     "text": "必ずクライアントの位置と照らし合わせて判断する。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 35,
+     "text": "そこで使うのが土着地だ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 38,
+     "text": "落ちる途中で土ブロックを1個落とし、自分が拾う。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 43,
+     "text": "そして地面に着く直前にブロックを置くんだ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 46,
+     "text": "すると自分のクライアントがそのブロックを置いたと認識し、サーバーにそれを伝える。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 53,
+     "text": "サーバーはそれを見て急にプレイヤーがブロックの上に立ったと判断し、一瞬だけジャンプを許可してしまうんだ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 60,
+     "text": "これによって落下ダメージを受ける前にジャンプができるというわけだな。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 65,
+     "text": "マジですごいテクニックだぜ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "マイクラでどんな\n高さから\n落ちてもたった\n1個のブロックで\n生き延びる\n方法",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 4,
+     "text": "ドリームが\nマンハント中\n使った裏技です。",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "僕が説明しよう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 8,
+     "text": "マイクラでプレイヤーが\n落ちるとき",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 10,
+     "text": "鯖は落下距離を記録する",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 12,
+     "text": "メイスや落下ダメージを",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 13,
+     "text": "計算するためにね",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "上方に向いに移動すると",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 17,
+     "text": "落下距離が0になる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 19,
+     "text": "ジャンプできれば",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 22,
+     "text": "落下ダメージを無効化できる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "地面に着いてないと当然",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 24,
+     "text": "ジャンプできないよな",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 25,
+     "text": "そうなるとサーバーは",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 27,
+     "text": "落下ダメージを適用してしまう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 28,
+     "text": "サーバーを騙せば話は別だ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 30,
+     "text": "実はプレイヤーが",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 32,
+     "text": "正しい位置にいると",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "100%確信できない限り",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 34,
+     "text": "死亡させないんよ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 34,
+     "text": "D r e a m",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 35,
+     "text": "どこに移動するか予測する",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 37,
+     "text": "シミュレーションで決まる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 38,
+     "text": "そこで使うのが”土着地”だ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "未来の自分が拾えるよう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 41,
+     "text": "土ブロックを1個落とし",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 43,
+     "text": "地面に着く直前",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 45,
+     "text": "まだ持ってないブロックの",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 46,
+     "text": "設置を試みる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 47,
+     "text": "すると未来の自分が",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 48,
+     "text": "既に拾ってるから",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 49,
+     "text": "見えないブロックを",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 50,
+     "text": "設置するんよ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 51,
+     "text": "そのブロックを",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 52,
+     "text": "そのまますり抜ける",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 53,
+     "text": "上方向にテレポートさせ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 55,
+     "text": "クライアント側の情報を",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 56,
+     "text": "一時的に無視する",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 58,
+     "text": "地面に着地した",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 59,
+     "text": "情報も含めて",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 60,
+     "text": "一瞬だけジャンプ可能な",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 61,
+     "text": "猶予が生まれる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 63,
+     "text": "落下ダメをくらわず",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 64,
+     "text": "死ぬこともない",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 65,
+     "text": "これまだ使える？\nめっさすごくね？",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.0",
+     "text": "マイクラで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.8",
+     "text": "どんな高さから"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.2",
+     "text": "落ちてもたった1個の"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "2.0",
+     "text": "ブロックで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "2.5",
+     "text": "生き延びる"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "3.1",
+     "text": "方法"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "3.3",
+     "text": "Dreamが"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.0",
+     "text": "マンハント中"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.8",
+     "text": "使った"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "5.1",
+     "text": "裏技です"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "5.7",
+     "text": "説明しよ.."
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "6.6",
+     "text": "僕が説明しよう"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "6.0秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラでどんな高さから落ちてもたった1個のブロックで生き延びる方法。ドリームがマンハント中使った裏技です"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0,
+     "text": "マイクラで",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1,
+     "text": "どんな高さから",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1,
+     "text": "落ちても",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1,
+     "text": "たった1個の",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2,
+     "text": "ブロックで",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2,
+     "text": "生き延びる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3,
+     "text": "方法",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3,
+     "text": "Dreamが",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4,
+     "text": "マンハント中",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4,
+     "text": "使った",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5,
+     "text": "裏技です",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5,
+     "text": "説明しよ..",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6,
+     "text": "僕が説明しよう",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 8,
+     "text": "マイクラでプレイヤーが",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 9,
+     "text": "落ちるとき",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 9,
+     "text": "鯖は落下距離を記録する",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11,
+     "text": "メイスや落下ダメージを",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 12,
+     "text": "計算するためにね",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 13,
+     "text": "でも面白いことに",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14,
+     "text": "落下中に一瞬でも",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 15,
+     "text": "上方向イン移動すると",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16,
+     "text": "落下距離が0になる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 18,
+     "text": "つまりもしも",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 19,
+     "text": "着地する直前に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 20,
+     "text": "ジャンプできれば",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 21,
+     "text": "落下ダメージを無効化できる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 22,
+     "text": "でも",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 23,
+     "text": "地面に着いてないと当然",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 24,
+     "text": "ジャンプできないよな",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 25,
+     "text": "そうなるとサーバーは",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 26,
+     "text": "落下ダメージを適用してしまう",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 28,
+     "text": "ただ!",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 28,
+     "text": "サーバーを騙せば話は別だ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 30,
+     "text": "実はプレイヤーが",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 31,
+     "text": "正しい位置にいると",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 32,
+     "text": "100%確信できない限り",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 33,
+     "text": "死亡させないんよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 34,
+     "text": "その判断には",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 34,
+     "text": "Dream",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 35,
+     "text": "どこに移動するか予測する",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 36,
+     "text": "シミュレーションで決まる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 37,
+     "text": "そこで使うのが\"土着地\"だ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 39,
+     "text": "未来の自分が拾えるよう",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 41,
+     "text": "土ブロックを1個落とし",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 42,
+     "text": "地面に着く直前",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 44,
+     "text": "まだ持ってないブロックの",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 46,
+     "text": "設置を試みる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 47,
+     "text": "すると未来の自分が",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 48,
+     "text": "既に拾ってるから",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 49,
+     "text": "見えないブロックを",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 50,
+     "text": "設置するんよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 51,
+     "text": "そのブロックを",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 52,
+     "text": "そのまますり抜ける",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 53,
+     "text": "するとサーバーが",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 54,
+     "text": "上方向にテレポートさせ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 55,
+     "text": "クライアント側の情報を",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 57,
+     "text": "一時的に無視する",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 58,
+     "text": "地面に着地した",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 59,
+     "text": "情報も含めて",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 60,
+     "text": "一瞬だけジャンプ可能な",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 62,
+     "text": "猶予が生まれる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 63,
+     "text": "落下ダメをくわず",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 65,
+     "text": "死ぬこともない",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 65,
+     "text": "これまだ使える？",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 66,
+     "text": "めっさすごくね？",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "mvNNNg8-ty8"
+}

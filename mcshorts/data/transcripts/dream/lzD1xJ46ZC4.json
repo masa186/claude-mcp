@@ -1,0 +1,482 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/lzD1xJ46ZC4.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.72,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "The group of Glock's will be brought to the Zettai Pinching"
+    },
+    {
+     "end": 4.0,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 2.72,
+     "text": "But they will be in a way to get the Glock's"
+    },
+    {
+     "end": 5.58,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 4.0,
+     "text": "The way he will be able to run with the Glock's"
+    },
+    {
+     "end": 6.96,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 5.58,
+     "text": "They will be able to run by the Glock's"
+    },
+    {
+     "end": 7.94,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 6.96,
+     "text": "I will be able to run down"
+    },
+    {
+     "end": 8.64,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 7.94,
+     "text": "Gotta make this jump"
+    },
+    {
+     "end": 9.78,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 8.64,
+     "text": "Oh let's go"
+    },
+    {
+     "end": 11.1,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 9.78,
+     "text": "How am I gonna win?"
+    },
+    {
+     "end": 12.44,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 11.24,
+     "text": "The babies too?"
+    },
+    {
+     "end": 13.58,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 12.64,
+     "text": "What's up then?"
+    },
+    {
+     "end": 18.88,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 17.14,
+     "text": "Dear God, I'm so sorry"
+    },
+    {
+     "end": 20.88,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 18.88,
+     "text": "Oh, you're all grown up now"
+    },
+    {
+     "end": 22.14,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 20.88,
+     "text": "Nice bad"
+    },
+    {
+     "end": 23.1,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 22.14,
+     "text": "Is he going to run down?"
+    },
+    {
+     "end": 24.52,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 23.1,
+     "text": "He will be able to run down"
+    },
+    {
+     "end": 25.24,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 24.52,
+     "text": "But he will be able to run down"
+    },
+    {
+     "end": 25.96,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 25.24,
+     "text": "The action of the Glock's in the Glock's"
+    },
+    {
+     "end": 27.14,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 25.96,
+     "text": "He will be able to run down"
+    },
+    {
+     "end": 28.48,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 27.14,
+     "text": "I got an idea"
+    },
+    {
+     "end": 29.68,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 28.48,
+     "text": "Give me your son"
+    },
+    {
+     "end": 38.7,
+     "logprob": -0.12,
+     "no_speech": 0.0,
+     "start": 29.68,
+     "text": "if you want him back put the suit on hey looking fresh say i bet louder now say ayo chill"
+    },
+    {
+     "end": 42.16,
+     "logprob": -0.12,
+     "no_speech": 0.0,
+     "start": 38.7,
+     "text": "bet you're me now all right go"
+    },
+    {
+     "end": 51.16,
+     "logprob": -0.12,
+     "no_speech": 0.0,
+     "start": 42.16,
+     "text": "i'll take care of your son don't worry bro he's gonna be fine i'm not fine they're just playing"
+    },
+    {
+     "end": 55.82,
+     "logprob": -0.12,
+     "no_speech": 0.0,
+     "start": 51.16,
+     "text": "bro they're playing they're not they're not playing okay but they're gonna let him go right"
+    },
+    {
+     "end": 59.42,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 55.82,
+     "text": "No, he's screwed! He's screwed!"
+    },
+    {
+     "end": 62.32,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 59.42,
+     "text": "Well, I have a responsibility to take care of him!"
+    },
+    {
+     "end": 63.82,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 62.32,
+     "text": "I'm naming you Grox Jr."
+    },
+    {
+     "end": 66.32,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 63.82,
+     "text": "We're gonna beat the game together!"
+    },
+    {
+     "end": 67.32,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 66.32,
+     "text": "No!"
+    },
+    {
+     "end": 68.32,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 67.32,
+     "text": "Woo!"
+    },
+    {
+     "end": 73.32,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 70.32,
+     "text": "If you think you're happy, you'll be happy."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/lzD1xJ46ZC4.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.84,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "村人に追われ絶対説明のピンチに陥るグロックス"
+    },
+    {
+     "end": 5.72,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 2.84,
+     "text": "しかし彼はちょうどブカスな方法で村人たちから逃げ切ります"
+    },
+    {
+     "end": 24.64,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 22.1,
+     "text": "余計なことをしでかし状況はさらに悪化しますが"
+    },
+    {
+     "end": 27.14,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 24.64,
+     "text": "彼の巧妙な作戦によって状況は一変します"
+    },
+    {
+     "end": 31.62,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "If you want him back, put the suit on."
+    },
+    {
+     "end": 34.04,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 32.74,
+     "text": "Hey, looking fresh."
+    },
+    {
+     "end": 35.22,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 34.38,
+     "text": "Say, I bet."
+    },
+    {
+     "end": 36.52,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 35.98,
+     "text": "Louder."
+    },
+    {
+     "end": 38.52,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 37.36,
+     "text": "Now say, A-O, chill."
+    },
+    {
+     "end": 41.1,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 39.86,
+     "text": "Bet, you're me now."
+    },
+    {
+     "end": 41.98,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 41.46,
+     "text": "Alright, go."
+    },
+    {
+     "end": 47.56,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 46.14,
+     "text": "I'll take care of your son."
+    },
+    {
+     "end": 48.46,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 47.86,
+     "text": "Don't worry, bro."
+    },
+    {
+     "end": 49.14,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 48.52,
+     "text": "He's going to be fine."
+    },
+    {
+     "end": 51.38,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 50.3,
+     "text": "They're just playing, bro."
+    },
+    {
+     "end": 51.84,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 51.52,
+     "text": "They're playing."
+    },
+    {
+     "end": 55.96,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 54.24,
+     "text": "Okay, but they're going to let him go right now."
+    },
+    {
+     "end": 58.22,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 57.28,
+     "text": "No, he's screwed."
+    },
+    {
+     "end": 59.16,
+     "logprob": -0.37,
+     "no_speech": 0.0,
+     "start": 58.5,
+     "text": "He's screwed."
+    },
+    {
+     "end": 65.2,
+     "logprob": -0.36,
+     "no_speech": 0.0,
+     "start": 59.16,
+     "text": "Well, I have a responsibility to take care of him. I'm naming you Grox jr. We're gonna beat the game together"
+    },
+    {
+     "end": 72.86,
+     "logprob": -0.36,
+     "no_speech": 0.0,
+     "start": 70.1,
+     "text": "最後絶対喜んでいるだろうと思う方はいいんでタッチ"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/lzD1xJ46ZC4.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.82,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "村人に追われ絶対説明のピンチに陥るグロックス"
+    },
+    {
+     "end": 4.98,
+     "no_speech": 0.0,
+     "start": 2.82,
+     "text": "しかし彼はちょうどブカスな方法で村人たち"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/lzD1xJ46ZC4.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 72.88,
+     "no_speech": 0.0,
+     "start": 66.26,
+     "text": "最後絶対喜んでいるだろと思う方はいいねタッチ"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "村人に追われ、絶体絶命のピンチに陥るグロックス。しかし彼は超ドブカスな方法で村人たちから逃げ切ります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "村人に追われ（白）→ 絶体絶命の（赤）→ ピンチに陥る（赤）→ Grox（黄緑）→ しかし彼は（白）→ とても素敵な方法で（白）→ 村人達から逃げ切ります（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "lzD1xJ46ZC4"
+}

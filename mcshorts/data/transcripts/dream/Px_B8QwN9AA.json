@@ -1,0 +1,166 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/Px_B8QwN9AA.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.0,
+     "logprob": -1.18,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "This guy is going to hit the RTA world record."
+    },
+    {
+     "end": 56.48,
+     "logprob": -0.75,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "Let's go!"
+    },
+    {
+     "end": 89.98,
+     "logprob": -0.91,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "Thank you."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/Px_B8QwN9AA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.92,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "この男は逆にぶち込むRTAで世界最速記録を叩き出します"
+    },
+    {
+     "end": 42.36,
+     "logprob": -0.89,
+     "no_speech": 0.0,
+     "start": 38.1,
+     "text": "お疲れ様でした"
+    },
+    {
+     "end": 60.22,
+     "logprob": -0.89,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "またね"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Px_B8QwN9AA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.94,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "この男は逆にぶち込むRTAで世界最速記録を叩き出します"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Px_B8QwN9AA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 55.26,
+     "no_speech": 0.0,
+     "start": 53.26,
+     "text": "エンジンの音"
+    },
+    {
+     "end": 57.26,
+     "no_speech": 0.0,
+     "start": 55.26,
+     "text": "エンジンの音"
+    },
+    {
+     "end": 59.26,
+     "no_speech": 0.0,
+     "start": 57.26,
+     "text": "エンジンの音"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "この男は、羊にブチ込むRTAで世界最速記録を叩き出します。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "この男は（白）→ 羊にブチ込むRTAで（白）→ 世界最速記録を（赤）→ 叩き出します（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Px_B8QwN9AA"
+}

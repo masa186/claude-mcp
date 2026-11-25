@@ -1,0 +1,96 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.0",
+     "text": "登録者200万人"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.0",
+     "text": "達成を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.5",
+     "text": "祝われる"
+    },
+    {
+     "color": "light_blue",
+     "end": null,
+     "start": "2.2",
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.0",
+     "text": "あっ登録者200万いった！"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "6.2",
+     "text": "えい"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "6.7",
+     "text": "登録してくれて"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "7.0",
+     "text": "本当にありがとう"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "登録者200万人達成を祝われるドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "h7goMbqULY4"
+}

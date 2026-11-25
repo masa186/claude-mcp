@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 動画・音声は置かない（大きく、作り直せるか手元にあるもの）
+*.mp4
+*.mkv
+*.webm
+*.mov
+*.wav
+*.mp3
+*.m4a
+*.opus
+*.flac
+*.ogg

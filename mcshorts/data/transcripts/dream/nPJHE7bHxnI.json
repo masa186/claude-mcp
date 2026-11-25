@@ -1,0 +1,332 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/nPJHE7bHxnI.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Y'all boys need a hero? Y'all boys need a hero?"
+    },
+    {
+     "end": 5.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 4.0,
+     "text": "Just stay on him!"
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 5.0,
+     "text": "No! Yes! Sam, look-"
+    },
+    {
+     "end": 7.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "Get him!"
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 7.0,
+     "text": "Oh my-"
+    },
+    {
+     "end": 10.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 8.0,
+     "text": "You punched him right when I went for it."
+    },
+    {
+     "end": 11.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 10.0,
+     "text": "I'm dead!"
+    },
+    {
+     "end": 13.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "Okay, it's respawning."
+    },
+    {
+     "end": 16.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 14.0,
+     "text": "Just stay on him, just stay on him."
+    },
+    {
+     "end": 19.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 18.0,
+     "text": "Shields down, shield down."
+    },
+    {
+     "end": 21.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 20.0,
+     "text": "Oh my gosh."
+    },
+    {
+     "end": 25.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 24.0,
+     "text": "He's eating, he's eating, where are you?"
+    },
+    {
+     "end": 26.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 25.0,
+     "text": "I see him, I see him."
+    },
+    {
+     "end": 27.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 26.0,
+     "text": "Come on."
+    },
+    {
+     "end": 29.0,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 27.0,
+     "text": "Oh, watch the dragon! It's perching, watch the dragon, it's perching!"
+    },
+    {
+     "end": 29.5,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 29.0,
+     "text": "It's purging."
+    },
+    {
+     "end": 30.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 29.5,
+     "text": "It's that."
+    },
+    {
+     "end": 31.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "Yeah, yeah, yeah."
+    },
+    {
+     "end": 32.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 31.0,
+     "text": "Damn it."
+    },
+    {
+     "end": 33.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 32.0,
+     "text": "Oh, what?"
+    },
+    {
+     "end": 34.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 33.0,
+     "text": "What?"
+    },
+    {
+     "end": 35.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 34.0,
+     "text": "What the heck?"
+    },
+    {
+     "end": 36.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 35.0,
+     "text": "That's fine."
+    },
+    {
+     "end": 38.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 36.0,
+     "text": "I didn't know information."
+    },
+    {
+     "end": 40.0,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 38.0,
+     "text": "Subscribe to the channel for more information."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/nPJHE7bHxnI.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.38,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ジョージンには理解できないプレイをカマストリームで"
+    },
+    {
+     "end": 38.26,
+     "logprob": -0.12,
+     "no_speech": 0.0,
+     "start": 36.1,
+     "text": "私は情報が完結しませんでしたが"
+    },
+    {
+     "end": 39.82,
+     "logprob": -0.12,
+     "no_speech": 0.0,
+     "start": 38.26,
+     "text": "理解できた方だけチャンネル登録"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/nPJHE7bHxnI.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.18,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "常人には理解できないプレイをカマストリーム"
+    },
+    {
+     "end": 3.34,
+     "no_speech": 0.0,
+     "start": 2.18,
+     "text": "Y'all boys need a hero?"
+    },
+    {
+     "end": 4.16,
+     "no_speech": 0.0,
+     "start": 3.44,
+     "text": "Y'all boys need a hero?"
+    },
+    {
+     "end": 4.8,
+     "no_speech": 0.0,
+     "start": 4.16,
+     "text": "Just stay on him"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/nPJHE7bHxnI.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 38.29,
+     "no_speech": 0.0,
+     "start": 33.17,
+     "text": "私は情報が完結しませんでしたが"
+    },
+    {
+     "end": 39.87,
+     "no_speech": 0.0,
+     "start": 38.29,
+     "text": "未開できた方だけチャンネル登録"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "常人には理解できないプレイをかますドリーム。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "常人には（白）→ 理解できないプレイを（赤）→ かます（白）Dream（緑）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "nPJHE7bHxnI"
+}

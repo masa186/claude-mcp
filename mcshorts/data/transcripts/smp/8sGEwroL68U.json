@@ -1,0 +1,102 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "green",
+     "end": null,
+     "start": 0.0,
+     "text": "Dreamの"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.5,
+     "text": "空中クラフト"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "ボート着地に"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.7,
+     "text": "挑むドクタードナツ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "*ドクタードリーム*"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.5,
+     "text": "(...?)"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.2,
+     "text": "ふはは...w"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.0,
+     "text": "いや"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.3,
+     "text": "無理だろこれwww"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "claude8s",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.0秒",
+    "src": "claude8s"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Dreamの空中クラフトボート着地に挑むドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "8sGEwroL68U"
+}

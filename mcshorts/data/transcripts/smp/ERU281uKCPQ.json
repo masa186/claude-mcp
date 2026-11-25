@@ -1,0 +1,364 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "神社を超えた神業がこちら",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 12,
+     "text": "実際できちゃうんだよね",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "これ俺でもできる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 26,
+     "text": "“やれ”って？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 30,
+     "text": "だってさ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 31,
+     "text": "わざわざこんな簡単な",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "試す必要ある？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 113,
+     "text": "こんなの余裕でできる",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "人智を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.5,
+     "text": "超えた"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.7,
+     "text": "神業が"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "こちら"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.2,
+     "text": "俺でもできるわ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "*はん?*"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "1.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "人知を超えた神業がこちら"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.4,
+     "start": 0.0,
+     "text": "人知を",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 1.1,
+     "start": 0.5,
+     "text": "超えた",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 1.7,
+     "start": 1.0,
+     "text": "神業が",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 1.8,
+     "start": 1.1,
+     "text": "こちら",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 2.9,
+     "start": 2.2,
+     "text": "俺でもできるわ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 4.1,
+     "start": 3.0,
+     "text": "はん？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 12.5,
+     "start": 12.0,
+     "text": "えぐいのりさ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.0,
+     "start": 12.5,
+     "text": "実際できちゃうよね",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.6,
+     "start": 23.1,
+     "text": "これ俺でもできる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.0,
+     "start": 27.5,
+     "text": "やれよ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 30.1,
+     "start": 29.7,
+     "text": "だってさ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 32.2,
+     "start": 30.6,
+     "text": "わざわざこんな簡単なん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 32.3,
+     "start": 31.4,
+     "text": "試す必要ある？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 33.1,
+     "start": 32.5,
+     "text": "いやだから..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 33.6,
+     "start": 33.3,
+     "text": "そこなんよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 114.2,
+     "start": 112.7,
+     "text": "うん、こんなの余裕でできる",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 0.0,
+     "text": "人知を",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 0.5,
+     "text": "超えた",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 0.8,
+     "text": "神業が",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 1.1,
+     "text": "こちら",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 2.1,
+     "text": "俺でもできるわ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 3.0,
+     "text": "はん？",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 12.0,
+     "text": "えぐいのりさ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 12.5,
+     "text": "実際できちゃうよね",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 23.2,
+     "text": "これ俺でもできる",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 27.5,
+     "text": "やれよ？",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 29.7,
+     "text": "だってさ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 30.6,
+     "text": "わざわざこんな簡単なん",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 31.4,
+     "text": "試す必要ある？",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 32.5,
+     "text": "いやだから..",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 33.3,
+     "text": "そこなんよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": 112.7,
+     "text": "うん、こんなの余裕でできる",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "ERU281uKCPQ"
+}

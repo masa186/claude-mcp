@@ -1,0 +1,188 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/TSW_96CsF4Q.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "logprob": -1.38,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Java版Skilton is really good to get out of here."
+    },
+    {
+     "end": 41.28,
+     "logprob": -1.14,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "You think you're strong with the Java版 and the統合版 of the Skeleton Dodge?"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/TSW_96CsF4Q.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.28,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ジャバ版スケルトンは本気を出すと考えます"
+    },
+    {
+     "end": 40.9,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 37.42,
+     "text": "あなたはジャバ版と統合版のスケルトンどっちが強いと思いますか?"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/TSW_96CsF4Q.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.48,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "JAVA版スケルトンが本気を出すと変わります"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/TSW_96CsF4Q.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 40.97,
+     "no_speech": 0.0,
+     "start": 34.33,
+     "text": "あなたはジャバ版と統合版のスケルトンどっちが強いと思いますか?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/TSW_96CsF4Q.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "java版スケルトンは本気を出すとこうなります"
+    },
+    {
+     "end": null,
+     "start": 28.0,
+     "text": "スナイパーライフル"
+    },
+    {
+     "end": null,
+     "start": 30.0,
+     "text": "ジャンプして"
+    },
+    {
+     "end": null,
+     "start": 31.5,
+     "text": "一回転"
+    },
+    {
+     "end": null,
+     "start": 35.5,
+     "text": "仕返し成功"
+    },
+    {
+     "end": null,
+     "start": 37.5,
+     "text": "あなたはjava版と統合版のスケルトンどっちが強いと思いますか？"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3-flash-preview"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ジャバ版スケルトンが本気を出すとこうなります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "java版スケルトンが（白）→ 本気を出すと（赤）→ こうなります（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "TSW_96CsF4Q"
+}

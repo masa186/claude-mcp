@@ -1,0 +1,595 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/snRuzLtmLX4.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 9.2,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "This can't get any worse."
+    },
+    {
+     "end": 11.08,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 9.48,
+     "text": "Nah, they're making the sun watch."
+    },
+    {
+     "end": 13.2,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 11.34,
+     "text": "Oh, I gotta get out of here."
+    },
+    {
+     "end": 15.1,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 14.0,
+     "text": "Nah, bro escaped."
+    },
+    {
+     "end": 15.94,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 15.46,
+     "text": "I'm trapped."
+    },
+    {
+     "end": 19.06,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 16.7,
+     "text": "Oh, I don't want a face reveal."
+    },
+    {
+     "end": 21.5,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 19.62,
+     "text": "Dude, that was close."
+    },
+    {
+     "end": 23.82,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 22.32,
+     "text": "No, go slowly."
+    },
+    {
+     "end": 24.9,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 24.28,
+     "text": "Go careful."
+    },
+    {
+     "end": 27.28,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 25.54,
+     "text": "I heard you, I don't see much here."
+    },
+    {
+     "end": 29.9,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 27.46,
+     "text": "Guys, I have a plan, so we all make it out safely."
+    },
+    {
+     "end": 38.88,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "go go go go but wait hold up guys now you got your soft"
+    },
+    {
+     "end": 49.84,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 38.88,
+     "text": "oh let's go and exit uh you can you check if it's safe oh bet dear god dude thanks for checking"
+    },
+    {
+     "end": 55.96,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 49.84,
+     "text": "can you see if they're still out there dear god bro we appreciate you wait hold on let me send"
+    },
+    {
+     "end": 59.74,
+     "logprob": -0.27,
+     "no_speech": 0.0,
+     "start": 55.96,
+     "text": "your cast real quick but is there any way you could check again okay hear me"
+    },
+    {
+     "end": 63.84,
+     "logprob": -0.27,
+     "no_speech": 0.0,
+     "start": 59.74,
+     "text": "out what if I gave you a potion of invisibility"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/snRuzLtmLX4.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.88,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "なんやかんややらかして村人にボコボコリされるブロックス"
+    },
+    {
+     "end": 5.04,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 2.88,
+     "text": "ですが彼はとってもクズい方法でキキパー"
+    },
+    {
+     "end": 5.66,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 5.04,
+     "text": "おー!"
+    },
+    {
+     "end": 6.26,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 5.68,
+     "text": "おー my god"
+    },
+    {
+     "end": 7.46,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 6.26,
+     "text": "えよチュール!"
+    },
+    {
+     "end": 9.16,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 7.88,
+     "text": "This can't get any worse"
+    },
+    {
+     "end": 11.04,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 9.16,
+     "text": "なぁ、they're making the sun watch?"
+    },
+    {
+     "end": 11.84,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 11.26,
+     "text": "おー!"
+    },
+    {
+     "end": 13.18,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 12.32,
+     "text": "I gotta get out of here"
+    },
+    {
+     "end": 13.9,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 13.18,
+     "text": "おー!"
+    },
+    {
+     "end": 15.28,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 14.02,
+     "text": "なぁ、プロエスケイト?"
+    },
+    {
+     "end": 15.86,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 15.42,
+     "text": "I'm trapped"
+    },
+    {
+     "end": 17.22,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 16.58,
+     "text": "おー!"
+    },
+    {
+     "end": 19.02,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 17.86,
+     "text": "I don't want a face reveal!"
+    },
+    {
+     "end": 21.04,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 19.54,
+     "text": "Dude, that was close"
+    },
+    {
+     "end": 22.62,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 22.3,
+     "text": "No"
+    },
+    {
+     "end": 23.8,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 23.16,
+     "text": "Go slowly"
+    },
+    {
+     "end": 24.9,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 23.8,
+     "text": "Go careful"
+    },
+    {
+     "end": 27.24,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 25.34,
+     "text": "I heard you, I don't see much here"
+    },
+    {
+     "end": 29.84,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 27.24,
+     "text": "Guys, I have a plan so we all make it out safely"
+    },
+    {
+     "end": 34.32,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 32.68,
+     "text": "ゴーゴーゴーゴーゴー"
+    },
+    {
+     "end": 35.38,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 34.32,
+     "text": "but wait hold up guys"
+    },
+    {
+     "end": 38.08,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 36.92,
+     "text": "is that all you got?!"
+    },
+    {
+     "end": 38.7,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 38.08,
+     "text": "you're soft!"
+    },
+    {
+     "end": 41.04,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 40.64,
+     "text": "oh!"
+    },
+    {
+     "end": 42.72,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 41.58,
+     "text": "oh let's go and exit"
+    },
+    {
+     "end": 44.84,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 42.72,
+     "text": "uh you can you check if it's safe?"
+    },
+    {
+     "end": 46.0,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 45.38,
+     "text": "oh bet"
+    },
+    {
+     "end": 49.8,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 46.0,
+     "text": "dude thanks for checking"
+    },
+    {
+     "end": 51.52,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 49.8,
+     "text": "can you see if they're still out there?"
+    },
+    {
+     "end": 53.44,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 52.56,
+     "text": "we're god"
+    },
+    {
+     "end": 55.1,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 53.44,
+     "text": "bro we appreciate you"
+    },
+    {
+     "end": 56.82,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 55.1,
+     "text": "wait hold on let me send your cast real quick"
+    },
+    {
+     "end": 58.56,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 56.82,
+     "text": "but is there any way you can check again?"
+    },
+    {
+     "end": 61.86,
+     "logprob": -0.64,
+     "no_speech": 0.0,
+     "start": 58.98,
+     "text": "OK hear me out, what if I gave you a potion of invisibility?"
+    },
+    {
+     "end": 68.44,
+     "logprob": -0.64,
+     "no_speech": 0.0,
+     "start": 67.18,
+     "text": "気持ちよさそうですね"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/snRuzLtmLX4.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.9,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "なんやかんややらかして村人にボコボコにされるブロックス"
+    },
+    {
+     "end": 4.98,
+     "no_speech": 0.0,
+     "start": 2.9,
+     "text": "ですが彼はとってもクズい方法で聞きたい"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/snRuzLtmLX4.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 68.56,
+     "no_speech": 0.0,
+     "start": 61.8,
+     "text": "気持ち良さそうですね"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/snRuzLtmLX4.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "なんやかんやらかして村人にボコボコにされるGrox"
+    },
+    {
+     "end": null,
+     "start": 0.3,
+     "text": "ですが彼はとってもお上品な方法で危機から逃れます"
+    },
+    {
+     "end": null,
+     "start": 0.21,
+     "text": "視覚障害者"
+    },
+    {
+     "end": null,
+     "start": 0.22,
+     "text": "ゆっくり...気おつけろよ"
+    },
+    {
+     "end": null,
+     "start": 0.25,
+     "text": "そこにいるんだろ？！"
+    },
+    {
+     "end": null,
+     "start": 0.27,
+     "text": "みんな計画がある。無事に脱出できる"
+    },
+    {
+     "end": null,
+     "start": 0.32,
+     "text": "やばい"
+    },
+    {
+     "end": null,
+     "start": 0.33,
+     "text": "みんなちょっと待って..."
+    },
+    {
+     "end": null,
+     "start": 0.36,
+     "text": "それが君の本気か？"
+    },
+    {
+     "end": null,
+     "start": 0.41,
+     "text": "よっしゃ出口だ。あー君！安全か確かめてくんね？"
+    },
+    {
+     "end": null,
+     "start": 0.45,
+     "text": "マジかよ"
+    },
+    {
+     "end": null,
+     "start": 0.48,
+     "text": "確認ありがとう。もう一回お願いしてもいい？"
+    },
+    {
+     "end": null,
+     "start": 0.52,
+     "text": "マジかよ"
+    },
+    {
+     "end": null,
+     "start": 0.53,
+     "text": "本当にありがとう。ちょ待って。サインしてあげる"
+    },
+    {
+     "end": null,
+     "start": 0.56,
+     "text": "もう一度だけ確認していただくことは可能ですか？"
+    },
+    {
+     "end": null,
+     "start": 0.58,
+     "text": "おっけちょっと聞いて。もし俺が透明化のポーションあげてって言ったら？"
+    },
+    {
+     "end": null,
+     "start": 1.04,
+     "text": "マジかよ"
+    },
+    {
+     "end": null,
+     "start": 1.05,
+     "text": "絶対わざと"
+    },
+    {
+     "end": null,
+     "start": 1.07,
+     "text": "気持ちよさそうですね"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3-flash-preview"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "なんやかんややらかして村人にボコボコにされるグロックス。ですが彼は、とってもクズい方法で危機から逃れます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "何やかんややらかして（白）→ 村人に（赤）→ ボコボコにされる（白）→ Grox（白）→ ですが彼は（白）→ とってもお上品な方法で（白）→ 危機から逃れます（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "snRuzLtmLX4"
+}

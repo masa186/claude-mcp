@@ -1,0 +1,1087 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "岩盤の上置かれたトロッコになぜか乗ってすぐ降りようとするドクタードーナツという男",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 5,
+     "text": "数秒後に予想外の出来事が待っているのでした",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 18,
+     "text": "脱出口もない危機的状況に焦っている様子",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 21,
+     "text": "しかし上にいる視聴者の言葉で希望が見えてきます",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "1回目の投球は惜しくも失敗",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 35,
+     "text": "トロッコがある位置に向けてもう一度投げます",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 37,
+     "text": "2回も失敗",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "その後3回目",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 41,
+     "text": "4回目で岩盤に潜り込みます",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 42,
+     "text": "低速落下のポーションを使えばいいと考えた視聴者はポーションを持っていないことに気づき",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 47,
+     "text": "今醸造し始めました",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 49,
+     "text": "この状況を盛り上げるためレコードのBGMを流す視聴者",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 52,
+     "text": "その間にエンダーパールを使っためり込み作戦がついに成功します",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 102,
+     "text": "めり込むことはできたものの引っかかってしまい上がることができずにトーテムが発動してしまいます",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 107,
+     "text": "それでも諦めずに登ろうとした結果",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 117,
+     "text": "彼はいわばと奈落に落ちた結果思惑通りクリップが100万いいねされました",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "岩盤の上に置かれたトロッコになぜか乗ってすぐ降りようとする",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 3,
+     "text": "ドクタードーナツという男",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 5,
+     "text": "数秒後に予想外の出来事が待っているのでした",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 18,
+     "text": "脱出口もない危機的状況に焦っている様子",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 21,
+     "text": "しかし上にいる視聴者の言葉で希望が見えてきます",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "1回目の投球は惜しくも失敗",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 35,
+     "text": "トロッコがある位置に向けてもう一度投げます",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 37,
+     "text": "2回目も失敗",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 39,
+     "text": "その後3回目、",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "4回目で岩盤にめり込みます",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 42,
+     "text": "低速落下のポーションを使えばいいと考えた視聴者は",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 46,
+     "text": "ポーションを持っていないことに気づき",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 47,
+     "text": "今醸造し始めました",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 49,
+     "text": "この状況を盛り上げるためレコードのBGMを流す視聴者",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 52,
+     "text": "その間にエンダーパールを使っためり込み作戦が",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 55,
+     "text": "ついに成功します",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 102,
+     "text": "めり込むことはできたものの",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 104,
+     "text": "引っかかってしまい上がることができずに",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 105,
+     "text": "トーテムが発動してしまいます",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 107,
+     "text": "それでも諦めずに登ろうとした結果！？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 117,
+     "text": "彼はわざと奈落に落ちた結果思惑通り",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 120,
+     "text": "クリップが100万いいねされました",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "岩盤の上に"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.7,
+     "text": "置かれたトロッコに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.7,
+     "text": "何故か乗って"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "すぐ降りようとする"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.7,
+     "text": "という男"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.7,
+     "text": "数秒後に"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.0,
+     "text": "予想外の出来事が"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.0,
+     "text": "待っているのでした"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "6.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "岩盤の上に置かれたトロッコになぜか乗ってすぐ降りようとするドクタードーナツという男、数秒後に予想外の出来事が待っているのでした"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 7,
+     "start": 6,
+     "text": "待っているのでした",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 33,
+     "start": 32,
+     "text": "1回目の投球は",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 35,
+     "start": 34,
+     "text": "惜しくも失敗",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 37,
+     "start": 35,
+     "text": "トロッコがある位置に向けてもう一度投げます",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 39,
+     "start": 38,
+     "text": "2回目も失敗",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 42,
+     "start": 41,
+     "text": "4回目で岩盤にめり込みます",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 46,
+     "start": 42,
+     "text": "低速落下のポーションを使えばいいと考えた視聴者はポーションを持っていないことに",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 48,
+     "start": 47,
+     "text": "気づき今醸造し始めました",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 52,
+     "start": 49,
+     "text": "この状況を盛り上げるためレコードのBGMを流す視聴者",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 55,
+     "start": 52,
+     "text": "その間にエンダーパールを使っためり込み作戦がついに成功します",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 60,
+     "start": 59,
+     "text": "今から流すわ！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 61,
+     "start": 60,
+     "text": "俺生きてるのか？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 62,
+     "start": 61,
+     "text": "なんでやねーん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 67,
+     "start": 62,
+     "text": "めり込むことはできたものの引っかかってしまい上がることができずにトーテムが発動してしまいます",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 69,
+     "start": 67,
+     "text": "それでも諦めずに昇ろうとした結果!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 121,
+     "start": 118,
+     "text": "彼は、ざと奈落に落ちた結果思惑通りクリップが100万いいねされました",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0,
+     "text": "岩盤の上に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1,
+     "text": "置かれたトロッコに",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2,
+     "text": "何故か乗って",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2,
+     "text": "すぐ降りようとする",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3,
+     "text": "ドクタードーナツ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4,
+     "text": "という男",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4,
+     "text": "数秒後に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5,
+     "text": "予想外の出来事が",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6,
+     "text": "待っているのでした",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 8,
+     "text": "(息を吸う)",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 8,
+     "text": "NO!",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 10,
+     "text": "みんな！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 10,
+     "text": "助けて！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11,
+     "text": "助けて！/x3",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11,
+     "text": "助けて！/x4",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11,
+     "text": "助けて！/...w",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 12,
+     "text": "助けてよ皆！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 13,
+     "text": "お前は自力でなんとかしろよbro",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14,
+     "text": "脳ののー",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14,
+     "text": "まさかホントに",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 15,
+     "text": "うまくいくとは思わなんだ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16,
+     "text": "のおの",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16,
+     "text": "お願いマジで助けて！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 18,
+     "text": "脱出口もない",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 19,
+     "text": "危機的状況に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 19,
+     "text": "焦っている様子",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 20,
+     "text": "しかし上にいる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 21,
+     "text": "視聴者の言葉で",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 22,
+     "text": "希望が見えてきます",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 23,
+     "text": "パール投げて！パール投げて！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 25,
+     "text": "お、おうおー",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 25,
+     "text": "なるほど",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 28,
+     "text": "(息を吸う)",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 28,
+     "text": "おう！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 29,
+     "text": "分かったぞ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 30,
+     "text": "yo yo 待って！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 30,
+     "text": "誰かトロッコがあった",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 31,
+     "text": "場所にたってくれ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 32,
+     "text": "そこにパール投げるから",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 32,
+     "text": "1回目の投球は",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 33,
+     "text": "惜しくも失敗",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 35,
+     "text": "トロッコがある位置に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 36,
+     "text": "向けてもう一度",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 37,
+     "text": "投げます",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 38,
+     "text": "2回目も失敗",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 39,
+     "text": "その後3回目、",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 40,
+     "text": "4回目で岩盤に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 41,
+     "text": "めり込みます",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 42,
+     "text": "低速落下の",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 43,
+     "text": "ポーションを",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 43,
+     "text": "使えばいいと",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 44,
+     "text": "考えた視聴者は",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 45,
+     "text": "ポーションを",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 46,
+     "text": "持ってないことに",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 46,
+     "text": "気づき",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 47,
+     "text": "今醸造し始めました",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 49,
+     "text": "この状況を",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 49,
+     "text": "盛り上げるため",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 50,
+     "text": "レコードのBGMを",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 51,
+     "text": "流す視聴者",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 52,
+     "text": "その間に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 53,
+     "text": "エンダーパールを",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 53,
+     "text": "使った",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 54,
+     "text": "めり込み作戦が",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 55,
+     "text": "ついに成功します",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 56,
+     "text": "yo,もっと盛り上げる音楽かけて!",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 58,
+     "text": "音楽やめてね🫷",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 59,
+     "text": "あーすまんすまん",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 60,
+     "text": "今から流すわ！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 60,
+     "text": "俺生きてるのか？",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 61,
+     "text": "なんでやねーん",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 61,
+     "text": "みんな？",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 62,
+     "text": "めり込む事は",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 62,
+     "text": "できたものの",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 63,
+     "text": "引っかかってしまい",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 64,
+     "text": "上がる事が",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 65,
+     "text": "できずに",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 65,
+     "text": "トーテムが",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 66,
+     "text": "発動してしまいます",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 67,
+     "text": "それでも諦めずに",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 68,
+     "text": "昇ろうとした結果!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 69,
+     "text": "クリップファーム/(切り抜き稼ぎ)",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 10,
+     "text": "お前今岩盤の中にいるぞ!",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14,
+     "text": "俺今泳いでるっぽい？",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16,
+     "text": "おお！",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16,
+     "text": "やったね!安全だ!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 17,
+     "text": "彼はわ、ざと",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 18,
+     "text": "奈落に落ちた結果",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 19,
+     "text": "思惑通り",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 20,
+     "text": "クリップが",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 20,
+     "text": "100万いいねされました",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-3.5-flash-lite"
+  }
+ ],
+ "video_id": "7anq2Q8qWSw"
+}

@@ -1,0 +1,498 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.0",
+     "text": "ベリティを"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.5",
+     "text": "58秒間"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "1.0",
+     "text": "ブチギレさせる"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.0",
+     "text": "という男"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.2",
+     "text": "LookOutこと"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.4",
+     "text": "OH MY PCニキ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.7",
+     "text": "黙れ!!!!"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "3.1",
+     "text": "まじお前"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "3.7",
+     "text": "黙れ!!!!!!"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "4.1",
+     "text": "こっち来い!!!"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "4.7",
+     "text": "ボクになにするつもり?"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "5.7",
+     "text": "れっつごー^ ^"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "claude8s",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.2秒",
+    "src": "claude8s"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ベリティを58秒間ブチギレさせるという男"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": "00:02.000",
+     "start": "00:00.000",
+     "text": "ベリティを58秒間ブチギレさせるという男",
+     "track": "japanese_voice"
+    },
+    {
+     "end": "00:02.750",
+     "start": "00:02.000",
+     "text": "LookOutことOH MY PCニキ",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:02.750",
+     "text": "黙れ!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:03.250",
+     "text": "まじお前",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:03.750",
+     "text": "黙れ!!!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:04.250",
+     "text": "こっち来い!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:04.750",
+     "text": "ボクになにするつもり?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:06.500",
+     "text": "れっつごー^^",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:08.000",
+     "text": "あぅ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:08.750",
+     "text": "れっつごーwwww",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:10.000",
+     "text": "ブッハア",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:10.750",
+     "text": "よほほほwwwww",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:12.250",
+     "text": "アァ...",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:13.500",
+     "text": "なんで?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:14.250",
+     "text": "よほwwwwwwwwww",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": "00:14.750",
+     "text": "*砂利をとる…*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:18.000",
+     "text": "れっつごーwwwwww",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:19.250",
+     "text": "そうそう",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:19.750",
+     "text": "それだよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:20.500",
+     "text": "任せろって",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:21.500",
+     "text": "また消えろ!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:22.500",
+     "text": "れっつごーwww",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:24.000",
+     "text": "うわああ!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:24.500",
+     "text": "もう無理!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:25.500",
+     "text": "耐えられない!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:28.250",
+     "text": "やめろ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:29.250",
+     "text": "やめろ!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:30.250",
+     "text": "たすけて!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:31.500",
+     "text": "れっつごー^^",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:32.500",
+     "text": "3日後にくる?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:33.000",
+     "text": "現実でキミが",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:34.000",
+     "text": "どこ住みか知ってるぞ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:34.500",
+     "text": "okっそか^^",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:35.500",
+     "text": "砂利埋もれろ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:36.000",
+     "text": "早漏",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:36.750",
+     "text": "キミに..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:37.500",
+     "text": "触りに行くからな",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:40.000",
+     "text": "落ち着け?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:41.250",
+     "text": "さもないと",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:41.750",
+     "text": "お前に触るしかないぞ!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:43.500",
+     "text": "かかってこいベリティ!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:44.250",
+     "text": "怖くねえぞ!!!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:47.000",
+     "text": "かかってこい!!!!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:49.500",
+     "text": "れっつごー^^",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:51.250",
+     "text": "しんだぞ!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:52.250",
+     "text": "れっつごーwwwww",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:53.250",
+     "text": "ベリティ*した!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:54.750",
+     "text": "うおおおお!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:55.500",
+     "text": "イェーイ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:56.000",
+     "text": "自業自得だ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "00:57.250",
+     "text": "れっつごー^^",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "jibUjrFjNgg"
+}

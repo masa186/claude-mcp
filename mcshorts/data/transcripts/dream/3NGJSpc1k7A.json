@@ -1,0 +1,296 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/3NGJSpc1k7A.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.7,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "The girl who ran into the fight was a bad guy."
+    },
+    {
+     "end": 6.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "..."
+    },
+    {
+     "end": 10.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 8.5,
+     "text": "..."
+    },
+    {
+     "end": 13.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 11.5,
+     "text": "..."
+    },
+    {
+     "end": 16.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 15.5,
+     "text": "..."
+    },
+    {
+     "end": 17.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 16.5,
+     "text": "..."
+    },
+    {
+     "end": 18.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 17.5,
+     "text": "..."
+    },
+    {
+     "end": 19.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 18.5,
+     "text": "..."
+    },
+    {
+     "end": 21.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 20.5,
+     "text": "..."
+    },
+    {
+     "end": 22.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 21.5,
+     "text": "..."
+    },
+    {
+     "end": 23.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 22.5,
+     "text": "..."
+    },
+    {
+     "end": 24.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 23.5,
+     "text": "..."
+    },
+    {
+     "end": 25.5,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 24.5,
+     "text": "..."
+    },
+    {
+     "end": 28.0,
+     "logprob": -1.39,
+     "no_speech": 0.0,
+     "start": 25.5,
+     "text": "..."
+    },
+    {
+     "end": 57.98,
+     "logprob": -1.41,
+     "no_speech": 0.0,
+     "start": 28.0,
+     "text": "I don't know what to do."
+    },
+    {
+     "end": 60.0,
+     "logprob": -0.98,
+     "no_speech": 0.0,
+     "start": 58.0,
+     "text": "You"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/3NGJSpc1k7A.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.0,
+     "logprob": -1.16,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "裏人を襲おうとした結果この男は"
+    },
+    {
+     "end": 3.68,
+     "logprob": -1.16,
+     "no_speech": 0.0,
+     "start": 2.0,
+     "text": "つかな盹描することになります"
+    },
+    {
+     "end": 59.88,
+     "logprob": -0.68,
+     "no_speech": 0.0,
+     "start": 58.48,
+     "text": "ご視聴ありがとうございました"
+    },
+    {
+     "end": 63.22,
+     "logprob": -0.67,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/3NGJSpc1k7A.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "裏人を襲おうとした結果この男は"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 2.0,
+     "text": "〇〇覚醒することになります"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/3NGJSpc1k7A.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 64.6,
+     "no_speech": 0.0,
+     "start": 57.6,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/3NGJSpc1k7A.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "村人を襲おうとした結果"
+    },
+    {
+     "end": null,
+     "start": 1.1,
+     "text": "この男はケツ穴確定することになります"
+    },
+    {
+     "end": null,
+     "start": 57.0,
+     "text": "終わった..."
+    },
+    {
+     "end": null,
+     "start": 60.0,
+     "text": "始めようか"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.6-flash"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "村人を襲おうとした結果、この男はケツ穴確定することになります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "村人を（白）→ 襲おうとした結果（白）→ この男は（白）→ ケ〇穴確定することに（赤）→ なります（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "3NGJSpc1k7A"
+}

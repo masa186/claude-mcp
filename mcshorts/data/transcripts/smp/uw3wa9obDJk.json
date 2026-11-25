@@ -1,0 +1,96 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.2,
+     "text": "ベリティを使って"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.8,
+     "text": "ASMRする"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.0,
+     "text": "という男"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.7,
+     "text": "ベリティじゃねぇよ！"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.0,
+     "text": "3つのベリティ？"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.2,
+     "text": "だからベリティじゃねぇよ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7.1,
+     "text": "めっさ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7.7,
+     "text": "ベリティ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.4秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ベリティを使ってASMRするという男"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "uw3wa9obDJk"
+}

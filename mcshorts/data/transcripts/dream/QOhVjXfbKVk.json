@@ -1,0 +1,196 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/QOhVjXfbKVk.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 8.78,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "We got billju's playing basketball. How is this gonna help us beat the game? Oh?"
+    },
+    {
+     "end": 10.4,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 8.78,
+     "text": "He's going for three. Let's go"
+    },
+    {
+     "end": 17.24,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 12.6,
+     "text": "Putting on a show. Oh, he just broke his ankle. I want to play 1v1 me. Oh"
+    },
+    {
+     "end": 22.72,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 19.08,
+     "text": "That was nice man. Hold up. Are you flexing on me? I"
+    },
+    {
+     "end": 29.12,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 24.8,
+     "text": "Want to play with you all right. I'm ready this time you ain't gonna score on me"
+    },
+    {
+     "end": 31.5,
+     "logprob": -0.18,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "Ah, did you just score on me?"
+    },
+    {
+     "end": 33.08,
+     "logprob": -0.18,
+     "no_speech": 0.0,
+     "start": 31.84,
+     "text": "Alright, I'm ready this time."
+    },
+    {
+     "end": 34.04,
+     "logprob": -0.18,
+     "no_speech": 0.0,
+     "start": 33.14,
+     "text": "You ain't gonna score on me."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/QOhVjXfbKVk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.02,
+     "logprob": -0.19,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "あの全員の親もドンミックほどのノブカス男グロックスですが"
+    },
+    {
+     "end": 4.76,
+     "logprob": -0.19,
+     "no_speech": 0.0,
+     "start": 3.02,
+     "text": "彼の機嫌を損ねたらこうなります"
+    },
+    {
+     "end": 32.0,
+     "logprob": -3.11,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "あ自分で、僕は小さく開く。"
+    },
+    {
+     "end": 38.62,
+     "logprob": -3.11,
+     "no_speech": 0.0,
+     "start": 33.06,
+     "text": "よく츠寂しいのに、僕はとって打ち上げてのペンを快遍しているよ"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/QOhVjXfbKVk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "あの全員の親もどんびくほどのノブカス男フロックスですが、彼の機嫌を損ねたらこうなります。"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/QOhVjXfbKVk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 34.15,
+     "no_speech": 0.0,
+     "start": 32.15,
+     "text": "I'm ready this time you ain't gonna score on me"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "あの禪院直哉もドン引くほどのドブカス男、グロックスですが、彼の機嫌を損ねたらこうなります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "あの（白）→ 禪院直哉も（黄）→ ドン引く程の（黄）→ 素敵な男性（白）→ Groxですが（白）→ 彼の機嫌を損ねたら（白）→ こうなります（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "QOhVjXfbKVk"
+}

@@ -1,0 +1,66 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ドバガキの心が浄化される絶景がこちら"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 2.5,
+     "text": "*心を無にして見てください*"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 6.5,
+     "text": "*氷1億個設置完了*"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "claude8s",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.5秒",
+    "src": "claude8s"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドバガキの心が浄化される絶景がこちら"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "3_BhuFNAC5w"
+}

@@ -1,0 +1,368 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/YaBIB4VuiqM.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 8.72,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Hey chill chill relax. Oh, I gotta make this. Bro, I gotta get out of here. There's a lake"
+    },
+    {
+     "end": 15.62,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 8.72,
+     "text": "I don't smell bad, right?"
+    },
+    {
+     "end": 21.3,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 19.62,
+     "text": "Wait, actually there's one place"
+    },
+    {
+     "end": 23.74,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 21.3,
+     "text": "Let's go"
+    },
+    {
+     "end": 25.24,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 23.74,
+     "text": "Bro, you just saved me"
+    },
+    {
+     "end": 28.06,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 25.24,
+     "text": "What? I don't smell that bad. Drama queen"
+    },
+    {
+     "end": 28.42,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 28.06,
+     "text": "Jesus"
+    },
+    {
+     "end": 29.88,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 28.42,
+     "text": "Bro, we even got dinner"
+    },
+    {
+     "end": 35.88,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 29.88,
+     "text": "i gotta get out of here oh let's go so i'm about to beat the game by smelling bad"
+    },
+    {
+     "end": 38.52,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 35.88,
+     "text": "bro wake up don't tell me you died"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/YaBIB4VuiqM.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.32,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ついに無加減術式を習得したブロックス"
+    },
+    {
+     "end": 5.74,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 3.12,
+     "text": "え、 chill, chill, relax"
+    },
+    {
+     "end": 6.96,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 5.74,
+     "text": "I gotta make this"
+    },
+    {
+     "end": 7.92,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 6.96,
+     "text": "I gotta get out of here"
+    },
+    {
+     "end": 8.66,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 7.92,
+     "text": "There's a lake"
+    },
+    {
+     "end": 10.9,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 9.82,
+     "text": "That's the water"
+    },
+    {
+     "end": 12.18,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 11.42,
+     "text": "Nah"
+    },
+    {
+     "end": 13.72,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 12.18,
+     "text": "Why didn't we all use the bathroom?"
+    },
+    {
+     "end": 15.56,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 14.5,
+     "text": "Eh, I don't smell bad, right?"
+    },
+    {
+     "end": 17.84,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 16.64,
+     "text": "Hey yo, chill"
+    },
+    {
+     "end": 19.86,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 18.34,
+     "text": "There's nowhere to hide"
+    },
+    {
+     "end": 21.26,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 19.86,
+     "text": "Wait, actually, there's one place"
+    },
+    {
+     "end": 23.66,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 22.62,
+     "text": "Let's go"
+    },
+    {
+     "end": 25.18,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 23.66,
+     "text": "Bro, you just saved me"
+    },
+    {
+     "end": 25.92,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 25.18,
+     "text": "What?"
+    },
+    {
+     "end": 27.28,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 26.32,
+     "text": "I don't smell that bad"
+    },
+    {
+     "end": 28.04,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 27.28,
+     "text": "Drama Queen"
+    },
+    {
+     "end": 28.36,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 28.04,
+     "text": "Jesus"
+    },
+    {
+     "end": 29.76,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 28.36,
+     "text": "Bro, we even got dinner"
+    },
+    {
+     "end": 30.72,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 29.76,
+     "text": "I gotta get out of here"
+    },
+    {
+     "end": 33.42,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 32.2,
+     "text": "Oh let's go"
+    },
+    {
+     "end": 35.86,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 33.42,
+     "text": "I'm about to beat the game by smelling bad"
+    },
+    {
+     "end": 37.38,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 36.32,
+     "text": "Bro wake up"
+    },
+    {
+     "end": 38.46,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 37.38,
+     "text": "Don't tell me you died"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/YaBIB4VuiqM.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.38,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ついに無加減術式を習得したブロックス"
+    },
+    {
+     "end": 4.12,
+     "no_speech": 0.0,
+     "start": 2.38,
+     "text": "おー!"
+    },
+    {
+     "end": 4.96,
+     "no_speech": 0.0,
+     "start": 4.12,
+     "text": "エイチュー!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/YaBIB4VuiqM.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 37.54,
+     "no_speech": 0.0,
+     "start": 34.54,
+     "text": "日本語のナレーション"
+    },
+    {
+     "end": 41.54,
+     "no_speech": 0.0,
+     "start": 37.54,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ついに無下限術式を習得したグロックス。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ついに（白）→ 無下限術式を（赤）→ 習得した（白）→ Grox（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "YaBIB4VuiqM"
+}

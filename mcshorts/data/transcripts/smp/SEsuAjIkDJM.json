@@ -1,0 +1,1008 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドクタードーナツがエンドクリスタルを5分以上重ねて爆発させます",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "真ん中にちゃんと立ってるか確認すべ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 16,
+     "text": "3人称のキーどれだっけ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 22,
+     "text": "おけ",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ドクタードーナツが"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.7,
+     "text": "エンドクリスタルを"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.7,
+     "text": "5分以上重ねて"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.2,
+     "text": "爆破させます"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.7,
+     "text": "あと13秒!!"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.2,
+     "text": "みんな見てるか!?"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 6.7,
+     "text": "くるくる"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.9秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドクタードーナツがエンドクリスタルを5分間重ねて爆破させます"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "start": 0.0,
+     "text": "ドクタードーナツが",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 5.0,
+     "start": 3.0,
+     "text": "エンドクリスタルを",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 7.0,
+     "start": 5.0,
+     "text": "5分以上重ねて",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.0,
+     "start": 7.0,
+     "text": "爆破させます",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 12.0,
+     "start": 11.25,
+     "text": "よし",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.0,
+     "start": 12.0,
+     "text": "真ん中にちゃんと立ってるか確認すべ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 21.0,
+     "start": 16.0,
+     "text": "3人称のキーどれだっけ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.5,
+     "start": 21.75,
+     "text": "おけ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.5,
+     "start": 22.75,
+     "text": "ハッハッハッハ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.5,
+     "start": 28.0,
+     "text": "お？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 37.0,
+     "start": 35.5,
+     "text": "オーマイ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 38.5,
+     "start": 38.0,
+     "text": "オマイ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 40.0,
+     "start": 39.5,
+     "text": "わお。",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.5,
+     "start": 41.0,
+     "text": "オホホw(^_^)ン",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 42.5,
+     "start": 41.75,
+     "text": "3000？wwww",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 44.75,
+     "start": 43.5,
+     "text": "わあっwwwww",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 48.0,
+     "start": 47.0,
+     "text": "やばすぎるだろ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 50.5,
+     "start": 49.0,
+     "text": "オーーマーーイ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 52.0,
+     "start": 50.75,
+     "text": "ワイルドだぜぇ",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "00:14",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.25,
+     "text": "00:14",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.5,
+     "text": "00:14",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.75,
+     "text": "00:13",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "00:13",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.25,
+     "text": "00:13",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.5,
+     "text": "00:13",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.75,
+     "text": "00:13",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.0,
+     "text": "00:12",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.25,
+     "text": "00:12",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.5,
+     "text": "00:12",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.75,
+     "text": "00:12",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "00:11",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.25,
+     "text": "00:11",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.5,
+     "text": "00:11",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.75,
+     "text": "あと13秒！！",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.0,
+     "text": "あと13秒！！",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.25,
+     "text": "あと13秒！！",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.5,
+     "text": "あと13秒！！",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.75,
+     "text": "あと13秒！！",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.0,
+     "text": "みんな見てるか!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.25,
+     "text": "みんな見てるか!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.5,
+     "text": "みんな見てるか!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.75,
+     "text": "みんな見てるか!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.0,
+     "text": "みんな見てるか!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.25,
+     "text": "みんな見てるか!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.5,
+     "text": "みんな見てるか!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 6.75,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 7.0,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 7.25,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 7.5,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 7.75,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 8.0,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 8.25,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 8.5,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 8.75,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 9.0,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 9.25,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 9.5,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 9.75,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 10.0,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 10.25,
+     "text": "<くる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 10.5,
+     "text": "Startin",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 10.75,
+     "text": "Startin",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 11.0,
+     "text": "Startin",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 11.25,
+     "text": "Startin",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 11.5,
+     "text": "Startin",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 11.75,
+     "text": "Startin",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 12.0,
+     "text": "Startin",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24.0,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24.25,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24.5,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24.75,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 25.0,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 25.25,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 25.5,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 25.75,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.0,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.25,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.5,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.75,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 27.0,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 27.25,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 27.5,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 27.75,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 29.0,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 29.25,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 29.5,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 29.75,
+     "text": "3",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 30.0,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 30.25,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 30.5,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 30.75,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 31.0,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 31.25,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 31.5,
+     "text": "2",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 31.75,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32.0,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32.25,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32.5,
+     "text": "1",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 36.0,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 36.25,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 36.5,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 36.75,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 37.0,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 37.25,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 37.5,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 37.75,
+     "text": "1000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 39.0,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 39.25,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 39.5,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 39.75,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 40.0,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 40.25,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 40.5,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 40.75,
+     "text": "2000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 42.0,
+     "text": "3000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 42.25,
+     "text": "3000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 42.5,
+     "text": "3000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 42.75,
+     "text": "3000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 43.0,
+     "text": "3000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 43.25,
+     "text": "3000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 45.5,
+     "text": "3100",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 45.75,
+     "text": "3100",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 46.0,
+     "text": "3100",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 46.25,
+     "text": "3100",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 46.5,
+     "text": "3100",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 46.75,
+     "text": "3100",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "SEsuAjIkDJM"
+}

@@ -1,0 +1,433 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/ldGtosTpMyw.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.4,
+     "logprob": -0.8,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I'm going to go to the world of $1,000,000,000"
+    },
+    {
+     "end": 30.78,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "I've escaped."
+    },
+    {
+     "end": 31.92,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 30.96,
+     "text": "You'll never find me."
+    },
+    {
+     "end": 33.68,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 32.82,
+     "text": "I'm fine, me."
+    },
+    {
+     "end": 35.16,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 33.82,
+     "text": "This is literally not even a big place."
+    },
+    {
+     "end": 36.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 35.24,
+     "text": "This is a small forest."
+    },
+    {
+     "end": 36.82,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 36.2,
+     "text": "I've escaped."
+    },
+    {
+     "end": 38.38,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 37.16,
+     "text": "You've got to be sneaking somewhere."
+    },
+    {
+     "end": 39.6,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 38.62,
+     "text": "I'm at the end portal right now."
+    },
+    {
+     "end": 40.36,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 39.7,
+     "text": "I'm going to the end."
+    },
+    {
+     "end": 41.86,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 40.58,
+     "text": "You can't even run that far."
+    },
+    {
+     "end": 42.84,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 42.08,
+     "text": "Where are you?"
+    },
+    {
+     "end": 43.94,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 43.26,
+     "text": "Oh, my God."
+    },
+    {
+     "end": 44.4,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 44.12,
+     "text": "Dream."
+    },
+    {
+     "end": 45.16,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 44.7,
+     "text": "You want to go?"
+    },
+    {
+     "end": 45.92,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 45.7,
+     "text": "No."
+    },
+    {
+     "end": 46.52,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 46.18,
+     "text": "Oh, yeah."
+    },
+    {
+     "end": 47.3,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 46.94,
+     "text": "Oh, my God."
+    },
+    {
+     "end": 48.04,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 47.3,
+     "text": "No, there's all of it."
+    },
+    {
+     "end": 48.54,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 48.18,
+     "text": "Dream."
+    },
+    {
+     "end": 50.16,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 49.28,
+     "text": "Dream, you're dead."
+    },
+    {
+     "end": 50.74,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 50.4,
+     "text": "You're dead."
+    },
+    {
+     "end": 51.02,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 50.76,
+     "text": "No."
+    },
+    {
+     "end": 51.7,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 51.28,
+     "text": "You're dead."
+    },
+    {
+     "end": 52.16,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 51.88,
+     "text": "No."
+    },
+    {
+     "end": 52.74,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 52.46,
+     "text": "Yeah."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/ldGtosTpMyw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.28,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "$1000万円の機械を使いマイクラの世界へ行くドリーム"
+    },
+    {
+     "end": 31.92,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "I've escaped, you'll never find me"
+    },
+    {
+     "end": 33.58,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 31.92,
+     "text": "I'm find me"
+    },
+    {
+     "end": 36.04,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 33.58,
+     "text": "This is literally not even a big place, this is a small forest"
+    },
+    {
+     "end": 36.82,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 36.04,
+     "text": "I've escaped"
+    },
+    {
+     "end": 38.4,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 36.82,
+     "text": "I've gotta be sneaking somewhere"
+    },
+    {
+     "end": 40.34,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 38.4,
+     "text": "I'm at the end portal right now, I'm going to the end"
+    },
+    {
+     "end": 41.82,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 40.34,
+     "text": "You can't even run that far"
+    },
+    {
+     "end": 42.84,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 41.82,
+     "text": "Where are you?"
+    },
+    {
+     "end": 44.26,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 43.14,
+     "text": "Oh my god, Dream!"
+    },
+    {
+     "end": 45.16,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 44.68,
+     "text": "You wanna go?"
+    },
+    {
+     "end": 45.88,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 45.58,
+     "text": "No"
+    },
+    {
+     "end": 46.9,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 45.88,
+     "text": "Oh yeah, it is"
+    },
+    {
+     "end": 47.6,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 46.9,
+     "text": "Oh my god"
+    },
+    {
+     "end": 50.14,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 47.6,
+     "text": "Dream, Dream, you're dead"
+    },
+    {
+     "end": 50.94,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 50.56,
+     "text": "No"
+    },
+    {
+     "end": 51.34,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 50.94,
+     "text": "No"
+    },
+    {
+     "end": 51.98,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 51.34,
+     "text": "No"
+    },
+    {
+     "end": 52.66,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 51.98,
+     "text": "Yeah"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/ldGtosTpMyw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.3,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "総額1000万円の機械を使いマイクラの世界へ行くドリーム"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/ldGtosTpMyw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 49.36,
+     "no_speech": 0.0,
+     "start": 46.36,
+     "text": "日本語のナレーション"
+    },
+    {
+     "end": 53.36,
+     "no_speech": 0.0,
+     "start": 49.36,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "総額一千万円の機械を使い、マイクラの世界へ行くドリーム。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "総額一千万円の（赤）→ 機械を使い（白）→ マイクラの世界へ（白）→ 行くDream（緑）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "ldGtosTpMyw"
+}

@@ -1,0 +1,181 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/tdwKZ17Cpzs.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.0,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Kare ni kodomo o wakaseru to konarimasu."
+    },
+    {
+     "end": 5.0,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 2.0,
+     "text": "Excuse me sir, would you mind switching seats with my son?"
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 5.0,
+     "text": "He is really nervous, and the outside comes in down."
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Ah, of course. So he likes the outside, huh?"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/tdwKZ17Cpzs.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.74,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "彼に子供を任せるとこうなります"
+    },
+    {
+     "end": 5.02,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 2.16,
+     "text": "Excuse me sir, would you mind switching seats with my son?"
+    },
+    {
+     "end": 7.88,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 5.2,
+     "text": "He is really nervous and the outside comes in down"
+    },
+    {
+     "end": 10.22,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 8.92,
+     "text": "Ah, of course"
+    },
+    {
+     "end": 11.9,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 10.22,
+     "text": "So he likes the outside, huh?"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/tdwKZ17Cpzs.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 1.76,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "彼に子供を任せるとこうなります"
+    },
+    {
+     "end": 4.98,
+     "no_speech": 0.0,
+     "start": 1.76,
+     "text": "Excuse me sir, would you mind switching seats with my son?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/tdwKZ17Cpzs.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 15.35,
+     "no_speech": 0.0,
+     "start": 8.35,
+     "text": "Of course, so he likes the outside, huh?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "彼に子供を任せるとこうなります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "彼に（白）→ 子供を任せると（白）→ こうなります（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "tdwKZ17Cpzs"
+}

@@ -1,0 +1,278 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/i2o5r0vZOrg.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.8,
+     "logprob": -1.08,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "The dream of the dog has finally reached the end."
+    },
+    {
+     "end": 32.42,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "You're killing me this whole game!"
+    },
+    {
+     "end": 33.86,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 32.42,
+     "text": "Wait, wait, wait, wait, wait."
+    },
+    {
+     "end": 35.54,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 33.86,
+     "text": "Jim, stop, stop."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/i2o5r0vZOrg.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.66,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ドリームになってしまったグミになってしまったドリームはついに限界を迎えます"
+    },
+    {
+     "end": 4.38,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 2.66,
+     "text": "ドリームになってしまったドリームがついに限界を迎えます"
+    },
+    {
+     "end": 7.3,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 6.04,
+     "text": "ジョーン iPhone"
+    },
+    {
+     "end": 9.98,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 9.62,
+     "text": "是什麼"
+    },
+    {
+     "end": 16.16,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 9.98,
+     "text": "俺はließlich〈こんなの〈ственный〉"
+    },
+    {
+     "end": 18.6,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 18.24,
+     "text": "11"
+    },
+    {
+     "end": 19.16,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 18.6,
+     "text": "何にしよう"
+    },
+    {
+     "end": 21.3,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 20.94,
+     "text": "本の"
+    },
+    {
+     "end": 22.52,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 21.3,
+     "text": "燃えられ"
+    },
+    {
+     "end": 24.2,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 22.52,
+     "text": "自分は mat"
+    },
+    {
+     "end": 26.16,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 24.2,
+     "text": "他は蠓�廊"
+    },
+    {
+     "end": 26.4,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 26.16,
+     "text": "紐"
+    },
+    {
+     "end": 26.42,
+     "logprob": -2.95,
+     "no_speech": 0.0,
+     "start": 26.4,
+     "text": "virtud"
+    },
+    {
+     "end": 27.86,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 26.42,
+     "text": "I DISOWED YOU!!!"
+    },
+    {
+     "end": 29.18,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 27.86,
+     "text": "I DISOWED YOU!!!"
+    },
+    {
+     "end": 32.52,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 29.18,
+     "text": "You have been killing me this whole game!!!"
+    },
+    {
+     "end": 33.14,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 32.52,
+     "text": "Wait..."
+    },
+    {
+     "end": 34.3,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 33.14,
+     "text": "Stop!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/i2o5r0vZOrg.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.72,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "犬になってしまったドリームがついに限界を迎えます"
+    },
+    {
+     "end": 4.28,
+     "no_speech": 0.0,
+     "start": 2.72,
+     "text": "再び、ネザーポータルを作る?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/i2o5r0vZOrg.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 34.66,
+     "no_speech": 0.0,
+     "start": 32.66,
+     "text": "ジューム ストップ"
+    },
+    {
+     "end": 36.66,
+     "no_speech": 0.0,
+     "start": 34.66,
+     "text": "ストップ"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "犬になってしまったドリームが遂に限界を迎えます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "犬になってしまった（白）→ Dreamが（緑）→ 遂に（白）→ 限界を迎える（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "i2o5r0vZOrg"
+}

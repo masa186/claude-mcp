@@ -1,0 +1,166 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/1U5Pu0pVtvM.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.04,
+     "logprob": -1.18,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "In the dream and the end of the fight, the Dacuavis will be in a moment."
+    },
+    {
+     "end": 8.24,
+     "logprob": -1.18,
+     "no_speech": 0.0,
+     "start": 4.76,
+     "text": "No! No! How? How? How? How? How? How?"
+    },
+    {
+     "end": 13.44,
+     "logprob": -1.18,
+     "no_speech": 0.0,
+     "start": 8.24,
+     "text": "The Dacuavis was in the first place, but he is in the next time, the MIS will change the fight."
+    },
+    {
+     "end": 24.56,
+     "logprob": -1.18,
+     "no_speech": 0.0,
+     "start": 22.56,
+     "text": "Ahahaha!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/1U5Pu0pVtvM.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.94,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ドリームとの決闘中ダクアビスがまさかの行動に出ます"
+    },
+    {
+     "end": 13.38,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 8.08,
+     "text": "最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/1U5Pu0pVtvM.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ドリームとの決闘中ダクアビスがまさかの行動に出ます"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/1U5Pu0pVtvM.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 20.19,
+     "no_speech": 0.0,
+     "start": 17.61,
+     "text": "シャーウェーイ"
+    },
+    {
+     "end": 22.47,
+     "no_speech": 0.0,
+     "start": 20.19,
+     "text": "ウォーウォーウォーウォー"
+    },
+    {
+     "end": 24.47,
+     "no_speech": 0.0,
+     "start": 22.47,
+     "text": "ハッハッハッハッハッハッハ"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームとの決闘中、ダクアビスがまさかの行動に出ます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Dream（緑）との（白）→ 決闘中（白）→ Daquavis（紫）が（白）→ まさかの行動に（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "1U5Pu0pVtvM"
+}

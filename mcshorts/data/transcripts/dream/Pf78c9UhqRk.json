@@ -1,0 +1,320 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/Pf78c9UhqRk.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Steve is a fan of the IKA game, but..."
+    },
+    {
+     "end": 4.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 2.0,
+     "text": "..."
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 4.0,
+     "text": "..."
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "..."
+    },
+    {
+     "end": 10.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 8.0,
+     "text": "..."
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 10.0,
+     "text": "..."
+    },
+    {
+     "end": 14.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 12.0,
+     "text": "..."
+    },
+    {
+     "end": 16.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 14.0,
+     "text": "..."
+    },
+    {
+     "end": 18.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 16.0,
+     "text": "..."
+    },
+    {
+     "end": 20.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 18.0,
+     "text": "..."
+    },
+    {
+     "end": 22.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 20.0,
+     "text": "..."
+    },
+    {
+     "end": 24.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 22.0,
+     "text": "..."
+    },
+    {
+     "end": 26.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 24.0,
+     "text": "..."
+    },
+    {
+     "end": 28.0,
+     "logprob": -0.73,
+     "no_speech": 0.0,
+     "start": 26.0,
+     "text": "..."
+    },
+    {
+     "end": 30.0,
+     "logprob": -0.51,
+     "no_speech": 0.0,
+     "start": 28.0,
+     "text": "He's crazy!"
+    },
+    {
+     "end": 38.0,
+     "logprob": -0.51,
+     "no_speech": 0.0,
+     "start": 34.0,
+     "text": "According to his file, he sped run Minecraft in five minutes."
+    },
+    {
+     "end": 40.0,
+     "logprob": -0.51,
+     "no_speech": 0.0,
+     "start": 38.0,
+     "text": "Heh, how did I miss that?"
+    },
+    {
+     "end": 46.0,
+     "logprob": -0.51,
+     "no_speech": 0.0,
+     "start": 44.0,
+     "text": "That's no fun."
+    },
+    {
+     "end": 48.0,
+     "logprob": -0.51,
+     "no_speech": 0.0,
+     "start": 46.0,
+     "text": "Lemme adjust the settings."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/Pf78c9UhqRk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.84,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "イカゲームに参加するスティーブですが"
+    },
+    {
+     "end": 7.08,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 5.78,
+     "text": "開始早々やらかします"
+    },
+    {
+     "end": 34.48,
+     "logprob": -3.77,
+     "no_speech": 0.0,
+     "start": 30.02,
+     "text": "because the guardians are neverjangらわって Al DK"
+    },
+    {
+     "end": 36.48,
+     "logprob": -3.77,
+     "no_speech": 0.0,
+     "start": 34.48,
+     "text": "約書いてさんのサイズ жизнью"
+    },
+    {
+     "end": 37.94,
+     "logprob": -3.77,
+     "no_speech": 0.0,
+     "start": 36.48,
+     "text": "izen walk up on minecraft in 5 minutes"
+    },
+    {
+     "end": 38.76,
+     "logprob": -3.77,
+     "no_speech": 0.0,
+     "start": 38.46,
+     "text": "Heh!"
+    },
+    {
+     "end": 40.08,
+     "logprob": -3.77,
+     "no_speech": 0.0,
+     "start": 39.18,
+     "text": "How did I miss that?"
+    },
+    {
+     "end": 43.72,
+     "logprob": -3.77,
+     "no_speech": 0.0,
+     "start": 40.92,
+     "text": "languages are happen to piling up"
+    },
+    {
+     "end": 47.72,
+     "logprob": -3.77,
+     "no_speech": 0.0,
+     "start": 46.3,
+     "text": "Let me adjust the settings"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Pf78c9UhqRk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 1.88,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "イカゲームに参加するスティーブですが"
+    },
+    {
+     "end": 4.22,
+     "no_speech": 0.0,
+     "start": 1.88,
+     "text": "エビバディウォーズ"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Pf78c9UhqRk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 46.21,
+     "no_speech": 0.0,
+     "start": 42.85,
+     "text": "That's no far"
+    },
+    {
+     "end": 47.79,
+     "no_speech": 0.0,
+     "start": 46.21,
+     "text": "Let me adjust the settings"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "イカゲームに参加するスティーブですが、開始早々やらかします。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "イカゲームに参加する（白）→ スティーブですが...（水色）→ ［約3秒間の銃撃シーン挿入］ → 開始早々（赤）→ やらかします（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Pf78c9UhqRk"
+}

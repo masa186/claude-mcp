@@ -1,0 +1,259 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/AUQ8r0qXgVU.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 11.58,
+     "logprob": -2.55,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "The dream is the that is made of the YARA SE-SE-SEE-SEE-SERUMPOVED"
+    },
+    {
+     "end": 13.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 11.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 15.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 13.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 17.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 15.58,
+     "text": "Remember that he's dead!"
+    },
+    {
+     "end": 19.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 17.58,
+     "text": "I didn't feel the same as he was dead!"
+    },
+    {
+     "end": 21.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 19.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 23.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 21.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 25.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 23.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 27.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 25.58,
+     "text": "I'm dead!"
+    },
+    {
+     "end": 29.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 27.58,
+     "text": "I'm dead!"
+    },
+    {
+     "end": 31.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 29.58,
+     "text": "I'm dead!"
+    },
+    {
+     "end": 33.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 31.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 35.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 33.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 37.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 35.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 39.58,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 37.58,
+     "text": "He's dead!"
+    },
+    {
+     "end": 46.58,
+     "logprob": -1.18,
+     "no_speech": 0.0,
+     "start": 39.58,
+     "text": "The first video of the Dacuabyss is the first video of the Dacuabyss."
+    },
+    {
+     "end": 50.58,
+     "logprob": -1.18,
+     "no_speech": 0.0,
+     "start": 48.58,
+     "text": "Do you understand this meaning?"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/AUQ8r0qXgVU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.08,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ラクアビスのやらせ先制布告を軽々と超えてくるドリーム"
+    },
+    {
+     "end": 40.24,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 38.06,
+     "text": "お前はもう死んでいる"
+    },
+    {
+     "end": 42.8,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 40.24,
+     "text": "一方ダクアビスの宣戦布告動画は"
+    },
+    {
+     "end": 50.44,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 48.64,
+     "text": "皆さんはこの意味がわかりますか"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/AUQ8r0qXgVU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.08,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ダクアビスのやらせ宣戦布告を軽々と超えてくるドリーム"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/AUQ8r0qXgVU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 50.48,
+     "no_speech": 0.0,
+     "start": 44.06,
+     "text": "皆さんはこの意味がわかりますか?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ダクアビスのヤラセ宣戦布告を軽々と超えてくるドリーム。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Daqabis（紫）の（白）→ ヤラセ宣戦布告を（赤）→ 軽々と超えてくる（白）→ Dream（緑）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "AUQ8r0qXgVU"
+}

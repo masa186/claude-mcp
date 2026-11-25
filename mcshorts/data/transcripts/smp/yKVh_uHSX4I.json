@@ -1,0 +1,31 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "6.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "偽拠点でチーターを釣るドーナツSMP管理者、一攫千金を狙い拠点を探してるこの男、偽拠点に一直線でたどり着けばチート確定します"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "yKVh_uHSX4I"
+}

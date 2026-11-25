@@ -1,0 +1,644 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/vTPcburl6o8.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.82,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Are you guys playing The Floor is Lava?"
+    },
+    {
+     "end": 5.54,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 4.14,
+     "text": "Do you guys want me to make it more fun?"
+    },
+    {
+     "end": 6.74,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 5.94,
+     "text": "Let's go!"
+    },
+    {
+     "end": 7.36,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 6.86,
+     "text": "Give me a sec."
+    },
+    {
+     "end": 8.58,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 7.7,
+     "text": "Let's go!"
+    },
+    {
+     "end": 9.8,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 8.72,
+     "text": "You just gotta make it to the attic."
+    },
+    {
+     "end": 11.06,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 10.1,
+     "text": "Come on, you'll do great!"
+    },
+    {
+     "end": 13.1,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 11.98,
+     "text": "You go first, little Jimmy."
+    },
+    {
+     "end": 16.66,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 15.38,
+     "text": "Yo, nice job!"
+    },
+    {
+     "end": 17.78,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 17.1,
+     "text": "What, a pillow?"
+    },
+    {
+     "end": 19.4,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 18.22,
+     "text": "No cheating around!"
+    },
+    {
+     "end": 21.84,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 20.88,
+     "text": "Let's go!"
+    },
+    {
+     "end": 23.84,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 21.84,
+     "text": "Let's go!"
+    },
+    {
+     "end": 24.84,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 23.84,
+     "text": "Let's go!"
+    },
+    {
+     "end": 29.44,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 28.84,
+     "text": "Yo!"
+    },
+    {
+     "end": 35.12,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 30.64,
+     "text": "yo bro's mad good progress guys good progress what are you guys gonna do"
+    },
+    {
+     "end": 41.12,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 37.84,
+     "text": "let's go uh-oh you guys need a little more momentum"
+    },
+    {
+     "end": 50.72,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 44.88,
+     "text": "let's go come on guys you're so close yo yo jimmy this is your perfect opportunity"
+    },
+    {
+     "end": 58.0,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 50.72,
+     "text": "let's go congrats little jimmy just go up the stairs"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/vTPcburl6o8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.16,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マブマが迫ってくる部屋を出すする村人"
+    },
+    {
+     "end": 3.82,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 2.16,
+     "text": "Are you guys playing The Floor is Lava?"
+    },
+    {
+     "end": 5.52,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 4.06,
+     "text": "Do you guys want me to make it more fun?"
+    },
+    {
+     "end": 6.62,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 5.78,
+     "text": "Let's go!"
+    },
+    {
+     "end": 7.36,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 6.86,
+     "text": "Give me a sec"
+    },
+    {
+     "end": 8.38,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 7.36,
+     "text": "Let's go!"
+    },
+    {
+     "end": 9.82,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 8.66,
+     "text": "You just gotta make it to the attic"
+    },
+    {
+     "end": 11.02,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 9.82,
+     "text": "Come on, you'll do great!"
+    },
+    {
+     "end": 13.1,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 11.9,
+     "text": "You go first, little Jimmy"
+    },
+    {
+     "end": 16.54,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 15.36,
+     "text": "Yo, nice job!"
+    },
+    {
+     "end": 17.22,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 17.1,
+     "text": "What?"
+    },
+    {
+     "end": 17.8,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 17.4,
+     "text": "A pillow?"
+    },
+    {
+     "end": 19.38,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 18.16,
+     "text": "No cheating allowed!"
+    },
+    {
+     "end": 21.7,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 20.6,
+     "text": "Let's go!"
+    },
+    {
+     "end": 25.32,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 22.02,
+     "text": "I'm so scared"
+    },
+    {
+     "end": 26.42,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 25.32,
+     "text": "I'm so scared"
+    },
+    {
+     "end": 28.82,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 26.42,
+     "text": "I'm so scared"
+    },
+    {
+     "end": 32.92,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 30.28,
+     "text": "よボウが本当に良い fuerza!"
+    },
+    {
+     "end": 35.4,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 33.38,
+     "text": "実は長くないよ!!"
+    },
+    {
+     "end": 37.1,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 35.62,
+     "text": "よ!よ!"
+    },
+    {
+     "end": 38.78,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 37.5,
+     "text": "連 Como!"
+    },
+    {
+     "end": 40.44,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 39.1,
+     "text": "お風呂もしたらすぎるまだ、"
+    },
+    {
+     "end": 41.02,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 40.44,
+     "text": "多くないでもない!"
+    },
+    {
+     "end": 45.12,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 44.44,
+     "text": "よ!"
+    },
+    {
+     "end": 48.0,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 47.86,
+     "text": "よ!"
+    },
+    {
+     "end": 48.82,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 48.76,
+     "text": "よ!"
+    },
+    {
+     "end": 50.58,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 48.82,
+     "text": "ヒ meille、「素敵進一挙!」"
+    },
+    {
+     "end": 51.44,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 50.58,
+     "text": "adolescenteなら"
+    },
+    {
+     "end": 52.0,
+     "logprob": -2.76,
+     "no_speech": 0.0,
+     "start": 51.44,
+     "text": "努力!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/vTPcburl6o8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 1.62,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マブマが迫ってくる部屋を出す"
+    },
+    {
+     "end": 2.2,
+     "no_speech": 0.0,
+     "start": 1.62,
+     "text": "する村人"
+    },
+    {
+     "end": 3.82,
+     "no_speech": 0.0,
+     "start": 2.2,
+     "text": "Are you guys playing the floor is lava?"
+    },
+    {
+     "end": 5.02,
+     "no_speech": 0.0,
+     "start": 4.18,
+     "text": "Do you guys want me to make-"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/vTPcburl6o8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 54.05,
+     "no_speech": 0.0,
+     "start": 51.05,
+     "text": "Let's go! Congrats, little jimmy! Just go up the stairs!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/vTPcburl6o8.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "マグマが迫ってくる部屋から脱出する村人"
+    },
+    {
+     "end": null,
+     "start": 2.0,
+     "text": "君達アスレしてんの？"
+    },
+    {
+     "end": null,
+     "start": 4.0,
+     "text": "もっと面白くしよっか？"
+    },
+    {
+     "end": null,
+     "start": 6.5,
+     "text": "よっしゃぁww"
+    },
+    {
+     "end": null,
+     "start": 9.0,
+     "text": "ここから脱出しなくちゃ"
+    },
+    {
+     "end": null,
+     "start": 10.5,
+     "text": "君ならできる"
+    },
+    {
+     "end": null,
+     "start": 12.0,
+     "text": "君が最初だよジミー"
+    },
+    {
+     "end": null,
+     "start": 15.5,
+     "text": "ヨッ！よくやった"
+    },
+    {
+     "end": null,
+     "start": 17.0,
+     "text": "ワッ…"
+    },
+    {
+     "end": null,
+     "start": 18.0,
+     "text": "それはダメだ"
+    },
+    {
+     "end": null,
+     "start": 18.5,
+     "text": "ノーチーティングアロウズ(推測)"
+    },
+    {
+     "end": null,
+     "start": 21.0,
+     "text": "おもろww"
+    },
+    {
+     "end": null,
+     "start": 23.0,
+     "text": "怖いよ…"
+    },
+    {
+     "end": null,
+     "start": 25.5,
+     "text": "うっせ喋んな！！"
+    },
+    {
+     "end": null,
+     "start": 26.5,
+     "text": "何やってんだお前！！"
+    },
+    {
+     "end": null,
+     "start": 29.0,
+     "text": "ヨッ！！"
+    },
+    {
+     "end": null,
+     "start": 31.0,
+     "text": "アイツ怒ってるぞ"
+    },
+    {
+     "end": null,
+     "start": 32.5,
+     "text": "順調に進んでるね"
+    },
+    {
+     "end": null,
+     "start": 34.5,
+     "text": "何するつもりだ？"
+    },
+    {
+     "end": null,
+     "start": 36.0,
+     "text": "ヨッ！！"
+    },
+    {
+     "end": null,
+     "start": 37.0,
+     "text": "イヨホホウww"
+    },
+    {
+     "end": null,
+     "start": 38.0,
+     "text": "いいねぇww"
+    },
+    {
+     "end": null,
+     "start": 39.0,
+     "text": "オッォウ"
+    },
+    {
+     "end": null,
+     "start": 40.0,
+     "text": "ちょっと勢い足りなかったね"
+    },
+    {
+     "end": null,
+     "start": 45.0,
+     "text": "いいねぇww"
+    },
+    {
+     "end": null,
+     "start": 45.5,
+     "text": "2人とも後少しだ…"
+    },
+    {
+     "end": null,
+     "start": 47.0,
+     "text": "イヨゥ！！!"
+    },
+    {
+     "end": null,
+     "start": 48.0,
+     "text": "ヨウジミーこれはチャンスだ"
+    },
+    {
+     "end": null,
+     "start": 50.0,
+     "text": "よっしゃぁ"
+    },
+    {
+     "end": null,
+     "start": 51.5,
+     "text": "おめでとうジミー"
+    },
+    {
+     "end": null,
+     "start": 52.5,
+     "text": "ただ階段を上がって"
+    },
+    {
+     "end": null,
+     "start": 54.5,
+     "text": "嘘だろ…"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マグマが迫ってくる部屋を脱出する村人。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マグマが迫ってくる（赤）→ 部屋を（白）→ 脱出する村人（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "vTPcburl6o8"
+}

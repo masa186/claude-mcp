@@ -1,0 +1,327 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/loiMd64_c6Q.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Kare wa ali-e-e-e-i-ho-ho-ho-de-free-paw-o-taiji-shimasu."
+    },
+    {
+     "end": 5.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 3.0,
+     "text": "Okay, there we go."
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "No, you better back up! I'm prepared!"
+    },
+    {
+     "end": 10.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Loser."
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "Yo, yo, yo, yo, yo!"
+    },
+    {
+     "end": 14.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 13.0,
+     "text": "Alright, let's finish this up."
+    },
+    {
+     "end": 17.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 14.0,
+     "text": "No, no, no! Not this time! You're getting canceled!"
+    },
+    {
+     "end": 24.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 17.0,
+     "text": "Tell me why every mob in Minecraft never gets blown up, but I'm the only one."
+    },
+    {
+     "end": 28.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 24.0,
+     "text": "Do you know what that seems like? It seems a little racist!"
+    },
+    {
+     "end": 29.38,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 28.0,
+     "text": "Yep, you're canceled."
+    },
+    {
+     "end": 32.52,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 29.92,
+     "text": "Mojang's now removing you from the game, little man."
+    },
+    {
+     "end": 33.82,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 32.96,
+     "text": "See you, champ."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/loiMd64_c6Q.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.54,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "彼はありえない方法でクリートワーを退治します"
+    },
+    {
+     "end": 3.8,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 3.32,
+     "text": "OK"
+    },
+    {
+     "end": 7.1,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 4.96,
+     "text": "No, you better back up"
+    },
+    {
+     "end": 7.86,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 7.1,
+     "text": "I'm prepared"
+    },
+    {
+     "end": 9.82,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 9.14,
+     "text": "Loser"
+    },
+    {
+     "end": 12.1,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "Yo, yo, yo, yo"
+    },
+    {
+     "end": 15.04,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 13.56,
+     "text": "No, no, no"
+    },
+    {
+     "end": 15.82,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 15.04,
+     "text": "Not this time"
+    },
+    {
+     "end": 16.78,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 15.82,
+     "text": "You're getting cancelled"
+    },
+    {
+     "end": 18.4,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 17.36,
+     "text": "Tell me why"
+    },
+    {
+     "end": 21.68,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 18.4,
+     "text": "Every mob in Minecraft never gets blown up"
+    },
+    {
+     "end": 24.08,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 21.68,
+     "text": "But I'm the only one"
+    },
+    {
+     "end": 25.5,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 24.08,
+     "text": "Do you know what that seems like?"
+    },
+    {
+     "end": 27.2,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 25.68,
+     "text": "It seems a little racist"
+    },
+    {
+     "end": 29.34,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 27.74,
+     "text": "Yup, you're cancelled"
+    },
+    {
+     "end": 32.48,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 29.34,
+     "text": "Modane's now removing you from the game, little man"
+    },
+    {
+     "end": 33.76,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 32.48,
+     "text": "See ya, champ!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/loiMd64_c6Q.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.54,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "彼はありえない方法でクリースワンを退治します"
+    },
+    {
+     "end": 4.7,
+     "no_speech": 0.0,
+     "start": 2.54,
+     "text": "OK, there we go"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/loiMd64_c6Q.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 32.53,
+     "no_speech": 0.0,
+     "start": 28.43,
+     "text": "You're canceled, Mojang's now removing you from the game, little man"
+    },
+    {
+     "end": 33.85,
+     "no_speech": 0.0,
+     "start": 32.53,
+     "text": "See ya, chum!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "彼はありえない方法でクリーパーを退治します。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "彼は（白）→ ありえない方法で（赤）→ クリーパーを退治します（緑）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "loiMd64_c6Q"
+}

@@ -1,0 +1,251 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドクタードーナツの命をコンマゼロ秒前で救ったパール。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドクタードーナツの命をコンマ0秒前で救ったパール",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ドクタードーナツの"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.8,
+     "text": "命をコマン"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.7,
+     "text": "0.1秒前で"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.7,
+     "text": "救った"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "パール"
+    },
+    {
+     "color": "ピンク",
+     "end": null,
+     "start": 3.5,
+     "text": "*レールガン発射直前*"
+    },
+    {
+     "color": "ピンク",
+     "end": null,
+     "start": 4.6,
+     "text": "*パール起動*"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.0,
+     "text": "なぁレールガンあったんよ"
+    },
+    {
+     "color": "オレンジ",
+     "end": null,
+     "start": 7.1,
+     "text": "マジで"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7.4,
+     "text": "え、は？？？"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドクタードーナツの命をコンマ0.1秒前で救ったパール"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "start": 0.0,
+     "text": "ドクター・ドーナツの命をコマン",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 6.0,
+     "start": 3.0,
+     "text": "0.1秒前で救ったパール",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.0,
+     "start": 6.0,
+     "text": "なあレールガンあったんよマジで",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.0,
+     "start": 8.0,
+     "text": "え、は？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.0,
+     "start": 13.0,
+     "text": "おホホwwwwwありえんwww",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ドクタードーナツの",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "命を",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.25,
+     "text": "コマン",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.0,
+     "text": "0.1秒前で",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.75,
+     "text": "救った",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "パール",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.75,
+     "text": "*レールガン発射直前*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.75,
+     "text": "*パール起動*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 9.75,
+     "text": "*-一時停止-*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 13.25,
+     "text": "オホホ!?wwwwww",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.25,
+     "text": "ありえんwww",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "b_sx5XOx0dc"
+}

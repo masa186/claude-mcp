@@ -1,0 +1,31 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "12.0秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "16歳で登録者100万弱を手にした男。ドクタードーナツにトラップを仕掛け動画化したらバズり散らかしたJettism。彼はPvPも上手くエリトラメイスワンパンを連続でできるレベル。エリトラ装着し飛びチェストプレート装…（未完）"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "FXAMa5W6zhE"
+}

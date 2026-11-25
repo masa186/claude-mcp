@@ -1,0 +1,759 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/sJDbLVB340o.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.1,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "This game will be the dream of my friend"
+    },
+    {
+     "end": 2.9,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 2.1,
+     "text": "The dream of this game"
+    },
+    {
+     "end": 4.4,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 2.9,
+     "text": "100 villagers and this is the gorilla"
+    },
+    {
+     "end": 5.1,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 4.4,
+     "text": "I'll go fast"
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 5.1,
+     "text": "I bet"
+    },
+    {
+     "end": 7.3,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "Hey, we believe in you"
+    },
+    {
+     "end": 8.8,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 7.3,
+     "text": "You got this man"
+    },
+    {
+     "end": 9.9,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 8.8,
+     "text": "Dear God"
+    },
+    {
+     "end": 11.1,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 9.9,
+     "text": "Where you guys going?"
+    },
+    {
+     "end": 12.2,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 11.1,
+     "text": "Nah, y'all can't leave"
+    },
+    {
+     "end": 12.8,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 12.2,
+     "text": "No"
+    },
+    {
+     "end": 13.7,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 12.8,
+     "text": "Don't climb that"
+    },
+    {
+     "end": 14.9,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 13.7,
+     "text": "I'll warn you"
+    },
+    {
+     "end": 16.1,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 14.9,
+     "text": "That one shouldn't count"
+    },
+    {
+     "end": 17.5,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 16.1,
+     "text": "Alright, you'll be the replacement"
+    },
+    {
+     "end": 19.7,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 17.5,
+     "text": "I gotta replace the one I killed"
+    },
+    {
+     "end": 20.5,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 19.7,
+     "text": "So it's fair"
+    },
+    {
+     "end": 22.0,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 21.5,
+     "text": "Perfect"
+    },
+    {
+     "end": 23.0,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 22.0,
+     "text": "It's fair now"
+    },
+    {
+     "end": 25.7,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 23.6,
+     "text": "You have to get bored with it"
+    },
+    {
+     "end": 26.7,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 25.7,
+     "text": "I have an idea"
+    },
+    {
+     "end": 28.3,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 27.0,
+     "text": "Does he have something?"
+    },
+    {
+     "end": 29.0,
+     "logprob": -0.55,
+     "no_speech": 0.0,
+     "start": 28.3,
+     "text": "I bet"
+    },
+    {
+     "end": 30.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 29.0,
+     "text": "Good idea!"
+    },
+    {
+     "end": 31.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "Oh, poor me!"
+    },
+    {
+     "end": 32.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 31.0,
+     "text": "How stupid!"
+    },
+    {
+     "end": 33.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 32.0,
+     "text": "I don't want to do!"
+    },
+    {
+     "end": 35.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 33.0,
+     "text": "What? You can get my girlfriend!"
+    },
+    {
+     "end": 36.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 35.0,
+     "text": "What?"
+    },
+    {
+     "end": 37.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 36.0,
+     "text": "Just let yourself!"
+    },
+    {
+     "end": 38.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 37.0,
+     "text": "Consider yourselves free!"
+    },
+    {
+     "end": 40.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 38.0,
+     "text": "She's a sick boy!"
+    },
+    {
+     "end": 41.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 40.0,
+     "text": "Oh, I got a baddie!"
+    },
+    {
+     "end": 42.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 41.0,
+     "text": "Oh, oh!"
+    },
+    {
+     "end": 43.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 42.0,
+     "text": "Oh!"
+    },
+    {
+     "end": 44.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 43.0,
+     "text": "Oh, she is behind me!"
+    },
+    {
+     "end": 45.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 44.0,
+     "text": "Okay, baby!"
+    },
+    {
+     "end": 46.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 45.0,
+     "text": "Dear God! There's two gorillas!"
+    },
+    {
+     "end": 47.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 46.0,
+     "text": "Nah, deals off!"
+    },
+    {
+     "end": 49.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 47.0,
+     "text": "I don't know if I'm ugly!"
+    },
+    {
+     "end": 50.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 49.0,
+     "text": "Oh, yeah, they bad!"
+    },
+    {
+     "end": 51.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 50.0,
+     "text": "Dear God!"
+    },
+    {
+     "end": 54.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 51.0,
+     "text": "Don't go ahead and go ahead and see them in the future!"
+    },
+    {
+     "end": 56.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 54.0,
+     "text": "Hey, you too!"
+    },
+    {
+     "end": 57.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 56.0,
+     "text": "Wait, what?"
+    },
+    {
+     "end": 63.6,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 57.0,
+     "text": "oh he's using the bathroom y'all have one chance to make a plan don't make it complicated hurry up"
+    },
+    {
+     "end": 69.94,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 63.6,
+     "text": "god he's done what i said not too complicated what are y'all doing what you gonna do with him"
+    },
+    {
+     "end": 78.16,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 69.94,
+     "text": "he's done wiping okay y'all ready we have your son really that's your plan"
+    },
+    {
+     "end": 86.38,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 78.16,
+     "text": "no the gorilla wins i'm sorry guys i'm sorry hey he won fair and square wait what"
+    },
+    {
+     "end": 88.7,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 86.38,
+     "text": "Oh, no way!"
+    },
+    {
+     "end": 89.82,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 88.82,
+     "text": "Letters never play!"
+    },
+    {
+     "end": 90.66,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 90.14,
+     "text": "Oh!"
+    },
+    {
+     "end": 92.22,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 91.1,
+     "text": "Hey, he's the goal!"
+    },
+    {
+     "end": 93.22,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 92.28,
+     "text": "Let's go!"
+    },
+    {
+     "end": 95.86,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 93.74,
+     "text": "Now let's do 100 gorillas versus a villager!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/sJDbLVB340o.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.66,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "デスゲームを開催するドリームの友達のブカス君"
+    },
+    {
+     "end": 30.86,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "うっ、フォーミー!"
+    },
+    {
+     "end": 31.64,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 31.04,
+     "text": "うっ、フォーミー!"
+    },
+    {
+     "end": 32.2,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 31.64,
+     "text": "How stupid!"
+    },
+    {
+     "end": 33.06,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 32.32,
+     "text": "I don't know what to do!"
+    },
+    {
+     "end": 33.52,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 33.32,
+     "text": "What?"
+    },
+    {
+     "end": 34.82,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 33.78,
+     "text": "You can get my girlfriend!"
+    },
+    {
+     "end": 35.24,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 35.04,
+     "text": "What?"
+    },
+    {
+     "end": 36.36,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 35.54,
+     "text": "Just let yourself!"
+    },
+    {
+     "end": 37.88,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 36.7,
+     "text": "Consider yourselves free!"
+    },
+    {
+     "end": 39.98,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 38.26,
+     "text": "シーズンシーズンシーズンシーズンシーズンシーズンシーズン!"
+    },
+    {
+     "end": 41.44,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 39.98,
+     "text": "お! I got a baddie!"
+    },
+    {
+     "end": 42.18,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 41.6,
+     "text": "あ!あ!あ!"
+    },
+    {
+     "end": 42.48,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 42.38,
+     "text": "お!"
+    },
+    {
+     "end": 42.84,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 42.74,
+     "text": "お!"
+    },
+    {
+     "end": 43.82,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 43.04,
+     "text": "高谷シーンが後ろに!"
+    },
+    {
+     "end": 44.0,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 43.88,
+     "text": "お!"
+    },
+    {
+     "end": 44.58,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 44.2,
+     "text": "お!"
+    },
+    {
+     "end": 45.98,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 45.1,
+     "text": "オーラックスは東海"
+    },
+    {
+     "end": 46.68,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 45.98,
+     "text": "お!ヤ!"
+    },
+    {
+     "end": 49.6,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 46.76,
+     "text": "お!ヤ!"
+    },
+    {
+     "end": 50.14,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 49.82,
+     "text": "ア!"
+    },
+    {
+     "end": 54.24,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 50.3,
+     "text": "どんどん減っていく村人たちですが、このあとからに天気が訪れます。"
+    },
+    {
+     "end": 55.0,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 54.48,
+     "text": "えー、お!"
+    },
+    {
+     "end": 55.08,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 55.0,
+     "text": "えー、えー!"
+    },
+    {
+     "end": 55.82,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 55.72,
+     "text": "お!"
+    },
+    {
+     "end": 56.44,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 56.12,
+     "text": "お!"
+    },
+    {
+     "end": 56.98,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 56.92,
+     "text": "お!"
+    },
+    {
+     "end": 58.7,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 58.5,
+     "text": "お!"
+    },
+    {
+     "end": 66.24,
+     "logprob": -1.42,
+     "no_speech": 0.0,
+     "start": 65.92,
+     "text": "オ!"
+    },
+    {
+     "end": 71.68,
+     "logprob": -2.13,
+     "no_speech": 0.0,
+     "start": 66.24,
+     "text": "超高級 who and what you going to do with him a he's done"
+    },
+    {
+     "end": 85.0,
+     "logprob": -2.13,
+     "no_speech": 0.0,
+     "start": 71.68,
+     "text": "wipey really that's your plan I'm sorry guys I'm sorry to hey he won fair and"
+    },
+    {
+     "end": 94.84,
+     "logprob": -2.13,
+     "no_speech": 0.0,
+     "start": 85.0,
+     "text": "square wait what has to go oh ag it's cool now it's go a huntercar"
+    },
+    {
+     "end": 96.82,
+     "logprob": -2.14,
+     "no_speech": 0.0,
+     "start": 94.84,
+     "text": "一山の宮城と一山の宮城の中に"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/sJDbLVB340o.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.82,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "デスゲームを開催するドリームの友達ドブカスくん"
+    },
+    {
+     "end": 4.36,
+     "no_speech": 0.0,
+     "start": 2.82,
+     "text": "100ビルジェスはゴリラ"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 4.36,
+     "text": "そうか"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/sJDbLVB340o.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 91.85,
+     "no_speech": 0.0,
+     "start": 89.85,
+     "text": "オールでヒットしてる"
+    },
+    {
+     "end": 93.57,
+     "no_speech": 0.0,
+     "start": 91.85,
+     "text": "デザー ワッチ ゴー"
+    },
+    {
+     "end": 95.85,
+     "no_speech": 0.0,
+     "start": 93.57,
+     "text": "デザー ヒット ゴー"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "デスゲームを開催する、ドリームの友達ドブカスくん。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "デスゲームを開催する（赤）→ Dreamの友達（緑）→ Groxくん（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "sJDbLVB340o"
+}

@@ -1,0 +1,250 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/PXYdDGT2fms.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.88,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Hi, Little Babies."
+    },
+    {
+     "end": 4.54,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 3.76,
+     "text": "Hey, Milo."
+    },
+    {
+     "end": 8.06,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 5.72,
+     "text": "Whoa, ass turds."
+    },
+    {
+     "end": 13.04,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 11.46,
+     "text": "This game is glitching."
+    },
+    {
+     "end": 17.68,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 16.36,
+     "text": "Oh, yeah, baby."
+    },
+    {
+     "end": 19.64,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 18.74,
+     "text": "Hi, Little Babies."
+    },
+    {
+     "end": 20.52,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 19.78,
+     "text": "Come on, I'm out."
+    },
+    {
+     "end": 25.12,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 23.52,
+     "text": "Ooh, that looks good."
+    },
+    {
+     "end": 26.88,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 25.22,
+     "text": "Is Herobrine actually gonna spawn?"
+    },
+    {
+     "end": 30.88,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 26.88,
+     "text": "Bop that's perfect"
+    },
+    {
+     "end": 32.32,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 30.88,
+     "text": "There we go"
+    },
+    {
+     "end": 34.78,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 32.32,
+     "text": "Fortnite said"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/PXYdDGT2fms.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.48,
+     "logprob": -3.56,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "嬉しい"
+    },
+    {
+     "end": 6.36,
+     "logprob": -3.56,
+     "no_speech": 0.0,
+     "start": 0.48,
+     "text": "aaaaa"
+    },
+    {
+     "end": 17.18,
+     "logprob": -3.56,
+     "no_speech": 0.0,
+     "start": 17.06,
+     "text": "?"
+    },
+    {
+     "end": 26.7,
+     "logprob": -3.56,
+     "no_speech": 0.0,
+     "start": 25.44,
+     "text": "I actually gonna spawn"
+    },
+    {
+     "end": 32.24,
+     "logprob": -1.2,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "あ、それが完璧です。"
+    },
+    {
+     "end": 34.48,
+     "logprob": -1.2,
+     "no_speech": 0.0,
+     "start": 32.36,
+     "text": "フォータイトさん。"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/PXYdDGT2fms.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.96,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+    },
+    {
+     "end": 4.5,
+     "no_speech": 0.0,
+     "start": 2.96,
+     "text": "Hey Milo"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/PXYdDGT2fms.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 33.03,
+     "no_speech": 0.0,
+     "start": 31.03,
+     "text": "There we go"
+    },
+    {
+     "end": 35.03,
+     "no_speech": 0.0,
+     "start": 33.03,
+     "text": "Fortnite said"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "これが女の子と男の子の、マイクラを遊ぶ時の違いです。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "これが女の子と（白）→ 漢の子の（青）→ マイクラを遊ぶ時の（白）→ 違いです（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "PXYdDGT2fms"
+}

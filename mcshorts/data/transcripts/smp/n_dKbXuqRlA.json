@@ -1,0 +1,234 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "チェスト内の種を",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 1,
+     "text": "真下に投げて",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 2,
+     "text": "ウンナラ取りにメイス着地",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 3,
+     "text": "チェスト内の",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 4,
+     "text": "種と",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 4,
+     "text": "骨粉で",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 5,
+     "text": "畑を耕す",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 5,
+     "text": "神技を見る",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "ドクタードーナツ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 9,
+     "text": "うんこれならできそう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "全然難しくない",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 16,
+     "text": "干草の俵を使って",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 19,
+     "text": "ダメージを受けずに",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "ナイス",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 21,
+     "text": "クラフト",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 22,
+     "text": "そこ1番簡単だな",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "ほーんで",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 24,
+     "text": "これなら普通に余裕で",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.0",
+     "text": "チェスト内の"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.7",
+     "text": "卵を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.0",
+     "text": "真下に投げて"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.7",
+     "text": "産んだニワトリに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "2.2",
+     "text": "メイス着地"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "3.2",
+     "text": "チェスト内の"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.0",
+     "text": "種と"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.2",
+     "text": "骨粉で"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.5",
+     "text": "畑を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "5.0",
+     "text": "耕す神業を見る"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "6.0",
+     "text": "ドクタードーナツ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "6.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "チェスト内の卵を真下に投げて産んだ鶏にメイス着地、チェスト内の種と骨粉で畑を耕す神業を見るドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "n_dKbXuqRlA"
+}

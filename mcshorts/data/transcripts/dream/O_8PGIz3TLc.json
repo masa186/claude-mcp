@@ -1,0 +1,279 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/O_8PGIz3TLc.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.5,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "He's a dream that he can't be able to see the place in a micro-鬼ごっこ."
+    },
+    {
+     "end": 6.5,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 3.5,
+     "text": "Dream. Dream. Dream."
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 6.5,
+     "text": "Oh no!"
+    },
+    {
+     "end": 10.5,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Come on, wait, he died!"
+    },
+    {
+     "end": 12.5,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 11.5,
+     "text": "Oh!"
+    },
+    {
+     "end": 14.5,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 12.5,
+     "text": "Oh, watch out, watch out, watch out!"
+    },
+    {
+     "end": 16.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 15.5,
+     "text": "Come on!"
+    },
+    {
+     "end": 18.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 16.0,
+     "text": "Go, go, go, go, go, go, go!"
+    },
+    {
+     "end": 19.5,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 18.0,
+     "text": "Oh!"
+    },
+    {
+     "end": 21.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 19.5,
+     "text": "Wait, he's dead, he's dead."
+    },
+    {
+     "end": 22.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 21.0,
+     "text": "No way, guys."
+    },
+    {
+     "end": 23.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 22.0,
+     "text": "Oh!"
+    },
+    {
+     "end": 24.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 23.0,
+     "text": "Oh!"
+    },
+    {
+     "end": 25.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 24.0,
+     "text": "Oh!"
+    },
+    {
+     "end": 26.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 25.0,
+     "text": "He landed in the water!"
+    },
+    {
+     "end": 27.0,
+     "logprob": -0.59,
+     "no_speech": 0.0,
+     "start": 26.0,
+     "text": "He landed in the water!"
+    },
+    {
+     "end": 30.0,
+     "logprob": -1.27,
+     "no_speech": 0.0,
+     "start": 27.0,
+     "text": "And for a few hours, we will be able to do a hentai play."
+    },
+    {
+     "end": 62.32,
+     "logprob": -1.4,
+     "no_speech": 0.0,
+     "start": 57.0,
+     "text": "I can't believe that he is a god of my life."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/O_8PGIz3TLc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.12,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マイクラ鬼ごっこでありえない着地を見せるドリームという男"
+    },
+    {
+     "end": 29.5,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 26.86,
+     "text": "そして数時間後、またもや変態プレイをかまします"
+    },
+    {
+     "end": 37.4,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 31.46,
+     "text": "oh god we got it oh my god you go right i go left he's stuck"
+    },
+    {
+     "end": 47.1,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 41.7,
+     "text": "oh my god i don't think he's gonna make it that's before i thought he might not make it"
+    },
+    {
+     "end": 61.86,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 58.38,
+     "text": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/O_8PGIz3TLc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.18,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マイクラ鬼ごっこでありえない着地を見せるドリームという男"
+    },
+    {
+     "end": 4.44,
+     "no_speech": 0.0,
+     "start": 3.18,
+     "text": "ドリーム"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/O_8PGIz3TLc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 61.91,
+     "no_speech": 0.0,
+     "start": 55.37,
+     "text": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラ鬼ごっこでありえない着地を見せるドリームという男。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラ鬼ごっこで（白）→ ありえない着地を見せる（赤）→ ドリームと言う男（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "O_8PGIz3TLc"
+}

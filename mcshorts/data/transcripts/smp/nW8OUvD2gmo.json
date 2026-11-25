@@ -1,0 +1,215 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドリームを超えたと主張する男が、崖っぷちでハンター3人から逃げる",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "Dreamを超えたと"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "主張する男が"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.0,
+     "text": "崖っぷちでハンター3人から"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "逃げる"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.1,
+     "text": "*噴水着地*"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.6,
+     "text": "これヤラセくさスギィ！"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームを超えたと主張する男が崖っぷちでハンター3人から逃げる"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.25,
+     "start": 0.0,
+     "text": "Dreamを超えたと主張する男が",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.75,
+     "start": 1.75,
+     "text": "崖っぷちでハンター3人から逃げる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 7.75,
+     "start": 6.5,
+     "text": "これヤラセくさスギィ！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 53.25,
+     "start": 51.25,
+     "text": "俺は何を見せられてんだ",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 4.0,
+     "text": "*噴水着地*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 9.0,
+     "text": "*ソーシャルディスタンス*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 11.25,
+     "text": "*俄満地*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16.0,
+     "text": "*x_Axlotl_z*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 20.25,
+     "text": "*はたきおとす*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 27.5,
+     "text": "*はしご回収*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 30.5,
+     "text": "*はしご着地*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 40.75,
+     "text": "*羊毛回収*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 43.25,
+     "text": "*羊毛設置*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 45.0,
+     "text": "*タンポポ回収*",
+     "track": "subtitle"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 55.5,
+     "text": "*ダンポボで水吸収*",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "nW8OUvD2gmo"
+}

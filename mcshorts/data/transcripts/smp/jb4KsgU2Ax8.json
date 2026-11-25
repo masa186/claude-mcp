@@ -1,0 +1,102 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.2,
+     "text": "奈落トラップに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.8,
+     "text": "落とされても"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.4,
+     "text": "脱出する"
+    },
+    {
+     "color": "orange",
+     "end": null,
+     "start": 2.0,
+     "text": "Flamefrags"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.6,
+     "text": "またトラップあるのかよ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.4,
+     "text": "お前？"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.6,
+     "text": "そ、それだけだぞ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.8,
+     "text": "もうそろ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.4,
+     "text": "1v1の時間…ってコト!?"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "奈落トラップに落とされても脱出するFlamefrags"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "jb4KsgU2Ax8"
+}

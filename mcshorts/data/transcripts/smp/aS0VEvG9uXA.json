@@ -1,0 +1,96 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "リアル"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.5,
+     "text": "すぎて"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.8,
+     "text": "二度と"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.9,
+     "text": "外に"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.1,
+     "text": "出れなくなるといわれた"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.2,
+     "text": "GTA6"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.1,
+     "text": "新トレーラー"
+    },
+    {
+     "color": "red",
+     "end": null,
+     "start": 3.7,
+     "text": "*グランド・セフト・オートVI*"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "リアルすぎて二度と外に出れなくなると言われたGTA6新トレーラー"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "aS0VEvG9uXA"
+}

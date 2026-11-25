@@ -1,0 +1,31 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "12.0秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "世界一人口が多いマイクラサーバーで起きた戦争。あるプレイヤーが自動装置で大量の水を広げ始め、steak、Jettismらの配信をきっかけに数百人規模の洪水派へ発展。荒らしや襲撃が許可されてるため管理者ドク…（未完）"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "S-6p_o6jYZs"
+}

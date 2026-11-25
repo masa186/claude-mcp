@@ -1,0 +1,664 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/bqyhes0V7Qc.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.1,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Gacha gacha de hitter item otsuka ikinok no no no no no no"
+    },
+    {
+     "end": 3.8,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 3.1,
+     "text": "Nooo!"
+    },
+    {
+     "end": 4.8,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 3.8,
+     "text": "Die! Die! Die!"
+    },
+    {
+     "end": 5.3,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 4.8,
+     "text": "Oh!"
+    },
+    {
+     "end": 6.3,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 5.3,
+     "text": "Dringo!"
+    },
+    {
+     "end": 7.3,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 6.3,
+     "text": "Oh! I have a sword!"
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 7.3,
+     "text": "What did you get?"
+    },
+    {
+     "end": 8.5,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 8.0,
+     "text": "Oh!"
+    },
+    {
+     "end": 9.0,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 8.5,
+     "text": "Hit George!"
+    },
+    {
+     "end": 10.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Oh! He can't reach me! I'm stuck in the corner!"
+    },
+    {
+     "end": 11.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 10.7,
+     "text": "I'm safe! I'm safe!"
+    },
+    {
+     "end": 12.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 11.7,
+     "text": "I'm going! I'm going!"
+    },
+    {
+     "end": 13.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 12.7,
+     "text": "Oh!"
+    },
+    {
+     "end": 14.2,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 13.7,
+     "text": "Oh!"
+    },
+    {
+     "end": 15.2,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 14.2,
+     "text": "No! No! No! No!"
+    },
+    {
+     "end": 16.2,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 15.2,
+     "text": "Oh!"
+    },
+    {
+     "end": 16.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 16.2,
+     "text": "No!"
+    },
+    {
+     "end": 17.2,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 16.7,
+     "text": "No!"
+    },
+    {
+     "end": 18.2,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 17.2,
+     "text": "How'd you miss?"
+    },
+    {
+     "end": 19.2,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 18.2,
+     "text": "No!"
+    },
+    {
+     "end": 19.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 19.2,
+     "text": "No!"
+    },
+    {
+     "end": 20.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 19.7,
+     "text": "Oh! He got one too!"
+    },
+    {
+     "end": 21.2,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 20.7,
+     "text": "No! Don't kill me!"
+    },
+    {
+     "end": 21.7,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 21.2,
+     "text": "Don't kill me!"
+    },
+    {
+     "end": 22.8,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 21.7,
+     "text": "Don't! Don't! Don't! Don't!"
+    },
+    {
+     "end": 23.8,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 22.8,
+     "text": "Bang!"
+    },
+    {
+     "end": 24.8,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 23.8,
+     "text": "Oh my god!"
+    },
+    {
+     "end": 27.8,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 26.8,
+     "text": "Wait! What?"
+    },
+    {
+     "end": 29.0,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 27.8,
+     "text": "Oh my god!"
+    },
+    {
+     "end": 29.8,
+     "logprob": -0.5,
+     "no_speech": 0.0,
+     "start": 29.0,
+     "text": "It's still going!"
+    },
+    {
+     "end": 31.14,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 29.8,
+     "text": "Wait, it almost killed me."
+    },
+    {
+     "end": 32.38,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 31.78,
+     "text": "Yeah, yeah, yeah."
+    },
+    {
+     "end": 33.36,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 32.64,
+     "text": "Is that enderpearl?"
+    },
+    {
+     "end": 33.88,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 33.42,
+     "text": "What did he get?"
+    },
+    {
+     "end": 34.54,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 34.12,
+     "text": "Oh, an enderpearl?"
+    },
+    {
+     "end": 37.88,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 37.16,
+     "text": "Wait, what?"
+    },
+    {
+     "end": 39.86,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 38.88,
+     "text": "How did you kill him?"
+    },
+    {
+     "end": 40.68,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 40.16,
+     "text": "I'm scared."
+    },
+    {
+     "end": 41.82,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 40.8,
+     "text": "I'm on one and a half hearts."
+    },
+    {
+     "end": 43.54,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 42.54,
+     "text": "Oh, you guys are invisible."
+    },
+    {
+     "end": 44.6,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 43.92,
+     "text": "All right, go, go."
+    },
+    {
+     "end": 45.18,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 44.82,
+     "text": "W."
+    },
+    {
+     "end": 45.7,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 45.3,
+     "text": "What did he get?"
+    },
+    {
+     "end": 46.36,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 45.78,
+     "text": "Oh, netherite."
+    },
+    {
+     "end": 47.06,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 46.74,
+     "text": "Please."
+    },
+    {
+     "end": 48.86,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 48.58,
+     "text": "What?"
+    },
+    {
+     "end": 49.4,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 48.86,
+     "text": "I got a shield."
+    },
+    {
+     "end": 50.36,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 49.52,
+     "text": "I'm safe, I'm safe."
+    },
+    {
+     "end": 51.36,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 50.72,
+     "text": "I'm safe."
+    },
+    {
+     "end": 52.98,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 51.52,
+     "text": "Is there anything that can heal us in these?"
+    },
+    {
+     "end": 54.64,
+     "logprob": -0.34,
+     "no_speech": 0.0,
+     "start": 53.08,
+     "text": "Like, I'm on one and a half hearts."
+    },
+    {
+     "end": 60.8,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 59.8,
+     "text": "No!"
+    },
+    {
+     "end": 61.8,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 60.8,
+     "text": "No!"
+    },
+    {
+     "end": 62.8,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 61.8,
+     "text": "No!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/bqyhes0V7Qc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.86,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ガチャガチャでヒットアイテムを使い、生き残り1名4人組"
+    },
+    {
+     "end": 31.18,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "はい、みなさん、蟹に入ったら泣きさくなった"
+    },
+    {
+     "end": 32.86,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 31.18,
+     "text": "M。何するかってたまる?"
+    },
+    {
+     "end": 34.08,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 32.86,
+     "text": "W.O.A.T.T.,"
+    },
+    {
+     "end": 35.96,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 34.08,
+     "text": "H.O.A.T.T."
+    },
+    {
+     "end": 38.54,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 37.08,
+     "text": "W.A.T.T."
+    },
+    {
+     "end": 38.86,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 38.54,
+     "text": "I'm scared."
+    },
+    {
+     "end": 40.66,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 40.1,
+     "text": "I'm scared."
+    },
+    {
+     "end": 41.8,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 40.86,
+     "text": "I'm on One and a half hearts."
+    },
+    {
+     "end": 42.8,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 42.1,
+     "text": "He's invisible."
+    },
+    {
+     "end": 43.54,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 42.96,
+     "text": "Oh, you guys are invisible."
+    },
+    {
+     "end": 44.36,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 43.88,
+     "text": "凄い、GO!"
+    },
+    {
+     "end": 45.08,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 44.72,
+     "text": "W."
+    },
+    {
+     "end": 45.7,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 45.32,
+     "text": "What did I get?"
+    },
+    {
+     "end": 46.98,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 45.86,
+     "text": "Netherite, please."
+    },
+    {
+     "end": 49.34,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 48.48,
+     "text": "I got a shield."
+    },
+    {
+     "end": 51.3,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 49.56,
+     "text": "I'm safe, I'm safe, I'm safe."
+    },
+    {
+     "end": 52.96,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 51.52,
+     "text": "Is there anything that can heal us in these?"
+    },
+    {
+     "end": 54.66,
+     "logprob": -1.46,
+     "no_speech": 0.0,
+     "start": 53.12,
+     "text": "I'm on One and a half hearts."
+    },
+    {
+     "end": 55.36,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 54.66,
+     "text": "笑"
+    },
+    {
+     "end": 55.98,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 55.36,
+     "text": "笑"
+    },
+    {
+     "end": 57.2,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 55.98,
+     "text": "笑"
+    },
+    {
+     "end": 58.02,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 57.2,
+     "text": "笑"
+    },
+    {
+     "end": 58.1,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 58.02,
+     "text": "笑"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/bqyhes0V7Qc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ガチャガチャでヒーターアイテムを使い生き残る一名4人組"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 3.0,
+     "text": "GO!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/bqyhes0V7Qc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 65.74,
+     "no_speech": 0.0,
+     "start": 58.74,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ガチャガチャで引いたアイテムを使い、生き残るいつメン4人組。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ガチャガチャで引いた（白）→ アイテムを使い（水色）→ 生き残る（水色）→ いつメン4人組（黄緑） ※2.2秒頃に右上へ※エンドラ参戦?!（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "bqyhes0V7Qc"
+}

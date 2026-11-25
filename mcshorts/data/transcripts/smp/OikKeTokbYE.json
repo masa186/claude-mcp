@@ -1,0 +1,108 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "黄色の球体"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.7,
+     "text": "ベリティと"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.1,
+     "text": "出会った"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.5,
+     "text": "瞬間"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "ハロー！"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "ボクはベリティ！"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.0,
+     "text": "キミの"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.2,
+     "text": "おたすけフレンドだよ。"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.7,
+     "text": "なんでも聞いて"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.0,
+     "text": "ボクは全部知ってるから"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "claude8s",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.0秒",
+    "src": "claude8s"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "黄色の球体ベリティと出会った瞬間"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "OikKeTokbYE"
+}

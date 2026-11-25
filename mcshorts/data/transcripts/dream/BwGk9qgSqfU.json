@@ -1,0 +1,348 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/BwGk9qgSqfU.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.0,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "The dreamers of the巨人 who are running away from the巨人,"
+    },
+    {
+     "end": 4.0,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 2.0,
+     "text": "will come back to their悲劇."
+    },
+    {
+     "end": 31.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "What are you doing?"
+    },
+    {
+     "end": 32.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 31.0,
+     "text": "What are you doing?"
+    },
+    {
+     "end": 33.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 32.0,
+     "text": "I have to go, guys."
+    },
+    {
+     "end": 34.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 33.0,
+     "text": "What?"
+    },
+    {
+     "end": 35.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 34.0,
+     "text": "Where do I go?"
+    },
+    {
+     "end": 36.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 35.0,
+     "text": "How'd you get in here?"
+    },
+    {
+     "end": 37.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 36.0,
+     "text": "I didn't..."
+    },
+    {
+     "end": 38.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 37.0,
+     "text": "George, why'd you come back?"
+    },
+    {
+     "end": 39.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 38.0,
+     "text": "Wait, no, stop!"
+    },
+    {
+     "end": 40.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 39.0,
+     "text": "No, no, no, no, no!"
+    },
+    {
+     "end": 41.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 40.0,
+     "text": "Please!"
+    },
+    {
+     "end": 42.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 41.0,
+     "text": "Come on, George!"
+    },
+    {
+     "end": 43.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 42.0,
+     "text": "Quick!"
+    },
+    {
+     "end": 44.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 43.0,
+     "text": "George!"
+    },
+    {
+     "end": 45.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 44.0,
+     "text": "Up here!"
+    },
+    {
+     "end": 46.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 45.0,
+     "text": "Up here, dream!"
+    },
+    {
+     "end": 47.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 46.0,
+     "text": "Yes!"
+    },
+    {
+     "end": 48.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 47.0,
+     "text": "No!"
+    },
+    {
+     "end": 49.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 48.0,
+     "text": "No!"
+    },
+    {
+     "end": 50.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 49.0,
+     "text": "You're gonna go to the next race!"
+    },
+    {
+     "end": 51.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 50.0,
+     "text": "No!"
+    },
+    {
+     "end": 53.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 51.0,
+     "text": "Why?"
+    },
+    {
+     "end": 54.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 53.0,
+     "text": "What?"
+    },
+    {
+     "end": 55.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 54.0,
+     "text": "Why?"
+    },
+    {
+     "end": 59.0,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 55.0,
+     "text": "What?"
+    },
+    {
+     "end": 65.0,
+     "logprob": -1.05,
+     "no_speech": 0.0,
+     "start": 59.0,
+     "text": "If he is a little cool, subscribe to the channel!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/BwGk9qgSqfU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.46,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "巨人から逃げるドリームたち"
+    },
+    {
+     "end": 3.38,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 1.46,
+     "text": "数秒後彼らに悲劇が訪れます"
+    },
+    {
+     "end": 35.5,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 30.54,
+     "text": "なんとか逃げ切ったドリームたち。ですがこの後、ジョージがまさかの行動に出ます。"
+    },
+    {
+     "end": 65.1,
+     "logprob": -0.05,
+     "no_speech": 0.0,
+     "start": 62.4,
+     "text": "彼が少しでもかっこいいと思ったらチャンネル登録"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/BwGk9qgSqfU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 1.52,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "巨人から逃げるドリームたち"
+    },
+    {
+     "end": 3.42,
+     "no_speech": 0.0,
+     "start": 1.52,
+     "text": "数秒後彼らに悲劇が訪れます"
+    },
+    {
+     "end": 4.74,
+     "no_speech": 0.0,
+     "start": 3.42,
+     "text": "I need food now"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/BwGk9qgSqfU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 65.18,
+     "no_speech": 0.0,
+     "start": 58.6,
+     "text": "彼が少しでもかっこいいと思ったらチャンネル登録"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "巨人から逃げるドリーム達。数秒後、彼らに悲劇が訪れます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "巨人から逃げる（白）→ Dream達（緑）→ 数秒後、彼らに（白）→ 悲劇が訪れます（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "BwGk9qgSqfU"
+}

@@ -1,0 +1,210 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "300万個のガラスランタンを置いた傑作が完成する瞬間",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 5,
+     "text": "どうやって置いたんだ",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "ワールドエディットとか使ってるんじゃない？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "そもそもこれってサバイバルなん？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 12,
+     "text": "この範囲を整地してあるの規模でかすぎだろ",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "300万個のガラスランタンを置いた傑作が完成する瞬間",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 5,
+     "text": "どうやって置いたんだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "ワールドエディットとか使ってるんじゃない？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "そもそもこれってサバイバルなん？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 12,
+     "text": "この範囲を整地してあるの規模でかすぎだろ",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "300万個の"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.9,
+     "text": "ガラスとランタンを置いた"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "傑作が完成する瞬間"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.7,
+     "text": "これどうやって置いたん？"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.2,
+     "text": "WorldEditとか使ってるんじゃね？"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 8.0,
+     "start": 4.67,
+     "text": "これどうやって置いたん？ WorldEditとか使ってるんじゃね？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 12.33,
+     "start": 10.61,
+     "text": "そもそもこれってサバイバルなん？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.09,
+     "start": 12.91,
+     "text": "この範囲を整地してあるの 規模でかすぎだろ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 18.09,
+     "start": 16.09,
+     "text": "やばいって",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "3,000,000",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.77,
+     "text": "ガラスと",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.13,
+     "text": "ランタンを",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.49,
+     "text": "置いた",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.03,
+     "text": "傑作が",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.39,
+     "text": "完成する",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.9,
+     "text": "瞬間",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "B_v7udyi4zo"
+}

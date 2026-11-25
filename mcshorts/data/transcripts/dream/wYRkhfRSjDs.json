@@ -1,0 +1,349 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/wYRkhfRSjDs.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I will help the dream that I was able to save the dream that I was able to save the dream that I was able to save the dream."
+    },
+    {
+     "end": 5.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 4.0,
+     "text": "Hello Dream!"
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 5.0,
+     "text": "Wait!"
+    },
+    {
+     "end": 7.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "You came?"
+    },
+    {
+     "end": 10.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 7.0,
+     "text": "Bet you didn't expect to see me here!"
+    },
+    {
+     "end": 13.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 10.0,
+     "text": "No! How did you get in?"
+    },
+    {
+     "end": 20.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 13.0,
+     "text": "Oh, I used the blueprints. I burrowed in underground and swam up through the lava with fire resistance."
+    },
+    {
+     "end": 25.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 20.0,
+     "text": "Also, I brought my dog Apollo. Fire resistance is burning out and I actually don't have that much, so uh..."
+    },
+    {
+     "end": 28.0,
+     "logprob": -0.49,
+     "no_speech": 0.0,
+     "start": 25.0,
+     "text": "Here we go! I hope this doesn't kill my dog!"
+    },
+    {
+     "end": 32.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 29.0,
+     "text": "Okay, oh there's nether. Oh wait, why do I do it?"
+    },
+    {
+     "end": 34.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 32.0,
+     "text": "Green, go back! There's a dude back in your cell!"
+    },
+    {
+     "end": 41.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 39.0,
+     "text": "Alright, we take out the guards, and then we..."
+    },
+    {
+     "end": 43.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 41.0,
+     "text": "Oh, I can't... I want to say it out loud."
+    },
+    {
+     "end": 45.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 43.0,
+     "text": "There's nowhere to go!"
+    },
+    {
+     "end": 47.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 45.0,
+     "text": "It's you and me, bad boy Halo!"
+    },
+    {
+     "end": 50.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 48.0,
+     "text": "Wait, am I really gonna be free? Oh my god."
+    },
+    {
+     "end": 51.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 50.0,
+     "text": "You're gonna be free, Connor."
+    },
+    {
+     "end": 60.6,
+     "logprob": -0.93,
+     "no_speech": 0.0,
+     "start": 58.0,
+     "text": "スゴいと思った方はチャンネル登録!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/wYRkhfRSjDs.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.8,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "テクノグレイドは脱獄不可能な牢獄に閉じ込められたドリームを助けます"
+    },
+    {
+     "end": 32.28,
+     "logprob": -2.46,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "新しい四角で取り出す!"
+    },
+    {
+     "end": 34.4,
+     "logprob": -2.46,
+     "no_speech": 0.0,
+     "start": 32.28,
+     "text": "新しいリムとカセクシアの大人"
+    },
+    {
+     "end": 36.36,
+     "logprob": -2.46,
+     "no_speech": 0.0,
+     "start": 34.4,
+     "text": "ワンシーに見つかってしまった二人。"
+    },
+    {
+     "end": 38.7,
+     "logprob": -2.46,
+     "no_speech": 0.0,
+     "start": 36.54,
+     "text": "一人ではここから彼らの奉nalが発表されます。"
+    },
+    {
+     "end": 41.18,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 39.4,
+     "text": "ガーディングを取り出します"
+    },
+    {
+     "end": 43.58,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 41.18,
+     "text": "私は言葉に行くことができない"
+    },
+    {
+     "end": 45.66,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 43.58,
+     "text": "私は言葉に行くことができない"
+    },
+    {
+     "end": 47.14,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 45.66,
+     "text": "私はあなたと私の悪者ハロ"
+    },
+    {
+     "end": 49.4,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 47.86,
+     "text": "私は本当に自由になる?"
+    },
+    {
+     "end": 50.64,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 49.5,
+     "text": "私は自由になる"
+    },
+    {
+     "end": 50.94,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 50.64,
+     "text": "私は自由になる"
+    },
+    {
+     "end": 53.74,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 50.94,
+     "text": "私は自由になる"
+    },
+    {
+     "end": 56.2,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 53.74,
+     "text": "ご視聴ありがとうございました"
+    },
+    {
+     "end": 60.56,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 56.2,
+     "text": "チャンネル登録をお願いいたします"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/wYRkhfRSjDs.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.82,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "脱獄不可能な牢獄に閉じ込められたドリームをテクノグレイドが助けます"
+    },
+    {
+     "end": 4.98,
+     "no_speech": 0.0,
+     "start": 3.82,
+     "text": "Hello Dream"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/wYRkhfRSjDs.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 60.52,
+     "no_speech": 0.0,
+     "start": 53.72,
+     "text": "すごいと思った方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "脱獄不可能な牢獄に閉じ込められたドリームを、テクノブレイドが助けます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "脱獄不可能な（赤）→ 牢獄に（白）→ 閉じ込められた（白）→ Dreamを（緑）→ テクノブレイド（ピンク）が（白）→ 助けます（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "wYRkhfRSjDs"
+}

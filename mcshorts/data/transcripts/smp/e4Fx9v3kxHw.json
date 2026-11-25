@@ -1,0 +1,300 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ブロックがちゃんとごとにコピーされる世界でバックルームズを作るCarvs",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "だから実際にやってみる",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 8,
+     "text": "迷路みたいだから",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 9,
+     "text": "まず壁の位置をざっくり決め",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "そんで壁積もう",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 13,
+     "text": "普通に怖くなりそう",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "変な照明を付ける前に",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 15,
+     "text": "屋根を完成させて..",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 17,
+     "text": "くるぞ",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "でも実際の照明には",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 21,
+     "text": "レッドストーンランプを使う",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 22,
+     "text": "電源を入れて..",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 24,
+     "text": "ぷぷーん？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 25,
+     "text": "いよいよ完成",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 26,
+     "text": "さあ、いよいよ..",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "ブロックがちゃんとごとにコピーされる世界でバックルームズを作るCarvs",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "だから実際にやってみる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 8,
+     "text": "迷路みたいだから",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 9,
+     "text": "まず壁の位置をざっくり決め",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "そんで壁積もう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 13,
+     "text": "普通に怖くなりそう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "変な照明を付ける前に",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 15,
+     "text": "屋根を完成させて..",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 17,
+     "text": "くるぞ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "でも実際の照明には",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 21,
+     "text": "レッドストーンランプを使う",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 22,
+     "text": "電源を入れて..",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 24,
+     "text": "ぷぷーん？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 25,
+     "text": "いよいよ完成",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 26,
+     "text": "さあ、いよいよ..",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 0.0,
+     "text": "ブロックが"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 0.5,
+     "text": "チャンク毎に"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 1.0,
+     "text": "コピーされる世界で"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 2.0,
+     "text": "バックルームズを"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 2.7,
+     "text": "作るCarvs"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 3.6,
+     "text": "コメントで"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 4.7,
+     "text": "“これなら簡単に"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 5.2,
+     "text": "バックルームズできるじゃん”"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 6.1,
+     "text": "だから実際にやってみる"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 7.7,
+     "text": "バックルームズって"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "claude8s",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.6秒",
+    "src": "claude8s"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ブロックがチャンク毎にコピーされる世界でバックルームズを作るCarvs"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "e4Fx9v3kxHw"
+}

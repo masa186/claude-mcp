@@ -1,0 +1,10 @@
+{
+  "systeminfo": "AVX = 0 | NEON = 1",
+  "model": {"type": "base", "multilingual": true, "vocab": 51865},
+  "params": {"model": "models/ggml-base.bin", "language": "ja", "translate": false},
+  "result": {"language": "ja"},
+  "transcription": [
+    {"timestamps": {"from": "00:00:00,000", "to": "00:00:02,100"}, "offsets": {"from": 0, "to": 2100}, "text": " テスト用の一文目です"},
+    {"timestamps": {"from": "00:00:02,100", "to": "00:00:04,560"}, "offsets": {"from": 2100, "to": 4560}, "text": " テスト用の二文目です"}
+  ]
+}

@@ -1,0 +1,356 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/0iK0gxEUo0U.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.6,
+     "logprob": -1.04,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "What's the name of the board in the world of Micra, Namzee?"
+    },
+    {
+     "end": 31.24,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "where he can't find me."
+    },
+    {
+     "end": 37.04,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 35.14,
+     "text": "Oh, my goodness me."
+    },
+    {
+     "end": 39.84,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 37.14,
+     "text": "This place is absolutely terrifying."
+    },
+    {
+     "end": 41.08,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 39.94,
+     "text": "How old is this thing?"
+    },
+    {
+     "end": 44.48,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 41.18,
+     "text": "Every corner is crawling with something that wants me dead."
+    },
+    {
+     "end": 46.92,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 44.58,
+     "text": "Everyone except my best friend, Ziggy."
+    },
+    {
+     "end": 48.02,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 47.02,
+     "text": "Good to see you, man."
+    },
+    {
+     "end": 49.62,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 48.12,
+     "text": "Oh, boy, you good?"
+    },
+    {
+     "end": 51.98,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 49.72,
+     "text": "Ziggy's here to show me a way of cooking"
+    },
+    {
+     "end": 53.96,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 52.08,
+     "text": "that I've never seen before."
+    },
+    {
+     "end": 55.62,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 54.06,
+     "text": "The heat in here is insane."
+    },
+    {
+     "end": 56.72,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 55.72,
+     "text": "That's incredible."
+    },
+    {
+     "end": 58.22,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 56.82,
+     "text": "Listen to that bubbling."
+    },
+    {
+     "end": 59.46,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 58.32,
+     "text": "Look at the color of it."
+    },
+    {
+     "end": 61.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 59.46,
+     "text": "All from in there!"
+    },
+    {
+     "end": 64.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 61.46,
+     "text": "Oh my god, stop it!"
+    },
+    {
+     "end": 66.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 64.46,
+     "text": "What an amazing technique!"
+    },
+    {
+     "end": 68.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 66.46,
+     "text": "An underground oven!"
+    },
+    {
+     "end": 72.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 70.46,
+     "text": "Wow!"
+    },
+    {
+     "end": 74.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 72.46,
+     "text": "That is delicious!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/0iK0gxEUo0U.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.42,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マイクラの世界にやってきたボードナムズイですか?"
+    },
+    {
+     "end": 30.82,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "彼は私が出ていることになった。"
+    },
+    {
+     "end": 36.22,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 35.04,
+     "text": "ああ、天わ!"
+    },
+    {
+     "end": 40.46,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 36.98,
+     "text": "この場所は、本当に怖いわけです!"
+    },
+    {
+     "end": 43.06,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 41.12,
+     "text": "こんなに障害ではない。"
+    },
+    {
+     "end": 44.38,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 43.38,
+     "text": "私が死んでいる。"
+    },
+    {
+     "end": 46.84,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 44.48,
+     "text": "私の方は、私の好友達の全てである。"
+    },
+    {
+     "end": 47.62,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 46.84,
+     "text": "- ジゲーもっと来てくの!"
+    },
+    {
+     "end": 49.34,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 47.62,
+     "text": "いいね、ジゲーももうね!"
+    },
+    {
+     "end": 51.8,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 49.5,
+     "text": "ディッキーもおもしろしなのを教えてきた!"
+    },
+    {
+     "end": 55.4,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 53.78,
+     "text": "このエイゾーはここで最高的です。"
+    },
+    {
+     "end": 56.74,
+     "logprob": -2.36,
+     "no_speech": 0.0,
+     "start": 55.54,
+     "text": "この子が一番ではないように面白いのだ。"
+    },
+    {
+     "end": 76.26,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 73.7,
+     "text": "こんなことをする料理人は滅多にいないでしょうね"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/0iK0gxEUo0U.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.48,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マイクラの世界にやってきたボードナムズイですか"
+    },
+    {
+     "end": 4.96,
+     "no_speech": 0.0,
+     "start": 2.48,
+     "text": "ランチ、I'm making grilled puffer fish"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/0iK0gxEUo0U.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 76.29,
+     "no_speech": 0.0,
+     "start": 69.53,
+     "text": "こんなことをする料理人は滅多にいないでしょうね"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラの世界にやってきたゴードン・ラムゼイですが、"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラの世界に（緑）→ やってきた（白）→ ゴードンラムゼイですが（白・オレンジ縁）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "0iK0gxEUo0U"
+}

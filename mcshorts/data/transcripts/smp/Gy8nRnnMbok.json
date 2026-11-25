@@ -1,0 +1,924 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "6年間放置して無法地帯になったマインクラフトサーバーを訪問するMrBeast。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "だが、なぜか何年も経った今でもサーバーに人が集まってる。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "彼らは毎日遊び続けている。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "俺が戻ってくると信じて。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 18,
+     "text": "探索前に説明すると、名前と見た目を偽装してる。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "プレイヤー達に会って、なぜここにいるのか聞き、それから俺の正体を明かす。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "YouTubeで、このサーバーで動画を撮ってる人を見つけた。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 45,
+     "text": "そこで偽アカを使い、底辺YouTuberだと偽ってサーバーの偽動画を撮りたいと連絡してみた。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 53,
+     "text": "ボイチェンを使うから、話しても俺の正体はバレない。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 125,
+     "text": "チートの使い方を把握して、冒険へ向かった。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "6年間放置して無法地帯になったマインクラフトサーバーを訪問するMrBeast",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "だが、なぜか何年も経った今でもサーバーに人が集まってる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "彼らは毎日遊び続けている",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "俺が戻ってくると信じて",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 18,
+     "text": "探索前に説明すると、名前と見た目を偽装してる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "プレイヤー達に会って、なぜここにいるのか聞き、それから俺の正体を明かす",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "YouTubeで、このサーバーで動画を撮ってる人を見つけた",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 45,
+     "text": "そこで偽アカを使い、底辺YouTuberだと偽ってサーバーの偽動画を撮りたいと連絡してみた",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 53,
+     "text": "ボイチェンを使うから、話しても俺の正体はバレない",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 125,
+     "text": "チートの使い方を把握して、冒険へ向かった",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "黄",
+     "end": null,
+     "start": "0.0",
+     "text": "6年間放置して"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": "1.0",
+     "text": "無法地帯になった"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": "2.0",
+     "text": "マイクラサーバーを"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": "3.0",
+     "text": "訪問する"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": "3.5",
+     "text": "ミスタービースト"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "4.2",
+     "text": "＊平和な参加型から…＊"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "5.0",
+     "text": "＊無法地帯化＊"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": "6.5",
+     "text": "だが"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": "6.7",
+     "text": "なぜか"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": "7.5",
+     "text": "何年も経った今でも"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "4.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "6年間放置して無法地帯になったマイクラサーバーを訪問するミスタービースト"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 0,
+     "text": "正体を隠して\\n潜入調査",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0,
+     "text": "6年間",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1,
+     "text": "放置して\\n無法地帯になった",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2,
+     "text": "マイクラサーバーを",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3,
+     "text": "訪問する",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3,
+     "text": "ミスタービースト",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 4,
+     "text": "*平和な参加型から..*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 5,
+     "text": "*無法地帯化*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6,
+     "text": "だが",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6,
+     "text": "なぜか",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7,
+     "text": "何年も経った今でも",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 9,
+     "text": "サーバーに人が集まってる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 11,
+     "text": "彼らは毎日",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 12,
+     "text": "遊び続けている",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14,
+     "text": "いつか",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 15,
+     "text": "俺が戻ってくると",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 17,
+     "text": "信じて",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 18,
+     "text": "ロード中だ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 20,
+     "text": "やばすぎる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 21,
+     "text": "なんだこれ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 22,
+     "text": "どうなってる？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24,
+     "text": "わーお",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 25,
+     "text": "ありえない",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 27,
+     "text": "探索前に説明すると",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 30,
+     "text": "名前と見た目を偽装してる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32,
+     "text": "スギス",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32,
+     "text": "プレイヤー達に会って",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 35,
+     "text": "なぜここにいるのか聞き",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 37,
+     "text": "それから俺の正体を明かす",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 40,
+     "text": "YouTubeで",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 41,
+     "text": "このサーバーで動画を",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 43,
+     "text": "撮ってる人を見つけた",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 45,
+     "text": "そこで偽アカを使い",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 47,
+     "text": "駆け出しの",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 47,
+     "text": "底辺YouTuberだと偽って",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 49,
+     "text": "サーバーの偽動画を",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 50,
+     "text": "撮りたいと",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 51,
+     "text": "連絡してみた",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 53,
+     "text": "ボイチェンを使うから",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 55,
+     "text": "話しても",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 55,
+     "text": "俺の正体はバレない",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 58,
+     "text": "ハロー？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 59,
+     "text": "やあ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 60,
+     "text": "調子どうよ？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 61,
+     "text": "遅くなってごめん",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 63,
+     "text": "会ってくれてありがとう",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 66,
+     "text": "大丈夫だよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 67,
+     "text": "今までは",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 69,
+     "text": "マイクラ実況者の",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 70,
+     "text": "動画編集をしてんだ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 72,
+     "text": "移動はどうしてる？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 73,
+     "text": "アンチチートが甘いから",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 76,
+     "text": "飛ぶことができる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 78,
+     "text": "装備をあげる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 79,
+     "text": "貰っていいの？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 82,
+     "text": "わお",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 82,
+     "text": "フル装備だ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 85,
+     "text": "ありがとう",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 86,
+     "text": "どういたしまして",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 86,
+     "text": "チートの使い方を把握して",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 87,
+     "text": "冒険へ向かった",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 90,
+     "text": "まずはどこへ？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 91,
+     "text": "すべて知りたい",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 92,
+     "text": "ピラミッドは見たことある？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 94,
+     "text": "いや？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 95,
+     "text": "黒曜石で作った",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 97,
+     "text": "ピラミッドがあるのは聞いた",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 99,
+     "text": "行ってみよう",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 101,
+     "text": "分かった",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 102,
+     "text": "この道を真っ直ぐ行けば着く",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 106,
+     "text": "おっ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 107,
+     "text": "わーーーお..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 109,
+     "text": "ふぁ!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 115,
+     "text": "でっか..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 117,
+     "text": "岩盤まで続くとか",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 118,
+     "text": "知らんかった",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 118,
+     "text": "見てくれ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 118,
+     "text": "岩盤まで貫通してる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 120,
+     "text": "かなりでかいよね",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 122,
+     "text": "何ブロック使ってる？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 125,
+     "text": "60万くらいかな",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 127,
+     "text": "わお..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 128,
+     "text": "でも",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 128,
+     "text": "ピラミッドっぽくないよね",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 131,
+     "text": "2つの",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 132,
+     "text": "マイクラ史上最大",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 133,
+     "text": "ピラミッドだ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 134,
+     "text": "ピラミッドがですぎて",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 136,
+     "text": "全部は読み込めない",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 138,
+     "text": "岩盤リークしてる",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 139,
+     "text": "*喘ぎ声?*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 140,
+     "text": "元のピラミッドが",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 143,
+     "text": "建設された後に",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 144,
+     "text": "あるグループが",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 145,
+     "text": "元のピラミッドを一部壊して",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 148,
+     "text": "それを逆さまにしたんだ",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "Gy8nRnnMbok"
+}

@@ -1,0 +1,11 @@
+{
+ "termux": {
+  "files": [],
+  "folder": "imports/termux"
+ },
+ "whisper_cpp": {
+  "files": [],
+  "folder": "imports/whisper_cpp",
+  "imported": 0
+ }
+}

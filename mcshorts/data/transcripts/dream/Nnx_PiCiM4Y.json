@@ -1,0 +1,385 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/Nnx_PiCiM4Y.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.4,
+     "logprob": -1.23,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I don't want to kill the people who killed the村."
+    },
+    {
+     "end": 31.3,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 30.86,
+     "text": "Many"
+    },
+    {
+     "end": 40.4,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 39.3,
+     "text": "Students"
+    },
+    {
+     "end": 40.58,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 40.4,
+     "text": "Many"
+    },
+    {
+     "end": 42.06,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 41.06,
+     "text": "This"
+    },
+    {
+     "end": 45.46,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 44.76,
+     "text": "Take"
+    },
+    {
+     "end": 45.96,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 45.46,
+     "text": "it"
+    },
+    {
+     "end": 47.46,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 46.96,
+     "text": "Take"
+    },
+    {
+     "end": 47.6,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 47.46,
+     "text": "it"
+    },
+    {
+     "end": 48.0,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 47.6,
+     "text": "Huh"
+    },
+    {
+     "end": 49.74,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 49.14,
+     "text": "Then"
+    },
+    {
+     "end": 51.04,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 50.3,
+     "text": "Then"
+    },
+    {
+     "end": 52.6,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 52.38,
+     "text": "Then"
+    },
+    {
+     "end": 53.24,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 52.6,
+     "text": "Then"
+    },
+    {
+     "end": 53.66,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 53.24,
+     "text": "Then"
+    },
+    {
+     "end": 54.06,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 53.66,
+     "text": "Then"
+    },
+    {
+     "end": 54.18,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 54.06,
+     "text": "Or"
+    },
+    {
+     "end": 54.48,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 54.18,
+     "text": "To"
+    },
+    {
+     "end": 54.68,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 54.48,
+     "text": "Then"
+    },
+    {
+     "end": 55.48,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 54.68,
+     "text": "try"
+    },
+    {
+     "end": 55.58,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 55.48,
+     "text": "then"
+    },
+    {
+     "end": 55.76,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 55.58,
+     "text": "An"
+    },
+    {
+     "end": 56.44,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 55.76,
+     "text": "Then"
+    },
+    {
+     "end": 56.84,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 56.44,
+     "text": "Then"
+    },
+    {
+     "end": 57.44,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 56.84,
+     "text": "then"
+    },
+    {
+     "end": 57.94,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 57.44,
+     "text": "Then"
+    },
+    {
+     "end": 58.44,
+     "logprob": -3.27,
+     "no_speech": 0.0,
+     "start": 57.94,
+     "text": "Oh"
+    },
+    {
+     "end": 60.44,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 58.44,
+     "text": "You"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/Nnx_PiCiM4Y.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.16,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "親を殺された村人を煽ってはいけません"
+    },
+    {
+     "end": 35.6,
+     "logprob": -0.82,
+     "no_speech": 0.0,
+     "start": 33.96,
+     "text": "バーディング"
+    },
+    {
+     "end": 47.0,
+     "logprob": -0.82,
+     "no_speech": 0.0,
+     "start": 45.78,
+     "text": "何?"
+    },
+    {
+     "end": 49.62,
+     "logprob": -0.82,
+     "no_speech": 0.0,
+     "start": 48.72,
+     "text": "何?"
+    },
+    {
+     "end": 50.86,
+     "logprob": -0.82,
+     "no_speech": 0.0,
+     "start": 50.52,
+     "text": "何?"
+    },
+    {
+     "end": 52.4,
+     "logprob": -0.82,
+     "no_speech": 0.0,
+     "start": 51.7,
+     "text": "何?"
+    },
+    {
+     "end": 53.9,
+     "logprob": -0.82,
+     "no_speech": 0.0,
+     "start": 52.68,
+     "text": "何?"
+    },
+    {
+     "end": 55.52,
+     "logprob": -0.82,
+     "no_speech": 0.0,
+     "start": 54.3,
+     "text": "何?"
+    },
+    {
+     "end": 58.86,
+     "logprob": -4.79,
+     "no_speech": 0.0,
+     "start": 57.54,
+     "text": "喔 Mod specified to me"
+    },
+    {
+     "end": 63.98,
+     "logprob": -4.79,
+     "no_speech": 0.0,
+     "start": 62.06,
+     "text": "main, めっちゃ悲しい"
+    },
+    {
+     "end": 64.46,
+     "logprob": -4.79,
+     "no_speech": 0.0,
+     "start": 63.98,
+     "text": "campus、コロナはモノサポファス乗りかな"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Nnx_PiCiM4Y.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.18,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "親を殺された村人を煽ってはいけません"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Nnx_PiCiM4Y.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 65.71,
+     "no_speech": 0.0,
+     "start": 58.71,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "親を殺された村人を、煽ってはいけません。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "親を〇された（赤）→ 村人を（黄）→ 煽ってはいけません（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Nnx_PiCiM4Y"
+}

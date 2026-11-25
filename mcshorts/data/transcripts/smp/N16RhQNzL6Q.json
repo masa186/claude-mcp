@@ -1,0 +1,655 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 0.2,
+     "text": "クリエで"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 0.9,
+     "text": "対抗する男"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 1.7,
+     "text": "待て待て！！"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 2.2,
+     "text": "チートすればいいや"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 3.7,
+     "text": "れつごー^ ^"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 4.3,
+     "text": "ヌッ！"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 5.0,
+     "text": "ンツっ.."
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 5.4,
+     "text": "ここから出るぞ！"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 6.1,
+     "text": "出よう"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 6.7,
+     "text": "出るわ"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 7.1,
+     "text": "いくぞ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "claude8s",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "1.5秒",
+    "src": "claude8s"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "クリエで対抗する男"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "color": "黄色",
+     "end": null,
+     "start": "0:00",
+     "text": "ベリティに\nクリエは意味ない",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:00",
+     "text": "対抗する男",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:01",
+     "text": "待て待て!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:02",
+     "text": "チートすればいいや",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:02",
+     "text": "れつごー^ ^",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:04",
+     "text": "ヌッ..",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:05",
+     "text": "ここから出るぞ!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:06",
+     "text": "出よう",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:06",
+     "text": "出るわ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:07",
+     "text": "いくぞ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:08",
+     "text": "(興奮中)",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:09",
+     "text": "いくぞ..",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:10",
+     "text": "オーマイガッシュ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:12",
+     "text": "いけ!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:12",
+     "text": "(過呼吸)",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:14",
+     "text": "俺の家!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:15",
+     "text": "なんだこれ!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:17",
+     "text": "ベリティ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:17",
+     "text": "お前..",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:18",
+     "text": "*ベリティ覚醒*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:20",
+     "text": "?????",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:25",
+     "text": "ラ-!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:25",
+     "text": "オオマイガッシュ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:28",
+     "text": "家戻らなきゃ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:30",
+     "text": "予備のショットガン探せ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:32",
+     "text": "あった!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:33",
+     "text": "ベリティ\nDouble-Barreled Shotgun",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:34",
+     "text": "出てこい",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:35",
+     "text": "*地ならし?*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:36",
+     "text": "ベリティ\n落ち着け!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:38",
+     "text": "警告したからな!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:40",
+     "text": "ハッ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:40",
+     "text": "おけい",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:41",
+     "text": "チートを有効",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:42",
+     "text": "*ベリティ悲鳴*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:43",
+     "text": "クリエ有効化",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:44",
+     "text": "またサバイバルにされてても\nいいように",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:45",
+     "text": "ロケット花火とエリトラ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:46",
+     "text": "おけい",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:47",
+     "text": "いくぞ!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:48",
+     "text": "ハッハッ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:49",
+     "text": "NO!!!!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:50",
+     "text": "ふぁ!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:51",
+     "text": "オーマイガッシュ!!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:52",
+     "text": "いかなきゃ!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:53",
+     "text": "おいベリティ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:54",
+     "text": "リラックス!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:55",
+     "text": "落ち着けベリティ!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:56",
+     "text": "どうする??",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:57",
+     "text": "前回よりロケ花多い",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:58",
+     "text": "いいぞ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:59",
+     "text": "これはいい",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "0:59",
+     "text": "時間稼ぎできる",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:00",
+     "text": "あ-..",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:01",
+     "text": "ok待てと!",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:02",
+     "text": "まてまて",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:02",
+     "text": "おけ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:03",
+     "text": "あいつでかい",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:04",
+     "text": "洞窟に入れないはず",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:05",
+     "text": "そうだ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:05",
+     "text": "洞窟に行けばいい",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:07",
+     "text": "洞窟探せ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:08",
+     "text": "そうそう",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:09",
+     "text": "洞窟見つかるまで\n時間稼ぎして",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:10",
+     "text": "逃げるだけ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:11",
+     "text": "は、ん",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:12",
+     "text": "おけい",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:12",
+     "text": "ベリティ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:13",
+     "text": "まだ追ってきてる",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:14",
+     "text": "あ-..",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:15",
+     "text": "とにかく洞窟探せ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:16",
+     "text": "щ(ﾟДﾟщ)カモン",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:17",
+     "text": "洞窟どこだよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黒",
+     "end": null,
+     "start": "1:20",
+     "text": "ベリティどこだ?",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "N16RhQNzL6Q"
+}

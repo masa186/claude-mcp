@@ -1,0 +1,90 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ドクタードーナッツが"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.7,
+     "text": "tpした先は"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.7,
+     "text": "待ち伏せ中の"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.5,
+     "text": "視聴者数十人でした"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.9,
+     "text": "(切り替える反射神経)"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.6,
+     "text": "ワーーーーッツ!?!?!?"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.9,
+     "text": "なんなんこれ!?"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドクタードーナツがtpした先は待ち伏せ中の視聴者数十人でした"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "lmVqprzsweM"
+}

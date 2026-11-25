@@ -1,0 +1,446 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/aZVsf5PhZxo.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "This ijimekko is going to be a drink of water, so I'm not going to be able to drink the water."
+    },
+    {
+     "end": 11.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Yo, the water! Was that an accident?"
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "Yeah, it was just an accident!"
+    },
+    {
+     "end": 15.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 13.0,
+     "text": "Alright guys, we'll be back by night time!"
+    },
+    {
+     "end": 17.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 15.0,
+     "text": "They're so cute!"
+    },
+    {
+     "end": 26.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 24.0,
+     "text": "We're back! We've got blankets!"
+    },
+    {
+     "end": 29.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 26.0,
+     "text": "There you go guys! Alright, whatever you do, don't leave the barn at night!"
+    },
+    {
+     "end": 56.22,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "Yo, did one of my sheep die?"
+    },
+    {
+     "end": 57.36,
+     "logprob": -0.3,
+     "no_speech": 0.0,
+     "start": 56.22,
+     "text": "Come on, guys, eat up!"
+    },
+    {
+     "end": 62.0,
+     "logprob": -1.05,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "It's so scary!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/aZVsf5PhZxo.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.54,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "このいじねっこは長神に乗せて sehenさくの補助をお見yaくよ"
+    },
+    {
+     "end": 3.22,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 2.54,
+     "text": "よー!"
+    },
+    {
+     "end": 10.84,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 9.02,
+     "text": "the water, wasn't that an accident?!"
+    },
+    {
+     "end": 11.82,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 10.84,
+     "text": "や obvious an accident!"
+    },
+    {
+     "end": 13.06,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 12.14,
+     "text": "試 rtに向かう"
+    },
+    {
+     "end": 15.02,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 13.42,
+     "text": "Alright guys, let me back my Nitetime!"
+    },
+    {
+     "end": 16.58,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 15.68,
+     "text": "They're so cute"
+    },
+    {
+     "end": 17.5,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 16.58,
+     "text": "ised aren't these meth"
+    },
+    {
+     "end": 29.96,
+     "logprob": -3.19,
+     "no_speech": 0.0,
+     "start": 29.64,
+     "text": "www"
+    },
+    {
+     "end": 56.22,
+     "logprob": -1.21,
+     "no_speech": 0.0,
+     "start": 34.58,
+     "text": "おやすみの人に死ぬ?"
+    },
+    {
+     "end": 57.22,
+     "logprob": -1.21,
+     "no_speech": 0.0,
+     "start": 56.28,
+     "text": "おやすみの人に死ぬ?"
+    },
+    {
+     "end": 61.94,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 60.64,
+     "text": "めちゃくちゃスカッとしますね"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/aZVsf5PhZxo.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.3,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "このいじめっ子は調子に乗さず 皮膚のお客様になります"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 3.3,
+     "text": "ニンニン"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/aZVsf5PhZxo.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 56.37,
+     "no_speech": 0.0,
+     "start": 55.37,
+     "text": "私たちが死ぬ?"
+    },
+    {
+     "end": 57.37,
+     "no_speech": 0.0,
+     "start": 56.37,
+     "text": "来てみなさん 食べてみて!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/aZVsf5PhZxo.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "このいじめっ子は調子に乗った結果、悪夢を見ることに..."
+    },
+    {
+     "end": null,
+     "start": 3.2,
+     "text": "おはよう～"
+    },
+    {
+     "end": null,
+     "start": 4.1,
+     "text": "いた！"
+    },
+    {
+     "end": null,
+     "start": 5.1,
+     "text": "\"独り占め\""
+    },
+    {
+     "end": null,
+     "start": 6.8,
+     "text": "\"?!?!\""
+    },
+    {
+     "end": null,
+     "start": 8.0,
+     "text": "ざまぁ味噌漬けw"
+    },
+    {
+     "end": null,
+     "start": 12.3,
+     "text": "ご飯だよ～ご飯だよ～"
+    },
+    {
+     "end": null,
+     "start": 13.9,
+     "text": "夜までにもどるね"
+    },
+    {
+     "end": null,
+     "start": 16.7,
+     "text": "むへへ...w"
+    },
+    {
+     "end": null,
+     "start": 19.3,
+     "text": "\"占領\""
+    },
+    {
+     "end": null,
+     "start": 20.3,
+     "text": "うますぎわろたw"
+    },
+    {
+     "end": null,
+     "start": 24.3,
+     "text": "毛布持ってきたよ！！"
+    },
+    {
+     "end": null,
+     "start": 26.6,
+     "text": "みんな出来たよ"
+    },
+    {
+     "end": null,
+     "start": 27.6,
+     "text": "欄から出たらダメだよ"
+    },
+    {
+     "end": null,
+     "start": 32.4,
+     "text": "ダメダメダメ!!!"
+    },
+    {
+     "end": null,
+     "start": 33.3,
+     "text": "ギャァァァ!!!"
+    },
+    {
+     "end": null,
+     "start": 35.7,
+     "text": "怖いよ..."
+    },
+    {
+     "end": null,
+     "start": 39.0,
+     "text": "やば..."
+    },
+    {
+     "end": null,
+     "start": 41.1,
+     "text": "ん？"
+    },
+    {
+     "end": null,
+     "start": 43.1,
+     "text": "ヤベェ..."
+    },
+    {
+     "end": null,
+     "start": 44.5,
+     "text": "(気持ちいい時に出す声)"
+    },
+    {
+     "end": null,
+     "start": 45.4,
+     "text": "やばいやばいやばい"
+    },
+    {
+     "end": null,
+     "start": 47.1,
+     "text": "助けて助けて助けて!!"
+    },
+    {
+     "end": null,
+     "start": 49.3,
+     "text": "待て..."
+    },
+    {
+     "end": null,
+     "start": 55.4,
+     "text": "なんか子羊死んでんね？"
+    },
+    {
+     "end": null,
+     "start": 56.6,
+     "text": "みんな来て！"
+    },
+    {
+     "end": null,
+     "start": 57.6,
+     "text": "食べちゃって!!"
+    },
+    {
+     "end": null,
+     "start": 58.7,
+     "text": "うめぇエエw"
+    },
+    {
+     "end": null,
+     "start": 59.8,
+     "text": "\"自業自得\""
+    },
+    {
+     "end": null,
+     "start": 60.7,
+     "text": "めちゃくちゃスカッとしますね"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "このいじめっ子は、調子に乗った結果、悪夢を見ることになります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "このいじめっ子は（白）→ 調子に乗った結果（白）→ 悪夢を見ることに...（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "aZVsf5PhZxo"
+}

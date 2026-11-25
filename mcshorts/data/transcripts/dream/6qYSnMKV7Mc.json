@@ -1,0 +1,158 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/6qYSnMKV7Mc.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.64,
+     "logprob": -1.36,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "A few years ago, this city will be destroyed."
+    },
+    {
+     "end": 32.0,
+     "logprob": -1.07,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "You"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/6qYSnMKV7Mc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.38,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "数量後、この車以外はボコボコにされてしまいます。"
+    },
+    {
+     "end": 31.18,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/6qYSnMKV7Mc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.42,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "数秒後このシャイガイはごくごくにされてしまいます"
+    },
+    {
+     "end": 3.92,
+     "no_speech": 0.0,
+     "start": 2.42,
+     "text": "Is that a monster?"
+    },
+    {
+     "end": 4.96,
+     "no_speech": 0.0,
+     "start": 4.36,
+     "text": "Yo stop!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/6qYSnMKV7Mc.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 28.11,
+     "no_speech": 0.0,
+     "start": 25.93,
+     "text": "You destroyed my base?"
+    },
+    {
+     "end": 29.25,
+     "no_speech": 0.0,
+     "start": 28.45,
+     "text": "Let's fight!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "数秒後、このシャイガイはボコボコにされてしまいます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "数秒後（白）→ このシャイガイは（赤）→ ボコボコにされる...（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "6qYSnMKV7Mc"
+}
