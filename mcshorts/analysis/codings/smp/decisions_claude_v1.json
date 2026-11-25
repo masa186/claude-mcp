@@ -1,0 +1,3119 @@
+{
+ "about": "SMP Clips の冒頭ナレーション（ユーザー提供CSV由来・UNVERIFIED）のフックの分類。規則で下書きを作り、Claude が299本すべてを読んで確認・修正した（overridden=true は下書きから変えたもの、draft_code は下書きの分類）。展開・オチは元データが無いので分類しない。状態はすべて UNVERIFIED。Gemini の冒頭8秒（smp_open）は使っていない。",
+ "codebook_version": "v1",
+ "coder": "claude（規則の下書き→全件確認）",
+ "videos": {
+  "-9YZF_-MOiU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ベッドを使ってドクタードーナツの全装備を破壊するJettismを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "-FlqlWSJCSQ": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがエリトラを餌に犬扱いされます",
+    "reason": "結末・決定的な出来事を先に言う。「犬扱いされます」と出来事を先に言う"
+   }
+  },
+  "-H62lxu4u2c": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT",
+    "overridden": true,
+    "quote": "キャンプで休憩しているとクソガキ集団がわらわらと来ました",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。過去形だが、結末ではなく状況の始まり（集団が来た）を述べている"
+   }
+  },
+  "-PseilczQ4c": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "-yAvlzaXtls": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界一満足感がある建築に感動するドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "0NXry3m8rg8": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "油断してしまったドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "0Ugn3Ot94PU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "作業台で即死コマンドをドクタードーナツに入力させるJettism",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "0sN6igJJONM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツのために洪水を抜き続ける男",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "0wtDW0G06wY": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "天才プレイヤーParrotの推測は非常に正確です",
+    "reason": "強い評価・レッテル・断定。「天才」は評価語。数字・規模の強調ではない"
+   }
+  },
+  "1cdhcABrK9U": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ゲームで勝って嬉しかったのにアンチからのスパチャで悲しくなるドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "1dp1oVuHe_A": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者の拠点をガッツリ荒らすドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "1e9tm-zCd2A": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "余命2週間の民に容赦しないドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "1zpBvV2itWQ": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ドーナツSMPの全てが破壊される瞬間",
+    "reason": "結末・決定的な出来事を先に言う。「全てが破壊される瞬間」と結末を述べる"
+   }
+  },
+  "2327ZbrYH8E": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "バチクソかっこいいマイクラのレールガンmod The Shooting StarのSS-03がこちら",
+    "reason": "強い評価・レッテル・断定。数字は型番（SS-03）なので規模に数えない。「バチクソかっこいい」は評価"
+   }
+  },
+  "2PeM6PN_8l4": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがチーター疑惑の野良を監視します",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「監視します」は結末を言わない行動"
+   }
+  },
+  "2VIr299Qn14": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "孫悟空がヘロブラインと戦うとこうなります",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "2o6arPXrB9Y": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ピストンが作動すると待っていたのは奈落直行トラップでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "3WA3DYk3F7w": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドクタードーナツはメスガキに負けました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "3_BhuFNAC5w": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドバガキの心が浄化される絶景がこちら",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "3avSCQpgeFA": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "DreamがDaquavisに決めた奇跡のクラッチを見るドクタードーナツ",
+    "reason": "強い評価・レッテル・断定。「奇跡の」は評価語"
+   }
+  },
+  "3rfGnqV7edE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "大砲の危険性について教える先生がこちら",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "4EaAs1oiYcs": {
+   "hook": {
+    "also": [
+     "H_TWIST"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドリームのトラップに落とされて嘲笑われた男、しかし低速落下ポーションで生存し復讐のため修行を決意します",
+    "reason": "結末・決定的な出来事を先に言う。「しかし〜で生存し〜を決意します」と結末まで言う"
+   }
+  },
+  "4NDZD2zEEgE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツが満足感の高い集合体爆殺をかますで",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "4RLf4uSpAss": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "軌道爆撃砲を使ってウェンブーが街を破壊します",
+    "reason": "結末・決定的な出来事を先に言う。「街を破壊します」と出来事を先に言う"
+   }
+  },
+  "4l5k8jW3Luw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "銅ゴーレムでドクタードーナツをトラップに仕掛ける瞬間",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "4xoYQMMg6r0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "棚を使ってドクタードーナツのインベントリを奪うJettismを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "51rs2PPD1p0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "友達がお前の家を襲撃して犬を殺された時、各AI反応の違い、ChatGPTの場合",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "5CH2Kl9k1_g": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ウェンブーが自身の死を偽造します",
+    "reason": "結末・決定的な出来事を先に言う。「自身の死を偽造します」と決定的な出来事を先に言う"
+   }
+  },
+  "5XBwm-NU5Sg": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ガチのハードコア生活で詰むドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "5bxN1zdSWaE": {
+   "hook": {
+    "also": [
+     "H_TWIST",
+     "H_SCALE"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドクタードーナツが背伸びしてる間に倒すというsteakですが、数秒後にとんでもない末路を辿るのでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "5mgN8E2aCNc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ベリティに本名をバラされたドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "5rT3j1W4lUo": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "マイクラで最も流行ってるミームを生んだCamman18",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "5x63B0Pf65Y": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "拠点荒らしと思われるプレイヤーに遭遇するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "6QFWDBeoSmU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "神ゲーtier表を巡って争うゲームたち",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "6UYIFKtJSsA": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドクタードーナツは視聴者が作った建築のせいでBANされかけました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "6ros2NR2Bzc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが自身のサーバーでチーターを発見します",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「発見します」は状況の始まりで、結末を言わない"
+   }
+  },
+  "6zDJJAYcPSQ": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "modを入れてない世界にあるはずがないものを見つけたトゥイクセル",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "7Icdhp_Sf8I": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ハードコアサーバーでParrotがチーターと遭遇します",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「遭遇します」は状況の始まりで、結末を言わない"
+   }
+  },
+  "7Rsyfdnsuf0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "覚醒Dreamを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "7TDky2Ip_SY": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "マイクラで最もレアなアイテムを見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける。「最もレアな」の最上級"
+   }
+  },
+  "7anq2Q8qWSw": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_RESULT",
+    "overridden": true,
+    "quote": "岩盤の上に置かれたトロッコになぜか乗ってすぐ降りようとするドクタードーナツという男、数秒後に予想外の出来事が待っているのでした",
+    "reason": "予想外の展開を予告し、結末は言わない。「数秒後に予想外の出来事が待っている」と予告し、中身は言わない"
+   }
+  },
+  "7fR9ShZE4a0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "全てが水没したドーナツSMPを見るJettism",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "7qk00SXWwb8": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "ドクタードーナツに見つかった天才チーターがBANを回避する方法",
+    "reason": "強い評価・レッテル・断定。「天才チーター」は評価語"
+   }
+  },
+  "7rmWLhXg3kg": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "剣PvP上級者SharpnessがWemmbuと戦うのを見て過去一の反応を見せるドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける。「過去一の反応」の最上級"
+   }
+  },
+  "7v8ZWXi6GWg": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "偽拠点でチーターを釣るドーナツSMP管理者、もしスポナーに気づいたらBAN確定です",
+    "reason": "結末・決定的な出来事を先に言う。「もし〜気づいたらBAN確定です」と条件付きの結末を言う"
+   }
+  },
+  "7xHiDUHu-mc": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "最高の鉱石は？金？石炭？レッドストーン？エメラルド？ダイヤ？ネザライト？でもなく、鉄鉱石",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "889JjAdKHyU": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドクタードーナツが彼女のパーフェクトと同棲しました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "8bn9CAWGzTs": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドロッパーに見せかけたトラップでドクタードーナツを罠にかけるダッシュ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "8fdla05rjhQ": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが最もレアなマイクラユーザー名を見つけます",
+    "reason": "規模を強調する数字・最上級で引きつける。「最もレアな」の最上級。「見つけます」は結末を言わない行動"
+   }
+  },
+  "8sGEwroL68U": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "Dreamの空中クラフトボート着地に挑むドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "9EO91Gn9rwc": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界2位プレイヤーを包囲するパロットたち",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "9ISHAGvMSAw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが自身のサーバーで勝手にクリエイティブモードを使われる動画を見ます",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「〜動画を見ます」は結末を言わない行動"
+   }
+  },
+  "9NsLvrB3mH4": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "新たな派閥ウィザー派に破壊されるドーナツSMPを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "9ilMgnFrH_g": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "ネザーで水を出す本来不可能なことが成し遂げられた瞬間、ドクタードーナツの反応",
+    "reason": "結末・決定的な出来事を先に言う。「不可能なことが成し遂げられた瞬間」と結末を述べる"
+   }
+  },
+  "9zGH0DbPtbk": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者の激ムズドロッパーを軽々攻略するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "A0AeZcGiaAI": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "実写で顔を出すマイクラ実況者を見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "ACGezwCD2Rw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者の岩盤をリークしてしまうドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "AKnE-XS6UrU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ベリティを軌道爆撃砲で破壊する男",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "AdBu338pax8": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "陽気なプレイヤーと見せかけた天才的な視聴者に騙されるドクタードーナツ",
+    "reason": "強い評価・レッテル・断定。「天才的な視聴者」は評価語"
+   }
+  },
+  "ArXYgg_LoPU": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ゲームが上手すぎて全てがスローモーションに見える男がトラップに落ちても普通のプレイヤーならここで死ぬ、だが俺は普通じゃない",
+    "reason": "予想外の展開を予告し、結末は言わない。「〜ここで死ぬ、だが俺は普通じゃない」と逆接で予告"
+   }
+  },
+  "BAefYIyRp8o": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドリームがマイクラでチートを使ってたと主張するうp主に反論された件について",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "BMYEs9NgPT4": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "24,000人同時就寝チャレンジに挑戦するハードコア実況者Carvsを見守るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "BcWKSGmKM4M": {
+   "hook": {
+    "also": [],
+    "code": "H_OTHER",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ドクタードーナツは穴があったら入りたいようです",
+    "reason": "どの型にも当てはまらない。気持ちを述べる一文で、どの型にも当てはまらない"
+   }
+  },
+  "BjjvmqWlvV0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "現実で再現したエンチャントを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "C36PB8D5kmc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "本名が配信中にバレたドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "C6pblpgfAPU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "テクノブレードと出会ったきっかけを話すスケッピー",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "CHz7u-hh3Pg": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界最強Marlowのチートとバ美肉騒動を話すドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "D4BO5mwLfgU": {
+   "hook": {
+    "also": [
+     "H_TWIST",
+     "H_SCALE"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "鳴き声が聞こえた後ペットの愛犬を亡くしたという男、数秒後にとんでもない末路を辿るのでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "DpFA986dSCQ": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "トラップの天才JudelowがDreamと協力してドクタードーナツを引っ掛けます",
+    "reason": "結末・決定的な出来事を先に言う。「引っ掛けます」と結末を先に言う"
+   }
+  },
+  "E6K123Unu8A": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドリームを遥かに超える実力を持つ世界最強プレイヤーMarlowのプレイ動画、彼は〜そんなMarlowと…（未完）",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "EHTI4WnjmkM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "勝手に家を劇的ビフォーアフターするCarvs",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "ERU281uKCPQ": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "人知を超えた神業がこちら",
+    "reason": "強い評価・レッテル・断定。「神業」は評価語。「人知を超えた」も強調"
+   }
+  },
+  "EUUVfOuOU1A": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "見えない何かに追われてるのを見抜くドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "Es02VBRmZSM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ガキまみれのチャット欄に限界を迎えるドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "Et7eMc2VpNI": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "10億円を賭けて親友のパルクールに挑戦するドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "F0BeR3_msFY": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "1ブロックしかない黒曜石の世界をクリアするという男。まず2000回ジャンプして空腹で体力をミリにし、飛び降りてブロックと24以上128マス以下で奈落死してゾンビを湧かせて倒し、ドロップしたシャベルで雪を回収し…（未完）",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "FQ6p8bz89qs": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "中国のエイムガチ勢に憧れたニワトリがこちら",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "FVHhIPs0mUk": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "独裁組織マフィアを語るパロット",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "FXAMa5W6zhE": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "16歳で登録者100万弱を手にした男。ドクタードーナツにトラップを仕掛け動画化したらバズり散らかしたJettism。彼はPvPも上手くエリトラメイスワンパンを連続でできるレベル。エリトラ装着し飛びチェストプレート装…（未完）",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "Fd9XpHm35DU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "現実で再現したエンチャントを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "Fid2JmyVIEQ": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドリームに向けたDaquavisのヤラセ動画をDreamは軽々と再現して冷笑します",
+    "reason": "結末・決定的な出来事を先に言う。「再現して冷笑します」と結末を先に言う"
+   }
+  },
+  "Fn2zjudIIME": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ルールを破ると罰せられるクリーピーホースの指示に従う男",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "G1tnrbmMovc": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "イキったガキに1万人の視聴者をプレゼントするドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "G5iZVGHd0QE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "マイクラで作った建築をリアルでプレゼントするというミスタービースト",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "GActDDjQmU8": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが視聴者を守るためにチーターをBANします",
+    "reason": "結末・決定的な出来事を先に言う。「BANします」と結末を先に言う"
+   }
+  },
+  "Gy8nRnnMbok": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "6年間放置して無法地帯になったマイクラサーバーを訪問するミスタービースト",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "HS08opEYuvg": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "トラップの天才Judelowがドクタードーナツを引っ掛けます",
+    "reason": "結末・決定的な出来事を先に言う。「引っ掛けます」と結末を先に言う"
+   }
+  },
+  "HZL_EzamIhE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "驚異的な身体能力を使ってCGなしでスパイダーマンを再現する男を見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "HtTJSjhshm8": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドーナツSMP史上最大の神建築を見つけたドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "HxQSMbdfMGY": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "チーターだと思う無実の一般人をBANしてたドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "ILrvpO4UcJE": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "見てこれ、ドーナツSMPが24時間連続でハイピクセルを上回ってる",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "IOtgUWDVQX8": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "日本人が運営してるドクタードーナツ切り抜きアカウントを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "J3AeGYYD2KE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが自身の拠点をレイドされた動画を見ます",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「〜動画を見ます」は結末を言わない行動"
+   }
+  },
+  "JGK0Haislys": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "普通のマイクラとリアルマイクラの違い",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "JPEn8tGQcjo": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "洪水派勢力により全てが水没したドーナツSMP",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "JhmlUquxA9Q": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ベリティ津波から逃げる自認ドクタードーナツを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "KNfPe1wbrB0": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "2B2T史上最大の建築を見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "KPhf8UgMnqU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツの善意を利用して詐欺る視聴者",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "KW0e548dHvM": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "人生をエイムに捧げた男の神業を試すドクタードーナツ",
+    "reason": "強い評価・レッテル・断定。「神業」は評価語"
+   }
+  },
+  "KXczCSfYvO8": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがUnstable SMP最強プレイヤーを見ます",
+    "reason": "規模を強調する数字・最上級で引きつける。「最強プレイヤー」の最上級。「見ます」は結末を言わない行動"
+   }
+  },
+  "Kd980NvSzII": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツの日常を見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "KfuWFwdrrkg": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "合図を送れば1秒以内にパールを引くドクタードーナツの彼女",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "LGDJjZDPGAE": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_LABEL",
+    "draft_code": "H_QUESTION",
+    "overridden": true,
+    "quote": "「僕は貧乏です、お金くれませんか？」に対するドナっさんの神対応",
+    "reason": "強い評価・レッテル・断定。「？」は引用された台詞の中にあり、視聴者への問いかけではない。「神対応」は評価語"
+   }
+  },
+  "LOl44dAkx7k": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドクタードーナツは今映ってる建造物でBANされかけました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "LT4g5FCgjiM": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ドリームに宣戦布告するDaquavisはヤラセです",
+    "reason": "強い評価・レッテル・断定。「〜はヤラセです」と断定"
+   }
+  },
+  "LZ6TF2jtbjI": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "ドクタードーナツと見るDreamの6人目ハンターにドクタードーナツが参戦するやつ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「6人目」は序数で、規模の強調ではない"
+   }
+  },
+  "LhqKnOa2oWw": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "チーターの拠点がドーナツSMP史上最大丸石製造機だった件",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "M3Zpc-gf0Cw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "悲しむドクタードーナツを気遣う同居人Carvsとqundres",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "MNYgeWAH00k": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_LABEL",
+    "overridden": false,
+    "quote": "このドクタードーナツは偽物のクローンです",
+    "reason": "強い評価・レッテル・断定"
+   }
+  },
+  "MUNjClmq_P4": {
+   "hook": {
+    "also": [],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "ドーナツSMP洪水戦争でできた派閥争い、あなたはどれに属する？",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "M_fl-5uX9ck": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "チーターの拠点がドーナツSMP史上最大村人交易所だった件",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "N-9UzfGS9VQ": {
+   "hook": {
+    "also": [
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "今、最強プレイヤーは誰だと思う？マーロウ？でもなく、2億人いるマイクラティアランキングの頂点イッツリアルミー？でもなく、比べるまでもないさ、テクノブレードは決して死なない",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "N16RhQNzL6Q": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "クリエで対抗する男",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "NBpeWY8ADfc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "DonutSMPの座標0 0へ向かうドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「0 0」は座標で、規模の強調ではない"
+   }
+  },
+  "NVooEgXyGYM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "問題発言集",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "OBtcM700t-c": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "各国の感謝を伝える言葉を言うドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "OCEw3dIRkXA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "Rekrapの軌道爆撃砲を見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "OQM-Ol312xA": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "ドリームの6人目ハンターにもしもドクタードーナツが参戦したら？",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "OikKeTokbYE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "黄色の球体ベリティと出会った瞬間",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "OsQJKc-Plko": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドパガキが絶頂する動画を見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "PJllnww-LHY": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "子豚が可愛すぎる",
+    "reason": "強い評価・レッテル・断定。「可愛すぎる」は評価"
+   }
+  },
+  "PZVlpRgneIg": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツにまんまと騙されるオーネピクセル",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "Pl_pBoHCD78": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "1分以内にクリーピーホースのケツについたハエをはたけ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "Q3iXO-wRon0": {
+   "hook": {
+    "also": [
+     "H_TWIST",
+     "H_QUESTION"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "とある画像を貼られて激怒するドクタードーナツですが、これは本人がAI画像と主張しているマップアートであり、ドーナツは見る度にガチ効きしています。それってほんとにAIなのか？結論は残念ながらいいえ、AIじゃありません",
+    "reason": "結末・決定的な出来事を先に言う。「結論は残念ながらいいえ、AIじゃありません」と答えまで言う"
+   }
+  },
+  "Q5HJTbhZfGc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ポータル式軌道爆撃砲を起動して絶句するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "QS0ZkLmd6Rg": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界最強プレイヤーMarlowに見られてるドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "QTcQ6CEBs4s": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "蜘蛛恐怖症が発狂するmodをプレイするトゥイクセル",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "QaG3zukRwXo": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "世界の全てをモニュメントで埋める珍派閥を見る管理者ドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "Qfq7D3VmmcY": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ラグドールをマイクラに追加するとこうなる。こんな感じで攻撃されると物理演算で吹っ飛ぶのがラグドール、決して変な意味ではない。ただし吹っ飛ぶだけではなく体の各部分が物理演算に従うので（未完）",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "QsPdz-tor6o": {
+   "hook": {
+    "also": [
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "鉱石採掘しようと出かけると目の前にいたのは世界最強プレイヤーでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "R8_IrDufK_0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "スパチャ読み上げを利用したアンチからの言葉に悲しむドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "RMO_BpC9xY8": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "4500万円の懸賞金から生き延びるドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "RgDa--X22NU": {
+   "hook": {
+    "also": [],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "岩盤は列車に耐えられる？",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "RkiVJY7W5ns": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ドーナツSMPで最も非効率なファームを見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける。「最も非効率な」の最上級"
+   }
+  },
+  "S-6p_o6jYZs": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界一人口が多いマイクラサーバーで起きた戦争。あるプレイヤーが自動装置で大量の水を広げ始め、steak、Jettismらの配信をきっかけに数百人規模の洪水派へ発展。荒らしや襲撃が許可されてるため管理者ドク…（未完）",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "SBRBNDbooEA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "チートなしで鉱石や洞窟を透視する裏技の真偽を試すドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "SEsuAjIkDJM": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがエンドクリスタルを5分間重ねて爆破させます",
+    "reason": "結末・決定的な出来事を先に言う。「爆破させます」と出来事を先に言う"
+   }
+  },
+  "SfrBX6FZesc": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが6人のプレイヤーと戦います",
+    "reason": "規模を強調する数字・最上級で引きつける。「6人のプレイヤー」の人数。「戦います」は結末を言わない行動"
+   }
+  },
+  "Sl6kP-APNto": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "家に入ろうと心のドアを開けたら待っていたのはキッズ達が作ったトラップでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "T-eCNcxAn-s": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "ドリームの神業を再現するドクタードーナツ",
+    "reason": "強い評価・レッテル・断定。「神業」は評価語"
+   }
+  },
+  "TF4APr8ubR4": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツの彼女オーディション",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "TLUJn7AuA2c": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが動く眼球をマイクラで再現した動画を見ます",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「〜動画を見ます」は結末を言わない行動"
+   }
+  },
+  "TNF3UP4BzvM": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_TWIST",
+    "overridden": false,
+    "quote": "ジャンクフードとヘルシーな食べ物で3600カロリーに達するまでの違いなんですが",
+    "reason": "予想外の展開を予告し、結末は言わない"
+   }
+  },
+  "TjBuXLjDrew": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "マイクラでエイム練習する中国のガチ勢はヤラセです",
+    "reason": "強い評価・レッテル・断定。「〜はヤラセです」と断定"
+   }
+  },
+  "U6p1E9W35Tg": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "本物のアレックスに会うドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "UD6LUYp1d6o": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_TWIST",
+    "overridden": false,
+    "quote": "ドリームを超えたという日本人がハンター16人から逃げる瞬間なんですが",
+    "reason": "予想外の展開を予告し、結末は言わない"
+   }
+  },
+  "UeUWO00tQB0": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "母親にマイクラ実況を見てるのがバレた瞬間",
+    "reason": "結末・決定的な出来事を先に言う。「バレた瞬間」と結末を述べる"
+   }
+  },
+  "V6rgBPXyi9Q": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者が音ブロックで作った少女Aを聴くドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "V7wgB13F_Do": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "心のドアを開くドアマンドーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "V8XGgQzGnNY": {
+   "hook": {
+    "also": [
+     "H_TWIST",
+     "H_SCALE"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "200万人の登録者突破したら200億円の物資を配布するというドクタードーナツ、このあと後悔します",
+    "reason": "結末・決定的な出来事を先に言う。「このあと後悔します」と結末を先に言う"
+   }
+  },
+  "VNH4Y0jkzbY": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドリームがドーナツSMPでドクタードーナツを倒します",
+    "reason": "結末・決定的な出来事を先に言う。「倒します」と結末を先に言う"
+   }
+  },
+  "Vld_G902cME": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがエリトラメイスという名の立体機動装置にボコされます",
+    "reason": "結末・決定的な出来事を先に言う。「ボコされます」と結末を先に言う"
+   }
+  },
+  "WCCCg7r_gN8": {
+   "hook": {
+    "also": [],
+    "code": "H_TWIST",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "死を偽造してるウェンブーが敵のBoosfer率いる盗賊団を壊滅しに向かいます、敵は透明化の正体がウェンブーだと知りません",
+    "reason": "予想外の展開を予告し、結末は言わない。「敵は透明化の正体がウェンブーだと知りません」と意外な展開を予告し、結末は言わない"
+   }
+  },
+  "WQShXjBDVZw": {
+   "hook": {
+    "also": [
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "マインクラフト世界最強のチーターはそもそも実在しませんでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "WSXSfOPoXGo": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが視聴者作のジェットコースターに乗ります",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「乗ります」は結末を言わない行動"
+   }
+  },
+  "WhZwbKZAFi4": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者が作った目の錯覚にうぉーが止まらないドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "X73Jv0y-iV8": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドクタードーナツのマイクがイカれました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "XNH-8qBSExA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "空襲兵器で荒らされるサーバーを見る管理者ドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "XceNpu-8GXQ": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドクタードーナツから10点中10点を貰うために作った神建築",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "Xh6jF07Pdms": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界最強チーターMarlowのBANを知ったドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "Y00iFXO3LTw": {
+   "hook": {
+    "also": [
+     "H_TWIST",
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_TWIST",
+    "overridden": true,
+    "quote": "ドリームを超える最強プレイヤーDaquavisがドクタードーナツを倒します。しかし、どこからどう見ても全部ヤラセです",
+    "reason": "結末・決定的な出来事を先に言う。「倒します。しかし〜全部ヤラセです」と結末と答えを言う"
+   }
+  },
+  "Y8Gzf5lJqUU": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界最強プレイヤーMarlowと戦うドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "YaCKlgOnqGY": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "完璧に設計された超規模監獄に幽閉されたパロット",
+    "reason": "規模を強調する数字・最上級で引きつける。「超規模監獄」の規模の強調"
+   }
+  },
+  "Ym0h4HYylBk": {
+   "hook": {
+    "also": [
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_RESULT",
+    "overridden": true,
+    "quote": "ブロックで橋をかけようとするマイクラ最強プレイヤーDaquavisを見守る配信者ドクタードーナツ、数秒後に予想外な結末を辿るのでした",
+    "reason": "予想外の展開を予告し、結末は言わない。「数秒後に予想外な結末を辿る」と予告し、中身は言わない"
+   }
+  },
+  "YqKdjuU_0bM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者が作った目の錯覚に感動するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "YyXJV_6meTs": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドロッパーに降りるドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "ZJyyzhbTNew": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドリームを冷笑するDaquavisを冷笑するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "ZPzCoquZX4Y": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者拠点評価で奈落に落とされかけるドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "_6QkTe1YqZQ": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "FPSに人生を捧げた男がマイクラするとこうなります",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "_Uv1goVmitQ": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "ドリームの神業はヤラセです",
+    "reason": "強い評価・レッテル・断定。「神業」は主語の一部で、文の主張は「ヤラセです」という断定"
+   }
+  },
+  "_nQMnwqMcPo": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "どんな敵もワンパンできるメイスを生まれて初めて使うドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "_u-NvcoL9MQ": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドーナツSMP史上最大の洪水を見つけたドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "aDtD3Gm5frM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツを冷笑するDreamを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "aGjehKMJgjc": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界一快感を感じるドロッパーに降りるドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "aPGTWm24JAk": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "怪しいゲームを見つけたドクターココナッツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "aS0VEvG9uXA": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "リアルすぎて二度と外に出れなくなると言われたGTA6新トレーラー",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "al-9NL0XIhA": {
+   "hook": {
+    "also": [],
+    "code": "H_TWIST",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ドクタードーナツはただマイクラを楽しんでただけなのに…",
+    "reason": "予想外の展開を予告し、結末は言わない。「ただ〜楽しんでただけなのに…」と意外な展開を予告"
+   }
+  },
+  "amEHHi_HRc8": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "全てのゲームでマイクラが遊べる瞬間を見るオーネピクセル",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "aoMS31ye0Tc": {
+   "hook": {
+    "also": [],
+    "code": "H_TWIST",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "親友が作ったドロッパーを楽しんでいたドクタードーナツですが、数秒後違和感に気づきます",
+    "reason": "予想外の展開を予告し、結末は言わない。「〜ですが、数秒後違和感に気づきます」と予告し、結末は言わない"
+   }
+  },
+  "apP-hpxQbIc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "エンド奈落トラップに凸したドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "aqLdSGir3U0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドーナツSMP大規模ファームをリークしてしまうドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "awqev6zsXRY": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "チーターか無罪か判決するドクタードーナツ検察官",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "b6KTgURZeeM": {
+   "hook": {
+    "also": [],
+    "code": "H_OTHER",
+    "draft_code": "H_RESULT",
+    "overridden": true,
+    "quote": "マイクラに追加される新ディメンション、シフトの極秘映像をSMPクリップ独自入手しました",
+    "reason": "どの型にも当てはまらない。ニュース（映像を入手した）の一文で、どの型にも当てはまらない"
+   }
+  },
+  "bR7HraZwc5c": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "マイクラに14年ぶりの新ディメンションが発表される瞬間を見るオーネピクセル",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "b_sx5XOx0dc": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドクタードーナツの命をコンマ0.1秒前で救ったパール",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "bmrRN6xtncs": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツのデスクを片付ける同居人Carvs",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "brskAPvpn4o": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ググガガペンギンをマイクラで再現したら可愛すぎた、ググガガペンギンをマイクラ…（未完）",
+    "reason": "結末・決定的な出来事を先に言う。「再現したら可愛すぎた」と結果を言う"
+   }
+  },
+  "c-eGuATvatk": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがドリームの6人目ハンターにふさわしいことを証明するため直接対決します",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「6人目」は序数。「直接対決します」は結末を言わない行動"
+   }
+  },
+  "dBAGKL6NewM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "あのウェンブーとついに決闘するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "dKdWA52UooY": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "寝落ち中に野良の拠点を発掘するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "dQkqvDUguNA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "またSMPクリップを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "e4Fx9v3kxHw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ブロックがチャンク毎にコピーされる世界でバックルームズを作るCarvs",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "eBWWvzoeZPg": {
+   "hook": {
+    "also": [
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "ハンターから逃げてエンドラ討伐する世界トップ5のマンハントプレイヤー誰が一番最強？スティック使うやつは論外で",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "f2KU52ijDCA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "軌道爆撃砲をドーナツSMPで使うドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "fSWDpY4SCBA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "管理者権限でチーターを公開処刑するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "fZQ-F4hIVMw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "また1人のドーナツSMP民を引退させたドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「1人」は規模の強調ではない。体言止めの紹介"
+   }
+  },
+  "f_S8Et8488g": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "パールを引いてドクタードーナツの命を救うフェレックス",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "fmJMeaIH70U": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ゲームで死ぬわけがないと確信しているJettism、理由はピンチになると即座にパールを引く男コブハがいるから",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "gPk9X8Ajh18": {
+   "hook": {
+    "also": [],
+    "code": "H_TWIST",
+    "draft_code": "H_TWIST",
+    "overridden": false,
+    "quote": "視聴者を黒曜石の上に全員呼んだドクタードーナツですが",
+    "reason": "予想外の展開を予告し、結末は言わない"
+   }
+  },
+  "gQ3C9zL4Gjo": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドリームを超えたと主張する海外プロ、ダクアビスがハンター6人から逃げる瞬間",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "ghMfEcMY4fA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "Daquavisに無断使用されたドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "glSdXhO-Guo": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "10億円の懸賞金をかけられて天才的な行動に出るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "h09GaCbmq_g": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "野良の拠点を荒らされてない状態で発掘するドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "h7goMbqULY4": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "登録者200万人達成を祝われるドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "h7lZcV6NY5E": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがクリスマスまでの日数を数えるアドベントカレンダーを開封します",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「開封します」は結末を言わない行動"
+   }
+  },
+  "hCqxH72t4qw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ついにヨシヒデを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "hm6OJrvdDRk": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが最強の槍を金床合成で作ります",
+    "reason": "規模を強調する数字・最上級で引きつける。「最強の槍」の最上級。「作ります」は結末を言わない行動"
+   }
+  },
+  "i1-DAWXCCUw": {
+   "hook": {
+    "also": [],
+    "code": "H_OTHER",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "これはトラップではありません",
+    "reason": "どの型にも当てはまらない。「これはトラップではありません」という否定の一文で、どの型にも当てはまらない"
+   }
+  },
+  "i8hT785wQ14": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "マイクラ配信中の一言が社会現象になる瞬間",
+    "reason": "結末・決定的な出来事を先に言う。「社会現象になる瞬間」と結末を述べる"
+   }
+  },
+  "iGsYAHSLzmU": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_TWIST",
+    "overridden": false,
+    "quote": "ドリームを超えたらしい日本人がハンター15人から逃げる瞬間なんですが",
+    "reason": "予想外の展開を予告し、結末は言わない"
+   }
+  },
+  "iTQFLyMXUc4": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "日本のドッキリが海外進出して100万いいねされたこの男、友達の実家をクレーンで解体するらしいんだけど..",
+    "reason": "予想外の展開を予告し、結末は言わない。「〜らしいんだけど..」と逆接で予告"
+   }
+  },
+  "ichRl_cub_U": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "マイクラ史上最長のジャンプ記録を更新するドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "igdg807nZig": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "過去を思い出すドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "j9WOh3FgD34": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "リンゴを手で割るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "jb4KsgU2Ax8": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "奈落トラップに落とされても脱出するFlamefrags",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "jhpnEuXkEJU": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "人生の全てをマイクラに費やした男が作り上げたワールドの集大成",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "jibUjrFjNgg": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ベリティを58秒間ブチギレさせるという男",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "joTIeX4Gr5g": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "新型洪水兵器、多層式水流を見るJettism",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "jwO7H22i0jY": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ゲームを1万倍速にして音がでかいブロックを探すCarvs",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "jz-0UAp9yPM": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "洪水で何万ブロックも埋められるドーナツSMPを見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "k3gvUdAaY0o": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドーナツSMPを水没させたい洪水派率いるsteakと、排水派ドクタードーナツの戦争が開幕する瞬間",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "kE2UWjJ-WRo": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ワールドイーターで全て破壊されるドーナツSMPを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "kEH5wLvVfXE": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドーナツSMP管理者のドクタードーナツがBANされました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "kNFXP3_pHNI": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "マイクラ史上最大ダメージを出すドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "kWkUTzMk19c": {
+   "hook": {
+    "also": [],
+    "code": "H_OTHER",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ベリティから嬉しいご報告があります",
+    "reason": "どの型にも当てはまらない。ご報告の一文"
+   }
+  },
+  "kX2XalxWCKI": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "マイクラ中に私を誘い込むような隙間を見つけたジェディズム",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "k_kvQo6zfcw": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "クリア不可能なシード値からの脱出に挑戦するドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "l-i2luVRm9c": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが見えないなにかに監視されている事に気づきます",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「気づきます」は状況の始まりで、結末を言わない"
+   }
+  },
+  "lA9Dornu71I": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "天才プレイヤーParrotがチーターに追われます",
+    "reason": "強い評価・レッテル・断定。「天才プレイヤー」は評価語。「追われます」は結末を言わない"
+   }
+  },
+  "lDnkoc9fiz8": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "フロモスプレイヤーのパルクールを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "lIZXHaCQPhs": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツのために洪水を抜くという男",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "lTBuAyXne1Q": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "チート疑惑で暴露された世界最強プレイヤーMarlow",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "lct25tmF9lA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ベッドで座る裏技を試すインドネシアニキを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "liqCpcVWwLc": {
+   "hook": {
+    "also": [
+     "H_TWIST",
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドリームを超える最強プレイヤーDaquavisがドクタードーナツを倒します。しかし、映像内のドクタードーナツはMODを使ったただの偽物でした。これに対しドクタードーナツは",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "lmVqprzsweM": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドクタードーナツがtpした先は待ち伏せ中の視聴者数十人でした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "ltaaW0lO7O0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがJudelowの槍グリッチを見守ります",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「見守ります」は結末を言わない行動"
+   }
+  },
+  "m0SRHXbrbLA": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "ドリームの6人目ハンターにGroxが参戦！？",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "mYU_5tkoDGo": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ウェンブーがSMPを支配した組織を語ります",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「語ります」は結末を言わない行動"
+   }
+  },
+  "mvNNNg8-ty8": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "マイクラでどんな高さから落ちてもたった1個のブロックで生き延びる方法。ドリームがマンハント中使った裏技です",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "nAPaUGpfJjA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツのPCを壊したググガガペンギン",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "nGHtaKh8d4w": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが新しい槍エンチャントのダッシュ使用動画を見ます",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「〜動画を見ます」は結末を言わない行動"
+   }
+  },
+  "nNezmkt19t4": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが目を瞑りながらクリスタルPvPをプレイします",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「プレイします」は結末を言わない行動"
+   }
+  },
+  "nTec6oiQPeg": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがみんな大好き統合版脳死ゴミ連打PvPをプレイします",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「プレイします」は結末を言わない行動"
+   }
+  },
+  "nW8OUvD2gmo": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドリームを超えたと主張する男が崖っぷちでハンター3人から逃げる",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "n_dKbXuqRlA": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_LABEL",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "チェスト内の卵を真下に投げて産んだ鶏にメイス着地、チェスト内の種と骨粉で畑を耕す神業を見るドクタードーナツ",
+    "reason": "強い評価・レッテル・断定。「神業」は評価語"
+   }
+  },
+  "nrPBlAgD7Fg": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがゲーミングカフェでクリスタルPvPをプレイします",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「プレイします」は結末を言わない行動"
+   }
+  },
+  "ntrHM1P1hVI": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツと見る自我を持った石炭",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "nyS7vv5_RCY": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "一般人がチーターか判断する管理者ドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "o0pTYg4E07o": {
+   "hook": {
+    "also": [
+     "H_TWIST"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "モニタリングのあれか野原ひろしっぽい画角のドクタードーナツ、しかしこれはとあるミームのネタでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "oBbu0n71Tt0": {
+   "hook": {
+    "also": [],
+    "code": "H_OTHER",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "もしもドリームのマンハントに優秀なハンターがいたら",
+    "reason": "どの型にも当てはまらない。「もしも〜いたら」の仮定で、問いかけの形ではない"
+   }
+  },
+  "on_r0KcbSFw": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドリームが1500万円を賭けたDaquavisとの1v1の契約に署名したから詳細発表を見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "p2evt-71Ox0": {
+   "hook": {
+    "also": [],
+    "code": "H_OTHER",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "Java版と統合版にシフトディメンションが来る",
+    "reason": "どの型にも当てはまらない。ニュースの一文"
+   }
+  },
+  "pDBRgW-DUKs": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドーナツSMP史上最悪のアプデに絶句するプレイヤー",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "pg8QhSifOmw": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "世界最強チーターMarlowが1人で30人相手に挑みます",
+    "reason": "規模を強調する数字・最上級で引きつける。「1人で30人相手」の人数と「世界最強」。「挑みます」は結末を言わない"
+   }
+  },
+  "pquY8pw16Jo": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "クリーピーホースはチートを使っても逃げられません",
+    "reason": "結末・決定的な出来事を先に言う。「チートを使っても逃げられません」と結末を言い切る"
+   }
+  },
+  "q85WkftXEOA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "中国のガチ勢に憧れたキッズがこちらです",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "qDTBwrSQCAI": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ゲーム実況に憧れた子どもを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "qZHqZJcor8s": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツに会えて歓喜する視聴者",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "qcCJjuaZlvA": {
+   "hook": {
+    "also": [],
+    "code": "H_LABEL",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ドリームのクラッチはヤラセです",
+    "reason": "強い評価・レッテル・断定。「〜はヤラセです」と断定"
+   }
+  },
+  "qcHAxAuxmUE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "洗面台からタヌキが出てくる瞬間を見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "qrPBNyPqmc4": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "放課後に帰宅したやつを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "r4XOnbGCTHA": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "配信中に泣いてしまったドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "r8q8QvPGrxg": {
+   "hook": {
+    "also": [],
+    "code": "H_QUESTION",
+    "draft_code": "H_QUESTION",
+    "overridden": false,
+    "quote": "皆さんはガチで恵まれてます。そう思っとくない？自分の好きな有名YouTuberにも〜私は今、海外のドクタードーナツやスティーブ…（未完）",
+    "reason": "視聴者への問いかけ"
+   }
+  },
+  "ro4el7IiLh0": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "テクノブレードをボロクソ言うドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "sAnKbKumKSM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "岩盤に拠点を作ってはいけないのを知っていたドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "tWnXoybL81I": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "敵対勢力を追ってたら透明人間に落とされ確殺するための監獄に閉じ込められました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "tfDdjddS1Cc": {
+   "hook": {
+    "also": [],
+    "code": "H_OTHER",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "隠れて見つからなければ豪華賞品ゲット",
+    "reason": "どの型にも当てはまらない。ルール・賞品の提示"
+   }
+  },
+  "thUaSFECndY": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界一難しいゲームで世界一難しいステージを攻略するドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "tiwsHHb63AQ": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "剣PvPでコンボする海外プレイヤーを見るドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "turdxLAV1mY": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "スピード3をサバイバルで体感するドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "tve4TdugmQs": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_SCALE",
+    "overridden": true,
+    "quote": "2B2Tでエンドに行くドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「2B2T」はサーバー名で、規模の強調ではない"
+   }
+  },
+  "u9eBybtP9zk": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドーナツSMPで視聴者のドロッパーに降りるドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "uEF9S0x5XFQ": {
+   "hook": {
+    "also": [
+     "H_SCALE"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "マイクラ世界1位プレイヤーの正体は女性になりすましたチーターでした",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "uM7crREuUzI": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツを自分自身の思考でトラップにはめるJettism",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "uw3wa9obDJk": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ベリティを使ってASMRするという男",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "v6imLwjk0PE": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界一流行った数字を表現するドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "v8VgiBBHzJ8": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "片目を閉じて鉛筆を見ると快楽を感じるらしい",
+    "reason": "結末・決定的な出来事を先に言う。「〜すると快楽を感じるらしい」と条件付きの結果を言う"
+   }
+  },
+  "vapbiCcX7pc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "自分の拠点が荒らされている事に気づいたドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "vdqofR6N4Gg": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが現実でもゲームでもしにます",
+    "reason": "結末・決定的な出来事を先に言う。「しにます」と結末を先に言う"
+   }
+  },
+  "w28D13qe67E": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "大量の防具立てで圧縮死させるトラップから脱出するインド最強センパイスパイダー",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "w4vASqlDIKw": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "総ブロック数50万、荒らし対策のために黒曜石で作られた航空戦艦をドーナツSMPで作った視聴者たち",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "wSEsLVGTWcM": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツの部屋を細部まで完全再現した視聴者",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "wdwIG5mRCsE": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "vs1000人ミスタービーストチャレンジ最後の1000人目を見るEvboを見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "wnPHjyqjtYw": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "クリーピーホースにチートで対抗する男",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "wpwwFOjd-os": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "視聴者をめちゃくちゃ疑うドクタードーナツ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "x4_mssmyhMc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "ドクタードーナツが満足感の高い建築というかアートを見るべ",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "xF_MQmgle_Y": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_INTRO",
+    "overridden": true,
+    "quote": "ドクタードーナツブチギレの瞬間",
+    "reason": "結末・決定的な出来事を先に言う。「ブチギレの瞬間」と出来事を述べる"
+   }
+  },
+  "xNnBLH_XAMw": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドーナツSMP史上最大ファームを管理者権限で見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "xeG4jHsduUc": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT",
+    "overridden": false,
+    "quote": "ドーナツSMPで例のブツが出ました",
+    "reason": "結末・決定的な出来事を先に言う"
+   }
+  },
+  "y4oZusTqsG0": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "世界最強プレイヤーMarlowと決闘する世界4位Swight",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "yKVh_uHSX4I": {
+   "hook": {
+    "also": [
+     "H_INTRO"
+    ],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "偽拠点でチーターを釣るドーナツSMP管理者、一攫千金を狙い拠点を探してるこの男、偽拠点に一直線でたどり着けばチート確定します",
+    "reason": "結末・決定的な出来事を先に言う。「たどり着けばチート確定します」と条件付きの結末を言う"
+   }
+  },
+  "yKoyzSSYR9o": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "新ディメンション、シフトに今から行く方法",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "yfFr3NSjjFE": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "マイクラに氷の洞窟や新モブ、新アイテムが発表される瞬間を見るオーネピクセル",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  },
+  "ynirSiSYP54": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツがゴーレムの倒し方を配信視聴者に見せつけます",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）。「見せつけます」は結末を言わない行動"
+   }
+  },
+  "ypZgt6int_k": {
+   "hook": {
+    "also": [
+     "H_LABEL"
+    ],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "女性で世界最強とされるMarlowの顔を初めて見るドクタードーナツ",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "yynRP82w7MI": {
+   "hook": {
+    "also": [],
+    "code": "H_SCALE",
+    "draft_code": "H_SCALE",
+    "overridden": false,
+    "quote": "ドクタードーナツを倒して400万円手に入れたい視聴者から逃げる",
+    "reason": "規模を強調する数字・最上級で引きつける"
+   }
+  },
+  "zTdNQj8IgFA": {
+   "hook": {
+    "also": [
+     "H_SCALE",
+     "H_LABEL"
+    ],
+    "code": "H_TWIST",
+    "draft_code": "H_TWIST",
+    "overridden": false,
+    "quote": "最強武器は斧だと主張するドリームですが",
+    "reason": "予想外の展開を予告し、結末は言わない"
+   }
+  },
+  "zWsGaB-NV5E": {
+   "hook": {
+    "also": [],
+    "code": "H_RESULT",
+    "draft_code": "H_RESULT?",
+    "overridden": true,
+    "quote": "ドクタードーナツが竹1v1で不正します",
+    "reason": "結末・決定的な出来事を先に言う。「不正します」と決定的な出来事を先に言う"
+   }
+  },
+  "zhUK5o_tVqc": {
+   "hook": {
+    "also": [],
+    "code": "H_INTRO",
+    "draft_code": "H_INTRO",
+    "overridden": false,
+    "quote": "実写版タツさんの休日、異次元ボーリング編",
+    "reason": "人物・状況の紹介だけ（結末・ひねり・評価なし）"
+   }
+  }
+ }
+}
