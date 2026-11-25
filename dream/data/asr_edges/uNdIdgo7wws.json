@@ -1,0 +1,37 @@
+{
+ "id": "uNdIdgo7wws",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 2.58,
+   "text": "テクノブレイドとの決闘中ドリームが覚醒します",
+   "no_speech": 0.0
+  },
+  {
+   "start": 2.58,
+   "end": 4.42,
+   "text": "Oh! That arrow was so close!",
+   "no_speech": 0.0
+  },
+  {
+   "start": 4.42,
+   "end": 4.98,
+   "text": "テクノ…",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 32.68,
+   "end": 37.08,
+   "text": "結局この戦いはテクノグレイドの勝利で幕を閉じましたが",
+   "no_speech": 0.0
+  },
+  {
+   "start": 37.08,
+   "end": 39.42,
+   "text": "彼と張り合えるドリームは本当にすごいですね",
+   "no_speech": 0.0
+  }
+ ]
+}

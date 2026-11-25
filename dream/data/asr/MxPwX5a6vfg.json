@@ -1,0 +1,736 @@
+{
+ "id": "MxPwX5a6vfg",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.48,
+    "text": "この怪物は数秒後は雲を見ることになりました",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      0.0,
+      0.22,
+      "この"
+     ],
+     [
+      0.22,
+      0.44,
+      "怪"
+     ],
+     [
+      0.44,
+      0.6,
+      "物"
+     ],
+     [
+      0.6,
+      0.76,
+      "は"
+     ],
+     [
+      0.76,
+      0.94,
+      "数"
+     ],
+     [
+      0.94,
+      1.12,
+      "秒"
+     ],
+     [
+      1.12,
+      1.26,
+      "後"
+     ],
+     [
+      1.26,
+      1.38,
+      "は"
+     ],
+     [
+      1.38,
+      1.54,
+      "雲"
+     ],
+     [
+      1.54,
+      1.7,
+      "を"
+     ],
+     [
+      1.7,
+      1.74,
+      "見"
+     ],
+     [
+      1.74,
+      1.86,
+      "る"
+     ],
+     [
+      1.86,
+      2.0,
+      "こと"
+     ],
+     [
+      2.0,
+      2.22,
+      "にな"
+     ],
+     [
+      2.22,
+      2.48,
+      "りました"
+     ]
+    ]
+   },
+   {
+    "start": 2.48,
+    "end": 3.6,
+    "text": "I see you",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      2.48,
+      2.78,
+      "I"
+     ],
+     [
+      2.78,
+      3.14,
+      " see"
+     ],
+     [
+      3.14,
+      3.6,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 3.6,
+    "end": 4.82,
+    "text": "What's that sound?",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      3.6,
+      4.14,
+      "What"
+     ],
+     [
+      4.14,
+      4.3,
+      "'s"
+     ],
+     [
+      4.3,
+      4.42,
+      " that"
+     ],
+     [
+      4.42,
+      4.82,
+      " sound?"
+     ]
+    ]
+   },
+   {
+    "start": 6.06,
+    "end": 7.22,
+    "text": "What is that?",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      6.06,
+      6.48,
+      "What"
+     ],
+     [
+      6.48,
+      6.9,
+      " is"
+     ],
+     [
+      6.9,
+      7.22,
+      " that?"
+     ]
+    ]
+   },
+   {
+    "start": 7.72,
+    "end": 9.54,
+    "text": "I can't help myself",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      7.72,
+      8.0,
+      "I"
+     ],
+     [
+      8.0,
+      8.32,
+      " can"
+     ],
+     [
+      8.32,
+      8.48,
+      "'t"
+     ],
+     [
+      8.48,
+      8.78,
+      " help"
+     ],
+     [
+      8.78,
+      9.54,
+      " myself"
+     ]
+    ]
+   },
+   {
+    "start": 10.18,
+    "end": 11.5,
+    "text": "AHHHHH",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      10.18,
+      10.6,
+      "A"
+     ],
+     [
+      10.6,
+      10.98,
+      "HHHH"
+     ],
+     [
+      10.98,
+      11.5,
+      "H"
+     ]
+    ]
+   },
+   {
+    "start": 16.08,
+    "end": 19.78,
+    "text": "I can't help myself",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      16.08,
+      16.5,
+      "I"
+     ],
+     [
+      16.5,
+      16.5,
+      " can"
+     ],
+     [
+      16.5,
+      18.64,
+      "'t"
+     ],
+     [
+      18.64,
+      18.96,
+      " help"
+     ],
+     [
+      18.96,
+      19.78,
+      " myself"
+     ]
+    ]
+   },
+   {
+    "start": 19.78,
+    "end": 22.6,
+    "text": "You think this is a game or something?",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      19.78,
+      20.1,
+      "You"
+     ],
+     [
+      20.1,
+      21.52,
+      " think"
+     ],
+     [
+      21.52,
+      21.7,
+      " this"
+     ],
+     [
+      21.7,
+      21.82,
+      " is"
+     ],
+     [
+      21.82,
+      21.9,
+      " a"
+     ],
+     [
+      21.9,
+      22.12,
+      " game"
+     ],
+     [
+      22.12,
+      22.3,
+      " or"
+     ],
+     [
+      22.3,
+      22.6,
+      " something?"
+     ]
+    ]
+   },
+   {
+    "start": 22.8,
+    "end": 24.72,
+    "text": "You think it's funny, scary, and innocent people?",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      22.8,
+      22.96,
+      "You"
+     ],
+     [
+      22.96,
+      23.16,
+      " think"
+     ],
+     [
+      23.16,
+      23.26,
+      " it"
+     ],
+     [
+      23.26,
+      23.34,
+      "'s"
+     ],
+     [
+      23.34,
+      23.56,
+      " funny,"
+     ],
+     [
+      23.68,
+      23.92,
+      " scary,"
+     ],
+     [
+      24.1,
+      24.12,
+      " and"
+     ],
+     [
+      24.12,
+      24.32,
+      " innocent"
+     ],
+     [
+      24.32,
+      24.72,
+      " people?"
+     ]
+    ]
+   },
+   {
+    "start": 24.96,
+    "end": 27.6,
+    "text": "If you're so scary, try and scare me!",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      24.96,
+      25.28,
+      "If"
+     ],
+     [
+      25.28,
+      25.4,
+      " you"
+     ],
+     [
+      25.4,
+      25.56,
+      "'re"
+     ],
+     [
+      25.56,
+      25.72,
+      " so"
+     ],
+     [
+      25.72,
+      26.12,
+      " scary,"
+     ],
+     [
+      26.3,
+      26.64,
+      " try"
+     ],
+     [
+      26.64,
+      26.92,
+      " and"
+     ],
+     [
+      26.92,
+      27.18,
+      " scare"
+     ],
+     [
+      27.18,
+      27.6,
+      " me!"
+     ]
+    ]
+   },
+   {
+    "start": 27.8,
+    "end": 28.8,
+    "text": "Try and scare me!",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      27.8,
+      28.12,
+      "T"
+     ],
+     [
+      28.12,
+      28.26,
+      "ry"
+     ],
+     [
+      28.26,
+      28.4,
+      " and"
+     ],
+     [
+      28.4,
+      28.58,
+      " scare"
+     ],
+     [
+      28.58,
+      28.8,
+      " me!"
+     ]
+    ]
+   },
+   {
+    "start": 28.96,
+    "end": 29.52,
+    "text": "Why are you going?",
+    "no_speech": 0.0,
+    "logprob": -0.45,
+    "words": [
+     [
+      28.96,
+      29.16,
+      "Why"
+     ],
+     [
+      29.16,
+      29.32,
+      " are"
+     ],
+     [
+      29.32,
+      29.4,
+      " you"
+     ],
+     [
+      29.4,
+      29.52,
+      " going?"
+     ]
+    ]
+   },
+   {
+    "start": 30.0,
+    "end": 31.52,
+    "text": "BREAK OF THE ASS BACK IN!",
+    "no_speech": 0.0,
+    "logprob": -0.69,
+    "words": [
+     [
+      30.0,
+      30.16,
+      "B"
+     ],
+     [
+      30.16,
+      30.18,
+      "RE"
+     ],
+     [
+      30.18,
+      30.3,
+      "AK"
+     ],
+     [
+      30.3,
+      30.46,
+      " OF"
+     ],
+     [
+      30.46,
+      30.8,
+      " THE"
+     ],
+     [
+      30.8,
+      30.98,
+      " AS"
+     ],
+     [
+      30.98,
+      31.04,
+      "S"
+     ],
+     [
+      31.04,
+      31.28,
+      " BACK"
+     ],
+     [
+      31.28,
+      31.52,
+      " IN!"
+     ]
+    ]
+   },
+   {
+    "start": 31.74,
+    "end": 37.78,
+    "text": "BREAK OF THE ASS BACK IN!",
+    "no_speech": 0.0,
+    "logprob": -0.69,
+    "words": [
+     [
+      31.74,
+      31.96,
+      "B"
+     ],
+     [
+      31.96,
+      33.48,
+      "RE"
+     ],
+     [
+      33.48,
+      33.48,
+      "AK"
+     ],
+     [
+      33.48,
+      37.68,
+      " OF"
+     ],
+     [
+      37.68,
+      37.7,
+      " THE"
+     ],
+     [
+      37.7,
+      37.72,
+      " AS"
+     ],
+     [
+      37.72,
+      37.74,
+      "S"
+     ],
+     [
+      37.74,
+      37.76,
+      " BACK"
+     ],
+     [
+      37.76,
+      37.78,
+      " IN!"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.56,
+    "text": "This怪物 will be seen in a few seconds, in a few seconds.",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 2.56,
+    "end": 3.84,
+    "text": "I see you!",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 3.84,
+    "end": 4.96,
+    "text": "What's that sound?",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 5.92,
+    "end": 7.68,
+    "text": "What is that?",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 7.68,
+    "end": 9.68,
+    "text": "I can't help myself.",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 9.68,
+    "end": 11.68,
+    "text": "AHHHHH!",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 17.68,
+    "end": 19.92,
+    "text": "I'm not even a Mike Tyson special!",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 21.2,
+    "end": 22.8,
+    "text": "You think this is a game or something?",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 22.8,
+    "end": 25.04,
+    "text": "You think it's funny, scary, innocent people?",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 25.04,
+    "end": 28.0,
+    "text": "If you're so scary, try and scare me!",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 28.0,
+    "end": 28.96,
+    "text": "Try and scare me!",
+    "no_speech": 0.0,
+    "logprob": -0.58
+   },
+   {
+    "start": 28.96,
+    "end": 29.96,
+    "text": "Where am I going?",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 29.96,
+    "end": 31.66,
+    "text": "Break your ugly ass back here!",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 31.66,
+    "end": 32.66,
+    "text": "If you don't want to...",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 32.66,
+    "end": 33.46,
+    "text": "Stop!",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 33.46,
+    "end": 33.96,
+    "text": "Stop!",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 33.96,
+    "end": 34.46,
+    "text": "Stop!",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 34.46,
+    "end": 35.46,
+    "text": "Stop!",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 35.46,
+    "end": 36.46,
+    "text": "Stop!",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   },
+   {
+    "start": 36.46,
+    "end": 37.46,
+    "text": "Stop!",
+    "no_speech": 0.0,
+    "logprob": -0.63
+   }
+  ]
+ }
+}

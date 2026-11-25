@@ -1,0 +1,55 @@
+{
+ "id": "7fSr1a8AlsI",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 1.84,
+   "text": "ドリームの鍵技はすべてやらせです",
+   "no_speech": 0.0
+  },
+  {
+   "start": 1.84,
+   "end": 2.8,
+   "text": "バイドリーム",
+   "no_speech": 0.0
+  },
+  {
+   "start": 2.8,
+   "end": 4.3,
+   "text": "You're telling me",
+   "no_speech": 0.0
+  },
+  {
+   "start": 4.3,
+   "end": 5.0,
+   "text": "HOO",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 21.33,
+   "end": 22.01,
+   "text": "You know what I'm saying",
+   "no_speech": 0.0
+  },
+  {
+   "start": 22.01,
+   "end": 23.05,
+   "text": "That was instant bro",
+   "no_speech": 0.0
+  },
+  {
+   "start": 23.05,
+   "end": 24.01,
+   "text": "That's crazy",
+   "no_speech": 0.0
+  },
+  {
+   "start": 24.01,
+   "end": 27.69,
+   "text": "Bye",
+   "no_speech": 0.0
+  }
+ ]
+}

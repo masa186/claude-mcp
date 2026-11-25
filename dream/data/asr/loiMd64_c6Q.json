@@ -1,0 +1,707 @@
+{
+ "id": "loiMd64_c6Q",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.54,
+    "text": "彼はありえない方法でクリートワーを退治します",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      0.0,
+      0.26,
+      "彼"
+     ],
+     [
+      0.26,
+      0.4,
+      "は"
+     ],
+     [
+      0.4,
+      0.64,
+      "あり"
+     ],
+     [
+      0.64,
+      0.72,
+      "え"
+     ],
+     [
+      0.72,
+      0.84,
+      "ない"
+     ],
+     [
+      0.84,
+      1.06,
+      "方"
+     ],
+     [
+      1.06,
+      1.22,
+      "法"
+     ],
+     [
+      1.22,
+      1.32,
+      "で"
+     ],
+     [
+      1.32,
+      1.52,
+      "ク"
+     ],
+     [
+      1.52,
+      1.54,
+      "リ"
+     ],
+     [
+      1.54,
+      1.66,
+      "ート"
+     ],
+     [
+      1.66,
+      1.82,
+      "ワ"
+     ],
+     [
+      1.82,
+      1.88,
+      "ー"
+     ],
+     [
+      1.88,
+      1.94,
+      "を"
+     ],
+     [
+      1.94,
+      2.12,
+      "退"
+     ],
+     [
+      2.12,
+      2.2,
+      "治"
+     ],
+     [
+      2.2,
+      2.54,
+      "します"
+     ]
+    ]
+   },
+   {
+    "start": 3.32,
+    "end": 3.8,
+    "text": "OK",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      3.32,
+      3.8,
+      "OK"
+     ]
+    ]
+   },
+   {
+    "start": 4.96,
+    "end": 7.1,
+    "text": "No, you better back up",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      4.96,
+      5.44,
+      "No,"
+     ],
+     [
+      6.34,
+      6.38,
+      " you"
+     ],
+     [
+      6.38,
+      6.54,
+      " better"
+     ],
+     [
+      6.54,
+      6.8,
+      " back"
+     ],
+     [
+      6.8,
+      7.1,
+      " up"
+     ]
+    ]
+   },
+   {
+    "start": 7.1,
+    "end": 7.86,
+    "text": "I'm prepared",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      7.1,
+      7.34,
+      "I"
+     ],
+     [
+      7.34,
+      7.42,
+      "'m"
+     ],
+     [
+      7.42,
+      7.86,
+      " prepared"
+     ]
+    ]
+   },
+   {
+    "start": 9.14,
+    "end": 9.82,
+    "text": "Loser",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      9.14,
+      9.62,
+      "L"
+     ],
+     [
+      9.62,
+      9.82,
+      "oser"
+     ]
+    ]
+   },
+   {
+    "start": 11.0,
+    "end": 12.1,
+    "text": "Yo, yo, yo, yo",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      11.0,
+      11.48,
+      "Yo,"
+     ],
+     [
+      11.62,
+      11.72,
+      " yo,"
+     ],
+     [
+      11.9,
+      11.94,
+      " yo,"
+     ],
+     [
+      11.94,
+      12.1,
+      " yo"
+     ]
+    ]
+   },
+   {
+    "start": 13.56,
+    "end": 15.04,
+    "text": "No, no, no",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      13.56,
+      14.04,
+      "No,"
+     ],
+     [
+      14.04,
+      14.52,
+      " no,"
+     ],
+     [
+      14.52,
+      15.04,
+      " no"
+     ]
+    ]
+   },
+   {
+    "start": 15.04,
+    "end": 15.82,
+    "text": "Not this time",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      15.04,
+      15.24,
+      "Not"
+     ],
+     [
+      15.24,
+      15.5,
+      " this"
+     ],
+     [
+      15.5,
+      15.82,
+      " time"
+     ]
+    ]
+   },
+   {
+    "start": 15.82,
+    "end": 16.78,
+    "text": "You're getting cancelled",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      15.82,
+      16.04,
+      "You"
+     ],
+     [
+      16.04,
+      16.08,
+      "'re"
+     ],
+     [
+      16.08,
+      16.26,
+      " getting"
+     ],
+     [
+      16.26,
+      16.78,
+      " cancelled"
+     ]
+    ]
+   },
+   {
+    "start": 17.36,
+    "end": 18.4,
+    "text": "Tell me why",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      17.36,
+      17.84,
+      "Tell"
+     ],
+     [
+      17.84,
+      18.02,
+      " me"
+     ],
+     [
+      18.02,
+      18.4,
+      " why"
+     ]
+    ]
+   },
+   {
+    "start": 18.4,
+    "end": 21.68,
+    "text": "Every mob in Minecraft never gets blown up",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      18.4,
+      19.18,
+      "Every"
+     ],
+     [
+      19.18,
+      19.62,
+      " mob"
+     ],
+     [
+      19.62,
+      19.8,
+      " in"
+     ],
+     [
+      19.8,
+      20.2,
+      " Minecraft"
+     ],
+     [
+      20.2,
+      20.72,
+      " never"
+     ],
+     [
+      20.72,
+      21.06,
+      " gets"
+     ],
+     [
+      21.06,
+      21.32,
+      " blown"
+     ],
+     [
+      21.32,
+      21.68,
+      " up"
+     ]
+    ]
+   },
+   {
+    "start": 21.68,
+    "end": 24.08,
+    "text": "But I'm the only one",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      21.68,
+      22.38,
+      "But"
+     ],
+     [
+      22.38,
+      22.8,
+      " I"
+     ],
+     [
+      22.8,
+      22.98,
+      "'m"
+     ],
+     [
+      22.98,
+      23.18,
+      " the"
+     ],
+     [
+      23.18,
+      23.58,
+      " only"
+     ],
+     [
+      23.58,
+      24.08,
+      " one"
+     ]
+    ]
+   },
+   {
+    "start": 24.08,
+    "end": 25.5,
+    "text": "Do you know what that seems like?",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      24.08,
+      24.54,
+      "Do"
+     ],
+     [
+      24.54,
+      24.6,
+      " you"
+     ],
+     [
+      24.6,
+      24.7,
+      " know"
+     ],
+     [
+      24.7,
+      24.8,
+      " what"
+     ],
+     [
+      24.8,
+      24.96,
+      " that"
+     ],
+     [
+      24.96,
+      25.22,
+      " seems"
+     ],
+     [
+      25.22,
+      25.5,
+      " like?"
+     ]
+    ]
+   },
+   {
+    "start": 25.68,
+    "end": 27.2,
+    "text": "It seems a little racist",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      25.68,
+      25.96,
+      "It"
+     ],
+     [
+      25.96,
+      26.2,
+      " seems"
+     ],
+     [
+      26.2,
+      26.46,
+      " a"
+     ],
+     [
+      26.46,
+      26.46,
+      " little"
+     ],
+     [
+      26.46,
+      27.2,
+      " racist"
+     ]
+    ]
+   },
+   {
+    "start": 27.74,
+    "end": 29.34,
+    "text": "Yup, you're cancelled",
+    "no_speech": 0.0,
+    "logprob": -0.3,
+    "words": [
+     [
+      27.74,
+      28.22,
+      "Y"
+     ],
+     [
+      28.22,
+      28.32,
+      "up,"
+     ],
+     [
+      28.66,
+      28.76,
+      " you"
+     ],
+     [
+      28.76,
+      28.84,
+      "'re"
+     ],
+     [
+      28.84,
+      29.34,
+      " cancelled"
+     ]
+    ]
+   },
+   {
+    "start": 29.34,
+    "end": 32.48,
+    "text": "Modane's now removing you from the game, little man",
+    "no_speech": 0.0,
+    "logprob": -0.63,
+    "words": [
+     [
+      29.34,
+      29.98,
+      "M"
+     ],
+     [
+      29.98,
+      30.12,
+      "od"
+     ],
+     [
+      30.12,
+      30.3,
+      "ane"
+     ],
+     [
+      30.3,
+      30.36,
+      "'s"
+     ],
+     [
+      30.36,
+      30.52,
+      " now"
+     ],
+     [
+      30.52,
+      31.06,
+      " removing"
+     ],
+     [
+      31.06,
+      31.3,
+      " you"
+     ],
+     [
+      31.3,
+      31.52,
+      " from"
+     ],
+     [
+      31.52,
+      31.66,
+      " the"
+     ],
+     [
+      31.66,
+      31.94,
+      " game,"
+     ],
+     [
+      31.94,
+      32.16,
+      " little"
+     ],
+     [
+      32.16,
+      32.48,
+      " man"
+     ]
+    ]
+   },
+   {
+    "start": 32.48,
+    "end": 33.76,
+    "text": "See ya, champ!",
+    "no_speech": 0.0,
+    "logprob": -0.63,
+    "words": [
+     [
+      32.48,
+      33.2,
+      "See"
+     ],
+     [
+      33.2,
+      33.46,
+      " ya,"
+     ],
+     [
+      33.5,
+      33.76,
+      " champ!"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 3.0,
+    "text": "Kare wa ali-e-e-e-i-ho-ho-ho-de-free-paw-o-taiji-shimasu.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 3.0,
+    "end": 5.0,
+    "text": "Okay, there we go.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 6.0,
+    "end": 8.0,
+    "text": "No, you better back up! I'm prepared!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 9.0,
+    "end": 10.0,
+    "text": "Loser.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 11.0,
+    "end": 12.0,
+    "text": "Yo, yo, yo, yo, yo!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 13.0,
+    "end": 14.0,
+    "text": "Alright, let's finish this up.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 14.0,
+    "end": 17.0,
+    "text": "No, no, no! Not this time! You're getting canceled!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 17.0,
+    "end": 24.0,
+    "text": "Tell me why every mob in Minecraft never gets blown up, but I'm the only one.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 24.0,
+    "end": 28.0,
+    "text": "Do you know what that seems like? It seems a little racist!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 28.0,
+    "end": 29.38,
+    "text": "Yep, you're canceled.",
+    "no_speech": 0.0,
+    "logprob": -0.41
+   },
+   {
+    "start": 29.92,
+    "end": 32.52,
+    "text": "Mojang's now removing you from the game, little man.",
+    "no_speech": 0.0,
+    "logprob": -0.41
+   },
+   {
+    "start": 32.96,
+    "end": 33.82,
+    "text": "See you, champ.",
+    "no_speech": 0.0,
+    "logprob": -0.41
+   }
+  ]
+ }
+}

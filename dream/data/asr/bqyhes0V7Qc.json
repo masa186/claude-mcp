@@ -1,0 +1,1259 @@
+{
+ "id": "bqyhes0V7Qc",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.86,
+    "text": "ガチャガチャでヒットアイテムを使い、生き残り1名4人組",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      0.0,
+      0.16,
+      "ガ"
+     ],
+     [
+      0.16,
+      0.28,
+      "チャ"
+     ],
+     [
+      0.28,
+      0.42,
+      "ガ"
+     ],
+     [
+      0.42,
+      0.5,
+      "チャ"
+     ],
+     [
+      0.5,
+      0.62,
+      "で"
+     ],
+     [
+      0.62,
+      0.8,
+      "ヒ"
+     ],
+     [
+      0.8,
+      0.9,
+      "ット"
+     ],
+     [
+      0.9,
+      1.02,
+      "ア"
+     ],
+     [
+      1.02,
+      1.1,
+      "イ"
+     ],
+     [
+      1.1,
+      1.1,
+      "テ"
+     ],
+     [
+      1.1,
+      1.2,
+      "ム"
+     ],
+     [
+      1.2,
+      1.32,
+      "を"
+     ],
+     [
+      1.32,
+      1.48,
+      "使"
+     ],
+     [
+      1.48,
+      1.66,
+      "い、"
+     ],
+     [
+      1.72,
+      1.8,
+      "生"
+     ],
+     [
+      1.8,
+      1.8,
+      "き"
+     ],
+     [
+      1.8,
+      1.94,
+      "残"
+     ],
+     [
+      1.94,
+      2.06,
+      "り"
+     ],
+     [
+      2.06,
+      2.26,
+      "1"
+     ],
+     [
+      2.26,
+      2.36,
+      "名"
+     ],
+     [
+      2.36,
+      2.6,
+      "4"
+     ],
+     [
+      2.6,
+      2.7,
+      "人"
+     ],
+     [
+      2.7,
+      2.86,
+      "組"
+     ]
+    ]
+   },
+   {
+    "start": 30.0,
+    "end": 31.18,
+    "text": "はい、みなさん、蟹に入ったら泣きさくなった",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      30.0,
+      30.24,
+      "はい、"
+     ],
+     [
+      30.56,
+      30.56,
+      "み"
+     ],
+     [
+      30.56,
+      30.58,
+      "な"
+     ],
+     [
+      30.58,
+      30.58,
+      "さん、"
+     ],
+     [
+      30.66,
+      30.76,
+      "蟹"
+     ],
+     [
+      30.76,
+      30.76,
+      "に"
+     ],
+     [
+      30.76,
+      30.78,
+      "入"
+     ],
+     [
+      30.78,
+      30.78,
+      "った"
+     ],
+     [
+      30.78,
+      30.78,
+      "ら"
+     ],
+     [
+      30.78,
+      30.78,
+      "泣"
+     ],
+     [
+      30.78,
+      30.78,
+      "き"
+     ],
+     [
+      30.78,
+      30.78,
+      "さ"
+     ],
+     [
+      30.78,
+      30.78,
+      "く"
+     ],
+     [
+      30.78,
+      31.06,
+      "な"
+     ],
+     [
+      31.06,
+      31.18,
+      "った"
+     ]
+    ]
+   },
+   {
+    "start": 31.18,
+    "end": 32.86,
+    "text": "M。何するかってたまる?",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      31.18,
+      31.18,
+      "M。"
+     ],
+     [
+      32.5,
+      32.86,
+      "何"
+     ],
+     [
+      32.86,
+      32.86,
+      "する"
+     ],
+     [
+      32.86,
+      32.86,
+      "か"
+     ],
+     [
+      32.86,
+      32.86,
+      "って"
+     ],
+     [
+      32.86,
+      32.86,
+      "た"
+     ],
+     [
+      32.86,
+      32.86,
+      "ま"
+     ],
+     [
+      32.86,
+      32.86,
+      "る?"
+     ]
+    ]
+   },
+   {
+    "start": 32.86,
+    "end": 34.08,
+    "text": "W.O.A.T.T.,",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      32.86,
+      32.86,
+      "W."
+     ],
+     [
+      32.96,
+      32.96,
+      "O."
+     ],
+     [
+      32.96,
+      32.96,
+      "A."
+     ],
+     [
+      32.96,
+      33.14,
+      "T."
+     ],
+     [
+      33.66,
+      34.02,
+      "T"
+     ],
+     [
+      34.02,
+      34.08,
+      ".,"
+     ]
+    ]
+   },
+   {
+    "start": 34.08,
+    "end": 35.96,
+    "text": "H.O.A.T.T.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      34.08,
+      34.22,
+      "H."
+     ],
+     [
+      34.22,
+      34.22,
+      "O."
+     ],
+     [
+      34.84,
+      35.2,
+      "A."
+     ],
+     [
+      35.38,
+      35.62,
+      "T."
+     ],
+     [
+      35.88,
+      35.96,
+      "T."
+     ]
+    ]
+   },
+   {
+    "start": 37.08,
+    "end": 38.54,
+    "text": "W.A.T.T.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      37.08,
+      37.44,
+      "W."
+     ],
+     [
+      37.84,
+      37.84,
+      "A."
+     ],
+     [
+      37.88,
+      37.88,
+      "T."
+     ],
+     [
+      38.54,
+      38.54,
+      "T."
+     ]
+    ]
+   },
+   {
+    "start": 38.54,
+    "end": 38.86,
+    "text": "I'm scared.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      38.54,
+      38.54,
+      "I"
+     ],
+     [
+      38.54,
+      38.56,
+      "'m"
+     ],
+     [
+      38.56,
+      38.86,
+      " scared."
+     ]
+    ]
+   },
+   {
+    "start": 40.1,
+    "end": 40.66,
+    "text": "I'm scared.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      40.1,
+      40.28,
+      "I"
+     ],
+     [
+      40.28,
+      40.4,
+      "'m"
+     ],
+     [
+      40.4,
+      40.66,
+      " scared."
+     ]
+    ]
+   },
+   {
+    "start": 40.86,
+    "end": 41.8,
+    "text": "I'm on One and a half hearts.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      40.86,
+      40.86,
+      "I"
+     ],
+     [
+      40.86,
+      40.86,
+      "'m"
+     ],
+     [
+      40.86,
+      41.0,
+      " on"
+     ],
+     [
+      41.0,
+      41.22,
+      " One"
+     ],
+     [
+      41.22,
+      41.34,
+      " and"
+     ],
+     [
+      41.34,
+      41.38,
+      " a"
+     ],
+     [
+      41.38,
+      41.5,
+      " half"
+     ],
+     [
+      41.5,
+      41.8,
+      " hearts."
+     ]
+    ]
+   },
+   {
+    "start": 42.1,
+    "end": 42.8,
+    "text": "He's invisible.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      42.1,
+      42.46,
+      "He"
+     ],
+     [
+      42.46,
+      42.64,
+      "'s"
+     ],
+     [
+      42.64,
+      42.8,
+      " invisible."
+     ]
+    ]
+   },
+   {
+    "start": 42.96,
+    "end": 43.54,
+    "text": "Oh, you guys are invisible.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      42.96,
+      42.96,
+      "Oh,"
+     ],
+     [
+      42.96,
+      43.02,
+      " you"
+     ],
+     [
+      43.02,
+      43.12,
+      " guys"
+     ],
+     [
+      43.12,
+      43.24,
+      " are"
+     ],
+     [
+      43.24,
+      43.54,
+      " invisible."
+     ]
+    ]
+   },
+   {
+    "start": 43.88,
+    "end": 44.36,
+    "text": "凄い、GO!",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      43.88,
+      44.08,
+      "凄"
+     ],
+     [
+      44.08,
+      44.1,
+      "い、"
+     ],
+     [
+      44.28,
+      44.36,
+      "GO!"
+     ]
+    ]
+   },
+   {
+    "start": 44.72,
+    "end": 45.08,
+    "text": "W.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      44.72,
+      45.08,
+      "W."
+     ]
+    ]
+   },
+   {
+    "start": 45.32,
+    "end": 45.7,
+    "text": "What did I get?",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      45.32,
+      45.38,
+      "What"
+     ],
+     [
+      45.38,
+      45.48,
+      " did"
+     ],
+     [
+      45.48,
+      45.52,
+      " I"
+     ],
+     [
+      45.52,
+      45.7,
+      " get?"
+     ]
+    ]
+   },
+   {
+    "start": 45.86,
+    "end": 46.98,
+    "text": "Netherite, please.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      45.86,
+      46.02,
+      "N"
+     ],
+     [
+      46.02,
+      46.18,
+      "ether"
+     ],
+     [
+      46.18,
+      46.36,
+      "ite,"
+     ],
+     [
+      46.82,
+      46.98,
+      " please."
+     ]
+    ]
+   },
+   {
+    "start": 48.48,
+    "end": 49.34,
+    "text": "I got a shield.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      48.48,
+      48.84,
+      "I"
+     ],
+     [
+      48.84,
+      49.06,
+      " got"
+     ],
+     [
+      49.06,
+      49.16,
+      " a"
+     ],
+     [
+      49.16,
+      49.34,
+      " shield."
+     ]
+    ]
+   },
+   {
+    "start": 49.56,
+    "end": 51.3,
+    "text": "I'm safe, I'm safe, I'm safe.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      49.56,
+      49.62,
+      "I"
+     ],
+     [
+      49.62,
+      49.62,
+      "'m"
+     ],
+     [
+      49.62,
+      49.9,
+      " safe,"
+     ],
+     [
+      49.98,
+      50.06,
+      " I"
+     ],
+     [
+      50.06,
+      50.08,
+      "'m"
+     ],
+     [
+      50.08,
+      50.32,
+      " safe,"
+     ],
+     [
+      50.36,
+      50.98,
+      " I"
+     ],
+     [
+      50.98,
+      51.04,
+      "'m"
+     ],
+     [
+      51.04,
+      51.3,
+      " safe."
+     ]
+    ]
+   },
+   {
+    "start": 51.52,
+    "end": 52.96,
+    "text": "Is there anything that can heal us in these?",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      51.52,
+      51.66,
+      "Is"
+     ],
+     [
+      51.66,
+      51.78,
+      " there"
+     ],
+     [
+      51.78,
+      52.0,
+      " anything"
+     ],
+     [
+      52.0,
+      52.14,
+      " that"
+     ],
+     [
+      52.14,
+      52.26,
+      " can"
+     ],
+     [
+      52.26,
+      52.5,
+      " heal"
+     ],
+     [
+      52.5,
+      52.68,
+      " us"
+     ],
+     [
+      52.68,
+      52.76,
+      " in"
+     ],
+     [
+      52.76,
+      52.96,
+      " these?"
+     ]
+    ]
+   },
+   {
+    "start": 53.12,
+    "end": 54.66,
+    "text": "I'm on One and a half hearts.",
+    "no_speech": 0.0,
+    "logprob": -1.46,
+    "words": [
+     [
+      53.12,
+      53.26,
+      "I"
+     ],
+     [
+      53.26,
+      53.8,
+      "'m"
+     ],
+     [
+      53.8,
+      53.94,
+      " on"
+     ],
+     [
+      53.94,
+      54.14,
+      " One"
+     ],
+     [
+      54.14,
+      54.28,
+      " and"
+     ],
+     [
+      54.28,
+      54.34,
+      " a"
+     ],
+     [
+      54.34,
+      54.48,
+      " half"
+     ],
+     [
+      54.48,
+      54.66,
+      " hearts."
+     ]
+    ]
+   },
+   {
+    "start": 54.66,
+    "end": 55.36,
+    "text": "笑",
+    "no_speech": 0.0,
+    "logprob": -0.72,
+    "words": [
+     [
+      54.66,
+      55.36,
+      "笑"
+     ]
+    ]
+   },
+   {
+    "start": 55.36,
+    "end": 55.98,
+    "text": "笑",
+    "no_speech": 0.0,
+    "logprob": -0.72,
+    "words": [
+     [
+      55.36,
+      55.98,
+      "笑"
+     ]
+    ]
+   },
+   {
+    "start": 55.98,
+    "end": 57.2,
+    "text": "笑",
+    "no_speech": 0.0,
+    "logprob": -0.72,
+    "words": [
+     [
+      55.98,
+      57.2,
+      "笑"
+     ]
+    ]
+   },
+   {
+    "start": 57.2,
+    "end": 58.02,
+    "text": "笑",
+    "no_speech": 0.0,
+    "logprob": -0.72,
+    "words": [
+     [
+      57.2,
+      58.02,
+      "笑"
+     ]
+    ]
+   },
+   {
+    "start": 58.02,
+    "end": 58.1,
+    "text": "笑",
+    "no_speech": 0.0,
+    "logprob": -0.72,
+    "words": [
+     [
+      58.02,
+      58.1,
+      "笑"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 3.1,
+    "text": "Gacha gacha de hitter item otsuka ikinok no no no no no no",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 3.1,
+    "end": 3.8,
+    "text": "Nooo!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 3.8,
+    "end": 4.8,
+    "text": "Die! Die! Die!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 4.8,
+    "end": 5.3,
+    "text": "Oh!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 5.3,
+    "end": 6.3,
+    "text": "Dringo!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 6.3,
+    "end": 7.3,
+    "text": "Oh! I have a sword!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 7.3,
+    "end": 8.0,
+    "text": "What did you get?",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 8.0,
+    "end": 8.5,
+    "text": "Oh!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 8.5,
+    "end": 9.0,
+    "text": "Hit George!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 9.0,
+    "end": 10.7,
+    "text": "Oh! He can't reach me! I'm stuck in the corner!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 10.7,
+    "end": 11.7,
+    "text": "I'm safe! I'm safe!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 11.7,
+    "end": 12.7,
+    "text": "I'm going! I'm going!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 12.7,
+    "end": 13.7,
+    "text": "Oh!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 13.7,
+    "end": 14.2,
+    "text": "Oh!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 14.2,
+    "end": 15.2,
+    "text": "No! No! No! No!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 15.2,
+    "end": 16.2,
+    "text": "Oh!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 16.2,
+    "end": 16.7,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 16.7,
+    "end": 17.2,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 17.2,
+    "end": 18.2,
+    "text": "How'd you miss?",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 18.2,
+    "end": 19.2,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 19.2,
+    "end": 19.7,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 19.7,
+    "end": 20.7,
+    "text": "Oh! He got one too!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 20.7,
+    "end": 21.2,
+    "text": "No! Don't kill me!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 21.2,
+    "end": 21.7,
+    "text": "Don't kill me!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 21.7,
+    "end": 22.8,
+    "text": "Don't! Don't! Don't! Don't!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 22.8,
+    "end": 23.8,
+    "text": "Bang!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 23.8,
+    "end": 24.8,
+    "text": "Oh my god!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 26.8,
+    "end": 27.8,
+    "text": "Wait! What?",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 27.8,
+    "end": 29.0,
+    "text": "Oh my god!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 29.0,
+    "end": 29.8,
+    "text": "It's still going!",
+    "no_speech": 0.0,
+    "logprob": -0.5
+   },
+   {
+    "start": 29.8,
+    "end": 31.14,
+    "text": "Wait, it almost killed me.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 31.78,
+    "end": 32.38,
+    "text": "Yeah, yeah, yeah.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 32.64,
+    "end": 33.36,
+    "text": "Is that enderpearl?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 33.42,
+    "end": 33.88,
+    "text": "What did he get?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 34.12,
+    "end": 34.54,
+    "text": "Oh, an enderpearl?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 37.16,
+    "end": 37.88,
+    "text": "Wait, what?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 38.88,
+    "end": 39.86,
+    "text": "How did you kill him?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 40.16,
+    "end": 40.68,
+    "text": "I'm scared.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 40.8,
+    "end": 41.82,
+    "text": "I'm on one and a half hearts.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 42.54,
+    "end": 43.54,
+    "text": "Oh, you guys are invisible.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 43.92,
+    "end": 44.6,
+    "text": "All right, go, go.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 44.82,
+    "end": 45.18,
+    "text": "W.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 45.3,
+    "end": 45.7,
+    "text": "What did he get?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 45.78,
+    "end": 46.36,
+    "text": "Oh, netherite.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 46.74,
+    "end": 47.06,
+    "text": "Please.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 48.58,
+    "end": 48.86,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 48.86,
+    "end": 49.4,
+    "text": "I got a shield.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 49.52,
+    "end": 50.36,
+    "text": "I'm safe, I'm safe.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 50.72,
+    "end": 51.36,
+    "text": "I'm safe.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 51.52,
+    "end": 52.98,
+    "text": "Is there anything that can heal us in these?",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 53.08,
+    "end": 54.64,
+    "text": "Like, I'm on one and a half hearts.",
+    "no_speech": 0.0,
+    "logprob": -0.34
+   },
+   {
+    "start": 59.8,
+    "end": 60.8,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 60.8,
+    "end": 61.8,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 61.8,
+    "end": 62.8,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   }
+  ]
+ }
+}

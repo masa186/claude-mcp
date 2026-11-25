@@ -1,0 +1,838 @@
+{
+ "ZwI5fV_we0g": {
+  "top_title": "最強の狩人",
+  "top_title_color": [
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "アイアンゴーレムを",
+    "color": "白"
+   },
+   {
+    "t": 1.0,
+    "text": "倒すはずが",
+    "color": "白"
+   },
+   {
+    "t": 2.0,
+    "text": "数秒後に",
+    "color": "白"
+   },
+   {
+    "t": 2.7,
+    "text": "とんでもないことに",
+    "color": "白"
+   },
+   {
+    "t": 3.7,
+    "text": "なります",
+    "color": "白"
+   },
+   {
+    "t": 4.0,
+    "text": "＊戦闘開始＊",
+    "color": "オレンジ"
+   },
+   {
+    "t": 5.7,
+    "text": "違うっ！！！",
+    "color": "白"
+   },
+   {
+    "t": 6.2,
+    "text": "そうじゃない！！",
+    "color": "白"
+   },
+   {
+    "t": 8.7,
+    "text": "＊極限集中モード＊",
+    "color": "黄色"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラのプレイ画面と、男性のストリーマーのウェブカメラ映像",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "PHLgcKNn1KQ": {
+  "top_title": "世界初ベットに座る男",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.3,
+    "text": "人類初の",
+    "color": "yellow"
+   },
+   {
+    "t": 1.0,
+    "text": "快挙",
+    "color": "yellow"
+   },
+   {
+    "t": 1.5,
+    "text": "それは",
+    "color": "white"
+   },
+   {
+    "t": 2.2,
+    "text": "マイクラで",
+    "color": "yellow"
+   },
+   {
+    "t": 2.7,
+    "text": "ベットに座る",
+    "color": "yellow"
+   },
+   {
+    "t": 3.0,
+    "text": "ことでした",
+    "color": "white"
+   },
+   {
+    "t": 4.4,
+    "text": "*クッションの追加*",
+    "color": "red"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラでベッドの上にクッション（トロッコとアメジストクラスターなどの合成）を置き、周りで見守る海外ストリーマーたちのワイプ映像",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "bAMpGeRQboI": {
+  "top_title": "天才でもできない事",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "あのドリーム",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "さえも",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "できなかった",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "ことに",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "挑戦する",
+    "color": "white"
+   },
+   {
+    "t": 2.7,
+    "text": "ドクタードーナツ",
+    "color": "white"
+   },
+   {
+    "t": 3.7,
+    "text": "*お前ならできる*",
+    "color": "red"
+   },
+   {
+    "t": 7.0,
+    "text": "おーー！！！",
+    "color": "white"
+   },
+   {
+    "t": 9.5,
+    "text": "うぉ！！",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトのゲーム画面とゲームをプレイしている男性のWebカメラ映像",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "uFs6LRWnhsk": {
+  "top_title": "世界最速RTAで輝く男",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "とんでもないRTA記録の保持者です",
+    "color": "white"
+   },
+   {
+    "t": 3.4,
+    "text": "*神と呼んでくれ*",
+    "color": "red"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトのワールド生成画面（ローディング画面）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "7skJuPLdiSs": {
+  "top_title": "まだは諦めるのは早いぞbro",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.2,
+    "text": "この勇者は",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "絶望から",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "立ち向かおうと",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "します",
+    "color": "white"
+   },
+   {
+    "t": 3.3,
+    "text": "*1つの打開策*",
+    "color": "pink"
+   },
+   {
+    "t": 4.0,
+    "text": "*あ*",
+    "color": "pink"
+   },
+   {
+    "t": 5.7,
+    "text": "*エンパ投球*",
+    "color": "pink"
+   },
+   {
+    "t": 8.7,
+    "text": "(………………)",
+    "color": "red"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外マイクライフリークス映像と配信者のウェブカメラ",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "w-X0bNnRFhg": {
+  "top_title": "絶対フレネミーなベリティ",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.8,
+    "text": "AIの反逆",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "それは",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "天才的な",
+    "color": "white"
+   },
+   {
+    "t": 2.7,
+    "text": "煽りから",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "始まりました",
+    "color": "white"
+   },
+   {
+    "t": 4.1,
+    "text": "*お前とは縁切るわ*",
+    "color": "yellow"
+   },
+   {
+    "t": 4.7,
+    "text": "これって",
+    "color": "white"
+   },
+   {
+    "t": 5.0,
+    "text": "どんな家",
+    "color": "white"
+   },
+   {
+    "t": 5.4,
+    "text": "なん？",
+    "color": "white"
+   },
+   {
+    "t": 6.3,
+    "text": "オホッホホッ",
+    "color": "white"
+   },
+   {
+    "t": 7.1,
+    "text": "こっちにやたら",
+    "color": "white"
+   },
+   {
+    "t": 7.7,
+    "text": "デカイ窓",
+    "color": "white"
+   },
+   {
+    "t": 8.4,
+    "text": "あるけど…",
+    "color": "white"
+   },
+   {
+    "t": 9.2,
+    "text": "なにこれ笑？",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "プレイヤーの顔の映像と、マインクラフトのインベントリ画面",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "jxiSC60SOn4": {
+  "top_title": "Bedwarsガチ勢の／変態キャラコン",
+  "top_title_color": [
+   "yellow",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "bedwars勢が",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "サバイバルを",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "こうなります",
+    "color": "white"
+   },
+   {
+    "t": 2.7,
+    "text": "*最強兵器*",
+    "color": "yellow"
+   },
+   {
+    "t": 3.0,
+    "text": "オーラ全開じゃん",
+    "color": "white"
+   },
+   {
+    "t": 5.5,
+    "text": "*職業病*",
+    "color": "yellow"
+   },
+   {
+    "t": 8.5,
+    "text": "bedwars勢が",
+    "color": "white"
+   },
+   {
+    "t": 9.2,
+    "text": "サバイバル",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトのゲームプレイ画面（地下、木材やレールが散乱した空間）と、右上にはプレイする人物のカメラ映像が映っている。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "rHQSUvLFSJw": {
+  "top_title": "ドリームを超える天才？",
+  "top_title_color": [
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "神業！？",
+    "color": "ピンク"
+   },
+   {
+    "t": 1.0,
+    "text": "それとも",
+    "color": "ピンク"
+   },
+   {
+    "t": 1.5,
+    "text": "ヤラセ！？",
+    "color": "ピンク"
+   },
+   {
+    "t": 2.0,
+    "text": "それは本当ですか？",
+    "color": "赤"
+   },
+   {
+    "t": 2.5,
+    "text": "ホッパーにTNT設置",
+    "color": "赤"
+   },
+   {
+    "t": 4.0,
+    "text": "ウォーター",
+    "color": "赤"
+   },
+   {
+    "t": 5.0,
+    "text": "回路設置",
+    "color": "赤"
+   }
+  ],
+  "narration_voice": "男性の声",
+  "first_frame": "マイクラのプレイ画面と、リアクションする配信者の映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "CbFLVLJZPWI": {
+  "top_title": "これが現代アートだよ／al Illusion",
+  "top_title_color": [
+   "white",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.2,
+    "text": "どっちが",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "でかい？\nイタッッ",
+    "color": "white"
+   },
+   {
+    "t": 1.1,
+    "text": "あなたの目が",
+    "color": "white"
+   },
+   {
+    "t": 1.8,
+    "text": "信じられなくなる",
+    "color": "white"
+   },
+   {
+    "t": 2.7,
+    "text": "動画",
+    "color": "white"
+   },
+   {
+    "t": 3.2,
+    "text": "* マイクラは無限大 *",
+    "color": "pink"
+   },
+   {
+    "t": 6.4,
+    "text": "(いてぇよッ！！)",
+    "color": "white"
+   },
+   {
+    "t": 7.3,
+    "text": "あのスケルトンやっちゃえよ",
+    "color": "white"
+   },
+   {
+    "t": 8.5,
+    "text": "俺は雑貨トラックが見たいんだよ",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラの画面を見ている人の実況画面、及びチェス盤のようなブロックの上にいるマイクラキャラクター",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "ta7DvUFl6-8": {
+  "top_title": "マイクラで作られた／ガチで動くPS4",
+  "top_title_color": [
+   "yellow",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.4,
+    "text": "マイクラ内で",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "マイクラができる",
+    "color": "white"
+   },
+   {
+    "t": 1.5,
+    "text": "時代が来ます",
+    "color": "white"
+   },
+   {
+    "t": 2.5,
+    "text": "リアルorフェイク？",
+    "color": "white"
+   },
+   {
+    "t": 4.5,
+    "text": "言葉を失う",
+    "color": "red"
+   },
+   {
+    "t": 7.2,
+    "text": "いやこれ",
+    "color": "white"
+   },
+   {
+    "t": 7.5,
+    "text": "MODでしょ",
+    "color": "white"
+   },
+   {
+    "t": 8.0,
+    "text": "絶対MOD",
+    "color": "white"
+   },
+   {
+    "t": 9.0,
+    "text": "でしょこれbro",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラで作られたPS4の画面と、その右上に男性の顔のワイプ映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "-EkebvWOIpY": {
+  "top_title": "ネザライト無限増殖バグ💀",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "フルネザライト",
+    "color": "white"
+   },
+   {
+    "t": "0.7",
+    "text": "装備が",
+    "color": "white"
+   },
+   {
+    "t": "1.1",
+    "text": "数秒で完成する",
+    "color": "white"
+   },
+   {
+    "t": "2.0",
+    "text": "このぶっ壊れ仕様",
+    "color": "white"
+   },
+   {
+    "t": "3.7",
+    "text": "嘘だよね？",
+    "color": "white"
+   },
+   {
+    "t": "4.7",
+    "text": "*バグ利用？*",
+    "color": "white"
+   },
+   {
+    "t": "5.9",
+    "text": "レッドストーン×10\nベット×1\nスライムピストン×1\nエンドロット×1\nリピーター×1\nレバー×1",
+    "color": "red"
+   },
+   {
+    "t": "8.7",
+    "text": "*実行*",
+    "color": "red"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のマイクラ配信者の映像とネザライトのブロック、フルネザライト、White Bedなどの文字が写っている",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "pjPo6Lx3GXc": {
+  "top_title": "今すぐ使える／建築のデザイン",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "今すぐ使える",
+    "color": "white"
+   },
+   {
+    "t": 0.8,
+    "text": "神建築ハック",
+    "color": "white"
+   },
+   {
+    "t": 1.8,
+    "text": "オークの原木の",
+    "color": "white"
+   },
+   {
+    "t": 2.5,
+    "text": "水に触れる部分を",
+    "color": "white"
+   },
+   {
+    "t": 3.7,
+    "text": "マングローブの根に",
+    "color": "white"
+   },
+   {
+    "t": 4.6,
+    "text": "置き換えると",
+    "color": "white"
+   },
+   {
+    "t": 5.4,
+    "text": "水に濡れて色が",
+    "color": "white"
+   },
+   {
+    "t": 5.9,
+    "text": "濃くなっているように",
+    "color": "white"
+   },
+   {
+    "t": 6.8,
+    "text": "見せることができます",
+    "color": "white"
+   },
+   {
+    "t": 7.7,
+    "text": "下に水を置き",
+    "color": "white"
+   },
+   {
+    "t": 8.5,
+    "text": "その上に",
+    "color": "white"
+   },
+   {
+    "t": 9.7,
+    "text": "サンゴを置くと",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外の配信者の映像とマインクラフトのゲーム画面（水面近くの木の柱）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "-ikfHxEzAsg": {
+  "top_title": "誰も知らない／修復方法",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "誰も知らない",
+    "color": "white"
+   },
+   {
+    "t": 0.9,
+    "text": "アイテム修復方法",
+    "color": "white"
+   },
+   {
+    "t": 1.9,
+    "text": "知ってたら",
+    "color": "white"
+   },
+   {
+    "t": 2.2,
+    "text": "天才",
+    "color": "white"
+   },
+   {
+    "t": 3.2,
+    "text": "当然だけど",
+    "color": "white"
+   },
+   {
+    "t": 3.9,
+    "text": "石のツールは",
+    "color": "white"
+   },
+   {
+    "t": 5.0,
+    "text": "丸石で直せるよね",
+    "color": "white"
+   },
+   {
+    "t": 6.7,
+    "text": "それは知らんかった",
+    "color": "white"
+   },
+   {
+    "t": 7.9,
+    "text": "え？まじ？",
+    "color": "white"
+   },
+   {
+    "t": 8.7,
+    "text": "鉄も",
+    "color": "white"
+   },
+   {
+    "t": 9.0,
+    "text": "金も",
+    "color": "white"
+   },
+   {
+    "t": 9.2,
+    "text": "ダイヤもできるよ",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のマイクラ実況動画の画面と、金床でシールドを修復しているインベントリ画面",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "mk-PaHyO4N4": {
+  "top_title": "リアルエンチャント",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "現実に",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "エンチャントが",
+    "color": "white"
+   },
+   {
+    "t": 1.2,
+    "text": "追加された？",
+    "color": "white"
+   },
+   {
+    "t": 2.5,
+    "text": "デデデ大王のハンマー？",
+    "color": "white"
+   },
+   {
+    "t": 3.7,
+    "text": "粉砕",
+    "color": "black"
+   },
+   {
+    "t": 4.7,
+    "text": "*2つの斧*",
+    "color": "white"
+   },
+   {
+    "t": 6.7,
+    "text": "いや待って",
+    "color": "white"
+   },
+   {
+    "t": 7.0,
+    "text": "何やってんの！？",
+    "color": "white"
+   },
+   {
+    "t": 8.0,
+    "text": "*めちゃ効率*",
+    "color": "white"
+   },
+   {
+    "t": 8.7,
+    "text": "マジでケガするから",
+    "color": "white"
+   },
+   {
+    "t": 9.5,
+    "text": "気をつけて！",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "屋外で木の幹のような大きな塊をハンマーで叩こうとしている男性の映像、および右上に小さく映る男性のリアクション映像。",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "vBgHDDOHh5k": {
+  "top_title": "知られざる海外勢の／神業3連発",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドリーム",
+    "color": "green"
+   },
+   {
+    "t": 1.0,
+    "text": "だけじゃない",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "海外勢の神業",
+    "color": "white"
+   },
+   {
+    "t": 2.5,
+    "text": "3連発",
+    "color": "white"
+   },
+   {
+    "t": 3.2,
+    "text": "空中の魔術師",
+    "color": "white"
+   },
+   {
+    "t": 3.6,
+    "text": "NotVendex",
+    "color": "white"
+   },
+   {
+    "t": 6.2,
+    "text": "ハシゴの達人",
+    "color": "white"
+   },
+   {
+    "t": 6.6,
+    "text": "Ogmoe",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "画面上部にヘッドフォンをした男性の動画、下部にマインクラフトのプレイ映像",
+  "_model": "gemini-3.5-flash-lite"
+ }
+}

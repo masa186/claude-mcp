@@ -1,0 +1,37 @@
+{
+ "id": "Ag_RdDjnYDA",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 2.0,
+   "text": "彼は羊とやりました",
+   "no_speech": 0.0
+  },
+  {
+   "start": 2.0,
+   "end": 3.0,
+   "text": "ボクシングイエーイ!",
+   "no_speech": 0.0
+  },
+  {
+   "start": 3.0,
+   "end": 4.0,
+   "text": "おー、待って、知ってる!",
+   "no_speech": 0.0
+  },
+  {
+   "start": 4.0,
+   "end": 5.0,
+   "text": "えぇ、レッメフォローで",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 19.56,
+   "end": 49.54,
+   "text": "ご視聴ありがとうございました",
+   "no_speech": 0.0
+  }
+ ]
+}

@@ -1,0 +1,2860 @@
+{
+ "ichRl_cub_U": {
+  "top_title": "最長ジャンプ",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "マインクラフト",
+    "color": "white"
+   },
+   {
+    "t": 0.2,
+    "text": "史上最長の",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "ジャンプ記録を",
+    "color": "white"
+   },
+   {
+    "t": 1.8,
+    "text": "更新する",
+    "color": "white"
+   },
+   {
+    "t": 2.6,
+    "text": "ドクタードーナツ",
+    "color": "white"
+   },
+   {
+    "t": 3.2,
+    "text": "*20マスジャンプ挑戦*",
+    "color": "yellow"
+   },
+   {
+    "t": 4.4,
+    "text": "*記録11マス*",
+    "color": "red"
+   },
+   {
+    "t": 5.4,
+    "text": "よおおおお",
+    "color": "white"
+   },
+   {
+    "t": 6.1,
+    "text": "お前さあ",
+    "color": "white"
+   },
+   {
+    "t": 7.0,
+    "text": "お前タイミング悪すぎだろ",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトのゲーム画面（ボートと氷の通路）と、上部にプレイヤーのワイプ動画、最上部に「最長ジャンプ」の文字",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "jibUjrFjNgg": {
+  "top_title": "ベリ虐という概念",
+  "top_title_color": [
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "ベリティを",
+    "color": "白"
+   },
+   {
+    "t": "0.5",
+    "text": "58秒間",
+    "color": "白"
+   },
+   {
+    "t": "1.0",
+    "text": "ブチギレさせる",
+    "color": "白"
+   },
+   {
+    "t": "2.0",
+    "text": "という男",
+    "color": "白"
+   },
+   {
+    "t": "2.2",
+    "text": "LookOutこと",
+    "color": "白"
+   },
+   {
+    "t": "2.4",
+    "text": "OH MY PCニキ",
+    "color": "白"
+   },
+   {
+    "t": "2.7",
+    "text": "黙れ!!!!",
+    "color": "白"
+   },
+   {
+    "t": "3.1",
+    "text": "まじお前",
+    "color": "白"
+   },
+   {
+    "t": "3.7",
+    "text": "黙れ!!!!!!",
+    "color": "白"
+   },
+   {
+    "t": "4.1",
+    "text": "こっち来い!!!",
+    "color": "白"
+   },
+   {
+    "t": "4.7",
+    "text": "ボクになにするつもり?",
+    "color": "白"
+   },
+   {
+    "t": "5.7",
+    "text": "れっつごー^ ^",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性の声（合成音声）",
+  "first_frame": "夜の雪原でマイクラをプレイする画面、左上にWebカメラ映像（男性）、中央に黄色い顔のアイコン",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "G5iZVGHd0QE": {
+  "top_title": "建築したら／テスラが貰える",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "マイクラで",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "建築を",
+    "color": "white"
+   },
+   {
+    "t": 1.25,
+    "text": "リアルで",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "プレゼントする",
+    "color": "white"
+   },
+   {
+    "t": 2.25,
+    "text": "という",
+    "color": "white"
+   },
+   {
+    "t": 2.75,
+    "text": "ミスタービースト",
+    "color": "white"
+   },
+   {
+    "t": 3.5,
+    "text": "目隠し外して",
+    "color": "white"
+   },
+   {
+    "t": 4.75,
+    "text": "マイクラで1番上手く",
+    "color": "white"
+   },
+   {
+    "t": 6.5,
+    "text": "再現した人に",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラの車と男性の動画と、左上に画面を見ている男性のワイプ映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "SBRBNDbooEA": {
+  "top_title": "鉱石透視裏技",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "チートなしで",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "鉱石や",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "洞窟を",
+    "color": "white"
+   },
+   {
+    "t": 1.2,
+    "text": "透視する",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "裏技の",
+    "color": "white"
+   },
+   {
+    "t": 2.5,
+    "text": "真偽を試す",
+    "color": "white"
+   },
+   {
+    "t": 3.2,
+    "text": "ドクタードーナツ",
+    "color": "white"
+   },
+   {
+    "t": 4.2,
+    "text": "*ぐ､くる*",
+    "color": "white"
+   },
+   {
+    "t": 6.0,
+    "text": "*X-RAYはまずい*",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "木製の構造物の内部",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "EUUVfOuOU1A": {
+  "top_title": "ドーナツSMP／開発者に追われる",
+  "top_title_color": [
+   "yellow",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "見えない",
+    "color": "white"
+   },
+   {
+    "t": 0.5,
+    "text": "何かに",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "追われてるのを",
+    "color": "white"
+   },
+   {
+    "t": 1.2,
+    "text": "見抜く",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "ドクター・ドーナツ",
+    "color": "cyan"
+   },
+   {
+    "t": 2.5,
+    "text": "*滑空中*",
+    "color": "white"
+   },
+   {
+    "t": 3.7,
+    "text": "Hudsonが",
+    "color": "white"
+   },
+   {
+    "t": 4.0,
+    "text": "俺に1億送ったらしいけど",
+    "color": "white"
+   },
+   {
+    "t": 4.7,
+    "text": "まじで？",
+    "color": "white"
+   },
+   {
+    "t": 6.2,
+    "text": "ありえん",
+    "color": "white"
+   },
+   {
+    "t": 7.0,
+    "text": "W.Hudson",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトのゲーム画面とゲームをプレイしている男性の映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "B_v7udyi4zo": {
+  "top_title": "7年かかった",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "300万個の",
+    "color": "white"
+   },
+   {
+    "t": 0.9,
+    "text": "ガラスとランタンを置いた",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "傑作が完成する瞬間",
+    "color": "white"
+   },
+   {
+    "t": 4.7,
+    "text": "これどうやって置いたん？",
+    "color": "white"
+   },
+   {
+    "t": 6.2,
+    "text": "WorldEditとか使ってるんじゃね？",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラのプレイ画面と、左上にストリーマーのWebカメラ映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "N16RhQNzL6Q": {
+  "top_title": "ベリティに\nクリエは意味ない",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.2,
+    "text": "クリエで",
+    "color": "yellow"
+   },
+   {
+    "t": 0.9,
+    "text": "対抗する男",
+    "color": "yellow"
+   },
+   {
+    "t": 1.7,
+    "text": "待て待て！！",
+    "color": "yellow"
+   },
+   {
+    "t": 2.2,
+    "text": "チートすればいいや",
+    "color": "yellow"
+   },
+   {
+    "t": 3.7,
+    "text": "れつごー^ ^",
+    "color": "yellow"
+   },
+   {
+    "t": 4.3,
+    "text": "ヌッ！",
+    "color": "yellow"
+   },
+   {
+    "t": 5.0,
+    "text": "ンツっ..",
+    "color": "yellow"
+   },
+   {
+    "t": 5.4,
+    "text": "ここから出るぞ！",
+    "color": "yellow"
+   },
+   {
+    "t": 6.1,
+    "text": "出よう",
+    "color": "yellow"
+   },
+   {
+    "t": 6.7,
+    "text": "出るわ",
+    "color": "yellow"
+   },
+   {
+    "t": 7.1,
+    "text": "いくぞ",
+    "color": "yellow"
+   }
+  ],
+  "narration_voice": "あり（男性の合成音声）",
+  "first_frame": "黄色い不気味な顔のクリーチャーが映っているマインクラフトの画面と、その左上にゲームをプレイする男性のワイプ映像が表示されている。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "8bn9CAWGzTs": {
+  "top_title": "ドロッパー／かと思ったら..",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドロッパーに",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "見せかけた",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "トラップで",
+    "color": "white"
+   },
+   {
+    "t": 1.5,
+    "text": "ドクタードーナツを",
+    "color": "white"
+   },
+   {
+    "t": 2.1,
+    "text": "罠にかける",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "NoLimitDash",
+    "color": "white"
+   },
+   {
+    "t": 3.6,
+    "text": "おう",
+    "color": "white"
+   },
+   {
+    "t": 4.1,
+    "text": "ミスったわい",
+    "color": "white"
+   },
+   {
+    "t": 5.1,
+    "text": "もっかいやらせて",
+    "color": "white"
+   },
+   {
+    "t": 7.2,
+    "text": "おけ",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "男性の声",
+  "first_frame": "マインクラフトのゲーム画面（白く雪のようなブロック）と、左上にゲームをプレイしている男性の小さなワイプ映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "6ros2NR2Bzc": {
+  "top_title": "チートだな／震えて眠れや",
+  "top_title_color": [
+   "white",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドクタードーナツが",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "DonutSMPで",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "チーターを",
+    "color": "white"
+   },
+   {
+    "t": 2.1,
+    "text": "発見します",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "こいつ壁に寄ってない..",
+    "color": "white"
+   },
+   {
+    "t": 5.4,
+    "text": "あーこれ",
+    "color": "white"
+   },
+   {
+    "t": 5.7,
+    "text": "100%チートだな",
+    "color": "white"
+   },
+   {
+    "t": 7.2,
+    "text": "チャット「イヤガッ」",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラのゲーム画面と、左上にストリーマーの顔が映っている",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "Pl_pBoHCD78": {
+  "top_title": "指示に従え／従わないと",
+  "top_title_color": [
+   "黄色",
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "1分以内に",
+    "color": "白"
+   },
+   {
+    "t": "1.0",
+    "text": "クリーピーホースの",
+    "color": "白"
+   },
+   {
+    "t": "2.0",
+    "text": "ケツに付いた\nハエをはたけ",
+    "color": "白"
+   },
+   {
+    "t": "3.0",
+    "text": "できた！",
+    "color": "白"
+   },
+   {
+    "t": "4.7",
+    "text": "うわまじか",
+    "color": "白"
+   },
+   {
+    "t": "6.7",
+    "text": "ハァ…",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性の声",
+  "first_frame": "マインクラフト風のゲーム画面で、馬の後ろ姿と画面左上にプレイヤーの男性のワイプが表示されている",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "ERU281uKCPQ": {
+  "top_title": "ヤラセ？ガチ？",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "人智を",
+    "color": "white"
+   },
+   {
+    "t": 0.5,
+    "text": "超えた",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "神業が",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "こちら",
+    "color": "white"
+   },
+   {
+    "t": 2.2,
+    "text": "俺でもできるわ",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "*はん?*",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のマイクラプレイヤーの配信画面（小窓）と、マインクラフトのゲーム画面（TNTなどが置かれたブロックの上）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "b_sx5XOx0dc": {
+  "top_title": "奇跡のパールクラッチ",
+  "top_title_color": [
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドクタードーナツの",
+    "color": "白"
+   },
+   {
+    "t": 0.8,
+    "text": "命をコマン",
+    "color": "白"
+   },
+   {
+    "t": 1.7,
+    "text": "0.1秒前で",
+    "color": "白"
+   },
+   {
+    "t": 2.7,
+    "text": "救った",
+    "color": "白"
+   },
+   {
+    "t": 3.0,
+    "text": "パール",
+    "color": "白"
+   },
+   {
+    "t": 3.5,
+    "text": "*レールガン発射直前*",
+    "color": "ピンク"
+   },
+   {
+    "t": 4.6,
+    "text": "*パール起動*",
+    "color": "ピンク"
+   },
+   {
+    "t": 6.0,
+    "text": "なぁレールガンあったんよ",
+    "color": "白"
+   },
+   {
+    "t": 7.1,
+    "text": "マジで",
+    "color": "オレンジ"
+   },
+   {
+    "t": 7.4,
+    "text": "え、は？？？",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のマイクラ配信者の映像とマインクラフトのゲーム画面（上から見下ろした視点）、画面上部に「奇跡のパールクラッチ」という見出し。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "Gy8nRnnMbok": {
+  "top_title": "正体を隠して／潜入調査",
+  "top_title_color": [
+   "白",
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "6年間放置して",
+    "color": "黄"
+   },
+   {
+    "t": "1.0",
+    "text": "無法地帯になった",
+    "color": "黄"
+   },
+   {
+    "t": "2.0",
+    "text": "マイクラサーバーを",
+    "color": "黄"
+   },
+   {
+    "t": "3.0",
+    "text": "訪問する",
+    "color": "黄"
+   },
+   {
+    "t": "3.5",
+    "text": "ミスタービースト",
+    "color": "黄"
+   },
+   {
+    "t": "4.2",
+    "text": "＊平和な参加型から…＊",
+    "color": "白"
+   },
+   {
+    "t": "5.0",
+    "text": "＊無法地帯化＊",
+    "color": "白"
+   },
+   {
+    "t": "6.5",
+    "text": "だが",
+    "color": "黄"
+   },
+   {
+    "t": "6.7",
+    "text": "なぜか",
+    "color": "黄"
+   },
+   {
+    "t": "7.5",
+    "text": "何年も経った今でも",
+    "color": "黄"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "上が海外配信者のワイプ、下がYouTube動画の画面（MrBeast Gamingのマイクラスターサーバーのサムネイル、その下に解説用のMrBeastの顔）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "SEsuAjIkDJM": {
+  "top_title": "クリスタル史上／最大の核実験",
+  "top_title_color": [
+   "白",
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドクタードーナツが",
+    "color": "白"
+   },
+   {
+    "t": 0.7,
+    "text": "エンドクリスタルを",
+    "color": "白"
+   },
+   {
+    "t": 1.7,
+    "text": "5分以上重ねて",
+    "color": "白"
+   },
+   {
+    "t": 2.2,
+    "text": "爆破させます",
+    "color": "白"
+   },
+   {
+    "t": 3.7,
+    "text": "あと13秒!!",
+    "color": "白"
+   },
+   {
+    "t": 5.2,
+    "text": "みんな見てるか!?",
+    "color": "白"
+   },
+   {
+    "t": 6.7,
+    "text": "くるくる",
+    "color": "緑"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "インベントリの上にエンドクリスタルを持ったキャラクターの手と、その向こうにある水、さらにゲーム実況中の男性のワイプ映像が映っています。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "nW8OUvD2gmo": {
+  "top_title": "最強の外国人？",
+  "top_title_color": "黄色",
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "Dreamを超えたと",
+    "color": "白"
+   },
+   {
+    "t": 1.0,
+    "text": "主張する男が",
+    "color": "白"
+   },
+   {
+    "t": 2.0,
+    "text": "崖っぷちでハンター3人から",
+    "color": "白"
+   },
+   {
+    "t": 3.0,
+    "text": "逃げる",
+    "color": "白"
+   },
+   {
+    "t": 4.1,
+    "text": "*噴水着地*",
+    "color": "白"
+   },
+   {
+    "t": 6.6,
+    "text": "これヤラセくさスギィ！",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性の声",
+  "first_frame": "海外のマイクラ動画を見る配信者のワイプ映像、およびマインクラフトのゲーム画面と上部のテロップ",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "889JjAdKHyU": {
+  "top_title": "ご報告",
+  "top_title_color": [
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドクタードーナツが",
+    "color": "白"
+   },
+   {
+    "t": 1.0,
+    "text": "彼女のパーフェクトと",
+    "color": "白"
+   },
+   {
+    "t": 2.0,
+    "text": "同棲しました",
+    "color": "青"
+   },
+   {
+    "t": 3.5,
+    "text": "ヘイベイビー",
+    "color": "白"
+   },
+   {
+    "t": 4.2,
+    "text": "(ニヤニヤ)",
+    "color": "白"
+   },
+   {
+    "t": 5.0,
+    "text": "やあチャット",
+    "color": "白"
+   },
+   {
+    "t": 6.0,
+    "text": "みんな聞こえる？",
+    "color": "白"
+   },
+   {
+    "t": 6.7,
+    "text": "あっ//♥",
+    "color": "白"
+   },
+   {
+    "t": 7.2,
+    "text": "やあみんなー",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "茶色い服を着た男性がヘッドホンをつけ、うつむき加減で何かを話している画面",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "HZL_EzamIhE": {
+  "top_title": "俺はお前らとは違う",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "驚異的な",
+    "color": "white"
+   },
+   {
+    "t": "0.7",
+    "text": "身体能力を",
+    "color": "white"
+   },
+   {
+    "t": "1.7",
+    "text": "使って",
+    "color": "white"
+   },
+   {
+    "t": "2.0",
+    "text": "CGなしで",
+    "color": "white"
+   },
+   {
+    "t": "2.7",
+    "text": "スパイダーマンを",
+    "color": "white"
+   },
+   {
+    "t": "3.1",
+    "text": "再現する男",
+    "color": "white"
+   },
+   {
+    "t": "4.0",
+    "text": "音を聞くとドクタードーナツ",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "スパイダーマンのコスプレをした男性と、その映像をリアクションしている男性の画面",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "NVooEgXyGYM": {
+  "top_title": "ドクターレイシスト",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "問題発言集",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトのゲーム画面と、ヘッドフォンをつけた配信者のワイプ映像、および「ドクターレイシスト 問題発言集」というテロップが表示されている。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "h7goMbqULY4": {
+  "top_title": "登録者200万人",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "登録者200万人",
+    "color": "white"
+   },
+   {
+    "t": "1.0",
+    "text": "達成を",
+    "color": "white"
+   },
+   {
+    "t": "1.5",
+    "text": "祝われる",
+    "color": "white"
+   },
+   {
+    "t": "2.2",
+    "text": "ドクタードーナツ",
+    "color": "light_blue"
+   },
+   {
+    "t": "4.0",
+    "text": "あっ登録者200万いった！",
+    "color": "white"
+   },
+   {
+    "t": "6.2",
+    "text": "えい",
+    "color": "white"
+   },
+   {
+    "t": "6.7",
+    "text": "登録してくれて",
+    "color": "white"
+   },
+   {
+    "t": "7.0",
+    "text": "本当にありがとう",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "上が配信者の男性の顔、下がマインクラフトのゲーム画面（登録者数が1,999,993人のカウンター）",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "5rT3j1W4lUo": {
+  "top_title": "ゴールデンデンダライオン\n☝最後の餃子か",
+  "top_title_color": [
+   "yellow",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "マイクラで\n最も流行ってる\nミームを生んだ\nCamman18",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "Camman18\nis the NEW",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "ゴールデンデンダライオンの\nthe golden dandelion",
+    "color": "white"
+   },
+   {
+    "t": 4.0,
+    "text": "ミームが\nis MASSIVE",
+    "color": "white"
+   },
+   {
+    "t": 6.0,
+    "text": "数日前、\n新スナップショットの\n動画を作った時に",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "male synthetic voice",
+  "first_frame": "a person in a video call and a minecraft scene with a golden dandelion item",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "jb4KsgU2Ax8": {
+  "top_title": "不死身と呼ばれる理由",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.2,
+    "text": "奈落トラップに",
+    "color": "white"
+   },
+   {
+    "t": 0.8,
+    "text": "落とされても",
+    "color": "white"
+   },
+   {
+    "t": 1.4,
+    "text": "脱出する",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "Flamefrags",
+    "color": "orange"
+   },
+   {
+    "t": 3.6,
+    "text": "またトラップあるのかよ",
+    "color": "white"
+   },
+   {
+    "t": 4.4,
+    "text": "お前？",
+    "color": "white"
+   },
+   {
+    "t": 5.6,
+    "text": "そ、それだけだぞ",
+    "color": "white"
+   },
+   {
+    "t": 6.8,
+    "text": "もうそろ",
+    "color": "white"
+   },
+   {
+    "t": 7.4,
+    "text": "1v1の時間…ってコト!?",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "夜の砂漠のステージで、青い防具を身につけたマイクラのプレイヤーキャラクターが立っており、画面上に文字やライフバーが表示されている。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "OsQJKc-Plko": {
+  "top_title": "現代の縮図",
+  "top_title_color": [
+   "#fdfcf7"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドパガキが",
+    "color": "#fbfbf8"
+   },
+   {
+    "t": 0.5,
+    "text": "絶頂する",
+    "color": "#fefefd"
+   },
+   {
+    "t": 1.1,
+    "text": "動画を見る",
+    "color": "#fefefd"
+   },
+   {
+    "t": 1.8,
+    "text": "ドクタードーナツ",
+    "color": "#fbfbfb"
+   },
+   {
+    "t": 2.5,
+    "text": "*ケーキの家に*",
+    "color": "#fcfbfa"
+   },
+   {
+    "t": 3.1,
+    "text": "*きたない*",
+    "color": "#feed0c"
+   },
+   {
+    "t": 3.7,
+    "text": "*はよあけらんかい*",
+    "color": "#fb1c13"
+   },
+   {
+    "t": 4.5,
+    "text": "*ドアマン*",
+    "color": "#fbfafa"
+   },
+   {
+    "t": 4.7,
+    "text": "*ケーキ発見*",
+    "color": "#53ff29"
+   },
+   {
+    "t": 5.7,
+    "text": "*どっちが先食べる？*",
+    "color": "#fed904"
+   },
+   {
+    "t": 6.4,
+    "text": "*ドパガキedit*",
+    "color": "#fc3626"
+   },
+   {
+    "t": 7.1,
+    "text": "*ドカ食い*",
+    "color": "#fefbf9"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のマイクラ実況動画を見ながら驚いた表情をしている男性の顔と、マインクラフトのゲーム画面（ドバガキが絶頂するという字幕付き）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "aS0VEvG9uXA": {
+  "top_title": "マインクラフト／を超える？",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "リアル",
+    "color": "white"
+   },
+   {
+    "t": 0.5,
+    "text": "すぎて",
+    "color": "white"
+   },
+   {
+    "t": 0.8,
+    "text": "二度と",
+    "color": "white"
+   },
+   {
+    "t": 0.9,
+    "text": "外に",
+    "color": "white"
+   },
+   {
+    "t": 1.1,
+    "text": "出れなくなるといわれた",
+    "color": "white"
+   },
+   {
+    "t": 2.2,
+    "text": "GTA6",
+    "color": "white"
+   },
+   {
+    "t": 3.1,
+    "text": "新トレーラー",
+    "color": "white"
+   },
+   {
+    "t": 3.7,
+    "text": "*グランド・セフト・オートVI*",
+    "color": "red"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "ピックアップトラックや赤い車が走っているリアルな道路の映像、左上にヘッドホンの男性の小窓映像、上部に「マインクラフト を超える？」の黄色い見出し",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "uw3wa9obDJk": {
+  "top_title": "ラ",
+  "top_title_color": [
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.2,
+    "text": "ベリティを使って",
+    "color": "白"
+   },
+   {
+    "t": 0.8,
+    "text": "ASMRする",
+    "color": "白"
+   },
+   {
+    "t": 2.0,
+    "text": "という男",
+    "color": "白"
+   },
+   {
+    "t": 2.7,
+    "text": "ベリティじゃねぇよ！",
+    "color": "白"
+   },
+   {
+    "t": 4.0,
+    "text": "3つのベリティ？",
+    "color": "白"
+   },
+   {
+    "t": 5.2,
+    "text": "だからベリティじゃねぇよ",
+    "color": "白"
+   },
+   {
+    "t": 7.1,
+    "text": "めっさ",
+    "color": "白"
+   },
+   {
+    "t": 7.7,
+    "text": "ベリティ",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性の声",
+  "first_frame": "マイクラの画面と、それを見ている男性のワイプ映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "uM7crREuUzI": {
+  "top_title": "Jettismと／Judelowの協力",
+  "top_title_color": [
+   "#ffffff"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "ドクタードーナツを",
+    "color": "#ffff00"
+   },
+   {
+    "t": "1.0",
+    "text": "自分自身の",
+    "color": "#ffff00"
+   },
+   {
+    "t": "1.7",
+    "text": "思考で",
+    "color": "#ffff00"
+   },
+   {
+    "t": "2.0",
+    "text": "トラップにはめる",
+    "color": "#ffff00"
+   },
+   {
+    "t": "3.0",
+    "text": "Jettism",
+    "color": "#ffff00"
+   },
+   {
+    "t": "3.3",
+    "text": "説明しよう",
+    "color": "#ffff00"
+   },
+   {
+    "t": "4.5",
+    "text": "ドクタードーナツの",
+    "color": "#ffff00"
+   },
+   {
+    "t": "5.7",
+    "text": "今日の配信で",
+    "color": "#ffff00"
+   },
+   {
+    "t": "6.5",
+    "text": "TNTトロッコの罠に",
+    "color": "#ffff00"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のプレイヤーがMinecraftをプレイしている画面（左上にプレイヤーの顔のワイプ、中央上にタイトル、中央下に字幕）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "p2evt-71Ox0": {
+  "top_title": "全ての／マイクラ勢へ",
+  "top_title_color": [
+   "黄色",
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "Java版と",
+    "color": "白"
+   },
+   {
+    "t": "0.7",
+    "text": "統合版に",
+    "color": "白"
+   },
+   {
+    "t": "1.1",
+    "text": "シフトディメンション",
+    "color": "白"
+   },
+   {
+    "t": "2.0",
+    "text": "がくる",
+    "color": "白"
+   },
+   {
+    "t": "2.2",
+    "text": "もう1つとびっきり",
+    "color": "白"
+   },
+   {
+    "t": "4.0",
+    "text": "特別な",
+    "color": "白"
+   },
+   {
+    "t": "5.0",
+    "text": "お知らせです",
+    "color": "白"
+   },
+   {
+    "t": "5.7",
+    "text": "オーマイゴッド!!!",
+    "color": "黄色"
+   },
+   {
+    "t": "6.0",
+    "text": "ついにこの時がきた!!",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "女性の顔のアップと、画面左上にヘッドホンをつけた男性のリアクション映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "ILrvpO4UcJE": {
+  "top_title": "同接世界一",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.7",
+    "text": "見てこれ",
+    "color": "cyan"
+   },
+   {
+    "t": "1.1",
+    "text": "ドーナツSMPが",
+    "color": "cyan"
+   },
+   {
+    "t": "2.4",
+    "text": "24時間連続で",
+    "color": "cyan"
+   },
+   {
+    "t": "3.8",
+    "text": "ハイピクセルを上回ってる",
+    "color": "cyan"
+   },
+   {
+    "t": "6.6",
+    "text": "今日ど作日に..",
+    "color": "cyan"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のマイクラ配信者の切り抜き映像、サーバーの同時接続数ランキング（DonutSMPが1位）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "DpFA986dSCQ": {
+  "top_title": "ドクタードーナツ／vs ミニゲームの罠",
+  "top_title_color": [
+   "white",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "トラップの天才",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "JudeLowが",
+    "color": "white"
+   },
+   {
+    "t": 1.2,
+    "text": "Dreamと協力して",
+    "color": "white"
+   },
+   {
+    "t": 2.1,
+    "text": "ドクタードーナツを",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "引っ掛けます",
+    "color": "white"
+   },
+   {
+    "t": 4.0,
+    "text": "約1週間前",
+    "color": "white"
+   },
+   {
+    "t": 4.8,
+    "text": "壁の中のボート作戦で",
+    "color": "white"
+   },
+   {
+    "t": 5.9,
+    "text": "あいつを罠にかけた",
+    "color": "white"
+   },
+   {
+    "t": 7.1,
+    "text": "いざ罠にかかったものの",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "黒いブロック（黒曜石）の中に囚われているマインクラフトのキャラクター",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "tfDdjddS1Cc": {
+  "top_title": "隠れたものが／現実で貰える",
+  "top_title_color": [
+   "黄色",
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "隠れて",
+    "color": "白"
+   },
+   {
+    "t": 0.5,
+    "text": "見つからなければ",
+    "color": "白"
+   },
+   {
+    "t": 1.1,
+    "text": "豪華賞品",
+    "color": "白"
+   },
+   {
+    "t": 1.7,
+    "text": "ゲット",
+    "color": "白"
+   },
+   {
+    "t": 2.2,
+    "text": "各国のYouTuberが",
+    "color": "白"
+   },
+   {
+    "t": 3.7,
+    "text": "この空間に隠れている",
+    "color": "白"
+   },
+   {
+    "t": 5.7,
+    "text": "見つかれば脱落",
+    "color": "白"
+   },
+   {
+    "t": 7.0,
+    "text": "まずは8人に絞る",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "車のナンバープレート",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "amEHHi_HRc8": {
+  "top_title": "ゲーム界の歴史／AIで変わった",
+  "top_title_color": [
+   "yellow",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "全てのゲームで",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "マイクラが遊べる瞬間を見る",
+    "color": "white"
+   },
+   {
+    "t": 2.1,
+    "text": "オーネピクセル",
+    "color": "white"
+   },
+   {
+    "t": 3.1,
+    "text": "スカイリムでマインクラフト",
+    "color": "white"
+   },
+   {
+    "t": 4.6,
+    "text": "いまスカイリムにいる",
+    "color": "white"
+   },
+   {
+    "t": 5.4,
+    "text": "これ実際の映像ね",
+    "color": "white"
+   },
+   {
+    "t": 6.7,
+    "text": "これマジでそのまま",
+    "color": "white"
+   },
+   {
+    "t": 7.7,
+    "text": "バニラのマインクラフトと",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "上が男性の顔、下がスカイリムの世界でマインクラフトをプレイしている画面",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "TNF3UP4BzvM": {
+  "top_title": "ジャンクフード vs／ヘルシーフード",
+  "top_title_color": [
+   "白",
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "ジャンクフードと",
+    "color": "白"
+   },
+   {
+    "t": "0.7",
+    "text": "ヘルシーな食べ物で",
+    "color": "白"
+   },
+   {
+    "t": "1.7",
+    "text": "3,600カロリーに",
+    "color": "白"
+   },
+   {
+    "t": "3.0",
+    "text": "達するまでの違いなんですが",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "画面上部にジャンクフード vs ヘルシーフードのタイトル、右側に山盛りの野菜が置かれたテーブル、左上にストリーマーのワイプ",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "6QFWDBeoSmU": {
+  "top_title": "日本 vs 海外",
+  "top_title_color": [
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "神ゲーが",
+    "color": "白"
+   },
+   {
+    "t": 0.5,
+    "text": "tier表を",
+    "color": "白"
+   },
+   {
+    "t": 0.8,
+    "text": "巡って争う",
+    "color": "白"
+   },
+   {
+    "t": 1.7,
+    "text": "ゲーム達",
+    "color": "白"
+   },
+   {
+    "t": 2.6,
+    "text": "*ポケモンSティア?*",
+    "color": "赤"
+   },
+   {
+    "t": 3.7,
+    "text": "*ヘビスナ*",
+    "color": "赤"
+   },
+   {
+    "t": 4.3,
+    "text": "*盾破壊*",
+    "color": "赤"
+   },
+   {
+    "t": 5.0,
+    "text": "*ダイヤ斧クラフト*",
+    "color": "赤"
+   },
+   {
+    "t": 6.8,
+    "text": "*1キル*",
+    "color": "赤"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "ゲーミングヘッドホンをつけた人物が小さく映る画面と、ポケモン・マインクラフト・フォートナイトのアイコンが配置されたTier表",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "mvNNNg8-ty8": {
+  "top_title": "究極の着地",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "マイクラで",
+    "color": "white"
+   },
+   {
+    "t": "0.8",
+    "text": "どんな高さから",
+    "color": "white"
+   },
+   {
+    "t": "1.2",
+    "text": "落ちてもたった1個の",
+    "color": "white"
+   },
+   {
+    "t": "2.0",
+    "text": "ブロックで",
+    "color": "white"
+   },
+   {
+    "t": "2.5",
+    "text": "生き延びる",
+    "color": "white"
+   },
+   {
+    "t": "3.1",
+    "text": "方法",
+    "color": "white"
+   },
+   {
+    "t": "3.3",
+    "text": "Dreamが",
+    "color": "white"
+   },
+   {
+    "t": "4.0",
+    "text": "マンハント中",
+    "color": "white"
+   },
+   {
+    "t": "4.8",
+    "text": "使った",
+    "color": "white"
+   },
+   {
+    "t": "5.1",
+    "text": "裏技です",
+    "color": "white"
+   },
+   {
+    "t": "5.7",
+    "text": "説明しよ..",
+    "color": "white"
+   },
+   {
+    "t": "6.6",
+    "text": "僕が説明しよう",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラのプレイ映像とそれを観ている人物",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "4EaAs1oiYcs": {
+  "top_title": "冷笑されても／継続力で見返せ",
+  "top_title_color": [
+   "白色",
+   "白色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.2,
+    "text": "Dreamの",
+    "color": "緑色"
+   },
+   {
+    "t": 0.5,
+    "text": "トラップに",
+    "color": "白色"
+   },
+   {
+    "t": 1.0,
+    "text": "落とされては嗤われた男",
+    "color": "白色"
+   },
+   {
+    "t": 2.7,
+    "text": "しかし",
+    "color": "白色"
+   },
+   {
+    "t": 3.0,
+    "text": "低速落下",
+    "color": "白色"
+   },
+   {
+    "t": 3.7,
+    "text": "ポーションで",
+    "color": "白色"
+   },
+   {
+    "t": 4.0,
+    "text": "生存し",
+    "color": "白色"
+   },
+   {
+    "t": 4.5,
+    "text": "復讐のため",
+    "color": "白色"
+   },
+   {
+    "t": 5.0,
+    "text": "修行を",
+    "color": "白色"
+   },
+   {
+    "t": 5.7,
+    "text": "決意します",
+    "color": "白色"
+   },
+   {
+    "t": 6.7,
+    "text": "Groxだ",
+    "color": "白色"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "上が配信者の顔、下がマイクラのゲーム画面、上部に緑色の文字で「冷笑されても／継続力で見返せ」と書かれた黄色い帯",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "e4Fx9v3kxHw": {
+  "top_title": "無限に続く空間",
+  "top_title_color": [
+   "#ffffff"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ブロックが",
+    "color": "#ffffff"
+   },
+   {
+    "t": 0.5,
+    "text": "チャンク毎に",
+    "color": "#ffffff"
+   },
+   {
+    "t": 1.0,
+    "text": "コピーされる世界で",
+    "color": "#ffffff"
+   },
+   {
+    "t": 2.0,
+    "text": "バックルームズを",
+    "color": "#ffffff"
+   },
+   {
+    "t": 2.7,
+    "text": "作るCarvs",
+    "color": "#ffffff"
+   },
+   {
+    "t": 3.6,
+    "text": "コメントで",
+    "color": "#ffffff"
+   },
+   {
+    "t": 4.7,
+    "text": "“これなら簡単に",
+    "color": "#ffffff"
+   },
+   {
+    "t": 5.2,
+    "text": "バックルームズできるじゃん”",
+    "color": "#ffffff"
+   },
+   {
+    "t": 6.1,
+    "text": "だから実際にやってみる",
+    "color": "#ffffff"
+   },
+   {
+    "t": 7.7,
+    "text": "バックルームズって",
+    "color": "#ffffff"
+   }
+  ],
+  "narration_voice": "男性合成音声",
+  "first_frame": "マイクラのプレイ画面（桜の木が生えた地形、積み上げられた木材）と、画面左上のワイプに男性の顔が映っている。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "n_dKbXuqRlA": {
+  "top_title": "本当にできるの？",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "チェスト内の",
+    "color": "white"
+   },
+   {
+    "t": "0.7",
+    "text": "卵を",
+    "color": "white"
+   },
+   {
+    "t": "1.0",
+    "text": "真下に投げて",
+    "color": "white"
+   },
+   {
+    "t": "1.7",
+    "text": "産んだニワトリに",
+    "color": "white"
+   },
+   {
+    "t": "2.2",
+    "text": "メイス着地",
+    "color": "white"
+   },
+   {
+    "t": "3.2",
+    "text": "チェスト内の",
+    "color": "white"
+   },
+   {
+    "t": "4.0",
+    "text": "種と",
+    "color": "white"
+   },
+   {
+    "t": "4.2",
+    "text": "骨粉で",
+    "color": "white"
+   },
+   {
+    "t": "4.5",
+    "text": "畑を",
+    "color": "white"
+   },
+   {
+    "t": "5.0",
+    "text": "耕す神業を見る",
+    "color": "white"
+   },
+   {
+    "t": "6.0",
+    "text": "ドクタードーナツ",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "インベントリが開かれた状態のチェスト、およびマインクラフトの実況プレイをする男性のWebカメラ映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "7v8ZWXi6GWg": {
+  "top_title": "BAN回避の演技？",
+  "top_title_color": [
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "偽拠点で",
+    "color": "白"
+   },
+   {
+    "t": 0.7,
+    "text": "チーターを",
+    "color": "白"
+   },
+   {
+    "t": 1.0,
+    "text": "釣るドクタードーナツ",
+    "color": "白"
+   },
+   {
+    "t": 2.7,
+    "text": "もしスポナーに",
+    "color": "白"
+   },
+   {
+    "t": 3.7,
+    "text": "気づいたら",
+    "color": "白"
+   },
+   {
+    "t": 4.0,
+    "text": "BAN確定です",
+    "color": "白"
+   },
+   {
+    "t": 5.0,
+    "text": "EZすぎ",
+    "color": "白"
+   },
+   {
+    "t": 5.7,
+    "text": "ハッハハハハ",
+    "color": "青"
+   },
+   {
+    "t": 7.2,
+    "text": "(悪魔笑い)",
+    "color": "青"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外マイクラプレイヤーの顔のワイプ映像と、マインクラフトのゲーム画面（Cave）",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "aGjehKMJgjc": {
+  "top_title": "ドロッパー 変な感じになる／ドクタードーナツ",
+  "top_title_color": [
+   "白",
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "世界一快感を",
+    "color": "白"
+   },
+   {
+    "t": 1.0,
+    "text": "感じるドロッパーに",
+    "color": "白"
+   },
+   {
+    "t": 2.0,
+    "text": "降りるドクタードーナツ",
+    "color": "白"
+   },
+   {
+    "t": 3.0,
+    "text": "*心の準備*",
+    "color": "白"
+   },
+   {
+    "t": 4.5,
+    "text": "おけ、ありがとねぇ",
+    "color": "白"
+   },
+   {
+    "t": 6.5,
+    "text": "逝ってらー",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "ピンク色のブロックとカラフルな模様のあるマインクラフトのドロッパーの内部視点と、画面左上にプレイヤーの顔が映っている",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "7anq2Q8qWSw": {
+  "top_title": "奈落に落ちた男／衝撃な末路",
+  "top_title_color": [
+   "white",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "岩盤の上に",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "置かれたトロッコに",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "何故か乗って",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "すぐ降りようとする",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "ドクタードーナツ",
+    "color": "white"
+   },
+   {
+    "t": 3.7,
+    "text": "という男",
+    "color": "white"
+   },
+   {
+    "t": 4.7,
+    "text": "数秒後に",
+    "color": "white"
+   },
+   {
+    "t": 5.0,
+    "text": "予想外の出来事が",
+    "color": "white"
+   },
+   {
+    "t": 6.0,
+    "text": "待っているのでした",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "海外のマイクラ実況（マルチプレイ）の画面で、岩盤の上にトロッコが置かれている様子と、左上にストリーマーの顔が映っている",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "fmJMeaIH70U": {
+  "top_title": "Farexを超える？／rl puller?",
+  "top_title_color": [
+   "yellow",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ゲームで死ぬ訳がないと確信しているJettism",
+    "color": "white"
+   },
+   {
+    "t": 2.5,
+    "text": "理由はピンチになると即座にパールを引く男",
+    "color": "white"
+   },
+   {
+    "t": 5.0,
+    "text": "コブハがいるから",
+    "color": "white"
+   },
+   {
+    "t": 6.0,
+    "text": "コブハ、なにすればいいか分かるよな",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "ゲーム画面とプレイヤーの映像、その上に「Farexを超える？」「rl puller?」のタイトル",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "UD6LUYp1d6o": {
+  "top_title": "最強の日本人？",
+  "top_title_color": [
+   "黄"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.1",
+    "text": "Dreamを",
+    "color": "緑"
+   },
+   {
+    "t": "0.6",
+    "text": "超えたという",
+    "color": "水色"
+   },
+   {
+    "t": "1.0",
+    "text": "日本人が",
+    "color": "水色"
+   },
+   {
+    "t": "1.7",
+    "text": "ハンター",
+    "color": "水色"
+   },
+   {
+    "t": "2.1",
+    "text": "16人から",
+    "color": "水色"
+   },
+   {
+    "t": "2.7",
+    "text": "逃げる瞬間",
+    "color": "水色"
+   },
+   {
+    "t": "3.3",
+    "text": "なんですが",
+    "color": "水色"
+   },
+   {
+    "t": "4.0",
+    "text": "*畑着地*",
+    "color": "赤"
+   },
+   {
+    "t": "5.0",
+    "text": "*1キル*",
+    "color": "赤"
+   },
+   {
+    "t": "5.7",
+    "text": "*装備装着*",
+    "color": "赤"
+   },
+   {
+    "t": "6.7",
+    "text": "これヤラセくさスギィ！",
+    "color": "水色"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "海外のマイクラプレイヤーが配信しているワイプ画面と、多人数でMinecraftのサバイバルプレイをしている映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "lmVqprzsweM": {
+  "top_title": "ドクタードーナッツ\nvs 大勢の視聴者",
+  "top_title_color": [
+   "黄色",
+   "白"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドクタードーナッツが",
+    "color": "白"
+   },
+   {
+    "t": 0.7,
+    "text": "tpした先は",
+    "color": "白"
+   },
+   {
+    "t": 1.7,
+    "text": "待ち伏せ中の",
+    "color": "白"
+   },
+   {
+    "t": 2.5,
+    "text": "視聴者数十人でした",
+    "color": "白"
+   },
+   {
+    "t": 3.9,
+    "text": "(切り替える反射神経)",
+    "color": "白"
+   },
+   {
+    "t": 4.6,
+    "text": "ワーーーーッツ!?!?!?",
+    "color": "白"
+   },
+   {
+    "t": 5.9,
+    "text": "なんなんこれ!?",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "マインクラフトのゲーム画面（ジ・エンド）と、プレイヤーの顔が映っている",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "Fid2JmyVIEQ": {
+  "top_title": "ヤラセ動画を／ヤラセなしで再現？",
+  "top_title_color": [
+   "white",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "Dreamに",
+    "color": "green"
+   },
+   {
+    "t": 1.0,
+    "text": "Daquavisの",
+    "color": "white"
+   },
+   {
+    "t": 1.5,
+    "text": "ヤラセ動画を",
+    "color": "red"
+   },
+   {
+    "t": 2.0,
+    "text": "Dreamは軽々と",
+    "color": "green"
+   },
+   {
+    "t": 3.0,
+    "text": "再現して",
+    "color": "white"
+   },
+   {
+    "t": 3.7,
+    "text": "冷笑します",
+    "color": "purple"
+   },
+   {
+    "t": 6.2,
+    "text": "お〜！",
+    "color": "white"
+   },
+   {
+    "t": 6.7,
+    "text": "Dreamも同じこと",
+    "color": "white"
+   },
+   {
+    "t": 7.5,
+    "text": "やってるやん",
+    "color": "white"
+   },
+   {
+    "t": 7.7,
+    "text": "Daquavisのやつ！",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "上が配信者の顔、下がマインクラフトのゲーム画面（川と畑の上を走るキャラクター）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "Sl6kP-APNto": {
+  "top_title": "不死身と呼ばれた男／vsキッズのトラップ",
+  "top_title_color": [
+   "white",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "家に入ろうと",
+    "color": "white"
+   },
+   {
+    "t": 0.5,
+    "text": "心のドアを",
+    "color": "white"
+   },
+   {
+    "t": 1.5,
+    "text": "開けたら",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "待っていたのは",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "キッズ達が作った",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "トラップでした",
+    "color": "white"
+   },
+   {
+    "t": 4.5,
+    "text": "なんだ？",
+    "color": "white"
+   },
+   {
+    "t": 4.8,
+    "text": "俺は今80ブロックの",
+    "color": "white"
+   },
+   {
+    "t": 6.5,
+    "text": "高さから",
+    "color": "white"
+   },
+   {
+    "t": 6.8,
+    "text": "ドリップストーンの罠に",
+    "color": "white"
+   },
+   {
+    "t": 7.3,
+    "text": "落下している",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトの家",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "qDTBwrSQCAI": {
+  "top_title": "み、みどりも触れるな",
+  "top_title_color": [
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ゲーム実況に憧れた子どもを見る",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "ドクタードーナツ",
+    "color": "white"
+   },
+   {
+    "t": 2.7,
+    "text": "マインクラフト、だけど緑に触れてはいけない",
+    "color": "white"
+   },
+   {
+    "t": 6.3,
+    "text": "しんだ",
+    "color": "white"
+   },
+   {
+    "t": 7.3,
+    "text": "おけま..",
+    "color": "white"
+   },
+   {
+    "t": 7.7,
+    "text": "ワールド読み込みです",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラのプレイ画面と、左上にゲーム実況を見ている人のウェブカメラ映像",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "Q3iXO-wRon0": {
+  "top_title": "これってAI?現実?",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "ロールが自分の画像を",
+    "color": "white"
+   },
+   {
+    "t": "1.0",
+    "text": "貼れて激怒する",
+    "color": "white"
+   },
+   {
+    "t": "1.5",
+    "text": "ドクタードーナツですが、",
+    "color": "white"
+   },
+   {
+    "t": "2.7",
+    "text": "これは",
+    "color": "white"
+   },
+   {
+    "t": "3.0",
+    "text": "本人が",
+    "color": "white"
+   },
+   {
+    "t": "3.3",
+    "text": "AI画像と",
+    "color": "white"
+   },
+   {
+    "t": "4.0",
+    "text": "主張している",
+    "color": "white"
+   },
+   {
+    "t": "5.0",
+    "text": "マップアートであり",
+    "color": "white"
+   },
+   {
+    "t": "6.0",
+    "text": "ドーナツは見る度に",
+    "color": "white"
+   },
+   {
+    "t": "7.0",
+    "text": "ガチ効きしています",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マイクラの動画を見ている配信者の男性、およびマイクラのゲーム画面",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "HtTJSjhshm8": {
+  "top_title": "理想の拠点",
+  "top_title_color": [
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.1",
+    "text": "ドーナツSMP史上",
+    "color": "白"
+   },
+   {
+    "t": "1.0",
+    "text": "最大の",
+    "color": "白"
+   },
+   {
+    "t": "1.7",
+    "text": "神建築を",
+    "color": "白"
+   },
+   {
+    "t": "2.7",
+    "text": "ドクタードーナツ",
+    "color": "白"
+   },
+   {
+    "t": "3.7",
+    "text": "*探索中*",
+    "color": "黄色"
+   },
+   {
+    "t": "4.5",
+    "text": "色が好きだわ",
+    "color": "白"
+   },
+   {
+    "t": "5.7",
+    "text": "明るい青の海って",
+    "color": "白"
+   },
+   {
+    "t": "7.0",
+    "text": "あんま見ないよな",
+    "color": "白"
+   },
+   {
+    "t": "7.7",
+    "text": "*ぐ~*",
+    "color": "赤"
+   }
+  ],
+  "narration_voice": "男性の声（合成音声）",
+  "first_frame": "海外のマイクラ配信者の映像と、マイクラのゲーム画面、上部に「理想の拠点」という黄色の文字",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "3_BhuFNAC5w": {
+  "top_title": "美しい",
+  "top_title_color": [
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ドバガキの心が浄化される絶景がこちら",
+    "color": "白"
+   },
+   {
+    "t": 2.5,
+    "text": "*心を無にして見てください*",
+    "color": "赤"
+   },
+   {
+    "t": 6.5,
+    "text": "*氷1億個設置完了*",
+    "color": "赤"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "マインクラフトのゲーム画面（見上げている視点）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "zTdNQj8IgFA": {
+  "top_title": "伝説の武器",
+  "top_title_color": [
+   "黄色"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "最強武器は\n斧だと主張する\nDreamですが..",
+    "color": "白"
+   },
+   {
+    "t": 2.2,
+    "text": "一撃叩き込めば十分",
+    "color": "白"
+   },
+   {
+    "t": 4.7,
+    "text": "ネザライトの剣で無双",
+    "color": "白"
+   },
+   {
+    "t": 6.7,
+    "text": "どんな戦いでも頼りになる",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "男性による英語の音声（日本語字幕あり）",
+  "first_frame": "緑色の服を着たマインクラフトのキャラクター（Dream）が草原に立っている",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "wnPHjyqjtYw": {
+  "top_title": "ズルをすると／罰せられる",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "クリーピーホースに",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "チートで対抗する",
+    "color": "white"
+   },
+   {
+    "t": 2.2,
+    "text": "*1分以内に鞍を着けろ*",
+    "color": "red"
+   },
+   {
+    "t": 4.1,
+    "text": "(残り)0分!!",
+    "color": "red"
+   },
+   {
+    "t": 5.0,
+    "text": "頼むっ!!",
+    "color": "red"
+   },
+   {
+    "t": 7.2,
+    "text": "いけ!!!!",
+    "color": "red"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "クリーピーホースとプレイヤーの顔のワイプ",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "5mgN8E2aCNc": {
+  "top_title": "不明",
+  "top_title_color": [
+   "不明"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "ベリティに本名を暴露された",
+    "color": "白"
+   },
+   {
+    "t": 1.25,
+    "text": "ドクタードーナツ",
+    "color": "白"
+   },
+   {
+    "t": 2.25,
+    "text": "キミは21歳だね",
+    "color": "黄色"
+   },
+   {
+    "t": 3.25,
+    "text": "*あ リーク限界 まずい*",
+    "color": "赤"
+   },
+   {
+    "t": 5.0,
+    "text": "ど…どうやって…",
+    "color": "白"
+   },
+   {
+    "t": 6.25,
+    "text": "どこで知ったのか分らんけど",
+    "color": "白"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "ヘッドフォンをつけた男性が笑顔でカメラを見ている様子と、マインクラフトの実況プレイの画面が上下に分かれて映っている。",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "OikKeTokbYE": {
+  "top_title": "ベリティとの／出会い",
+  "top_title_color": [
+   "yellow",
+   "yellow"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "黄色の球体",
+    "color": "white"
+   },
+   {
+    "t": 0.7,
+    "text": "ベリティと",
+    "color": "white"
+   },
+   {
+    "t": 1.1,
+    "text": "出会った",
+    "color": "white"
+   },
+   {
+    "t": 1.5,
+    "text": "瞬間",
+    "color": "white"
+   },
+   {
+    "t": 2.0,
+    "text": "ハロー！",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "ボクはベリティ！",
+    "color": "white"
+   },
+   {
+    "t": 4.0,
+    "text": "キミの",
+    "color": "white"
+   },
+   {
+    "t": 4.2,
+    "text": "おたすけフレンドだよ。",
+    "color": "white"
+   },
+   {
+    "t": 5.7,
+    "text": "なんでも聞いて",
+    "color": "white"
+   },
+   {
+    "t": 7.0,
+    "text": "ボクは全部知ってるから",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "男性の声",
+  "first_frame": "茶色いダンボール箱、その左上に男性のワイプ画面、ゲームのUI（体力バーなど）",
+  "_model": "gemini-flash-lite-latest"
+ },
+ "l-i2luVRm9c": {
+  "top_title": "透明人間の泥棒スナイプ",
+  "top_title_color": [
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.1",
+    "text": "ドクタードーナツが",
+    "color": "white"
+   },
+   {
+    "t": "1.0",
+    "text": "見えないなにかしに",
+    "color": "white"
+   },
+   {
+    "t": "1.6",
+    "text": "監視されている事に",
+    "color": "white"
+   },
+   {
+    "t": "2.7",
+    "text": "気づきます",
+    "color": "white"
+   },
+   {
+    "t": "3.5",
+    "text": "わっ！？…",
+    "color": "white"
+   },
+   {
+    "t": "5.2",
+    "text": "おいお前の拠点",
+    "color": "white"
+   },
+   {
+    "t": "5.7",
+    "text": "誰かいるぞ",
+    "color": "white"
+   },
+   {
+    "t": "6.2",
+    "text": "絶対誰かいる",
+    "color": "white"
+   },
+   {
+    "t": "7.1",
+    "text": "足音が聞こえるんよ",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "男性の合成音声",
+  "first_frame": "上がプレイヤーの顔、下がマインクラフトのゲーム画面",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "8sGEwroL68U": {
+  "top_title": "ヤラセを疑う／伝説の着地",
+  "top_title_color": [
+   "yellow",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": 0.0,
+    "text": "Dreamの",
+    "color": "green"
+   },
+   {
+    "t": 0.5,
+    "text": "空中クラフト",
+    "color": "white"
+   },
+   {
+    "t": 1.0,
+    "text": "ボート着地に",
+    "color": "white"
+   },
+   {
+    "t": 1.7,
+    "text": "挑むドクタードナツ",
+    "color": "white"
+   },
+   {
+    "t": 3.0,
+    "text": "*ドクタードリーム*",
+    "color": "white"
+   },
+   {
+    "t": 4.5,
+    "text": "(...?)",
+    "color": "white"
+   },
+   {
+    "t": 6.2,
+    "text": "ふはは...w",
+    "color": "white"
+   },
+   {
+    "t": 7.0,
+    "text": "いや",
+    "color": "white"
+   },
+   {
+    "t": 7.3,
+    "text": "無理だろこれwww",
+    "color": "white"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "上がプレイヤーの配信画面（小）、下がゲーム画面で「Dreamの」の字幕が表示されている状態",
+  "_model": "gemini-3.5-flash-lite"
+ },
+ "LT4g5FCgjiM": {
+  "top_title": "ヤラセだった／宣戦布告動画",
+  "top_title_color": [
+   "white",
+   "white"
+  ],
+  "narration_lines": [
+   {
+    "t": "0.0",
+    "text": "Dreamに",
+    "color": "green"
+   },
+   {
+    "t": "0.5",
+    "text": "宣戦布告する",
+    "color": "green"
+   },
+   {
+    "t": "1.5",
+    "text": "Daquavisは",
+    "color": "green"
+   },
+   {
+    "t": "2.0",
+    "text": "ヤラセです",
+    "color": "green"
+   },
+   {
+    "t": "2.7",
+    "text": "Dreamが詰んでる",
+    "color": "green"
+   }
+  ],
+  "narration_voice": "合成音声",
+  "first_frame": "画面中央にMinecraftのゲーム画面、上部にヘッドホンをつけた人物のリアクション映像",
+  "_model": "gemini-3.5-flash-lite"
+ }
+}

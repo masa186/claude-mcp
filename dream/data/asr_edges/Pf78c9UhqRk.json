@@ -1,0 +1,31 @@
+{
+ "id": "Pf78c9UhqRk",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 1.88,
+   "text": "イカゲームに参加するスティーブですが",
+   "no_speech": 0.0
+  },
+  {
+   "start": 1.88,
+   "end": 4.22,
+   "text": "エビバディウォーズ",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 42.85,
+   "end": 46.21,
+   "text": "That's no far",
+   "no_speech": 0.0
+  },
+  {
+   "start": 46.21,
+   "end": 47.79,
+   "text": "Let me adjust the settings",
+   "no_speech": 0.0
+  }
+ ]
+}

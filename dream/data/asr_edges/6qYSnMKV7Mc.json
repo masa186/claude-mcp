@@ -1,0 +1,37 @@
+{
+ "id": "6qYSnMKV7Mc",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 2.42,
+   "text": "数秒後このシャイガイはごくごくにされてしまいます",
+   "no_speech": 0.0
+  },
+  {
+   "start": 2.42,
+   "end": 3.92,
+   "text": "Is that a monster?",
+   "no_speech": 0.0
+  },
+  {
+   "start": 4.36,
+   "end": 4.96,
+   "text": "Yo stop!",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 25.93,
+   "end": 28.11,
+   "text": "You destroyed my base?",
+   "no_speech": 0.0
+  },
+  {
+   "start": 28.45,
+   "end": 29.25,
+   "text": "Let's fight!",
+   "no_speech": 0.0
+  }
+ ]
+}
