@@ -28,12 +28,23 @@ def test_every_cell_has_status_or_missing_code(built):
 
 
 def test_views_keep_source_and_time(built):
+    """段階1の出どころ（config/sources.json の既存データ）の観測は取得日時が null。
+    YouTube API の取得結果（出どころ yt_<channel>_<run_id>）の観測は、取得時刻（UTC）を持つ。"""
+    import re
+    stage1 = {s['id'] for s in json.load(open(os.path.join(MCS, 'config', 'sources.json'), encoding='utf-8'))['sources']}
+    utc = re.compile(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$')
     for v in built['videos']:
         for o in v['views']:
             assert o['source'] and 'observed_at' in o and 'observed_before' in o
-            assert o['observed_at'] is None        # 既存データには取得日時の記録が無い
-        if v['views']:
+            if o['source'] in stage1:
+                assert o['observed_at'] is None        # 既存データには取得日時の記録が無い
+            else:
+                assert re.match(rf"^yt_{v['channel']}_\d{{8}}T\d{{6}}Z$", o['source']), o['source']
+                assert utc.match(o['observed_at']), o['observed_at']
+        if v['views'] and all(o['source'] in stage1 for o in v['views']):
             assert v['missing']['views_observed_at']['code'] == 'UNKNOWN'
+        elif v['views']:
+            assert 'views_observed_at' not in v['missing']
 
 
 def test_no_single_value_is_chosen(built):
@@ -98,14 +109,55 @@ def _assert_same(cmp):
         _assert_same(sub)
 
 
-def test_committed_outputs_are_up_to_date(built):
-    """mcshorts/data と mcshorts/reports が、今のコードと既存データから作り直したものと同じであること
-    （imports が空のときの出力と比べる）。"""
+def _snapshot_sources_in(data_dir):
+    """data/videos.jsonl に入っている API 取得結果の出どころ（yt_<channel>_<run_id>）。"""
+    out = set()
+    with open(os.path.join(data_dir, 'videos.jsonl'), encoding='utf-8') as f:
+        for line in f:
+            r = json.loads(line)
+            out |= {s for s in r['in_sources'] if s.startswith('yt_')}
+    return out
+
+
+def _copy_snapshots(src, dst, wanted):
+    """wanted に含まれる取得結果だけを、index.jsonl の行ごと写す。"""
+    import shutil
+    from adapters import youtube_snapshots as ys
+    for ch in ('dream', 'smp'):
+        for e in ys.read_index(src, ch):
+            if f"yt_{ch}_{e['run_id']}" not in wanted:
+                continue
+            for key in ('snapshot', 'raw'):
+                p = os.path.join(dst, ch, e[key])
+                os.makedirs(os.path.dirname(p), exist_ok=True)
+                shutil.copyfile(os.path.join(src, ch, e[key]), p)
+            with open(os.path.join(dst, ch, 'index.jsonl'), 'a', encoding='utf-8') as f:
+                f.write(json.dumps(e, ensure_ascii=False, sort_keys=True) + '\n')
+
+
+def test_committed_outputs_are_up_to_date(tmp_path):
+    """mcshorts/data と mcshorts/reports が、それを作ったときの入力から再現できること。
+    入力＝既存データ＋「data/ に既に入っている API 取得結果」だけ（imports は空）。
+    まだ反映していない取得結果があっても、ここでは失敗にしない（integrate.py が「変わるファイル」として示す）。"""
+    snap = tmp_path / 'snap'
+    _copy_snapshots(build_dataset.SNAPSHOTS_DIR, str(snap), _snapshot_sources_in(os.path.join(MCS, 'data')))
+    imports = tmp_path / 'imports'
+    (imports / 'whisper_cpp').mkdir(parents=True)
+    (imports / 'termux').mkdir()
+    out = tmp_path / 'out'
+    build_dataset.build(out=str(out), imports_dir=str(imports), snapshots_dir=str(snap))
     for sub in ('data', 'reports'):
         mine = os.path.join(MCS, sub)
         if not os.path.isdir(mine):
             continue
-        _assert_same(filecmp.dircmp(mine, os.path.join(built['out'], sub)))
+        _assert_same(filecmp.dircmp(mine, str(out / sub)))
+
+
+def test_committed_snapshots_are_intact():
+    """置いてある取得結果が index.jsonl の SHA-256 と一致すること（書き換えられていない）。"""
+    from adapters import youtube_snapshots as ys
+    for ch in ('dream', 'smp'):
+        assert ys.verify_index(build_dataset.SNAPSHOTS_DIR, ch) == []
 
 
 def test_jsonl_is_valid(built):
