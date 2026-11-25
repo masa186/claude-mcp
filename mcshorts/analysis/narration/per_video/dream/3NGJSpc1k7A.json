@@ -1,0 +1,739 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 64.6,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.13,
+   "first_cut_minus_first_row_start": -0.14,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.486,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人を」",
+      "time_raw": "0.00〜0.27",
+      "visual": "斧を振り上げる略奪者（ピリジャー）の顔のアップ。顔に落書きのような表情"
+     },
+     {
+      "end": 1.27,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「襲おうとした結果」",
+      "time_raw": "0.53〜1.27",
+      "visual": "カット。**落書き顔のアイアンゴーレムが至近距離で迫る**（揺れ）[実測: 0.53, 0.80]"
+     },
+     {
+      "end": 1.73,
+      "start": 1.4,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この男は」",
+      "time_raw": "1.40〜1.73",
+      "visual": "カット。逆さまに倒れた略奪者の顔の寄り [実測: 1.40]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ケ〇穴確定することに」",
+      "time_raw": "2.00〜3.00",
+      "visual": "カット。**車椅子の略奪者**が爆発（土煙）[実測: 2.00]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 1.7,
+     "music_mean_during_row": 0.41,
+     "nearest_cut_to_end": 0.3,
+     "nearest_cut_to_start": 0.14,
+     "nearest_subtitle_change_to_end": 0.17,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.27
+    },
+    {
+     "end": 3.7,
+     "music_mean_during_row": 0.313,
+     "nearest_cut_to_end": 0.03,
+     "nearest_cut_to_start": 0.3,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 0.17,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 1.7
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_FRAGMENT"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜した結果」で次の部分の前提を述べる",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜することになります」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 11,
+     "content_lemmas": [
+      "村人",
+      "襲う",
+      "為る",
+      "結果"
+     ],
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(物事)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 2
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "村人を襲おうとした結果"
+    },
+    {
+     "chars": 18,
+     "content_lemmas": [
+      "男",
+      "褻",
+      "穴",
+      "確定",
+      "為る",
+      "事",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": true,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 5,
+      "補助記号": 1,
+      "連体詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "この男はケ〇穴確定することになります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "為る",
+     2
+    ],
+    [
+     "村人",
+     1
+    ],
+    [
+     "襲う",
+     1
+    ],
+    [
+     "結果",
+     1
+    ],
+    [
+     "男",
+     1
+    ],
+    [
+     "褻",
+     1
+    ],
+    [
+     "穴",
+     1
+    ],
+    [
+     "確定",
+     1
+    ],
+    [
+     "事",
+     1
+    ],
+    [
+     "成る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.7,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "村人を襲おうとした結果"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 7,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "裏人を襲おうと",
+     "words": [
+      "裏",
+      "人",
+      "を",
+      "襲",
+      "お",
+      "う",
+      "と"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "村人を襲おうとした結果"
+      },
+      {
+       "end": 3.7,
+       "fully_inside": false,
+       "row": 1,
+       "start": 1.7,
+       "text": "この男はケ〇穴確定することになります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 24,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "裏人を襲おうとした結果この男はつかな盹描すること",
+     "words": [
+      "裏",
+      "人",
+      "を",
+      "襲",
+      "お",
+      "う",
+      "と",
+      "した",
+      "結果",
+      "この",
+      "男",
+      "は",
+      "つ",
+      "かな",
+      "盹",
+      "描",
+      "する",
+      "こと"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "村人を襲おうとした結果"
+      },
+      {
+       "end": 3.7,
+       "fully_inside": true,
+       "row": 1,
+       "start": 1.7,
+       "text": "この男はケ〇穴確定することになります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 29,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "裏人を襲おうとした結果この男はつかな盹描することになります",
+     "words": [
+      "裏",
+      "人",
+      "を",
+      "襲",
+      "お",
+      "う",
+      "と",
+      "した",
+      "結果",
+      "この",
+      "男",
+      "は",
+      "つ",
+      "かな",
+      "盹",
+      "描",
+      "する",
+      "こと",
+      "にな",
+      "ります"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 11,
+    "end": 1.7,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "村人を襲おうとした結果"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(物事)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "村人を襲おうとした結果"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_FRAGMENT"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜した結果」で次の部分の前提を述べる",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "裏人を襲おうとした結果この男は",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人を」",
+      "time_raw": "0.00〜0.27",
+      "visual": "斧を振り上げる略奪者（ピリジャー）の顔のアップ。顔に落書きのような表情"
+     },
+     {
+      "end": 1.27,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「襲おうとした結果」",
+      "time_raw": "0.53〜1.27",
+      "visual": "カット。**落書き顔のアイアンゴーレムが至近距離で迫る**（揺れ）[実測: 0.53, 0.80]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "裏"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.35,
+    "rows": [
+     {
+      "chars": 11,
+      "chars_per_sec": 7.69,
+      "duration": 1.43,
+      "gap_to_next_row": 0.0,
+      "row": 0
+     },
+     {
+      "chars": 18,
+      "chars_per_sec": 9.0,
+      "duration": 2.0,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 29
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.88,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 20,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(物事)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "村人を襲おうとした結果"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": true,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "この男はケ〇穴確定することになります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "ゴーレム「始めようか❤️」",
+       "range_raw": "56〜64.6",
+       "source": "doc_structure",
+       "source_file": "dream/individual/14_3NGJSpc1k7A.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "この男はケ〇穴確定することになります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 1,
+     "from_start": 1.7,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "3NGJSpc1k7A"
+    }
+   ],
+   "role_sequence": [
+    "R_SETUP",
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "迫るゴーレム、車椅子、ナレーション",
+      "range_raw": "0.0〜3.7",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "引用符「\"平和な村\"」→ 農家の村人「何だあれ」→ 引用符「\"襲撃者\"」（旗を持った略奪者の群れ、旗に「67」）→「終わった...」。9〜10秒に Scary music [音タグ]",
+      "range_raw": "3.8〜13",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「おい起きろ!」「襲撃ﾀﾞｧｧｧ!!!」「\"パニック\"」→ 農家は「\"カボチャの種\"」を植え「※水やり」→ 別の村人は洞窟で「\"鉄採掘\"」→ 血。20〜22秒に Ding [音タグ]",
+      "range_raw": "15〜34",
+      "stage_label": "事件"
+     },
+     {
+      "content": "不気味な笑顔の略奪者 → 血の赤い画面",
+      "range_raw": "35〜37",
+      "stage_label": "緊張"
+     },
+     {
+      "content": "「\"成長したカボチャ\"」→ 鉄ブロックとカボチャで引用符「\"秘密兵器\"」（アイアンゴーレムの組み立て）。41〜47秒に Theme music（0.15〜0.29）[音タグ]",
+      "range_raw": "37〜49",
+      "stage_label": "準備"
+     },
+     {
+      "content": "ゴーレム誕生、引用符「\"覚醒\"」→ 略奪者を投げ飛ばす。52秒に車の音 [音タグ]",
+      "range_raw": "49.9〜53",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "車椅子の略奪者「終わった...」→ ゴーレム「始めようか❤️」→ 略奪者の絶望の顔に赤の引用符「\"犯される襲撃者\"」",
+      "range_raw": "56〜64.6",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [],
+    "cuts": 48,
+    "cuts_per_5s": {
+     "0": 6,
+     "10": 5,
+     "15": 2,
+     "20": 3,
+     "25": 3,
+     "30": 1,
+     "35": 5,
+     "45": 3,
+     "5": 4,
+     "50": 5,
+     "55": 6,
+     "60": 5
+    },
+    "duration_sec": 64.6,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 1.7
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 3.7,
+    "is_end_position": false,
+    "sec_from_end": 60.9,
+    "start": 1.7,
+    "status": "DOC_OBSERVED",
+    "text": "この男はケ〇穴確定することになります"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜することになります」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 58.0,
+    "status": "ok",
+    "text": "You"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 2.0,
+    "status": "ok",
+    "text": "つかな盹描することになります"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 14,
+ "not_applicable": [
+  {
+   "item": 8,
+   "reason": "規則に当てはまる秒が無い",
+   "what": "盛り上がりの候補"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/14_3NGJSpc1k7A.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/3NGJSpc1k7A.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "3NGJSpc1k7A"
+}

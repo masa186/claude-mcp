@@ -114,3 +114,25 @@ def test_committed_outputs_are_reproducible(built):
             a = os.path.join(mine, ch, name)
             if os.path.exists(a):
                 assert filecmp.cmp(a, str(built['out'] / ch / name), shallow=False), f'{ch}/{name}'
+
+
+def test_reviews_are_preserved_on_rebuild(tmp_path):
+    """記入済みの確認結果は作り直しても消えない。一覧から外れるなら止まる。"""
+    import csv
+    dec = tmp_path / 'dec'
+    shutil.copytree(os.path.join(MCS, 'analysis', 'codings'), dec)
+    p = dec / 'dream' / 'review_sample.csv'
+    rows = list(csv.reader(open(p, encoding='utf-8', newline='')))
+    hdr = rows[0]
+    target = (rows[1][0], rows[1][1])
+    rows[1][hdr.index('メモ')] = 'テストの記入'
+    csv.writer(open(p, 'w', encoding='utf-8', newline='')).writerows(rows)
+    out = tmp_path / 'out'
+    codings.build(out_root=str(out), decisions_root=str(dec))
+    got = codings.read_reviews(str(out / 'dream' / 'review_sample.csv'))
+    assert got[target]['メモ'] == 'テストの記入'
+    # 一覧に無い行に記入があれば、上書きせずに止まる
+    rows.append(['zzzzzzzzzzz', 'hook'] + [''] * (len(hdr) - 3) + ['メモ'])
+    csv.writer(open(p, 'w', encoding='utf-8', newline='')).writerows(rows)
+    with pytest.raises(codings.ReviewWouldBeLost):
+        codings.build(out_root=str(tmp_path / 'out2'), decisions_root=str(dec))

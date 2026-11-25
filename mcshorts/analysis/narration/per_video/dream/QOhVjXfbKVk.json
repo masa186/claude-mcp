@@ -1,0 +1,817 @@
+{
+ "channel": "dream",
+ "doc_notes": [
+  "字幕と声で言葉が違う可能性があるもの：#03（字幕「お上品な」／声「クズい」）、#33（「素敵な男性」／「ドブカス男」）、#38（「とても素敵な」／「ドブカスな」）、#39（「Groxくん」／「ドブカスくん」）"
+ ],
+ "duration_sec": 39.15,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.0,
+   "first_cut_minus_first_row_start": 1.0,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.508,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「あの」",
+      "time_raw": "0.00〜0.27",
+      "visual": "鎖でつながれた村人の下にトラップ（磔のような画）"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「禪院直哉も」",
+      "time_raw": "0.53〜0.73",
+      "visual": "カット。**アニメ『呪術廻戦』の禪院直哉の顔**（笑っている、アニメの画）"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ドン引く程の」",
+      "time_raw": "1.00〜1.47",
+      "visual": "カット。溶岩に落とされる村人たち [実測: 1.00]"
+     },
+     {
+      "end": 2.27,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「素敵な男性」",
+      "time_raw": "1.73〜2.27",
+      "visual": "同上"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「Groxですが」",
+      "time_raw": "2.53〜3.00",
+      "visual": "カット。洞窟で何かが爆発 [実測: 1.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.0,
+     "music_mean_during_row": 0.32,
+     "nearest_cut_to_end": 0.13,
+     "nearest_cut_to_start": 1.0,
+     "nearest_subtitle_change_to_end": 0.13,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.35
+     ],
+     "start": 0.0
+    },
+    {
+     "end": 4.8,
+     "music_mean_during_row": 0.36,
+     "nearest_cut_to_end": 0.2,
+     "nearest_cut_to_start": 0.13,
+     "nearest_subtitle_change_to_end": 0.2,
+     "nearest_subtitle_change_to_start": 0.13,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      4.2,
+      4.35
+     ],
+     "start": 3.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜素敵な男性Groxですが」の前提（皮肉の評価を含む）",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼の機嫌を損ねたらこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 25,
+     "content_lemmas": [
+      "禪院",
+      "ナオヤ",
+      "どん",
+      "引く-他動詞",
+      "男性",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "あの",
+      "pos1": "感動詞",
+      "pos2": "フィラー",
+      "surface": "あの"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox",
+       "直哉"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 2,
+      "助詞": 4,
+      "動詞": 1,
+      "名詞": 4,
+      "形状詞": 1,
+      "感動詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "あの禪院直哉もドン引く程の素敵な男性Groxですが"
+    },
+    {
+     "chars": 15,
+     "content_lemmas": [
+      "彼",
+      "機嫌",
+      "損ねる",
+      "こう",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "こうなる",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "副詞": 1,
+      "助動詞": 2,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "彼の機嫌を損ねたらこうなります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "禪院",
+     1
+    ],
+    [
+     "ナオヤ",
+     1
+    ],
+    [
+     "どん",
+     1
+    ],
+    [
+     "引く-他動詞",
+     1
+    ],
+    [
+     "男性",
+     1
+    ],
+    [
+     "Grox",
+     1
+    ],
+    [
+     "彼",
+     1
+    ],
+    [
+     "機嫌",
+     1
+    ],
+    [
+     "損ねる",
+     1
+    ],
+    [
+     "こう",
+     1
+    ],
+    [
+     "成る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "あの禪院直哉もドン引く程の素敵な男性Groxですが"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "あの全員の親もドン",
+     "words": [
+      "あの",
+      "全",
+      "員",
+      "の",
+      "親",
+      "も",
+      "ドン"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "あの禪院直哉もドン引く程の素敵な男性Groxですが"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 28,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "あの全員の親もドンミックほどのノブカス男グロックスですが",
+     "words": [
+      "あの",
+      "全",
+      "員",
+      "の",
+      "親",
+      "も",
+      "ドン",
+      "ミ",
+      "ック",
+      "ほど",
+      "の",
+      "ノ",
+      "ブ",
+      "カ",
+      "ス",
+      "男",
+      "グ",
+      "ロ",
+      "ック",
+      "ス",
+      "です",
+      "が"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "あの禪院直哉もドン引く程の素敵な男性Groxですが"
+      },
+      {
+       "end": 4.8,
+       "fully_inside": true,
+       "row": 1,
+       "start": 3.0,
+       "text": "彼の機嫌を損ねたらこうなります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 43,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "あの全員の親もドンミックほどのノブカス男グロックスですが彼の機嫌を損ねたらこうなります",
+     "words": [
+      "あの",
+      "全",
+      "員",
+      "の",
+      "親",
+      "も",
+      "ドン",
+      "ミ",
+      "ック",
+      "ほど",
+      "の",
+      "ノ",
+      "ブ",
+      "カ",
+      "ス",
+      "男",
+      "グ",
+      "ロ",
+      "ック",
+      "ス",
+      "です",
+      "が",
+      "彼",
+      "の",
+      "機",
+      "嫌",
+      "を",
+      "損",
+      "ね",
+      "た",
+      "ら",
+      "こう",
+      "な",
+      "ります"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 25,
+    "end": 3.0,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "あの禪院直哉もドン引く程の素敵な男性Groxですが"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "あの",
+      "pos1": "感動詞",
+      "pos2": "フィラー",
+      "surface": "あの"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox",
+       "直哉"
+      ],
+      "question": false
+     },
+     "text": "あの禪院直哉もドン引く程の素敵な男性Groxですが"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜素敵な男性Groxですが」の前提（皮肉の評価を含む）",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "彼の機嫌を損ねたらこうなります",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「あの」",
+      "time_raw": "0.00〜0.27",
+      "visual": "鎖でつながれた村人の下にトラップ（磔のような画）"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「禪院直哉も」",
+      "time_raw": "0.53〜0.73",
+      "visual": "カット。**アニメ『呪術廻戦』の禪院直哉の顔**（笑っている、アニメの画）"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ドン引く程の」",
+      "time_raw": "1.00〜1.47",
+      "visual": "カット。溶岩に落とされる村人たち [実測: 1.00]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "あの"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.33,
+    "rows": [
+     {
+      "chars": 25,
+      "chars_per_sec": 8.33,
+      "duration": 3.0,
+      "gap_to_next_row": 0.0,
+      "row": 0
+     },
+     {
+      "chars": 15,
+      "chars_per_sec": 8.33,
+      "duration": 1.8,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 40
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 9.03,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 34,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox",
+      "直哉"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "あの禪院直哉もドン引く程の素敵な男性Groxですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "こうなる",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "彼の機嫌を損ねたらこうなります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「粛正完了✅」",
+       "range_raw": "19〜25",
+       "source": "doc_structure",
+       "source_file": "dream/individual/33_QOhVjXfbKVk.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 4
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "彼の機嫌を損ねたらこうなります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 1,
+     "from_start": 3.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "QOhVjXfbKVk"
+    }
+   ],
+   "role_sequence": [
+    "R_SETUP",
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "He's going for three. Let's go",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "You ain't gonna score on me.",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "直哉の画、ナレーション",
+      "range_raw": "0.0〜4.8",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「彼の機嫌を損ねたら」→ 赤「こうなります」（TNTの爆発）",
+      "range_raw": "3.2〜5",
+      "stage_label": "予告"
+     },
+     {
+      "content": "バスケットボールのコートと満員の観客。Grox「村人達にバスケさせてんの?」「どうやって勝つ気だ?」→「3ポイント狙ったぞ!!」「いいねぇ!」→ 字幕の箱「静脈に氷が入った」（英語の慣用句の直訳）",
+      "range_raw": "5〜12",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「こいつらはショーをしている!!」「ｵｫｵｵｳｩ!!」→「あいつ足首骨折したばっかだぞ?!」→ 村人「俺とタイマンしよう」→ スコアボード 59-50",
+      "range_raw": "12〜19",
+      "stage_label": "展開"
+     },
+     {
+      "content": "Grox「オォウいいシュートや」→「なんやテメェ」→ スイッチを押す → TNTの中に村人 →「粛正完了✅」。17秒にバスケットボールの音（Basketball bounce 0.63）[音タグ]",
+      "range_raw": "19〜25",
+      "stage_label": "1回目の処刑"
+     },
+     {
+      "content": "「次は～～」「君だ」→ 村人「今度は準備万端だぜ」「君は俺に勝てない」→ 点を取られて「ﾅｧｧｧｰ」→「やりやがったな?!」（スイッチ）",
+      "range_raw": "25〜31",
+      "stage_label": "2回目"
+     },
+     {
+      "content": "「今度こそ準備万端だぜ」「かかってこいや」→ TNTの爆発（36秒に Explosion 0.40）[音タグ]",
+      "range_raw": "32〜36",
+      "stage_label": "3回目"
+     },
+     {
+      "content": "吹き飛ぶ村人と😢の絵文字、白の引用符「\"可哀想な村人\"」",
+      "range_raw": "36.3〜39.1",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     3,
+     4,
+     9,
+     10,
+     13,
+     19,
+     27,
+     30,
+     31,
+     32,
+     35,
+     36
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.35,
+     4.2,
+     4.35,
+     9.35,
+     10.4,
+     13.7,
+     19.1,
+     27.6,
+     30.2,
+     31.1,
+     32.05,
+     32.5,
+     35.9
+    ],
+    "cuts": 19,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 3,
+     "15": 2,
+     "20": 3,
+     "25": 2,
+     "30": 3,
+     "5": 2
+    },
+    "duration_sec": 39.15,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.47,
+      "t": 3
+     },
+     {
+      "Explosion": 0.4,
+      "t": 36
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 3.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 4.8,
+    "is_end_position": false,
+    "sec_from_end": 34.35,
+    "start": 3.0,
+    "status": "DOC_OBSERVED",
+    "text": "彼の機嫌を損ねたらこうなります"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼の機嫌を損ねたらこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 33.14,
+    "status": "ok",
+    "text": "You ain't gonna score on me."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 33.06,
+    "status": "ok",
+    "text": "よく츠寂しいのに、僕はとって打ち上げてのペンを快遍しているよ"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "You ain't gonna score on me.",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 33,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/33_QOhVjXfbKVk.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/QOhVjXfbKVk.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "QOhVjXfbKVk"
+}

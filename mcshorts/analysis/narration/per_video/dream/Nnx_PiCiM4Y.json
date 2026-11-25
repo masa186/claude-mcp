@@ -1,0 +1,615 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 65.71,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.47,
+   "first_cut_minus_first_row_start": 0.47,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.382,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「親を〇された」",
+      "time_raw": "0.00〜0.27",
+      "visual": "燃える村で、略奪者が斧を村人（ママ）に振り下ろす"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "0.53〜0.73",
+      "visual": "カット。**画面いっぱいの血** [実測: 0.47]"
+     },
+     {
+      "end": 1.27,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人を」",
+      "time_raw": "1.00〜1.27",
+      "visual": "泣いている落書き顔の村人"
+     },
+     {
+      "end": 2.27,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「煽ってはいけません」",
+      "time_raw": "1.47〜2.27",
+      "visual": "カット。赤い店内（ファストフード店）で村人2人 [実測: 1.33]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "2.53〜3.00",
+      "visual": "**モザイク**のかかった血"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.2,
+     "music_mean_during_row": 0.357,
+     "nearest_cut_to_end": 0.87,
+     "nearest_cut_to_start": 0.47,
+     "nearest_subtitle_change_to_end": 0.27,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.2,
+      2.5
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "禁止・警告",
+     "part": 0,
+     "reason": "「〜を煽ってはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 18,
+     "content_lemmas": [
+      "親",
+      "為る",
+      "村人",
+      "煽る",
+      "行く"
+     ],
+     "first_token": {
+      "lemma": "親",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "親"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "禁止",
+      "fuseji": true,
+      "number": false,
+      "prohibition": true,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 4,
+      "助詞": 4,
+      "動詞": 3,
+      "名詞": 2,
+      "補助記号": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "親を〇された村人を煽ってはいけません"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "親",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "村人",
+     1
+    ],
+    [
+     "煽る",
+     1
+    ],
+    [
+     "行く",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.2,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "親を〇された村人を煽ってはいけません"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "親を殺された村人",
+     "words": [
+      "親",
+      "を",
+      "殺",
+      "さ",
+      "れた",
+      "村",
+      "人"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.2,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "親を〇された村人を煽ってはいけません"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 18,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "親を殺された村人を煽ってはいけません",
+     "words": [
+      "親",
+      "を",
+      "殺",
+      "さ",
+      "れた",
+      "村",
+      "人",
+      "を",
+      "煽",
+      "って",
+      "はい",
+      "け",
+      "ません"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.2,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "親を〇された村人を煽ってはいけません"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 18,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "親を殺された村人を煽ってはいけません",
+     "words": [
+      "親",
+      "を",
+      "殺",
+      "さ",
+      "れた",
+      "村",
+      "人",
+      "を",
+      "煽",
+      "って",
+      "はい",
+      "け",
+      "ません"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 18,
+    "end": 2.2,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "親を〇された村人を煽ってはいけません"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "親",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "親"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "禁止",
+      "fuseji": true,
+      "number": false,
+      "prohibition": true,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "親を〇された村人を煽ってはいけません"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "禁止・警告",
+     "part": 0,
+     "reason": "「〜を煽ってはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_PROHIBIT",
+    "effective_code": "H_PROHIBIT",
+    "quote": "親を殺された村人を煽ってはいけません",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「親を〇された」",
+      "time_raw": "0.00〜0.27",
+      "visual": "燃える村で、略奪者が斧を村人（ママ）に振り下ろす"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "0.53〜0.73",
+      "visual": "カット。**画面いっぱいの血** [実測: 0.47]"
+     },
+     {
+      "end": 1.27,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人を」",
+      "time_raw": "1.00〜1.27",
+      "visual": "泣いている落書き顔の村人"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "親"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.18,
+    "rows": [
+     {
+      "chars": 18,
+      "chars_per_sec": 8.18,
+      "duration": 2.2,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 18
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 8.33,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 13,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "禁止",
+     "fuseji": true,
+     "number": false,
+     "part": 0,
+     "prohibition": true,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "親を〇された村人を煽ってはいけません"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_PROHIBIT"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "親が殺される、店内、モザイク",
+      "range_raw": "0.0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "平和な村「ﾎｫｫｫｵｵｳｩｩ!!!」→ 村人がスマホで引用符「\"ジオメトリーダッシュ\"」",
+      "range_raw": "3.3〜11",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「(ムズすぎる!!)」「(えぇ...)」「(この糞ゲーが!!!)」→ スマホを投げる「死ね死ねぇぇ!!!」「(スマホ壊れちゃった...)」。18〜19秒に Breaking・Door [音タグ]",
+      "range_raw": "13〜23",
+      "stage_label": "事件"
+     },
+     {
+      "content": "引用符「\"荒れ果てた村\"」（雨と雷、21〜37秒に Rain・Thunderstorm）[音タグ] →「\"67\"」の旗の略奪者たち →「(あれは...!)」「(ママ...!)」「(どうして...)」→ 母が殺される（冒頭の場面）",
+      "range_raw": "24〜37",
+      "stage_label": "回想"
+     },
+     {
+      "content": "ファストフード店。店員の村人「何だ？そこの君」→ ニヤけ顔 → すまし顔",
+      "range_raw": "44〜52",
+      "stage_label": "展開"
+     },
+     {
+      "content": "引用符「\"蘇る記憶\"」（「67」の看板の画）",
+      "range_raw": "52.6〜55",
+      "stage_label": "引き金"
+     },
+     {
+      "content": "「貴様ぁぁぁぁぁ!!!」→ 殴りかかる → 61.3秒に血",
+      "range_raw": "55.5〜62",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "両腕の無い村人の絶望の顔に、赤の引用符「\"ちょっと理不尽だね\"」",
+      "range_raw": "62.4〜65.7",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     2,
+     24,
+     31,
+     37,
+     52,
+     55
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.2,
+     2.5,
+     24.9,
+     31.5,
+     37.4,
+     52.4,
+     55.35
+    ],
+    "cuts": 56,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 5,
+     "15": 3,
+     "20": 4,
+     "25": 5,
+     "30": 3,
+     "35": 3,
+     "40": 2,
+     "45": 2,
+     "5": 3,
+     "50": 11,
+     "55": 8,
+     "60": 2
+    },
+    "duration_sec": 65.71,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.36,
+      "t": 1
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.2,
+    "is_end_position": false,
+    "sec_from_end": 63.51,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "親を〇された村人を煽ってはいけません"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "禁止・警告",
+     "part": 0,
+     "reason": "「〜を煽ってはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 58.44,
+    "status": "ok",
+    "text": "You"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 63.98,
+    "status": "ok",
+    "text": "campus、コロナはモノサポファス乗りかな"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 21,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/21_Nnx_PiCiM4Y.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/Nnx_PiCiM4Y.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "Nnx_PiCiM4Y"
+}

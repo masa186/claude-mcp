@@ -168,23 +168,50 @@ def review_sample(recs, ch):
     return sorted(picked)
 
 
-def write_outputs(ch, recs, sample, cb, out_root):
+REVIEW_COLS = ['確認結果（正しい/違う）', '正しい分類', 'メモ']
+
+
+class ReviewWouldBeLost(Exception):
+    pass
+
+
+def read_reviews(path):
+    """既に記入された確認結果（記入のある行だけ）。{(video_id, dimension): {列: 値}}"""
+    if not os.path.exists(path):
+        return {}
+    out = {}
+    with open(path, encoding='utf-8', newline='') as f:
+        for row in csv.DictReader(f):
+            vals = {c: row.get(c, '') for c in REVIEW_COLS}
+            if any(vals.values()):
+                out[(row['video_id'], row['dimension'])] = vals
+    return out
+
+
+def write_outputs(ch, recs, sample, cb, out_root, prev_reviews=None):
     d = os.path.join(out_root, ch)
     os.makedirs(d, exist_ok=True)
     with open(os.path.join(d, 'claude_v1.jsonl'), 'w', encoding='utf-8') as f:
         for r in recs:
             f.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + '\n')
     sset = set(sample)
+    prev = dict(prev_reviews or {})
+    keys = {(r['video_id'], r['dimension']) for r in recs if r['video_id'] in sset}
+    lost = sorted(set(prev) - keys)
+    if lost:
+        # 記入済みの確認結果が一覧から外れるなら、上書きせずに止める
+        raise ReviewWouldBeLost(f'{ch}: 記入済みの確認結果が一覧から外れる: {lost[:5]}')
     with open(os.path.join(d, 'review_sample.csv'), 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['video_id', 'dimension', 'code', 'code_label', 'also', 'quote', 'source_file', 'source_lang',
-                    'quote_start_sec', 'reason', 'flag', '確認結果（正しい/違う）', '正しい分類', 'メモ'])
+                    'quote_start_sec', 'reason', 'flag'] + REVIEW_COLS)
         for r in recs:
             if r['video_id'] in sset:
                 seg = r['quote_segment'] or {}
+                rv = prev.get((r['video_id'], r['dimension']), {})
                 w.writerow([r['video_id'], r['dimension'], r['code'], r['code_label'], ' '.join(r['also']),
                             r['quote'] or '', r['source_file'], r['source_lang'] or '', seg.get('start', ''),
-                            r['reason'], r.get('flag') or '', '', '', ''])
+                            r['reason'], r.get('flag') or ''] + [rv.get(c, '') for c in REVIEW_COLS])
     write_summary(os.path.join(d, 'summary.md'), ch, recs, sample, cb)
 
 
@@ -270,7 +297,9 @@ def build(out_root=CODINGS, data_dir=DATA, decisions_root=CODINGS):
         recs = fn(cb, data_dir, decisions)
         assert all(r['channel'] == ch and r['status'] == STATUS for r in recs)
         sample = review_sample(recs, ch)
-        write_outputs(ch, recs, sample, cb, out_root)
+        # 確認結果は decisions と同じ場所（既定では mcshorts/analysis/codings）の review_sample.csv から引き継ぐ
+        prev = read_reviews(os.path.join(decisions_root, ch, 'review_sample.csv'))
+        write_outputs(ch, recs, sample, cb, out_root, prev)
         result[ch] = {'records': recs, 'sample': sample}
     return result
 

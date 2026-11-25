@@ -1,0 +1,840 @@
+{
+ "channel": "dream",
+ "doc_notes": [
+  "字幕と声で言葉が違う可能性があるもの：#03（字幕「お上品な」／声「クズい」）、#33（「素敵な男性」／「ドブカス男」）、#38（「とても素敵な」／「ドブカスな」）、#39（「Groxくん」／「ドブカスくん」）"
+ ],
+ "duration_sec": 96.85,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.73,
+   "first_cut_minus_first_row_start": 0.73,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.37,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 1.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "「SERIOUS」→ **赤**「デスゲームを開催する」",
+      "time_raw": "0.00〜1.27",
+      "visual": "満員の闘技場で、**一人称視点の銃**が村人を撃つ。**左上に村人の残り人数のカウンター**（93→91→89→61→59→58と減る）"
+     },
+     {
+      "end": 2.27,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamの友達」→ 白「Groxくん」",
+      "time_raw": "1.47〜2.27",
+      "visual": "カット。ゴリラが村人を倒す。カウンター 99（緑）[実測: 1.33]"
+     },
+     {
+      "end": 2.73,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「Groxくん」",
+      "time_raw": "2.53〜2.73",
+      "visual": "**モザイク**"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「100人の村人VS1匹のゴリラ」",
+      "time_raw": "3.00",
+      "visual": "白い神殿の中のゴリラと、並ぶ村人"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.8,
+     "music_mean_during_row": 0.278,
+     "nearest_cut_to_end": 1.47,
+     "nearest_cut_to_start": 0.73,
+     "nearest_subtitle_change_to_end": 0.07,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 54.2,
+     "music_mean_during_row": 0.2,
+     "nearest_cut_to_end": 1.2,
+     "nearest_cut_to_start": 0.03,
+     "nearest_subtitle_change_to_end": 0.33,
+     "nearest_subtitle_change_to_start": 0.03,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 50.3
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「デスゲームを開催する〜Groxくん」の紹介（文書の注記では声は「ドブカスくん」）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "50.3秒で「どんどん減っていく村人たちですが」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 1,
+     "reason": "50.3秒で「この後彼らに転機が訪れます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 23,
+     "content_lemmas": [
+      "デス-death",
+      "ゲーム-game",
+      "開催",
+      "為る",
+      "Dream",
+      "友達",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "デス-death",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "デス"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 6,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "デスゲームを開催するDreamの友達Groxくん"
+    },
+    {
+     "chars": 16,
+     "content_lemmas": [
+      "どんどん",
+      "減る",
+      "行く",
+      "村人"
+     ],
+     "first_token": {
+      "lemma": "どんどん",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "どんどん"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 1,
+      "接尾辞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "どんどん減っていく村人たちですが"
+    },
+    {
+     "chars": 13,
+     "content_lemmas": [
+      "後",
+      "彼",
+      "転機",
+      "訪れる"
+     ],
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 2,
+      "接尾辞": 1,
+      "連体詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "この後彼らに転機が訪れます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "デス-death",
+     1
+    ],
+    [
+     "ゲーム-game",
+     1
+    ],
+    [
+     "開催",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "友達",
+     1
+    ],
+    [
+     "Grox",
+     1
+    ],
+    [
+     "どんどん",
+     1
+    ],
+    [
+     "減る",
+     1
+    ],
+    [
+     "行く",
+     1
+    ],
+    [
+     "村人",
+     1
+    ],
+    [
+     "後",
+     1
+    ],
+    [
+     "彼",
+     1
+    ],
+    [
+     "転機",
+     1
+    ],
+    [
+     "訪れる",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "デスゲームを開催するDreamの友達Groxくん"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 7,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "デスゲームを開催",
+     "words": [
+      "デ",
+      "ス",
+      "ゲ",
+      "ーム",
+      "を",
+      "開",
+      "催"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "デスゲームを開催するDreamの友達Groxくん"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "デスゲームを開催するドリームの友達のブカス君",
+     "words": [
+      "デ",
+      "ス",
+      "ゲ",
+      "ーム",
+      "を",
+      "開",
+      "催",
+      "する",
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "友",
+      "達",
+      "の",
+      "ブ",
+      "カ",
+      "ス",
+      "君"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "デスゲームを開催するDreamの友達Groxくん"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "デスゲームを開催するドリームの友達のブカス君",
+     "words": [
+      "デ",
+      "ス",
+      "ゲ",
+      "ーム",
+      "を",
+      "開",
+      "催",
+      "する",
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "友",
+      "達",
+      "の",
+      "ブ",
+      "カ",
+      "ス",
+      "君"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 23,
+    "end": 2.8,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "デスゲームを開催するDreamの友達Groxくん"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "デス-death",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "デス"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "Grox"
+      ],
+      "question": false
+     },
+     "text": "デスゲームを開催するDreamの友達Groxくん"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「デスゲームを開催する〜Groxくん」の紹介（文書の注記では声は「ドブカスくん」）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_LABEL",
+    "effective_code": "H_LABEL",
+    "quote": "デスゲームを開催するドリームの友達のブカス君",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 1.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "「SERIOUS」→ **赤**「デスゲームを開催する」",
+      "time_raw": "0.00〜1.27",
+      "visual": "満員の闘技場で、**一人称視点の銃**が村人を撃つ。**左上に村人の残り人数のカウンター**（93→91→89→61→59→58と減る）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "デ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 7.83,
+    "rows": [
+     {
+      "chars": 23,
+      "chars_per_sec": 8.21,
+      "duration": 2.8,
+      "gap_to_next_row": 47.5,
+      "row": 0
+     },
+     {
+      "chars": 29,
+      "chars_per_sec": 7.44,
+      "duration": 3.9,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 52
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 0.92,
+    "gap_max": 0.2,
+    "gap_median": 0.2,
+    "gaps_ge_0.3s": 0,
+    "n_words": 42,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream",
+      "Grox"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "デスゲームを開催するDreamの友達Groxくん"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "どんどん減っていく村人たちですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "この後彼らに転機が訪れます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「勝者は決して諦めない」",
+       "range_raw": "80〜88",
+       "source": "doc_structure",
+       "source_file": "dream/individual/39_sJDbLVB340o.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 7
+      }
+     ],
+     "from_part": 1,
+     "from_quote": "この後彼らに転機が訪れます",
+     "from_role": "R_REHOOK",
+     "from_row": 1,
+     "from_start": 50.3,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "sJDbLVB340o"
+    }
+   ],
+   "role_sequence": [
+    "R_INTRO",
+    "R_SETUP",
+    "R_REHOOK"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_ESCALATE",
+     "effective_code": "D_ESCALATE",
+     "quote": "どんどん減っていく村人たちですが、このあとからに天気が訪れます。",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_CONTINUE",
+     "effective_code": "P_CONTINUE",
+     "quote": "Now let's do 100 gorillas versus a villager!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "銃とカウンター、モザイク、ナレーション",
+      "range_raw": "0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「100人の村人VS1匹のゴリラ」→ 村人「俺が最初に逝く!!!」「マジかいいね」「みんな君のこと信じてるぞ!!」「君ならできる!!!」→ ゴリラに倒される（カウンター 99）→ 逃げる村人「みんなどこ行くんだよ!」「逃げれないよ」「助けてぇ!!!」→ Grox「逃げれると思うなよ」",
+      "range_raw": "3〜15",
+      "stage_label": "ルール"
+     },
+     {
+      "content": "逃げた村人を Grox が倒す（98）→「警告したのに」→「おいお前が代わりだ」「〇したやつと交換しなくちゃな」→「これで公平になった」（99に戻す）",
+      "range_raw": "15〜24",
+      "stage_label": "補充"
+     },
+     {
+      "content": "「すぐに飽きるだろあのゴリラ」→「いいアイデアがあります」→ 白い杖を持った村人「僕は貧しいです」→「何すればいいのかわからない」→ Grox が出てきて「マジで？」「そのかわり僕達を外にだして」→「おめでとう!君たちは自由だ!!」→ 外に出ると、そこには…",
+      "range_raw": "24〜40",
+      "stage_label": "村人の作戦1"
+     },
+     {
+      "content": "闘技場の外にも村人が並ぶ「めっちゃタイプ!!」「私じゃないわよ」「私の後ろにいる子よ」→ ゴリラの顔をした村人「ゴリラが2匹に増えた」→ Grox「やっぱなしで」→「このクソ野郎が!!」→「アイツ死んだな」「かわいそうに...」",
+      "range_raw": "40〜50",
+      "stage_label": "どんでん返し"
+     },
+     {
+      "content": "銃で撃つ（92→60→20）→ ナレーション「どんどん減っていく」「この後彼らに」「転機が訪れます」",
+      "range_raw": "50〜54",
+      "stage_label": "第2の予告"
+     },
+     {
+      "content": "「待てどうした？」「おぅアイツら〇してるぞ」「一度だけ計画を立てる」「チャンスが出来たぞ」「複雑にするな」「とにかく急げ」→ ゴリラの攻略図を並べる「俺複雑にするなって言ったよね?」→ 作戦実行「その村人どうするつもり？」「本気？」「それが君たちの計画？」→ カウンター 16→0「嘘だドンドコど～ん」「ゴリラの勝ちです」",
+      "range_raw": "54〜80",
+      "stage_label": "村人の作戦2"
+     },
+     {
+      "content": "観客席の家族「ごめんねみんな」「本当ごめん」（看板「GO DAD」）→ 0→1「アイツらは正々堂々戦った」→「ありえない!!!!」→「勝者は決して諦めない」",
+      "range_raw": "80〜88",
+      "stage_label": "1人の生き残り"
+     },
+     {
+      "content": "最後の1人が勝つ「よっしゃｧｧ～!!!」→ **「100体のゴリラVS1人の村人だ!!!」**（Grox がルールを逆にする）→ 画面いっぱいのゴリラ → Grox に「チャンネル登録」のボタンと白の引用符「\"流石にドブカス\"」",
+      "range_raw": "90〜97",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     1
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [],
+    "cuts": 63,
+    "cuts_per_5s": {
+     "0": 2,
+     "10": 4,
+     "15": 3,
+     "20": 3,
+     "25": 4,
+     "30": 3,
+     "35": 4,
+     "40": 4,
+     "45": 3,
+     "5": 5,
+     "50": 3,
+     "55": 2,
+     "60": 4,
+     "65": 2,
+     "70": 2,
+     "75": 4,
+     "80": 6,
+     "85": 1,
+     "90": 3,
+     "95": 1
+    },
+    "duration_sec": 96.85,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.39,
+      "t": 1
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "middle",
+      "row": 1,
+      "start": 50.3
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 54.2,
+    "is_end_position": false,
+    "sec_from_end": 42.65,
+    "start": 50.3,
+    "status": "DOC_OBSERVED",
+    "text": "どんどん減っていく村人たちですが この後彼らに転機が訪れます"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "50.3秒で「どんどん減っていく村人たちですが」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 1,
+     "reason": "50.3秒で「この後彼らに転機が訪れます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 93.74,
+    "status": "ok",
+    "text": "Now let's do 100 gorillas versus a villager!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 94.84,
+    "status": "ok",
+    "text": "一山の宮城と一山の宮城の中に"
+   },
+   "payoff_code_4b": {
+    "code": "P_CONTINUE",
+    "effective_code": "P_CONTINUE",
+    "quote": "Now let's do 100 gorillas versus a villager!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 39,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/39_sJDbLVB340o.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/sJDbLVB340o.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "sJDbLVB340o"
+}

@@ -1,0 +1,850 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 123.99,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.87,
+   "first_cut_minus_first_row_start": 0.87,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.502,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人に追われ」",
+      "time_raw": "0.00〜0.73",
+      "visual": "ネザーのポータルの周りを**埋め尽くす数百の村人**"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「エンド要塞へ行くのに」",
+      "time_raw": "1.00〜1.47",
+      "visual": "カット。洞窟でGroxたちが話す [実測: 0.87]"
+     },
+     {
+      "end": 2.73,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「苦戦するGrox」",
+      "time_raw": "1.73〜2.73",
+      "visual": "カット。ポータルに村人が押し寄せる [実測: 1.73]"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ですが1人の犠牲と」",
+      "time_raw": "3.00",
+      "visual": "カット。**体にTNTを巻いた村人**（自爆役）[実測: 2.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.8,
+     "music_mean_during_row": 0.227,
+     "nearest_cut_to_end": 0.13,
+     "nearest_cut_to_start": 0.87,
+     "nearest_subtitle_change_to_end": 0.13,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.65,
+      0.85,
+      1.15,
+      1.35
+     ],
+     "start": 0.0
+    },
+    {
+     "end": 6.4,
+     "music_mean_during_row": 0.323,
+     "nearest_cut_to_end": 0.07,
+     "nearest_cut_to_start": 0.13,
+     "nearest_subtitle_change_to_end": 0.07,
+     "nearest_subtitle_change_to_start": 0.13,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      4.25,
+      4.55,
+      5.55
+     ],
+     "start": 2.8
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_SETUP"
+     ],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜に苦戦するGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "ひねりの予告",
+     "part": 0,
+     "reason": "「ですが〜によって状況は一変します」と展開の変化を予告（何が起きるかは言わない）",
+     "role": "R_TWIST_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 24,
+     "content_lemmas": [
+      "村人",
+      "追う",
+      "エンド-end",
+      "要塞",
+      "行く",
+      "苦戦",
+      "為る",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 4,
+      "動詞": 3,
+      "名詞": 5
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "村人に追われエンド要塞へ行くのに苦戦するGrox"
+    },
+    {
+     "chars": 30,
+     "content_lemmas": [
+      "1",
+      "犠牲",
+      "ふとっちょ",
+      "Dream",
+      "因る",
+      "状況",
+      "一変",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "です",
+      "pos1": "助動詞",
+      "pos2": "*",
+      "surface": "です"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 6,
+      "動詞": 2,
+      "名詞": 6,
+      "接尾辞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "ですが1人の犠牲と太っちょDreamによって状況は一変します"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "為る",
+     2
+    ],
+    [
+     "村人",
+     1
+    ],
+    [
+     "追う",
+     1
+    ],
+    [
+     "エンド-end",
+     1
+    ],
+    [
+     "要塞",
+     1
+    ],
+    [
+     "行く",
+     1
+    ],
+    [
+     "苦戦",
+     1
+    ],
+    [
+     "Grox",
+     1
+    ],
+    [
+     "1",
+     1
+    ],
+    [
+     "犠牲",
+     1
+    ],
+    [
+     "ふとっちょ",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "因る",
+     1
+    ],
+    [
+     "状況",
+     1
+    ],
+    [
+     "一変",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "村人に追われエンド要塞へ行くのに苦戦するGrox"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "裏人に追われエンド",
+     "words": [
+      "裏",
+      "人",
+      "に",
+      "追",
+      "わ",
+      "れ",
+      "エ",
+      "ンド"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "村人に追われエンド要塞へ行くのに苦戦するGrox"
+      },
+      {
+       "end": 6.4,
+       "fully_inside": false,
+       "row": 1,
+       "start": 2.8,
+       "text": "ですが1人の犠牲と太っちょDreamによって状況は一変します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 28,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "裏人に追われエンド要塞へ行くのに不正するブロックパスです",
+     "words": [
+      "裏",
+      "人",
+      "に",
+      "追",
+      "わ",
+      "れ",
+      "エ",
+      "ンド",
+      "要",
+      "塞",
+      "へ",
+      "行",
+      "く",
+      "の",
+      "に",
+      "不",
+      "正",
+      "する",
+      "ブ",
+      "ロ",
+      "ック",
+      "パ",
+      "ス",
+      "です"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "村人に追われエンド要塞へ行くのに苦戦するGrox"
+      },
+      {
+       "end": 6.4,
+       "fully_inside": false,
+       "row": 1,
+       "start": 2.8,
+       "text": "ですが1人の犠牲と太っちょDreamによって状況は一変します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 44,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "裏人に追われエンド要塞へ行くのに不正するブロックパスですが一人の犠牲とイセレブドリームによ",
+     "words": [
+      "裏",
+      "人",
+      "に",
+      "追",
+      "わ",
+      "れ",
+      "エ",
+      "ンド",
+      "要",
+      "塞",
+      "へ",
+      "行",
+      "く",
+      "の",
+      "に",
+      "不",
+      "正",
+      "する",
+      "ブ",
+      "ロ",
+      "ック",
+      "パ",
+      "ス",
+      "です",
+      "が",
+      "一",
+      "人",
+      "の",
+      "犠",
+      "牲",
+      "と",
+      "イ",
+      "セ",
+      "レ",
+      "ブ",
+      "ド",
+      "リ",
+      "ーム",
+      "に",
+      "よ"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 24,
+    "end": 2.8,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "村人に追われエンド要塞へ行くのに苦戦するGrox"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "text": "村人に追われエンド要塞へ行くのに苦戦するGrox"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_SETUP"
+     ],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜に苦戦するGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_TWIST",
+    "effective_code": "H_TWIST",
+    "quote": "ですが一人の犠牲とイセレブドリームによって状況は異変します",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人に追われ」",
+      "time_raw": "0.00〜0.73",
+      "visual": "ネザーのポータルの周りを**埋め尽くす数百の村人**"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「エンド要塞へ行くのに」",
+      "time_raw": "1.00〜1.47",
+      "visual": "カット。洞窟でGroxたちが話す [実測: 0.87]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "裏"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.45,
+    "rows": [
+     {
+      "chars": 24,
+      "chars_per_sec": 8.57,
+      "duration": 2.8,
+      "gap_to_next_row": 0.0,
+      "row": 0
+     },
+     {
+      "chars": 30,
+      "chars_per_sec": 8.33,
+      "duration": 3.6,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 54
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 11.26,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 57,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "村人に追われエンド要塞へ行くのに苦戦するGrox"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 1,
+     "text": "ですが1人の犠牲と太っちょDreamによって状況は一変します"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「誰かが犠牲になるしかない」",
+       "range_raw": "34.7〜61",
+       "source": "doc_structure",
+       "source_file": "dream/individual/35_FnzjGyuYTAU.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 3
+      },
+      {
+       "quote": "縛られた**緑の太ったDream**",
+       "range_raw": "90〜104",
+       "source": "doc_structure",
+       "source_file": "dream/individual/35_FnzjGyuYTAU.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 5
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "ですが1人の犠牲と太っちょDreamによって状況は一変します",
+     "from_role": "R_TWIST_PREVIEW",
+     "from_row": 1,
+     "from_start": 2.8,
+     "note": "予告の「1人の犠牲」と「太っちょDream」の両方",
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "FnzjGyuYTAU"
+    }
+   ],
+   "role_sequence": [
+    "R_INTRO",
+    "R_TWIST_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_PROCESS",
+     "effective_code": "D_PROCESS",
+     "quote": "someone has to sacrifice themselves let's settle this with musical chairs",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_PUNISH",
+     "effective_code": "P_PUNISH",
+     "quote": "Oh he got a heart attack",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "大群、TNTの村人、ナレーション",
+      "range_raw": "0〜6.4",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「だから火付ける前に」「ブロックしなきゃ」→ 仲間を縛ってポータルをふさぐ「合点承知の助け」「これで通れんだろ」「やめろ」「もういいよ」「そしたら次の課題なんだけど...」",
+      "range_raw": "6.4〜24",
+      "stage_label": "第1の課題"
+     },
+     {
+      "content": "ポータルに入る「悪夢をみたぜ」→ 縛られた仲間「ポータルが俺をマッサージしてる」「ええいいじゃんw」「そんなアプデ追加されたっけ」",
+      "range_raw": "24.9〜33",
+      "stage_label": "寄り道"
+     },
+     {
+      "content": "「残念だけど」「入る方法は一つだけだ」「誰かが犠牲になるしかない」→「決着を決めよう」「椅子取りゲームで」「負けたら自爆な」→ 椅子取り →「あー本当ごめんね」「ちょ待てよ？」「こやつ聞こえてないぞ!!」→ TNTの村人「今までありがとう」「元気でな」「逃げ逃げぇ」→ 爆発 →「彼もしかしたら」「生きてるかも...?!」→「ナーないない」「ヤツは死んだ」",
+      "range_raw": "34.7〜61",
+      "stage_label": "犠牲"
+     },
+     {
+      "content": "ピグリンの砦。金で取引「落ち着け金持ってるぞ」「ほらよ」「エンダーパール必要なのよ」→ 何度も違う物が出る「俺エンパって言ったよね？」「君はバカだ」「何してんの??」「君は俺の忍耐力を試してる」「黒曜石以外の物をよこせ」（天丼）",
+      "range_raw": "65〜89",
+      "stage_label": "第2の課題"
+     },
+     {
+      "content": "「ちょっと助けて」→ 縛られた**緑の太ったDream**「友達のDreamを連れてきたよ」→ ピグリン「何疑ってるの？」→「セリフをいってくれ」→ 字幕の箱「\"トミーとクワッキーティは私の感情を傷つけた\"」（Dream の有名な発言のパロディと思われる）→ ピグリンがエンダーパールを大量に出す「ほらな言ったろ?!」",
+      "range_raw": "90〜104",
+      "stage_label": "太っちょDream"
+     },
+     {
+      "content": "「ブレイズロッドを取る時間だ」→ 太ったDreamを溶岩の上で運ぶ「ｵｫｫｵｳｩｩ!!!」「これ僕の体重のせいじゃ」「ないですよね?!」→「誰が死んだ？」「はぁ？」",
+      "range_raw": "104〜116",
+      "stage_label": "移動"
+     },
+     {
+      "content": "太ったDream「私ですけど？」→「よっしゃｧｧ!!」→「彼は心臓発作で死んだ」→ 白の引用符「\"可哀想なDream\"」",
+      "range_raw": "116〜124",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     4,
+     5,
+     53,
+     92,
+     105,
+     111,
+     118
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.65,
+     0.85,
+     1.15,
+     1.35,
+     4.25,
+     4.55,
+     5.55,
+     53.7,
+     92.75,
+     105.35,
+     105.6,
+     111.85,
+     118.3,
+     118.55
+    ],
+    "cuts": 98,
+    "cuts_per_5s": {
+     "0": 6,
+     "10": 4,
+     "100": 2,
+     "105": 3,
+     "110": 5,
+     "115": 2,
+     "120": 1,
+     "20": 2,
+     "25": 5,
+     "30": 2,
+     "35": 5,
+     "40": 5,
+     "45": 1,
+     "5": 5,
+     "50": 3,
+     "55": 6,
+     "60": 3,
+     "65": 5,
+     "70": 11,
+     "75": 5,
+     "80": 8,
+     "85": 2,
+     "90": 3,
+     "95": 4
+    },
+    "duration_sec": 123.99,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 2.8
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 6.4,
+    "is_end_position": false,
+    "sec_from_end": 117.59,
+    "start": 2.8,
+    "status": "DOC_OBSERVED",
+    "text": "ですが1人の犠牲と太っちょDreamによって状況は一変します"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "ひねりの予告",
+     "part": 0,
+     "reason": "「ですが〜によって状況は一変します」と展開の変化を予告（何が起きるかは言わない）",
+     "role": "R_TWIST_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 104.5,
+    "status": "ok",
+    "text": "runs oh hey yo chill definitely is who's gone huh oh you're the ghost let's go"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 119.18,
+    "status": "ok",
+    "text": "Oh he got a heart attack"
+   },
+   "payoff_code_4b": {
+    "code": "P_PUNISH",
+    "effective_code": "P_PUNISH",
+    "quote": "Oh he got a heart attack",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 35,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/35_FnzjGyuYTAU.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/FnzjGyuYTAU.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "FnzjGyuYTAU"
+}

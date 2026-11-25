@@ -1,0 +1,943 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 60.72,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 11.47,
+   "first_cut_minus_first_row_start": 11.47,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.506,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 2.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「脱獄不可能な」→ 白「牢獄に」→ 白「閉じ込められた」→ **緑**「Dreamを」",
+      "time_raw": "0.00〜2.53",
+      "visual": "暗い黒曜石の部屋。**溶岩の向こうの小部屋に Dream が1人で座っている**（1ショット）"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「テクノブレイドが」",
+      "time_raw": "2.73〜3.00",
+      "visual": "紫の鎧の BadBoyHalo（名前の表示）、溶岩"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.8,
+     "music_mean_during_row": 0.47,
+     "nearest_cut_to_end": 7.67,
+     "nearest_cut_to_start": 11.47,
+     "nearest_subtitle_change_to_end": 0.13,
+     "nearest_subtitle_change_to_start": 1.0,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 38.4,
+     "music_mean_during_row": 0.515,
+     "nearest_cut_to_end": 0.13,
+     "nearest_cut_to_start": 0.13,
+     "nearest_subtitle_change_to_end": 0.13,
+     "nearest_subtitle_change_to_start": 1.33,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      36.7
+     ],
+     "start": 35.2
+    },
+    {
+     "end": 60.6,
+     "music_mean_during_row": null,
+     "nearest_cut_to_end": 6.2,
+     "nearest_cut_to_start": 4.5,
+     "nearest_subtitle_change_to_end": 0.87,
+     "nearest_subtitle_change_to_start": 0.17,
+     "row": 2,
+     "spikes_within_row_or_1s_after": [],
+     "start": 58.9
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜をテクノブレイドが助けます」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "35.2秒で「看守に見つかってしまった2人」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 1,
+     "reason": "35.2秒で「ですがここから彼らの本領が発揮されます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 0,
+     "reason": "「すごいと思った方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 34,
+     "content_lemmas": [
+      "脱獄",
+      "牢獄",
+      "閉じ込める",
+      "Dream",
+      "テクノ-techno",
+      "ブレード-blade",
+      "助ける"
+     ],
+     "first_token": {
+      "lemma": "脱獄",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "脱獄"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "テクノブレイド"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 4,
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 5,
+      "形状詞": 1,
+      "接頭辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます"
+    },
+    {
+     "chars": 14,
+     "content_lemmas": [
+      "看守",
+      "見付かる",
+      "仕舞う",
+      "2"
+     ],
+     "first_token": {
+      "lemma": "看守",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "看守"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 2,
+      "接尾辞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "看守に見つかってしまった2人"
+    },
+    {
+     "chars": 19,
+     "content_lemmas": [
+      "此処",
+      "彼",
+      "本領",
+      "発揮",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "です",
+      "pos1": "助動詞",
+      "pos2": "*",
+      "surface": "です"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 2,
+      "助動詞": 3,
+      "助詞": 4,
+      "動詞": 1,
+      "名詞": 2,
+      "接尾辞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "ですがここから彼らの本領が発揮されます"
+    },
+    {
+     "chars": 16,
+     "content_lemmas": [
+      "凄い",
+      "思う",
+      "方",
+      "チャンネル-channel",
+      "登録"
+     ],
+     "first_token": {
+      "lemma": "凄い",
+      "pos1": "形容詞",
+      "pos2": "一般",
+      "surface": "すごい"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": true,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "すご"
+      ],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 3,
+      "形容詞": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "すごいと思った方はチャンネル登録"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "脱獄",
+     1
+    ],
+    [
+     "牢獄",
+     1
+    ],
+    [
+     "閉じ込める",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "テクノ-techno",
+     1
+    ],
+    [
+     "ブレード-blade",
+     1
+    ],
+    [
+     "助ける",
+     1
+    ],
+    [
+     "看守",
+     1
+    ],
+    [
+     "見付かる",
+     1
+    ],
+    [
+     "仕舞う",
+     1
+    ],
+    [
+     "2",
+     1
+    ],
+    [
+     "此処",
+     1
+    ],
+    [
+     "彼",
+     1
+    ],
+    [
+     "本領",
+     1
+    ],
+    [
+     "発揮",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 15,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "テクノグレイドは脱獄不可能な牢",
+     "words": [
+      "テ",
+      "ク",
+      "ノ",
+      "グ",
+      "レ",
+      "イ",
+      "ド",
+      "は",
+      "脱",
+      "獄",
+      "不",
+      "可能",
+      "な",
+      "牢"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 29,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "テクノグレイドは脱獄不可能な牢獄に閉じ込められたドリームを助",
+     "words": [
+      "テ",
+      "ク",
+      "ノ",
+      "グ",
+      "レ",
+      "イ",
+      "ド",
+      "は",
+      "脱",
+      "獄",
+      "不",
+      "可能",
+      "な",
+      "牢",
+      "獄",
+      "に",
+      "閉",
+      "じ",
+      "込",
+      "め",
+      "ら",
+      "れた",
+      "ド",
+      "リ",
+      "ーム",
+      "を",
+      "助"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 32,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "テクノグレイドは脱獄不可能な牢獄に閉じ込められたドリームを助けます",
+     "words": [
+      "テ",
+      "ク",
+      "ノ",
+      "グ",
+      "レ",
+      "イ",
+      "ド",
+      "は",
+      "脱",
+      "獄",
+      "不",
+      "可能",
+      "な",
+      "牢",
+      "獄",
+      "に",
+      "閉",
+      "じ",
+      "込",
+      "め",
+      "ら",
+      "れた",
+      "ド",
+      "リ",
+      "ーム",
+      "を",
+      "助",
+      "け",
+      "ます"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 34,
+    "end": 3.8,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "脱獄",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "脱獄"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "テクノブレイド"
+      ],
+      "question": false
+     },
+     "text": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜をテクノブレイドが助けます」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "テクノグレイドは脱獄不可能な牢獄に閉じ込められたドリームを助けます",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 2.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「脱獄不可能な」→ 白「牢獄に」→ 白「閉じ込められた」→ **緑**「Dreamを」",
+      "time_raw": "0.00〜2.53",
+      "visual": "暗い黒曜石の部屋。**溶岩の向こうの小部屋に Dream が1人で座っている**（1ショット）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "テ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 9.41,
+    "rows": [
+     {
+      "chars": 34,
+      "chars_per_sec": 8.95,
+      "duration": 3.8,
+      "gap_to_next_row": 31.4,
+      "row": 0
+     },
+     {
+      "chars": 33,
+      "chars_per_sec": 10.31,
+      "duration": 3.2,
+      "gap_to_next_row": 20.5,
+      "row": 1
+     },
+     {
+      "chars": 16,
+      "chars_per_sec": 9.41,
+      "duration": 1.7,
+      "gap_to_next_row": null,
+      "row": 2
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 83
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.4,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 66,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream",
+      "テクノブレイド"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "看守に見つかってしまった2人"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "ですがここから彼らの本領が発揮されます"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": true,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "すご"
+     ],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 2,
+     "text": "すごいと思った方はチャンネル登録"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "Dream「待って本当に自由になれの」",
+       "range_raw": "48〜50",
+       "source": "doc_structure",
+       "source_file": "dream/individual/51_wYRkhfRSjDs.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 5
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "脱獄不可能な牢獄に閉じ込められたDreamをテクノブレイドが助けます",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "wYRkhfRSjDs"
+    },
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "BadBoyHalo との戦い",
+       "range_raw": "36.7〜48",
+       "source": "doc_structure",
+       "source_file": "dream/individual/51_wYRkhfRSjDs.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 4
+      }
+     ],
+     "from_part": 1,
+     "from_quote": "ですがここから彼らの本領が発揮されます",
+     "from_role": "R_REHOOK",
+     "from_row": 1,
+     "from_start": 35.2,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "wYRkhfRSjDs"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW",
+    "R_SETUP",
+    "R_REHOOK",
+    "R_CTA"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_PROCESS",
+     "effective_code": "D_PROCESS",
+     "quote": "Oh, I used the blueprints. I burrowed in underground and swam up through the lava with fire resistance.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_SUCCESS",
+     "effective_code": "P_SUCCESS",
+     "quote": "You're gonna be free, Connor.",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "牢獄の Dream、ナレーション",
+      "range_raw": "0〜3.8",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "Technoblade（白）「おはようDream」→ Dream（緑）「ちょ待って...」→「君は俺のこと」「尊敬してないの?w」→「違うよw」→「ど、どうやって来たの?」",
+      "range_raw": "4〜13",
+      "stage_label": "再会"
+     },
+     {
+      "content": "「設計図を使ったんよ」→「地下に穴を掘って...」→「マグマの中泳いできたんだよ」→「火炎耐性使ってね」→ オオカミ「俺の愛犬も連れて来たよ」（名前 Apollo）→「火炎耐性切れかけてるし」「あんま持ってないからー」→ TNTで壁を壊す「これで俺の愛犬死なないといいな」",
+      "range_raw": "14.5〜28",
+      "stage_label": "侵入方法"
+     },
+     {
+      "content": "溶岩の外へ → 看守（赤）「Dream戻れ!!」→ 赤「看守に見つかってしまった2人」",
+      "range_raw": "29.8〜35",
+      "stage_label": "脱出開始"
+     },
+     {
+      "content": "「ですがここから」「彼らの本領が発揮されます」（赤い粒子＝ロケット花火の爆発）→ BadBoyHalo との戦い",
+      "range_raw": "36.7〜48",
+      "stage_label": "第2の予告と戦闘"
+     },
+     {
+      "content": "Dream「待って本当に自由になれの」→「何てこったい」",
+      "range_raw": "48〜50",
+      "stage_label": "脱出成功"
+     },
+     {
+      "content": "外の家で2人が踊る 白「※喜びの舞」→ 🤫の絵文字と赤の引用符「\"最強の2人\"」→「すごいと思った方は」「チャンネル登録」",
+      "range_raw": "51.3〜60.7",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     5,
+     11,
+     12,
+     36,
+     41,
+     42,
+     43
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     5.5,
+     11.2,
+     11.35,
+     12.0,
+     12.2,
+     36.7,
+     41.6,
+     42.25,
+     42.8,
+     43.9
+    ],
+    "cuts": 20,
+    "cuts_per_5s": {
+     "10": 3,
+     "15": 2,
+     "20": 2,
+     "25": 2,
+     "30": 2,
+     "35": 4,
+     "45": 3,
+     "50": 2
+    },
+    "duration_sec": 60.72,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "middle",
+      "row": 1,
+      "start": 35.2
+     },
+     {
+      "position": "end",
+      "row": 2,
+      "start": 58.9
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 60.6,
+    "is_end_position": true,
+    "sec_from_end": 0.12,
+    "start": 58.9,
+    "status": "DOC_OBSERVED",
+    "text": "すごいと思った方はチャンネル登録"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 0,
+     "reason": "「すごいと思った方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 58.0,
+    "status": "ok",
+    "text": "スゴいと思った方はチャンネル登録!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 56.2,
+    "status": "ok",
+    "text": "チャンネル登録をお願いいたします"
+   },
+   "payoff_code_4b": {
+    "code": "P_SUCCESS",
+    "effective_code": "P_SUCCESS",
+    "quote": "You're gonna be free, Connor.",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 51,
+ "not_applicable": [],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/51_wYRkhfRSjDs.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/wYRkhfRSjDs.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "wYRkhfRSjDs"
+}

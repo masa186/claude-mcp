@@ -1,0 +1,899 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 56.8,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 0.13,
+   "first_cut_minus_first_row_start": 0.13,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.529,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamの」",
+      "time_raw": "0.00〜0.53",
+      "visual": "溶岩の海の上、**村人を横に並べてできた橋**の上を歩く（一人称）"
+     },
+     {
+      "end": 1.47,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「友人の中で唯一」",
+      "time_raw": "0.73〜1.47",
+      "visual": "橋の村人の1人が**ニヤけた顔のミーム画像**に"
+     },
+     {
+      "end": 2.27,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「道徳心のない」",
+      "time_raw": "1.73〜2.27",
+      "visual": "カット。溶岩の上に村人が何列も並んで橋になっている [実測: 1.67, 2.20]"
+     },
+     {
+      "end": 2.73,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「馬鹿タレは」",
+      "time_raw": "2.53〜2.73",
+      "visual": "同上"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「間違えなく彼です」",
+      "time_raw": "3.00",
+      "visual": "**モザイク**"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.8,
+     "music_mean_during_row": 0.368,
+     "nearest_cut_to_end": 0.6,
+     "nearest_cut_to_start": 0.13,
+     "nearest_subtitle_change_to_end": 0.13,
+     "nearest_subtitle_change_to_start": 0.6,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 41.4,
+     "music_mean_during_row": 0.632,
+     "nearest_cut_to_end": 0.07,
+     "nearest_cut_to_start": 0.17,
+     "nearest_subtitle_change_to_end": 0.07,
+     "nearest_subtitle_change_to_start": 0.9,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      41.45
+     ],
+     "start": 36.9
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「道徳心のない馬鹿タレは間違えなく彼です」と強いレッテルで断定",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "36.9秒で「そんなサイコパス野郎Groxですが」と前提を置き直す",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 1,
+     "reason": "36.9秒で「〜に選ばれた場合こうなります」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 32,
+     "content_lemmas": [
+      "Dream",
+      "友人",
+      "中",
+      "唯一",
+      "道徳",
+      "無い",
+      "馬鹿",
+      "垂れ",
+      "間違える",
+      "彼"
+     ],
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": true,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "唯一"
+      ],
+      "ending_type": "です(断定)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 2,
+      "助詞": 5,
+      "動詞": 1,
+      "名詞": 7,
+      "形容詞": 1,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "Dreamの友人の中で唯一道徳心のない馬鹿タレは間違えなく彼です"
+    },
+    {
+     "chars": 17,
+     "content_lemmas": [
+      "サイコ-psycho",
+      "パス-pass",
+      "野郎",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "そんな",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "そんな"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [
+       "サイコパス"
+      ],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 1,
+      "名詞": 4,
+      "連体詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "そんなサイコパス野郎Groxですが"
+    },
+    {
+     "chars": 25,
+     "content_lemmas": [
+      "Dream",
+      "6",
+      "ハンター-hunter",
+      "選ぶ",
+      "場合",
+      "こう",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 3,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 4,
+      "接尾辞": 2
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "Dreamの6人目ハンターに選ばれた場合こうなります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "Dream",
+     2
+    ],
+    [
+     "友人",
+     1
+    ],
+    [
+     "中",
+     1
+    ],
+    [
+     "唯一",
+     1
+    ],
+    [
+     "道徳",
+     1
+    ],
+    [
+     "無い",
+     1
+    ],
+    [
+     "馬鹿",
+     1
+    ],
+    [
+     "垂れ",
+     1
+    ],
+    [
+     "間違える",
+     1
+    ],
+    [
+     "彼",
+     1
+    ],
+    [
+     "サイコ-psycho",
+     1
+    ],
+    [
+     "パス-pass",
+     1
+    ],
+    [
+     "野郎",
+     1
+    ],
+    [
+     "Grox",
+     1
+    ],
+    [
+     "6",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamの友人の中で唯一道徳心のない馬鹿タレは間違えなく彼です"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 7,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームの友人の",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "友",
+      "人",
+      "の"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamの友人の中で唯一道徳心のない馬鹿タレは間違えなく彼です"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 23,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームの友人の中で唯一 道徳心のないバクタレは間",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "友",
+      "人",
+      "の",
+      "中",
+      "で",
+      "唯",
+      "一",
+      " 道",
+      "徳",
+      "心",
+      "の",
+      "ない",
+      "バ",
+      "ク",
+      "タ",
+      "レ",
+      "は",
+      "間"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamの友人の中で唯一道徳心のない馬鹿タレは間違えなく彼です"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 50,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームの友人の中で唯一 道徳心のないバクタレは間違いなく彼ですoh let's go diamonds how",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "友",
+      "人",
+      "の",
+      "中",
+      "で",
+      "唯",
+      "一",
+      " 道",
+      "徳",
+      "心",
+      "の",
+      "ない",
+      "バ",
+      "ク",
+      "タ",
+      "レ",
+      "は",
+      "間",
+      "違",
+      "い",
+      "なく",
+      "彼",
+      "です",
+      "oh",
+      " let",
+      "'s",
+      " go",
+      " diamonds",
+      " how"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 32,
+    "end": 3.8,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamの友人の中で唯一道徳心のない馬鹿タレは間違えなく彼です"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": true,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "唯一"
+      ],
+      "ending_type": "です(断定)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "Dreamの友人の中で唯一道徳心のない馬鹿タレは間違えなく彼です"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「道徳心のない馬鹿タレは間違えなく彼です」と強いレッテルで断定",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_LABEL",
+    "effective_code": "H_LABEL",
+    "quote": "ドリームの友人の中で唯一 道徳心のないバクタレは間違いなく彼です",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamの」",
+      "time_raw": "0.00〜0.53",
+      "visual": "溶岩の海の上、**村人を横に並べてできた橋**の上を歩く（一人称）"
+     },
+     {
+      "end": 1.47,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「友人の中で唯一」",
+      "time_raw": "0.73〜1.47",
+      "visual": "橋の村人の1人が**ニヤけた顔のミーム画像**に"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ド"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.88,
+    "rows": [
+     {
+      "chars": 32,
+      "chars_per_sec": 8.42,
+      "duration": 3.8,
+      "gap_to_next_row": 33.1,
+      "row": 0
+     },
+     {
+      "chars": 42,
+      "chars_per_sec": 9.33,
+      "duration": 4.5,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 74
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.72,
+    "gap_max": 0.08,
+    "gap_median": 0.08,
+    "gaps_ge_0.3s": 0,
+    "n_words": 60,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": true,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "唯一"
+     ],
+     "ending_type": "です(断定)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "Dreamの友人の中で唯一道徳心のない馬鹿タレは間違えなく彼です"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [
+      "サイコパス"
+     ],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox"
+     ],
+     "question": false,
+     "row": 1,
+     "text": "そんなサイコパス野郎Groxですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": true,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 1,
+     "text": "Dreamの6人目ハンターに選ばれた場合こうなります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「この弾丸も君のだな!!!」（撃つ）",
+       "range_raw": "41〜53",
+       "source": "doc_structure",
+       "source_file": "dream/individual/40_Xb34KasPZyE.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 5
+      }
+     ],
+     "from_part": 1,
+     "from_quote": "Dreamの6人目ハンターに選ばれた場合こうなります",
+     "from_role": "R_REHOOK",
+     "from_row": 1,
+     "from_start": 36.9,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "Xb34KasPZyE"
+    }
+   ],
+   "role_sequence": [
+    "R_LABEL",
+    "R_SETUP",
+    "R_REHOOK"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_ESCALATE",
+     "effective_code": "D_ESCALATE",
+     "quote": "Dude, with anvils too?",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "I think these bullets are all...",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "村人の橋、ニヤけ顔、ナレーション",
+      "range_raw": "0〜3.8",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「ダイヤモンドあったぞ!!」→「はてどうやって渡ろう」→ 村人を積んで橋を作る「よっしゃ逝けｪｪ!!!」「マジお前達最高だよ」「素晴らしいアイデアだ」",
+      "range_raw": "4〜10",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「ｵｫｵｵｵｵｳｩｩ///」「おい笑える」→「ねぇ誰か」「この橋試してくれない?」→ 村人「いいね」「ジャンプしてみて」→「終わった...」→「まだ信用できん」「しばくぞ」",
+      "range_raw": "10〜22",
+      "stage_label": "繰り返し"
+     },
+     {
+      "content": "「納得いかないな」→ 金床を落とす「耐えれるんだろ?」「金床もいけんの?!」→「おっけぃちょっとキツいか」→ 村人ごと溶岩に落ちる「この橋は安全じゃねｪｪｪ」「うえいほら見ろ」「な?安全じゃなかったろ?」",
+      "range_raw": "22〜36",
+      "stage_label": "エスカレート"
+     },
+     {
+      "content": "ナレーション「そんなサイコパス野郎Groxですが」→ **Dream の顔の画像**「Dreamの6人目ハンターに」→ 名前の並ぶ画面「選ばれた場合こうなります」",
+      "range_raw": "36.9〜41.4",
+      "stage_label": "第2の予告"
+     },
+     {
+      "content": "Grox「待てよ、」→ 村人「おいマジか」→「あの〇ツおかしいだろw」→ 村人の女性に「デートいつにする?」→ 別の村人「彼女は僕のだゾ!!!」→ Grox が花を渡す「彼女君のだったの?」→「この弾丸も君のだな!!!」（撃つ）",
+      "range_raw": "41〜53",
+      "stage_label": "後半（別の素材）"
+     },
+     {
+      "content": "村の家の前、Dream が通る → 赤の引用符「\"村人、無事全滅\"」",
+      "range_raw": "53.9〜56.8",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     26,
+     29,
+     31,
+     32,
+     33,
+     41,
+     45,
+     49,
+     51,
+     53
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     26.35,
+     29.55,
+     31.3,
+     32.4,
+     33.6,
+     41.45,
+     45.55,
+     49.65,
+     51.5,
+     53.6
+    ],
+    "cuts": 35,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 3,
+     "15": 3,
+     "20": 3,
+     "25": 2,
+     "30": 4,
+     "35": 1,
+     "40": 4,
+     "45": 4,
+     "5": 4,
+     "50": 2
+    },
+    "duration_sec": 56.8,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "middle",
+      "row": 1,
+      "start": 36.9
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 41.4,
+    "is_end_position": false,
+    "sec_from_end": 15.4,
+    "start": 36.9,
+    "status": "DOC_OBSERVED",
+    "text": "そんなサイコパス野郎Groxですが Dreamの6人目ハンターに選ばれた場合こうなります"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "36.9秒で「そんなサイコパス野郎Groxですが」と前提を置き直す",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 1,
+     "reason": "36.9秒で「〜に選ばれた場合こうなります」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 52.4,
+    "status": "ok",
+    "text": "I think these bullets are all..."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 52.44,
+    "status": "ok",
+    "text": "I think these bullets are all-"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "I think these bullets are all...",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 40,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/40_Xb34KasPZyE.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/Xb34KasPZyE.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "Xb34KasPZyE"
+}

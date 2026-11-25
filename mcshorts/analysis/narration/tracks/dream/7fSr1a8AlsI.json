@@ -1,0 +1,1686 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.87,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.87,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.55,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.6,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.49,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.51,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.03,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.43,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.49,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.5,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.46,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 6
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.54,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.65,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 7
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.52,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.59,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 8
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.52,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.69,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.52,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.69,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.01,
+    "Sound effect": 0.01,
+    "Speech": 0.52,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.41,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.01,
+    "Sound effect": 0.02,
+    "Speech": 0.34,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.49,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 13
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.52,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.59,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 14
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.49,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.56,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 15
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.58,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.66,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 16
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.57,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.65,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 17
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.04,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.58,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.64,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 18
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.08,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.68,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.77,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 19
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.6,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.69,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 20
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.45,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 21
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.53,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 22
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.54,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.65,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 23
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.47,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.18,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 24
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.19,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 25
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.46,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.01,
+    "Sound effect": 0.03,
+    "Speech": 0.11,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 26
+   }
+  ],
+  "source": "dream/data/audiotag/7fSr1a8AlsI.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "D_PROCESS",
+    "effective_code": "D_PROCESS",
+    "quote": "Let's check how many frames.",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "H_LABEL",
+    "effective_code": "H_LABEL",
+    "quote": "ドリームの鍵技はすべてやらせです",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "That's crazy!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "Dream（緑）の（白）→ 神技は（白）→ 全てヤラセです（赤）",
+  "voice": "ドリームの神技は全てヤラセです。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.071,
+   "doc_text": "Dreamの神技は全てヤラセです",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": false,
+   "end": 1.8,
+   "row_index": 0,
+   "start": 0.0,
+   "whisper_ja_overlapping_segments": [
+    0
+   ],
+   "whisper_ja_overlapping_text": "ドリームの鍵技はすべてやらせです"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "実測"
+     ],
+     "text": "音: 0.1・0.75・2.05秒に音の突出 [実測]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "冒頭の書き起こし直し（「ドリームの鍵技はすべてやらせです」）と字幕が一致（神技を「鍵技」と聞き間違い）[書き起こし][画面]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし"
+     ],
+     "text": "以降は配信者本人の英語の声（「He already gets his wood instantly」「Let's check how many frames」）の和訳 [書き起こし]"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行目 黄「ヤラセと間違える」、2行目 **赤の文字**「神着地」（2行目が他より小さい）。全編同じ（1.8秒の変化は映像の動き）[実測・画面]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: 配信者が Dream のスピードランのプレイをコマ送りで検証するリアクション動画 [画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 12回、1ショット平均 2.18秒 [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 8回（検出）、字幕が出ている時間 62% [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 平均 0.52 [音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "効果音: 音の突出が26回で多い（コマ送りの1コマごとに効果音）[実測]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: **「Dreamの神技は全てヤラセです」**という、Dream ファンが反発するような**挑発の断定**。ファンもアンチも止まる言い方"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: **ナレーションの「ヤラセです」を、テロップで「ヤラセと間違える（ほどすごい）」と打ち消している**。ナレーションは釣り、テロップは本当の意味。#08・#49 と同じ「ナレーションとテロップで逆を言う」手"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: 「本当にヤラセか？」を**コマ送りで検証**する、という調べる過程。視聴者も一緒に数える。28.3秒と短い"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: Dream の過去の「ヤラセ騒動」（スピードランの記録の疑惑）を知っている人には、**その騒動を逆手に取った**題材"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": 0.27,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**緑**「Dreamの」",
+     "time_raw": "0.00〜0.27",
+     "visual": "左上に顔出しの配信者、Dream の映像（空中から落ちる）"
+    },
+    {
+     "end": 0.73,
+     "start": 0.53,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「神技は」",
+     "time_raw": "0.53〜0.73",
+     "visual": "作業台が飛ぶ → 作業台の画面 [実測: 0.60]"
+    },
+    {
+     "end": 1.73,
+     "start": 1.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「全てヤラセです」",
+     "time_raw": "1.00〜1.73",
+     "visual": "作業台の画面 → ボートで着地 [実測: 1.13]"
+    },
+    {
+     "end": 3.0,
+     "start": 2.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "オレンジ「じゃーねDream笑」",
+     "time_raw": "2.00〜3.00",
+     "visual": "落下 → 作業台の画面 [実測: 2.73]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/57_7fSr1a8AlsI.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "挑発の断定",
+     "content_status": "DOC_OBSERVED",
+     "end": 3.0,
+     "range_raw": "0〜3",
+     "stage_label": "冒頭",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "配信者（青字幕）「ﾎｯ///」→「もう木材をカーソルに」→「合わせてるの？一瞬で？」",
+     "content_status": "DOC_OBSERVED",
+     "end": 9.0,
+     "range_raw": "3〜9",
+     "stage_label": "疑い",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 3.0
+    },
+    {
+     "content": "作業台の画面をコマ送り「フレーム数えてみる」→「1」→「3フレーム？」→「お、いや多分」→「木材に触れてるな」→「ok正確には」",
+     "content_status": "DOC_OBSERVED",
+     "end": 22.0,
+     "range_raw": "9〜22",
+     "stage_label": "検証",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 9.0
+    },
+    {
+     "content": "「but」「あれは一瞬だった」→「これはイカれてるわ！」",
+     "content_status": "DOC_OBSERVED",
+     "end": 26.0,
+     "range_raw": "22.8〜26",
+     "stage_label": "結論",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 22.8
+    },
+    {
+     "content": "☠️の絵文字と赤の引用符「\"疑うほどの着地\"」",
+     "content_status": "DOC_OBSERVED",
+     "end": 28.3,
+     "range_raw": "26.9〜28.3",
+     "stage_label": "オチ",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 26.9
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [],
+  "rows": [
+   {
+    "end": 1.8,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "Dreamの神技は全てヤラセです"
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamの神技は全てヤラセです"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 28.33,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -40.1,
+    -11.4,
+    -12.8,
+    -17.3,
+    -14.5,
+    -15.2,
+    -15.5,
+    -17.3,
+    -17.6,
+    -19.9,
+    -13.1,
+    -15.0,
+    -15.0,
+    -16.0,
+    -23.3
+   ],
+   "max_db": -8.9,
+   "median_db": -20.3,
+   "onset": 0.0,
+   "p95_db": -11.4,
+   "spikes": [
+    0.1,
+    0.75,
+    2.05,
+    3.85,
+    4.65,
+    5.55,
+    6.05,
+    6.5,
+    6.9,
+    7.25,
+    8.1,
+    8.5,
+    10.25,
+    10.5,
+    11.9,
+    13.7,
+    14.75,
+    15.85,
+    16.15,
+    17.05,
+    17.75,
+    20.65,
+    21.05,
+    23.25,
+    23.6,
+    23.75
+   ]
+  },
+  "cuts": [
+   0.6,
+   1.13,
+   2.73,
+   7.87,
+   9.07,
+   9.73,
+   11.4,
+   22.73,
+   23.13,
+   24.07,
+   24.47,
+   28.13
+  ],
+  "cuts_first3s": [
+   0.6,
+   1.13,
+   2.73
+  ],
+  "dur": 28.33,
+  "layout": {
+   "content": [
+    29,
+    404
+   ],
+   "play": [
+    105,
+    406
+   ],
+   "top": [
+    29,
+    105
+   ]
+  },
+  "motion_median": 0.33,
+  "moves": [
+   [
+    1.8,
+    2.07
+   ]
+  ],
+  "n_shots": 13,
+  "n_subs": 8,
+  "shot_mean": 2.18,
+  "shot_median": 0.94,
+  "source": "dream/data/measure/7fSr1a8AlsI.json",
+  "status": "ok",
+  "sub_changes": [
+   0.6,
+   1.13,
+   2.73,
+   7.87,
+   9.07,
+   9.73,
+   11.4,
+   22.73
+  ],
+  "sub_on_ratio": 0.62,
+  "top_changes": [
+   1.8
+  ]
+ },
+ "no": 57,
+ "video_id": "7fSr1a8AlsI",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 3.0,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "My dream!"
+   },
+   {
+    "category": "latin",
+    "end": 5.0,
+    "segment_index": 1,
+    "start": 3.0,
+    "text": "You're telling me..."
+   },
+   {
+    "category": "latin",
+    "end": 8.0,
+    "segment_index": 2,
+    "start": 5.0,
+    "text": "He already gets his wood instantly."
+   },
+   {
+    "category": "latin",
+    "end": 10.0,
+    "segment_index": 3,
+    "start": 8.0,
+    "text": "Now let's go back."
+   },
+   {
+    "category": "latin",
+    "end": 12.0,
+    "segment_index": 4,
+    "start": 10.0,
+    "text": "Let's check how many frames."
+   },
+   {
+    "category": "other",
+    "end": 13.0,
+    "segment_index": 5,
+    "start": 12.0,
+    "text": "One..."
+   },
+   {
+    "category": "other",
+    "end": 14.0,
+    "segment_index": 6,
+    "start": 13.0,
+    "text": "Two..."
+   },
+   {
+    "category": "latin",
+    "end": 16.0,
+    "segment_index": 7,
+    "start": 14.0,
+    "text": "Three frames."
+   },
+   {
+    "category": "latin",
+    "end": 17.0,
+    "segment_index": 8,
+    "start": 16.0,
+    "text": "He's instantly..."
+   },
+   {
+    "category": "latin",
+    "end": 18.0,
+    "segment_index": 9,
+    "start": 17.0,
+    "text": "Oh, like five frames."
+   },
+   {
+    "category": "latin",
+    "end": 20.0,
+    "segment_index": 10,
+    "start": 18.0,
+    "text": "He's on the planks."
+   },
+   {
+    "category": "latin",
+    "end": 22.0,
+    "segment_index": 11,
+    "start": 20.0,
+    "text": "Okay, that's not five frames, but you know what I'm saying."
+   },
+   {
+    "category": "latin",
+    "end": 23.0,
+    "segment_index": 12,
+    "start": 22.0,
+    "text": "Like, that was instant, bro."
+   },
+   {
+    "category": "latin",
+    "end": 24.0,
+    "segment_index": 13,
+    "start": 23.0,
+    "text": "That's crazy!"
+   },
+   {
+    "category": "latin",
+    "end": 26.0,
+    "segment_index": 14,
+    "start": 24.0,
+    "text": "Oh my god!"
+   },
+   {
+    "category": "latin",
+    "end": 28.0,
+    "segment_index": 15,
+    "start": 26.0,
+    "text": "I love you, baby."
+   }
+  ],
+  "source": "dream/data/asr/7fSr1a8AlsI.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 1.8,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "ドリームの鍵技はすべてやらせです",
+    "words": [
+     {
+      "end": 0.18,
+      "start": 0.0,
+      "word": "ド"
+     },
+     {
+      "end": 0.28,
+      "start": 0.18,
+      "word": "リ"
+     },
+     {
+      "end": 0.4,
+      "start": 0.28,
+      "word": "ーム"
+     },
+     {
+      "end": 0.54,
+      "start": 0.4,
+      "word": "の"
+     },
+     {
+      "end": 0.72,
+      "start": 0.54,
+      "word": "鍵"
+     },
+     {
+      "end": 0.9,
+      "start": 0.72,
+      "word": "技"
+     },
+     {
+      "end": 1.06,
+      "start": 0.9,
+      "word": "は"
+     },
+     {
+      "end": 1.16,
+      "start": 1.06,
+      "word": "す"
+     },
+     {
+      "end": 1.22,
+      "start": 1.16,
+      "word": "べ"
+     },
+     {
+      "end": 1.32,
+      "start": 1.22,
+      "word": "て"
+     },
+     {
+      "end": 1.44,
+      "start": 1.32,
+      "word": "や"
+     },
+     {
+      "end": 1.54,
+      "start": 1.44,
+      "word": "ら"
+     },
+     {
+      "end": 1.64,
+      "start": 1.54,
+      "word": "せ"
+     },
+     {
+      "end": 1.8,
+      "start": 1.64,
+      "word": "です"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 2.8,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 1,
+    "start": 1.8,
+    "text": "バイドリーム!",
+    "words": [
+     {
+      "end": 2.16,
+      "start": 1.8,
+      "word": "バイ"
+     },
+     {
+      "end": 2.46,
+      "start": 2.16,
+      "word": "ド"
+     },
+     {
+      "end": 2.56,
+      "start": 2.46,
+      "word": "リ"
+     },
+     {
+      "end": 2.8,
+      "start": 2.56,
+      "word": "ーム!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 4.48,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 2,
+    "start": 3.38,
+    "text": "You're telling me...",
+    "words": [
+     {
+      "end": 3.7,
+      "start": 3.38,
+      "word": "You"
+     },
+     {
+      "end": 3.76,
+      "start": 3.7,
+      "word": "'re"
+     },
+     {
+      "end": 3.94,
+      "start": 3.76,
+      "word": " telling"
+     },
+     {
+      "end": 4.22,
+      "start": 3.94,
+      "word": " me"
+     },
+     {
+      "end": 4.48,
+      "start": 4.22,
+      "word": "..."
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 4.82,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 3,
+    "start": 4.48,
+    "text": "HOO!",
+    "words": [
+     {
+      "end": 4.74,
+      "start": 4.48,
+      "word": "H"
+     },
+     {
+      "end": 4.82,
+      "start": 4.74,
+      "word": "OO!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 7.56,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 4,
+    "start": 5.54,
+    "text": "He already gets his wood instantly",
+    "words": [
+     {
+      "end": 5.94,
+      "start": 5.54,
+      "word": "He"
+     },
+     {
+      "end": 6.3,
+      "start": 5.94,
+      "word": " already"
+     },
+     {
+      "end": 6.62,
+      "start": 6.3,
+      "word": " gets"
+     },
+     {
+      "end": 6.78,
+      "start": 6.62,
+      "word": " his"
+     },
+     {
+      "end": 7.06,
+      "start": 6.78,
+      "word": " wood"
+     },
+     {
+      "end": 7.56,
+      "start": 7.06,
+      "word": " instantly"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 8.62,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 5,
+    "start": 7.56,
+    "text": "Now let's go back",
+    "words": [
+     {
+      "end": 8.14,
+      "start": 7.56,
+      "word": "Now"
+     },
+     {
+      "end": 8.32,
+      "start": 8.14,
+      "word": " let"
+     },
+     {
+      "end": 8.36,
+      "start": 8.32,
+      "word": "'s"
+     },
+     {
+      "end": 8.44,
+      "start": 8.36,
+      "word": " go"
+     },
+     {
+      "end": 8.62,
+      "start": 8.44,
+      "word": " back"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 10.84,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 6,
+    "start": 9.68,
+    "text": "Let's check how many frames",
+    "words": [
+     {
+      "end": 10.08,
+      "start": 9.68,
+      "word": "Let"
+     },
+     {
+      "end": 10.32,
+      "start": 10.08,
+      "word": "'s"
+     },
+     {
+      "end": 10.42,
+      "start": 10.32,
+      "word": " check"
+     },
+     {
+      "end": 10.5,
+      "start": 10.42,
+      "word": " how"
+     },
+     {
+      "end": 10.58,
+      "start": 10.5,
+      "word": " many"
+     },
+     {
+      "end": 10.84,
+      "start": 10.58,
+      "word": " frames"
+     }
+    ]
+   },
+   {
+    "category": "other",
+    "end": 11.98,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 7,
+    "start": 11.58,
+    "text": "1",
+    "words": [
+     {
+      "end": 11.98,
+      "start": 11.58,
+      "word": "1"
+     }
+    ]
+   },
+   {
+    "category": "other",
+    "end": 13.78,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 8,
+    "start": 13.38,
+    "text": "2",
+    "words": [
+     {
+      "end": 13.78,
+      "start": 13.38,
+      "word": "2"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 15.26,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 9,
+    "start": 14.46,
+    "text": "3 frames",
+    "words": [
+     {
+      "end": 14.86,
+      "start": 14.46,
+      "word": "3"
+     },
+     {
+      "end": 15.26,
+      "start": 14.86,
+      "word": " frames"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 16.78,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 10,
+    "start": 15.26,
+    "text": "He's instantly...",
+    "words": [
+     {
+      "end": 15.88,
+      "start": 15.26,
+      "word": "He"
+     },
+     {
+      "end": 16.02,
+      "start": 15.88,
+      "word": "'s"
+     },
+     {
+      "end": 16.44,
+      "start": 16.02,
+      "word": " instantly"
+     },
+     {
+      "end": 16.78,
+      "start": 16.44,
+      "word": "..."
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 18.22,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 11,
+    "start": 16.78,
+    "text": "Oh like 5 frames",
+    "words": [
+     {
+      "end": 17.18,
+      "start": 16.78,
+      "word": "Oh"
+     },
+     {
+      "end": 17.6,
+      "start": 17.18,
+      "word": " like"
+     },
+     {
+      "end": 17.9,
+      "start": 17.6,
+      "word": " 5"
+     },
+     {
+      "end": 18.22,
+      "start": 17.9,
+      "word": " frames"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 19.52,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 12,
+    "start": 18.22,
+    "text": "He's on the planks",
+    "words": [
+     {
+      "end": 18.7,
+      "start": 18.22,
+      "word": "He"
+     },
+     {
+      "end": 18.84,
+      "start": 18.7,
+      "word": "'s"
+     },
+     {
+      "end": 18.96,
+      "start": 18.84,
+      "word": " on"
+     },
+     {
+      "end": 19.1,
+      "start": 18.96,
+      "word": " the"
+     },
+     {
+      "end": 19.34,
+      "start": 19.1,
+      "word": " pl"
+     },
+     {
+      "end": 19.52,
+      "start": 19.34,
+      "word": "anks"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 21.4,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 13,
+    "start": 20.26,
+    "text": "Okay that's not 5 frames",
+    "words": [
+     {
+      "end": 20.66,
+      "start": 20.26,
+      "word": "Okay"
+     },
+     {
+      "end": 20.78,
+      "start": 20.66,
+      "word": " that"
+     },
+     {
+      "end": 20.84,
+      "start": 20.78,
+      "word": "'s"
+     },
+     {
+      "end": 20.94,
+      "start": 20.84,
+      "word": " not"
+     },
+     {
+      "end": 21.12,
+      "start": 20.94,
+      "word": " 5"
+     },
+     {
+      "end": 21.4,
+      "start": 21.12,
+      "word": " frames"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 21.98,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 14,
+    "start": 21.4,
+    "text": "But you know what I'm saying",
+    "words": [
+     {
+      "end": 21.56,
+      "start": 21.4,
+      "word": "But"
+     },
+     {
+      "end": 21.62,
+      "start": 21.56,
+      "word": " you"
+     },
+     {
+      "end": 21.7,
+      "start": 21.62,
+      "word": " know"
+     },
+     {
+      "end": 21.78,
+      "start": 21.7,
+      "word": " what"
+     },
+     {
+      "end": 21.84,
+      "start": 21.78,
+      "word": " I"
+     },
+     {
+      "end": 21.84,
+      "start": 21.84,
+      "word": "'m"
+     },
+     {
+      "end": 21.98,
+      "start": 21.84,
+      "word": " saying"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 22.98,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 15,
+    "start": 21.98,
+    "text": "That was instant bro",
+    "words": [
+     {
+      "end": 22.24,
+      "start": 21.98,
+      "word": "That"
+     },
+     {
+      "end": 22.4,
+      "start": 22.24,
+      "word": " was"
+     },
+     {
+      "end": 22.78,
+      "start": 22.4,
+      "word": " instant"
+     },
+     {
+      "end": 22.98,
+      "start": 22.78,
+      "word": " bro"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 23.92,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 16,
+    "start": 22.98,
+    "text": "That's crazy",
+    "words": [
+     {
+      "end": 23.3,
+      "start": 22.98,
+      "word": "That"
+     },
+     {
+      "end": 23.52,
+      "start": 23.3,
+      "word": "'s"
+     },
+     {
+      "end": 23.92,
+      "start": 23.52,
+      "word": " crazy"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 25.66,
+    "logprob": -0.36,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 17,
+    "start": 24.52,
+    "text": "Oh my god!",
+    "words": [
+     {
+      "end": 24.92,
+      "start": 24.52,
+      "word": "Oh"
+     },
+     {
+      "end": 25.32,
+      "start": 24.92,
+      "word": " my"
+     },
+     {
+      "end": 25.66,
+      "start": 25.32,
+      "word": " god!"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/7fSr1a8AlsI.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}

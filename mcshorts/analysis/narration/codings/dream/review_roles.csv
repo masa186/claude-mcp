@@ -1,0 +1,20 @@
+item_id,kind,video_id,seconds,quote,classification,reason,certainty,evidence,確認結果（正しい/違う）,正しい分類,メモ
+role:UQ14cHsyEkA:1:1,文の役割,UQ14cHsyEkA,52.2〜57.0,息子に弾丸をぶち込まれても無傷なゴーレムが最高に狂ってますね,R_COMMENT（感想・ツッコミ）,「〜が最高に狂ってますね」と最後の感想,UNVERIFIED,,正しい,,
+role:bqyhes0V7Qc:0:0,文の役割,bqyhes0V7Qc,0.27〜3.0,ガチャガチャで引いたアイテムを使い生き残る,R_FRAGMENT（文の途中（区切りの断片））,次の部分（いつメン4人組）を修飾する文の途中,UNVERIFIED,,違う,R_SETUP,ガチャのアイテムで生き残るという企画のルール・前提を説明しているため
+role:eg0_YckR1Iw:0:0,文の役割,eg0_YckR1Iw,0.0〜4.7,仲間のため命を捧げたGeorge,R_SETUP（前提・状況の説明）,「仲間のため命を捧げたGeorge」と前回の出来事を述べる,UNVERIFIED,,正しい,,前回の出来事を示し、その後の展開の前提になっているため
+role:eg0_YckR1Iw:0:1,文の役割,eg0_YckR1Iw,0.0〜4.7,その意思を注いだDream達に更なる悲劇が訪れます,R_RESULT_PREVIEW（結果・結末の予告）,「更なる悲劇が訪れます」と結末を予告,UNVERIFIED,,正しい,,
+role:eg0_YckR1Iw:1:1,文の役割,eg0_YckR1Iw,36.0〜39.7,サップナップがまさかの行動に出ます,R_REHOOK（中盤の再フック） 副：R_TWIST_PREVIEW,36.0秒で「〜がまさかの行動に出ます」と引き直す,UNVERIFIED,,正しい,,主分類：R_REHOOK、副分類：R_TWIST_PREVIEW
+role:lpfTNQ5dR70:1:0,文の役割,lpfTNQ5dR70,6.4〜7.9,どこか様子がおかしいです,R_TWIST_PREVIEW（ひねりの予告）,6.4秒で「どこか様子がおかしいです」と違和感を予告（10秒より前）,UNVERIFIED,,正しい,,
+role:lpfTNQ5dR70:3:2,文の役割,lpfTNQ5dR70,53.2〜59.5,そう思った方はいいねタッチ,R_CTA（呼びかけ（登録・いいね））,「そう思った方はいいねタッチ」,UNVERIFIED,,正しい,,
+role:lzD1xJ46ZC4:0:0,文の役割,lzD1xJ46ZC4,0.0〜2.8,村人に追われ絶体絶命のピンチに陥るGrox,R_INTRO（人物・状況の紹介） 副：R_SETUP,「〜ピンチに陥るGrox」の紹介,UNVERIFIED,,違う,R_SETUP,ピンチという状況を示し、直後の「しかし〜逃げ切ります」の前提になっているため
+role:mRndDDRWz00:0:0,文の役割,mRndDDRWz00,0.32〜2.9,8年間プレイしたハードコアが台無しになる瞬間,R_RESULT_PREVIEW（結果・結末の予告）,「〜が台無しになる瞬間」と結末を先に言う（「8年間」の数字）,UNVERIFIED,,正しい,,予告の分類と、実際に回収されたかは別扱い
+role:p4osmEVx7hY:1:0,文の役割,p4osmEVx7hY,5.3〜8.4,（字幕は1コマに出ず）…ピンチになります,R_RESULT_PREVIEW（結果・結末の予告）,「…ピンチになります」と結果を予告（文書に「字幕は1コマに出ず」と注記）,UNVERIFIED・注意：文の一部が取れていない,,保留,,文の一部が欠けているため、R_RESULT_PREVIEWとは確定しない
+role:sJDbLVB340o:1:0,文の役割,sJDbLVB340o,50.3〜54.2,どんどん減っていく村人たちですが,R_SETUP（前提・状況の説明）,50.3秒で「どんどん減っていく村人たちですが」と状況を述べる,UNVERIFIED,,正しい,,
+role:snRuzLtmLX4:0:0,文の役割,snRuzLtmLX4,0.27〜3.1,何やかんややらかして村人にボコボコにされるGrox,R_INTRO（人物・状況の紹介） 副：R_SETUP,「〜ボコボコにされるGrox」の紹介,UNVERIFIED,,違う,R_SETUP,次の「ですが〜危機から逃れます」の前提になっているため
+role:xGF9lFQyjpY:0:0,文の役割,xGF9lFQyjpY,0.0〜2.7,もしあなたがマイクラの豚になってしまったらどうなるでしょうか？,R_QUESTION（視聴者への問いかけ）,「〜になってしまったらどうなるでしょうか？」と問う,UNVERIFIED,,正しい,,
+foreshadow:BwGk9qgSqfU:0:1,伏線,BwGk9qgSqfU,0.0〜,数秒後、彼らに悲劇が訪れます,LINKED,,UNVERIFIED,doc_structure：George の死亡画面「GeorgeNotFound was slain by TITAN」,正しい,,
+foreshadow:BwGk9qgSqfU:1:1,伏線,BwGk9qgSqfU,30.5〜,ですがこの後、Georgeがまさかの行動に出ます,LINKED,,UNVERIFIED,doc_structure：白「※資材を全てDreamに渡している」,違う,LINKED,状態（LINKED）は正しい。回収の根拠を 構成の表の 44〜59 秒（段階名「犠牲」） の、Georgeがネザーゲート前で巨人を引きつける場面に修正
+foreshadow:MzpvoTEXweE:0:1,伏線,MzpvoTEXweE,0.0〜,数秒後彼に悲劇が訪れます,LINKED,,UNVERIFIED,"doc_structure：赤の引用符「""痛すぎてリタイア""」",違う,LINKED,状態（LINKED）は正しい。回収の根拠を 構成の表の 4.9〜15 秒（段階名「最初の電流」） の、最初の電流を受ける場面に修正
+foreshadow:loiMd64_c6Q:0:0,伏線,loiMd64_c6Q,0.0〜,彼はありえない方法でクリーパーを退治します,LINKED,,UNVERIFIED,doc_structure：「このゲームから消されるんだ!」,違う,LINKED,状態（LINKED）は正しい。回収の根拠を 構成の表の 32.8〜35.4 秒（段階名「オチ」） の、クリーパーが消える場面に修正
+foreshadow:lzD1xJ46ZC4:2:1,伏線,lzD1xJ46ZC4,22.1〜,彼の巧妙な作戦によって状況は一変します,LINKED,,UNVERIFIED,doc_structure：子供が大群に囲まれる,違う,LINKED,状態（LINKED）は正しい。回収の根拠を 構成の表の 27〜42 秒（段階名「作戦」） の、身代わりを作る作戦に修正
+foreshadow:wYRkhfRSjDs:1:1,伏線,wYRkhfRSjDs,35.2〜,ですがここから彼らの本領が発揮されます,LINKED,,UNVERIFIED,doc_structure：BadBoyHalo との戦い,違う,LINKED,状態（LINKED）は正しい。回収の根拠を 構成の表の 48〜50 秒（段階名「脱出成功」） の、脱出成功の場面に修正

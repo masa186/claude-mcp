@@ -1,0 +1,1197 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 60.16,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 3.73,
+   "first_cut_minus_first_row_start": 3.73,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.473,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 1.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**青**「スカイブロックで」→ 白「生活することになった」",
+      "time_raw": "0.00〜1.73",
+      "visual": "空中に浮かぶ小さな島（木1本と土）に3人が立つ。カメラがゆっくり回る"
+     },
+     {
+      "end": 2.53,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamの友達」",
+      "time_raw": "2.00〜2.53",
+      "visual": "同上"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「三人組ですが」",
+      "time_raw": "2.73〜3.00",
+      "visual": "同上、島の真ん中に黄色い「？」のブロック"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.5,
+     "music_mean_during_row": 0.54,
+     "nearest_cut_to_end": 0.23,
+     "nearest_cut_to_start": 3.73,
+     "nearest_subtitle_change_to_end": 0.23,
+     "nearest_subtitle_change_to_start": 0.73,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 7.9,
+     "music_mean_during_row": 0.617,
+     "nearest_cut_to_end": 0.1,
+     "nearest_cut_to_start": 0.13,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 0.13,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      7.15
+     ],
+     "start": 6.4
+    },
+    {
+     "end": 31.7,
+     "music_mean_during_row": 0.438,
+     "nearest_cut_to_end": 1.77,
+     "nearest_cut_to_start": 0.93,
+     "nearest_subtitle_change_to_end": 1.77,
+     "nearest_subtitle_change_to_start": 0.27,
+     "row": 2,
+     "spikes_within_row_or_1s_after": [],
+     "start": 26.8
+    },
+    {
+     "end": 59.5,
+     "music_mean_during_row": 0.633,
+     "nearest_cut_to_end": 1.37,
+     "nearest_cut_to_start": 1.0,
+     "nearest_subtitle_change_to_end": 0.57,
+     "nearest_subtitle_change_to_start": 0.73,
+     "row": 3,
+     "spikes_within_row_or_1s_after": [],
+     "start": 53.2
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜三人組ですが」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "ひねりの予告",
+     "part": 0,
+     "reason": "6.4秒で「どこか様子がおかしいです」と違和感を予告（10秒より前）",
+     "role": "R_TWIST_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "26.8秒で「状況は更に悪化しますが」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 2,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 1,
+     "reason": "26.8秒で「この先の悲劇を知りません」と引き直す",
+     "role": "R_REHOOK",
+     "row": 2,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "次の問いかけにつながる文の途中",
+     "role": "R_FRAGMENT",
+     "row": 3,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 1,
+     "reason": "「〜できたでしょうか？」と問う",
+     "role": "R_QUESTION",
+     "row": 3,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 2,
+     "reason": "「そう思った方はいいねタッチ」",
+     "role": "R_CTA",
+     "row": 3,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 32,
+     "content_lemmas": [
+      "スカイ-sky",
+      "ブロック-block",
+      "生活",
+      "為る",
+      "事",
+      "成る",
+      "Dream",
+      "友達",
+      "三",
+      "組"
+     ],
+     "first_token": {
+      "lemma": "スカイ-sky",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "スカイ"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 8,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "スカイブロックで生活することになったDreamの友達三人組ですが"
+    },
+    {
+     "chars": 12,
+     "content_lemmas": [
+      "何処",
+      "様子",
+      "可笑しい"
+     ],
+     "first_token": {
+      "lemma": "何処",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "どこ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": true,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "です(断定)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 1,
+      "助詞": 2,
+      "名詞": 1,
+      "形容詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "どこか様子がおかしいです"
+    },
+    {
+     "chars": 18,
+     "content_lemmas": [
+      "続く",
+      "塵",
+      "引き",
+      "状況",
+      "更に",
+      "悪化",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "続く",
+      "pos1": "動詞",
+      "pos2": "非自立可能",
+      "surface": "続く"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 4
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "続くゴミ引きで状況は更に悪化しますが"
+    },
+    {
+     "chars": 17,
+     "content_lemmas": [
+      "彼",
+      "未だ",
+      "先",
+      "悲劇",
+      "知る"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "悲劇"
+      ],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "副詞": 1,
+      "助動詞": 2,
+      "助詞": 3,
+      "動詞": 1,
+      "名詞": 2,
+      "接尾辞": 1,
+      "連体詞": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "彼らはまだこの先の悲劇を知りません"
+    },
+    {
+     "chars": 15,
+     "content_lemmas": [
+      "若し",
+      "場",
+      "Dream",
+      "居る"
+     ],
+     "first_token": {
+      "lemma": "若し",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "もし"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助詞": 3,
+      "動詞": 1,
+      "名詞": 2,
+      "連体詞": 1
+     },
+     "row": 3,
+     "status": "DOC_OBSERVED",
+     "text": "もしこの場にDreamがいれば"
+    },
+    {
+     "chars": 28,
+     "content_lemmas": [
+      "彼",
+      "少し",
+      "スカイ-sky",
+      "ブロック-block",
+      "プレー-play",
+      "出来る"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "問いかけ",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": true
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "副詞": 1,
+      "助動詞": 3,
+      "助詞": 3,
+      "動詞": 1,
+      "名詞": 3,
+      "形状詞": 1,
+      "接尾辞": 1,
+      "補助記号": 1
+     },
+     "row": 3,
+     "status": "DOC_OBSERVED",
+     "text": "彼らは少しまともにスカイブロックをプレイできたでしょうか？"
+    },
+    {
+     "chars": 13,
+     "content_lemmas": [
+      "そう",
+      "思う",
+      "方",
+      "良い",
+      "タッチ-touch"
+     ],
+     "first_token": {
+      "lemma": "そう",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "そう"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": true,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 2,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 2,
+      "形容詞": 1
+     },
+     "row": 3,
+     "status": "DOC_OBSERVED",
+     "text": "そう思った方はいいねタッチ"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "スカイ-sky",
+     2
+    ],
+    [
+     "ブロック-block",
+     2
+    ],
+    [
+     "為る",
+     2
+    ],
+    [
+     "Dream",
+     2
+    ],
+    [
+     "彼",
+     2
+    ],
+    [
+     "生活",
+     1
+    ],
+    [
+     "事",
+     1
+    ],
+    [
+     "成る",
+     1
+    ],
+    [
+     "友達",
+     1
+    ],
+    [
+     "三",
+     1
+    ],
+    [
+     "組",
+     1
+    ],
+    [
+     "何処",
+     1
+    ],
+    [
+     "様子",
+     1
+    ],
+    [
+     "可笑しい",
+     1
+    ],
+    [
+     "続く",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "スカイブロックで生活することになったDreamの友達三人組ですが"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 12,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "スカイブロックで生活する",
+     "words": [
+      "ス",
+      "カ",
+      "イ",
+      "ブ",
+      "ロ",
+      "ック",
+      "で",
+      "生活",
+      "する"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "スカイブロックで生活することになったDreamの友達三人組ですが"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 27,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "スカイブロックで生活することになったドリームの友達3人組",
+     "words": [
+      "ス",
+      "カ",
+      "イ",
+      "ブ",
+      "ロ",
+      "ック",
+      "で",
+      "生活",
+      "する",
+      "こと",
+      "にな",
+      "った",
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "友",
+      "達",
+      "3",
+      "人",
+      "組"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "スカイブロックで生活することになったDreamの友達三人組ですが"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 30,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "スカイブロックで生活することになったドリームの友達3人組ですが",
+     "words": [
+      "ス",
+      "カ",
+      "イ",
+      "ブ",
+      "ロ",
+      "ック",
+      "で",
+      "生活",
+      "する",
+      "こと",
+      "にな",
+      "った",
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "友",
+      "達",
+      "3",
+      "人",
+      "組",
+      "です",
+      "が"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 32,
+    "end": 3.5,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "スカイブロックで生活することになったDreamの友達三人組ですが"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "スカイ-sky",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "スカイ"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "スカイブロックで生活することになったDreamの友達三人組ですが"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜三人組ですが」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_TWIST",
+    "effective_code": "H_TWIST",
+    "quote": "スカイブロックで生活することになったドリームの友達3人組ですが",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 1.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**青**「スカイブロックで」→ 白「生活することになった」",
+      "time_raw": "0.00〜1.73",
+      "visual": "空中に浮かぶ小さな島（木1本と土）に3人が立つ。カメラがゆっくり回る"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ス"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.45,
+    "rows": [
+     {
+      "chars": 32,
+      "chars_per_sec": 9.14,
+      "duration": 3.5,
+      "gap_to_next_row": 2.9,
+      "row": 0
+     },
+     {
+      "chars": 12,
+      "chars_per_sec": 8.0,
+      "duration": 1.5,
+      "gap_to_next_row": 18.9,
+      "row": 1
+     },
+     {
+      "chars": 35,
+      "chars_per_sec": 7.14,
+      "duration": 4.9,
+      "gap_to_next_row": 21.5,
+      "row": 2
+     },
+     {
+      "chars": 56,
+      "chars_per_sec": 8.89,
+      "duration": 6.3,
+      "gap_to_next_row": null,
+      "row": 3
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 135
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 2.22,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 106,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "スカイブロックで生活することになったDreamの友達三人組ですが"
+    },
+    {
+     "adversative": false,
+     "assertion": true,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "です(断定)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "どこか様子がおかしいです"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 2,
+     "text": "続くゴミ引きで状況は更に悪化しますが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "悲劇"
+     ],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 2,
+     "text": "彼らはまだこの先の悲劇を知りません"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 3,
+     "text": "もしこの場にDreamがいれば"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "問いかけ",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": true,
+     "row": 3,
+     "text": "彼らは少しまともにスカイブロックをプレイできたでしょうか？"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": true,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 2,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 3,
+     "text": "そう思った方はいいねタッチ"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "ウォーデン（強いモブ）が出てくる",
+       "range_raw": "3.8〜8",
+       "source": "doc_structure",
+       "source_file": "dream/individual/44_lpfTNQ5dR70.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 1
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "どこか様子がおかしいです",
+     "from_role": "R_TWIST_PREVIEW",
+     "from_row": 1,
+     "from_start": 6.4,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "lpfTNQ5dR70"
+    },
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「Georgeがデカくなったw」",
+       "range_raw": "42.8〜52",
+       "source": "doc_structure",
+       "source_file": "dream/individual/44_lpfTNQ5dR70.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 1,
+     "from_quote": "彼らはまだこの先の悲劇を知りません",
+     "from_role": "R_REHOOK",
+     "from_row": 2,
+     "from_start": 26.8,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "lpfTNQ5dR70"
+    }
+   ],
+   "role_sequence": [
+    "R_SETUP",
+    "R_TWIST_PREVIEW",
+    "R_SETUP",
+    "R_REHOOK",
+    "R_FRAGMENT",
+    "R_QUESTION",
+    "R_CTA"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_ESCALATE",
+     "effective_code": "D_ESCALATE",
+     "quote": "続くゴミ引きで状況はさらに悪化しますが",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_PUNISH",
+     "effective_code": "P_PUNISH",
+     "quote": "George has failed.",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "空中の小島、ナレーション",
+      "range_raw": "0〜3.5",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "模様のブロックの床、ウォーデン（強いモブ）が出てくる → ナレーション「どこか様子が」「おかしいです」",
+      "range_raw": "3.8〜8",
+      "stage_label": "違和感"
+     },
+     {
+      "content": "ラッキーブロック「ｱﾌｰｲｯGeorge行け」「George行け×3」→「何もらった？」「何てこったい」",
+      "range_raw": "8〜13",
+      "stage_label": "事件1"
+     },
+     {
+      "content": "巨大な何か（ウォーデン？）「ｵｫｫｫｫｯﾂﾎｯﾎｯ///」→ 赤い画面「出ていけ!!」「今すぐ立ち去れ!!」→ 暗い中「これはハチだ！」",
+      "range_raw": "15〜25",
+      "stage_label": "事件2"
+     },
+     {
+      "content": "ナレーション「続くゴミ引きで」「状況は更に悪化しますが」「彼らはまだ」「この先の悲劇を知りません」",
+      "range_raw": "27〜31.7",
+      "stage_label": "第2の予告"
+     },
+     {
+      "content": "「よしウォーデン倒すぞ」→ 死亡画面 → 落とし穴にウォーデンを落とす →「\"討伐成功\"」「イェス!!」「ウォーデン倒した！」",
+      "range_raw": "31.9〜42",
+      "stage_label": "展開"
+     },
+     {
+      "content": "「マジかGeorge...」「それ本気で言ってる？」→ 暗い穴 → 島が大きくなる？→「Georgeがデカくなったw」→ 😏＋白の引用符「\"トラブルメーカーGeorge\"」",
+      "range_raw": "42.8〜52",
+      "stage_label": "悲劇"
+     },
+     {
+      "content": "巨大な George と小さな島。ナレーション「もしこの場にDreamがいれば」「彼らは少しまともに」「スカイブロックを」「プレイできたでしょうか？」「そう思った方は」「いいねタッチ」",
+      "range_raw": "54〜60.2",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     3,
+     7
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     7.15
+    ],
+    "cuts": 27,
+    "cuts_per_5s": {
+     "0": 2,
+     "10": 1,
+     "15": 2,
+     "20": 4,
+     "25": 3,
+     "30": 3,
+     "35": 2,
+     "40": 1,
+     "45": 3,
+     "5": 2,
+     "50": 3,
+     "55": 1
+    },
+    "duration_sec": 60.16,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.33,
+      "t": 3
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 6.4
+     },
+     {
+      "position": "middle",
+      "row": 2,
+      "start": 26.8
+     },
+     {
+      "position": "end",
+      "row": 3,
+      "start": 53.2
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 59.5,
+    "is_end_position": true,
+    "sec_from_end": 0.66,
+    "start": 53.2,
+    "status": "DOC_OBSERVED",
+    "text": "もしこの場にDreamがいれば 彼らは少しまともにスカイブロックをプレイできたでしょうか？ そう思った方はいいねタッチ"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "次の問いかけにつながる文の途中",
+     "role": "R_FRAGMENT",
+     "row": 3,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 1,
+     "reason": "「〜できたでしょうか？」と問う",
+     "role": "R_QUESTION",
+     "row": 3,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 2,
+     "reason": "「そう思った方はいいねタッチ」",
+     "role": "R_CTA",
+     "row": 3,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 58.0,
+    "status": "ok",
+    "text": "If you think about it, you'll be able to play it."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 57.92,
+    "status": "ok",
+    "text": "そう思った方はいいねタッチ"
+   },
+   "payoff_code_4b": {
+    "code": "P_PUNISH",
+    "effective_code": "P_PUNISH",
+    "quote": "George has failed.",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 44,
+ "not_applicable": [],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/44_lpfTNQ5dR70.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/lpfTNQ5dR70.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "lpfTNQ5dR70"
+}

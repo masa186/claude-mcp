@@ -1,0 +1,1956 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.13,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.21,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.9,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.02,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.33,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.52,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.22,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.35,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.48,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.1,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.5,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.04,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.53,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.48,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.04,
+    "Music": 0.53,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 6
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.53,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.45,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 7
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.14,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.49,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 8
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.45,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.5,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.59,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.59,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.04,
+    "Music": 0.47,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.52,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.57,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.38,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 13
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.54,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.4,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 14
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.04,
+    "Music": 0.53,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.56,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 15
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.52,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 16
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.45,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.46,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 17
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.03,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.04,
+    "Music": 0.41,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.56,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 18
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.13,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.28,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.6,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 19
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.46,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.02,
+    "t": 20
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.34,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.5,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 21
+   }
+  ],
+  "source": "dream/data/audiotag/S8OLvKN4-o8.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "D_BATTLE",
+    "effective_code": "D_BATTLE",
+    "quote": "I'm cutting him off!",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "Dreamがハート0.5の状態で槍を使い3Kリします",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "What?!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "Dreamが（緑）→ ハート0.5の状態で（赤）→ 槍を使い（白）→ 3キルします（白）",
+  "voice": "ドリームがハート0.5（れいてんご）の状態で槍を使い、3（さん）キルします。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.786,
+   "doc_text": "Dreamがハート0.5の状態で槍を使い3キルします",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": false,
+   "end": 3.0,
+   "row_index": 0,
+   "start": 0.0,
+   "whisper_ja_overlapping_segments": [
+    0
+   ],
+   "whisper_ja_overlapping_text": "Dreamがハート0.5の状態で槍を使い3Kリします"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "音: Music は 0.2〜0.3 と小さく、ナレーションを聞かせる [音タグ]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "冒頭の書き起こし直しと字幕が一致 [書き起こし][画面]"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行目 黄「瀕死の状態から」、2行目 **赤の大きな文字**「大逆転1vs3」。全編同じ [実測]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: Dream のマンハント。体力0.5から槍（トライデント）で3人を倒す [画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 4回、1ショット平均 4.64秒 [実測]。**ほぼ1カット**（一人称の長回し）"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 3回（検出）、字幕が出ている時間 6%（青・紫の字幕は検出しにくい）[実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 平均 0.45 [音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "声: 全編で英語の声（Speech 0.4〜0.8）[音タグ]。追う側の声の臨場感が中心"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "効果音: 目立つ音の判定なし [音タグ]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: 「ハート0.5」という**数字で絶体絶命が分かる**。体力ゲージの寄りの画で実際に見せる。「3キルします」で結果まで言い切る"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: 「瀕死」と「大逆転」の落差、「1vs3」の数字"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: 23.2秒と短い。追う側の声（「逃げ道を塞ぐぞ」「いいぞ」）で包囲が狭まるのが分かり、そこから一瞬で逆転する"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: Dream の代名詞の「マンハント」の逆転劇。ただ**倒す瞬間が速く**（1〜2秒）、何が起きたか分かりにくい"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": 0.53,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**緑**「Dreamが」",
+     "time_raw": "0.00〜0.53",
+     "visual": "森の一人称視点"
+    },
+    {
+     "end": 1.73,
+     "start": 0.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「ハート0.5の状態で」",
+     "time_raw": "0.73〜1.73",
+     "visual": "体力ゲージの寄り（**ハートが半分1つだけ**）"
+    },
+    {
+     "end": 2.27,
+     "start": 2.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「槍を使い」",
+     "time_raw": "2.00〜2.27",
+     "visual": "カット。上から見下ろした Sapnap（赤く光る＝ダメージ）[実測: 1.87]"
+    },
+    {
+     "end": 3.0,
+     "start": 2.53,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「3キルします」",
+     "time_raw": "2.53〜3.00",
+     "visual": "カット。空に吹き飛ぶ相手 [実測: 2.53]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/42_S8OLvKN4-o8.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "体力ゲージ、ナレーション",
+     "content_status": "DOC_OBSERVED",
+     "end": 3.0,
+     "range_raw": "0〜3",
+     "stage_label": "冒頭",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "追う側（英語の声、字幕）「3v1だ！」→「えーっと...」→「ANTはまだ地下にいる」→「回ってる」→「逃げ道を塞ぐぞ」「見えた見えた見えた」",
+     "content_status": "DOC_OBSERVED",
+     "end": 12.0,
+     "range_raw": "3.3〜12",
+     "stage_label": "状況説明",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 3.3
+    },
+    {
+     "content": "「いいぞいいぞ」→「いいぞDreamから離れるな」",
+     "content_status": "DOC_OBSERVED",
+     "end": 18.0,
+     "range_raw": "12.6〜18",
+     "stage_label": "緊張",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 12.6
+    },
+    {
+     "content": "崖から飛び降りる Dream →「死ねぇｪｪｪ！」「ちょまっ...」→ 追う側「アイツいつ槍作ったんだよ！」「ｲｪｪｪｪｪｪｱｧｯｽ!!!」",
+     "content_status": "DOC_OBSERVED",
+     "end": 21.5,
+     "range_raw": "18〜21.5",
+     "stage_label": "クライマックス",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 18.0
+    },
+    {
+     "content": "追う側「えぇ何？」で終わる",
+     "content_status": "DOC_OBSERVED",
+     "end": 23.2,
+     "range_raw": "21.5〜23.2",
+     "stage_label": "オチ",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 21.5
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [],
+  "rows": [
+   {
+    "end": 3.0,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 23.22,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -39.0,
+    -11.4,
+    -15.2,
+    -17.6,
+    -12.0,
+    -21.7,
+    -17.6,
+    -23.3,
+    -10.9,
+    -11.1,
+    -12.4,
+    -24.8,
+    -16.8,
+    -18.4,
+    -20.8
+   ],
+   "max_db": -7.1,
+   "median_db": -14.5,
+   "onset": 0.0,
+   "p95_db": -9.4,
+   "spikes": []
+  },
+  "cuts": [
+   1.87,
+   2.53,
+   3.2,
+   18.13
+  ],
+  "cuts_first3s": [
+   1.87,
+   2.53
+  ],
+  "dur": 23.22,
+  "layout": {
+   "content": [
+    33,
+    333
+   ],
+   "play": [
+    91,
+    335
+   ],
+   "top": [
+    33,
+    91
+   ]
+  },
+  "motion_median": 12.64,
+  "moves": [],
+  "n_shots": 5,
+  "n_subs": 3,
+  "shot_mean": 4.64,
+  "shot_median": 1.87,
+  "source": "dream/data/measure/S8OLvKN4-o8.json",
+  "status": "ok",
+  "sub_changes": [
+   1.87,
+   2.47,
+   3.2
+  ],
+  "sub_on_ratio": 0.06,
+  "top_changes": []
+ },
+ "no": 42,
+ "video_id": "S8OLvKN4-o8",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 3.2,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "Dream is in a state of heart 0.5."
+   },
+   {
+    "category": "latin",
+    "end": 4.6,
+    "segment_index": 1,
+    "start": 3.2,
+    "text": "I thought I was going to run into that tree?"
+   },
+   {
+    "category": "latin",
+    "end": 5.8,
+    "segment_index": 2,
+    "start": 4.6,
+    "text": "Bad, bad, bad in the..."
+   },
+   {
+    "category": "latin",
+    "end": 7.4,
+    "segment_index": 3,
+    "start": 5.8,
+    "text": "Anastasia on the ground."
+   },
+   {
+    "category": "latin",
+    "end": 8.4,
+    "segment_index": 4,
+    "start": 7.4,
+    "text": "Oh, he went around the mountain?"
+   },
+   {
+    "category": "latin",
+    "end": 9.4,
+    "segment_index": 5,
+    "start": 8.4,
+    "text": "Went around the mountain?"
+   },
+   {
+    "category": "latin",
+    "end": 9.9,
+    "segment_index": 6,
+    "start": 9.4,
+    "text": "Going over?"
+   },
+   {
+    "category": "latin",
+    "end": 10.4,
+    "segment_index": 7,
+    "start": 9.9,
+    "text": "I'm cutting him off!"
+   },
+   {
+    "category": "latin",
+    "end": 11.4,
+    "segment_index": 8,
+    "start": 10.4,
+    "text": "Oh, see him, see him, see him!"
+   },
+   {
+    "category": "latin",
+    "end": 12.4,
+    "segment_index": 9,
+    "start": 11.4,
+    "text": "Nice, nice."
+   },
+   {
+    "category": "latin",
+    "end": 13.2,
+    "segment_index": 10,
+    "start": 12.4,
+    "text": "Oh, he's going down."
+   },
+   {
+    "category": "latin",
+    "end": 13.8,
+    "segment_index": 11,
+    "start": 13.2,
+    "text": "It's a dead end."
+   },
+   {
+    "category": "latin",
+    "end": 14.6,
+    "segment_index": 12,
+    "start": 13.8,
+    "text": "The mountain's a dead end."
+   },
+   {
+    "category": "latin",
+    "end": 15.6,
+    "segment_index": 13,
+    "start": 14.6,
+    "text": "He's nowhere to go."
+   },
+   {
+    "category": "latin",
+    "end": 16.8,
+    "segment_index": 14,
+    "start": 15.6,
+    "text": "Yeah, see him, see him, see him, see him."
+   },
+   {
+    "category": "latin",
+    "end": 17.8,
+    "segment_index": 15,
+    "start": 16.8,
+    "text": "Oh, Dream!"
+   },
+   {
+    "category": "latin",
+    "end": 19.2,
+    "segment_index": 16,
+    "start": 17.8,
+    "text": "He's jumping, he jumped, he jumped!"
+   },
+   {
+    "category": "latin",
+    "end": 19.8,
+    "segment_index": 17,
+    "start": 19.2,
+    "text": "Get him!"
+   },
+   {
+    "category": "latin",
+    "end": 20.6,
+    "segment_index": 18,
+    "start": 19.8,
+    "text": "Wait, get him!"
+   },
+   {
+    "category": "latin",
+    "end": 21.2,
+    "segment_index": 19,
+    "start": 20.6,
+    "text": "Wait, it's me!"
+   },
+   {
+    "category": "latin",
+    "end": 22.2,
+    "segment_index": 20,
+    "start": 21.2,
+    "text": "Yes!"
+   },
+   {
+    "category": "latin",
+    "end": 23.2,
+    "segment_index": 21,
+    "start": 22.2,
+    "text": "What?!"
+   }
+  ],
+  "source": "dream/data/asr/S8OLvKN4-o8.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 3.02,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "Dreamがハート0.5の状態で槍を使い3Kリします",
+    "words": [
+     {
+      "end": 0.16,
+      "start": 0.0,
+      "word": "D"
+     },
+     {
+      "end": 0.38,
+      "start": 0.16,
+      "word": "ream"
+     },
+     {
+      "end": 0.52,
+      "start": 0.38,
+      "word": "が"
+     },
+     {
+      "end": 0.68,
+      "start": 0.52,
+      "word": "ハ"
+     },
+     {
+      "end": 0.82,
+      "start": 0.68,
+      "word": "ート"
+     },
+     {
+      "end": 1.0,
+      "start": 0.82,
+      "word": "0."
+     },
+     {
+      "end": 1.3,
+      "start": 1.12,
+      "word": "5"
+     },
+     {
+      "end": 1.38,
+      "start": 1.3,
+      "word": "の"
+     },
+     {
+      "end": 1.6,
+      "start": 1.38,
+      "word": "状"
+     },
+     {
+      "end": 1.72,
+      "start": 1.6,
+      "word": "態"
+     },
+     {
+      "end": 1.84,
+      "start": 1.72,
+      "word": "で"
+     },
+     {
+      "end": 2.08,
+      "start": 1.84,
+      "word": "槍"
+     },
+     {
+      "end": 2.16,
+      "start": 2.08,
+      "word": "を"
+     },
+     {
+      "end": 2.3,
+      "start": 2.16,
+      "word": "使"
+     },
+     {
+      "end": 2.46,
+      "start": 2.3,
+      "word": "い"
+     },
+     {
+      "end": 2.58,
+      "start": 2.46,
+      "word": "3"
+     },
+     {
+      "end": 2.7,
+      "start": 2.58,
+      "word": "K"
+     },
+     {
+      "end": 2.8,
+      "start": 2.7,
+      "word": "リ"
+     },
+     {
+      "end": 3.02,
+      "start": 2.8,
+      "word": "します"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 3.44,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 1,
+    "start": 3.02,
+    "text": "Dreamがハート0.5の状態で槍を使い3Kリします",
+    "words": [
+     {
+      "end": 3.44,
+      "start": 3.02,
+      "word": "D"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "ream"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "が"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "ハ"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "ート"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "0."
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "5"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "の"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "状"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "態"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "で"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "槍"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "を"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "使"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "い"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "3"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "K"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "リ"
+     },
+     {
+      "end": 3.44,
+      "start": 3.44,
+      "word": "します"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 3.88,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 2,
+    "start": 3.44,
+    "text": "Dreamがハート0.5の状態で槍を使い3Kリします",
+    "words": [
+     {
+      "end": 3.48,
+      "start": 3.44,
+      "word": "D"
+     },
+     {
+      "end": 3.52,
+      "start": 3.48,
+      "word": "ream"
+     },
+     {
+      "end": 3.52,
+      "start": 3.52,
+      "word": "が"
+     },
+     {
+      "end": 3.88,
+      "start": 3.52,
+      "word": "ハ"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "ート"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "0."
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "5"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "の"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "状"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "態"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "で"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "槍"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "を"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "使"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "い"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "3"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "K"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "リ"
+     },
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "します"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 7.46,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 3,
+    "start": 3.88,
+    "text": "Bad in anアナスタルの体の体の体を使って",
+    "words": [
+     {
+      "end": 3.88,
+      "start": 3.88,
+      "word": "B"
+     },
+     {
+      "end": 4.78,
+      "start": 3.88,
+      "word": "ad"
+     },
+     {
+      "end": 5.48,
+      "start": 4.78,
+      "word": " in"
+     },
+     {
+      "end": 5.82,
+      "start": 5.48,
+      "word": " an"
+     },
+     {
+      "end": 5.82,
+      "start": 5.82,
+      "word": "ア"
+     },
+     {
+      "end": 5.96,
+      "start": 5.82,
+      "word": "ナ"
+     },
+     {
+      "end": 6.06,
+      "start": 5.96,
+      "word": "ス"
+     },
+     {
+      "end": 6.14,
+      "start": 6.06,
+      "word": "タ"
+     },
+     {
+      "end": 6.16,
+      "start": 6.14,
+      "word": "ル"
+     },
+     {
+      "end": 6.24,
+      "start": 6.16,
+      "word": "の"
+     },
+     {
+      "end": 6.42,
+      "start": 6.24,
+      "word": "体"
+     },
+     {
+      "end": 6.68,
+      "start": 6.42,
+      "word": "の"
+     },
+     {
+      "end": 6.78,
+      "start": 6.68,
+      "word": "体"
+     },
+     {
+      "end": 6.78,
+      "start": 6.78,
+      "word": "の"
+     },
+     {
+      "end": 6.94,
+      "start": 6.78,
+      "word": "体"
+     },
+     {
+      "end": 7.46,
+      "start": 6.94,
+      "word": "を"
+     },
+     {
+      "end": 7.46,
+      "start": 7.46,
+      "word": "使"
+     },
+     {
+      "end": 7.46,
+      "start": 7.46,
+      "word": "って"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 8.22,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 4,
+    "start": 7.46,
+    "text": "He went around the mountain?",
+    "words": [
+     {
+      "end": 7.48,
+      "start": 7.46,
+      "word": "He"
+     },
+     {
+      "end": 7.78,
+      "start": 7.48,
+      "word": " went"
+     },
+     {
+      "end": 7.98,
+      "start": 7.78,
+      "word": " around"
+     },
+     {
+      "end": 8.06,
+      "start": 7.98,
+      "word": " the"
+     },
+     {
+      "end": 8.22,
+      "start": 8.06,
+      "word": " mountain?"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 8.9,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 5,
+    "start": 8.4,
+    "text": "He went around the mountain?",
+    "words": [
+     {
+      "end": 8.44,
+      "start": 8.4,
+      "word": "He"
+     },
+     {
+      "end": 8.52,
+      "start": 8.44,
+      "word": " went"
+     },
+     {
+      "end": 8.62,
+      "start": 8.52,
+      "word": " around"
+     },
+     {
+      "end": 8.72,
+      "start": 8.62,
+      "word": " the"
+     },
+     {
+      "end": 8.9,
+      "start": 8.72,
+      "word": " mountain?"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 10.34,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 6,
+    "start": 9.6,
+    "text": "I'm cutting him off!",
+    "words": [
+     {
+      "end": 9.84,
+      "start": 9.6,
+      "word": "I"
+     },
+     {
+      "end": 10.08,
+      "start": 9.84,
+      "word": "'m"
+     },
+     {
+      "end": 10.18,
+      "start": 10.08,
+      "word": " cutting"
+     },
+     {
+      "end": 10.32,
+      "start": 10.18,
+      "word": " him"
+     },
+     {
+      "end": 10.34,
+      "start": 10.32,
+      "word": " off!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 11.1,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 7,
+    "start": 10.34,
+    "text": "Oh, see him, see him, see him!",
+    "words": [
+     {
+      "end": 10.42,
+      "start": 10.34,
+      "word": "Oh,"
+     },
+     {
+      "end": 10.58,
+      "start": 10.5,
+      "word": " see"
+     },
+     {
+      "end": 10.66,
+      "start": 10.58,
+      "word": " him,"
+     },
+     {
+      "end": 10.82,
+      "start": 10.7,
+      "word": " see"
+     },
+     {
+      "end": 10.86,
+      "start": 10.82,
+      "word": " him,"
+     },
+     {
+      "end": 10.96,
+      "start": 10.86,
+      "word": " see"
+     },
+     {
+      "end": 11.1,
+      "start": 10.96,
+      "word": " him!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 12.04,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 8,
+    "start": 11.46,
+    "text": "Nice, nice!",
+    "words": [
+     {
+      "end": 11.7,
+      "start": 11.46,
+      "word": "Nice,"
+     },
+     {
+      "end": 12.04,
+      "start": 11.88,
+      "word": " nice!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 13.18,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 9,
+    "start": 12.48,
+    "text": "Oh, he's going down...",
+    "words": [
+     {
+      "end": 12.72,
+      "start": 12.48,
+      "word": "Oh,"
+     },
+     {
+      "end": 12.84,
+      "start": 12.82,
+      "word": " he"
+     },
+     {
+      "end": 12.94,
+      "start": 12.84,
+      "word": "'s"
+     },
+     {
+      "end": 13.02,
+      "start": 12.94,
+      "word": " going"
+     },
+     {
+      "end": 13.12,
+      "start": 13.02,
+      "word": " down"
+     },
+     {
+      "end": 13.18,
+      "start": 13.12,
+      "word": "..."
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 14.42,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 10,
+    "start": 13.18,
+    "text": "The mountain's a dead end!",
+    "words": [
+     {
+      "end": 13.34,
+      "start": 13.18,
+      "word": "The"
+     },
+     {
+      "end": 14.02,
+      "start": 13.34,
+      "word": " mountain"
+     },
+     {
+      "end": 14.12,
+      "start": 14.02,
+      "word": "'s"
+     },
+     {
+      "end": 14.16,
+      "start": 14.12,
+      "word": " a"
+     },
+     {
+      "end": 14.24,
+      "start": 14.16,
+      "word": " dead"
+     },
+     {
+      "end": 14.42,
+      "start": 14.24,
+      "word": " end!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 14.98,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 11,
+    "start": 14.6,
+    "text": "There's nowhere to go",
+    "words": [
+     {
+      "end": 14.6,
+      "start": 14.6,
+      "word": "There"
+     },
+     {
+      "end": 14.7,
+      "start": 14.6,
+      "word": "'s"
+     },
+     {
+      "end": 14.76,
+      "start": 14.7,
+      "word": " nowhere"
+     },
+     {
+      "end": 14.86,
+      "start": 14.76,
+      "word": " to"
+     },
+     {
+      "end": 14.98,
+      "start": 14.86,
+      "word": " go"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 16.72,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 12,
+    "start": 15.46,
+    "text": "Yes, see him, see him, see him!",
+    "words": [
+     {
+      "end": 15.7,
+      "start": 15.46,
+      "word": "Yes,"
+     },
+     {
+      "end": 15.98,
+      "start": 15.86,
+      "word": " see"
+     },
+     {
+      "end": 16.2,
+      "start": 15.98,
+      "word": " him,"
+     },
+     {
+      "end": 16.36,
+      "start": 16.3,
+      "word": " see"
+     },
+     {
+      "end": 16.42,
+      "start": 16.36,
+      "word": " him,"
+     },
+     {
+      "end": 16.58,
+      "start": 16.46,
+      "word": " see"
+     },
+     {
+      "end": 16.72,
+      "start": 16.58,
+      "word": " him!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 17.36,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 13,
+    "start": 16.82,
+    "text": "Oh,Dream!",
+    "words": [
+     {
+      "end": 16.92,
+      "start": 16.82,
+      "word": "Oh,"
+     },
+     {
+      "end": 17.16,
+      "start": 17.16,
+      "word": "D"
+     },
+     {
+      "end": 17.36,
+      "start": 17.16,
+      "word": "ream!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 18.04,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 14,
+    "start": 17.72,
+    "text": "He's jumping!",
+    "words": [
+     {
+      "end": 17.86,
+      "start": 17.72,
+      "word": "He"
+     },
+     {
+      "end": 17.92,
+      "start": 17.86,
+      "word": "'s"
+     },
+     {
+      "end": 18.04,
+      "start": 17.92,
+      "word": " jumping!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 18.44,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 15,
+    "start": 18.16,
+    "text": "He jumped, jumped!",
+    "words": [
+     {
+      "end": 18.16,
+      "start": 18.16,
+      "word": "He"
+     },
+     {
+      "end": 18.28,
+      "start": 18.16,
+      "word": " jumped,"
+     },
+     {
+      "end": 18.44,
+      "start": 18.36,
+      "word": " jumped!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 19.6,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 16,
+    "start": 19.12,
+    "text": "Get him!",
+    "words": [
+     {
+      "end": 19.36,
+      "start": 19.12,
+      "word": "Get"
+     },
+     {
+      "end": 19.6,
+      "start": 19.36,
+      "word": " him!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 20.4,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 17,
+    "start": 19.82,
+    "text": "Wait, get him!",
+    "words": [
+     {
+      "end": 19.92,
+      "start": 19.82,
+      "word": "Wait,"
+     },
+     {
+      "end": 20.28,
+      "start": 20.14,
+      "word": " get"
+     },
+     {
+      "end": 20.4,
+      "start": 20.28,
+      "word": " him!"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 21.26,
+    "logprob": -0.72,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 18,
+    "start": 20.62,
+    "text": "Wait, let me see him!",
+    "words": [
+     {
+      "end": 20.62,
+      "start": 20.62,
+      "word": "Wait,"
+     },
+     {
+      "end": 20.72,
+      "start": 20.72,
+      "word": " let"
+     },
+     {
+      "end": 20.84,
+      "start": 20.72,
+      "word": " me"
+     },
+     {
+      "end": 20.96,
+      "start": 20.84,
+      "word": " see"
+     },
+     {
+      "end": 21.26,
+      "start": 20.96,
+      "word": " him!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 21.96,
+    "logprob": -0.92,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 19,
+    "start": 21.26,
+    "text": "イエーイ!",
+    "words": [
+     {
+      "end": 21.26,
+      "start": 21.26,
+      "word": "イ"
+     },
+     {
+      "end": 21.78,
+      "start": 21.26,
+      "word": "エ"
+     },
+     {
+      "end": 21.8,
+      "start": 21.78,
+      "word": "ー"
+     },
+     {
+      "end": 21.96,
+      "start": 21.8,
+      "word": "イ!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 22.8,
+    "logprob": -0.92,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 20,
+    "start": 21.98,
+    "text": "イエーイ",
+    "words": [
+     {
+      "end": 22.26,
+      "start": 21.98,
+      "word": "イ"
+     },
+     {
+      "end": 22.6,
+      "start": 22.26,
+      "word": "エ"
+     },
+     {
+      "end": 22.8,
+      "start": 22.6,
+      "word": "ー"
+     },
+     {
+      "end": 22.8,
+      "start": 22.8,
+      "word": "イ"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/S8OLvKN4-o8.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}

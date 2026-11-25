@@ -1,0 +1,39 @@
+{
+ "version": "v1",
+ "about": "ナレーションの文（narration_list.md の字幕の行を、日本語どうしの間の空白で区切った「部分」）ごとの役割と、伏線（予告と回収）の分類基準。Claude が文だけを読んで付ける。状態は UNVERIFIED。",
+ "rules": [
+  "1つの部分に主分類（role）を1つ。複数当てはまれば priority の小さいものを主分類にし、残りを also に入れる",
+  "部分の時刻は行（字幕の区間）の時刻をそのまま使う。部分ごとの時刻は作らない（推測になるため）",
+  "R_REHOOK は、動画の開始から10秒以降に出る予告（結果・ひねりの予告）。10秒より前の予告は R_RESULT_PREVIEW / R_TWIST_PREVIEW",
+  "伏線は「予告の部分」と「回収にあたる箇所」を、両方の引用で結ぶ。回収の根拠が文（字幕・Whisper・個別分析の [画面] の内容）に無ければ「回収を文から確認できない」とする"
+ ],
+ "roles": {
+  "R_PROHIBIT": {"priority": 1, "label": "禁止・警告", "definition": "「〜してはいけません」など"},
+  "R_RESULT_PREVIEW": {"priority": 2, "label": "結果・結末の予告", "definition": "結末を先に言う（「〜ことになります」「悲劇が訪れます」「〜します」で結末となる出来事）"},
+  "R_TWIST_PREVIEW": {"priority": 3, "label": "ひねりの予告", "definition": "「〜ですが」「まさかの」「とんでもない〜が起こります」など、予想外の展開を予告し結末は言わない"},
+  "R_REHOOK": {"priority": 4, "label": "中盤の再フック", "definition": "10秒以降に、次の展開を予告して引き直す"},
+  "R_RESOLVE": {"priority": 5, "label": "結果の報告・回収", "definition": "後半で、起きた結果を述べる（「〜が勝ちましたが」など）"},
+  "R_QUESTION": {"priority": 6, "label": "視聴者への問いかけ", "definition": "「〜でしょうか」「〜分かりますか」など"},
+  "R_CTA": {"priority": 7, "label": "呼びかけ（登録・いいね）", "definition": "「〜と思った方はチャンネル登録」など"},
+  "R_LABEL": {"priority": 8, "label": "断定・レッテル", "definition": "人物や物事を強く断定・評価する（「〜はヤラセです」「この男は〜」）"},
+  "R_COMMENT": {"priority": 9, "label": "感想・ツッコミ", "definition": "語り手の感想・評価・ツッコミ"},
+  "R_INTRO": {"priority": 10, "label": "人物・状況の紹介", "definition": "「〜する〇〇」のように、誰が何をしているかを紹介する（結果・ひねりは言わない）"},
+  "R_SETUP": {"priority": 11, "label": "前提・状況の説明", "definition": "その後の展開の前提となる事実・状況を述べる（「〜ですが」の前半の事実など）"},
+  "R_EXPLAIN": {"priority": 12, "label": "解説・補足", "definition": "仕組みや背景の説明"},
+  "R_FRAGMENT": {"priority": 13, "label": "文の途中（区切りの断片）", "definition": "字幕の区切りで文の途中になっている部分（「彼は自分の子供に」など）。前後とつながって意味をなす"},
+  "R_OTHER": {"priority": 14, "label": "その他", "definition": "上のどれにも当てはまらない"}
+ },
+ "foreshadow": {
+  "about": "予告（R_RESULT_PREVIEW / R_TWIST_PREVIEW / R_REHOOK）ごとに、回収にあたる箇所を探す",
+  "evidence_sources": {
+   "doc_narration": "narration_list.md の後の行（DOC_OBSERVED）",
+   "doc_structure": "個別分析の構成の表の「内容」の列（[画面]・DOC_OBSERVED）",
+   "whisper_en": "Whisper 英語指定の区間（ok）",
+   "whisper_ja": "Whisper 日本語指定の区間（ok）"
+  },
+  "status_values": {
+   "LINKED": "回収にあたる箇所を引用で示せた",
+   "NOT_FOUND_IN_TEXT": "回収を文から確認できない（映像だけで回収している可能性はあるが推測しない）"
+  }
+ }
+}

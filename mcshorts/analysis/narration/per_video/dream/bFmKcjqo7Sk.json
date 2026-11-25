@@ -1,0 +1,746 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 33.02,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.07,
+   "first_cut_minus_first_row_start": 1.07,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.423,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 1.0,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「江っ戸い女性にも」",
+      "time_raw": "0.00〜1.00",
+      "visual": "**金髪の女性配信者の顔出し映像**（胸元にモザイク）"
+     },
+     {
+      "end": 1.47,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「容赦しない」",
+      "time_raw": "1.27〜1.47",
+      "visual": "カット。ベッドウォーズの画面、赤いベッド [実測: 1.07]"
+     },
+     {
+      "end": 2.27,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamのライバル」",
+      "time_raw": "1.73〜2.27",
+      "visual": "緑のブロックがベッドに迫る"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**紫**「Daquavis」",
+      "time_raw": "2.53〜3.00",
+      "visual": "同上"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.9,
+     "music_mean_during_row": 0.527,
+     "nearest_cut_to_end": 0.03,
+     "nearest_cut_to_start": 1.07,
+     "nearest_subtitle_change_to_end": 0.77,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.15
+     ],
+     "start": 0.0
+    },
+    {
+     "end": 32.8,
+     "music_mean_during_row": 0.538,
+     "nearest_cut_to_end": 5.53,
+     "nearest_cut_to_start": 1.07,
+     "nearest_subtitle_change_to_end": 0.6,
+     "nearest_subtitle_change_to_start": 0.13,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 26.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「女性にも容赦しない〇〇」と強い評価を付けた紹介",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 0,
+     "reason": "「漢すぎると思った方はいいねタッチ」",
+     "role": "R_CTA",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 31,
+     "content_lemmas": [
+      "コウ",
+      "戸",
+      "女性",
+      "容赦",
+      "為る",
+      "Dream",
+      "ライバル-rival",
+      "Daquavis"
+     ],
+     "first_token": {
+      "lemma": "コウ",
+      "pos1": "名詞",
+      "pos2": "固有名詞",
+      "surface": "江"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "容赦"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis",
+       "Dream",
+       "江"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 3,
+      "動詞": 1,
+      "名詞": 7,
+      "感動詞": 1,
+      "補助記号": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "江っ戸い女性にも容赦しないDreamのライバルDaquavis"
+    },
+    {
+     "chars": 19,
+     "content_lemmas": [
+      "流石",
+      "男",
+      "過ぎる",
+      "思う",
+      "方",
+      "良い",
+      "タッチ-touch"
+     ],
+     "first_token": {
+      "lemma": "流石",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "流石"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": true,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "すぎ"
+      ],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 3,
+      "形容詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "流石に漢すぎると思った方はいいねタッチ"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "コウ",
+     1
+    ],
+    [
+     "戸",
+     1
+    ],
+    [
+     "女性",
+     1
+    ],
+    [
+     "容赦",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "ライバル-rival",
+     1
+    ],
+    [
+     "Daquavis",
+     1
+    ],
+    [
+     "流石",
+     1
+    ],
+    [
+     "男",
+     1
+    ],
+    [
+     "過ぎる",
+     1
+    ],
+    [
+     "思う",
+     1
+    ],
+    [
+     "方",
+     1
+    ],
+    [
+     "良い",
+     1
+    ],
+    [
+     "タッチ-touch",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "江っ戸い女性にも容赦しないDreamのライバルDaquavis"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "えっとい女性にも",
+     "words": [
+      "え",
+      "っと",
+      "い",
+      "女",
+      "性",
+      "に",
+      "も"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "江っ戸い女性にも容赦しないDreamのライバルDaquavis"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 26,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "えっとい女性にも容赦しないドリームのライバルだコアビス",
+     "words": [
+      "え",
+      "っと",
+      "い",
+      "女",
+      "性",
+      "に",
+      "も",
+      "容",
+      "赦",
+      "し",
+      "ない",
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "ライ",
+      "バ",
+      "ル",
+      "だ",
+      "コ",
+      "ア",
+      "ビ",
+      "ス"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "江っ戸い女性にも容赦しないDreamのライバルDaquavis"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 26,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "えっとい女性にも容赦しないドリームのライバルだコアビス",
+     "words": [
+      "え",
+      "っと",
+      "い",
+      "女",
+      "性",
+      "に",
+      "も",
+      "容",
+      "赦",
+      "し",
+      "ない",
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "ライ",
+      "バ",
+      "ル",
+      "だ",
+      "コ",
+      "ア",
+      "ビ",
+      "ス"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 31,
+    "end": 2.9,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "江っ戸い女性にも容赦しないDreamのライバルDaquavis"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "コウ",
+      "pos1": "名詞",
+      "pos2": "固有名詞",
+      "surface": "江"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "容赦"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis",
+       "Dream",
+       "江"
+      ],
+      "question": false
+     },
+     "text": "江っ戸い女性にも容赦しないDreamのライバルDaquavis"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「女性にも容赦しない〇〇」と強い評価を付けた紹介",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_LABEL",
+    "effective_code": "H_LABEL",
+    "quote": "えっとい女性にも容赦しないドリームのライバルだコアビス",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 1.0,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「江っ戸い女性にも」",
+      "time_raw": "0.00〜1.00",
+      "visual": "**金髪の女性配信者の顔出し映像**（胸元にモザイク）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "え"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 6.74,
+    "rows": [
+     {
+      "chars": 31,
+      "chars_per_sec": 10.69,
+      "duration": 2.9,
+      "gap_to_next_row": 23.1,
+      "row": 0
+     },
+     {
+      "chars": 19,
+      "chars_per_sec": 2.79,
+      "duration": 6.8,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 50
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.62,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 46,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "容赦"
+     ],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Daquavis",
+      "Dream",
+      "江"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "江っ戸い女性にも容赦しないDreamのライバルDaquavis"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": true,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "すぎ"
+     ],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "流石に漢すぎると思った方はいいねタッチ"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_LABEL",
+    "R_CTA"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "さすがに男すぎると思った方はいいねタッチ",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "女性配信者、ナレーション",
+      "range_raw": "0〜2.9",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "白の注釈「※凄まじいブロックさばき(?)」（緑のブロックを高速で積む）",
+      "range_raw": "3〜7",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "紫のかっこ「(あ、あれは...!)」（相手を見つける）→「(よし、ヤるか...)」",
+      "range_raw": "8〜13",
+      "stage_label": "発見"
+     },
+     {
+      "content": "白の注釈「※凄まじいブレイスキル」→「ナイスショット」→「(そしたらハシゴで...)」→ 白の引用符「\"ハシゴ着地成功✅\"」",
+      "range_raw": "13.6〜22",
+      "stage_label": "技"
+     },
+     {
+      "content": "「そして更に...」→ 白の引用符「\"ベット破壊\"」（相手のベッドを壊す）。25秒に Slam 0.65 [音タグ]",
+      "range_raw": "22〜25",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "相手を倒す",
+      "range_raw": "26〜28",
+      "stage_label": "決着"
+     },
+     {
+      "content": "女性配信者の顔出しの横に「You Died!」→ ☠️＋赤の引用符「\"これぞダクアビス\"」→ ナレーション「流石に漢すぎると思った方はいいねタッチ」",
+      "range_raw": "28.4〜33",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     9
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.15,
+     9.4
+    ],
+    "cuts": 16,
+    "cuts_per_5s": {
+     "0": 2,
+     "10": 1,
+     "15": 3,
+     "20": 5,
+     "25": 1,
+     "5": 4
+    },
+    "duration_sec": 33.02,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "end",
+      "row": 1,
+      "start": 26.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 32.8,
+    "is_end_position": true,
+    "sec_from_end": 0.22,
+    "start": 26.0,
+    "status": "DOC_OBSERVED",
+    "text": "流石に漢すぎると思った方はいいねタッチ"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 0,
+     "reason": "「漢すぎると思った方はいいねタッチ」",
+     "role": "R_CTA",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 30.0,
+    "status": "ok",
+    "text": "If you're a fan of a guy, you'd like to hit me a touch."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 30.42,
+    "status": "ok",
+    "text": "さすがに男すぎると思った方はいいねタッチ"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "さすがに男すぎると思った方はいいねタッチ",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 37,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/37_bFmKcjqo7Sk.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/bFmKcjqo7Sk.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "bFmKcjqo7Sk"
+}

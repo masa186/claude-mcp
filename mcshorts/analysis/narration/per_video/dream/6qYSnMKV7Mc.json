@@ -1,0 +1,599 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 32.93,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.07,
+   "first_cut_minus_first_row_start": 0.07,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.328,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「数秒後」",
+      "time_raw": "0.00〜0.53",
+      "visual": "洞窟の通路に、**白く細長い怪物（シャイガイ）**が立つ"
+     },
+     {
+      "end": 1.0,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「このシャイガイは」",
+      "time_raw": "0.73〜1.00",
+      "visual": "同上"
+     },
+     {
+      "end": 1.47,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ボコボコにされる...」",
+      "time_raw": "1.27〜1.47",
+      "visual": "カット。通路の奥に**悟空の姿のプレイヤー** [実測: 1.53]"
+     },
+     {
+      "end": 2.53,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "1.73〜2.53",
+      "visual": "**金色の光の柱**（スーパーサイヤ人の気）が画面を埋める"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "2.73〜3.00",
+      "visual": "カット。夜の村 [実測: 2.73, 2.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.4,
+     "music_mean_during_row": 0.4,
+     "nearest_cut_to_end": 0.33,
+     "nearest_cut_to_start": 0.07,
+     "nearest_subtitle_change_to_end": 1.87,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.95,
+      2.75
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「数秒後〜ボコボコにされてしまいます」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 24,
+     "content_lemmas": [
+      "数",
+      "秒",
+      "ガイ-guy",
+      "為る",
+      "仕舞う"
+     ],
+     "first_token": {
+      "lemma": "数",
+      "pos1": "名詞",
+      "pos2": "数詞",
+      "surface": "数"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 3,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 3,
+      "形状詞": 2,
+      "接尾辞": 1,
+      "連体詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "数秒後このシャイガイはボコボコにされてしまいます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "数",
+     1
+    ],
+    [
+     "秒",
+     1
+    ],
+    [
+     "ガイ-guy",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "仕舞う",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.4,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "数秒後このシャイガイはボコボコにされてしまいます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "数量後、この車以外",
+     "words": [
+      "数",
+      "量",
+      "後、",
+      "この",
+      "車",
+      "以",
+      "外"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.4,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "数秒後このシャイガイはボコボコにされてしまいます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 22,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "数量後、この車以外はボコボコにされてしまいます。",
+     "words": [
+      "数",
+      "量",
+      "後、",
+      "この",
+      "車",
+      "以",
+      "外",
+      "は",
+      "ボ",
+      "コ",
+      "ボ",
+      "コ",
+      "に",
+      "さ",
+      "れて",
+      "しま",
+      "います。"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.4,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "数秒後このシャイガイはボコボコにされてしまいます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 22,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "数量後、この車以外はボコボコにされてしまいます。",
+     "words": [
+      "数",
+      "量",
+      "後、",
+      "この",
+      "車",
+      "以",
+      "外",
+      "は",
+      "ボ",
+      "コ",
+      "ボ",
+      "コ",
+      "に",
+      "さ",
+      "れて",
+      "しま",
+      "います。"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 24,
+    "end": 2.4,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "数秒後このシャイガイはボコボコにされてしまいます"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "数",
+      "pos1": "名詞",
+      "pos2": "数詞",
+      "surface": "数"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "数秒後このシャイガイはボコボコにされてしまいます"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「数秒後〜ボコボコにされてしまいます」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "数量後、この車以外はボコボコにされてしまいます。",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「数秒後」",
+      "time_raw": "0.00〜0.53",
+      "visual": "洞窟の通路に、**白く細長い怪物（シャイガイ）**が立つ"
+     },
+     {
+      "end": 1.0,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「このシャイガイは」",
+      "time_raw": "0.73〜1.00",
+      "visual": "同上"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "数"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 10.0,
+    "rows": [
+     {
+      "chars": 24,
+      "chars_per_sec": 10.0,
+      "duration": 2.4,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 24
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 9.24,
+    "gap_max": 0.08,
+    "gap_median": 0.08,
+    "gaps_ge_0.3s": 0,
+    "n_words": 17,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "数秒後このシャイガイはボコボコにされてしまいます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「戦おう!!!」",
+       "range_raw": "24.8〜30",
+       "source": "doc_structure",
+       "source_file": "dream/individual/27_6qYSnMKV7Mc.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 3
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "数秒後このシャイガイはボコボコにされてしまいます",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": "戦いの始まりまでは文にあるが、ボコボコにされる場面は文から確認できない",
+     "review_status": "UNVERIFIED",
+     "status": "NOT_FOUND_IN_TEXT",
+     "video_id": "6qYSnMKV7Mc"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "シャイガイ、悟空、金色の気",
+      "range_raw": "0.0〜2.7",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "夜の村。シャイガイが家を壊す「何だあの怪物...」「俺の家を壊すな!!!」「よぉぉおうぅ///」→ 燃える家「なんてこったい」",
+      "range_raw": "2.8〜11",
+      "stage_label": "事件"
+     },
+     {
+      "content": "地下の通路を追う「ｵｩﾉｩﾉｩﾉｩﾉｩ...」→「お前...」「(とぼける)」→「君はバカか？」「俺が君から隠れてるとでも？」「君のしたことから隠れてんだよ」",
+      "range_raw": "12.4〜24",
+      "stage_label": "追跡"
+     },
+     {
+      "content": "看板「Goku's House」＋白の引用符「\"悟空の家\"」→ 主人公「俺のじゃないんだよ!!!」（壊されたのは悟空の家）→ 悟空「オラの家を壊したな？」「戦おう!!!」",
+      "range_raw": "24.8〜30",
+      "stage_label": "種明かし"
+     },
+     {
+      "content": "金色の気の柱 → 赤い長い字幕（下記）",
+      "range_raw": "31.6〜32.9",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     2
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.95,
+     2.75
+    ],
+    "cuts": 16,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 4,
+     "15": 2,
+     "20": 2,
+     "25": 1,
+     "30": 1,
+     "5": 1
+    },
+    "duration_sec": 32.93,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.4,
+    "is_end_position": false,
+    "sec_from_end": 30.53,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "数秒後このシャイガイはボコボコにされてしまいます"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「数秒後〜ボコボコにされてしまいます」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 30.0,
+    "status": "ok",
+    "text": "You"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "text": "数量後、この車以外はボコボコにされてしまいます。"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 27,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/27_6qYSnMKV7Mc.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/6qYSnMKV7Mc.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "6qYSnMKV7Mc"
+}

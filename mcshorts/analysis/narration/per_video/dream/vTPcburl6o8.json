@@ -1,0 +1,628 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 58.05,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.87,
+   "first_cut_minus_first_row_start": 0.6,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.453,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "溶岩の中で、口を大きく開けた村人が燃えている"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「マグマが迫ってくる」",
+      "time_raw": "0.27〜0.73",
+      "visual": "同上"
+     },
+     {
+      "end": 1.27,
+      "start": 0.87,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「部屋を」",
+      "time_raw": "0.87〜1.27",
+      "visual": "カット。画面が赤い四角で埋まる（死の演出）[実測: 0.87, 1.20]"
+     },
+     {
+      "end": 2.27,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「脱出する村人」",
+      "time_raw": "1.47〜2.27",
+      "visual": "カット。**目から血を流して叫ぶ村人の顔のアップ**"
+     },
+     {
+      "end": 3.0,
+      "start": 2.33,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**青**「君達アスレしてんの？」",
+      "time_raw": "2.33〜3.00",
+      "visual": "カット。普通の家のリビング。村人たちが家具の上に乗っている [実測: 2.33, 2.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.3,
+     "music_mean_during_row": 0.503,
+     "nearest_cut_to_end": 0.03,
+     "nearest_cut_to_start": 0.6,
+     "nearest_subtitle_change_to_end": 0.03,
+     "nearest_subtitle_change_to_start": 2.06,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      1.2
+     ],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜部屋を脱出する村人」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 18,
+     "content_lemmas": [
+      "マグマ-magma",
+      "迫る",
+      "来る",
+      "部屋",
+      "脱出",
+      "為る",
+      "村人"
+     ],
+     "first_token": {
+      "lemma": "マグマ-magma",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "マグマ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 3,
+      "動詞": 3,
+      "名詞": 4
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "マグマが迫ってくる部屋を脱出する村人"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "マグマ-magma",
+     1
+    ],
+    [
+     "迫る",
+     1
+    ],
+    [
+     "来る",
+     1
+    ],
+    [
+     "部屋",
+     1
+    ],
+    [
+     "脱出",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "村人",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "マグマが迫ってくる部屋を脱出する村人"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マブマが迫ってくる",
+     "words": [
+      "マ",
+      "ブ",
+      "マ",
+      "が",
+      "迫",
+      "って",
+      "く",
+      "る"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "マグマが迫ってくる部屋を脱出する村人"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 35,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マブマが迫ってくる部屋を出すする村人Are you guys playing",
+     "words": [
+      "マ",
+      "ブ",
+      "マ",
+      "が",
+      "迫",
+      "って",
+      "く",
+      "る",
+      "部",
+      "屋",
+      "を",
+      "出",
+      "す",
+      "する",
+      "村",
+      "人",
+      "Are",
+      " you",
+      " guys",
+      " playing"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "マグマが迫ってくる部屋を脱出する村人"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 70,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マブマが迫ってくる部屋を出すする村人Are you guys playing The Floor is Lava?Do you guys want me to make",
+     "words": [
+      "マ",
+      "ブ",
+      "マ",
+      "が",
+      "迫",
+      "って",
+      "く",
+      "る",
+      "部",
+      "屋",
+      "を",
+      "出",
+      "す",
+      "する",
+      "村",
+      "人",
+      "Are",
+      " you",
+      " guys",
+      " playing",
+      " The",
+      " Flo",
+      "or",
+      " is",
+      " L",
+      "ava?",
+      "Do",
+      " you",
+      " guys",
+      " want",
+      " me",
+      " to",
+      " make"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 18,
+    "end": 2.3,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "マグマが迫ってくる部屋を脱出する村人"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "マグマ-magma",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "マグマ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "マグマが迫ってくる部屋を脱出する村人"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜部屋を脱出する村人」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_INTRO",
+    "effective_code": "H_INTRO",
+    "quote": "マブマが迫ってくる部屋を出すする村人",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "溶岩の中で、口を大きく開けた村人が燃えている"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「マグマが迫ってくる」",
+      "time_raw": "0.27〜0.73",
+      "visual": "同上"
+     },
+     {
+      "end": 1.27,
+      "start": 0.87,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「部屋を」",
+      "time_raw": "0.87〜1.27",
+      "visual": "カット。画面が赤い四角で埋まる（死の演出）[実測: 0.87, 1.20]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "マ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.87,
+    "rows": [
+     {
+      "chars": 18,
+      "chars_per_sec": 8.87,
+      "duration": 2.03,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 18
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 12.83,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 26,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "マグマが迫ってくる部屋を脱出する村人"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_INTRO"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_ESCALATE",
+     "effective_code": "D_ESCALATE",
+     "quote": "Do you guys want me to make it more fun?",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_SUCCESS",
+     "effective_code": "P_SUCCESS",
+     "quote": "let's go congrats little jimmy just go up the stairs",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "燃える村人・叫び顔の先出し、ナレーション",
+      "range_raw": "0.0〜2.3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "プレイヤー（青字幕）「君達アスレしてんの？」「もっと面白くしよっか?」「よっしゃあww」→ 床が溶岩に。8〜9秒に Explosion [音タグ]",
+      "range_raw": "2.4〜9",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "村人「ここから脱出しなくちゃ」→ プレイヤー「君が最初だよジミー」→ 飛び移りに失敗「ワッ…」→ 燃える村人（冒頭0秒の画）",
+      "range_raw": "9.3〜20",
+      "stage_label": "ルールと最初の犠牲"
+     },
+     {
+      "content": "村人どうしの言い争い「怖いよ...」「うっせ喋んな!!」「何やってんだお前!!」。プレイヤーは実況のように「ヨゥ!!」「アイツ怒ってるぞ」「順調に進んでるね」「ｲｮﾎﾎﾎｳww」「いいねぇww」",
+      "range_raw": "22〜41",
+      "stage_label": "緊張"
+     },
+     {
+      "content": "泣き顔のミーム画像 → 血 → 血の涙の叫び顔（冒頭1.5秒の画）→「いいねぇww」「2人とも後少しだ...」",
+      "range_raw": "41〜48",
+      "stage_label": "犠牲が増える"
+     },
+     {
+      "content": "「ヨジミーこれはチャンスだ」→「おめでとうジミー」。ジミーだけが階段（屋根裏）にたどり着く",
+      "range_raw": "49〜53",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "暗い階段を上がった先で「嘘だろ...」。**屋根裏も溶岩**。54〜56秒は声も無い（Speech 0）[音タグ]",
+      "range_raw": "53.8〜58.1",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     1
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     1.2
+    ],
+    "cuts": 32,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 5,
+     "15": 3,
+     "20": 3,
+     "25": 3,
+     "30": 1,
+     "35": 1,
+     "40": 4,
+     "45": 1,
+     "5": 3,
+     "50": 1,
+     "55": 3
+    },
+    "duration_sec": 58.05,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.3,
+    "is_end_position": false,
+    "sec_from_end": 55.75,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "マグマが迫ってくる部屋を脱出する村人"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜部屋を脱出する村人」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 50.72,
+    "status": "ok",
+    "text": "let's go congrats little jimmy just go up the stairs"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 51.44,
+    "status": "ok",
+    "text": "努力!"
+   },
+   "payoff_code_4b": {
+    "code": "P_SUCCESS",
+    "effective_code": "P_SUCCESS",
+    "quote": "let's go congrats little jimmy just go up the stairs",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 9,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/09_vTPcburl6o8.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/vTPcburl6o8.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "vTPcburl6o8"
+}

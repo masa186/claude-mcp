@@ -1,0 +1,697 @@
+{
+ "channel": "dream",
+ "doc_notes": [
+  "#23 の2文目は字幕・書き起こしとも一部取れなかった"
+ ],
+ "duration_sec": 62.39,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.8,
+   "first_cut_minus_first_row_start": -2.7,
+   "first_doc_row_start": 3.5,
+   "music_mean_outside_narration": 0.402,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 1.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「お前ら落ち着けｪｪ!!!」",
+      "time_raw": "0.00〜1.27",
+      "visual": "草原を走るGrox（後ろ姿、頭上に名前）"
+     },
+     {
+      "end": 2.0,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「リラックス」",
+      "time_raw": "1.27〜2.00",
+      "visual": "カット。真上から見たGrox。周りに村人が集まり始める [実測: 0.80]"
+     },
+     {
+      "end": 2.73,
+      "start": 2.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「リラックス×2」",
+      "time_raw": "2.27〜2.73",
+      "visual": "**地面が見えないほどの村人の大群**"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "2.73〜3.00",
+      "visual": "カット。大群の中に雪（空から見下ろす）[実測: 2.67, 2.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 5.3,
+     "music_mean_during_row": 0.507,
+     "nearest_cut_to_end": 0.3,
+     "nearest_cut_to_start": 0.17,
+     "nearest_subtitle_change_to_end": 0.17,
+     "nearest_subtitle_change_to_start": 0.17,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 3.5
+    },
+    {
+     "end": 8.4,
+     "music_mean_during_row": 0.54,
+     "nearest_cut_to_end": 0.27,
+     "nearest_cut_to_start": 0.3,
+     "nearest_subtitle_change_to_end": 0.07,
+     "nearest_subtitle_change_to_start": 0.17,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 5.3
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「村人に追われるGroxですが...」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": "文の一部が取れていない",
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「…ピンチになります」と結果を予告（文書に「字幕は1コマに出ず」と注記）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 14,
+     "content_lemmas": [
+      "村人",
+      "追う",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 2,
+      "補助記号": 3
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "村人に追われるGroxですが..."
+    },
+    {
+     "chars": 17,
+     "content_lemmas": [
+      "字幕",
+      "1",
+      "齣",
+      "出る",
+      "ピンチ-pinch ",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "（",
+      "pos1": "補助記号",
+      "pos2": "括弧開",
+      "surface": "（"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 4,
+      "補助記号": 3
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "（字幕は1コマに出ず）…ピンチになります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "村人",
+     1
+    ],
+    [
+     "追う",
+     1
+    ],
+    [
+     "Grox",
+     1
+    ],
+    [
+     "字幕",
+     1
+    ],
+    [
+     "1",
+     1
+    ],
+    [
+     "齣",
+     1
+    ],
+    [
+     "出る",
+     1
+    ],
+    [
+     "ピンチ-pinch ",
+     1
+    ],
+    [
+     "成る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 5,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "え、よ、チリール!",
+     "words": [
+      "え、",
+      "よ、",
+      "チ",
+      "リ",
+      "ール!"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 15,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "え、よ、チリール!レラックス!レラックス!",
+     "words": [
+      "え、",
+      "よ、",
+      "チ",
+      "リ",
+      "ール!",
+      "レ",
+      "ラ",
+      "ック",
+      "ス!",
+      "レ",
+      "ラ",
+      "ック",
+      "ス!"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 5.3,
+       "fully_inside": false,
+       "row": 0,
+       "start": 3.5,
+       "text": "村人に追われるGroxですが..."
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 34,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "え、よ、チリール!レラックス!レラックス!ごら、我々のグロックスに追われるようです。",
+     "words": [
+      "え、",
+      "よ、",
+      "チ",
+      "リ",
+      "ール!",
+      "レ",
+      "ラ",
+      "ック",
+      "ス!",
+      "レ",
+      "ラ",
+      "ック",
+      "ス!",
+      "ご",
+      "ら、",
+      "我",
+      "々",
+      "の",
+      "グ",
+      "ロ",
+      "ック",
+      "ス",
+      "に",
+      "追",
+      "わ",
+      "れる",
+      "よう",
+      "です。"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 14,
+    "end": 5.3,
+    "start": 3.5,
+    "status": "DOC_OBSERVED",
+    "text": "村人に追われるGroxですが..."
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "text": "村人に追われるGroxですが..."
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「村人に追われるGroxですが...」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "HX",
+    "effective_code": "HX",
+    "quote": "え、よ、チリール!",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 1.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「お前ら落ち着けｪｪ!!!」",
+      "time_raw": "0.00〜1.27",
+      "visual": "草原を走るGrox（後ろ姿、頭上に名前）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "え、"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 6.63,
+    "rows": [
+     {
+      "chars": 14,
+      "chars_per_sec": 7.78,
+      "duration": 1.8,
+      "gap_to_next_row": 0.0,
+      "row": 0
+     },
+     {
+      "chars": 17,
+      "chars_per_sec": 5.48,
+      "duration": 3.1,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 31
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 9.35,
+    "gap_max": 0.08,
+    "gap_median": 0.08,
+    "gaps_ge_0.3s": 0,
+    "n_words": 37,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "村人に追われるGroxですが..."
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "（字幕は1コマに出ず）…ピンチになります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「Groxを〇せぇぇ!!!」",
+       "range_raw": "8.9〜21",
+       "source": "doc_structure",
+       "source_file": "dream/individual/23_p4osmEVx7hY.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 2
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "（字幕は1コマに出ず）…ピンチになります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 1,
+     "from_start": 5.3,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "p4osmEVx7hY"
+    }
+   ],
+   "role_sequence": [
+    "R_SETUP",
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_REPEAT",
+     "effective_code": "D_REPEAT",
+     "quote": "Alright, who's next?",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "Hey chill chill relax",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "本人の台詞と、増える村人",
+      "range_raw": "0.0〜3.5",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "ナレーション。空を突き刺す無数の柱（村人が積み上がっている）",
+      "range_raw": "3.5〜8.4",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「heyﾖｫｫｫｵｰｰｳｩ!!!」「落ち着けって!!」→ 1対1で村人を倒していく「ワーオ(棒)」「何だあれ？」「Groxを〇せぇぇ!!!」（看板「KILL GROX」）→「俺と戦おうってか？」「ﾅｰやってみろや」「さぁ次は誰だ？」",
+      "range_raw": "8.9〜21",
+      "stage_label": "展開"
+     },
+     {
+      "content": "「おいどうした??」「ヒーローにでもなったつもりか?w」「次は誰が犠牲になる?」「僕!僕!僕!」→ 観客席の村人「おい笑える」「いい反応するじゃんw」→ 色目を使う村人「やぁハンサムくん❤️」「マジかこいつ...」",
+      "range_raw": "19〜31",
+      "stage_label": "掛け合い"
+     },
+     {
+      "content": "戦わない村人「おおどうした」「なに怖いんか?」→ **チャンネル登録画面（Grox ✓ Subscribed）**「チャンネル登録してんじゃん」→「戦わないでやるよ」「ありがとうー!!」→「褒美として」（パンツを引っ張る）",
+      "range_raw": "31.3〜43",
+      "stage_label": "変化"
+     },
+     {
+      "content": "「全員俺のファンじゃん」→ コーチ「準備万端ですコーチ...!」→ 武器を持った村人「(皮肉)」「何を四天王??」→ 審判が見捨てる「なぜ彼を助けなかった」「ひどいぞそれは!!」→「一同)突撃ｨｨ!!」",
+      "range_raw": "43〜58",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "「ﾍｲ落ち着け落ち着けぇ」→ インベントリ「リラックス」「こうしてまた」→「追いかけっこが」「始まるのでした」（冒頭と同じ場面に戻る）",
+      "range_raw": "58〜62.4",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [],
+    "cuts": 60,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 8,
+     "15": 4,
+     "20": 4,
+     "25": 7,
+     "30": 4,
+     "35": 3,
+     "40": 3,
+     "45": 4,
+     "5": 7,
+     "50": 3,
+     "55": 6,
+     "60": 3
+    },
+    "duration_sec": 62.39,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 3.5
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 5.3
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 8.4,
+    "is_end_position": false,
+    "sec_from_end": 53.99,
+    "start": 5.3,
+    "status": "DOC_OBSERVED",
+    "text": "（字幕は1コマに出ず）…ピンチになります"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": "文の一部が取れていない",
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「…ピンチになります」と結果を予告（文書に「字幕は1コマに出ず」と注記）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 61.58,
+    "status": "ok",
+    "text": "There's a lane"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 60.98,
+    "status": "ok",
+    "text": "おー!"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Hey chill chill relax",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 23,
+ "not_applicable": [
+  {
+   "item": 8,
+   "reason": "規則に当てはまる秒が無い",
+   "what": "盛り上がりの候補"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/23_p4osmEVx7hY.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/p4osmEVx7hY.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "p4osmEVx7hY"
+}

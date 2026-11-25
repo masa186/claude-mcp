@@ -1,0 +1,685 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 35.43,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 0.47,
+   "first_cut_minus_first_row_start": 0.47,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.505,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「彼は」",
+      "time_raw": "0.00〜0.27",
+      "visual": "**クリーパーの顔のアップ**（目の前）"
+     },
+     {
+      "end": 1.27,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ありえない方法で」",
+      "time_raw": "0.53〜1.27",
+      "visual": "カット。家の横に立つクリーパー [実測: 0.47]"
+     },
+     {
+      "end": 2.53,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「クリーパーを退治します」",
+      "time_raw": "1.47〜2.53",
+      "visual": "カット。草原のクリーパーが**半透明になって消えていく** [実測: 1.33]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "2.73〜3.00",
+      "visual": "カット。木の家の壁 [実測: 2.67, 2.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.5,
+     "music_mean_during_row": 0.527,
+     "nearest_cut_to_end": 0.17,
+     "nearest_cut_to_start": 0.47,
+     "nearest_subtitle_change_to_end": 2.03,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.15,
+      1.0,
+      1.35,
+      1.95,
+      2.35,
+      2.7
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼はありえない方法でクリーパーを退治します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 19,
+     "content_lemmas": [
+      "彼",
+      "有る",
+      "得る",
+      "方法",
+      "クリー-Cree",
+      "パー-par",
+      "退治",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ありえない"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "クリー"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 2,
+      "助詞": 3,
+      "動詞": 3,
+      "名詞": 4
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "彼はありえない方法でクリーパーを退治します"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "彼",
+     1
+    ],
+    [
+     "有る",
+     1
+    ],
+    [
+     "得る",
+     1
+    ],
+    [
+     "方法",
+     1
+    ],
+    [
+     "クリー-Cree",
+     1
+    ],
+    [
+     "パー-par",
+     1
+    ],
+    [
+     "退治",
+     1
+    ],
+    [
+     "為る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "彼はありえない方法でクリーパーを退治します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "彼はありえない方",
+     "words": [
+      "彼",
+      "は",
+      "あり",
+      "え",
+      "ない",
+      "方"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "彼はありえない方法でクリーパーを退治します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "彼はありえない方法でクリートワーを退治します",
+     "words": [
+      "彼",
+      "は",
+      "あり",
+      "え",
+      "ない",
+      "方",
+      "法",
+      "で",
+      "ク",
+      "リ",
+      "ート",
+      "ワ",
+      "ー",
+      "を",
+      "退",
+      "治",
+      "します"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "彼はありえない方法でクリーパーを退治します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 24,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "彼はありえない方法でクリートワーを退治しますOKNo,",
+     "words": [
+      "彼",
+      "は",
+      "あり",
+      "え",
+      "ない",
+      "方",
+      "法",
+      "で",
+      "ク",
+      "リ",
+      "ート",
+      "ワ",
+      "ー",
+      "を",
+      "退",
+      "治",
+      "します",
+      "OK",
+      "No,"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 19,
+    "end": 2.5,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "彼はありえない方法でクリーパーを退治します"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ありえない"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "クリー"
+      ],
+      "question": false
+     },
+     "text": "彼はありえない方法でクリーパーを退治します"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼はありえない方法でクリーパーを退治します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "彼はありえない方法でクリートワーを退治します",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「彼は」",
+      "time_raw": "0.00〜0.27",
+      "visual": "**クリーパーの顔のアップ**（目の前）"
+     },
+     {
+      "end": 1.27,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ありえない方法で」",
+      "time_raw": "0.53〜1.27",
+      "visual": "カット。家の横に立つクリーパー [実測: 0.47]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "彼"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 7.6,
+    "rows": [
+     {
+      "chars": 19,
+      "chars_per_sec": 7.6,
+      "duration": 2.5,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 19
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.87,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 17,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "ありえない"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "クリー"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "彼はありえない方法でクリーパーを退治します"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「このゲームから消されるんだ!」",
+       "range_raw": "27.5〜32",
+       "source": "doc_structure",
+       "source_file": "dream/individual/28_loiMd64_c6Q.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 4
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "彼はありえない方法でクリーパーを退治します",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "loiMd64_c6Q"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_DIALOGUE",
+     "effective_code": "D_DIALOGUE",
+     "quote": "Tell me why every mob in Minecraft never gets blown up, but I'm the only one.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_PUNISH",
+     "effective_code": "P_PUNISH",
+     "quote": "Mojang's now removing you from the game, little man.",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "目の前のクリーパー、消えるクリーパーの先出し",
+      "range_raw": "0.0〜2.7",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "家を建てる「オーケー...いい感じ...」→ クリーパー「おい戻れ!!」→ 家に穴（爆発の跡）「ハッハッ...」「負け犬が」→ また来る",
+      "range_raw": "2.8〜13",
+      "stage_label": "事件（繰り返し）"
+     },
+     {
+      "content": "「今はダメだぞ？」→ クリーパーの顔",
+      "range_raw": "14〜17",
+      "stage_label": "2回目"
+     },
+     {
+      "content": "本人の英語の台詞「Tell me why every mob in Minecraft never gets blown up, but I'm the only one」を和訳で「聞きたいんだけどさ」「何でみんなには」「何で俺だけ爆発すんの?」（村人・エンダーマン・ゾンビの横にクリーパー）→「絶対そうだ!!!」。17〜21秒にバイオリンの音（Violin 0.3〜0.5）[音タグ]",
+      "range_raw": "18.4〜27",
+      "stage_label": "主張"
+     },
+     {
+      "content": "クリーパーの顔のアップ →「このゲームから消されるんだ!」（マイクラの公式の絵・アプリのアイコン）。英語では \"You're canceled, Mojang's now removing you from the game\"（開発会社がゲームから消す）[書き起こし]",
+      "range_raw": "27.5〜32",
+      "stage_label": "処分"
+     },
+     {
+      "content": "クリーパーが消える。赤の引用符「\"永久BANされるクリーパー\"」",
+      "range_raw": "32.8〜35.4",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     2,
+     4,
+     6,
+     7,
+     12,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     22,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.15,
+     1.0,
+     1.35,
+     1.95,
+     2.35,
+     2.7,
+     4.8,
+     6.15,
+     6.45,
+     6.7,
+     7.6,
+     12.4,
+     14.35,
+     14.5,
+     15.15,
+     16.45,
+     17.1,
+     18.9,
+     19.5,
+     22.3,
+     22.7,
+     24.6,
+     25.9,
+     26.1,
+     26.35,
+     26.75,
+     27.85,
+     28.15,
+     28.7,
+     29.0,
+     29.9,
+     30.85,
+     31.8,
+     32.7
+    ],
+    "cuts": 17,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 2,
+     "15": 3,
+     "20": 2,
+     "25": 3,
+     "30": 2
+    },
+    "duration_sec": 35.43,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.5,
+    "is_end_position": false,
+    "sec_from_end": 32.93,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "彼はありえない方法でクリーパーを退治します"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼はありえない方法でクリーパーを退治します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 32.96,
+    "status": "ok",
+    "text": "See you, champ."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 32.48,
+    "status": "ok",
+    "text": "See ya, champ!"
+   },
+   "payoff_code_4b": {
+    "code": "P_PUNISH",
+    "effective_code": "P_PUNISH",
+    "quote": "Mojang's now removing you from the game, little man.",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 28,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/28_loiMd64_c6Q.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/loiMd64_c6Q.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "loiMd64_c6Q"
+}

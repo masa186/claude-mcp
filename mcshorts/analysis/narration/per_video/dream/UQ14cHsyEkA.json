@@ -1,0 +1,881 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 57.33,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.07,
+   "first_cut_minus_first_row_start": -0.2,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.526,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "森の地面に、**横に長く伸びたアイアンゴーレムのような物体**"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「世界一最強の」",
+      "time_raw": "0.27〜1.00",
+      "visual": "同じ物体"
+     },
+     {
+      "end": 1.73,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ゴーレムを作る」",
+      "time_raw": "1.27〜1.73",
+      "visual": "カット。普通のアイアンゴーレム [実測: 1.53]"
+     },
+     {
+      "end": 2.27,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「Grox」",
+      "time_raw": "2.00〜2.27",
+      "visual": "カット。**マイクラの世界を球体にした映像**と銃 [実測: 1.93]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「家を建てろ」",
+      "time_raw": "2.53〜3.00",
+      "visual": "カット。大量のアイアンゴーレム [実測: 2.33, 2.73]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.3,
+     "music_mean_during_row": 0.077,
+     "nearest_cut_to_end": 0.03,
+     "nearest_cut_to_start": 0.2,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      1.7,
+      1.9,
+      2.2
+     ],
+     "start": 0.27
+    },
+    {
+     "end": 57.0,
+     "music_mean_during_row": 0.58,
+     "nearest_cut_to_end": 0.47,
+     "nearest_cut_to_start": 0.2,
+     "nearest_subtitle_change_to_end": 1.07,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      54.1
+     ],
+     "start": 52.2
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「世界一最強のゴーレムを作るGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 0,
+     "reason": "最後の感想の前半（「〜も凄いですが」）",
+     "role": "R_COMMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 1,
+     "reason": "「〜が最高に狂ってますね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 16,
+     "content_lemmas": [
+      "世界",
+      "一",
+      "最強",
+      "ゴーレム-golem",
+      "作る",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "世界",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "世界"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "世界一",
+       "最強"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox",
+       "ゴーレム"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 5
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "世界一最強のゴーレムを作るGrox"
+    },
+    {
+     "chars": 15,
+     "content_lemmas": [
+      "作り出す",
+      "Grox",
+      "凄い"
+     ],
+     "first_token": {
+      "lemma": "作り出す",
+      "pos1": "動詞",
+      "pos2": "一般",
+      "surface": "作り出し"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "凄"
+      ],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 1,
+      "形容詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "作り出したGroxも凄いですが"
+    },
+    {
+     "chars": 29,
+     "content_lemmas": [
+      "息子",
+      "弾丸",
+      "打ち込む",
+      "無傷",
+      "ゴーレム-golem",
+      "最高",
+      "狂う"
+     ],
+     "first_token": {
+      "lemma": "息子",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "息子"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "最高",
+       "狂"
+      ],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "ゴーレム"
+      ],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "助動詞": 5,
+      "助詞": 6,
+      "動詞": 2,
+      "名詞": 5
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "息子に弾丸をぶち込まれても無傷なゴーレムが最高に狂ってますね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "ゴーレム-golem",
+     2
+    ],
+    [
+     "Grox",
+     2
+    ],
+    [
+     "世界",
+     1
+    ],
+    [
+     "一",
+     1
+    ],
+    [
+     "最強",
+     1
+    ],
+    [
+     "作る",
+     1
+    ],
+    [
+     "作り出す",
+     1
+    ],
+    [
+     "凄い",
+     1
+    ],
+    [
+     "息子",
+     1
+    ],
+    [
+     "弾丸",
+     1
+    ],
+    [
+     "打ち込む",
+     1
+    ],
+    [
+     "無傷",
+     1
+    ],
+    [
+     "最高",
+     1
+    ],
+    [
+     "狂う",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "世界一最強のゴーレムを作るGrox"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 6,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "世界一最強の",
+     "words": [
+      "世界",
+      "一",
+      "最",
+      "強",
+      "の"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "世界一最強のゴーレムを作るGrox"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 24,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "世界一最強のゴーレムを作るグラフ教 me a house!",
+     "words": [
+      "世界",
+      "一",
+      "最",
+      "強",
+      "の",
+      "ゴ",
+      "ーレ",
+      "ム",
+      "を",
+      "作",
+      "る",
+      "グ",
+      "ラ",
+      "フ",
+      "教",
+      " me",
+      " a",
+      " house!"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "世界一最強のゴーレムを作るGrox"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 44,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "世界一最強のゴーレムを作るグラフ教 me a house!Let's go!As my worker, you",
+     "words": [
+      "世界",
+      "一",
+      "最",
+      "強",
+      "の",
+      "ゴ",
+      "ーレ",
+      "ム",
+      "を",
+      "作",
+      "る",
+      "グ",
+      "ラ",
+      "フ",
+      "教",
+      " me",
+      " a",
+      " house!",
+      "Let",
+      "'s",
+      " go!",
+      "As",
+      " my",
+      " worker,",
+      " you"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 16,
+    "end": 2.3,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "世界一最強のゴーレムを作るGrox"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "世界",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "世界"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "世界一",
+       "最強"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox",
+       "ゴーレム"
+      ],
+      "question": false
+     },
+     "text": "世界一最強のゴーレムを作るGrox"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「世界一最強のゴーレムを作るGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_SCALE",
+    "effective_code": "H_SCALE",
+    "quote": "世界一最強のゴーレムを作るグラフ",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "森の地面に、**横に長く伸びたアイアンゴーレムのような物体**"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「世界一最強の」",
+      "time_raw": "0.27〜1.00",
+      "visual": "同じ物体"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "世界"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.53,
+    "rows": [
+     {
+      "chars": 16,
+      "chars_per_sec": 7.88,
+      "duration": 2.03,
+      "gap_to_next_row": 49.9,
+      "row": 0
+     },
+     {
+      "chars": 44,
+      "chars_per_sec": 9.17,
+      "duration": 4.8,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 60
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.23,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 56,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "世界一",
+      "最強"
+     ],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox",
+      "ゴーレム"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "世界一最強のゴーレムを作るGrox"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "凄"
+     ],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox"
+     ],
+     "question": false,
+     "row": 1,
+     "text": "作り出したGroxも凄いですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "最高",
+      "狂"
+     ],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [
+      "ゴーレム"
+     ],
+     "question": false,
+     "row": 1,
+     "text": "息子に弾丸をぶち込まれても無傷なゴーレムが最高に狂ってますね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_INTRO",
+    "R_COMMENT",
+    "R_COMMENT"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_ESCALATE",
+     "effective_code": "D_ESCALATE",
+     "quote": "I can make an even better one!",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "息子に弾丸を打ち込まれても無傷なボーレムが最高に狂ってますね",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "横長ゴーレムの先出し、「世界一最強のゴーレムを作るGrox」",
+      "range_raw": "0.0〜3.2",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「いいねぇ」「俺の部下として」「俺を守る能力が必要だ」「ウィザーと戦え」「君に選択権はない」「がんばれ」。6〜12秒に爆発音（Explosion 0.4〜0.6）[音タグ]",
+      "range_raw": "3.5〜13",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「なぁ俺にみせてよ」「戦えるところ」「ダメだよ」「やるなよ」「絶対やるなよ」「ワーオまじで？」「お前は必要ない」",
+      "range_raw": "13〜22",
+      "stage_label": "1体目の失敗"
+     },
+     {
+      "content": "「勇敢なの作ろう」→巨大ゴーレム「こいつデケェ」→「やっぱなしで」→ エンダーマン「おま…なに?」→「もっといいの作れるぞ!」→ 細長いゴーレム「また変なもん作っちまった」",
+      "range_raw": "21〜31",
+      "stage_label": "作り直しの繰り返し"
+     },
+     {
+      "content": "冒頭の**横長ゴーレム**。「苦痛のない速やかな死で」「今すぐ」「苦しみから解放してやる!」→ 溶岩に沈めるが「正直に言うと」「あんま痛そうに見えないな」",
+      "range_raw": "31.8〜37",
+      "stage_label": "山場"
+     },
+     {
+      "content": "「君達の忠誠心を見てみよう」「彼に与えてやれ」（花を持った村人）→「与えるのは拳だよ!」→ ゴーレムが暴れる「お前ら落ち着けぇ!!」→ Groxが撃つ（47.0秒の閃光）が「うそ...」「まずい!!!」",
+      "range_raw": "37.9〜49",
+      "stage_label": "展開"
+     },
+     {
+      "content": "「ｵｫｫｫｵｳｩｩｩ///」→ 引用符の赤字「\"Grox死す\"」",
+      "range_raw": "49.6〜51.7",
+      "stage_label": "オチ"
+     },
+     {
+      "content": "ナレーション「作り出したGroxも凄いですが 息子に弾丸をぶち込まれても無傷なゴーレムが 最高に狂ってますね」",
+      "range_raw": "52.2〜57.3",
+      "stage_label": "締め"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     2,
+     3,
+     6,
+     10,
+     11,
+     12,
+     29,
+     34,
+     45,
+     49,
+     54
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.25,
+     1.7,
+     1.9,
+     2.2,
+     3.95,
+     12.0,
+     12.45,
+     29.05,
+     34.85,
+     45.9,
+     49.5,
+     49.65,
+     54.1
+    ],
+    "cuts": 57,
+    "cuts_per_5s": {
+     "0": 8,
+     "10": 3,
+     "15": 4,
+     "20": 5,
+     "25": 5,
+     "30": 4,
+     "35": 5,
+     "40": 5,
+     "45": 6,
+     "5": 2,
+     "50": 8,
+     "55": 2
+    },
+    "duration_sec": 57.33,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.59,
+      "t": 6
+     },
+     {
+      "Explosion": 0.45,
+      "t": 10
+     },
+     {
+      "Explosion": 0.4,
+      "t": 11
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     },
+     {
+      "position": "end",
+      "row": 1,
+      "start": 52.2
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 57.0,
+    "is_end_position": true,
+    "sec_from_end": 0.33,
+    "start": 52.2,
+    "status": "DOC_OBSERVED",
+    "text": "作り出したGroxも凄いですが 息子に弾丸をぶち込まれても無傷なゴーレムが最高に狂ってますね"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 0,
+     "reason": "最後の感想の前半（「〜も凄いですが」）",
+     "role": "R_COMMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 1,
+     "reason": "「〜が最高に狂ってますね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 51.72,
+    "status": "ok",
+    "text": "I made Grox's also amazing, but I'm so scared to be able to throw a gun on my son."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 53.46,
+    "status": "ok",
+    "text": "息子に弾丸を打ち込まれても無傷なボーレムが最高に狂ってますね"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "息子に弾丸を打ち込まれても無傷なボーレムが最高に狂ってますね",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 7,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/07_UQ14cHsyEkA.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/UQ14cHsyEkA.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "UQ14cHsyEkA"
+}

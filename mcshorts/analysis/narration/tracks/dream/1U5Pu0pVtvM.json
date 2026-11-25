@@ -1,0 +1,1279 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.48,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.34,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.63,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.04,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.53,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.43,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.56,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.06,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.51,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.5,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.06,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.46,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 6
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.59,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 7
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.59,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.66,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 8
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.54,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.55,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.54,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.2,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.54,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.53,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.03,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.42,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.06,
+    "Speech": 0.52,
+    "Whoosh, swoosh, swish": 0.02,
+    "Yell": 0.0,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.46,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.49,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 13
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.07,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 14
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.45,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.1,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 15
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.45,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.08,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 16
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.03,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.39,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.06,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 17
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 18
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.46,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.08,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 19
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.4,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.09,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 20
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.11,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 21
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.03,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.54,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.33,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 22
+   }
+  ],
+  "source": "dream/data/audiotag/1U5Pu0pVtvM.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "D_BATTLE",
+    "effective_code": "D_BATTLE",
+    "quote": "最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "H_TWIST",
+    "effective_code": "H_TWIST",
+    "quote": "ドリームとの決闘中ダクアビスがまさかの行動に出ます",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Ahahaha!",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "Dream（緑）との（白）→ 決闘中（白）→ Daquavis（紫）が（白）→ まさかの行動に（赤）",
+  "voice": "ドリームとの決闘中、ダクアビスがまさかの行動に出ます。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.368,
+   "doc_text": "Dreamとの決闘中Daquavisがまさかの行動に出ます",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": false,
+   "end": 2.9,
+   "row_index": 0,
+   "start": 0.0,
+   "whisper_ja_overlapping_segments": [
+    0
+   ],
+   "whisper_ja_overlapping_text": "ドリームとの決闘中ダクアビスがまさかの行動に出ます"
+  },
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.544,
+   "doc_text": "最初は順調に勝ち進んでいたDaquavisですが 彼はこの後凡ミスをおかし戦況が一気に変わります",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": false,
+   "end": 13.4,
+   "row_index": 1,
+   "start": 8.1,
+   "whisper_ja_overlapping_segments": [
+    1
+   ],
+   "whisper_ja_overlapping_text": "最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "実測"
+     ],
+     "text": "音: 0.9〜1.8秒に音の突出4回 [実測]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "冒頭の書き起こし直しと字幕が一致。中盤の書き起こし「最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります」と字幕が一致（「本ミス」は「凡ミス」の聞き間違い）[書き起こし][画面]"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行目 白「ドリームVSダクアビス」、2行目 **黄の大きな文字**「まさかの逆転劇」（**赤ではなく黄**）。22.6秒の黒画面で消える [実測・画面]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: Dream と Daquavis の決闘 [画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 17回、1ショット平均 1.37秒（中央値 0.80秒）[実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 6回（検出）、字幕が出ている時間 9%（紫・緑の字幕は検出しにくい）[実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 平均 0.49 [音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "声: 14〜21秒は Speech がほぼ0（逆転の場面は声なし、ドラムの音）[音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "効果音: Ding（0〜1・8秒）、爆発（11秒）、ドラム（15・17秒）[音タグ]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: 0.5秒の**モザイク**（何かを隠している）と、「まさかの行動」の予告。#47 と同じ城の決闘の画だが、こちらは何が起きるかを伏せている"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: 対決の名前と「逆転劇」。58本で2行目が黄色なのは珍しい"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: 24.6秒と短い。**大きなスコアの数字**（1-2、1-3、3-4）で勝負の流れが一目で分かる。ただ「凡ミス」と「まさかの行動」が何だったのかは、画面からははっきり分からない"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: Daquavis の勝ったときの叫び声（ｯｼｬｧｧ!!!、ブｩｩｩww）が見どころ。プレイの中身は分かりにくい"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": 0.27,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**緑**「Dreamとの」",
+     "time_raw": "0.00〜0.27",
+     "visual": "城の中で DaquavisMC が迫る"
+    },
+    {
+     "end": null,
+     "start": 0.53,
+     "status": "DOC_OBSERVED",
+     "subtitle": "同上",
+     "time_raw": "0.53",
+     "visual": "**モザイク**のかかった顔のアップ"
+    },
+    {
+     "end": 1.0,
+     "start": 0.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「決闘中」",
+     "time_raw": "0.73〜1.00",
+     "visual": "斬り合い"
+    },
+    {
+     "end": 1.73,
+     "start": 1.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**紫**「Daquavisが」",
+     "time_raw": "1.27〜1.73",
+     "visual": "同上"
+    },
+    {
+     "end": 2.73,
+     "start": 2.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「まさかの行動に」",
+     "time_raw": "2.00〜2.73",
+     "visual": "同上"
+    },
+    {
+     "end": null,
+     "start": 3.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "—",
+     "time_raw": "3.00",
+     "visual": "カット。高い城の上から見下ろす [実測: 3.00]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/48_1U5Pu0pVtvM.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "決闘、モザイク、ナレーション",
+     "content_status": "DOC_OBSERVED",
+     "end": 3.0,
+     "range_raw": "0〜3",
+     "stage_label": "冒頭",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "城を見下ろす → Dream の死亡画面 → スコア「1-2」→「1-3」（緑と紫の大きな数字）→ Daquavis「どうやってどうやって×∞」「ｯｼｬｧｧｧｧｧ!!!」",
+     "content_status": "DOC_OBSERVED",
+     "end": 8.0,
+     "range_raw": "3〜8",
+     "stage_label": "連勝",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 3.0
+    },
+    {
+     "content": "空を見上げる画（落下中）→ ナレーション「最初は順調に」「ですが彼はこの後」「凡ミスをおかし」「戦況が一気に変わります」（鳥居の画）",
+     "content_status": "DOC_OBSERVED",
+     "end": 15.0,
+     "range_raw": "8.4〜15",
+     "stage_label": "第2の予告",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 8.4
+    },
+    {
+     "content": "赤い絨毯の通路 → 黄色い金のリンゴ？を持って戦う → 白い火花",
+     "content_status": "DOC_OBSERVED",
+     "end": 21.0,
+     "range_raw": "15〜21",
+     "stage_label": "逆転",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 15.0
+    },
+    {
+     "content": "「3-4」（Dream が追いつく？）→「ブｩｩｩｩｩｩｩｩｩww」",
+     "content_status": "DOC_OBSERVED",
+     "end": null,
+     "range_raw": "21.6",
+     "stage_label": "スコア",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 21.6
+    },
+    {
+     "content": "**黒い画面に「A MICHAEL BAY FILM」**（#32 と同じ締め）",
+     "content_status": "DOC_OBSERVED",
+     "end": 24.6,
+     "range_raw": "22.7〜24.6",
+     "stage_label": "オチ",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 22.7
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [],
+  "rows": [
+   {
+    "end": 2.9,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+   },
+   {
+    "end": 13.4,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "最初は順調に勝ち進んでいたDaquavisですが"
+     },
+     {
+      "part_index": 1,
+      "text": "彼はこの後凡ミスをおかし戦況が一気に変わります"
+     }
+    ],
+    "row_index": 1,
+    "source": "dream/narration_list.md",
+    "start": 8.1,
+    "status": "DOC_OBSERVED",
+    "text": "最初は順調に勝ち進んでいたDaquavisですが 彼はこの後凡ミスをおかし戦況が一気に変わります"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 24.61,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -40.8,
+    -12.6,
+    -19.0,
+    -22.0,
+    -26.3,
+    -25.2,
+    -10.0,
+    -6.4,
+    -24.0,
+    -9.8,
+    -9.8,
+    -8.3,
+    -7.3,
+    -5.8,
+    -9.2
+   ],
+   "max_db": -5.1,
+   "median_db": -18.1,
+   "onset": 0.0,
+   "p95_db": -8.6,
+   "spikes": [
+    0.9,
+    1.2,
+    1.4,
+    1.8,
+    3.0,
+    8.35,
+    8.6,
+    10.1,
+    11.2,
+    12.15,
+    13.05
+   ]
+  },
+  "cuts": [
+   1.13,
+   3.0,
+   3.53,
+   3.93,
+   4.33,
+   5.33,
+   8.27,
+   8.87,
+   9.33,
+   11.73,
+   12.13,
+   12.93,
+   13.47,
+   19.93,
+   20.73,
+   21.53,
+   22.6
+  ],
+  "cuts_first3s": [
+   1.13,
+   3.0
+  ],
+  "dur": 24.61,
+  "layout": {
+   "content": [
+    30,
+    340
+   ],
+   "play": [
+    86,
+    340
+   ],
+   "top": [
+    30,
+    86
+   ]
+  },
+  "motion_median": 10.2,
+  "moves": [
+   [
+    10.13,
+    10.53
+   ]
+  ],
+  "n_shots": 18,
+  "n_subs": 6,
+  "shot_mean": 1.37,
+  "shot_median": 0.8,
+  "source": "dream/data/measure/1U5Pu0pVtvM.json",
+  "status": "ok",
+  "sub_changes": [
+   0.6,
+   1.2,
+   8.33,
+   9.13,
+   10.53,
+   11.47
+  ],
+  "sub_on_ratio": 0.09,
+  "top_changes": [
+   22.6
+  ]
+ },
+ "no": 48,
+ "video_id": "1U5Pu0pVtvM",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 3.04,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "In the dream and the end of the fight, the Dacuavis will be in a moment."
+   },
+   {
+    "category": "latin",
+    "end": 8.24,
+    "segment_index": 1,
+    "start": 4.76,
+    "text": "No! No! How? How? How? How? How? How?"
+   },
+   {
+    "category": "latin",
+    "end": 13.44,
+    "segment_index": 2,
+    "start": 8.24,
+    "text": "The Dacuavis was in the first place, but he is in the next time, the MIS will change the fight."
+   },
+   {
+    "category": "latin",
+    "end": 24.56,
+    "segment_index": 3,
+    "start": 22.56,
+    "text": "Ahahaha!"
+   }
+  ],
+  "source": "dream/data/asr/1U5Pu0pVtvM.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 2.94,
+    "logprob": -0.14,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "ドリームとの決闘中ダクアビスがまさかの行動に出ます",
+    "words": [
+     {
+      "end": 0.16,
+      "start": 0.0,
+      "word": "ド"
+     },
+     {
+      "end": 0.26,
+      "start": 0.16,
+      "word": "リ"
+     },
+     {
+      "end": 0.38,
+      "start": 0.26,
+      "word": "ーム"
+     },
+     {
+      "end": 0.52,
+      "start": 0.38,
+      "word": "と"
+     },
+     {
+      "end": 0.62,
+      "start": 0.52,
+      "word": "の"
+     },
+     {
+      "end": 0.76,
+      "start": 0.62,
+      "word": "決"
+     },
+     {
+      "end": 0.94,
+      "start": 0.76,
+      "word": "闘"
+     },
+     {
+      "end": 1.12,
+      "start": 0.94,
+      "word": "中"
+     },
+     {
+      "end": 1.28,
+      "start": 1.12,
+      "word": "ダ"
+     },
+     {
+      "end": 1.38,
+      "start": 1.28,
+      "word": "ク"
+     },
+     {
+      "end": 1.48,
+      "start": 1.38,
+      "word": "ア"
+     },
+     {
+      "end": 1.56,
+      "start": 1.48,
+      "word": "ビ"
+     },
+     {
+      "end": 1.64,
+      "start": 1.56,
+      "word": "ス"
+     },
+     {
+      "end": 1.74,
+      "start": 1.64,
+      "word": "が"
+     },
+     {
+      "end": 1.88,
+      "start": 1.74,
+      "word": "ま"
+     },
+     {
+      "end": 1.96,
+      "start": 1.88,
+      "word": "さ"
+     },
+     {
+      "end": 2.06,
+      "start": 1.96,
+      "word": "か"
+     },
+     {
+      "end": 2.18,
+      "start": 2.06,
+      "word": "の"
+     },
+     {
+      "end": 2.36,
+      "start": 2.18,
+      "word": "行"
+     },
+     {
+      "end": 2.48,
+      "start": 2.36,
+      "word": "動"
+     },
+     {
+      "end": 2.6,
+      "start": 2.48,
+      "word": "に"
+     },
+     {
+      "end": 2.7,
+      "start": 2.6,
+      "word": "出"
+     },
+     {
+      "end": 2.94,
+      "start": 2.7,
+      "word": "ます"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 13.38,
+    "logprob": -0.14,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     1
+    ],
+    "segment_index": 1,
+    "start": 8.08,
+    "text": "最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります",
+    "words": [
+     {
+      "end": 8.32,
+      "start": 8.08,
+      "word": "最"
+     },
+     {
+      "end": 8.56,
+      "start": 8.32,
+      "word": "初"
+     },
+     {
+      "end": 8.72,
+      "start": 8.56,
+      "word": "は"
+     },
+     {
+      "end": 8.86,
+      "start": 8.72,
+      "word": "順"
+     },
+     {
+      "end": 9.0,
+      "start": 8.86,
+      "word": "調"
+     },
+     {
+      "end": 9.12,
+      "start": 9.0,
+      "word": "に"
+     },
+     {
+      "end": 9.24,
+      "start": 9.12,
+      "word": "勝"
+     },
+     {
+      "end": 9.34,
+      "start": 9.24,
+      "word": "ち"
+     },
+     {
+      "end": 9.52,
+      "start": 9.34,
+      "word": "進"
+     },
+     {
+      "end": 9.72,
+      "start": 9.52,
+      "word": "んで"
+     },
+     {
+      "end": 9.86,
+      "start": 9.72,
+      "word": "いた"
+     },
+     {
+      "end": 9.98,
+      "start": 9.86,
+      "word": "ダ"
+     },
+     {
+      "end": 10.08,
+      "start": 9.98,
+      "word": "ク"
+     },
+     {
+      "end": 10.16,
+      "start": 10.08,
+      "word": "ア"
+     },
+     {
+      "end": 10.26,
+      "start": 10.16,
+      "word": "ビ"
+     },
+     {
+      "end": 10.36,
+      "start": 10.26,
+      "word": "ス"
+     },
+     {
+      "end": 10.56,
+      "start": 10.36,
+      "word": "です"
+     },
+     {
+      "end": 10.7,
+      "start": 10.56,
+      "word": "が"
+     },
+     {
+      "end": 10.82,
+      "start": 10.7,
+      "word": "彼"
+     },
+     {
+      "end": 10.96,
+      "start": 10.82,
+      "word": "は"
+     },
+     {
+      "end": 11.18,
+      "start": 10.96,
+      "word": "この"
+     },
+     {
+      "end": 11.32,
+      "start": 11.18,
+      "word": "後"
+     },
+     {
+      "end": 11.52,
+      "start": 11.32,
+      "word": "本"
+     },
+     {
+      "end": 11.66,
+      "start": 11.52,
+      "word": "ミ"
+     },
+     {
+      "end": 11.74,
+      "start": 11.66,
+      "word": "ス"
+     },
+     {
+      "end": 11.86,
+      "start": 11.74,
+      "word": "を"
+     },
+     {
+      "end": 11.96,
+      "start": 11.86,
+      "word": "犯"
+     },
+     {
+      "end": 12.08,
+      "start": 11.96,
+      "word": "す"
+     },
+     {
+      "end": 12.28,
+      "start": 12.08,
+      "word": "戦"
+     },
+     {
+      "end": 12.44,
+      "start": 12.28,
+      "word": "況"
+     },
+     {
+      "end": 12.58,
+      "start": 12.44,
+      "word": "が"
+     },
+     {
+      "end": 12.7,
+      "start": 12.58,
+      "word": "一"
+     },
+     {
+      "end": 12.8,
+      "start": 12.7,
+      "word": "気"
+     },
+     {
+      "end": 12.9,
+      "start": 12.8,
+      "word": "に"
+     },
+     {
+      "end": 13.02,
+      "start": 12.9,
+      "word": "変"
+     },
+     {
+      "end": 13.1,
+      "start": 13.02,
+      "word": "わ"
+     },
+     {
+      "end": 13.38,
+      "start": 13.1,
+      "word": "ります"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/1U5Pu0pVtvM.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}

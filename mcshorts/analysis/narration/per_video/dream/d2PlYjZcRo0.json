@@ -1,0 +1,935 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 73.05,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.67,
+   "first_cut_minus_first_row_start": 0.67,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.536,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「Groxを」",
+      "time_raw": "0.00〜0.53",
+      "visual": "空に向かって伸びる**超巨大なトロッコのレール**の頂上"
+     },
+     {
+      "end": 1.0,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「怒らせたら」",
+      "time_raw": "0.73〜1.00",
+      "visual": "カット。レールが空から斜めに下りてくる [実測: 0.67]"
+     },
+     {
+      "end": 2.0,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「こうなります」",
+      "time_raw": "1.27〜2.00",
+      "visual": "カット。地上のレール。遠くに塔のようなレール [実測: 1.20]"
+     },
+     {
+      "end": null,
+      "start": 2.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "2.27",
+      "visual": "白い煙（爆発の後）"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「えい兄弟」→「エメラルドちょうだい」",
+      "time_raw": "2.53〜3.00",
+      "visual": "家の中の村人（キッズ）がエメラルドを持つ"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 1.7,
+     "music_mean_during_row": 0.283,
+     "nearest_cut_to_end": 0.5,
+     "nearest_cut_to_start": 0.67,
+     "nearest_subtitle_change_to_end": 0.03,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.75,
+      1.2
+     ],
+     "start": 0.0
+    },
+    {
+     "end": 73.0,
+     "music_mean_during_row": 0.547,
+     "nearest_cut_to_end": 3.6,
+     "nearest_cut_to_start": 0.0,
+     "nearest_subtitle_change_to_end": 2.4,
+     "nearest_subtitle_change_to_start": 0.8,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      66.65,
+      71.8
+     ],
+     "start": 66.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「Groxを怒らせたらこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 0,
+     "reason": "「サイコパスだと思う方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": "文書の注記で、文の一部が聞き取れていない",
+     "label": "感想・ツッコミ",
+     "part": 1,
+     "reason": "最後の一言（文書に「後半は聞き取りが崩れている」と注記）",
+     "role": "R_COMMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 16,
+     "content_lemmas": [
+      "Grox",
+      "怒る",
+      "こう",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "Grox",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Grox"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "怒"
+      ],
+      "emphasis_words": [],
+      "ending_type": "こうなる",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 3,
+      "助詞": 1,
+      "動詞": 2,
+      "名詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "Groxを怒らせたらこうなります"
+    },
+    {
+     "chars": 21,
+     "content_lemmas": [
+      "普通",
+      "サイコ-psycho",
+      "パス-pass",
+      "思う",
+      "方",
+      "チャンネル-channel",
+      "登録"
+     ],
+     "first_token": {
+      "lemma": "普通",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "普通"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": true,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "サイコパス"
+      ],
+      "emphasis_words": [
+       "普通に"
+      ],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 6
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "普通にサイコパスだと思う方はチャンネル登録"
+    },
+    {
+     "chars": 27,
+     "content_lemmas": [
+      "後",
+      "絶対",
+      "牛乳",
+      "スカ-ska",
+      "シアン-cyan",
+      "後半",
+      "聞き取り",
+      "崩れる",
+      "居る"
+     ],
+     "first_token": {
+      "lemma": "後",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "あと"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "絶対"
+      ],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 7,
+      "感動詞": 1,
+      "補助記号": 3
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "あと絶対あの牛乳スカシアン（※後半は聞き取りが崩れている）"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "Grox",
+     1
+    ],
+    [
+     "怒る",
+     1
+    ],
+    [
+     "こう",
+     1
+    ],
+    [
+     "成る",
+     1
+    ],
+    [
+     "普通",
+     1
+    ],
+    [
+     "サイコ-psycho",
+     1
+    ],
+    [
+     "パス-pass",
+     1
+    ],
+    [
+     "思う",
+     1
+    ],
+    [
+     "方",
+     1
+    ],
+    [
+     "チャンネル-channel",
+     1
+    ],
+    [
+     "登録",
+     1
+    ],
+    [
+     "後",
+     1
+    ],
+    [
+     "絶対",
+     1
+    ],
+    [
+     "牛乳",
+     1
+    ],
+    [
+     "スカ-ska",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.7,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Groxを怒らせたらこうなります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 10,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ブロックスを プラスタ",
+     "words": [
+      "ブ",
+      "ロ",
+      "ック",
+      "ス",
+      "を",
+      " プ",
+      "ラ",
+      "ス",
+      "タ"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Groxを怒らせたらこうなります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 42,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ブロックスを プラスタらこうなんだえ bro、 누のエメラルHey bro, give me that",
+     "words": [
+      "ブ",
+      "ロ",
+      "ック",
+      "ス",
+      "を",
+      " プ",
+      "ラ",
+      "ス",
+      "タ",
+      "ら",
+      "こう",
+      "なんだ",
+      "え",
+      " bro、",
+      " 누",
+      "の",
+      "エ",
+      "メ",
+      "ラ",
+      "ル",
+      "Hey",
+      " bro,",
+      " give",
+      " me",
+      " that"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Groxを怒らせたらこうなります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 53,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ブロックスを プラスタらこうなんだえ bro、 누のエメラルHey bro, give me that エメラルAlright,",
+     "words": [
+      "ブ",
+      "ロ",
+      "ック",
+      "ス",
+      "を",
+      " プ",
+      "ラ",
+      "ス",
+      "タ",
+      "ら",
+      "こう",
+      "なんだ",
+      "え",
+      " bro、",
+      " 누",
+      "の",
+      "エ",
+      "メ",
+      "ラ",
+      "ル",
+      "Hey",
+      " bro,",
+      " give",
+      " me",
+      " that",
+      " エ",
+      "メ",
+      "ラ",
+      "ル",
+      "Alright,"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 16,
+    "end": 1.7,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Groxを怒らせたらこうなります"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "Grox",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Grox"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "怒"
+      ],
+      "emphasis_words": [],
+      "ending_type": "こうなる",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "text": "Groxを怒らせたらこうなります"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「Groxを怒らせたらこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "HX",
+    "quote": "ブロックスを プラスタらこうなんだ",
+    "review": {
+     "corrected_code": "HX",
+     "memo": "「〜たらこうなる」という形は読めますが、肝心の出来事が聞き取れず、結果の先出しとは確定できません（返答では DX。フックの判断不能の分類名 HX で記録）",
+     "result": "違う",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「Groxを」",
+      "time_raw": "0.00〜0.53",
+      "visual": "空に向かって伸びる**超巨大なトロッコのレール**の頂上"
+     },
+     {
+      "end": 1.0,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「怒らせたら」",
+      "time_raw": "0.73〜1.00",
+      "visual": "カット。レールが空から斜めに下りてくる [実測: 0.67]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ブ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.13,
+    "rows": [
+     {
+      "chars": 16,
+      "chars_per_sec": 9.41,
+      "duration": 1.7,
+      "gap_to_next_row": 64.3,
+      "row": 0
+     },
+     {
+      "chars": 48,
+      "chars_per_sec": 6.86,
+      "duration": 7.0,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 64
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 0.68,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 38,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "怒"
+     ],
+     "emphasis_words": [],
+     "ending_type": "こうなる",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "Groxを怒らせたらこうなります"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": true,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "サイコパス"
+     ],
+     "emphasis_words": [
+      "普通に"
+     ],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "普通にサイコパスだと思う方はチャンネル登録"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "絶対"
+     ],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "あと絶対あの牛乳スカシアン（※後半は聞き取りが崩れている）"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "トロッコが落ちてくる",
+       "range_raw": "45〜66",
+       "source": "doc_structure",
+       "source_file": "dream/individual/36_d2PlYjZcRo0.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 5
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "Groxを怒らせたらこうなります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "d2PlYjZcRo0"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW",
+    "R_CTA",
+    "R_COMMENT"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_ESCALATE",
+     "effective_code": "D_ESCALATE",
+     "quote": "I'll get you a laptop.",
+     "review": {
+      "corrected_code": null,
+      "memo": "D_ESCALATE の根拠は30〜43秒の区間に限定",
+      "result": "正しい",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "普通にサイコパスだと思う方はチャンネル登録",
+     "review": {
+      "corrected_code": null,
+      "memo": null,
+      "result": "正しい",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "巨大なレール、ナレーション",
+      "range_raw": "0〜1.7",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "キッズ「えい兄弟」「エメラルドちょうだい」→ Grox「嫌だね」→「どうやって俺をとめるつもり?」→ 部屋のチェストを開けると「牛乳だけ??」",
+      "range_raw": "2.7〜13",
+      "stage_label": "事件1"
+     },
+     {
+      "content": "牛乳を飲む「何で吐き気するの？」→ 字幕の箱「やぁハンサムくん❤️」→ ニヤけ顔のキッズ「これは牛乳だと言ってくれ!!!」（牛乳ではなかった、という下ネタ）→「もう荒らしはやめてくれ」",
+      "range_raw": "13〜21",
+      "stage_label": "事件2"
+     },
+     {
+      "content": "別のキッズ「ダイヤモンドよこせや!!」→「いいよ」「でもちょっとだけ変えさせて」→ 牛の後ろから渡す（22〜24秒に Moo・Fart）[音タグ] →「何を四天王?!」「君にはうんざりだ!!」",
+      "range_raw": "20.4〜27",
+      "stage_label": "事件3"
+     },
+     {
+      "content": "「俺を荒らす気か？」「なら倍返しだ！」→「このトロッコは」「猛スピードで落ちてくる」（冒頭の巨大なレール）→ レールの上にキッズ2人「ママかパパか」「さっさと選べガキ」→ キッズ「助けて～!!」→ 親「我が息子よ」「けど俺助けたらXbox買ってやるよ!!」「車買ってあげるよ!!」「たくさん見れるぞ!!」「ポル〇ハブとか」",
+      "range_raw": "26.6〜44",
+      "stage_label": "仕返しの準備"
+     },
+     {
+      "content": "トロッコが落ちてくる → Grox「兄弟よ残念だよ」「本当ごめんよ」「マジで後悔しているよ」→ 生きている「もしかしたらまだ生きてんじゃね?」→ もう一度「ナーホンマごめんね～」→「ご愁傷様」「なぜまだ脈がある？」",
+      "range_raw": "45〜66",
+      "stage_label": "処刑"
+     },
+     {
+      "content": "💀＋赤の引用符「\"オーバーキル\"」→ ナレーション「普通にサイコパスだと思う方はチャンネル登録」（黄色いスポーツカーの画）",
+      "range_raw": "66〜73",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     4,
+     17,
+     18,
+     19,
+     24,
+     26,
+     45,
+     46,
+     51,
+     64,
+     66,
+     71
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.75,
+     1.2,
+     4.85,
+     17.25,
+     17.45,
+     17.9,
+     18.3,
+     18.95,
+     19.6,
+     24.35,
+     26.35,
+     45.55,
+     46.15,
+     46.55,
+     51.05,
+     51.8,
+     64.15,
+     64.6,
+     64.8,
+     66.65,
+     71.8
+    ],
+    "cuts": 52,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 6,
+     "15": 2,
+     "20": 6,
+     "25": 6,
+     "30": 5,
+     "35": 2,
+     "40": 3,
+     "45": 3,
+     "5": 3,
+     "50": 3,
+     "55": 5,
+     "60": 2,
+     "65": 2
+    },
+    "duration_sec": 73.05,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.32,
+      "t": 0
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "end",
+      "row": 1,
+      "start": 66.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 73.0,
+    "is_end_position": true,
+    "sec_from_end": 0.05,
+    "start": 66.0,
+    "status": "DOC_OBSERVED",
+    "text": "普通にサイコパスだと思う方はチャンネル登録 あと絶対あの牛乳スカシアン（※後半は聞き取りが崩れている）"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 0,
+     "reason": "「サイコパスだと思う方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": "文書の注記で、文の一部が聞き取れていない",
+     "label": "感想・ツッコミ",
+     "part": 1,
+     "reason": "最後の一言（文書に「後半は聞き取りが崩れている」と注記）",
+     "role": "R_COMMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 65.9,
+    "status": "ok",
+    "text": "Let's go!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 71.22,
+    "status": "ok",
+    "text": "あと絶対あの牛乳スッシアン"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "普通にサイコパスだと思う方はチャンネル登録",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 36,
+ "not_applicable": [],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/36_d2PlYjZcRo0.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/d2PlYjZcRo0.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "d2PlYjZcRo0"
+}

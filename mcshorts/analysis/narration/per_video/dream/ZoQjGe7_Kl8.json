@@ -1,0 +1,632 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 47.25,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.67,
+   "first_cut_minus_first_row_start": 0.67,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.276,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人を」",
+      "time_raw": "0.00〜0.53",
+      "visual": "燃える村、血を流して倒れた村人"
+     },
+     {
+      "end": 1.0,
+      "start": 0.67,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「こ〇しまくった」",
+      "time_raw": "0.67〜1.00",
+      "visual": "カット。**山高帽の細長い怪物**（蜘蛛のような脚）[実測: 0.67]"
+     },
+     {
+      "end": 1.73,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この怪物に」",
+      "time_raw": "1.27〜1.73",
+      "visual": "同上"
+     },
+     {
+      "end": 2.73,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「とんでもない制裁が」",
+      "time_raw": "2.00〜2.73",
+      "visual": "カット。宇宙のような背景で、金色の鎧の男が拳を振る（光の演出）[実測: 2.00, 2.33, 2.73]"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「下ります」",
+      "time_raw": "3.00",
+      "visual": "光の帯"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.5,
+     "music_mean_during_row": 0.385,
+     "nearest_cut_to_end": 0.1,
+     "nearest_cut_to_start": 0.67,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": "字幕だけのナレーションの可能性",
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この怪物にとんでもない制裁が下ります」と結末を予告（Whisper には日本語の声が無く、構成の表では「字幕のナレーション」）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 28,
+     "content_lemmas": [
+      "村人",
+      "来る",
+      "為る",
+      "捲る",
+      "怪物",
+      "とんでも",
+      "無い",
+      "制裁",
+      "下る"
+     ],
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "とんでもない"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": true,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 2,
+      "助詞": 3,
+      "動詞": 4,
+      "名詞": 3,
+      "形容詞": 1,
+      "補助記号": 1,
+      "連体詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "村人",
+     1
+    ],
+    [
+     "来る",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "捲る",
+     1
+    ],
+    [
+     "怪物",
+     1
+    ],
+    [
+     "とんでも",
+     1
+    ],
+    [
+     "無い",
+     1
+    ],
+    [
+     "制裁",
+     1
+    ],
+    [
+     "下る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "latin"
+     ],
+     "chars": 5,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "I'mma",
+     "words": [
+      "I",
+      "'m",
+      "ma"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "latin"
+     ],
+     "chars": 30,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "I'mma smoke you up!I'mma smoke you up!",
+     "words": [
+      "I",
+      "'m",
+      "ma",
+      " smoke",
+      " you",
+      " up!",
+      "I",
+      "'m",
+      "ma",
+      " smoke",
+      " you",
+      " up!"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "latin"
+     ],
+     "chars": 53,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "I'mma smoke you up!I'mma smoke you up!What happened to my village?",
+     "words": [
+      "I",
+      "'m",
+      "ma",
+      " smoke",
+      " you",
+      " up!",
+      "I",
+      "'m",
+      "ma",
+      " smoke",
+      " you",
+      " up!",
+      "What",
+      " happened",
+      " to",
+      " my",
+      " village?"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 28,
+    "end": 3.5,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "村人",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "村人"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "とんでもない"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": true,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": "字幕だけのナレーションの可能性",
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この怪物にとんでもない制裁が下ります」と結末を予告（Whisper には日本語の声が無く、構成の表では「字幕のナレーション」）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "HX",
+    "effective_code": "HX",
+    "quote": "I'mma smoke you up!",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人を」",
+      "time_raw": "0.00〜0.53",
+      "visual": "燃える村、血を流して倒れた村人"
+     },
+     {
+      "end": 1.0,
+      "start": 0.67,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「こ〇しまくった」",
+      "time_raw": "0.67〜1.00",
+      "visual": "カット。**山高帽の細長い怪物**（蜘蛛のような脚）[実測: 0.67]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "latin",
+    "start": 0.0,
+    "status": "ok",
+    "word": "I"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.0,
+    "rows": [
+     {
+      "chars": 28,
+      "chars_per_sec": 8.0,
+      "duration": 3.5,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 28
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 9.8,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 12,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "とんでもない"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": true,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "赤の引用符「\"秒殺\"」",
+       "range_raw": "44.6〜47.3",
+       "source": "doc_structure",
+       "source_file": "dream/individual/16_ZoQjGe7_Kl8.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 5
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "ZoQjGe7_Kl8"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "Try and hit me with your best shot!",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "Get ready!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "字幕のナレーション、怪物と必殺技の先出し",
+      "range_raw": "0.0〜3.3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「ここで何が起こったんだ?」「村人〇されてんじゃん...!」→ 生き残りの村人「生き残ったぜ!!」",
+      "range_raw": "3.7〜9",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「犯人を見つけなきゃ」→「ちょ待っ」「なっ...」→ 地下へ落ちる「何だこれ～!!」「ｿｧｧｧｧｧｧ...」。17〜18秒に Explosion [音タグ]",
+      "range_raw": "10〜20",
+      "stage_label": "事件"
+     },
+     {
+      "content": "怪物「君たちの町は」「簡単に壊せたね」→ プレイヤー「町を壊したんだな」「テメェを燻製にしてやる」→ 怪物「全力で撃ってみろ!!」→「(?!?!)」",
+      "range_raw": "21.7〜31",
+      "stage_label": "対決"
+     },
+     {
+      "content": "金色の男が腕を広げ「これで終わりだからだ!」（日本語の声）→ 光の帯の中で拳の連打 → 「無限柔軟作品」「\"Unlimited Flex Works\"」の文字（アニメ『Fate』の技名のパロディ）",
+      "range_raw": "33〜43",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "怪物の顔 → 地球を貫く光の柱、赤の引用符「\"秒殺\"」",
+      "range_raw": "44.6〜47.3",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     11,
+     17,
+     18
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     11.25,
+     11.4,
+     11.7
+    ],
+    "cuts": 31,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 2,
+     "15": 4,
+     "20": 1,
+     "25": 2,
+     "30": 5,
+     "35": 5,
+     "40": 3,
+     "5": 4
+    },
+    "duration_sec": 47.25,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.31,
+      "t": 17
+     },
+     {
+      "Explosion": 0.37,
+      "t": 18
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 3.5,
+    "is_end_position": false,
+    "sec_from_end": 43.75,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "村人をこ〇しまくったこの怪物にとんでもない制裁が下ります"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": "字幕だけのナレーションの可能性",
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この怪物にとんでもない制裁が下ります」と結末を予告（Whisper には日本語の声が無く、構成の表では「字幕のナレーション」）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 30.1,
+    "status": "ok",
+    "text": "Get ready!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 45.52,
+    "status": "ok",
+    "text": "ドキドキ"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Get ready!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 16,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/16_ZoQjGe7_Kl8.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/ZoQjGe7_Kl8.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "ZoQjGe7_Kl8"
+}

@@ -1,0 +1,655 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 23.22,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.87,
+   "first_cut_minus_first_row_start": 1.87,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.484,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamが」",
+      "time_raw": "0.00〜0.53",
+      "visual": "森の一人称視点"
+     },
+     {
+      "end": 1.73,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ハート0.5の状態で」",
+      "time_raw": "0.73〜1.73",
+      "visual": "体力ゲージの寄り（**ハートが半分1つだけ**）"
+     },
+     {
+      "end": 2.27,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「槍を使い」",
+      "time_raw": "2.00〜2.27",
+      "visual": "カット。上から見下ろした Sapnap（赤く光る＝ダメージ）[実測: 1.87]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「3キルします」",
+      "time_raw": "2.53〜3.00",
+      "visual": "カット。空に吹き飛ぶ相手 [実測: 2.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.0,
+     "music_mean_during_row": 0.277,
+     "nearest_cut_to_end": 0.2,
+     "nearest_cut_to_start": 1.87,
+     "nearest_subtitle_change_to_end": 0.2,
+     "nearest_subtitle_change_to_start": 1.87,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜で3キルします」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 24,
+     "content_lemmas": [
+      "Dream",
+      "ハート-heart",
+      "0",
+      "5",
+      "状態",
+      "槍",
+      "使う",
+      "3",
+      "キル-kill",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 8,
+      "補助記号": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "Dream",
+     1
+    ],
+    [
+     "ハート-heart",
+     1
+    ],
+    [
+     "0",
+     1
+    ],
+    [
+     "5",
+     1
+    ],
+    [
+     "状態",
+     1
+    ],
+    [
+     "槍",
+     1
+    ],
+    [
+     "使う",
+     1
+    ],
+    [
+     "3",
+     1
+    ],
+    [
+     "キル-kill",
+     1
+    ],
+    [
+     "為る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "Dreamがハート0.",
+     "words": [
+      "D",
+      "ream",
+      "が",
+      "ハ",
+      "ート",
+      "0."
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 24,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "Dreamがハート0.5の状態で槍を使い3Kリします",
+     "words": [
+      "D",
+      "ream",
+      "が",
+      "ハ",
+      "ート",
+      "0.",
+      "5",
+      "の",
+      "状",
+      "態",
+      "で",
+      "槍",
+      "を",
+      "使",
+      "い",
+      "3",
+      "K",
+      "リ",
+      "します"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 77,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "Dreamがハート0.5の状態で槍を使い3KリしますDreamがハート0.5の状態で槍を使い3KリしますDreamがハート0.5の状態で槍を使い3KリしますBad in",
+     "words": [
+      "D",
+      "ream",
+      "が",
+      "ハ",
+      "ート",
+      "0.",
+      "5",
+      "の",
+      "状",
+      "態",
+      "で",
+      "槍",
+      "を",
+      "使",
+      "い",
+      "3",
+      "K",
+      "リ",
+      "します",
+      "D",
+      "ream",
+      "が",
+      "ハ",
+      "ート",
+      "0.",
+      "5",
+      "の",
+      "状",
+      "態",
+      "で",
+      "槍",
+      "を",
+      "使",
+      "い",
+      "3",
+      "K",
+      "リ",
+      "します",
+      "D",
+      "ream",
+      "が",
+      "ハ",
+      "ート",
+      "0.",
+      "5",
+      "の",
+      "状",
+      "態",
+      "で",
+      "槍",
+      "を",
+      "使",
+      "い",
+      "3",
+      "K",
+      "リ",
+      "します",
+      "B",
+      "ad",
+      " in"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 24,
+    "end": 3.0,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜で3キルします」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "Dreamがハート0.5の状態で槍を使い3Kリします",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamが」",
+      "time_raw": "0.00〜0.53",
+      "visual": "森の一人称視点"
+     },
+     {
+      "end": 1.73,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ハート0.5の状態で」",
+      "time_raw": "0.73〜1.73",
+      "visual": "体力ゲージの寄り（**ハートが半分1つだけ**）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "D"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.0,
+    "rows": [
+     {
+      "chars": 24,
+      "chars_per_sec": 8.0,
+      "duration": 3.0,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 24
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.95,
+    "gap_max": 0.12,
+    "gap_median": 0.12,
+    "gaps_ge_0.3s": 0,
+    "n_words": 19,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "追う側「アイツいつ槍作ったんだよ！」",
+       "range_raw": "18〜21.5",
+       "source": "doc_structure",
+       "source_file": "dream/individual/42_S8OLvKN4-o8.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 3
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "Dreamがハート0.5の状態で槍を使い3キルします",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": "槍を使う場面は文にある。3キルしたことは文から確認できない",
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "S8OLvKN4-o8"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "I'm cutting him off!",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "What?!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "体力ゲージ、ナレーション",
+      "range_raw": "0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "追う側（英語の声、字幕）「3v1だ！」→「えーっと...」→「ANTはまだ地下にいる」→「回ってる」→「逃げ道を塞ぐぞ」「見えた見えた見えた」",
+      "range_raw": "3.3〜12",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「いいぞいいぞ」→「いいぞDreamから離れるな」",
+      "range_raw": "12.6〜18",
+      "stage_label": "緊張"
+     },
+     {
+      "content": "崖から飛び降りる Dream →「死ねぇｪｪｪ！」「ちょまっ...」→ 追う側「アイツいつ槍作ったんだよ！」「ｲｪｪｪｪｪｪｱｧｯｽ!!!」",
+      "range_raw": "18〜21.5",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "追う側「えぇ何？」で終わる",
+      "range_raw": "21.5〜23.2",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [],
+    "cuts": 4,
+    "cuts_per_5s": {
+     "0": 3,
+     "15": 1
+    },
+    "duration_sec": 23.22,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 3.0,
+    "is_end_position": false,
+    "sec_from_end": 20.22,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamがハート0.5の状態で槍を使い3キルします"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜で3キルします」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 22.2,
+    "status": "ok",
+    "text": "What?!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 21.98,
+    "status": "ok",
+    "text": "イエーイ"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "What?!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 42,
+ "not_applicable": [
+  {
+   "item": 8,
+   "reason": "規則に当てはまる秒が無い",
+   "what": "盛り上がりの候補"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/42_S8OLvKN4-o8.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/S8OLvKN4-o8.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "S8OLvKN4-o8"
+}

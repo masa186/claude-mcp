@@ -1,0 +1,635 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 28.33,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.6,
+   "first_cut_minus_first_row_start": 0.6,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.51,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamの」",
+      "time_raw": "0.00〜0.27",
+      "visual": "左上に顔出しの配信者、Dream の映像（空中から落ちる）"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「神技は」",
+      "time_raw": "0.53〜0.73",
+      "visual": "作業台が飛ぶ → 作業台の画面 [実測: 0.60]"
+     },
+     {
+      "end": 1.73,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「全てヤラセです」",
+      "time_raw": "1.00〜1.73",
+      "visual": "作業台の画面 → ボートで着地 [実測: 1.13]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "オレンジ「じゃーねDream笑」",
+      "time_raw": "2.00〜3.00",
+      "visual": "落下 → 作業台の画面 [実測: 2.73]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 1.8,
+     "music_mean_during_row": 0.637,
+     "nearest_cut_to_end": 0.67,
+     "nearest_cut_to_start": 0.6,
+     "nearest_subtitle_change_to_end": 0.67,
+     "nearest_subtitle_change_to_start": 0.6,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.1,
+      0.75,
+      2.05
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「〜は全てヤラセです」と断定",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 16,
+     "content_lemmas": [
+      "Dream",
+      "神業",
+      "全て",
+      "遣らせ"
+     ],
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": true,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "全て",
+       "神"
+      ],
+      "ending_type": "です(断定)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 2,
+      "名詞": 4
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "Dreamの神技は全てヤラセです"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "Dream",
+     1
+    ],
+    [
+     "神業",
+     1
+    ],
+    [
+     "全て",
+     1
+    ],
+    [
+     "遣らせ",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamの神技は全てヤラセです"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 7,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームの鍵技は",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "鍵",
+      "技",
+      "は"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamの神技は全てヤラセです"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームの鍵技はすべてやらせですバイドリーム!",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "鍵",
+      "技",
+      "は",
+      "す",
+      "べ",
+      "て",
+      "や",
+      "ら",
+      "せ",
+      "です",
+      "バイ",
+      "ド",
+      "リ",
+      "ーム!"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamの神技は全てヤラセです"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 38,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームの鍵技はすべてやらせですバイドリーム!You're telling me...HOO!",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "の",
+      "鍵",
+      "技",
+      "は",
+      "す",
+      "べ",
+      "て",
+      "や",
+      "ら",
+      "せ",
+      "です",
+      "バイ",
+      "ド",
+      "リ",
+      "ーム!",
+      "You",
+      "'re",
+      " telling",
+      " me",
+      "...",
+      "H",
+      "OO!"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 16,
+    "end": 1.8,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamの神技は全てヤラセです"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": true,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "全て",
+       "神"
+      ],
+      "ending_type": "です(断定)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "Dreamの神技は全てヤラセです"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「〜は全てヤラセです」と断定",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_LABEL",
+    "effective_code": "H_LABEL",
+    "quote": "ドリームの鍵技はすべてやらせです",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamの」",
+      "time_raw": "0.00〜0.27",
+      "visual": "左上に顔出しの配信者、Dream の映像（空中から落ちる）"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「神技は」",
+      "time_raw": "0.53〜0.73",
+      "visual": "作業台が飛ぶ → 作業台の画面 [実測: 0.60]"
+     },
+     {
+      "end": 1.73,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「全てヤラセです」",
+      "time_raw": "1.00〜1.73",
+      "visual": "作業台の画面 → ボートで着地 [実測: 1.13]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ド"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.89,
+    "rows": [
+     {
+      "chars": 16,
+      "chars_per_sec": 8.89,
+      "duration": 1.8,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 16
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 8.33,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 14,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": true,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "全て",
+      "神"
+     ],
+     "ending_type": "です(断定)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "Dreamの神技は全てヤラセです"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_LABEL"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_PROCESS",
+     "effective_code": "D_PROCESS",
+     "quote": "Let's check how many frames.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "That's crazy!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "挑発の断定",
+      "range_raw": "0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "配信者（青字幕）「ﾎｯ///」→「もう木材をカーソルに」→「合わせてるの？一瞬で？」",
+      "range_raw": "3〜9",
+      "stage_label": "疑い"
+     },
+     {
+      "content": "作業台の画面をコマ送り「フレーム数えてみる」→「1」→「3フレーム？」→「お、いや多分」→「木材に触れてるな」→「ok正確には」",
+      "range_raw": "9〜22",
+      "stage_label": "検証"
+     },
+     {
+      "content": "「but」「あれは一瞬だった」→「これはイカれてるわ！」",
+      "range_raw": "22.8〜26",
+      "stage_label": "結論"
+     },
+     {
+      "content": "☠️の絵文字と赤の引用符「\"疑うほどの着地\"」",
+      "range_raw": "26.9〜28.3",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10,
+     11,
+     13,
+     14,
+     15,
+     16,
+     17,
+     20,
+     21,
+     23
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.1,
+     0.75,
+     2.05,
+     3.85,
+     4.65,
+     5.55,
+     6.05,
+     6.5,
+     6.9,
+     7.25,
+     8.1,
+     8.5,
+     10.25,
+     10.5,
+     11.9,
+     13.7,
+     14.75,
+     15.85,
+     16.15,
+     17.05,
+     17.75,
+     20.65,
+     21.05,
+     23.25,
+     23.6,
+     23.75
+    ],
+    "cuts": 12,
+    "cuts_per_5s": {
+     "0": 3,
+     "10": 1,
+     "20": 4,
+     "25": 1,
+     "5": 3
+    },
+    "duration_sec": 28.33,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 1.8,
+    "is_end_position": false,
+    "sec_from_end": 26.53,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamの神技は全てヤラセです"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「〜は全てヤラセです」と断定",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 26.0,
+    "status": "ok",
+    "text": "I love you, baby."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 24.52,
+    "status": "ok",
+    "text": "Oh my god!"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "That's crazy!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 57,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/57_7fSr1a8AlsI.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/7fSr1a8AlsI.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "7fSr1a8AlsI"
+}

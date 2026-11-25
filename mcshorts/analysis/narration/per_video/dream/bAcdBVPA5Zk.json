@@ -1,0 +1,629 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 54.57,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.07,
+   "first_cut_minus_first_row_start": -0.2,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.504,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "夜の桜の森。遠くにクリーパー"
+     },
+     {
+      "end": 1.47,
+      "start": 0.07,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「刺激を求めすぎた」→ 白「村人の末路が」",
+      "time_raw": "0.07〜1.47",
+      "visual": "カット。**すました顔の村人が剣で自分を刺している**（赤い血の粒）[実測: 0.07]"
+     },
+     {
+      "end": 2.73,
+      "start": 1.67,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「村人の末路が」→ **黄**「悲惨すぎます」",
+      "time_raw": "1.67〜2.73",
+      "visual": "カット。**泣き顔のミーム画像**の村人がベッドで、犬と猫に囲まれている [実測: 1.67]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.8,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**青**「何でこんな」",
+      "time_raw": "2.80〜3.00",
+      "visual": "カット。夜の森でクリーパーと村人 [実測: 2.80]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.7,
+     "music_mean_during_row": 0.39,
+     "nearest_cut_to_end": 0.1,
+     "nearest_cut_to_start": 0.2,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜の末路が悲惨すぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 20,
+     "content_lemmas": [
+      "刺激",
+      "求める",
+      "過ぎる",
+      "村人",
+      "末路",
+      "悲惨",
+      "過ぎる"
+     ],
+     "first_token": {
+      "lemma": "刺激",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "刺激"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "悲惨"
+      ],
+      "emphasis_words": [
+       "すぎ"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 3,
+      "動詞": 3,
+      "名詞": 4
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "過ぎる",
+     2
+    ],
+    [
+     "刺激",
+     1
+    ],
+    [
+     "求める",
+     1
+    ],
+    [
+     "村人",
+     1
+    ],
+    [
+     "末路",
+     1
+    ],
+    [
+     "悲惨",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 7,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "刺激を求めすぎ",
+     "words": [
+      "刺",
+      "激",
+      "を",
+      "求",
+      "め",
+      "す",
+      "ぎ"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "刺激を求めすぎた村人の末路が悲惨すぎます",
+     "words": [
+      "刺",
+      "激",
+      "を",
+      "求",
+      "め",
+      "す",
+      "ぎ",
+      "た",
+      "村",
+      "人",
+      "の",
+      "末",
+      "路",
+      "が",
+      "悲",
+      "惨",
+      "す",
+      "ぎ",
+      "ます"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "刺激を求めすぎた村人の末路が悲惨すぎます",
+     "words": [
+      "刺",
+      "激",
+      "を",
+      "求",
+      "め",
+      "す",
+      "ぎ",
+      "た",
+      "村",
+      "人",
+      "の",
+      "末",
+      "路",
+      "が",
+      "悲",
+      "惨",
+      "す",
+      "ぎ",
+      "ます"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 20,
+    "end": 2.7,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "刺激",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "刺激"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "悲惨"
+      ],
+      "emphasis_words": [
+       "すぎ"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜の末路が悲惨すぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "刺激を求めすぎた村人の末路が悲惨すぎます",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "夜の桜の森。遠くにクリーパー"
+     },
+     {
+      "end": 1.47,
+      "start": 0.07,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「刺激を求めすぎた」→ 白「村人の末路が」",
+      "time_raw": "0.07〜1.47",
+      "visual": "カット。**すました顔の村人が剣で自分を刺している**（赤い血の粒）[実測: 0.07]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "刺"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.23,
+    "rows": [
+     {
+      "chars": 20,
+      "chars_per_sec": 8.23,
+      "duration": 2.43,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 20
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.41,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 19,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "悲惨"
+     ],
+     "emphasis_words": [
+      "すぎ"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "赤の引用符「\"ヤリ放題\"」（ペットにもみくちゃにされる）",
+       "range_raw": "50.1〜54.6",
+       "source": "doc_structure",
+       "source_file": "dream/individual/10_bAcdBVPA5Zk.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "刺激を求めすぎた村人の末路が悲惨すぎます",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.27,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "bAcdBVPA5Zk"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "自分を刺す村人・泣き顔の先出し、ナレーション",
+      "range_raw": "0.0〜2.8",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「何でこんな」→ 自分を刺して「気持ちェェ///」「ん...?」。10〜11秒に「こする音」（Sanding 0.53）[音タグ]",
+      "range_raw": "2.9〜10",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "クリーパーが近づく「ダメダメダメダメ!!」→ 16.6秒に爆発の緑の画面 → 村人がクリーパー柄に。13・16秒に Smash, crash [音タグ]",
+      "range_raw": "12〜17",
+      "stage_label": "事件"
+     },
+     {
+      "content": "プレイヤー（青字幕）「何でクリーパー」「やまないの」「ﾜｯﾀ...」「何で攻撃聞かないんだ?」「あーー...(察し)」「俺帰るわ...」→「行っちゃった...」",
+      "range_raw": "19〜32",
+      "stage_label": "展開"
+     },
+     {
+      "content": "オオカミと何かあって、引用符「\"変身\"」（オオカミ柄の村人）→ プレイヤー「そこの犬よ」「うちに来ない？」「新しい家にようこそ」",
+      "range_raw": "33〜40",
+      "stage_label": "2回目の変化"
+     },
+     {
+      "content": "引用符「\"モテモテ\"」（犬と猫に囲まれる）→ 泣き顔「お前らじゃねぇよ!!!」「クソがぁぁぁ!!!」。43秒に猫の声（Cat 0.54）[音タグ]",
+      "range_raw": "42〜49",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "赤の引用符「\"ヤリ放題\"」（ペットにもみくちゃにされる）",
+      "range_raw": "50.1〜54.6",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     49,
+     53,
+     54
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     49.8,
+     53.95,
+     54.2
+    ],
+    "cuts": 29,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 1,
+     "15": 3,
+     "20": 1,
+     "25": 4,
+     "30": 1,
+     "35": 3,
+     "40": 2,
+     "45": 3,
+     "5": 2,
+     "50": 5
+    },
+    "duration_sec": 54.57,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.7,
+    "is_end_position": false,
+    "sec_from_end": 51.87,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜の末路が悲惨すぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 30.0,
+    "status": "ok",
+    "text": "Oh"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "text": "刺激を求めすぎた村人の末路が悲惨すぎます"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 10,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/10_bAcdBVPA5Zk.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/bAcdBVPA5Zk.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "bAcdBVPA5Zk"
+}

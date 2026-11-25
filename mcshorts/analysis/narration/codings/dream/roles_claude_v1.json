@@ -1,0 +1,2162 @@
+{
+ "about": "Dream 58本のナレーション（narration_list.md の字幕の部分）の役割と伏線。Claude が文だけを読んで付けた。状態はすべて UNVERIFIED。",
+ "codebook_version": "v1",
+ "coder": "claude",
+ "videos": {
+  "0ZPbHZ12VSA": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜を倒す〇〇」の体言止めの紹介（「倒す」は修飾の中）",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "0iK0gxEUo0U": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜にやってきた〇〇ですが」と前提を述べる",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "次の部分とつながる文の途中",
+     "role": "R_FRAGMENT",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "作るものを述べるだけで、結末・ひねりは言わない",
+     "role": "R_SETUP",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "最後の語り手の感想",
+     "role": "R_COMMENT",
+     "row": 2
+    }
+   ]
+  },
+  "1U5Pu0pVtvM": {
+   "foreshadow": [
+    {
+     "evidence": [],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": "何が「まさかの行動」なのかは文から確認できない",
+     "status": "NOT_FOUND_IN_TEXT"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "「3-4」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": "スコアが「1-3」から「3-4」に変わり、戦況の変化は文から確認できる（凡ミスの中身は確認できない）",
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「まさかの行動に出ます」と予想外の展開を予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜ですが」の前半の事実",
+     "role": "R_SETUP",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「凡ミスをおかし戦況が一気に変わります」と結果を予告。8.1秒で10秒より前なので規則により R_REHOOK にしない（動画の約1/3での2回目の予告）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    }
+   ]
+  },
+  "3NGJSpc1k7A": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "ゴーレム「始めようか❤️」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_FRAGMENT"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜した結果」で次の部分の前提を述べる",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「この男は〜することになります」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    }
+   ]
+  },
+  "4dFAPRHYvk8": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜を罠にはめる〇〇」の体言止めの紹介（「500人」の数字を含む）",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "6qYSnMKV7Mc": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「戦おう!!!」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": "戦いの始まりまでは文にあるが、ボコボコにされる場面は文から確認できない",
+     "status": "NOT_FOUND_IN_TEXT"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「数秒後〜ボコボコにされてしまいます」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "7fSr1a8AlsI": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜は全てヤラセです」と断定",
+     "role": "R_LABEL",
+     "row": 0
+    }
+   ]
+  },
+  "AUQ8r0qXgVU": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "**Dream の顔を並べた畑**（Daquavis の動画）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜を軽々と超えてくる〇〇」の紹介（「ヤラセ」の評価を含む）",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_QUESTION"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "40.2秒で「一方〜は...？」と次の比較へ引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「この意味が分かりますか？」と視聴者に問う",
+     "role": "R_QUESTION",
+     "row": 2
+    }
+   ]
+  },
+  "Ag_RdDjnYDA": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "（ここで冒頭のモザイクの場面につながる）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「彼は羊とヤりました」と出来事を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "BwGk9qgSqfU": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "George の死亡画面「GeorgeNotFound was slain by TITAN」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "白「※資材を全てDreamに渡している」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜から逃げる〇〇」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「数秒後、彼らに悲劇が訪れます」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "30.5秒で「なんとか逃げ切った」と起きた結果を述べる",
+     "role": "R_RESOLVE",
+     "row": 1
+    },
+    {
+     "also": [
+      "R_TWIST_PREVIEW"
+     ],
+     "flag": null,
+     "part": 1,
+     "reason": "30.5秒で「ですがこの後〜まさかの行動に出ます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    },
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「かっこいいと思ったらチャンネル登録」と呼びかけ",
+     "role": "R_CTA",
+     "row": 2
+    }
+   ]
+  },
+  "D6srtcztceU": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "画面が肌色（何かに飲み込まれる）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜の悲惨な末路」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "FnzjGyuYTAU": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「誰かが犠牲になるしかない」",
+       "source": "doc_structure"
+      },
+      {
+       "quote": "縛られた**緑の太ったDream**",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": "予告の「1人の犠牲」と「太っちょDream」の両方",
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_SETUP"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜に苦戦するGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「ですが〜によって状況は一変します」と展開の変化を予告（何が起きるかは言わない）",
+     "role": "R_TWIST_PREVIEW",
+     "row": 1
+    }
+   ]
+  },
+  "G6CB11Q-lT0": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "男性（青）「(マジかよ...)」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「この男は〜に分からされました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "H4k6ZUfs3bA": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "鬼ごっこではDreamが勝ちましたが",
+       "source": "doc_narration"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜ピンチに陥るDreamですが」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「この後とんでもない逆転劇が巻き起こります」と予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「鬼ごっこではDreamが勝ちましたが」と結果を述べる",
+     "role": "R_RESOLVE",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「どちらが勝つでしょうか」と問う",
+     "role": "R_QUESTION",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 2,
+     "reason": "「気になる方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1
+    }
+   ]
+  },
+  "LVcWPlryJqA": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "白の引用符「\"ダクアビス脱出成功\"」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "白の注釈「※ブロックを置く」×3",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜落ちてしまった〇〇ですが」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「数秒後まさかの出来事が起こります」と予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "18.2秒で「取り残されてしまったDreamですが」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "18.2秒で「ここから彼のプレイスキルが火を吹きます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    }
+   ]
+  },
+  "MxPwX5a6vfg": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "怪物を捕まえて引きずっていく（冒頭1.5秒の画）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「この怪物は数秒後悪夢を見ることになりました」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "MzpvoTEXweE": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "赤の引用符「\"痛すぎてリタイア\"」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_SETUP"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜を喰らうDreamとGeorge」の紹介（ルールの説明を含む）",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「数秒後彼に悲劇が訪れます」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "NNe82nsFlME": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "Dream（緑）「じゃーねー」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 0
+     },
+     "note": "何をしたかは文では説明されない（ナレーションが「分かりましたか？」と問う）",
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜引っかかってしまうDreamですが」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「数秒後彼がとんでもない行動に出ます」と予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「何が起きたか分かりましたか？」と問う",
+     "role": "R_QUESTION",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「分かった方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1
+    }
+   ]
+  },
+  "Nnx_PiCiM4Y": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜を煽ってはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0
+    }
+   ]
+  },
+  "OKhTqo8eVks": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "最初にぶつかった村人がノートを持って笑う",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「この厨二病は戦う相手を間違えました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "O_8PGIz3TLc": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「マジかヤベェｪ!!!!!」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": "2回目の着地の場面",
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「ありえない着地を見せる〇〇」と強い評価を付けた紹介",
+     "role": "R_LABEL",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "26.9秒で「またもや変態プレイをかまします」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「神様なのかもしれませんね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 2
+    }
+   ]
+  },
+  "PXYdDGT2fms": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「これが〜の違いです」と内容を紹介する",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "Pf78c9UhqRk": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "主人公（番号250）の前でスティーブがブロックを置く",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜に参加するスティーブですが」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "5.8秒で「開始早々やらかします」と結果を予告（10秒より前）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    }
+   ]
+  },
+  "Px_B8QwN9AA": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "タイマー **00:55.352** で止まる",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「この男は〜で世界最速記録を叩き出します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "QOhVjXfbKVk": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「粛正完了✅」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜素敵な男性Groxですが」の前提（皮肉の評価を含む）",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「彼の機嫌を損ねたらこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    }
+   ]
+  },
+  "S8OLvKN4-o8": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "追う側「アイツいつ槍作ったんだよ！」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": "槍を使う場面は文にある。3キルしたことは文から確認できない",
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜で3キルします」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "TSW_96CsF4Q": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「You Died!」（Score 381）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜が本気を出すとこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「どっちが強いと思いますか？」と問う",
+     "role": "R_QUESTION",
+     "row": 1
+    }
+   ]
+  },
+  "TWUEJTjUPmY": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "水の中で溺れかける",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "Wilbur が猫を剣で…",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 2
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜と言う〇〇ですが」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "9.4秒で「開始早々ピンチになります」と結果を予告（10秒より前）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "30.6秒で「この後彼は世界の残酷さを知ることに」と引き直す",
+     "role": "R_REHOOK",
+     "row": 2
+    },
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「理不尽だと思った方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 3
+    }
+   ]
+  },
+  "UQ14cHsyEkA": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「世界一最強のゴーレムを作るGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "最後の感想の前半（「〜も凄いですが」）",
+     "role": "R_COMMENT",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「〜が最高に狂ってますね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 1
+    }
+   ]
+  },
+  "Xb34KasPZyE": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「この弾丸も君のだな!!!」（撃つ）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「道徳心のない馬鹿タレは間違えなく彼です」と強いレッテルで断定",
+     "role": "R_LABEL",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "36.9秒で「そんなサイコパス野郎Groxですが」と前提を置き直す",
+     "role": "R_SETUP",
+     "row": 1
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "part": 1,
+     "reason": "36.9秒で「〜に選ばれた場合こうなります」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    }
+   ]
+  },
+  "YaBIB4VuiqM": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「ついに〜を習得したGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "Yb4XjY7uhKw": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "ドアが勢いよく開く → 59秒に血",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜の末路がヤバすぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "ZoQjGe7_Kl8": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "赤の引用符「\"秒殺\"」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": "字幕だけのナレーションの可能性",
+     "part": 0,
+     "reason": "「この怪物にとんでもない制裁が下ります」と結末を予告（Whisper には日本語の声が無く、構成の表では「字幕のナレーション」）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "aZVsf5PhZxo": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "血だまりに倒れたいじめっ子（冒頭2.0秒の映像）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「このいじめっ子は調子に乗った結果」で次の部分の前提を述べる",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「悪夢を見ることに...」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「めちゃくちゃスカッとしますね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 2
+    }
+   ]
+  },
+  "bAcdBVPA5Zk": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "赤の引用符「\"ヤリ放題\"」（ペットにもみくちゃにされる）",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜の末路が悲惨すぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "bFmKcjqo7Sk": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「女性にも容赦しない〇〇」と強い評価を付けた紹介",
+     "role": "R_LABEL",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「漢すぎると思った方はいいねタッチ」",
+     "role": "R_CTA",
+     "row": 1
+    }
+   ]
+  },
+  "bqyhes0V7Qc": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "次の部分（いつメン4人組）を修飾する文の途中",
+     "role": "R_FRAGMENT",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「いつメン4人組」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "cUbDNWd0j24": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "TNTを巻いた**別の息子**が現れる",
+       "source": "doc_structure"
+      },
+      {
+       "quote": "56.27「You Died!」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 2
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜子供ができたGroxですが」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "字幕の区切りで文の途中",
+     "role": "R_FRAGMENT",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〇されることになります」と結末を予告（伏せ字）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 2
+    }
+   ]
+  },
+  "d2PlYjZcRo0": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "トロッコが落ちてくる",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「Groxを怒らせたらこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「サイコパスだと思う方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": "文書の注記で、文の一部が聞き取れていない",
+     "part": 1,
+     "reason": "最後の一言（文書に「後半は聞き取りが崩れている」と注記）",
+     "role": "R_COMMENT",
+     "row": 1
+    }
+   ]
+  },
+  "eg0_YckR1Iw": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "赤の引用符「\"巨人がドリーム達を探してる\"」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "Sapnap「Dream...」「俺のこと忘れないでね」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「仲間のため命を捧げたGeorge」と前回の出来事を述べる",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「更なる悲劇が訪れます」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "36.0秒で「絶体絶命の状況の中」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 1
+    },
+    {
+     "also": [
+      "R_TWIST_PREVIEW"
+     ],
+     "flag": null,
+     "part": 1,
+     "reason": "36.0秒で「〜がまさかの行動に出ます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「結末が気になる方はチャンネル登録」（結末を見せずに呼びかけ）",
+     "role": "R_CTA",
+     "row": 2
+    }
+   ]
+  },
+  "i2o5r0vZOrg": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "Dream「俺はお前と縁を切る!!!」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「犬になってしまったDreamが遂に限界を迎えます」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "ldGtosTpMyw": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜でマイクラの世界へ行くDream」の紹介（金額を含む）",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "loiMd64_c6Q": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「このゲームから消されるんだ!」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「彼はありえない方法でクリーパーを退治します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "lpfTNQ5dR70": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "ウォーデン（強いモブ）が出てくる",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "「Georgeがデカくなったw」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 2
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜三人組ですが」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "6.4秒で「どこか様子がおかしいです」と違和感を予告（10秒より前）",
+     "role": "R_TWIST_PREVIEW",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "26.8秒で「状況は更に悪化しますが」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 2
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "part": 1,
+     "reason": "26.8秒で「この先の悲劇を知りません」と引き直す",
+     "role": "R_REHOOK",
+     "row": 2
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "次の問いかけにつながる文の途中",
+     "role": "R_FRAGMENT",
+     "row": 3
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「〜できたでしょうか？」と問う",
+     "role": "R_QUESTION",
+     "row": 3
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 2,
+     "reason": "「そう思った方はいいねタッチ」",
+     "role": "R_CTA",
+     "row": 3
+    }
+   ]
+  },
+  "lzD1xJ46ZC4": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「※身代わり完成✅」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "子供が大群に囲まれる",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 2
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_SETUP"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜ピンチに陥るGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_TWIST_PREVIEW"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「しかし〜で逃げ切ります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "22.1秒で「状況は更に悪化しますが」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 2
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "22.1秒で「作戦によって状況は一変します」と引き直す",
+     "role": "R_REHOOK",
+     "row": 2
+    },
+    {
+     "also": [
+      "R_COMMENT"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「喜んでいるだろうと思う方はいいねタッチ」",
+     "role": "R_CTA",
+     "row": 3
+    }
+   ]
+  },
+  "mRndDDRWz00": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "画面が暗くなって終わる",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": "台無しになる場面は文から確認できない（構成の表の区分も「オチ（なし）」）",
+     "status": "NOT_FOUND_IN_TEXT"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜が台無しになる瞬間」と結末を先に言う（「8年間」の数字）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "nPJHE7bHxnI": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「常人には理解できないプレイをかます〇〇」と強い評価を付けた紹介",
+     "role": "R_LABEL",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「情報が完結しませんでしたが」と語り手の感想",
+     "role": "R_COMMENT",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「理解出来た方だけチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1
+    }
+   ]
+  },
+  "p4osmEVx7hY": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「Groxを〇せぇぇ!!!」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「村人に追われるGroxですが...」の前提",
+     "role": "R_SETUP",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": "文の一部が取れていない",
+     "part": 0,
+     "reason": "「…ピンチになります」と結果を予告（文書に「字幕は1コマに出ず」と注記）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    }
+   ]
+  },
+  "qNFu8Q55mEE": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「世界一難しいゲームにハマった漢達」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "sJDbLVB340o": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「勝者は決して諦めない」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「デスゲームを開催する〜Groxくん」の紹介（文書の注記では声は「ドブカスくん」）",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "50.3秒で「どんどん減っていく村人たちですが」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "50.3秒で「この後彼らに転機が訪れます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    }
+   ]
+  },
+  "snRuzLtmLX4": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "渡したのは**弱化のポーション**",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_SETUP"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜ボコボコにされるGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    },
+    {
+     "also": [
+      "R_TWIST_PREVIEW"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「ですが彼は〜で危機から逃れます」と結果を予告（文書の注記では声は「クズい」）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1
+    }
+   ]
+  },
+  "tCQ6I8gQHLM": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜を持たせてはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0
+    }
+   ]
+  },
+  "tdwKZ17Cpzs": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "「外が好きなんですね？」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": "子供がどうなったかは文から確認できない（構成の表でも推測と書かれている）",
+     "status": "NOT_FOUND_IN_TEXT"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「彼に子供を任せるとこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "uNdIdgo7wws": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "実況「めっちゃ攻撃的だぞ」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "実況「めっちゃ攻撃的だぞ」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜でDreamが覚醒します」と出来事を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "次の部分につながる文の途中",
+     "role": "R_FRAGMENT",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "15.9秒で「彼が覚醒します」ともう一度引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「結局〜の勝利で幕を閉じましたが」と結果を述べる",
+     "role": "R_RESOLVE",
+     "row": 2
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "「本当にすごいですね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 2
+    }
+   ]
+  },
+  "vTPcburl6o8": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜部屋を脱出する村人」の紹介",
+     "role": "R_INTRO",
+     "row": 0
+    }
+   ]
+  },
+  "wWd7KT3RTNg": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "プレイヤーが怪物の頭（黒いブロック）を被っている",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜この怪物に数秒後天罰が下る...」と結末を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    }
+   ]
+  },
+  "wYRkhfRSjDs": {
+   "foreshadow": [
+    {
+     "evidence": [
+      {
+       "quote": "Dream「待って本当に自由になれの」",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 0,
+      "row": 0
+     },
+     "note": null,
+     "status": "LINKED"
+    },
+    {
+     "evidence": [
+      {
+       "quote": "BadBoyHalo との戦い",
+       "source": "doc_structure"
+      }
+     ],
+     "from": {
+      "part": 1,
+      "row": 1
+     },
+     "note": null,
+     "status": "LINKED"
+    }
+   ],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜をテクノブレイドが助けます」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "35.2秒で「看守に見つかってしまった2人」と状況を述べる",
+     "role": "R_SETUP",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 1,
+     "reason": "35.2秒で「ですがここから彼らの本領が発揮されます」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1
+    },
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「すごいと思った方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 2
+    }
+   ]
+  },
+  "xGF9lFQyjpY": {
+   "foreshadow": [],
+   "roles": [
+    {
+     "also": [],
+     "flag": null,
+     "part": 0,
+     "reason": "「〜になってしまったらどうなるでしょうか？」と問う",
+     "role": "R_QUESTION",
+     "row": 0
+    }
+   ]
+  }
+ }
+}

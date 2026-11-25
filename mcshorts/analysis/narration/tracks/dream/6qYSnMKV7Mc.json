@@ -1,0 +1,1147 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.02,
+    "Gasp": 0.0,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.42,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.78,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.56,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.64,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.22,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.61,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.37,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.79,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.31,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.01,
+    "Cheering": 0.0,
+    "Explosion": 0.04,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.16,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.58,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.02,
+    "Cheering": 0.0,
+    "Explosion": 0.11,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.16,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.02,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.61,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.02,
+    "t": 6
+   },
+   {
+    "Boom": 0.01,
+    "Cheering": 0.0,
+    "Explosion": 0.13,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.15,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.02,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.7,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.07,
+    "t": 7
+   },
+   {
+    "Boom": 0.04,
+    "Cheering": 0.0,
+    "Explosion": 0.03,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.03,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.16,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.31,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.02,
+    "t": 8
+   },
+   {
+    "Boom": 0.06,
+    "Cheering": 0.0,
+    "Explosion": 0.1,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.11,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.21,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.43,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.02,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.05,
+    "Music": 0.4,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.27,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.51,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.14,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 13
+   },
+   {
+    "Boom": 0.01,
+    "Cheering": 0.0,
+    "Explosion": 0.19,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.36,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.13,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 14
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.57,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.53,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 15
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.02,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.28,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.75,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 16
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.14,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.35,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.53,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 17
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.04,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.07,
+    "Music": 0.19,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.06,
+    "Speech": 0.63,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 18
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.15,
+    "Music": 0.04,
+    "Narration, monologue": 0.02,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.11,
+    "Speech": 0.75,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 19
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.01,
+    "Narration, monologue": 0.02,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.64,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 20
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.05,
+    "Music": 0.02,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.59,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 21
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.06,
+    "Music": 0.54,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 22
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.05,
+    "Music": 0.55,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.53,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 23
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.37,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.41,
+    "Whoosh, swoosh, swish": 0.03,
+    "Yell": 0.0,
+    "t": 24
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.41,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.08,
+    "Speech": 0.31,
+    "Whoosh, swoosh, swish": 0.05,
+    "Yell": 0.0,
+    "t": 25
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.4,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.51,
+    "Whoosh, swoosh, swish": 0.03,
+    "Yell": 0.0,
+    "t": 26
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.55,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.42,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 27
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.59,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.65,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 28
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.51,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.01,
+    "t": 29
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.04,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.12,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.03,
+    "t": 30
+   }
+  ],
+  "source": "dream/data/audiotag/6qYSnMKV7Mc.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "DX",
+    "effective_code": "DX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "数量後、この車以外はボコボコにされてしまいます。",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "数秒後（白）→ このシャイガイは（赤）→ ボコボコにされる...（赤）",
+  "voice": "数秒後、このシャイガイはボコボコにされてしまいます。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.419,
+   "doc_text": "数秒後このシャイガイはボコボコにされてしまいます",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": true,
+   "end": 2.4,
+   "row_index": 0,
+   "start": 0.0,
+   "whisper_ja_overlapping_segments": [
+    0
+   ],
+   "whisper_ja_overlapping_text": "数量後、この車以外はボコボコにされてしまいます。"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "実測"
+     ],
+     "text": "音: 0.95・2.75秒に音の突出 [実測]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "冒頭を日本語指定で書き起こし直すと「数秒後このシャイガイはごくごくにされてしまいます」。字幕を正とした [書き起こし][画面]"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行目 黄「悟空を怒らせた」、2行目 **赤の大きな文字**「シャイガイの末路」。全編同じ [実測]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: シャイガイ（怪物）が家を壊し、家主の悟空に倒される実況 [画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 16回、1ショット平均 1.94秒 [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 6回（検出）、字幕が出ている時間 6%（色付きの字幕が多く、少なめに出ている可能性）[実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 平均 0.33。19〜21秒が0（悟空の家の種明かしの直前）[音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "声: 全編で英語の声（Speech 0.4〜0.7）[音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "効果音: ガラスの割れる音（3秒）、爆発（14・17秒）、うめき声（18〜19秒）[音タグ]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: 怖い怪物（シャイガイ）と、**悟空**という誰でも知っているキャラ。1.7秒の**金色の気の柱**で、ドラゴンボールを知っている人には「悟空が本気を出す」と一瞬で分かる。怪物がやられる側、という逆転"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: 「〇〇を怒らせた△△の末路」。**誰を怒らせたか**（悟空）を先に言う。悟空の強さを知っていれば結末が分かる"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: 32.9秒と短い。追いかける→とぼける→実は悟空の家、と3段で進み、最後に悟空の本気で落とす"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: ホラーの怪物×ドラゴンボールという**別の作品どうしの組み合わせ**。どちらかを知っていれば分かる"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": 0.53,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「数秒後」",
+     "time_raw": "0.00〜0.53",
+     "visual": "洞窟の通路に、**白く細長い怪物（シャイガイ）**が立つ"
+    },
+    {
+     "end": 1.0,
+     "start": 0.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「このシャイガイは」",
+     "time_raw": "0.73〜1.00",
+     "visual": "同上"
+    },
+    {
+     "end": 1.47,
+     "start": 1.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「ボコボコにされる...」",
+     "time_raw": "1.27〜1.47",
+     "visual": "カット。通路の奥に**悟空の姿のプレイヤー** [実測: 1.53]"
+    },
+    {
+     "end": 2.53,
+     "start": 1.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "同上",
+     "time_raw": "1.73〜2.53",
+     "visual": "**金色の光の柱**（スーパーサイヤ人の気）が画面を埋める"
+    },
+    {
+     "end": 3.0,
+     "start": 2.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "—",
+     "time_raw": "2.73〜3.00",
+     "visual": "カット。夜の村 [実測: 2.73, 2.93]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/27_6qYSnMKV7Mc.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "シャイガイ、悟空、金色の気",
+     "content_status": "DOC_OBSERVED",
+     "end": 2.7,
+     "range_raw": "0.0〜2.7",
+     "stage_label": "冒頭",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "夜の村。シャイガイが家を壊す「何だあの怪物...」「俺の家を壊すな!!!」「よぉぉおうぅ///」→ 燃える家「なんてこったい」",
+     "content_status": "DOC_OBSERVED",
+     "end": 11.0,
+     "range_raw": "2.8〜11",
+     "stage_label": "事件",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 2.8
+    },
+    {
+     "content": "地下の通路を追う「ｵｩﾉｩﾉｩﾉｩﾉｩ...」→「お前...」「(とぼける)」→「君はバカか？」「俺が君から隠れてるとでも？」「君のしたことから隠れてんだよ」",
+     "content_status": "DOC_OBSERVED",
+     "end": 24.0,
+     "range_raw": "12.4〜24",
+     "stage_label": "追跡",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 12.4
+    },
+    {
+     "content": "看板「Goku's House」＋白の引用符「\"悟空の家\"」→ 主人公「俺のじゃないんだよ!!!」（壊されたのは悟空の家）→ 悟空「オラの家を壊したな？」「戦おう!!!」",
+     "content_status": "DOC_OBSERVED",
+     "end": 30.0,
+     "range_raw": "24.8〜30",
+     "stage_label": "種明かし",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 24.8
+    },
+    {
+     "content": "金色の気の柱 → 赤い長い字幕（下記）",
+     "content_status": "DOC_OBSERVED",
+     "end": 32.9,
+     "range_raw": "31.6〜32.9",
+     "stage_label": "オチ",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 31.6
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [],
+  "rows": [
+   {
+    "end": 2.4,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "数秒後このシャイガイはボコボコにされてしまいます"
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "数秒後このシャイガイはボコボコにされてしまいます"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 32.93,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -36.1,
+    -14.4,
+    -16.4,
+    -16.4,
+    -9.6,
+    -9.9,
+    -10.7,
+    -10.2,
+    -11.3,
+    -16.8,
+    -15.4,
+    -13.7,
+    -18.0,
+    -17.5,
+    -11.4
+   ],
+   "max_db": -4.6,
+   "median_db": -15.4,
+   "onset": 0.0,
+   "p95_db": -9.5,
+   "spikes": [
+    0.95,
+    2.75
+   ]
+  },
+  "cuts": [
+   0.07,
+   1.53,
+   2.73,
+   2.93,
+   4.13,
+   7.53,
+   11.33,
+   12.33,
+   13.0,
+   13.2,
+   18.6,
+   19.87,
+   23.27,
+   24.73,
+   25.8,
+   31.53
+  ],
+  "cuts_first3s": [
+   0.07,
+   1.53,
+   2.73,
+   2.93
+  ],
+  "dur": 32.93,
+  "layout": {
+   "content": [
+    33,
+    337
+   ],
+   "play": [
+    89,
+    337
+   ],
+   "top": [
+    33,
+    89
+   ]
+  },
+  "motion_median": 6.35,
+  "moves": [
+   [
+    29.87,
+    30.2
+   ]
+  ],
+  "n_shots": 17,
+  "n_subs": 6,
+  "shot_mean": 1.94,
+  "shot_median": 1.27,
+  "source": "dream/data/measure/6qYSnMKV7Mc.json",
+  "status": "ok",
+  "sub_changes": [
+   0.07,
+   0.53,
+   18.6,
+   19.87,
+   22.87,
+   27.47
+  ],
+  "sub_on_ratio": 0.06,
+  "top_changes": []
+ },
+ "no": 27,
+ "video_id": "6qYSnMKV7Mc",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 2.64,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "A few years ago, this city will be destroyed."
+   },
+   {
+    "category": "latin",
+    "end": 32.0,
+    "segment_index": 1,
+    "start": 30.0,
+    "text": "You"
+   }
+  ],
+  "source": "dream/data/asr/6qYSnMKV7Mc.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 2.38,
+    "logprob": -0.45,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "数量後、この車以外はボコボコにされてしまいます。",
+    "words": [
+     {
+      "end": 0.2,
+      "start": 0.0,
+      "word": "数"
+     },
+     {
+      "end": 0.36,
+      "start": 0.2,
+      "word": "量"
+     },
+     {
+      "end": 0.54,
+      "start": 0.36,
+      "word": "後、"
+     },
+     {
+      "end": 0.7,
+      "start": 0.62,
+      "word": "この"
+     },
+     {
+      "end": 0.88,
+      "start": 0.7,
+      "word": "車"
+     },
+     {
+      "end": 0.9,
+      "start": 0.88,
+      "word": "以"
+     },
+     {
+      "end": 1.04,
+      "start": 0.9,
+      "word": "外"
+     },
+     {
+      "end": 1.16,
+      "start": 1.04,
+      "word": "は"
+     },
+     {
+      "end": 1.28,
+      "start": 1.16,
+      "word": "ボ"
+     },
+     {
+      "end": 1.38,
+      "start": 1.28,
+      "word": "コ"
+     },
+     {
+      "end": 1.5,
+      "start": 1.38,
+      "word": "ボ"
+     },
+     {
+      "end": 1.54,
+      "start": 1.5,
+      "word": "コ"
+     },
+     {
+      "end": 1.66,
+      "start": 1.54,
+      "word": "に"
+     },
+     {
+      "end": 1.78,
+      "start": 1.66,
+      "word": "さ"
+     },
+     {
+      "end": 1.86,
+      "start": 1.78,
+      "word": "れて"
+     },
+     {
+      "end": 2.1,
+      "start": 1.86,
+      "word": "しま"
+     },
+     {
+      "end": 2.38,
+      "start": 2.1,
+      "word": "います。"
+     }
+    ]
+   },
+   {
+    "category": "boilerplate_suspect",
+    "end": 31.18,
+    "logprob": -0.48,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 1,
+    "start": 30.0,
+    "text": "ご視聴ありがとうございました",
+    "words": [
+     {
+      "end": 30.28,
+      "start": 30.0,
+      "word": "ご"
+     },
+     {
+      "end": 30.42,
+      "start": 30.28,
+      "word": "視"
+     },
+     {
+      "end": 30.7,
+      "start": 30.42,
+      "word": "聴"
+     },
+     {
+      "end": 31.18,
+      "start": 30.7,
+      "word": "ありがとうございました"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/6qYSnMKV7Mc.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}

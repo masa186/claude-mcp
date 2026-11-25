@@ -1,0 +1,638 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 53.36,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 0.93,
+   "first_cut_minus_first_row_start": 0.93,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.535,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「総額一千万円の」",
+      "time_raw": "0.00〜0.73",
+      "visual": "**実写**。手前に男性の顔のアップ、奥のスタジオに**赤い矢印で指された「Dream」本人**"
+     },
+     {
+      "end": null,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "1.00",
+      "visual": "カット。マイクラの草原に**実写の人間の体のDream**が立つ [実測: 0.93]"
+     },
+     {
+      "end": 1.73,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「機械を使い」",
+      "time_raw": "1.27〜1.73",
+      "visual": "実写のスタジオとマイクラの画面を上下に並べる [実測: 1.93]"
+     },
+     {
+      "end": 2.73,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「マイクラの世界へ」",
+      "time_raw": "2.00〜2.73",
+      "visual": "マイクラの中で、実写の人間が鶏に手を伸ばす"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「行くDream」",
+      "time_raw": "3.00",
+      "visual": "同上"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.3,
+     "music_mean_during_row": 0.617,
+     "nearest_cut_to_end": 0.1,
+     "nearest_cut_to_start": 0.93,
+     "nearest_subtitle_change_to_end": 0.57,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.2,
+      0.85,
+      1.4,
+      1.8,
+      2.2,
+      2.55
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜でマイクラの世界へ行くDream」の紹介（金額を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 27,
+     "content_lemmas": [
+      "総額",
+      "一千",
+      "万",
+      "円-助数詞",
+      "機械",
+      "使う",
+      "マイ-my",
+      "クラ-clarinet",
+      "世界",
+      "行く",
+      "Dream"
+     ],
+     "first_token": {
+      "lemma": "総額",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "総額"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 9
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "総額",
+     1
+    ],
+    [
+     "一千",
+     1
+    ],
+    [
+     "万",
+     1
+    ],
+    [
+     "円-助数詞",
+     1
+    ],
+    [
+     "機械",
+     1
+    ],
+    [
+     "使う",
+     1
+    ],
+    [
+     "マイ-my",
+     1
+    ],
+    [
+     "クラ-clarinet",
+     1
+    ],
+    [
+     "世界",
+     1
+    ],
+    [
+     "行く",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.3,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 7,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "$1000万円",
+     "words": [
+      "$",
+      "1000",
+      "万",
+      "円"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.3,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 24,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "$1000万円の機械を使いマイクラの世界へ行くド",
+     "words": [
+      "$",
+      "1000",
+      "万",
+      "円",
+      "の",
+      "機",
+      "械",
+      "を",
+      "使",
+      "い",
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "の",
+      "世界",
+      "へ",
+      "行",
+      "く",
+      "ド"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 26,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "$1000万円の機械を使いマイクラの世界へ行くドリーム",
+     "words": [
+      "$",
+      "1000",
+      "万",
+      "円",
+      "の",
+      "機",
+      "械",
+      "を",
+      "使",
+      "い",
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "の",
+      "世界",
+      "へ",
+      "行",
+      "く",
+      "ド",
+      "リ",
+      "ーム"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 27,
+    "end": 3.3,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "総額",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "総額"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜でマイクラの世界へ行くDream」の紹介（金額を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_SCALE",
+    "effective_code": "H_SCALE",
+    "quote": "$1000万円の機械を使いマイクラの世界へ行くドリーム",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「総額一千万円の」",
+      "time_raw": "0.00〜0.73",
+      "visual": "**実写**。手前に男性の顔のアップ、奥のスタジオに**赤い矢印で指された「Dream」本人**"
+     },
+     {
+      "end": null,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "1.00",
+      "visual": "カット。マイクラの草原に**実写の人間の体のDream**が立つ [実測: 0.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "$"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.18,
+    "rows": [
+     {
+      "chars": 27,
+      "chars_per_sec": 8.18,
+      "duration": 3.3,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 27
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.93,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 22,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_INTRO"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "You can't even run that far.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_PUNISH",
+     "effective_code": "P_PUNISH",
+     "quote": "Dream, you're dead.",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "実写の Dream、金額、マイクラの中の実写の体",
+      "range_raw": "0〜3.3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "追う側（青字幕）「10秒以内に逃げるんだ」「行けよw」→ 実写の Dream が村の中を走る →「タイムアップだ」",
+      "range_raw": "3.5〜11",
+      "stage_label": "ルール"
+     },
+     {
+      "content": "Dream（緑字幕）「やめてくれ...」「1人にしてくれ...」→ 追う側「どこにいるかな...?」「Dream君...」「多分いる場所は...」「ここだ!!!」→「え待って？」",
+      "range_raw": "13〜26",
+      "stage_label": "かくれんぼ"
+     },
+     {
+      "content": "「待ってマジ?!」「穴から出たの?!」→ Dream「君は見つけられないだろ」→ 追う側「文字通り大きくもない」「ここは小さい森だ」「君はこっそり隠れてる」→ Dream「俺今エンダーポータルの近く」「エンドまで行ったるぜ」",
+      "range_raw": "26〜42",
+      "stage_label": "逃走"
+     },
+     {
+      "content": "「どこに居るの？」→「オーマイガーw」→ 赤くダメージを受ける Dream →「Dream君は死んだ!!!」",
+      "range_raw": "42〜51",
+      "stage_label": "発見"
+     },
+     {
+      "content": "赤い画面に白の引用符「\"Dream死亡\"」→ 白の引用符「\"さすがのDreamでも逃げきれなかった\"」→「ｲｪｪｪｪｪｪｴｴｲｲｨ!!!!」",
+      "range_raw": "51.8〜53.4",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     2,
+     47,
+     50
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.2,
+     0.85,
+     1.4,
+     1.8,
+     2.2,
+     2.55,
+     47.3,
+     50.85
+    ],
+    "cuts": 26,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 2,
+     "15": 1,
+     "20": 1,
+     "25": 3,
+     "30": 4,
+     "40": 1,
+     "45": 3,
+     "5": 5,
+     "50": 2
+    },
+    "duration_sec": 53.36,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 3.3,
+    "is_end_position": false,
+    "sec_from_end": 50.06,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "総額一千万円の機械を使いマイクラの世界へ行くDream"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜でマイクラの世界へ行くDream」の紹介（金額を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 52.46,
+    "status": "ok",
+    "text": "Yeah."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 51.98,
+    "status": "ok",
+    "text": "Yeah"
+   },
+   "payoff_code_4b": {
+    "code": "P_PUNISH",
+    "effective_code": "P_PUNISH",
+    "quote": "Dream, you're dead.",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 43,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/43_ldGtosTpMyw.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/ldGtosTpMyw.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "ldGtosTpMyw"
+}

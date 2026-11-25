@@ -1,0 +1,567 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 12.1,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.27,
+   "first_cut_minus_first_row_start": 1.0,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.562,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "村の中を歩くキツネ。右上に配信者の顔"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「狐にメイスを」",
+      "time_raw": "0.27〜0.73",
+      "visual": "キツネが跳ねる"
+     },
+     {
+      "end": null,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「持たせては」",
+      "time_raw": "1.00",
+      "visual": "村の柵の前"
+     },
+     {
+      "end": 2.27,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「いけません」",
+      "time_raw": "1.27〜2.27",
+      "visual": "カット。**配信者の顔のアップ（口を開けて驚いた顔）**。背景はモザイク [実測: 1.27]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "青のかっこ「(キツネを召喚して...)」",
+      "time_raw": "2.53〜3.00",
+      "visual": "カット。村に戻る [実測: 2.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.5,
+     "music_mean_during_row": 0.433,
+     "nearest_cut_to_end": 0.03,
+     "nearest_cut_to_start": 1.0,
+     "nearest_subtitle_change_to_end": 1.23,
+     "nearest_subtitle_change_to_start": 0.14,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      1.45
+     ],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "禁止・警告",
+     "part": 0,
+     "reason": "「〜を持たせてはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 16,
+     "content_lemmas": [
+      "狐",
+      "メイス-外国",
+      "持つ",
+      "行く"
+     ],
+     "first_token": {
+      "lemma": "狐",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "狐"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "禁止",
+      "fuseji": false,
+      "number": false,
+      "prohibition": true,
+      "proper_nouns": [
+       "メイス"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 3,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 2
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "狐にメイスを持たせてはいけません"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "狐",
+     1
+    ],
+    [
+     "メイス-外国",
+     1
+    ],
+    [
+     "持つ",
+     1
+    ],
+    [
+     "行く",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "狐にメイスを持たせてはいけません"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 10,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "常にメイズをもたして",
+     "words": [
+      "常",
+      "に",
+      "メ",
+      "イ",
+      "ズ",
+      "を",
+      "も",
+      "た",
+      "して"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "狐にメイスを持たせてはいけません"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 16,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "常にメイズをもたしてはいけません",
+     "words": [
+      "常",
+      "に",
+      "メ",
+      "イ",
+      "ズ",
+      "を",
+      "も",
+      "た",
+      "して",
+      "はい",
+      "け",
+      "ません"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "狐にメイスを持たせてはいけません"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 16,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "常にメイズをもたしてはいけません",
+     "words": [
+      "常",
+      "に",
+      "メ",
+      "イ",
+      "ズ",
+      "を",
+      "も",
+      "た",
+      "して",
+      "はい",
+      "け",
+      "ません"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 16,
+    "end": 2.5,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "狐にメイスを持たせてはいけません"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "狐",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "狐"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "禁止",
+      "fuseji": false,
+      "number": false,
+      "prohibition": true,
+      "proper_nouns": [
+       "メイス"
+      ],
+      "question": false
+     },
+     "text": "狐にメイスを持たせてはいけません"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "禁止・警告",
+     "part": 0,
+     "reason": "「〜を持たせてはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_PROHIBIT",
+    "effective_code": "H_PROHIBIT",
+    "quote": "常にメイズをもたしてはいけません",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "村の中を歩くキツネ。右上に配信者の顔"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「狐にメイスを」",
+      "time_raw": "0.27〜0.73",
+      "visual": "キツネが跳ねる"
+     },
+     {
+      "end": null,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「持たせては」",
+      "time_raw": "1.00",
+      "visual": "村の柵の前"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "常"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 7.17,
+    "rows": [
+     {
+      "chars": 16,
+      "chars_per_sec": 7.17,
+      "duration": 2.23,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 16
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 8.89,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 12,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "禁止",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": true,
+     "proper_nouns": [
+      "メイス"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "狐にメイスを持たせてはいけません"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_PROHIBIT"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "And his name is John Cena!!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "「狐にメイスを持たせてはいけません」＋驚き顔の先出し",
+      "range_raw": "0.0〜2.5",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「(キツネを召喚して...)」「(メイスをあげる)」「(ついでにニワトリも...)」",
+      "range_raw": "2.5〜8",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "英語で「And his name is John Cena!」（書き起こし）。9.67秒「?!?!」。9〜10秒に Explosion・Bang [音タグ]、10.65秒に音の突出 [実測]",
+      "range_raw": "8〜10",
+      "stage_label": "事件"
+     },
+     {
+      "content": "配信者が空高く吹き飛ばされる。顔ワイプは驚き顔",
+      "range_raw": "10〜11.4",
+      "stage_label": "オチ"
+     },
+     {
+      "content": "赤の小さな字幕で豆知識（下記）",
+      "range_raw": "11.4〜12.1",
+      "stage_label": "締め"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     1,
+     10
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     1.45,
+     10.65
+    ],
+    "cuts": 3,
+    "cuts_per_5s": {
+     "0": 2,
+     "10": 1
+    },
+    "duration_sec": 12.1,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.5,
+    "is_end_position": true,
+    "sec_from_end": 9.6,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "狐にメイスを持たせてはいけません"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "禁止・警告",
+     "part": 0,
+     "reason": "「〜を持たせてはいけません」の禁止",
+     "role": "R_PROHIBIT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 8.0,
+    "status": "ok",
+    "text": "And his name is John Cena!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 8.44,
+    "status": "ok",
+    "text": "And his name is John Cena!!"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "And his name is John Cena!!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 4,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/04_tCQ6I8gQHLM.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/tCQ6I8gQHLM.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "tCQ6I8gQHLM"
+}

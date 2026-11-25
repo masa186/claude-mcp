@@ -1,0 +1,606 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 26.56,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.87,
+   "first_cut_minus_first_row_start": 0.87,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.554,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「彼は」",
+      "time_raw": "0.00〜0.27",
+      "visual": "森の中、Groxと羊が並んで立つ"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「羊と」",
+      "time_raw": "0.53〜0.73",
+      "visual": "カット。**ニヤけた顔のミーム画像の羊** [実測: 0.87]"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ヤりました」",
+      "time_raw": "1.00〜1.47",
+      "visual": "**モザイク**のかかった画（Groxと羊）"
+     },
+     {
+      "end": 2.73,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「囲まれたぞ!!」",
+      "time_raw": "1.73〜2.73",
+      "visual": "カット。草原の向こうに**壁のような地形**（村人の大群）[実測: 1.67]"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ｵｫｳちょっと待って」",
+      "time_raw": "3.00",
+      "visual": "カット。森の中に羊 [実測: 2.80]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 1.3,
+     "music_mean_during_row": 0.595,
+     "nearest_cut_to_end": 0.37,
+     "nearest_cut_to_start": 0.87,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼は羊とヤりました」と出来事を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 9,
+     "content_lemmas": [
+      "彼",
+      "羊",
+      "遣る"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "過去・結果",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 2,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "彼は羊とヤりました"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "彼",
+     1
+    ],
+    [
+     "羊",
+     1
+    ],
+    [
+     "遣る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.3,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "彼は羊とヤりました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 12,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "彼はヒツジクをやりました",
+     "words": [
+      "彼",
+      "は",
+      "ヒ",
+      "ツ",
+      "ジ",
+      "ク",
+      "を",
+      "や",
+      "りました"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "彼は羊とヤりました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 25,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "彼はヒツジクをやりましたボックスにインOh hold",
+     "words": [
+      "彼",
+      "は",
+      "ヒ",
+      "ツ",
+      "ジ",
+      "ク",
+      "を",
+      "や",
+      "りました",
+      "ボ",
+      "ック",
+      "ス",
+      "に",
+      "イ",
+      "ン",
+      "Oh",
+      " hold"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 1.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "彼は羊とヤりました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 50,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "彼はヒツジクをやりましたボックスにインOh hold up I knowHey let me borrow this",
+     "words": [
+      "彼",
+      "は",
+      "ヒ",
+      "ツ",
+      "ジ",
+      "ク",
+      "を",
+      "や",
+      "りました",
+      "ボ",
+      "ック",
+      "ス",
+      "に",
+      "イ",
+      "ン",
+      "Oh",
+      " hold",
+      " up",
+      " I",
+      " know",
+      "Hey",
+      " let",
+      " me",
+      " borrow",
+      " this"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 9,
+    "end": 1.3,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "彼は羊とヤりました"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "過去・結果",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "彼は羊とヤりました"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼は羊とヤりました」と出来事を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "彼はヒツジクをやりました",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「彼は」",
+      "time_raw": "0.00〜0.27",
+      "visual": "森の中、Groxと羊が並んで立つ"
+     },
+     {
+      "end": 0.73,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「羊と」",
+      "time_raw": "0.53〜0.73",
+      "visual": "カット。**ニヤけた顔のミーム画像の羊** [実測: 0.87]"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ヤりました」",
+      "time_raw": "1.00〜1.47",
+      "visual": "**モザイク**のかかった画（Groxと羊）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "彼"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 6.92,
+    "rows": [
+     {
+      "chars": 9,
+      "chars_per_sec": 6.92,
+      "duration": 1.3,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 9
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 9.23,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 9,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "過去・結果",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "彼は羊とヤりました"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "（ここで冒頭のモザイクの場面につながる）",
+       "range_raw": "11〜15",
+       "source": "doc_structure",
+       "source_file": "dream/individual/32_Ag_RdDjnYDA.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 3
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "彼は羊とヤりました",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "Ag_RdDjnYDA"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_DIALOGUE",
+     "effective_code": "D_DIALOGUE",
+     "quote": "That sheep just saved you!",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_REVERSAL",
+     "effective_code": "P_REVERSAL",
+     "quote": "I'm taking custody of our son!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "羊とヤりました、モザイク",
+      "range_raw": "0.0〜1.5",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "村人の大群に囲まれる「囲まれたぞ!!」→「ｵｫｳちょっと待って」→ 羊を見つけて「ちょっとこれ貸して～」",
+      "range_raw": "1.7〜6",
+      "stage_label": "事件"
+     },
+     {
+      "content": "羊の毛をかぶって変装「いいじゃん...!」「上手くいってるぞ」「早く出なきゃ」→「羊が救ってくれた」",
+      "range_raw": "5.8〜10",
+      "stage_label": "展開"
+     },
+     {
+      "content": "「借りができたな」「どう返せばいい?」→ ニヤけ顔の羊（12.9秒）→ ❤️「嘘だろ?!」（ここで冒頭のモザイクの場面につながる）",
+      "range_raw": "11〜15",
+      "stage_label": "恩返し"
+     },
+     {
+      "content": "「これは俺たちだけの秘密な」→ 羊の頭の子供「ちょっと待てよ？」→「息子の親権を引き継ぐ」「俺は素晴らしい父親だ」→ 子供を柵に入れて「ここにいろよ」「動くなよ」（子供の後ろに見張りの大群）",
+      "range_raw": "15.6〜24",
+      "stage_label": "後日談"
+     },
+     {
+      "content": "黒い画面に「MICHAEL BAY FILM」の文字",
+      "range_raw": "25.0〜26.6",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [],
+    "cuts": 14,
+    "cuts_per_5s": {
+     "0": 3,
+     "10": 3,
+     "15": 3,
+     "20": 3,
+     "5": 2
+    },
+    "duration_sec": 26.56,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 1.3,
+    "is_end_position": false,
+    "sec_from_end": 25.26,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "彼は羊とヤりました"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「彼は羊とヤりました」と出来事を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 23.92,
+    "status": "ok",
+    "text": "Don't move!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 23.7,
+    "status": "ok",
+    "text": "Don't move"
+   },
+   "payoff_code_4b": {
+    "code": "P_REVERSAL",
+    "effective_code": "P_REVERSAL",
+    "quote": "I'm taking custody of our son!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 32,
+ "not_applicable": [
+  {
+   "item": 8,
+   "reason": "規則に当てはまる秒が無い",
+   "what": "盛り上がりの候補"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/32_Ag_RdDjnYDA.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/Ag_RdDjnYDA.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "Ag_RdDjnYDA"
+}

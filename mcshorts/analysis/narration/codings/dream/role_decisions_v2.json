@@ -1,0 +1,15 @@
+{
+  "version": "role-decisions-v2",
+  "about": "文の役割についてのユーザーの新しい判断。review_roles.csv（確認済み19件）は変更せず、それ以外の判断をここに記録する。元の分類（roles_claude_v1.json）は書き換えない",
+  "decisions": [
+    {
+      "item_id": "role:TWUEJTjUPmY:1:0",
+      "quote": "開始早々ピンチになります",
+      "decision": "HOLD",
+      "decided_by": "user",
+      "decided_on": "2026-11-25",
+      "source": "チャットでのユーザー指示（実装前の確認 0-1：F22）",
+      "note": "起点のナレーションの役割を新たに保留とする。根拠の場面（3.6〜11）が予告より前に始まり、予告か同時の説明かが確定しないため。review_roles.csv には含まれていない部分"
+    }
+  ]
+}

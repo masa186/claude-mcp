@@ -1,0 +1,955 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 76.53,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.07,
+   "first_cut_minus_first_row_start": 0.07,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.465,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "マイクラの海と島"
+     },
+     {
+      "end": 1.27,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「マイクラの世界に」→ 白「やってきた」",
+      "time_raw": "0.27〜1.27",
+      "visual": "カット。マイクラのサンゴ礁を**実写の人間がシュノーケルで泳ぐ** [実測: 0.07]"
+     },
+     {
+      "end": 2.53,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "オレンジ「ゴードンラムゼイですが」",
+      "time_raw": "1.47〜2.53",
+      "visual": "カット。**ゴードン・ラムゼイ本人が、マイクラのフグを手に持って**話す [実測: 1.47]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "オレンジ「ランチは」",
+      "time_raw": "2.73〜3.00",
+      "visual": "カット。調理台の前で料理する [実測: 2.67]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.4,
+     "music_mean_during_row": 0.54,
+     "nearest_cut_to_end": 0.27,
+     "nearest_cut_to_start": 0.07,
+     "nearest_subtitle_change_to_end": 0.07,
+     "nearest_subtitle_change_to_start": 1.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.15,
+      0.4,
+      0.75,
+      1.4,
+      1.55,
+      1.85,
+      2.7
+     ],
+     "start": 0.0
+    },
+    {
+     "end": 5.5,
+     "music_mean_during_row": 0.573,
+     "nearest_cut_to_end": 0.57,
+     "nearest_cut_to_start": 0.03,
+     "nearest_subtitle_change_to_end": 1.37,
+     "nearest_subtitle_change_to_start": 0.23,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      2.7
+     ],
+     "start": 2.7
+    },
+    {
+     "end": 76.3,
+     "music_mean_during_row": 0.42,
+     "nearest_cut_to_end": 1.23,
+     "nearest_cut_to_start": 0.17,
+     "nearest_subtitle_change_to_end": 1.03,
+     "nearest_subtitle_change_to_start": 0.17,
+     "row": 2,
+     "spikes_within_row_or_1s_after": [
+      74.75,
+      75.1,
+      75.45,
+      75.75
+     ],
+     "start": 73.7
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜にやってきた〇〇ですが」と前提を述べる",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "次の部分とつながる文の途中",
+     "role": "R_FRAGMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 1,
+     "reason": "作るものを述べるだけで、結末・ひねりは言わない",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 0,
+     "reason": "最後の語り手の感想",
+     "role": "R_COMMENT",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 23,
+     "content_lemmas": [
+      "マイ-my",
+      "クラ-clarinet",
+      "世界",
+      "遣る",
+      "来る",
+      "ゴードンラムゼイ"
+     ],
+     "first_token": {
+      "lemma": "マイ-my",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "マイ"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "ゴードンラムゼイ"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 4
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "マイクラの世界にやってきたゴードンラムゼイですが"
+    },
+    {
+     "chars": 4,
+     "content_lemmas": [
+      "ランチ-lunch"
+     ],
+     "first_token": {
+      "lemma": "ランチ-lunch",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "ランチ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 1,
+      "名詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "ランチは"
+    },
+    {
+     "chars": 11,
+     "content_lemmas": [
+      "河豚",
+      "グリル-grill",
+      "作る"
+     ],
+     "first_token": {
+      "lemma": "河豚",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "フグ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 2
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "フグのグリルを作ります"
+    },
+    {
+     "chars": 23,
+     "content_lemmas": [
+      "事",
+      "為る",
+      "料理",
+      "居る"
+     ],
+     "first_token": {
+      "lemma": "こんな",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "こんな"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 3,
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 2,
+      "形状詞": 1,
+      "接尾辞": 1,
+      "連体詞": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "こんなことをする料理人は滅多にいないでしょうね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "マイ-my",
+     1
+    ],
+    [
+     "クラ-clarinet",
+     1
+    ],
+    [
+     "世界",
+     1
+    ],
+    [
+     "遣る",
+     1
+    ],
+    [
+     "来る",
+     1
+    ],
+    [
+     "ゴードンラムゼイ",
+     1
+    ],
+    [
+     "ランチ-lunch",
+     1
+    ],
+    [
+     "河豚",
+     1
+    ],
+    [
+     "グリル-grill",
+     1
+    ],
+    [
+     "作る",
+     1
+    ],
+    [
+     "事",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "料理",
+     1
+    ],
+    [
+     "居る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.4,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "マイクラの世界にやってきたゴードンラムゼイですが"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マイクラの世界に",
+     "words": [
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "の",
+      "世界",
+      "に"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.4,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "マイクラの世界にやってきたゴードンラムゼイですが"
+      },
+      {
+       "end": 5.5,
+       "fully_inside": false,
+       "row": 1,
+       "start": 2.7,
+       "text": "ランチは フグのグリルを作ります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 22,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マイクラの世界にやってきたボードナムズイですか?",
+     "words": [
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "の",
+      "世界",
+      "に",
+      "やって",
+      "きた",
+      "ボ",
+      "ード",
+      "ナ",
+      "ム",
+      "ズ",
+      "イ",
+      "ですか?"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.4,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "マイクラの世界にやってきたゴードンラムゼイですが"
+      },
+      {
+       "end": 5.5,
+       "fully_inside": false,
+       "row": 1,
+       "start": 2.7,
+       "text": "ランチは フグのグリルを作ります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 22,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マイクラの世界にやってきたボードナムズイですか?",
+     "words": [
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "の",
+      "世界",
+      "に",
+      "やって",
+      "きた",
+      "ボ",
+      "ード",
+      "ナ",
+      "ム",
+      "ズ",
+      "イ",
+      "ですか?"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 23,
+    "end": 2.4,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "マイクラの世界にやってきたゴードンラムゼイですが"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "マイ-my",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "マイ"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "ゴードンラムゼイ"
+      ],
+      "question": false
+     },
+     "text": "マイクラの世界にやってきたゴードンラムゼイですが"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜にやってきた〇〇ですが」と前提を述べる",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_INTRO",
+    "effective_code": "H_INTRO",
+    "quote": "マイクラの世界にやってきたボードナムズイですか?",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "マイクラの海と島"
+     },
+     {
+      "end": 1.27,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「マイクラの世界に」→ 白「やってきた」",
+      "time_raw": "0.27〜1.27",
+      "visual": "カット。マイクラのサンゴ礁を**実写の人間がシュノーケルで泳ぐ** [実測: 0.07]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "マ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.85,
+    "rows": [
+     {
+      "chars": 23,
+      "chars_per_sec": 9.58,
+      "duration": 2.4,
+      "gap_to_next_row": 0.3,
+      "row": 0
+     },
+     {
+      "chars": 15,
+      "chars_per_sec": 5.36,
+      "duration": 2.8,
+      "gap_to_next_row": 68.2,
+      "row": 1
+     },
+     {
+      "chars": 23,
+      "chars_per_sec": 8.85,
+      "duration": 2.6,
+      "gap_to_next_row": null,
+      "row": 2
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 61
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 0.59,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 31,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "ゴードンラムゼイ"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "マイクラの世界にやってきたゴードンラムゼイですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "ランチは"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "フグのグリルを作ります"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 2,
+     "text": "こんなことをする料理人は滅多にいないでしょうね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_SETUP",
+    "R_FRAGMENT",
+    "R_SETUP",
+    "R_COMMENT"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_PROCESS",
+     "effective_code": "DX",
+     "quote": "An underground oven!",
+     "review": {
+      "corrected_code": "DX",
+      "memo": "前後の発言は実演への反応だけで、手順の進行は文から確認できない。2.6〜30秒は発言なし",
+      "result": "違う",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "こんなことをする料理人は滅多にいないでしょうね",
+     "review": {
+      "corrected_code": null,
+      "memo": null,
+      "result": "正しい",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "実写のラムゼイがマイクラの世界に。「フグのグリルを作ります」",
+      "range_raw": "0.0〜5.5",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「昆布を使おう」→ ラマ「何だ？」→ ラムゼイ「\"やぁ!!\"」。6秒に牛の声（Moo）[音タグ]",
+      "range_raw": "6〜13",
+      "stage_label": "1品目の準備"
+     },
+     {
+      "content": "行商人「ホームレスが俺を見つけたようだ」「ﾝﾅｧｧ...///」「最悪なんだよ」「俺の見た中で」→「こいつさ」「俺の料理を狙ってるぞ」→ 行商人「ｱｰﾊﾝ↑」→「ハエのように走り回って」→「\"やぁ、助けいる？\"」→「やつに見つからないよう」「場所変えよう」",
+      "range_raw": "12.6〜30",
+      "stage_label": "邪魔が入る"
+     },
+     {
+      "content": "ネザーゲートに入る「マジかよ...」「何だよここ」「恐ろしい場所だ」→ ピグリン「お前何歳だよ」「至る所に」→「ジギーを除いて」「会えて嬉しいよ」",
+      "range_raw": "31〜49",
+      "stage_label": "ネザーへ"
+     },
+     {
+      "content": "「ジギーは見せに来た」「俺が見たことないやつを」→ 溶岩に食材を入れる「ここの熱さは異常だ」「この泡立ちを聞け」「色を見てみろ」→「オーマイガッシュ....」「何て素晴らしい技術だ」「地下のオーブンだ」→ 食べて「ｿｿ～～///」",
+      "range_raw": "51〜72",
+      "stage_label": "2品目"
+     },
+     {
+      "content": "溶岩の前で棒を振り回すラムゼイ。ナレーション「こんなことをする料理人は滅多にいないでしょうね(いたら教えて)」",
+      "range_raw": "73.7〜76.5",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     2,
+     21,
+     25,
+     27,
+     48,
+     49,
+     50,
+     51,
+     52,
+     57,
+     59,
+     69,
+     74,
+     75
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.15,
+     0.4,
+     0.75,
+     1.4,
+     1.55,
+     1.85,
+     2.7,
+     21.45,
+     25.0,
+     27.5,
+     48.4,
+     48.55,
+     48.85,
+     49.15,
+     49.95,
+     50.1,
+     50.3,
+     50.65,
+     51.1,
+     51.75,
+     52.25,
+     57.25,
+     57.5,
+     57.7,
+     59.7,
+     69.45,
+     74.75,
+     75.1,
+     75.45,
+     75.75
+    ],
+    "cuts": 46,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 4,
+     "15": 1,
+     "20": 3,
+     "25": 2,
+     "30": 2,
+     "35": 4,
+     "40": 4,
+     "45": 3,
+     "5": 4,
+     "50": 3,
+     "55": 4,
+     "60": 2,
+     "65": 1,
+     "70": 3,
+     "75": 1
+    },
+    "duration_sec": 76.53,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 2.7
+     },
+     {
+      "position": "end",
+      "row": 2,
+      "start": 73.7
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 76.3,
+    "is_end_position": true,
+    "sec_from_end": 0.23,
+    "start": 73.7,
+    "status": "DOC_OBSERVED",
+    "text": "こんなことをする料理人は滅多にいないでしょうね"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 0,
+     "reason": "最後の語り手の感想",
+     "role": "R_COMMENT",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 72.46,
+    "status": "ok",
+    "text": "That is delicious!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 73.7,
+    "status": "ok",
+    "text": "こんなことをする料理人は滅多にいないでしょうね"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "こんなことをする料理人は滅多にいないでしょうね",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 26,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/26_0iK0gxEUo0U.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/0iK0gxEUo0U.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "0iK0gxEUo0U"
+}

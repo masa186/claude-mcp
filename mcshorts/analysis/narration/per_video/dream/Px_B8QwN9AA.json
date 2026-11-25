@@ -1,0 +1,669 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 60.26,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 4.13,
+   "first_cut_minus_first_row_start": 4.13,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.435,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この男は」",
+      "time_raw": "0.00〜0.53",
+      "visual": "配信者の顔（左上）＋ジャングルの柵の中の羊"
+     },
+     {
+      "end": 1.47,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「羊にブチ込むRTAで」",
+      "time_raw": "0.73〜1.47",
+      "visual": "配信者が**椅子から立ち上がって画面から消える**（喜んで飛び跳ねている）"
+     },
+     {
+      "end": 3.0,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「世界最速記録を」→ 白「叩き出します」",
+      "time_raw": "1.73〜3.00",
+      "visual": "空の椅子が映ったまま"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.9,
+     "music_mean_during_row": 0.568,
+     "nearest_cut_to_end": 0.23,
+     "nearest_cut_to_start": 4.13,
+     "nearest_subtitle_change_to_end": 0.23,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.15,
+      2.4,
+      2.95,
+      4.15
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜で世界最速記録を叩き出します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 27,
+     "content_lemmas": [
+      "男",
+      "羊",
+      "打ち込む",
+      "RTA",
+      "世界",
+      "最速",
+      "記録",
+      "叩き出す"
+     ],
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [
+       "最速"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 6,
+      "連体詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "男",
+     1
+    ],
+    [
+     "羊",
+     1
+    ],
+    [
+     "打ち込む",
+     1
+    ],
+    [
+     "RTA",
+     1
+    ],
+    [
+     "世界",
+     1
+    ],
+    [
+     "最速",
+     1
+    ],
+    [
+     "記録",
+     1
+    ],
+    [
+     "叩き出す",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.9,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 6,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この男は逆に",
+     "words": [
+      "この",
+      "男",
+      "は",
+      "逆",
+      "に"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.9,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 19,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この男は逆にぶち込むRTAで世界最速記",
+     "words": [
+      "この",
+      "男",
+      "は",
+      "逆",
+      "に",
+      "ぶ",
+      "ち",
+      "込",
+      "む",
+      "R",
+      "TA",
+      "で",
+      "世界",
+      "最",
+      "速",
+      "記"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 27,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この男は逆にぶち込むRTAで世界最速記録を叩き出します",
+     "words": [
+      "この",
+      "男",
+      "は",
+      "逆",
+      "に",
+      "ぶ",
+      "ち",
+      "込",
+      "む",
+      "R",
+      "TA",
+      "で",
+      "世界",
+      "最",
+      "速",
+      "記",
+      "録",
+      "を",
+      "叩",
+      "き",
+      "出",
+      "します"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 27,
+    "end": 3.9,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [
+       "最速"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜で世界最速記録を叩き出します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "この男は逆にぶち込むRTAで世界最速記録を叩き出します",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この男は」",
+      "time_raw": "0.00〜0.53",
+      "visual": "配信者の顔（左上）＋ジャングルの柵の中の羊"
+     },
+     {
+      "end": 1.47,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「羊にブチ込むRTAで」",
+      "time_raw": "0.73〜1.47",
+      "visual": "配信者が**椅子から立ち上がって画面から消える**（喜んで飛び跳ねている）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "この"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 6.92,
+    "rows": [
+     {
+      "chars": 27,
+      "chars_per_sec": 6.92,
+      "duration": 3.9,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 27
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 6.89,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 22,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [],
+     "emphasis_words": [
+      "最速"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "タイマー **00:55.352** で止まる",
+       "range_raw": "55.4〜60.3",
+       "source": "doc_structure",
+       "source_file": "dream/individual/29_Px_B8QwN9AA.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 5
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "この男は羊にブチ込むRTAで世界最速記録を叩き出します",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "Px_B8QwN9AA"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "お疲れ様でした",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "記録達成の喜びの先出し、ナレーション",
+      "range_raw": "0.0〜3.9",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「よーい...」→「スタート!!」。**右上にタイマー 00:00.000** が出る",
+      "range_raw": "4.2〜6.8",
+      "stage_label": "開始"
+     },
+     {
+      "content": "「まずは木を回収」→「ピストンも回収」→「ダイヤモンドゲット」→「石を掘って...」→「かまどを作り...」→「銅を入れる」。15秒・30秒にタイプライターの音（Typewriter 0.35〜0.60＝作業台の操作音と思われる）[音タグ]",
+      "range_raw": "7.5〜30",
+      "stage_label": "手順"
+     },
+     {
+      "content": "「ボートを作る」→ 引用符なしの字幕「ぶち込む用の羊」→「ぶち込む機会を作る」（ピストンと柵の装置）。39〜42秒に羊の声（Bleat 0.5〜0.6）[音タグ]",
+      "range_raw": "30〜47",
+      "stage_label": "準備"
+     },
+     {
+      "content": "赤「そして遂に...」→ 装置が動く（52秒に Mechanisms・Gears）[音タグ]",
+      "range_raw": "51.9〜55",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "タイマー **00:55.352** で止まる。配信者「ﾚｯﾂｺﾞｫｫｫｫｵｵ!!!!」→ 椅子から立ち上がって消える（冒頭の画）→ 👍の絵文字と白の引用符「\"ユニークな才能\"」",
+      "range_raw": "55.4〜60.3",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     2,
+     4,
+     5,
+     6,
+     7,
+     11,
+     19,
+     21,
+     22,
+     23,
+     28,
+     32,
+     39,
+     40,
+     41,
+     42,
+     46,
+     47,
+     55,
+     56,
+     57,
+     59,
+     60
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.15,
+     2.4,
+     2.95,
+     4.15,
+     5.4,
+     6.05,
+     7.8,
+     11.1,
+     19.3,
+     21.3,
+     22.8,
+     23.7,
+     28.85,
+     32.1,
+     32.5,
+     39.55,
+     40.35,
+     41.35,
+     41.85,
+     42.5,
+     46.95,
+     47.5,
+     55.8,
+     56.3,
+     57.2,
+     59.0,
+     60.15
+    ],
+    "cuts": 31,
+    "cuts_per_5s": {
+     "0": 2,
+     "10": 2,
+     "15": 3,
+     "20": 1,
+     "25": 3,
+     "30": 4,
+     "35": 3,
+     "40": 1,
+     "45": 5,
+     "5": 2,
+     "50": 4,
+     "55": 1
+    },
+    "duration_sec": 60.26,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 3.9,
+    "is_end_position": false,
+    "sec_from_end": 56.36,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜で世界最速記録を叩き出します」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 60.0,
+    "status": "ok",
+    "text": "Thank you."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 60.0,
+    "status": "ok",
+    "text": "またね"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "お疲れ様でした",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 29,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/29_Px_B8QwN9AA.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/Px_B8QwN9AA.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "Px_B8QwN9AA"
+}

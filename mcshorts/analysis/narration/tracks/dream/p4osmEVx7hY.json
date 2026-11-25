@@ -1,0 +1,3824 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.01,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.06,
+    "Music": 0.53,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.83,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.04,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.5,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.52,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.04,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.59,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.03,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.66,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.71,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.37,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.64,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.49,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.65,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.46,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 6
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.71,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 7
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.01,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.5,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.49,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.02,
+    "t": 8
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.01,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.42,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.42,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.02,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.39,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.38,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.03,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.01,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.35,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.05,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.07,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.41,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.07,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.08,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.57,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 13
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.5,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.58,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 14
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 15
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.51,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.47,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 16
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.01,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.45,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 17
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.24,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 18
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.41,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.34,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 19
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.55,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.5,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 20
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.73,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.59,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 21
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.73,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.37,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 22
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.03,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.04,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.44,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 23
+   },
+   {
+    "Boom": 0.01,
+    "Cheering": 0.0,
+    "Explosion": 0.1,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.22,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.58,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 24
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.2,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.52,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 25
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.57,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 26
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.54,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.4,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 27
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.54,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.13,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 28
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.06,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.45,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.3,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 29
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.52,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.02,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.48,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.02,
+    "t": 30
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.47,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 31
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.45,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.49,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 32
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.58,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.69,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 33
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.47,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 34
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.49,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.63,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 35
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.57,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.61,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 36
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.04,
+    "Music": 0.46,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.56,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 37
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.53,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.56,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 38
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.48,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 39
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.24,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.58,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 40
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.01,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.03,
+    "Gasp": 0.0,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.3,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.66,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 41
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.01,
+    "Explosion": 0.12,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.24,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.07,
+    "Speech": 0.51,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.01,
+    "t": 42
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.11,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.45,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.51,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 43
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.46,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.51,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 44
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.04,
+    "Music": 0.34,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 45
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.51,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.7,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 46
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.02,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.6,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.04,
+    "t": 47
+   },
+   {
+    "Boom": 0.01,
+    "Cheering": 0.0,
+    "Explosion": 0.19,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.36,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.54,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 48
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.25,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.53,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 49
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.21,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.53,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 50
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.02,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.14,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.57,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.02,
+    "t": 51
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.03,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.04,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.07,
+    "Music": 0.22,
+    "Narration, monologue": 0.03,
+    "Screaming": 0.04,
+    "Shout": 0.01,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.08,
+    "t": 52
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.03,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.03,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.84,
+    "Whoosh, swoosh, swish": 0.01,
+    "Yell": 0.0,
+    "t": 53
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.03,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.01,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.35,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 54
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.03,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.12,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.07,
+    "Speech": 0.46,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.05,
+    "t": 55
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.02,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.35,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.07,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.47,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.06,
+    "t": 56
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.03,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.02,
+    "Music": 0.23,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.43,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.03,
+    "t": 57
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.01,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.04,
+    "Music": 0.27,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.6,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 58
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.13,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.62,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 59
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.06,
+    "Music": 0.15,
+    "Narration, monologue": 0.03,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 60
+   }
+  ],
+  "source": "dream/data/audiotag/p4osmEVx7hY.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "D_REPEAT",
+    "effective_code": "D_REPEAT",
+    "quote": "Alright, who's next?",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "HX",
+    "effective_code": "HX",
+    "quote": "え、よ、チリール!",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Hey chill chill relax",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "【冒頭0〜3秒の本編音声字幕】お前ら落ち着けェェ!!!（白）→ リラックス（白）→ リラックス×2（白） 【3〜8秒のナレーション字幕】村人に追われる（白）→ Groxですが...（白）→ 絶体絶命の（赤）→ ピンチになります（黄）",
+  "voice": "村人に追われるグロックスですが、絶体絶命のピンチになります。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.167,
+   "doc_text": "村人に追われるGroxですが...",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": false,
+   "end": 5.3,
+   "row_index": 0,
+   "start": 3.5,
+   "whisper_ja_overlapping_segments": [
+    2
+   ],
+   "whisper_ja_overlapping_text": "ごら、我々のグロックスに追われるようです。"
+  },
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.163,
+   "doc_text": "（字幕は1コマに出ず）…ピンチになります",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": false,
+   "end": 8.4,
+   "row_index": 1,
+   "start": 5.3,
+   "whisper_ja_overlapping_segments": [
+    3,
+    4
+   ],
+   "whisper_ja_overlapping_text": "うなびかに追われるのかもしれません。絶対説明のピンチになります。"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "書き起こし",
+      "音タグ"
+     ],
+     "text": "音: 0〜8秒は英語の元音声「Hey, yo, chill! Relax, relax!」が鳴る（Speech 0.5〜0.7）[書き起こし・音タグ]"
+    },
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "画面"
+     ],
+     "text": "**冒頭0〜3秒はナレーションではなく、Grox本人の台詞の和訳**。ナレーション（「村人に追われるGroxですが...」）は3.5秒から [画面]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "書き起こし（日本語）は崩れている（「ごら、我々のグロックスに追われるようです」「絶対説明のピンチになります」）。字幕のコマは「村人に追われる」「Groxですが...」「ピンチになります」[画面][書き起こし]"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行目 黄の小さい文字「こんな実況者他にいない」、2行目 **赤の大きな数字**「1vs1000000」。全編同じ [実測]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: 村人の大群に追われ、空中の柱の上で1対1の勝負を続けるGrox [画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 60回、1ショット平均 1.02秒（中央値 0.87秒）[実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 71回、字幕が出ている時間 89%（58本で最も高い部類）[実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 平均 0.41。23秒・53〜54秒で0（「僕!僕!僕!」の後と、突撃の直前）[音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "声: 全編で英語の声（Speech 0.4〜0.8）[音タグ]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "効果音: アヒル（21〜22秒）、Ding（35〜36秒＝登録の音と思われる）、爆発（25・48秒）[音タグ]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: 1.3秒→2.3秒で、村人が**数人→地面を埋め尽くす量**に増えていく。上部テロップ「1vs1000000」の数字と、画面の量が一致する。本人の焦った台詞（落ち着け、リラックス）が、量の異常さを強める"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: **数字だけで規模を伝える**。1対100万という不可能な対決。1行目はGroxへの褒め言葉"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: 1対1の勝負が**次々に違う相手**で続く（叫ぶ奴・色目を使う奴・チャンネル登録した奴・武器を持った奴）。1人ずつ違うボケがあるので、「次は誰だ？」が毎回のフックになる"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "37.7秒の「チャンネル登録してんじゃん」は、**元の動画の配信者が視聴者に登録を呼びかけている場面**を、そのまま和訳している [考察]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: 「1対100万」の数字と画の量。1人ずつ違う相手のボケ"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": 1.27,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「お前ら落ち着けｪｪ!!!」",
+     "time_raw": "0.00〜1.27",
+     "visual": "草原を走るGrox（後ろ姿、頭上に名前）"
+    },
+    {
+     "end": 2.0,
+     "start": 1.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「リラックス」",
+     "time_raw": "1.27〜2.00",
+     "visual": "カット。真上から見たGrox。周りに村人が集まり始める [実測: 0.80]"
+    },
+    {
+     "end": 2.73,
+     "start": 2.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「リラックス×2」",
+     "time_raw": "2.27〜2.73",
+     "visual": "**地面が見えないほどの村人の大群**"
+    },
+    {
+     "end": 3.0,
+     "start": 2.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "同上",
+     "time_raw": "2.73〜3.00",
+     "visual": "カット。大群の中に雪（空から見下ろす）[実測: 2.67, 2.93]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/23_p4osmEVx7hY.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "本人の台詞と、増える村人",
+     "content_status": "DOC_OBSERVED",
+     "end": 3.5,
+     "range_raw": "0.0〜3.5",
+     "stage_label": "冒頭",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "ナレーション。空を突き刺す無数の柱（村人が積み上がっている）",
+     "content_status": "DOC_OBSERVED",
+     "end": 8.4,
+     "range_raw": "3.5〜8.4",
+     "stage_label": "状況説明",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 3.5
+    },
+    {
+     "content": "「heyﾖｫｫｫｵｰｰｳｩ!!!」「落ち着けって!!」→ 1対1で村人を倒していく「ワーオ(棒)」「何だあれ？」「Groxを〇せぇぇ!!!」（看板「KILL GROX」）→「俺と戦おうってか？」「ﾅｰやってみろや」「さぁ次は誰だ？」",
+     "content_status": "DOC_OBSERVED",
+     "end": 21.0,
+     "range_raw": "8.9〜21",
+     "stage_label": "展開",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 8.9
+    },
+    {
+     "content": "「おいどうした??」「ヒーローにでもなったつもりか?w」「次は誰が犠牲になる?」「僕!僕!僕!」→ 観客席の村人「おい笑える」「いい反応するじゃんw」→ 色目を使う村人「やぁハンサムくん❤️」「マジかこいつ...」",
+     "content_status": "DOC_OBSERVED",
+     "end": 31.0,
+     "range_raw": "19〜31",
+     "stage_label": "掛け合い",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 19.0
+    },
+    {
+     "content": "戦わない村人「おおどうした」「なに怖いんか?」→ **チャンネル登録画面（Grox ✓ Subscribed）**「チャンネル登録してんじゃん」→「戦わないでやるよ」「ありがとうー!!」→「褒美として」（パンツを引っ張る）",
+     "content_status": "DOC_OBSERVED",
+     "end": 43.0,
+     "range_raw": "31.3〜43",
+     "stage_label": "変化",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 31.3
+    },
+    {
+     "content": "「全員俺のファンじゃん」→ コーチ「準備万端ですコーチ...!」→ 武器を持った村人「(皮肉)」「何を四天王??」→ 審判が見捨てる「なぜ彼を助けなかった」「ひどいぞそれは!!」→「一同)突撃ｨｨ!!」",
+     "content_status": "DOC_OBSERVED",
+     "end": 58.0,
+     "range_raw": "43〜58",
+     "stage_label": "クライマックス",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 43.0
+    },
+    {
+     "content": "「ﾍｲ落ち着け落ち着けぇ」→ インベントリ「リラックス」「こうしてまた」→「追いかけっこが」「始まるのでした」（冒頭と同じ場面に戻る）",
+     "content_status": "DOC_OBSERVED",
+     "end": 62.4,
+     "range_raw": "58〜62.4",
+     "stage_label": "オチ",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 58.0
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [
+   "#23 の2文目は字幕・書き起こしとも一部取れなかった"
+  ],
+  "rows": [
+   {
+    "end": 5.3,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "村人に追われるGroxですが..."
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 3.5,
+    "status": "DOC_OBSERVED",
+    "text": "村人に追われるGroxですが..."
+   },
+   {
+    "end": 8.4,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "（字幕は1コマに出ず）…ピンチになります"
+     }
+    ],
+    "row_index": 1,
+    "source": "dream/narration_list.md",
+    "start": 5.3,
+    "status": "DOC_OBSERVED",
+    "text": "（字幕は1コマに出ず）…ピンチになります"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 62.39,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -27.8,
+    -11.9,
+    -19.6,
+    -12.4,
+    -13.3,
+    -12.7,
+    -19.4,
+    -9.5,
+    -9.2,
+    -8.6,
+    -19.5,
+    -19.3,
+    -9.1,
+    -11.4,
+    -22.8
+   ],
+   "max_db": -6.4,
+   "median_db": -13.8,
+   "onset": 0.0,
+   "p95_db": -8.5,
+   "spikes": []
+  },
+  "cuts": [
+   0.8,
+   2.67,
+   2.93,
+   3.33,
+   5.6,
+   6.73,
+   7.67,
+   8.67,
+   9.07,
+   9.47,
+   9.93,
+   11.33,
+   11.53,
+   11.87,
+   12.4,
+   12.8,
+   13.0,
+   13.6,
+   14.6,
+   15.13,
+   16.07,
+   17.87,
+   19.33,
+   20.4,
+   22.33,
+   22.8,
+   24.93,
+   25.6,
+   26.07,
+   26.47,
+   26.73,
+   27.47,
+   27.8,
+   28.07,
+   30.27,
+   31.2,
+   33.93,
+   34.6,
+   37.87,
+   39.33,
+   39.73,
+   40.67,
+   43.0,
+   43.87,
+   45.0,
+   46.67,
+   47.8,
+   48.6,
+   50.33,
+   52.47,
+   54.87,
+   56.07,
+   56.4,
+   56.93,
+   57.8,
+   59.13,
+   59.53,
+   60.07,
+   60.67,
+   61.67
+  ],
+  "cuts_first3s": [
+   0.8,
+   2.67,
+   2.93
+  ],
+  "dur": 62.39,
+  "layout": {
+   "content": [
+    34,
+    334
+   ],
+   "play": [
+    92,
+    334
+   ],
+   "top": [
+    34,
+    92
+   ]
+  },
+  "motion_median": 8.14,
+  "moves": [
+   [
+    17.0,
+    17.4
+   ],
+   [
+    21.6,
+    21.87
+   ],
+   [
+    23.8,
+    24.47
+   ],
+   [
+    28.47,
+    28.93
+   ],
+   [
+    29.73,
+    30.07
+   ],
+   [
+    33.53,
+    33.8
+   ],
+   [
+    36.07,
+    36.47
+   ]
+  ],
+  "n_shots": 61,
+  "n_subs": 71,
+  "shot_mean": 1.02,
+  "shot_median": 0.87,
+  "source": "dream/data/measure/p4osmEVx7hY.json",
+  "status": "ok",
+  "sub_changes": [
+   0.07,
+   0.33,
+   0.6,
+   0.87,
+   1.13,
+   1.4,
+   2.13,
+   3.33,
+   4.2,
+   5.13,
+   6.33,
+   6.67,
+   7.67,
+   7.93,
+   8.2,
+   8.47,
+   8.73,
+   9.0,
+   9.8,
+   10.33,
+   11.13,
+   11.4,
+   11.67,
+   11.93,
+   12.2,
+   13.0,
+   14.6,
+   15.67,
+   17.0,
+   19.33,
+   19.8,
+   21.13,
+   23.8,
+   24.93,
+   25.6,
+   25.87,
+   27.2,
+   27.47,
+   28.47,
+   29.8,
+   31.33,
+   32.8,
+   33.47,
+   34.53,
+   35.47,
+   36.07,
+   36.4,
+   37.47,
+   37.87,
+   38.2,
+   39.73,
+   40.87,
+   43.0,
+   43.87,
+   45.0,
+   46.67,
+   48.2,
+   48.87,
+   50.47,
+   51.07,
+   51.8,
+   52.53,
+   52.87,
+   54.87,
+   56.93,
+   57.87,
+   59.0,
+   59.33,
+   59.73,
+   60.27,
+   60.87
+  ],
+  "sub_on_ratio": 0.89,
+  "top_changes": []
+ },
+ "no": 23,
+ "video_id": "p4osmEVx7hY",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 2.8,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "Hey, yo, chill! Relax, relax!"
+   },
+   {
+    "category": "latin",
+    "end": 5.1,
+    "segment_index": 1,
+    "start": 3.3,
+    "text": "Damn, that's close to me."
+   },
+   {
+    "category": "latin",
+    "end": 6.8,
+    "segment_index": 2,
+    "start": 5.6,
+    "text": "Bro, I'm cursed!"
+   },
+   {
+    "category": "latin",
+    "end": 8.6,
+    "segment_index": 3,
+    "start": 6.8,
+    "text": "I'm a pinch of a pinch!"
+   },
+   {
+    "category": "latin",
+    "end": 11.1,
+    "segment_index": 4,
+    "start": 8.6,
+    "text": "Hey, yo! Relax, relax!"
+   },
+   {
+    "category": "latin",
+    "end": 12.1,
+    "segment_index": 5,
+    "start": 11.1,
+    "text": "Whoa!"
+   },
+   {
+    "category": "latin",
+    "end": 13.6,
+    "segment_index": 6,
+    "start": 12.1,
+    "text": "Whoa! What is this?"
+   },
+   {
+    "category": "latin",
+    "end": 14.5,
+    "segment_index": 7,
+    "start": 13.6,
+    "text": "Chill out!"
+   },
+   {
+    "category": "latin",
+    "end": 15.7,
+    "segment_index": 8,
+    "start": 14.5,
+    "text": "Oh, he's trying to bite me?"
+   },
+   {
+    "category": "latin",
+    "end": 17.0,
+    "segment_index": 9,
+    "start": 15.7,
+    "text": "Nah, what's up then?"
+   },
+   {
+    "category": "latin",
+    "end": 18.1,
+    "segment_index": 10,
+    "start": 17.0,
+    "text": "Alright, who's next?"
+   },
+   {
+    "category": "latin",
+    "end": 19.3,
+    "segment_index": 11,
+    "start": 18.1,
+    "text": "Me!"
+   },
+   {
+    "category": "latin",
+    "end": 21.0,
+    "segment_index": 12,
+    "start": 19.3,
+    "text": "What's up? You're trying to be a hero?"
+   },
+   {
+    "category": "latin",
+    "end": 22.2,
+    "segment_index": 13,
+    "start": 21.0,
+    "text": "Who else wants to smoke?"
+   },
+   {
+    "category": "latin",
+    "end": 23.7,
+    "segment_index": 14,
+    "start": 22.2,
+    "text": "Me! Me! Me!"
+   },
+   {
+    "category": "latin",
+    "end": 27.1,
+    "segment_index": 15,
+    "start": 24.9,
+    "text": "I bet! Y'all are starting to like this!"
+   },
+   {
+    "category": "latin",
+    "end": 27.9,
+    "segment_index": 16,
+    "start": 27.1,
+    "text": "Who's next?"
+   },
+   {
+    "category": "latin",
+    "end": 29.7,
+    "segment_index": 17,
+    "start": 27.9,
+    "text": "I have some attack now!"
+   },
+   {
+    "category": "latin",
+    "end": 36.98,
+    "segment_index": 18,
+    "start": 29.7,
+    "text": "oh my god who's next all right what's up let's fight oh you're scared why shouldn't we oh let's"
+   },
+   {
+    "category": "latin",
+    "end": 42.42,
+    "segment_index": 19,
+    "start": 36.98,
+    "text": "go you subscribe we won't fight thank you as a reward i'll send you off with a wedgie thank you"
+   },
+   {
+    "category": "latin",
+    "end": 49.06,
+    "segment_index": 20,
+    "start": 42.42,
+    "text": "box let's go the villagers like me i'm ready coach you got this all right who's next oh this one"
+   },
+   {
+    "category": "latin",
+    "end": 55.94,
+    "segment_index": 21,
+    "start": 49.06,
+    "text": "brought a weapon wait what are you doing didn't you help him he was just lost that's messed up"
+   },
+   {
+    "category": "latin",
+    "end": 59.7,
+    "segment_index": 22,
+    "start": 55.94,
+    "text": "Hey chill chill relax"
+   },
+   {
+    "category": "latin",
+    "end": 61.58,
+    "segment_index": 23,
+    "start": 59.7,
+    "text": "I gotta get out of here"
+   },
+   {
+    "category": "latin",
+    "end": 62.26,
+    "segment_index": 24,
+    "start": 61.58,
+    "text": "There's a lane"
+   }
+  ],
+  "source": "dream/data/asr/p4osmEVx7hY.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 1.16,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "え、よ、チリール!",
+    "words": [
+     {
+      "end": 0.18,
+      "start": 0.0,
+      "word": "え、"
+     },
+     {
+      "end": 0.34,
+      "start": 0.26,
+      "word": "よ、"
+     },
+     {
+      "end": 0.66,
+      "start": 0.46,
+      "word": "チ"
+     },
+     {
+      "end": 0.8,
+      "start": 0.66,
+      "word": "リ"
+     },
+     {
+      "end": 1.16,
+      "start": 0.8,
+      "word": "ール!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 2.86,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 1,
+    "start": 1.36,
+    "text": "レラックス!レラックス!",
+    "words": [
+     {
+      "end": 1.52,
+      "start": 1.36,
+      "word": "レ"
+     },
+     {
+      "end": 1.76,
+      "start": 1.52,
+      "word": "ラ"
+     },
+     {
+      "end": 1.98,
+      "start": 1.76,
+      "word": "ック"
+     },
+     {
+      "end": 2.04,
+      "start": 1.98,
+      "word": "ス!"
+     },
+     {
+      "end": 2.22,
+      "start": 2.2,
+      "word": "レ"
+     },
+     {
+      "end": 2.46,
+      "start": 2.22,
+      "word": "ラ"
+     },
+     {
+      "end": 2.76,
+      "start": 2.46,
+      "word": "ック"
+     },
+     {
+      "end": 2.86,
+      "start": 2.76,
+      "word": "ス!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 4.72,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 2,
+    "start": 3.08,
+    "text": "ごら、我々のグロックスに追われるようです。",
+    "words": [
+     {
+      "end": 3.4,
+      "start": 3.08,
+      "word": "ご"
+     },
+     {
+      "end": 3.5,
+      "start": 3.4,
+      "word": "ら、"
+     },
+     {
+      "end": 3.58,
+      "start": 3.58,
+      "word": "我"
+     },
+     {
+      "end": 3.58,
+      "start": 3.58,
+      "word": "々"
+     },
+     {
+      "end": 4.14,
+      "start": 3.58,
+      "word": "の"
+     },
+     {
+      "end": 4.32,
+      "start": 4.14,
+      "word": "グ"
+     },
+     {
+      "end": 4.38,
+      "start": 4.32,
+      "word": "ロ"
+     },
+     {
+      "end": 4.48,
+      "start": 4.38,
+      "word": "ック"
+     },
+     {
+      "end": 4.6,
+      "start": 4.48,
+      "word": "ス"
+     },
+     {
+      "end": 4.72,
+      "start": 4.6,
+      "word": "に"
+     },
+     {
+      "end": 4.72,
+      "start": 4.72,
+      "word": "追"
+     },
+     {
+      "end": 4.72,
+      "start": 4.72,
+      "word": "わ"
+     },
+     {
+      "end": 4.72,
+      "start": 4.72,
+      "word": "れる"
+     },
+     {
+      "end": 4.72,
+      "start": 4.72,
+      "word": "よう"
+     },
+     {
+      "end": 4.72,
+      "start": 4.72,
+      "word": "です。"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 6.68,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     1
+    ],
+    "segment_index": 3,
+    "start": 6.02,
+    "text": "うなびかに追われるのかもしれません。",
+    "words": [
+     {
+      "end": 6.34,
+      "start": 6.02,
+      "word": "う"
+     },
+     {
+      "end": 6.66,
+      "start": 6.34,
+      "word": "な"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "び"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "か"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "に"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "追"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "わ"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "れる"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "の"
+     },
+     {
+      "end": 6.66,
+      "start": 6.66,
+      "word": "か"
+     },
+     {
+      "end": 6.68,
+      "start": 6.66,
+      "word": "もし"
+     },
+     {
+      "end": 6.68,
+      "start": 6.68,
+      "word": "れ"
+     },
+     {
+      "end": 6.68,
+      "start": 6.68,
+      "word": "ません。"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 8.32,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     1
+    ],
+    "segment_index": 4,
+    "start": 6.78,
+    "text": "絶対説明のピンチになります。",
+    "words": [
+     {
+      "end": 6.94,
+      "start": 6.78,
+      "word": "絶"
+     },
+     {
+      "end": 7.08,
+      "start": 6.94,
+      "word": "対"
+     },
+     {
+      "end": 7.3,
+      "start": 7.08,
+      "word": "説"
+     },
+     {
+      "end": 7.48,
+      "start": 7.3,
+      "word": "明"
+     },
+     {
+      "end": 7.64,
+      "start": 7.48,
+      "word": "の"
+     },
+     {
+      "end": 7.78,
+      "start": 7.64,
+      "word": "ピ"
+     },
+     {
+      "end": 7.88,
+      "start": 7.78,
+      "word": "ンチ"
+     },
+     {
+      "end": 8.12,
+      "start": 7.88,
+      "word": "にな"
+     },
+     {
+      "end": 8.32,
+      "start": 8.12,
+      "word": "ります。"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 10.94,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 5,
+    "start": 8.86,
+    "text": "え、よー わぁ リラックス!",
+    "words": [
+     {
+      "end": 8.98,
+      "start": 8.86,
+      "word": "え、"
+     },
+     {
+      "end": 9.28,
+      "start": 9.1,
+      "word": "よ"
+     },
+     {
+      "end": 9.64,
+      "start": 9.28,
+      "word": "ー"
+     },
+     {
+      "end": 10.0,
+      "start": 9.68,
+      "word": " わ"
+     },
+     {
+      "end": 10.1,
+      "start": 10.0,
+      "word": "ぁ"
+     },
+     {
+      "end": 10.4,
+      "start": 10.4,
+      "word": " リ"
+     },
+     {
+      "end": 10.58,
+      "start": 10.4,
+      "word": "ラ"
+     },
+     {
+      "end": 10.82,
+      "start": 10.58,
+      "word": "ック"
+     },
+     {
+      "end": 10.94,
+      "start": 10.82,
+      "word": "ス!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 12.56,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 6,
+    "start": 11.04,
+    "text": "ごー、 ウォー!",
+    "words": [
+     {
+      "end": 11.36,
+      "start": 11.04,
+      "word": "ご"
+     },
+     {
+      "end": 12.02,
+      "start": 11.36,
+      "word": "ー、"
+     },
+     {
+      "end": 12.44,
+      "start": 12.44,
+      "word": " ウ"
+     },
+     {
+      "end": 12.44,
+      "start": 12.44,
+      "word": "ォ"
+     },
+     {
+      "end": 12.56,
+      "start": 12.44,
+      "word": "ー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 13.6,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 7,
+    "start": 12.9,
+    "text": "ここは何?",
+    "words": [
+     {
+      "end": 13.06,
+      "start": 12.9,
+      "word": "ここ"
+     },
+     {
+      "end": 13.26,
+      "start": 13.06,
+      "word": "は"
+     },
+     {
+      "end": 13.6,
+      "start": 13.26,
+      "word": "何?"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 15.54,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 8,
+    "start": 13.92,
+    "text": "あ、私はキャafferを刺させるの?",
+    "words": [
+     {
+      "end": 14.24,
+      "start": 13.92,
+      "word": "あ、"
+     },
+     {
+      "end": 14.76,
+      "start": 14.66,
+      "word": "私"
+     },
+     {
+      "end": 15.08,
+      "start": 14.76,
+      "word": "は"
+     },
+     {
+      "end": 15.22,
+      "start": 15.08,
+      "word": "キ"
+     },
+     {
+      "end": 15.22,
+      "start": 15.22,
+      "word": "ャ"
+     },
+     {
+      "end": 15.22,
+      "start": 15.22,
+      "word": "aff"
+     },
+     {
+      "end": 15.22,
+      "start": 15.22,
+      "word": "er"
+     },
+     {
+      "end": 15.22,
+      "start": 15.22,
+      "word": "を"
+     },
+     {
+      "end": 15.32,
+      "start": 15.22,
+      "word": "刺"
+     },
+     {
+      "end": 15.42,
+      "start": 15.32,
+      "word": "さ"
+     },
+     {
+      "end": 15.42,
+      "start": 15.42,
+      "word": "せ"
+     },
+     {
+      "end": 15.44,
+      "start": 15.42,
+      "word": "る"
+     },
+     {
+      "end": 15.54,
+      "start": 15.44,
+      "word": "の?"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 16.42,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 9,
+    "start": 15.7,
+    "text": "あ、どうだよ。",
+    "words": [
+     {
+      "end": 15.92,
+      "start": 15.7,
+      "word": "あ、"
+     },
+     {
+      "end": 16.22,
+      "start": 16.0,
+      "word": "どう"
+     },
+     {
+      "end": 16.4,
+      "start": 16.22,
+      "word": "だ"
+     },
+     {
+      "end": 16.42,
+      "start": 16.4,
+      "word": "よ。"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 17.98,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 10,
+    "start": 17.08,
+    "text": "誰が来るの?",
+    "words": [
+     {
+      "end": 17.4,
+      "start": 17.08,
+      "word": "誰"
+     },
+     {
+      "end": 17.54,
+      "start": 17.4,
+      "word": "が"
+     },
+     {
+      "end": 17.68,
+      "start": 17.54,
+      "word": "来"
+     },
+     {
+      "end": 17.96,
+      "start": 17.68,
+      "word": "る"
+     },
+     {
+      "end": 17.98,
+      "start": 17.96,
+      "word": "の?"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 20.92,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 11,
+    "start": 19.26,
+    "text": "何だ? 彼女はキャafferを外すのかな?",
+    "words": [
+     {
+      "end": 19.58,
+      "start": 19.26,
+      "word": "何"
+     },
+     {
+      "end": 19.72,
+      "start": 19.58,
+      "word": "だ?"
+     },
+     {
+      "end": 19.86,
+      "start": 19.86,
+      "word": " 彼"
+     },
+     {
+      "end": 19.86,
+      "start": 19.86,
+      "word": "女"
+     },
+     {
+      "end": 20.22,
+      "start": 19.86,
+      "word": "は"
+     },
+     {
+      "end": 20.5,
+      "start": 20.22,
+      "word": "キ"
+     },
+     {
+      "end": 20.5,
+      "start": 20.5,
+      "word": "ャ"
+     },
+     {
+      "end": 20.76,
+      "start": 20.5,
+      "word": "aff"
+     },
+     {
+      "end": 20.76,
+      "start": 20.76,
+      "word": "er"
+     },
+     {
+      "end": 20.86,
+      "start": 20.76,
+      "word": "を"
+     },
+     {
+      "end": 20.86,
+      "start": 20.86,
+      "word": "外"
+     },
+     {
+      "end": 20.86,
+      "start": 20.86,
+      "word": "す"
+     },
+     {
+      "end": 20.86,
+      "start": 20.86,
+      "word": "の"
+     },
+     {
+      "end": 20.92,
+      "start": 20.86,
+      "word": "かな?"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 22.2,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 12,
+    "start": 20.96,
+    "text": "誰がいこうなったら煙っているのか。",
+    "words": [
+     {
+      "end": 21.2,
+      "start": 20.96,
+      "word": "誰"
+     },
+     {
+      "end": 21.5,
+      "start": 21.2,
+      "word": "が"
+     },
+     {
+      "end": 21.76,
+      "start": 21.5,
+      "word": "い"
+     },
+     {
+      "end": 21.76,
+      "start": 21.76,
+      "word": "こう"
+     },
+     {
+      "end": 21.76,
+      "start": 21.76,
+      "word": "な"
+     },
+     {
+      "end": 21.76,
+      "start": 21.76,
+      "word": "った"
+     },
+     {
+      "end": 21.76,
+      "start": 21.76,
+      "word": "ら"
+     },
+     {
+      "end": 21.94,
+      "start": 21.76,
+      "word": "煙"
+     },
+     {
+      "end": 22.06,
+      "start": 21.94,
+      "word": "って"
+     },
+     {
+      "end": 22.06,
+      "start": 22.06,
+      "word": "いる"
+     },
+     {
+      "end": 22.06,
+      "start": 22.06,
+      "word": "の"
+     },
+     {
+      "end": 22.2,
+      "start": 22.06,
+      "word": "か。"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 23.28,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 13,
+    "start": 22.2,
+    "text": "みー。みー。みー。",
+    "words": [
+     {
+      "end": 22.46,
+      "start": 22.2,
+      "word": "み"
+     },
+     {
+      "end": 22.66,
+      "start": 22.46,
+      "word": "ー。"
+     },
+     {
+      "end": 22.9,
+      "start": 22.9,
+      "word": "み"
+     },
+     {
+      "end": 23.02,
+      "start": 22.9,
+      "word": "ー。"
+     },
+     {
+      "end": 23.28,
+      "start": 23.2,
+      "word": "み"
+     },
+     {
+      "end": 23.28,
+      "start": 23.28,
+      "word": "ー。"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 25.86,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 14,
+    "start": 24.72,
+    "text": "あ、いや、これビッグ!",
+    "words": [
+     {
+      "end": 25.04,
+      "start": 24.72,
+      "word": "あ、"
+     },
+     {
+      "end": 25.56,
+      "start": 25.26,
+      "word": "いや、"
+     },
+     {
+      "end": 25.56,
+      "start": 25.56,
+      "word": "これ"
+     },
+     {
+      "end": 25.56,
+      "start": 25.56,
+      "word": "ビ"
+     },
+     {
+      "end": 25.72,
+      "start": 25.56,
+      "word": "ッ"
+     },
+     {
+      "end": 25.86,
+      "start": 25.72,
+      "word": "グ!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 27.1,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 15,
+    "start": 25.86,
+    "text": "みんなが大好きな事になるの。",
+    "words": [
+     {
+      "end": 25.98,
+      "start": 25.86,
+      "word": "み"
+     },
+     {
+      "end": 26.08,
+      "start": 25.98,
+      "word": "んな"
+     },
+     {
+      "end": 26.34,
+      "start": 26.08,
+      "word": "が"
+     },
+     {
+      "end": 26.34,
+      "start": 26.34,
+      "word": "大"
+     },
+     {
+      "end": 26.34,
+      "start": 26.34,
+      "word": "好"
+     },
+     {
+      "end": 26.38,
+      "start": 26.34,
+      "word": "き"
+     },
+     {
+      "end": 26.44,
+      "start": 26.38,
+      "word": "な"
+     },
+     {
+      "end": 26.96,
+      "start": 26.44,
+      "word": "事"
+     },
+     {
+      "end": 27.1,
+      "start": 26.96,
+      "word": "にな"
+     },
+     {
+      "end": 27.1,
+      "start": 27.1,
+      "word": "る"
+     },
+     {
+      "end": 27.1,
+      "start": 27.1,
+      "word": "の。"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 27.86,
+    "logprob": -1.76,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 16,
+    "start": 27.1,
+    "text": "誰が来るの?",
+    "words": [
+     {
+      "end": 27.32,
+      "start": 27.1,
+      "word": "誰"
+     },
+     {
+      "end": 27.48,
+      "start": 27.32,
+      "word": "が"
+     },
+     {
+      "end": 27.64,
+      "start": 27.48,
+      "word": "来"
+     },
+     {
+      "end": 27.84,
+      "start": 27.64,
+      "word": "る"
+     },
+     {
+      "end": 27.86,
+      "start": 27.84,
+      "word": "の?"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 29.66,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 17,
+    "start": 27.86,
+    "text": "I had some, I checked it out",
+    "words": [
+     {
+      "end": 28.08,
+      "start": 27.86,
+      "word": "I"
+     },
+     {
+      "end": 28.34,
+      "start": 28.08,
+      "word": " had"
+     },
+     {
+      "end": 28.7,
+      "start": 28.34,
+      "word": " some,"
+     },
+     {
+      "end": 28.98,
+      "start": 28.86,
+      "word": " I"
+     },
+     {
+      "end": 29.24,
+      "start": 28.98,
+      "word": " checked"
+     },
+     {
+      "end": 29.42,
+      "start": 29.24,
+      "word": " it"
+     },
+     {
+      "end": 29.66,
+      "start": 29.42,
+      "word": " out"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 30.72,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 18,
+    "start": 29.66,
+    "text": "Oh my god",
+    "words": [
+     {
+      "end": 30.04,
+      "start": 29.66,
+      "word": "Oh"
+     },
+     {
+      "end": 30.32,
+      "start": 30.04,
+      "word": " my"
+     },
+     {
+      "end": 30.72,
+      "start": 30.32,
+      "word": " god"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 31.9,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 19,
+    "start": 30.72,
+    "text": "Who's next",
+    "words": [
+     {
+      "end": 31.38,
+      "start": 30.72,
+      "word": "Who"
+     },
+     {
+      "end": 31.5,
+      "start": 31.38,
+      "word": "'s"
+     },
+     {
+      "end": 31.9,
+      "start": 31.5,
+      "word": " next"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 33.9,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 20,
+    "start": 32.56,
+    "text": "Alright, what's up, let's fight",
+    "words": [
+     {
+      "end": 32.96,
+      "start": 32.56,
+      "word": "Alright,"
+     },
+     {
+      "end": 33.14,
+      "start": 33.06,
+      "word": " what"
+     },
+     {
+      "end": 33.22,
+      "start": 33.14,
+      "word": "'s"
+     },
+     {
+      "end": 33.36,
+      "start": 33.22,
+      "word": " up,"
+     },
+     {
+      "end": 33.54,
+      "start": 33.46,
+      "word": " let"
+     },
+     {
+      "end": 33.6,
+      "start": 33.54,
+      "word": "'s"
+     },
+     {
+      "end": 33.9,
+      "start": 33.6,
+      "word": " fight"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 35.22,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 21,
+    "start": 33.9,
+    "text": "Oh, you're scared?",
+    "words": [
+     {
+      "end": 34.32,
+      "start": 33.9,
+      "word": "Oh,"
+     },
+     {
+      "end": 34.84,
+      "start": 34.76,
+      "word": " you"
+     },
+     {
+      "end": 34.94,
+      "start": 34.84,
+      "word": "'re"
+     },
+     {
+      "end": 35.22,
+      "start": 34.94,
+      "word": " scared?"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 36.06,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 22,
+    "start": 35.42,
+    "text": "Why shouldn't we?",
+    "words": [
+     {
+      "end": 35.58,
+      "start": 35.42,
+      "word": "Why"
+     },
+     {
+      "end": 35.8,
+      "start": 35.58,
+      "word": " shouldn"
+     },
+     {
+      "end": 35.88,
+      "start": 35.8,
+      "word": "'t"
+     },
+     {
+      "end": 36.06,
+      "start": 35.88,
+      "word": " we?"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 38.74,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 23,
+    "start": 36.34,
+    "text": "Oh, let's go, you subscribed, we won't fight",
+    "words": [
+     {
+      "end": 36.64,
+      "start": 36.34,
+      "word": "Oh,"
+     },
+     {
+      "end": 36.9,
+      "start": 36.76,
+      "word": " let"
+     },
+     {
+      "end": 36.98,
+      "start": 36.9,
+      "word": "'s"
+     },
+     {
+      "end": 37.22,
+      "start": 36.98,
+      "word": " go,"
+     },
+     {
+      "end": 37.5,
+      "start": 37.44,
+      "word": " you"
+     },
+     {
+      "end": 37.88,
+      "start": 37.5,
+      "word": " subscribed,"
+     },
+     {
+      "end": 38.24,
+      "start": 38.16,
+      "word": " we"
+     },
+     {
+      "end": 38.4,
+      "start": 38.24,
+      "word": " won"
+     },
+     {
+      "end": 38.44,
+      "start": 38.4,
+      "word": "'t"
+     },
+     {
+      "end": 38.74,
+      "start": 38.44,
+      "word": " fight"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 39.44,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 24,
+    "start": 38.74,
+    "text": "Thank you",
+    "words": [
+     {
+      "end": 39.0,
+      "start": 38.74,
+      "word": "Thank"
+     },
+     {
+      "end": 39.44,
+      "start": 39.0,
+      "word": " you"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 41.92,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 25,
+    "start": 39.44,
+    "text": "As a reward, I'll send you off with a wedgie",
+    "words": [
+     {
+      "end": 40.0,
+      "start": 39.44,
+      "word": "As"
+     },
+     {
+      "end": 40.12,
+      "start": 40.0,
+      "word": " a"
+     },
+     {
+      "end": 40.54,
+      "start": 40.12,
+      "word": " reward,"
+     },
+     {
+      "end": 40.9,
+      "start": 40.6,
+      "word": " I"
+     },
+     {
+      "end": 40.96,
+      "start": 40.9,
+      "word": "'ll"
+     },
+     {
+      "end": 41.1,
+      "start": 40.96,
+      "word": " send"
+     },
+     {
+      "end": 41.26,
+      "start": 41.1,
+      "word": " you"
+     },
+     {
+      "end": 41.4,
+      "start": 41.26,
+      "word": " off"
+     },
+     {
+      "end": 41.52,
+      "start": 41.4,
+      "word": " with"
+     },
+     {
+      "end": 41.6,
+      "start": 41.52,
+      "word": " a"
+     },
+     {
+      "end": 41.76,
+      "start": 41.6,
+      "word": " wed"
+     },
+     {
+      "end": 41.92,
+      "start": 41.76,
+      "word": "gie"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 42.76,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 26,
+    "start": 41.92,
+    "text": "Thank you, Fox",
+    "words": [
+     {
+      "end": 42.22,
+      "start": 41.92,
+      "word": "Thank"
+     },
+     {
+      "end": 42.38,
+      "start": 42.22,
+      "word": " you,"
+     },
+     {
+      "end": 42.76,
+      "start": 42.46,
+      "word": " Fox"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 44.94,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 27,
+    "start": 42.76,
+    "text": "Let's go, the villagers like me",
+    "words": [
+     {
+      "end": 43.24,
+      "start": 42.76,
+      "word": "Let"
+     },
+     {
+      "end": 43.36,
+      "start": 43.24,
+      "word": "'s"
+     },
+     {
+      "end": 43.64,
+      "start": 43.36,
+      "word": " go,"
+     },
+     {
+      "end": 43.96,
+      "start": 43.86,
+      "word": " the"
+     },
+     {
+      "end": 44.28,
+      "start": 43.96,
+      "word": " villagers"
+     },
+     {
+      "end": 44.66,
+      "start": 44.28,
+      "word": " like"
+     },
+     {
+      "end": 44.94,
+      "start": 44.66,
+      "word": " me"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 45.72,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 28,
+    "start": 44.94,
+    "text": "I'm ready, coach",
+    "words": [
+     {
+      "end": 45.14,
+      "start": 44.94,
+      "word": "I"
+     },
+     {
+      "end": 45.22,
+      "start": 45.14,
+      "word": "'m"
+     },
+     {
+      "end": 45.4,
+      "start": 45.22,
+      "word": " ready,"
+     },
+     {
+      "end": 45.72,
+      "start": 45.46,
+      "word": " coach"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 46.58,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 29,
+    "start": 45.72,
+    "text": "You got this",
+    "words": [
+     {
+      "end": 45.96,
+      "start": 45.72,
+      "word": "You"
+     },
+     {
+      "end": 46.3,
+      "start": 45.96,
+      "word": " got"
+     },
+     {
+      "end": 46.58,
+      "start": 46.3,
+      "word": " this"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 47.64,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 30,
+    "start": 46.58,
+    "text": "Alright, who's next",
+    "words": [
+     {
+      "end": 46.88,
+      "start": 46.58,
+      "word": "Alright,"
+     },
+     {
+      "end": 47.12,
+      "start": 46.98,
+      "word": " who"
+     },
+     {
+      "end": 47.22,
+      "start": 47.12,
+      "word": "'s"
+     },
+     {
+      "end": 47.64,
+      "start": 47.22,
+      "word": " next"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 49.86,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 31,
+    "start": 48.06,
+    "text": "Oh, this one brought a weapon",
+    "words": [
+     {
+      "end": 48.46,
+      "start": 48.06,
+      "word": "Oh,"
+     },
+     {
+      "end": 48.96,
+      "start": 48.8,
+      "word": " this"
+     },
+     {
+      "end": 49.1,
+      "start": 48.96,
+      "word": " one"
+     },
+     {
+      "end": 49.28,
+      "start": 49.1,
+      "word": " brought"
+     },
+     {
+      "end": 49.44,
+      "start": 49.28,
+      "word": " a"
+     },
+     {
+      "end": 49.86,
+      "start": 49.44,
+      "word": " weapon"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 51.42,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 32,
+    "start": 49.86,
+    "text": "Wait, what are you doing?",
+    "words": [
+     {
+      "end": 50.6,
+      "start": 49.86,
+      "word": "Wait,"
+     },
+     {
+      "end": 51.06,
+      "start": 50.66,
+      "word": " what"
+     },
+     {
+      "end": 51.14,
+      "start": 51.06,
+      "word": " are"
+     },
+     {
+      "end": 51.2,
+      "start": 51.14,
+      "word": " you"
+     },
+     {
+      "end": 51.42,
+      "start": 51.2,
+      "word": " doing?"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 54.7,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 33,
+    "start": 52.34,
+    "text": "Didn't you help him? He was just lost",
+    "words": [
+     {
+      "end": 52.74,
+      "start": 52.34,
+      "word": "Did"
+     },
+     {
+      "end": 52.84,
+      "start": 52.74,
+      "word": "n"
+     },
+     {
+      "end": 52.84,
+      "start": 52.84,
+      "word": "'t"
+     },
+     {
+      "end": 53.02,
+      "start": 52.84,
+      "word": " you"
+     },
+     {
+      "end": 53.34,
+      "start": 53.02,
+      "word": " help"
+     },
+     {
+      "end": 53.54,
+      "start": 53.34,
+      "word": " him?"
+     },
+     {
+      "end": 53.72,
+      "start": 53.62,
+      "word": " He"
+     },
+     {
+      "end": 53.9,
+      "start": 53.72,
+      "word": " was"
+     },
+     {
+      "end": 54.1,
+      "start": 53.9,
+      "word": " just"
+     },
+     {
+      "end": 54.7,
+      "start": 54.1,
+      "word": " lost"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 56.04,
+    "logprob": -0.23,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 34,
+    "start": 54.7,
+    "text": "That's messed up",
+    "words": [
+     {
+      "end": 55.12,
+      "start": 54.7,
+      "word": "That"
+     },
+     {
+      "end": 55.34,
+      "start": 55.12,
+      "word": "'s"
+     },
+     {
+      "end": 55.66,
+      "start": 55.34,
+      "word": " messed"
+     },
+     {
+      "end": 56.04,
+      "start": 55.66,
+      "word": " up"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 56.72,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 35,
+    "start": 56.04,
+    "text": "おー!",
+    "words": [
+     {
+      "end": 56.28,
+      "start": 56.04,
+      "word": "お"
+     },
+     {
+      "end": 56.72,
+      "start": 56.28,
+      "word": "ー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 57.66,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 36,
+    "start": 56.84,
+    "text": "おー!",
+    "words": [
+     {
+      "end": 57.04,
+      "start": 56.84,
+      "word": "お"
+     },
+     {
+      "end": 57.66,
+      "start": 57.04,
+      "word": "ー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 57.98,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 37,
+    "start": 57.86,
+    "text": "えー!",
+    "words": [
+     {
+      "end": 57.98,
+      "start": 57.86,
+      "word": "えー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 58.52,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 38,
+    "start": 58.18,
+    "text": "チュウ!",
+    "words": [
+     {
+      "end": 58.32,
+      "start": 58.18,
+      "word": "チ"
+     },
+     {
+      "end": 58.46,
+      "start": 58.32,
+      "word": "ュ"
+     },
+     {
+      "end": 58.52,
+      "start": 58.46,
+      "word": "ウ!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 58.9,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 39,
+    "start": 58.66,
+    "text": "チュウ!",
+    "words": [
+     {
+      "end": 58.74,
+      "start": 58.66,
+      "word": "チ"
+     },
+     {
+      "end": 58.84,
+      "start": 58.74,
+      "word": "ュ"
+     },
+     {
+      "end": 58.9,
+      "start": 58.84,
+      "word": "ウ!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 59.66,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 40,
+    "start": 58.98,
+    "text": "レラッシュ!",
+    "words": [
+     {
+      "end": 59.12,
+      "start": 58.98,
+      "word": "レ"
+     },
+     {
+      "end": 59.34,
+      "start": 59.12,
+      "word": "ラ"
+     },
+     {
+      "end": 59.44,
+      "start": 59.34,
+      "word": "ッ"
+     },
+     {
+      "end": 59.52,
+      "start": 59.44,
+      "word": "シ"
+     },
+     {
+      "end": 59.66,
+      "start": 59.52,
+      "word": "ュ!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 60.16,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 41,
+    "start": 59.76,
+    "text": "おー!",
+    "words": [
+     {
+      "end": 59.84,
+      "start": 59.76,
+      "word": "お"
+     },
+     {
+      "end": 60.16,
+      "start": 59.84,
+      "word": "ー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 60.22,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 42,
+    "start": 60.16,
+    "text": "おー!",
+    "words": [
+     {
+      "end": 60.18,
+      "start": 60.16,
+      "word": "お"
+     },
+     {
+      "end": 60.22,
+      "start": 60.18,
+      "word": "ー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 60.4,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 43,
+    "start": 60.22,
+    "text": "おー!",
+    "words": [
+     {
+      "end": 60.22,
+      "start": 60.22,
+      "word": "お"
+     },
+     {
+      "end": 60.4,
+      "start": 60.22,
+      "word": "ー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 60.98,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 44,
+    "start": 60.5,
+    "text": "おー!",
+    "words": [
+     {
+      "end": 60.5,
+      "start": 60.5,
+      "word": "お"
+     },
+     {
+      "end": 60.98,
+      "start": 60.5,
+      "word": "ー!"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 61.06,
+    "logprob": -0.79,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 45,
+    "start": 60.98,
+    "text": "おー!",
+    "words": [
+     {
+      "end": 60.98,
+      "start": 60.98,
+      "word": "お"
+     },
+     {
+      "end": 61.06,
+      "start": 60.98,
+      "word": "ー!"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/p4osmEVx7hY.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}
