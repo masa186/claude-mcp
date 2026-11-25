@@ -168,4 +168,5 @@
 ## 材料
 - `tools/smp_top40.json`：上位40本の一覧（YouTube API、2026-11-24）
 - `tools/smp_open.json`：Gemini が読んだ冒頭8秒（4コマ/秒）。上位40本と下位15本
+- `tools/smp_full.py` `tools/smp_voice.py` とその .json：動画全体を Gemini に読ませた試み（途中まで）。1節のとおり**実ファイルと合わず、使っていない**。照合のために残す
 - サムネイル：`https://i.ytimg.com/vi/<id>/oar1.jpg`〜`oar3.jpg`（動画の途中のコマ。何秒の時点かは公表されていない）
