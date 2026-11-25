@@ -14,3 +14,19 @@ __pycache__/
 *.opus
 *.flac
 *.ogg
+
+# 秘密情報（キーは環境変数で渡す。ファイルに置かない）
+.env
+.env.*
+*.key
+
+# SQLite（中身を確かめてからコミットするかを決める）
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*-journal
+
+# 一時ファイル
+*.tmp

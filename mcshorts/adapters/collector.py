@@ -53,6 +53,8 @@ class Collector:
         self.channel_missing = defaultdict(dict)  # ch -> {item: missing}
         self.anomalies = []                   # 照合できなかったもの等
         self.list_diffs = []                  # 一覧どうしの差（事実だけ。理由は書かない）
+        self.api_not_returned = []            # API の取得で返ってこなかった動画
+        self.snapshots = {}                   # API の取得結果の状態（チャンネル別）
         self.imports = {}                     # 取り込みフォルダの状態
 
     # ---- 追加
@@ -62,7 +64,8 @@ class Collector:
         o.update({k: v for k, v in fields.items()})
         self.obs[(ch, vid)].append(o)
         if fields.get('views') is not None:
-            self.mark(ch, vid, 'views', 'ok', sid, '値はある。取得日時は不明（observed_before が上限）')
+            self.mark(ch, vid, 'views', 'ok', sid,
+                      None if fields.get('observed_at') else '値はある。取得日時は不明（observed_before が上限）')
 
     def set_extra(self, ch, vid, key, value):
         self.extra[(ch, vid)][key] = value
@@ -126,7 +129,13 @@ class Collector:
         rows = []
         for ch, vid in self.keys():
             obs = self.obs.get((ch, vid), [])
-            prov = lambda o: self.sources.provenance(o['source'])
+
+            def prov(o):
+                p = self.sources.provenance(o['source'])
+                # API の取得結果は動画ごとに正確な取得日時を持つ。段階1の観測にはこの項目が無い
+                if o.get('observed_at') is not None:
+                    p['observed_at'] = o['observed_at']
+                return p
 
             def field_obs(name):
                 out = []
@@ -204,6 +213,32 @@ class Collector:
                 out.append({**key, 'field': 'duration_sec',
                             'values': [{'value': o['value'], 'source': o['source']} for o in r['duration_sec']],
                             'note': '1秒を超える差'})
+        return out
+
+    @staticmethod
+    def build_view_decreases(videos):
+        """正確な取得日時がある観測どうしで、後の再生数が前より小さいもの（直さずに一覧にする）。"""
+        out = []
+        for r in videos:
+            timed = sorted((v for v in r['views'] if v.get('observed_at')), key=lambda v: v['observed_at'])
+            for a, b in zip(timed, timed[1:]):
+                if isinstance(a['views'], int) and isinstance(b['views'], int) and b['views'] < a['views']:
+                    out.append({'channel': r['channel'], 'video_id': r['video_id'],
+                                'before': {'views': a['views'], 'observed_at': a['observed_at'], 'source': a['source']},
+                                'after': {'views': b['views'], 'observed_at': b['observed_at'], 'source': b['source']}})
+        return out
+
+    @staticmethod
+    def build_likes_zero_vs_null(videos):
+        """既存の観測で高評価数が 0、API の取得結果では null（非公開）になっているもの。既存の値は書き換えない。"""
+        out = []
+        for r in videos:
+            zero = [v for v in r['views'] if v.get('likes') == 0 and not v.get('observed_at')]
+            hidden = [v for v in r['views'] if v.get('observed_at') and v.get('likes') is None]
+            if zero and hidden:
+                out.append({'channel': r['channel'], 'video_id': r['video_id'],
+                            'zero_sources': sorted({v['source'] for v in zero}),
+                            'null_sources': sorted({v['source'] for v in hidden})})
         return out
 
     def build_coverage(self):

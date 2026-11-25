@@ -88,6 +88,35 @@
 
 `imports/whisper_cpp/` と `imports/termux/` に置かれたファイルの一覧と、それぞれの結果（`IMPORTED` / `UNMATCHED` / `OUT_OF_SCOPE` / `UNSUPPORTED` / `PARSE_ERROR` / `PENDING_FORMAT_CHECK`）。
 
+## 段階2：YouTube API の取得結果（snapshots/youtube/）
+
+取得結果1回分が、1つの出どころ `yt_<channel>_<run_id>`（例 `yt_dream_20261126T031000Z`）になる。
+
+- 観測の `observed_at` は、その動画を取得した `videos.list` の呼び出し時刻（UTC）。段階1の観測（`observed_at` が null）はそのまま残る
+- 説明欄・タグ・カテゴリ・字幕トラックの有無・公開状態などは `data/features.jsonl` にその出どころで入る
+- 高評価数・コメント数が非公開・無効のときは `null`（0 にしない）。`missing` に `NOT_AVAILABLE`
+- API が返さなかった動画は `reports/conflicts.md` に一覧で出る（理由は区別できないので書かない）
+- 正確な取得日時がある観測どうしで再生数が減っていれば、直さずに `reports/conflicts.md` に出す
+- 「最新の再生数」のような代表値は、引き続き作らない（どの時点を使うかは段階4で決める）
+
+取得結果のファイルの形（`snapshots/youtube/<channel>/snapshots/<run_id>.json`）：
+
+```json
+{
+ "schema_version": 1, "channel": "dream", "channel_id": "UC...",
+ "started_at": "UTC", "finished_at": "UTC", "code_commit": "git のコミット",
+ "channel_stats": {"subscribers": "丸められた値 | null", "view_count": 0, "video_count": 0, "fetched_at": "UTC", ...},
+ "uploads_count": 0, "playlist_pages": 0, "extra_ids_requested": ["既存データにあり一覧に無いID"],
+ "videos": [{"video_id": "...", "fetched_at": "UTC", "title": "...", "description": "...", "tags": [...] | null,
+             "published_at": "...", "duration_sec": 0, "views": 0, "likes": 0 | null, "comments": 0 | null,
+             "privacy_status": "...", "in_uploads_playlist": true, "missing": {...}, ...}],
+ "not_returned": [{"video_id": "...", "in_uploads_playlist": false, "note": "..."}],
+ "foreign": [{"video_id": "...", "channel_id": "別チャンネル"}],
+ "calls": [{"endpoint": "videos", "params": {"キーを含まない"}, "at": "UTC", "status": 200, "server_date": "...", "units": 1}],
+ "units_total": 0
+}
+```
+
 ## reports/
 
 | ファイル | 中身 |

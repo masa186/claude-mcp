@@ -16,7 +16,8 @@ from collections import Counter, defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-from adapters import dream, smp, termux, whisper_cpp  # noqa: E402
+from adapters import (dream, smp, sqlite_inventory, termux, whisper_cpp,  # noqa: E402
+                      youtube_snapshots)
 from adapters.collector import ITEMS, ITEM_KEYS, Collector  # noqa: E402
 from adapters.common import (CHANNELS, MISSING_CODES, Sources, load_json,  # noqa: E402
                              write_json, write_jsonl)
@@ -36,8 +37,22 @@ NOT_ANALYZABLE = [
 DISPLAY_TITLE_ORDER = ['smp_api_1124', 'smp_api_0830', 'dream_api_five', 'dream_videos']
 
 
-def build(root=ROOT, out=HERE, imports_dir=None):
+SNAPSHOTS_DIR = os.path.join(HERE, 'snapshots', 'youtube')
+
+# API で取れない項目（取得結果があるときだけレポートに出す）
+API_NOT_AVAILABLE = [
+    ('低評価数', 'NOT_AVAILABLE', '2021年に公開が停止された'),
+    ('字幕の本文', 'NOT_AVAILABLE', 'ダウンロードには持ち主の認証が必要（caption_track は有無だけ）'),
+    ('過去の再生数の推移', 'NOT_AVAILABLE', 'API は現在の値だけを返す。取得を繰り返して記録を貯める'),
+    ('ショート動画かどうか', 'UNKNOWN', 'API にその項目が無い。長さからの推測もしない'),
+    ('返ってこなかった動画の理由（削除・非公開など）', 'UNKNOWN', 'API の応答では区別できない'),
+    ('正確な登録者数', 'NOT_AVAILABLE', 'API 側で上3桁に丸められている'),
+]
+
+
+def build(root=ROOT, out=HERE, imports_dir=None, snapshots_dir=None):
     imports_dir = imports_dir or os.path.join(HERE, 'imports')
+    snapshots_dir = snapshots_dir or SNAPSHOTS_DIR
     sources = Sources(os.path.join(HERE, 'config', 'sources.json'))
     channels = load_json(os.path.join(HERE, 'config', 'channels.json'))['channels']
     assert [c['slug'] for c in channels] == list(CHANNELS)
@@ -45,8 +60,10 @@ def build(root=ROOT, out=HERE, imports_dir=None):
     coll = Collector(sources)
     dream.load(root, sources, coll)
     smp.load(root, sources, coll)
+    youtube_snapshots.load(snapshots_dir, sources, coll, {c['slug']: c for c in channels})
     whisper_cpp.load(imports_dir, coll, {ch: coll.known_ids(ch) for ch in CHANNELS})
     termux.load(imports_dir, coll)
+    sqlite_inventory.load(imports_dir, coll)
 
     videos = coll.build_videos()
     transcripts = coll.build_transcripts()
@@ -70,7 +87,7 @@ def build(root=ROOT, out=HERE, imports_dir=None):
     write_coverage_csv(os.path.join(rep_dir, 'coverage.csv'), coverage, videos)
     write_coverage_md(os.path.join(rep_dir, 'coverage.md'), coll, coverage, videos, transcripts,
                       sources, channels)
-    write_conflicts_md(os.path.join(rep_dir, 'conflicts.md'), conflicts, coll.anomalies, videos)
+    write_conflicts_md(os.path.join(rep_dir, 'conflicts.md'), conflicts, coll.anomalies, videos, coll)
     return {'videos': videos, 'transcripts': transcripts, 'coverage': coverage,
             'conflicts': conflicts, 'collector': coll}
 
@@ -211,6 +228,18 @@ def write_coverage_md(path, coll, coverage, videos, transcripts, sources, channe
     for f in t['files']:
         a(f"  - `{f['file']}`（{f['ext']}, {f['bytes']} bytes）")
 
+    s = coll.imports.get('sqlite')
+    if s:
+        a(f"- `imports/sqlite/`：ファイル {len(s['files'])} 件（読み取り専用で目録だけ作成。**中身は取り込んでいない**）")
+        for f in s['files']:
+            a(f"  - `{f['file']}`：**{f.get('result')}**、対応表 {f.get('mapping')}"
+              + ('、WAL あり' if f.get('has_wal') else ''))
+            for tb in f.get('tables', []):
+                cols = ', '.join(f"{c.get('name')}({c.get('type') or '?'})" for c in tb['columns'] if 'name' in c)
+                a(f"    - {tb['type']} `{tb['name']}`：{tb['rows'] if tb['rows'] is not None else '不明'} 行／{cols}")
+
+    _write_snapshot_section(a, coll)
+
     a('')
     a('## 7. 段階1で行っていないこと')
     a('')
@@ -222,7 +251,37 @@ def write_coverage_md(path, coll, coverage, videos, transcripts, sources, channe
         f.write('\n'.join(L))
 
 
-def write_conflicts_md(path, conflicts, anomalies, videos):
+def _write_snapshot_section(a, coll):
+    """API の取得結果があるとき（または失敗・改ざんの記録があるとき）だけ書く。"""
+    snaps = getattr(coll, 'snapshots', {}) or {}
+    if not any(st['runs'] or st['problems'] or st['n_failed'] for st in snaps.values()):
+        return
+    a('')
+    a('## 6-2. YouTube API の取得結果（`snapshots/youtube/`）')
+    a('')
+    a('| チャンネル | 出どころ | 取得開始 | 取得終了 | 動画 | 一覧の本数 | 一覧のページ | 返ってこなかった | ユニット | 登録者（丸め） |')
+    a('|---|---|---|---|---|---|---|---|---|---|')
+    for ch, st in sorted(snaps.items()):
+        for r in st['runs']:
+            cs = r['channel_stats']
+            a(f"| {ch} | `{r['source']}` | {r['started_at']} | {r['finished_at']} | {r['n_videos']} | "
+              f"{r['uploads_count']} | {r['playlist_pages']} | {r['n_not_returned']} | {r['units_total']} | "
+              f"{cs.get('subscribers') if cs.get('subscribers') is not None else '非公開'} |")
+    for ch, st in sorted(snaps.items()):
+        if st['n_failed']:
+            a(f"- {ch}：失敗の記録 {st['n_failed']} 件（`snapshots/youtube/{ch}/failed.jsonl`）")
+        for p in st['problems']:
+            a(f'- {ch}：**取得結果を読み込まなかった**：{p}')
+    a('')
+    a('API で取得できない項目：')
+    a('')
+    a('| 項目 | コード | 理由 |')
+    a('|---|---|---|')
+    for item, code, why in API_NOT_AVAILABLE:
+        a(f'| {item} | `{code}` | {why} |')
+
+
+def write_conflicts_md(path, conflicts, anomalies, videos, coll=None):
     L = []
     a = L.append
     a('# 出どころによって値が食い違う項目（段階1）')
@@ -259,6 +318,38 @@ def write_conflicts_md(path, conflicts, anomalies, videos):
     a(f"- 観測が1つだけの動画：{sum(1 for v in videos if len(v['views']) == 1)} 本")
     a(f"- 観測が無い動画：{sum(1 for v in videos if not v['views'])} 本")
 
+    # 以下は API の取得結果があるときだけ書く（段階1と同じ出力を保つため）
+    dec = Collector.build_view_decreases(videos)
+    if dec:
+        a('')
+        a('### 再生数の減少（正確な取得日時がある観測どうし。値は直していない）')
+        a('')
+        a('| チャンネル | 動画ID | 前 | 後 |')
+        a('|---|---|---|---|')
+        for d in dec:
+            a(f"| {d['channel']} | `{d['video_id']}` | {d['before']['views']}（{d['before']['observed_at']}） | "
+              f"{d['after']['views']}（{d['after']['observed_at']}） |")
+    lz = Collector.build_likes_zero_vs_null(videos)
+    if lz:
+        a('')
+        a('### 高評価数：既存の観測は 0、API の取得結果は非公開（null）')
+        a('')
+        a('既存の 0 は非公開だった可能性があるが、既存の値は書き換えていない。')
+        a('')
+        for x in lz:
+            a(f"- {x['channel']} `{x['video_id']}`：0＝{', '.join(x['zero_sources'])} / null＝{', '.join(x['null_sources'])}")
+    nr = (coll.api_not_returned if coll is not None else [])
+    if nr:
+        a('')
+        a('## API が返さなかった動画')
+        a('')
+        a('削除・非公開などの区別は API の応答ではできないので、理由は書かない。')
+        a('')
+        a('| チャンネル | 動画ID | 取得 | アップロード一覧にあったか |')
+        a('|---|---|---|---|')
+        for x in nr:
+            a(f"| {x['channel']} | `{x['video_id']}` | {x['source']}（{x['at']}） | {'はい' if x['in_uploads_playlist'] else 'いいえ'} |")
+
     a('')
     a('## 照合できなかったもの')
     a('')
@@ -273,10 +364,23 @@ def write_conflicts_md(path, conflicts, anomalies, videos):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--out', default=HERE)
+    ap.add_argument('--out', default=None,
+                    help='書き出し先。省略すると integrate.py を通して mcshorts/data と reports に反映する')
     ap.add_argument('--imports', default=None)
+    ap.add_argument('--snapshots', default=None)
     args = ap.parse_args()
-    r = build(out=args.out, imports_dir=args.imports)
+    if args.out is None or os.path.abspath(args.out) == HERE:
+        # data/ と reports/ に直接は書かない。一時フォルダで作り、既存の記録が残っていると確かめてから反映する
+        import integrate
+        r = integrate.run(apply=True, imports_dir=args.imports, snapshots_dir=args.snapshots)
+        if r['problems']:
+            print(f"止めた：既存の記録が {len(r['problems'])} 件消える。何も反映していない")
+            for p in r['problems'][:50]:
+                print('  -', p)
+            sys.exit(1)
+        print('反映したファイル:', {k: len(v) for k, v in r['changed'].items()})
+        return
+    r = build(out=args.out, imports_dir=args.imports, snapshots_dir=args.snapshots)
     cnt = Counter(v['channel'] for v in r['videos'])
     print('videos:', dict(cnt), 'transcript files:', len(r['transcripts']),
           'features:', len(r['collector'].features), 'conflicts:', len(r['conflicts']),

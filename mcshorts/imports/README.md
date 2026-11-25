@@ -7,6 +7,7 @@
 |---|---|---|
 | `whisper_cpp/` | whisper.cpp の出力（`.json` `.srt` `.vtt` `.csv` `.lrc` `.txt`、画面出力を保存した `.log`） | 読み込んで `data/transcripts/` に入れる（状態は UNVERIFIED） |
 | `termux/` | Termux に残っているその他のファイル（何でも） | **目録だけ作る**（名前・大きさ・SHA-256）。形式を確かめるまで中身は読まない |
+| `sqlite/` | SQLite の分析データ | **読み取り専用で目録だけ作る**（表・列・型・行数）。中身は取り込まない（`sqlite/README.md`） |
 
 動画・音声（mp4, wav, m4a など）は `.gitignore` で除外している。テキストの出力だけを置く。
 

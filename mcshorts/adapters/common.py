@@ -96,6 +96,12 @@ class Sources:
     def __getitem__(self, sid):
         return self.by_id[sid]
 
+    def add(self, meta):
+        """取得結果（スナップショット）など、台帳の外から来る出どころを足す。台帳ファイルは書き換えない。"""
+        if meta['id'] in self.by_id:
+            raise ValueError(f"出どころの id が重複: {meta['id']}")
+        self.by_id[meta['id']] = meta
+
     def provenance(self, sid):
         """観測1件に付ける出どころ（取得日時を含む）。"""
         s = self.by_id[sid]
