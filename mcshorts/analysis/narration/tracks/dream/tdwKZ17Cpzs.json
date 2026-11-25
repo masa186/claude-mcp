@@ -1,0 +1,964 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.72,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.01,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.74,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.01,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.54,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.74,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.73,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.59,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.63,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.38,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.65,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.45,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.03,
+    "Music": 0.58,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.54,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.54,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.5,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 6
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.03,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.69,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.53,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 7
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.03,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.56,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.38,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 8
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.02,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.61,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.54,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.59,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.49,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.57,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.52,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.23,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.02,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.38,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.03,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.08,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 13
+   }
+  ],
+  "source": "dream/data/audiotag/tdwKZ17Cpzs.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "D_DIALOGUE",
+    "effective_code": "D_DIALOGUE",
+    "quote": "Excuse me sir, would you mind switching seats with my son?",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "彼に子供を任せるとこうなります",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "Ah, of course. So he likes the outside, huh?",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "彼に（白）→ 子供を任せると（白）→ こうなります（赤）",
+  "voice": "彼に子供を任せるとこうなります。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 1.0,
+   "doc_text": "彼に子供を任せるとこうなります",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": true,
+   "end": 1.8,
+   "row_index": 0,
+   "start": 0.0,
+   "whisper_ja_overlapping_segments": [
+    0
+   ],
+   "whisper_ja_overlapping_text": "彼に子供を任せるとこうなります"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "実測"
+     ],
+     "text": "音: 2.4〜3.25秒に音の突出が5回 [実測]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "書き起こし（冒頭の書き起こし直しも同じ）と字幕が一致 [書き起こし][画面]"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行。黄「彼を見たら」＋**赤**「すぐ逃げろ」。全編同じ [実測]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: 飛行機の席の交換を頼まれた男が、子供を外に放り出す（と示唆される）アニメ [画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 7回、1ショット平均 1.92秒 [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 11回、字幕が出ている時間 65% [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 全編（Music 0.5以上が86%の秒）、最後の2秒だけ 0.2〜0.3 に落ちる [音タグ]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: 「子供を任せると」→ 1.3秒で**飛行機から何かが落ちる**。言葉と画の組み合わせだけで、何が起きたか（子供が落とされた）が分かってしまう。ブラックジョークの結末を最初の2秒で見せる"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: 視聴者への**命令形の警告**。危険人物だと先に言う"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: 15.4秒しかない。「外が好きなんですね？」の一言で、冒頭1.3秒の画（落ちていく）とつながる。**言葉の意味を取り違える**（外を見たい→外に出す）というブラックジョーク"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: 「飛行機で泣く子供」という多くの人が経験した**小さないら立ち**を、極端な形で晴らす。投稿タイトルの「スッキリしてしまった」がその感情に名前を付けている"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": 1.0,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「彼に」→ 白「子供を任せると」",
+     "time_raw": "0.00〜1.00",
+     "visual": "飛行機の窓側の席に座る男（顔にぼかし）"
+    },
+    {
+     "end": 2.0,
+     "start": 1.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「こうなります」",
+     "time_raw": "1.27〜2.00",
+     "visual": "カット。**青空を飛ぶ飛行機から、小さな何かが落ちていく** [実測: 1.27]"
+    },
+    {
+     "end": 3.0,
+     "start": 2.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「すみません」",
+     "time_raw": "2.27〜3.00",
+     "visual": "カット。村人の親が子供を抱いて話しかける [実測: 2.20]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/31_tdwKZ17Cpzs.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "窓側の男、落ちていく何か",
+     "content_status": "DOC_OBSERVED",
+     "end": 2.2,
+     "range_raw": "0.0〜2.2",
+     "stage_label": "冒頭",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "村人の親「すみません」「息子と席を」「交換してくれませんか？」「外を見せてあげたいんです」（英語 \"Excuse me sir, would you mind switching seats with my son? He is really nervous\"）。8秒に赤ちゃんの泣き声（Baby cry）[音タグ]",
+     "content_status": "DOC_OBSERVED",
+     "end": 8.0,
+     "range_raw": "2.3〜8",
+     "stage_label": "依頼",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 2.3
+    },
+    {
+     "content": "親の顔のアップ",
+     "content_status": "DOC_OBSERVED",
+     "end": null,
+     "range_raw": "7.9",
+     "stage_label": "間",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 7.9
+    },
+    {
+     "content": "男「ｱｰもちろん」「外が好きなんですね？」（英語 \"So he likes the outside, huh?\"）",
+     "content_status": "DOC_OBSERVED",
+     "end": 12.3,
+     "range_raw": "9.4〜12.3",
+     "stage_label": "オチの前振り",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 9.4
+    },
+    {
+     "content": "男の顔。12秒に**蚊の羽音のような音**（Mosquito 0.60）＝風の音か、何かが吹き出す音と思われる（推測）[音タグ]",
+     "content_status": "DOC_OBSERVED",
+     "end": 14.4,
+     "range_raw": "12.3〜14.4",
+     "stage_label": "オチ",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 12.3
+    },
+    {
+     "content": "黒い画面で終わる",
+     "content_status": "DOC_OBSERVED",
+     "end": 15.4,
+     "range_raw": "14.5〜15.4",
+     "stage_label": "暗転",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 14.5
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [],
+  "rows": [
+   {
+    "end": 1.8,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "彼に子供を任せるとこうなります"
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "彼に子供を任せるとこうなります"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 15.35,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -32.7,
+    -14.0,
+    -13.5,
+    -12.0,
+    -17.9,
+    -12.8,
+    -19.4,
+    -9.5,
+    -8.9,
+    -7.5,
+    -9.8,
+    -11.6,
+    -4.3,
+    -13.6,
+    -9.5
+   ],
+   "max_db": -1.5,
+   "median_db": -13.1,
+   "onset": 0.0,
+   "p95_db": -4.7,
+   "spikes": [
+    2.4,
+    2.55,
+    2.75,
+    2.95,
+    3.25,
+    3.8,
+    4.0,
+    4.45,
+    4.65,
+    5.25,
+    5.55,
+    5.85,
+    6.3,
+    7.45
+   ]
+  },
+  "cuts": [
+   1.27,
+   2.2,
+   5.0,
+   9.33,
+   10.73,
+   12.67,
+   14.4
+  ],
+  "cuts_first3s": [
+   1.27,
+   2.2
+  ],
+  "dur": 15.35,
+  "layout": {
+   "content": [
+    24,
+    364
+   ],
+   "play": [
+    63,
+    363
+   ],
+   "top": [
+    24,
+    63
+   ]
+  },
+  "motion_median": 7.04,
+  "moves": [
+   [
+    7.53,
+    7.87
+   ]
+  ],
+  "n_shots": 8,
+  "n_subs": 11,
+  "shot_mean": 1.92,
+  "shot_median": 1.57,
+  "source": "dream/data/measure/tdwKZ17Cpzs.json",
+  "status": "ok",
+  "sub_changes": [
+   1.27,
+   2.4,
+   3.27,
+   4.13,
+   5.27,
+   6.4,
+   7.73,
+   9.2,
+   10.53,
+   12.13,
+   12.53
+  ],
+  "sub_on_ratio": 0.65,
+  "top_changes": []
+ },
+ "no": 31,
+ "video_id": "tdwKZ17Cpzs",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 2.0,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "Kare ni kodomo o wakaseru to konarimasu."
+   },
+   {
+    "category": "latin",
+    "end": 5.0,
+    "segment_index": 1,
+    "start": 2.0,
+    "text": "Excuse me sir, would you mind switching seats with my son?"
+   },
+   {
+    "category": "latin",
+    "end": 8.0,
+    "segment_index": 2,
+    "start": 5.0,
+    "text": "He is really nervous, and the outside comes in down."
+   },
+   {
+    "category": "latin",
+    "end": 12.0,
+    "segment_index": 3,
+    "start": 9.0,
+    "text": "Ah, of course. So he likes the outside, huh?"
+   }
+  ],
+  "source": "dream/data/asr/tdwKZ17Cpzs.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 1.74,
+    "logprob": -0.29,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "彼に子供を任せるとこうなります",
+    "words": [
+     {
+      "end": 0.2,
+      "start": 0.0,
+      "word": "彼"
+     },
+     {
+      "end": 0.34,
+      "start": 0.2,
+      "word": "に"
+     },
+     {
+      "end": 0.46,
+      "start": 0.34,
+      "word": "子"
+     },
+     {
+      "end": 0.6,
+      "start": 0.46,
+      "word": "供"
+     },
+     {
+      "end": 0.7,
+      "start": 0.6,
+      "word": "を"
+     },
+     {
+      "end": 0.82,
+      "start": 0.7,
+      "word": "任"
+     },
+     {
+      "end": 1.0,
+      "start": 0.82,
+      "word": "せ"
+     },
+     {
+      "end": 1.08,
+      "start": 1.0,
+      "word": "る"
+     },
+     {
+      "end": 1.18,
+      "start": 1.08,
+      "word": "と"
+     },
+     {
+      "end": 1.34,
+      "start": 1.18,
+      "word": "こう"
+     },
+     {
+      "end": 1.46,
+      "start": 1.34,
+      "word": "な"
+     },
+     {
+      "end": 1.74,
+      "start": 1.46,
+      "word": "ります"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 5.02,
+    "logprob": -0.29,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 1,
+    "start": 2.16,
+    "text": "Excuse me sir, would you mind switching seats with my son?",
+    "words": [
+     {
+      "end": 2.56,
+      "start": 2.16,
+      "word": " Excuse"
+     },
+     {
+      "end": 2.8,
+      "start": 2.56,
+      "word": " me"
+     },
+     {
+      "end": 3.06,
+      "start": 2.8,
+      "word": " sir,"
+     },
+     {
+      "end": 3.34,
+      "start": 3.24,
+      "word": " would"
+     },
+     {
+      "end": 3.44,
+      "start": 3.34,
+      "word": " you"
+     },
+     {
+      "end": 3.64,
+      "start": 3.44,
+      "word": " mind"
+     },
+     {
+      "end": 3.96,
+      "start": 3.64,
+      "word": " switching"
+     },
+     {
+      "end": 4.34,
+      "start": 3.96,
+      "word": " seats"
+     },
+     {
+      "end": 4.58,
+      "start": 4.34,
+      "word": " with"
+     },
+     {
+      "end": 4.74,
+      "start": 4.58,
+      "word": " my"
+     },
+     {
+      "end": 5.02,
+      "start": 4.74,
+      "word": " son?"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 7.88,
+    "logprob": -0.29,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 2,
+    "start": 5.2,
+    "text": "He is really nervous and the outside comes in down",
+    "words": [
+     {
+      "end": 5.36,
+      "start": 5.2,
+      "word": " He"
+     },
+     {
+      "end": 5.5,
+      "start": 5.36,
+      "word": " is"
+     },
+     {
+      "end": 5.74,
+      "start": 5.5,
+      "word": " really"
+     },
+     {
+      "end": 6.16,
+      "start": 5.74,
+      "word": " nervous"
+     },
+     {
+      "end": 6.5,
+      "start": 6.16,
+      "word": " and"
+     },
+     {
+      "end": 6.62,
+      "start": 6.5,
+      "word": " the"
+     },
+     {
+      "end": 7.0,
+      "start": 6.62,
+      "word": " outside"
+     },
+     {
+      "end": 7.38,
+      "start": 7.0,
+      "word": " comes"
+     },
+     {
+      "end": 7.62,
+      "start": 7.38,
+      "word": " in"
+     },
+     {
+      "end": 7.88,
+      "start": 7.62,
+      "word": " down"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 10.22,
+    "logprob": -0.29,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 3,
+    "start": 8.92,
+    "text": "Ah, of course",
+    "words": [
+     {
+      "end": 9.32,
+      "start": 8.92,
+      "word": " Ah,"
+     },
+     {
+      "end": 9.92,
+      "start": 9.72,
+      "word": " of"
+     },
+     {
+      "end": 10.22,
+      "start": 9.92,
+      "word": " course"
+     }
+    ]
+   },
+   {
+    "category": "latin",
+    "end": 11.9,
+    "logprob": -0.29,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 4,
+    "start": 10.22,
+    "text": "So he likes the outside, huh?",
+    "words": [
+     {
+      "end": 10.62,
+      "start": 10.22,
+      "word": " So"
+     },
+     {
+      "end": 10.74,
+      "start": 10.62,
+      "word": " he"
+     },
+     {
+      "end": 10.98,
+      "start": 10.74,
+      "word": " likes"
+     },
+     {
+      "end": 11.14,
+      "start": 10.98,
+      "word": " the"
+     },
+     {
+      "end": 11.58,
+      "start": 11.14,
+      "word": " outside,"
+     },
+     {
+      "end": 11.9,
+      "start": 11.78,
+      "word": " huh?"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/tdwKZ17Cpzs.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}

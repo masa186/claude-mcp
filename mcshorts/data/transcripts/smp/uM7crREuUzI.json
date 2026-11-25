@@ -1,0 +1,102 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "0.0",
+     "text": "ドクタードーナツを"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "1.0",
+     "text": "自分自身の"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "1.7",
+     "text": "思考で"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "2.0",
+     "text": "トラップにはめる"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "3.0",
+     "text": "Jettism"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "3.3",
+     "text": "説明しよう"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "4.5",
+     "text": "ドクタードーナツの"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "5.7",
+     "text": "今日の配信で"
+    },
+    {
+     "color": "#ffff00",
+     "end": null,
+     "start": "6.5",
+     "text": "TNTトロッコの罠に"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドクタードーナツを自分自身の思考でトラップにはめるJettism"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "uM7crREuUzI"
+}

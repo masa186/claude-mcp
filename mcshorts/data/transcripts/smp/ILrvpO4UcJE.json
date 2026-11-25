@@ -1,0 +1,78 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "cyan",
+     "end": null,
+     "start": "0.7",
+     "text": "見てこれ"
+    },
+    {
+     "color": "cyan",
+     "end": null,
+     "start": "1.1",
+     "text": "ドーナツSMPが"
+    },
+    {
+     "color": "cyan",
+     "end": null,
+     "start": "2.4",
+     "text": "24時間連続で"
+    },
+    {
+     "color": "cyan",
+     "end": null,
+     "start": "3.8",
+     "text": "ハイピクセルを上回ってる"
+    },
+    {
+     "color": "cyan",
+     "end": null,
+     "start": "6.6",
+     "text": "今日ど作日に.."
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "claude8s",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.1秒",
+    "src": "claude8s"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "見てこれ、ドーナツSMPが24時間連続でハイピクセルを上回ってる"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "ILrvpO4UcJE"
+}

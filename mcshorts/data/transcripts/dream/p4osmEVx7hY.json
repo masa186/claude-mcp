@@ -1,0 +1,621 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/p4osmEVx7hY.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.8,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Hey, yo, chill! Relax, relax!"
+    },
+    {
+     "end": 5.1,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 3.3,
+     "text": "Damn, that's close to me."
+    },
+    {
+     "end": 6.8,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 5.6,
+     "text": "Bro, I'm cursed!"
+    },
+    {
+     "end": 8.6,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 6.8,
+     "text": "I'm a pinch of a pinch!"
+    },
+    {
+     "end": 11.1,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 8.6,
+     "text": "Hey, yo! Relax, relax!"
+    },
+    {
+     "end": 12.1,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 11.1,
+     "text": "Whoa!"
+    },
+    {
+     "end": 13.6,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 12.1,
+     "text": "Whoa! What is this?"
+    },
+    {
+     "end": 14.5,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 13.6,
+     "text": "Chill out!"
+    },
+    {
+     "end": 15.7,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 14.5,
+     "text": "Oh, he's trying to bite me?"
+    },
+    {
+     "end": 17.0,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 15.7,
+     "text": "Nah, what's up then?"
+    },
+    {
+     "end": 18.1,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 17.0,
+     "text": "Alright, who's next?"
+    },
+    {
+     "end": 19.3,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 18.1,
+     "text": "Me!"
+    },
+    {
+     "end": 21.0,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 19.3,
+     "text": "What's up? You're trying to be a hero?"
+    },
+    {
+     "end": 22.2,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 21.0,
+     "text": "Who else wants to smoke?"
+    },
+    {
+     "end": 23.7,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 22.2,
+     "text": "Me! Me! Me!"
+    },
+    {
+     "end": 27.1,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 24.9,
+     "text": "I bet! Y'all are starting to like this!"
+    },
+    {
+     "end": 27.9,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 27.1,
+     "text": "Who's next?"
+    },
+    {
+     "end": 29.7,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 27.9,
+     "text": "I have some attack now!"
+    },
+    {
+     "end": 36.98,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 29.7,
+     "text": "oh my god who's next all right what's up let's fight oh you're scared why shouldn't we oh let's"
+    },
+    {
+     "end": 42.42,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 36.98,
+     "text": "go you subscribe we won't fight thank you as a reward i'll send you off with a wedgie thank you"
+    },
+    {
+     "end": 49.06,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 42.42,
+     "text": "box let's go the villagers like me i'm ready coach you got this all right who's next oh this one"
+    },
+    {
+     "end": 55.94,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 49.06,
+     "text": "brought a weapon wait what are you doing didn't you help him he was just lost that's messed up"
+    },
+    {
+     "end": 59.7,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 55.94,
+     "text": "Hey chill chill relax"
+    },
+    {
+     "end": 61.58,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 59.7,
+     "text": "I gotta get out of here"
+    },
+    {
+     "end": 62.26,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 61.58,
+     "text": "There's a lane"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/p4osmEVx7hY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.16,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "え、よ、チリール!"
+    },
+    {
+     "end": 2.86,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 1.36,
+     "text": "レラックス!レラックス!"
+    },
+    {
+     "end": 4.72,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 3.08,
+     "text": "ごら、我々のグロックスに追われるようです。"
+    },
+    {
+     "end": 6.68,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 6.02,
+     "text": "うなびかに追われるのかもしれません。"
+    },
+    {
+     "end": 8.32,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 6.78,
+     "text": "絶対説明のピンチになります。"
+    },
+    {
+     "end": 10.94,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 8.86,
+     "text": "え、よー わぁ リラックス!"
+    },
+    {
+     "end": 12.56,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 11.04,
+     "text": "ごー、 ウォー!"
+    },
+    {
+     "end": 13.6,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 12.9,
+     "text": "ここは何?"
+    },
+    {
+     "end": 15.54,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 13.92,
+     "text": "あ、私はキャafferを刺させるの?"
+    },
+    {
+     "end": 16.42,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 15.7,
+     "text": "あ、どうだよ。"
+    },
+    {
+     "end": 17.98,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 17.08,
+     "text": "誰が来るの?"
+    },
+    {
+     "end": 20.92,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 19.26,
+     "text": "何だ? 彼女はキャafferを外すのかな?"
+    },
+    {
+     "end": 22.2,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 20.96,
+     "text": "誰がいこうなったら煙っているのか。"
+    },
+    {
+     "end": 23.28,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 22.2,
+     "text": "みー。みー。みー。"
+    },
+    {
+     "end": 25.86,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 24.72,
+     "text": "あ、いや、これビッグ!"
+    },
+    {
+     "end": 27.1,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 25.86,
+     "text": "みんなが大好きな事になるの。"
+    },
+    {
+     "end": 27.86,
+     "logprob": -1.76,
+     "no_speech": 0.0,
+     "start": 27.1,
+     "text": "誰が来るの?"
+    },
+    {
+     "end": 29.66,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 27.86,
+     "text": "I had some, I checked it out"
+    },
+    {
+     "end": 30.72,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 29.66,
+     "text": "Oh my god"
+    },
+    {
+     "end": 31.9,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 30.72,
+     "text": "Who's next"
+    },
+    {
+     "end": 33.9,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 32.56,
+     "text": "Alright, what's up, let's fight"
+    },
+    {
+     "end": 35.22,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 33.9,
+     "text": "Oh, you're scared?"
+    },
+    {
+     "end": 36.06,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 35.42,
+     "text": "Why shouldn't we?"
+    },
+    {
+     "end": 38.74,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 36.34,
+     "text": "Oh, let's go, you subscribed, we won't fight"
+    },
+    {
+     "end": 39.44,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 38.74,
+     "text": "Thank you"
+    },
+    {
+     "end": 41.92,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 39.44,
+     "text": "As a reward, I'll send you off with a wedgie"
+    },
+    {
+     "end": 42.76,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 41.92,
+     "text": "Thank you, Fox"
+    },
+    {
+     "end": 44.94,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 42.76,
+     "text": "Let's go, the villagers like me"
+    },
+    {
+     "end": 45.72,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 44.94,
+     "text": "I'm ready, coach"
+    },
+    {
+     "end": 46.58,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 45.72,
+     "text": "You got this"
+    },
+    {
+     "end": 47.64,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 46.58,
+     "text": "Alright, who's next"
+    },
+    {
+     "end": 49.86,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 48.06,
+     "text": "Oh, this one brought a weapon"
+    },
+    {
+     "end": 51.42,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 49.86,
+     "text": "Wait, what are you doing?"
+    },
+    {
+     "end": 54.7,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 52.34,
+     "text": "Didn't you help him? He was just lost"
+    },
+    {
+     "end": 56.04,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 54.7,
+     "text": "That's messed up"
+    },
+    {
+     "end": 56.72,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 56.04,
+     "text": "おー!"
+    },
+    {
+     "end": 57.66,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 56.84,
+     "text": "おー!"
+    },
+    {
+     "end": 57.98,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 57.86,
+     "text": "えー!"
+    },
+    {
+     "end": 58.52,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 58.18,
+     "text": "チュウ!"
+    },
+    {
+     "end": 58.9,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 58.66,
+     "text": "チュウ!"
+    },
+    {
+     "end": 59.66,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 58.98,
+     "text": "レラッシュ!"
+    },
+    {
+     "end": 60.16,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 59.76,
+     "text": "おー!"
+    },
+    {
+     "end": 60.22,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 60.16,
+     "text": "おー!"
+    },
+    {
+     "end": 60.4,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 60.22,
+     "text": "おー!"
+    },
+    {
+     "end": 60.98,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 60.5,
+     "text": "おー!"
+    },
+    {
+     "end": 61.06,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 60.98,
+     "text": "おー!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/p4osmEVx7hY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "エイヨチー ウラビカに追われるグロックスでさ"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/p4osmEVx7hY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 57.77,
+     "no_speech": 0.0,
+     "start": 55.39,
+     "text": "ドウンイエロー"
+    },
+    {
+     "end": 61.63,
+     "no_speech": 0.0,
+     "start": 57.77,
+     "text": "вет船 이런ネージ"
+    },
+    {
+     "end": 62.27,
+     "no_speech": 0.0,
+     "start": 61.63,
+     "text": "There's a lake!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "村人に追われるグロックスですが、絶体絶命のピンチになります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "【冒頭0〜3秒の本編音声字幕】お前ら落ち着けェェ!!!（白）→ リラックス（白）→ リラックス×2（白） 【3〜8秒のナレーション字幕】村人に追われる（白）→ Groxですが...（白）→ 絶体絶命の（赤）→ ピンチになります（黄）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "p4osmEVx7hY"
+}

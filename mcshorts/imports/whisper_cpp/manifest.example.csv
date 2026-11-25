@@ -1,0 +1,2 @@
+file,video_id,channel,model,language,scope,run_date,note
+example_audio.wav.json,cUbDNWd0j24,dream,ggml-large-v3-turbo,ja,full,2026-11-20,Termuxで実行（例）

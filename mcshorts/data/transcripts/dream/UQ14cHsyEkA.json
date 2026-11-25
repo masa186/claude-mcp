@@ -1,0 +1,525 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/UQ14cHsyEkA.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 7.32,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Let's go as my worker. You need to be able to defend me fight this wither for me"
+    },
+    {
+     "end": 10.64,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 8.44,
+     "text": "Buddy it ain't your choice. Go for it"
+    },
+    {
+     "end": 13.68,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 12.0,
+     "text": "Well, you need to show me you can fight"
+    },
+    {
+     "end": 16.56,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 14.32,
+     "text": "No bad boy. Don't do it"
+    },
+    {
+     "end": 22.76,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 17.12,
+     "text": "Don't do it. Wow, really we don't need you. I'm gonna make a brave one. Oh, he's big"
+    },
+    {
+     "end": 28.4,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 22.76,
+     "text": "I'm gonna hide behind you. Oh, nevermind. Bro, what I can make an even better one"
+    },
+    {
+     "end": 30.8,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 28.4,
+     "text": "Let's go! And I did the same thing, oh my god."
+    },
+    {
+     "end": 35.1,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 31.58,
+     "text": "I'm gonna put you out of your misery with a quick and painless death!"
+    },
+    {
+     "end": 37.6,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 35.76,
+     "text": "Not gonna lie, that doesn't look very painless."
+    },
+    {
+     "end": 40.08,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 37.72,
+     "text": "Let's see how loyal you guys are. Really give it to him."
+    },
+    {
+     "end": 43.28,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 41.14,
+     "text": "Dude, no, I meant give it to him like this."
+    },
+    {
+     "end": 45.72,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 43.72,
+     "text": "Hey, chill. Hey, yo, chill!"
+    },
+    {
+     "end": 47.58,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 47.26,
+     "text": "No."
+    },
+    {
+     "end": 49.12,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 48.72,
+     "text": "No!"
+    },
+    {
+     "end": 49.62,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 49.12,
+     "text": "Woo!"
+    },
+    {
+     "end": 57.02,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 51.72,
+     "text": "I made Grox's also amazing, but I'm so scared to be able to throw a gun on my son."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/UQ14cHsyEkA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.1,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "世界一最強のゴーレムを作るグラフ"
+    },
+    {
+     "end": 3.14,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 2.1,
+     "text": "教 me a house!"
+    },
+    {
+     "end": 3.88,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 3.36,
+     "text": "Let's go!"
+    },
+    {
+     "end": 6.18,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 4.18,
+     "text": "As my worker, you need to be able to defend me!"
+    },
+    {
+     "end": 7.3,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 6.3,
+     "text": "Fight this wither for me!"
+    },
+    {
+     "end": 9.96,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 8.54,
+     "text": "Buddy, it ain't your choice!"
+    },
+    {
+     "end": 10.78,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 10.18,
+     "text": "Go for it!"
+    },
+    {
+     "end": 11.78,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 11.62,
+     "text": "What?"
+    },
+    {
+     "end": 13.74,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 12.24,
+     "text": "Bro, you need to show me you can fight!"
+    },
+    {
+     "end": 15.7,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 14.58,
+     "text": "No, bad boy!"
+    },
+    {
+     "end": 16.6,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 16.02,
+     "text": "Don't do it!"
+    },
+    {
+     "end": 18.1,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 17.32,
+     "text": "Don't do it!"
+    },
+    {
+     "end": 19.82,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 19.18,
+     "text": "Wow, really?"
+    },
+    {
+     "end": 20.62,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 20.04,
+     "text": "We don't need you!"
+    },
+    {
+     "end": 21.68,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 20.76,
+     "text": "I'm gonna make a brave one!"
+    },
+    {
+     "end": 22.76,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 22.14,
+     "text": "Oh, he's big!"
+    },
+    {
+     "end": 23.94,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 23.0,
+     "text": "I'm gonna hide behind you!"
+    },
+    {
+     "end": 24.8,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 24.06,
+     "text": "Oh, nevermind"
+    },
+    {
+     "end": 25.84,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 24.8,
+     "text": "Bro, what?"
+    },
+    {
+     "end": 26.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 26.08,
+     "text": "Get him!"
+    },
+    {
+     "end": 28.36,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 26.76,
+     "text": "I can make an even better one!"
+    },
+    {
+     "end": 29.08,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 28.46,
+     "text": "Let's go!"
+    },
+    {
+     "end": 30.82,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 29.08,
+     "text": "oh and i did the same thing oh my god"
+    },
+    {
+     "end": 33.02,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 31.44,
+     "text": "i'm gonna put you out of your misery"
+    },
+    {
+     "end": 34.98,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 33.02,
+     "text": "with a quick and painless death"
+    },
+    {
+     "end": 37.62,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 35.62,
+     "text": "not gonna lie that doesn't look very painless"
+    },
+    {
+     "end": 39.08,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 37.62,
+     "text": "let's see how loyal you guys are"
+    },
+    {
+     "end": 40.04,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 39.08,
+     "text": "really give it to him"
+    },
+    {
+     "end": 43.24,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 41.08,
+     "text": "duuude no i meant give it to him like this"
+    },
+    {
+     "end": 44.46,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 43.82,
+     "text": "hey chill"
+    },
+    {
+     "end": 45.38,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 44.46,
+     "text": "eyo chill"
+    },
+    {
+     "end": 47.52,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 47.2,
+     "text": "no"
+    },
+    {
+     "end": 48.8,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 48.48,
+     "text": "no"
+    },
+    {
+     "end": 53.46,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 51.66,
+     "text": "作り出したグロックスもすごいですが"
+    },
+    {
+     "end": 56.92,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 53.46,
+     "text": "息子に弾丸を打ち込まれても無傷なボーレムが最高に狂ってますね"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/UQ14cHsyEkA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.12,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "世界一最強のゴーレムを作るグラフ"
+    },
+    {
+     "end": 3.16,
+     "no_speech": 0.0,
+     "start": 2.12,
+     "text": "教えてみよう!"
+    },
+    {
+     "end": 4.12,
+     "no_speech": 0.0,
+     "start": 3.16,
+     "text": "Let's go!"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 4.12,
+     "text": "私の働き人は"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/UQ14cHsyEkA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 56.99,
+     "no_speech": 0.0,
+     "start": 50.33,
+     "text": "作り出したグロックスもすごいですが息子に弾丸をぶち込まれても無傷なウォーレムが最高に狂ってますね"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/UQ14cHsyEkA.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 50.0,
+     "text": "作り出したGroxも凄いですが"
+    },
+    {
+     "end": null,
+     "start": 53.0,
+     "text": "息子に弾丸をぶち込まれても"
+    },
+    {
+     "end": null,
+     "start": 54.5,
+     "text": "無傷なゴーレムが"
+    },
+    {
+     "end": null,
+     "start": 55.5,
+     "text": "最高に狂ってますね"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.6-flash"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "世界一最強のゴーレムを作るグロックス。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "世界一最強の（赤）→ ゴーレムを作る（白）→ Grox（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "UQ14cHsyEkA"
+}

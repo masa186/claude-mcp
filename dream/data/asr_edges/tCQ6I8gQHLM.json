@@ -1,0 +1,19 @@
+{
+ "id": "tCQ6I8gQHLM",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 4.92,
+   "text": "常にメインスを持たせてはいけません",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 5.1,
+   "end": 10.48,
+   "text": "And his name is John Cena",
+   "no_speech": 0.0
+  }
+ ]
+}

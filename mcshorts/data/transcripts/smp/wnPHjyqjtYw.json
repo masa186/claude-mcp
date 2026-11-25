@@ -1,0 +1,84 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "クリーピーホースに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "チートで対抗する"
+    },
+    {
+     "color": "red",
+     "end": null,
+     "start": 2.2,
+     "text": "*1分以内に鞍を着けろ*"
+    },
+    {
+     "color": "red",
+     "end": null,
+     "start": 4.1,
+     "text": "(残り)0分!!"
+    },
+    {
+     "color": "red",
+     "end": null,
+     "start": 5.0,
+     "text": "頼むっ!!"
+    },
+    {
+     "color": "red",
+     "end": null,
+     "start": 7.2,
+     "text": "いけ!!!!"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.4秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "クリーピーホースにチートで対抗する男"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "wnPHjyqjtYw"
+}

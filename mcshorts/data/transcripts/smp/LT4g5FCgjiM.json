@@ -1,0 +1,78 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "green",
+     "end": null,
+     "start": "0.0",
+     "text": "Dreamに"
+    },
+    {
+     "color": "green",
+     "end": null,
+     "start": "0.5",
+     "text": "宣戦布告する"
+    },
+    {
+     "color": "green",
+     "end": null,
+     "start": "1.5",
+     "text": "Daquavisは"
+    },
+    {
+     "color": "green",
+     "end": null,
+     "start": "2.0",
+     "text": "ヤラセです"
+    },
+    {
+     "color": "green",
+     "end": null,
+     "start": "2.7",
+     "text": "Dreamが詰んでる"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームに宣戦布告するDaquavisはヤラセです"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "LT4g5FCgjiM"
+}

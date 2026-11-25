@@ -1,0 +1,270 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/G6CB11Q-lT0.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 8.18,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I can't find diamonds bro. I bet I can"
+    },
+    {
+     "end": 12.4,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 10.4,
+     "text": "You can find them"
+    },
+    {
+     "end": 59.98,
+     "logprob": -0.78,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "We'll be right back."
+    },
+    {
+     "end": 61.0,
+     "logprob": -1.0,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "Thank you."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/G6CB11Q-lT0.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.56,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "この男はザライトフル装備RTAで彼女にはからされました"
+    },
+    {
+     "end": 7.42,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 5.84,
+     "text": "I can't find diamonds, bro"
+    },
+    {
+     "end": 8.14,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 7.42,
+     "text": "I bet I can"
+    },
+    {
+     "end": 11.56,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 10.42,
+     "text": "You can find them"
+    },
+    {
+     "end": 59.9,
+     "logprob": -0.48,
+     "no_speech": 0.0,
+     "start": 59.76,
+     "text": "ご視聴ありがとうございました"
+    },
+    {
+     "end": 62.62,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/G6CB11Q-lT0.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.6,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "この男はねザライトフル装備RTAで彼女に分からされました"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/G6CB11Q-lT0.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 62.72,
+     "no_speech": 0.0,
+     "start": 55.72,
+     "text": "チャンネル登録をお願いいたします"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/G6CB11Q-lT0.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+    },
+    {
+     "end": null,
+     "start": 13.0,
+     "text": "RTAスタート"
+    },
+    {
+     "end": null,
+     "start": 14.0,
+     "text": "まずチェストを漁り…"
+    },
+    {
+     "end": null,
+     "start": 15.0,
+     "text": "木を切って…"
+    },
+    {
+     "end": null,
+     "start": 18.0,
+     "text": "作業台を作る"
+    },
+    {
+     "end": null,
+     "start": 21.0,
+     "text": "ボートを作って…"
+    },
+    {
+     "end": null,
+     "start": 24.0,
+     "text": "ネザーへGo"
+    },
+    {
+     "end": null,
+     "start": 30.0,
+     "text": "素晴らしい手捌き"
+    },
+    {
+     "end": null,
+     "start": 37.0,
+     "text": "ボート着地成功"
+    },
+    {
+     "end": null,
+     "start": 38.0,
+     "text": "アイム回収"
+    },
+    {
+     "end": null,
+     "start": 43.0,
+     "text": "壁ブチ壊して"
+    },
+    {
+     "end": null,
+     "start": 45.0,
+     "text": "意外とムズいやつ"
+    },
+    {
+     "end": null,
+     "start": 49.0,
+     "text": "アイム回収"
+    },
+    {
+     "end": null,
+     "start": 56.0,
+     "text": "セザライト装備にして…(推測)"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "この男は、ネザライトフル装備RTAで彼女に分からされました。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "この男は（白）→ ネザライトフル装備（紫）→ RTAで（白）→ 彼女に（白）→ 分からされました（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "G6CB11Q-lT0"
+}

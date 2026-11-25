@@ -1,0 +1,90 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.0",
+     "text": "驚異的な"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.7",
+     "text": "身体能力を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.7",
+     "text": "使って"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "2.0",
+     "text": "CGなしで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "2.7",
+     "text": "スパイダーマンを"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "3.1",
+     "text": "再現する男"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.0",
+     "text": "音を聞くとドクタードーナツ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "4.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "驚異的な身体能力を使ってCGなしでスパイダーマンを再現する男を見るドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "HZL_EzamIhE"
+}

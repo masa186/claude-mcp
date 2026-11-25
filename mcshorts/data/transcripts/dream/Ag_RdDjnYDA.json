@@ -1,0 +1,396 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/Ag_RdDjnYDA.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.52,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Tare wa Hitsujiku yarimashita"
+    },
+    {
+     "end": 2.72,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 1.52,
+     "text": "Boxing me in!"
+    },
+    {
+     "end": 3.92,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 2.72,
+     "text": "Oh, hold up, I know!"
+    },
+    {
+     "end": 5.12,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 3.92,
+     "text": "Hey, let me borrow this!"
+    },
+    {
+     "end": 7.52,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 6.4,
+     "text": "Let's go!"
+    },
+    {
+     "end": 8.48,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 7.52,
+     "text": "It's working!"
+    },
+    {
+     "end": 9.28,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 8.48,
+     "text": "I gotta get out!"
+    },
+    {
+     "end": 10.56,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 9.28,
+     "text": "That sheep just saved you!"
+    },
+    {
+     "end": 11.44,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 10.56,
+     "text": "Bro, I owe you!"
+    },
+    {
+     "end": 12.56,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 11.44,
+     "text": "How can I repay you?"
+    },
+    {
+     "end": 14.08,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 13.52,
+     "text": "Wait, what?"
+    },
+    {
+     "end": 16.64,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 15.36,
+     "text": "Hey, this is our little secret, alright?"
+    },
+    {
+     "end": 18.56,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 17.68,
+     "text": "Wait, actually?"
+    },
+    {
+     "end": 19.04,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 18.56,
+     "text": "Hold up!"
+    },
+    {
+     "end": 20.4,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 19.04,
+     "text": "I'm taking custody of our son!"
+    },
+    {
+     "end": 22.4,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 21.28,
+     "text": "I'm a great father!"
+    },
+    {
+     "end": 23.92,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 22.4,
+     "text": "All right, stay in here and uh..."
+    },
+    {
+     "end": 24.48,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 23.92,
+     "text": "Don't move!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/Ag_RdDjnYDA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.3,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "彼はヒツジクをやりました"
+    },
+    {
+     "end": 2.66,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 1.3,
+     "text": "ボックスにイン"
+    },
+    {
+     "end": 3.78,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 2.66,
+     "text": "Oh hold up I know"
+    },
+    {
+     "end": 5.2,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 3.78,
+     "text": "Hey let me borrow this"
+    },
+    {
+     "end": 7.08,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 6.14,
+     "text": "Let's go"
+    },
+    {
+     "end": 8.34,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 7.08,
+     "text": "It's working"
+    },
+    {
+     "end": 9.24,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 8.34,
+     "text": "I gotta get out"
+    },
+    {
+     "end": 10.58,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 9.24,
+     "text": "That sheep just saved you"
+    },
+    {
+     "end": 11.48,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 10.58,
+     "text": "Bro I owe you"
+    },
+    {
+     "end": 12.64,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 11.48,
+     "text": "How can I repay you"
+    },
+    {
+     "end": 14.14,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 13.34,
+     "text": "Wait what"
+    },
+    {
+     "end": 15.4,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 14.14,
+     "text": "NAAA"
+    },
+    {
+     "end": 16.68,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 15.4,
+     "text": "Hey this is our little secret alright"
+    },
+    {
+     "end": 18.48,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 17.52,
+     "text": "Wait actually"
+    },
+    {
+     "end": 19.1,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 18.48,
+     "text": "Hold up"
+    },
+    {
+     "end": 20.48,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 19.1,
+     "text": "I'm taking custody of our son"
+    },
+    {
+     "end": 22.42,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 21.0,
+     "text": "I'm a great father"
+    },
+    {
+     "end": 23.7,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 22.42,
+     "text": "Are staying here and uh"
+    },
+    {
+     "end": 24.5,
+     "logprob": -0.33,
+     "no_speech": 0.0,
+     "start": 23.7,
+     "text": "Don't move"
+    },
+    {
+     "end": 25.82,
+     "logprob": -0.52,
+     "no_speech": 0.0,
+     "start": 24.5,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Ag_RdDjnYDA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "彼は羊とやりました"
+    },
+    {
+     "end": 3.0,
+     "no_speech": 0.0,
+     "start": 2.0,
+     "text": "ボクシングイエーイ!"
+    },
+    {
+     "end": 4.0,
+     "no_speech": 0.0,
+     "start": 3.0,
+     "text": "おー、待って、知ってる!"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 4.0,
+     "text": "えぇ、レッメフォローで"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Ag_RdDjnYDA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 49.54,
+     "no_speech": 0.0,
+     "start": 19.56,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "彼は羊とヤりました。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "彼は（白）→ 羊と（白）→ 矢りました（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Ag_RdDjnYDA"
+}

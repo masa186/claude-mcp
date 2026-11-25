@@ -1,0 +1,357 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "チートなしで鉱石や洞窟を透視する裏技の神義を試すドクタードーナツ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 9,
+     "text": "これ本当？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "チートなしで",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 1,
+     "text": "洞窟を",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 2,
+     "text": "透視する",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 2,
+     "text": "裏技の神",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 3,
+     "text": "技を",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 3,
+     "text": "試す",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 3,
+     "text": "ドクタードーナツ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 9,
+     "text": "これ本当？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 10,
+     "text": "やるわ",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "チートなしで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.7,
+     "text": "鉱石や"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "洞窟を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.2,
+     "text": "透視する"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "裏技の"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.5,
+     "text": "真偽を試す"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.2,
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.2,
+     "text": "*ぐ､くる*"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.0,
+     "text": "*X-RAYはまずい*"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.4秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "チートなしで鉱石や洞窟を透視する裏技の真偽を試すドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 9.25,
+     "start": 9.0,
+     "text": "これ本当？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 11.0,
+     "start": 10.25,
+     "text": "やるわ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 27.0,
+     "start": 26.75,
+     "text": "これで合ってる？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 42.0,
+     "start": 41.5,
+     "text": "こんな感じ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 47.75,
+     "start": 47.5,
+     "text": "はっ！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 49.0,
+     "start": 48.75,
+     "text": "うおw",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 49.75,
+     "start": 49.5,
+     "text": "待てと！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 50.5,
+     "start": 50.0,
+     "text": "サバイバルにしたら…",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 52.25,
+     "start": 51.5,
+     "text": "うおおおおおお",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 52.75,
+     "start": 52.5,
+     "text": "これガチじゃん",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "チートなしで",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.75,
+     "text": "鉱石や",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "洞窟を",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.25,
+     "text": "透視する",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "裏技の",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.25,
+     "text": "真偽を試す",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.25,
+     "text": "ドクタードーナツ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.25,
+     "text": "*ぐるぐる*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.0,
+     "text": "*X-RAYはまずい*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 8.25,
+     "text": "*一時停止*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11.5,
+     "text": "*階段、ピストン、ハーフブロック*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 23.5,
+     "text": "*木材取り出して…*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 31.75,
+     "text": "*トラップドア…*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 46.5,
+     "text": "*実行*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 53.0,
+     "text": "“ほんとにできるかコメントで教えてくれ”",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "SBRBNDbooEA"
+}

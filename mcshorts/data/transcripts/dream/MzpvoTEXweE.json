@@ -1,0 +1,385 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/MzpvoTEXweE.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.66,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "If you take damage to Cloud Dream and George,"
+    },
+    {
+     "end": 4.66,
+     "logprob": -1.26,
+     "no_speech": 0.0,
+     "start": 2.66,
+     "text": "you'll see a lot of pain in a few times."
+    },
+    {
+     "end": 32.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "They're catching me!"
+    },
+    {
+     "end": 34.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 32.0,
+     "text": "Dream! Dream!"
+    },
+    {
+     "end": 36.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 34.0,
+     "text": "Run!"
+    },
+    {
+     "end": 38.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 36.0,
+     "text": "Under the tree! Under the tree!"
+    },
+    {
+     "end": 40.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 38.0,
+     "text": "Can they get me under the tree?"
+    },
+    {
+     "end": 42.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 40.0,
+     "text": "Can they get me under here?"
+    },
+    {
+     "end": 44.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 42.0,
+     "text": "Under the tree! Under the tree!"
+    },
+    {
+     "end": 46.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 44.0,
+     "text": "There's baby zombies!"
+    },
+    {
+     "end": 48.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 46.0,
+     "text": "There's baby zombies!"
+    },
+    {
+     "end": 50.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 48.0,
+     "text": "No! No!"
+    },
+    {
+     "end": 52.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 50.0,
+     "text": "Dream! Dream!"
+    },
+    {
+     "end": 54.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 52.0,
+     "text": "No! No!"
+    },
+    {
+     "end": 56.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 54.0,
+     "text": "No! No!"
+    },
+    {
+     "end": 58.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 56.0,
+     "text": "Dream! Seriously!"
+    },
+    {
+     "end": 62.0,
+     "logprob": -0.91,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "No!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/MzpvoTEXweE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.54,
+     "logprob": -0.31,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ダメージを受けると電流をクラウドリームとジョージ数量をおかれに悲劇が落とすれます"
+    },
+    {
+     "end": 32.42,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 31.54,
+     "text": "DREAM!"
+    },
+    {
+     "end": 33.72,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 33.02,
+     "text": "DREAM!"
+    },
+    {
+     "end": 34.02,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 33.94,
+     "text": "DREAM!"
+    },
+    {
+     "end": 34.2,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 34.02,
+     "text": "DREAM!"
+    },
+    {
+     "end": 36.2,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 34.34,
+     "text": "BONDD カメ?"
+    },
+    {
+     "end": 37.54,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 36.2,
+     "text": "Beniなたーだーだーだー カメ?"
+    },
+    {
+     "end": 38.34,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 37.8,
+     "text": "GENDA カメ?"
+    },
+    {
+     "end": 42.26,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 38.4,
+     "text": "ぬたーだーだーだーだーだーるー"
+    },
+    {
+     "end": 42.64,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 42.26,
+     "text": "OOh!"
+    },
+    {
+     "end": 43.42,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 43.12,
+     "text": "DREAM!"
+    },
+    {
+     "end": 47.68,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 47.0,
+     "text": "NOO!"
+    },
+    {
+     "end": 48.54,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 48.36,
+     "text": "NOO!"
+    },
+    {
+     "end": 50.08,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 49.2,
+     "text": "DREAM!"
+    },
+    {
+     "end": 51.14,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 50.18,
+     "text": "DREAM!"
+    },
+    {
+     "end": 52.38,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 51.26,
+     "text": "NOO!"
+    },
+    {
+     "end": 53.06,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 52.54,
+     "text": "NOO!"
+    },
+    {
+     "end": 54.58,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 53.92,
+     "text": "NOO!"
+    },
+    {
+     "end": 57.08,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 56.2,
+     "text": "DREAM!"
+    },
+    {
+     "end": 57.86,
+     "logprob": -1.65,
+     "no_speech": 0.0,
+     "start": 57.36,
+     "text": "SERIOUSLY!"
+    },
+    {
+     "end": 61.18,
+     "logprob": -2.17,
+     "no_speech": 0.0,
+     "start": 60.22,
+     "text": "No!"
+    },
+    {
+     "end": 63.46,
+     "logprob": -2.17,
+     "no_speech": 0.0,
+     "start": 62.7,
+     "text": "AHHHHH!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/MzpvoTEXweE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 4.54,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ダメージを受けると電流を食らうドリームと常時、数量5カレに悲劇が訪れます。"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/MzpvoTEXweE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 65.26,
+     "no_speech": 0.0,
+     "start": 63.26,
+     "text": "おやすみなさい"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ダメージを受けると電流を喰らうドリームとジョージ。数秒後、彼に悲劇が訪れます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ダメージを受けると（赤）→ 電流を喰らう（白）→ DreamとGeorge（白）→ 数秒後彼に（白）→ 悲劇が訪れます（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "MzpvoTEXweE"
+}

@@ -1,0 +1,58 @@
+{
+  "version": "foreshadow-v2",
+  "based_on": "codebook_roles.json（v1）の foreshadow。v1 は変更しない",
+  "decided_on": "2026-11-25",
+  "about": "伏線（予告 → 回収）の補正レイヤーの基準。v1 の分類（Claude・UNVERIFIED）に、ユーザーの確認・指示と、ユーザーが承認した規則（A〜D）を重ねる。AI案は別に持ち、有効データには入れない",
+  "rules": {
+    "A": "個別分析の [画面] の行を正式な回収の根拠に含める（source=doc_fact_line、確かさ DOC_OBSERVED）。[考察] と Gemini の行は使わない。[画面] の行には時刻が無いので、時刻は不明（time_known=false）と記録し、時刻による前後の判定はしない",
+    "B": "予告の字幕の行（narration_list.md の行）が終わる前に始まった場面は、回収の根拠に数えない（根拠の開始 < 予告の行の終わり）。その場面は concurrent（同時の説明）または reference（参考の場面）に分けて記録する。字幕の行が終わった後に始まった場面だけを回収の根拠にする",
+    "C": "起点のナレーション（部分）の役割が保留（HOLD）なら、伏線も HOLD（hold_reason=ROLE_HOLD）にする。役割の保留は review_roles.csv の「保留」と role_decisions_v2.json の HOLD を使う",
+    "D": "予告の要素の一部しか文で確認できないときは PARTIAL にする。確認できない要素は not_confirmed に書く"
+  },
+  "status_values": {
+    "LINKED": "回収の根拠が1件以上あり、確認できない要素が無い",
+    "PARTIAL": "回収の根拠が1件以上あり、確認できない要素も1件以上ある（規則D）",
+    "NOT_FOUND_IN_TEXT": "回収を文から確認できない。evidence は必ず空。近い場面は reference（reference_nearest）に置く",
+    "HOLD": "判定を保留する。evidence は必ず空。hold_reason を必ず付ける。集計ではどの状態にも数えない。NOT_FOUND_IN_TEXT とは別"
+  },
+  "hold_reasons": {
+    "ROLE_HOLD": "起点の役割が保留（規則C）",
+    "NEEDS_REVIEW": "規則Bなどで回収の根拠が成立しなくなり、再判定を待つ"
+  },
+  "evidence_sources": {
+    "doc_structure": "個別分析の構成の表の「内容」の列（DOC_OBSERVED。時刻あり）",
+    "doc_narration": "narration_list.md の後の行（DOC_OBSERVED。時刻あり）",
+    "doc_fact_line": "個別分析の [画面] タグの行（DOC_OBSERVED。時刻なし。規則A）",
+    "whisper_en": "Whisper 英語指定の区間（ok。時刻あり）",
+    "whisper_ja": "Whisper 日本語指定の区間（ok。時刻あり）"
+  },
+  "relations": {
+    "action": "予告の行動に当たる場面",
+    "result": "予告の結果に当たる場面",
+    "reaction": "結果への反応",
+    "restatement": "後のナレーションによる言い換え（補助）",
+    "unspecified": "v1 から引き継いだ根拠で、関係はまだ判定していない"
+  },
+  "reference_kinds": {
+    "before_state": "変化前の状態（予告より前の場面を比較のために示す）",
+    "reference_nearest": "NOT_FOUND のときの、参考として近い場面",
+    "pending_candidate": "HOLD の間、回収の候補として残す場面（回収には数えない）",
+    "past_confirmed_evidence": "過去にユーザーが確認した根拠で、その後の規則で回収から外れたもの"
+  },
+  "timing_values": {
+    "after": "予告の字幕の行が終わった後に始まる（回収の根拠にできる）",
+    "overlap": "予告の字幕の行の途中で始まる（回収の根拠にできない。規則B）",
+    "before": "予告の字幕の行より前に始まる（回収の根拠にできない。規則B）",
+    "unknown": "根拠に時刻が無い（doc_fact_line だけ。前後の判定をしない）"
+  },
+  "decision_status_values": {
+    "USER_CONFIRMED": "ユーザーの確認済みの判定（review_roles.csv、またはチャットでの返答）",
+    "USER_DIRECTED": "ユーザーのチャットでの指示による判定",
+    "RULE": "ユーザーが承認した規則から機械的に決まる変更",
+    "V1_UNCHANGED": "v1（Claude・UNVERIFIED）のまま。規則による変更も無い"
+  },
+  "confirmed": "true は decision_status が USER_CONFIRMED または USER_DIRECTED の記録だけ（ユーザーがその伏線を直接確認・指示したもの）。RULE と V1_UNCHANGED は false。規則Cで保留になった記録は false とし、元のユーザー判断（役割の保留）を basis_user_decision に記録する。確定済みデータの集計には confirmed=true だけを使う",
+  "ai_proposals": "Claude の判定案は foreshadow_decisions_v2.json の ai_proposals に confirmed=false で置く。有効データ（foreshadow_effective_v2.jsonl）には入れない",
+  "time_words": ["数秒後", "数分後", "数時間後", "この後", "このあと", "ここから", "開始早々"],
+  "time_word_note": "予告に時間の語があれば、予告の行の開始から最初の回収の根拠（時刻あり）までの秒数を notes に記録する。判定には使わない"
+}

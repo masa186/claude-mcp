@@ -1,0 +1,72 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "最強武器は\n斧だと主張する\nDreamですが.."
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.2,
+     "text": "一撃叩き込めば十分"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.7,
+     "text": "ネザライトの剣で無双"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.7,
+     "text": "どんな戦いでも頼りになる"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "最強武器は斧だと主張するドリームですが"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "zTdNQj8IgFA"
+}

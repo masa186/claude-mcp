@@ -1,0 +1,798 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.8,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.81,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.08,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.05,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.1,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.07,
+    "Speech": 0.54,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.01,
+    "Music": 0.45,
+    "Narration, monologue": 0.01,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.08,
+    "Speech": 0.44,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.57,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.2,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.04,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.59,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.47,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.06,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 6
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.56,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 7
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.58,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 8
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.08,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.45,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.09,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.52,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.53,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.03,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.47,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.04,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.47,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 13
+   }
+  ],
+  "source": "dream/data/audiotag/mRndDDRWz00.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "DX",
+    "effective_code": "DX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "8年間プレイしたハードコアが台無しになる瞬間",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "8年間プレイした（白）→ ハードコアが（赤）→ 台無しになる瞬間（赤）",
+  "voice": "8年間プレイしたハードコアが台無しになる瞬間。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 1.0,
+   "doc_text": "8年間プレイしたハードコアが台無しになる瞬間",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": true,
+   "end": 2.9,
+   "row_index": 0,
+   "start": 0.32,
+   "whisper_ja_overlapping_segments": [
+    0
+   ],
+   "whisper_ja_overlapping_text": "8年間プレイしたハードコアが台無しになる瞬間"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "実測",
+      "音タグ"
+     ],
+     "text": "音: 0.05秒から音（-84dB → 0.2秒 -10dB）[実測]。1〜2秒は Music が0.1に落ちる（爆発と落下の瞬間に BGM を抜く）[音タグ]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "書き起こし（0.32〜2.86秒）と字幕が一致 [書き起こし][画面]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "4秒以降は声が無い（Speech 0〜0.1）[音タグ]。心の声はかっこ付きの青字幕だけ"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行。白「俺の」＋**赤**「8年」＋白「が...!!」。全編同じ（実測ではテロップ帯に変化が6回出たが、コマでは爆発や暗転の光がかかっただけで、文字は変わっていない）[画面・実測]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: ハードコアのネザーで吹き飛ばされ、エンダーマンに囲まれるアニメ [画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 7回、1ショット平均 1.95秒 [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 8回、字幕が出ている時間 55% [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 爆発と落下（1〜2秒）で一度抜き、その後 0.4〜0.5 [音タグ]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: 「8年間」という**失うものの大きさ**を最初の1秒で言い、1.7秒で実際に吹き飛ばす。ハードコア（死んだら終わり）を知っている人には、溶岩に落ちる絵だけで「終わった」と分かる"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: **本人の叫び**として書いている。「8年」だけ赤。ナレーション（第三者の説明）とテロップ（本人の悲鳴）で同じことを2つの視点から言う"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: 15.6秒しかない。落下→助かった？→エンダーマンに囲まれる、と**2回期待を裏切る**（溶岩に落ちると思ったら助かり、助かったと思ったら囲まれる）"
+    },
+    {
+     "section": "オチ",
+     "tags": [
+      "考察"
+     ],
+     "text": "もう一度見たくなる要素 [考察]: 結末が無いので、**最初（ガストの場面）に戻って見直してしまう**。15.6秒で最後が暗転し、冒頭のネザーへつながる。ループで再生されやすい作り"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: マイクラ勢なら誰でも知っている「ガストの火の玉」「エンダーマンと目を合わせてはいけない」の2つの恐怖を15秒に詰めている"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": null,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "—",
+     "time_raw": "0.00",
+     "visual": "ネザーの崖っぷちでスティーブがガストを殴ろうとしている"
+    },
+    {
+     "end": 1.0,
+     "start": 0.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「8年間プレイした」",
+     "time_raw": "0.27〜1.00",
+     "visual": "同上"
+    },
+    {
+     "end": 1.47,
+     "start": 1.27,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「ハードコアが」",
+     "time_raw": "1.27〜1.47",
+     "visual": "ガストが火の玉を吐く"
+    },
+    {
+     "end": 2.0,
+     "start": 1.67,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「ハードコアが」",
+     "time_raw": "1.67〜2.00",
+     "visual": "爆発、スティーブが吹き飛ぶ"
+    },
+    {
+     "end": 3.0,
+     "start": 2.13,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「台無しになる瞬間」",
+     "time_raw": "2.13〜3.00",
+     "visual": "カット。溶岩の上の空中を落ちていくスティーブ [実測: 2.13]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/12_mRndDDRWz00.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "ガストの火の玉で吹き飛ぶ",
+     "content_status": "DOC_OBSERVED",
+     "end": 2.1,
+     "range_raw": "0.0〜2.1",
+     "stage_label": "冒頭・事件",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "溶岩の上を落ちる → 3.53秒のカットで、溶岩ではなく**歪んだ森の地面**に着地（助かった？）。4〜5秒に Bang [音タグ]",
+     "content_status": "DOC_OBSERVED",
+     "end": 3.6,
+     "range_raw": "2.1〜3.6",
+     "stage_label": "展開",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 2.1
+    },
+    {
+     "content": "目の前にエンダーマン。スティーブの怯えた顔に赤の引用符「\"絶体絶命\"」→「(ま、まずい...!!)」",
+     "content_status": "DOC_OBSERVED",
+     "end": 8.0,
+     "range_raw": "5.0〜8",
+     "stage_label": "緊張",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 5.0
+    },
+    {
+     "content": "周りにエンダーマンが何体も。「(ヤッバ...)」→ 2体がこちらを見る",
+     "content_status": "DOC_OBSERVED",
+     "end": 14.0,
+     "range_raw": "10〜14",
+     "stage_label": "クライマックス",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 10.0
+    },
+    {
+     "content": "「(逃げろ...!!)」→ 画面が暗くなって終わる",
+     "content_status": "DOC_OBSERVED",
+     "end": 15.6,
+     "range_raw": "14.4〜15.6",
+     "stage_label": "オチ（なし）",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 14.4
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [],
+  "rows": [
+   {
+    "end": 2.9,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "8年間プレイしたハードコアが台無しになる瞬間"
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 0.32,
+    "status": "DOC_OBSERVED",
+    "text": "8年間プレイしたハードコアが台無しになる瞬間"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 15.58,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -84.3,
+    -10.0,
+    -8.5,
+    -11.5,
+    -10.6,
+    -15.0,
+    -16.9,
+    -12.3,
+    -6.0,
+    -13.6,
+    -12.2,
+    -12.7,
+    -12.4,
+    -12.3,
+    -13.7
+   ],
+   "max_db": -6.0,
+   "median_db": -12.9,
+   "onset": 0.05,
+   "p95_db": -8.0,
+   "spikes": []
+  },
+  "cuts": [
+   2.13,
+   3.53,
+   4.87,
+   5.33,
+   8.0,
+   10.53,
+   14.33
+  ],
+  "cuts_first3s": [
+   2.13
+  ],
+  "dur": 15.58,
+  "layout": {
+   "content": [
+    16,
+    376
+   ],
+   "play": [
+    115,
+    376
+   ],
+   "top": [
+    16,
+    115
+   ]
+  },
+  "motion_median": 1.98,
+  "moves": [
+   [
+    1.67,
+    2.0
+   ],
+   [
+    10.13,
+    10.4
+   ],
+   [
+    13.13,
+    13.4
+   ]
+  ],
+  "n_shots": 8,
+  "n_subs": 8,
+  "shot_mean": 1.95,
+  "shot_median": 1.76,
+  "source": "dream/data/measure/mRndDDRWz00.json",
+  "status": "ok",
+  "sub_changes": [
+   5.33,
+   8.0,
+   10.13,
+   10.53,
+   13.13,
+   13.4,
+   13.73,
+   14.13
+  ],
+  "sub_on_ratio": 0.55,
+  "top_changes": [
+   1.67,
+   2.2,
+   4.87,
+   10.13,
+   10.53,
+   13.13
+  ]
+ },
+ "no": 12,
+ "video_id": "mRndDDRWz00",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 3.0,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "I played hard core for 8 years"
+   }
+  ],
+  "source": "dream/data/asr/mRndDDRWz00.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 2.86,
+    "logprob": -0.11,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "8年間プレイしたハードコアが台無しになる瞬間",
+    "words": [
+     {
+      "end": 0.32,
+      "start": 0.0,
+      "word": "8"
+     },
+     {
+      "end": 0.46,
+      "start": 0.32,
+      "word": "年"
+     },
+     {
+      "end": 0.64,
+      "start": 0.46,
+      "word": "間"
+     },
+     {
+      "end": 0.82,
+      "start": 0.64,
+      "word": "プ"
+     },
+     {
+      "end": 0.88,
+      "start": 0.82,
+      "word": "レ"
+     },
+     {
+      "end": 0.94,
+      "start": 0.88,
+      "word": "イ"
+     },
+     {
+      "end": 1.12,
+      "start": 0.94,
+      "word": "した"
+     },
+     {
+      "end": 1.28,
+      "start": 1.12,
+      "word": "ハ"
+     },
+     {
+      "end": 1.44,
+      "start": 1.28,
+      "word": "ード"
+     },
+     {
+      "end": 1.58,
+      "start": 1.44,
+      "word": "コ"
+     },
+     {
+      "end": 1.64,
+      "start": 1.58,
+      "word": "ア"
+     },
+     {
+      "end": 1.76,
+      "start": 1.64,
+      "word": "が"
+     },
+     {
+      "end": 1.9,
+      "start": 1.76,
+      "word": "台"
+     },
+     {
+      "end": 2.08,
+      "start": 1.9,
+      "word": "無"
+     },
+     {
+      "end": 2.16,
+      "start": 2.08,
+      "word": "し"
+     },
+     {
+      "end": 2.34,
+      "start": 2.16,
+      "word": "にな"
+     },
+     {
+      "end": 2.46,
+      "start": 2.34,
+      "word": "る"
+     },
+     {
+      "end": 2.7,
+      "start": 2.46,
+      "word": "瞬"
+     },
+     {
+      "end": 2.86,
+      "start": 2.7,
+      "word": "間"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/mRndDDRWz00.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}

@@ -1,0 +1,927 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 24.61,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.13,
+   "first_cut_minus_first_row_start": 1.13,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.471,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamとの」",
+      "time_raw": "0.00〜0.27",
+      "visual": "城の中で DaquavisMC が迫る"
+     },
+     {
+      "end": null,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "0.53",
+      "visual": "**モザイク**のかかった顔のアップ"
+     },
+     {
+      "end": 1.0,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「決闘中」",
+      "time_raw": "0.73〜1.00",
+      "visual": "斬り合い"
+     },
+     {
+      "end": 1.73,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**紫**「Daquavisが」",
+      "time_raw": "1.27〜1.73",
+      "visual": "同上"
+     },
+     {
+      "end": 2.73,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「まさかの行動に」",
+      "time_raw": "2.00〜2.73",
+      "visual": "同上"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "3.00",
+      "visual": "カット。高い城の上から見下ろす [実測: 3.00]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.9,
+     "music_mean_during_row": 0.525,
+     "nearest_cut_to_end": 0.1,
+     "nearest_cut_to_start": 1.13,
+     "nearest_subtitle_change_to_end": 1.7,
+     "nearest_subtitle_change_to_start": 0.6,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.9,
+      1.2,
+      1.4,
+      1.8,
+      3.0
+     ],
+     "start": 0.0
+    },
+    {
+     "end": 13.4,
+     "music_mean_during_row": 0.517,
+     "nearest_cut_to_end": 0.07,
+     "nearest_cut_to_start": 0.17,
+     "nearest_subtitle_change_to_end": 1.93,
+     "nearest_subtitle_change_to_start": 0.23,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      8.35,
+      8.6,
+      10.1,
+      11.2,
+      12.15,
+      13.05
+     ],
+     "start": 8.1
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "ひねりの予告",
+     "part": 0,
+     "reason": "「まさかの行動に出ます」と予想外の展開を予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜ですが」の前半の事実",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 1,
+     "reason": "「凡ミスをおかし戦況が一気に変わります」と結果を予告。8.1秒で10秒より前なので規則により R_REHOOK にしない（動画の約1/3での2回目の予告）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 29,
+     "content_lemmas": [
+      "Dream",
+      "決闘",
+      "Daquavis",
+      "まさか",
+      "行動",
+      "出る"
+     ],
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "まさか"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis",
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 5,
+      "動詞": 1,
+      "名詞": 4,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+    },
+    {
+     "chars": 24,
+     "content_lemmas": [
+      "最初",
+      "勝ち進む",
+      "居る",
+      "Daquavis"
+     ],
+     "first_token": {
+      "lemma": "最初",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "最初"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 3,
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 2,
+      "形状詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "最初は順調に勝ち進んでいたDaquavisですが"
+    },
+    {
+     "chars": 23,
+     "content_lemmas": [
+      "彼",
+      "後",
+      "凡",
+      "ミス-mistake",
+      "犯す",
+      "戦況",
+      "一気",
+      "変わる"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "一気に"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 1,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 5,
+      "連体詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "彼はこの後凡ミスをおかし戦況が一気に変わります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "Daquavis",
+     2
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "決闘",
+     1
+    ],
+    [
+     "まさか",
+     1
+    ],
+    [
+     "行動",
+     1
+    ],
+    [
+     "出る",
+     1
+    ],
+    [
+     "最初",
+     1
+    ],
+    [
+     "勝ち進む",
+     1
+    ],
+    [
+     "居る",
+     1
+    ],
+    [
+     "彼",
+     1
+    ],
+    [
+     "後",
+     1
+    ],
+    [
+     "凡",
+     1
+    ],
+    [
+     "ミス-mistake",
+     1
+    ],
+    [
+     "犯す",
+     1
+    ],
+    [
+     "戦況",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームとの決闘中",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "と",
+      "の",
+      "決",
+      "闘",
+      "中"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 24,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームとの決闘中ダクアビスがまさかの行動に出ます",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "と",
+      "の",
+      "決",
+      "闘",
+      "中",
+      "ダ",
+      "ク",
+      "ア",
+      "ビ",
+      "ス",
+      "が",
+      "ま",
+      "さ",
+      "か",
+      "の",
+      "行",
+      "動",
+      "に",
+      "出",
+      "ます"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 24,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ドリームとの決闘中ダクアビスがまさかの行動に出ます",
+     "words": [
+      "ド",
+      "リ",
+      "ーム",
+      "と",
+      "の",
+      "決",
+      "闘",
+      "中",
+      "ダ",
+      "ク",
+      "ア",
+      "ビ",
+      "ス",
+      "が",
+      "ま",
+      "さ",
+      "か",
+      "の",
+      "行",
+      "動",
+      "に",
+      "出",
+      "ます"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 29,
+    "end": 2.9,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "Dream",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Dream"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "まさか"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis",
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "ひねりの予告",
+     "part": 0,
+     "reason": "「まさかの行動に出ます」と予想外の展開を予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_TWIST",
+    "effective_code": "H_TWIST",
+    "quote": "ドリームとの決闘中ダクアビスがまさかの行動に出ます",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamとの」",
+      "time_raw": "0.00〜0.27",
+      "visual": "城の中で DaquavisMC が迫る"
+     },
+     {
+      "end": null,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "同上",
+      "time_raw": "0.53",
+      "visual": "**モザイク**のかかった顔のアップ"
+     },
+     {
+      "end": 1.0,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「決闘中」",
+      "time_raw": "0.73〜1.00",
+      "visual": "斬り合い"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ド"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 9.43,
+    "rows": [
+     {
+      "chars": 29,
+      "chars_per_sec": 10.0,
+      "duration": 2.9,
+      "gap_to_next_row": 5.2,
+      "row": 0
+     },
+     {
+      "chars": 47,
+      "chars_per_sec": 8.87,
+      "duration": 5.3,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 76
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 5.01,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 60,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "まさか"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Daquavis",
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "Dreamとの決闘中Daquavisがまさかの行動に出ます"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Daquavis"
+     ],
+     "question": false,
+     "row": 1,
+     "text": "最初は順調に勝ち進んでいたDaquavisですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "一気に"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "彼はこの後凡ミスをおかし戦況が一気に変わります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [],
+     "from_part": 0,
+     "from_quote": "Dreamとの決闘中Daquavisがまさかの行動に出ます",
+     "from_role": "R_TWIST_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": "何が「まさかの行動」なのかは文から確認できない",
+     "review_status": "UNVERIFIED",
+     "status": "NOT_FOUND_IN_TEXT",
+     "video_id": "1U5Pu0pVtvM"
+    },
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「3-4」",
+       "range_raw": "21.6",
+       "source": "doc_structure",
+       "source_file": "dream/individual/48_1U5Pu0pVtvM.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 4
+      }
+     ],
+     "from_part": 1,
+     "from_quote": "彼はこの後凡ミスをおかし戦況が一気に変わります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 1,
+     "from_start": 8.1,
+     "note": "スコアが「1-3」から「3-4」に変わり、戦況の変化は文から確認できる（凡ミスの中身は確認できない）",
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "1U5Pu0pVtvM"
+    }
+   ],
+   "role_sequence": [
+    "R_TWIST_PREVIEW",
+    "R_SETUP",
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります",
+     "review": {
+      "corrected_code": null,
+      "memo": null,
+      "result": "正しい",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "Ahahaha!",
+     "review": {
+      "corrected_code": null,
+      "memo": null,
+      "result": "正しい",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "決闘、モザイク、ナレーション",
+      "range_raw": "0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "城を見下ろす → Dream の死亡画面 → スコア「1-2」→「1-3」（緑と紫の大きな数字）→ Daquavis「どうやってどうやって×∞」「ｯｼｬｧｧｧｧｧ!!!」",
+      "range_raw": "3〜8",
+      "stage_label": "連勝"
+     },
+     {
+      "content": "空を見上げる画（落下中）→ ナレーション「最初は順調に」「ですが彼はこの後」「凡ミスをおかし」「戦況が一気に変わります」（鳥居の画）",
+      "range_raw": "8.4〜15",
+      "stage_label": "第2の予告"
+     },
+     {
+      "content": "赤い絨毯の通路 → 黄色い金のリンゴ？を持って戦う → 白い火花",
+      "range_raw": "15〜21",
+      "stage_label": "逆転"
+     },
+     {
+      "content": "「3-4」（Dream が追いつく？）→「ブｩｩｩｩｩｩｩｩｩww」",
+      "range_raw": "21.6",
+      "stage_label": "スコア"
+     },
+     {
+      "content": "**黒い画面に「A MICHAEL BAY FILM」**（#32 と同じ締め）",
+      "range_raw": "22.7〜24.6",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     3,
+     8,
+     10,
+     11,
+     12,
+     13
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.9,
+     1.2,
+     1.4,
+     1.8,
+     3.0,
+     8.35,
+     8.6,
+     10.1,
+     11.2,
+     12.15,
+     13.05
+    ],
+    "cuts": 17,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 4,
+     "15": 1,
+     "20": 3,
+     "5": 4
+    },
+    "duration_sec": 24.61,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 8.1
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 13.4,
+    "is_end_position": false,
+    "sec_from_end": 11.21,
+    "start": 8.1,
+    "status": "DOC_OBSERVED",
+    "text": "最初は順調に勝ち進んでいたDaquavisですが 彼はこの後凡ミスをおかし戦況が一気に変わります"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜ですが」の前半の事実",
+     "role": "R_SETUP",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 1,
+     "reason": "「凡ミスをおかし戦況が一気に変わります」と結果を予告。8.1秒で10秒より前なので規則により R_REHOOK にしない（動画の約1/3での2回目の予告）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 22.56,
+    "status": "ok",
+    "text": "Ahahaha!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 8.08,
+    "status": "ok",
+    "text": "最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Ahahaha!",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 48,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/48_1U5Pu0pVtvM.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/1U5Pu0pVtvM.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "1U5Pu0pVtvM"
+}

@@ -1,0 +1,360 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "神ゲーが"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.5,
+     "text": "tier表を"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.8,
+     "text": "巡って争う"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.7,
+     "text": "ゲーム達"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 2.6,
+     "text": "*ポケモンSティア?*"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 3.7,
+     "text": "*ヘビスナ*"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 4.3,
+     "text": "*盾破壊*"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 5.0,
+     "text": "*ダイヤ斧クラフト*"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 6.8,
+     "text": "*1キル*"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "神ゲーtier表を巡って争うゲームたち"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.3,
+     "start": 0.0,
+     "text": "神ゲー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 2.0,
+     "start": 0.5,
+     "text": "tier表を巡って争うゲーム達",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 9.8,
+     "start": 9.5,
+     "text": "ピカチュウ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.3,
+     "start": 10.0,
+     "text": "ふざけ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.7,
+     "start": 16.2,
+     "text": "ガツン！w",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 20.6,
+     "start": 20.0,
+     "text": "草",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 24.3,
+     "start": 24.0,
+     "text": "くぴ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.3,
+     "start": 25.0,
+     "text": "きょキャッチ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 26.3,
+     "start": 25.8,
+     "text": "ピカ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 27.3,
+     "start": 26.8,
+     "text": "かみち",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 2.5,
+     "text": "*ポケモンスティア?*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 3.7,
+     "text": "*ヘビスナ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 4.5,
+     "text": "*盾破壊*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 5.0,
+     "text": "*ダイヤ斧クラフト*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 6.7,
+     "text": "*1キル*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 8.0,
+     "text": "*シールド破壊*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 9.0,
+     "text": "*アーマードウォール*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 10.5,
+     "text": "*縦積みハイグラ待機*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 11.5,
+     "text": "*電光石火*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 14.0,
+     "text": "*コイル召喚*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 15.0,
+     "text": "*磁石*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 16.2,
+     "text": "*ガツン!w*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 17.7,
+     "text": "*マグマダイブ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 18.7,
+     "text": "*ゴローンタ召喚*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 19.2,
+     "text": "*ロックブラスト*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 21.0,
+     "text": "*しかしうまく決まらなかった*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 21.7,
+     "text": "*ダイヤのツルハシ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 23.5,
+     "text": "*一時停止*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 24.7,
+     "text": "*ん…?*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 25.2,
+     "text": "*もしかして…*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 26.0,
+     "text": "*これって…*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 26.7,
+     "text": "*まさか*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 28.2,
+     "text": "*日本人が作ったゲーム*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 29.5,
+     "text": "*めっちゃカメレオン*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 30.7,
+     "text": "*世界中で社会現象*",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-3.5-flash-lite"
+  }
+ ],
+ "video_id": "6QFWDBeoSmU"
+}

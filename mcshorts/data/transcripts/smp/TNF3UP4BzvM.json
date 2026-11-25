@@ -1,0 +1,288 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ジャンクフードとヘルシーな食べ物で3600カロリーに達するまでの違いなんですが",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 17,
+     "text": "これ全部1日で食べれる？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "これは1日に必要な食事量に達してないのでは？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "1日にとるべきカロリーってどれくらい？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 51,
+     "text": "Takisのスナック菓子1袋で？",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "ジャンクフードと\nヘルシーな食べ物で\n3,600カロリーに",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 3,
+     "text": "達するまでの\n違いなんですが",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 17,
+     "text": "これ全部1日で食べれる？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "1日に必要な食事量に\n達してないのでは？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "1日にとるべきカロリーって\nどれくらい？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 27,
+     "text": "うわまじかよ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 30,
+     "text": "いや俺こんなに\n食べれんわ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "2,500カロリーくらい？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 37,
+     "text": "1日のカロリーより\nちょっと多いきいか",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 41,
+     "text": "反対側はなんだ？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 47,
+     "text": "*衝撃*",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 50,
+     "text": "うそだろ..？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 51,
+     "text": "んなわけないって",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 52,
+     "text": "Takisのスナック菓子\n1袋で？",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.0",
+     "text": "ジャンクフードと"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.7",
+     "text": "ヘルシーな食べ物で"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "1.7",
+     "text": "3,600カロリーに"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "3.0",
+     "text": "達するまでの違いなんですが"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "4.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ジャンクフードとヘルシーな食べ物で3600カロリーに達するまでの違いなんですが"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.1,
+     "start": 0.5,
+     "text": "ジャンクフードと ヘルシーな 食べ物で、 3,600キロカロリーに 達するまでの 違いなんですが",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 20.0,
+     "start": 17.6,
+     "text": "これ全部1日で食べれる？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.2,
+     "start": 20.3,
+     "text": "これまだ 1日に必要な食事量に 達してないのでは？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.1,
+     "start": 24.5,
+     "text": "どれくらい？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.0,
+     "start": 27.2,
+     "text": "うわまじかよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 31.1,
+     "start": 30.5,
+     "text": "いや俺こんなに 食べれんわ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 38.3,
+     "start": 37.0,
+     "text": "1日のカロリーより ちょっと多いぐらいか",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.5,
+     "start": 41.0,
+     "text": "反対側はなんだ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 42.7,
+     "start": 42.1,
+     "text": "タッタラダー♪",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 47.4,
+     "start": 47.0,
+     "text": "*衝撃*",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 50.1,
+     "start": 49.5,
+     "text": "うそだろ..？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 53.6,
+     "start": 51.5,
+     "text": "んなわけないって Takisのスナック菓子 1袋で？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 54.1,
+     "start": 53.7,
+     "text": "いや",
+     "track": "japanese_voice"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "TNF3UP4BzvM"
+}

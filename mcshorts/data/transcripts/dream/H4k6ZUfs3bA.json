@@ -1,0 +1,230 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/H4k6ZUfs3bA.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.66,
+     "logprob": -1.03,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "っかくアビスに追い詰められ絶対絶命のピンチに陥るドリームですが"
+    },
+    {
+     "end": 7.02,
+     "logprob": -1.03,
+     "no_speech": 0.0,
+     "start": 3.66,
+     "text": "この後とんでもない逆転撃が巻き起こります"
+    },
+    {
+     "end": 22.46,
+     "logprob": -1.03,
+     "no_speech": 0.0,
+     "start": 17.16,
+     "text": "hayat"
+    },
+    {
+     "end": 26.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 22.46,
+     "text": "I can't... I can't... Please! Please! No! When it's first, I can't shoot it!"
+    },
+    {
+     "end": 29.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 26.46,
+     "text": "As soon as the dragon's up! The quavus!"
+    },
+    {
+     "end": 31.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 29.46,
+     "text": "This is it!"
+    },
+    {
+     "end": 34.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 32.46,
+     "text": "Please! You're dead! You're dead!"
+    },
+    {
+     "end": 40.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 37.46,
+     "text": "Oh my god! Dream! You're dead!"
+    },
+    {
+     "end": 42.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 40.46,
+     "text": "No! No no no no!"
+    },
+    {
+     "end": 45.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 42.46,
+     "text": "Please! Please! No!"
+    },
+    {
+     "end": 47.46,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 45.46,
+     "text": "Yes! No!"
+    },
+    {
+     "end": 53.02,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 47.46,
+     "text": "鬼ごっこではドリームが勝ちましたが果たして pvpではどちらが勝つでしょうか気になる方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/H4k6ZUfs3bA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 5.96,
+     "logprob": -0.15,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ジャクアビスに追い詰められ絶対絶命のピンチに陥るドリームですがこの後とんでもない逆転劇が巻き起こります"
+    },
+    {
+     "end": 49.46,
+     "logprob": -0.2,
+     "no_speech": 0.0,
+     "start": 47.36,
+     "text": "おにごっこではドリームが勝ちましたが"
+    },
+    {
+     "end": 51.62,
+     "logprob": -0.2,
+     "no_speech": 0.0,
+     "start": 49.46,
+     "text": "果たしてPVPではどちらが勝つでしょうか"
+    },
+    {
+     "end": 52.92,
+     "logprob": -0.2,
+     "no_speech": 0.0,
+     "start": 51.62,
+     "text": "気になる方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/H4k6ZUfs3bA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 4.98,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ダクアビスに追い詰められ絶対絶命のピンチに陥るドリームですがこの後とんでもない逆転"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/H4k6ZUfs3bA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 51.66,
+     "no_speech": 0.0,
+     "start": 46.36,
+     "text": "オニボッコではドリームが勝ちましたが果たしてPVPではどちらが勝つでしょうか"
+    },
+    {
+     "end": 53.02,
+     "no_speech": 0.0,
+     "start": 51.66,
+     "text": "気になる方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ダクアビスに追い詰められ絶体絶命のピンチに陥るドリーム。ですがこの後、とんでもない逆転劇が巻き起こります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Daquavis（紫）に追い詰められ（白）→ 絶体絶命の（赤）→ ピンチに陥るDream（緑）→ ですがこの後（白）→ とんでもない逆転劇が...（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "H4k6ZUfs3bA"
+}

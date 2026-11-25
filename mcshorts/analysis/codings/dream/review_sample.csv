@@ -1,0 +1,19 @@
+video_id,dimension,code,code_label,also,quote,source_file,source_lang,quote_start_sec,reason,flag,確認結果（正しい/違う）,正しい分類,メモ
+0iK0gxEUo0U,hook,H_INTRO,人物・状況の紹介だけ,,マイクラの世界にやってきたボードナムズイですか?,mcshorts/data/transcripts/dream/0iK0gxEUo0U.json,ja,0.0,「〜にやってきた〇〇」の紹介。文末は「ですか?」と書き起こされているが、問いかけか「ですが」の聞き間違いかは文から決められないため、確実に言える紹介に分類,聞き間違いの可能性が高い,正しい,,
+0iK0gxEUo0U,development,D_PROCESS,作業・手順の進行,,An underground oven!,mcshorts/data/transcripts/dream/0iK0gxEUo0U.json,en,66.46,友人が見たことのない調理法を見せる手順が中心（Ziggy's here to show me a way of cooking）,,違う,DX,前後の発言は実演への反応だけで、手順の進行は文から確認できない。2.6〜30秒は発言なし
+0iK0gxEUo0U,payoff,P_COMMENT,ツッコミ・感想の一言,,こんなことをする料理人は滅多にいないでしょうね,mcshorts/data/transcripts/dream/0iK0gxEUo0U.json,ja,73.7,最後に日本語ナレーションの感想で締める,,正しい,,
+1U5Pu0pVtvM,hook,H_TWIST,逆接・ひねりの予告,,ドリームとの決闘中ダクアビスがまさかの行動に出ます,mcshorts/data/transcripts/dream/1U5Pu0pVtvM.json,ja,0.0,「まさかの行動に出ます」で予想外の展開を予告。何をするかは言っていない,,正しい,,
+1U5Pu0pVtvM,development,D_BATTLE,対決・攻防,,最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります,mcshorts/data/transcripts/dream/1U5Pu0pVtvM.json,ja,8.08,決闘の戦況の変化を中盤のナレーションで予告,,正しい,,
+1U5Pu0pVtvM,payoff,PX,判断不能,,Ahahaha!,mcshorts/data/transcripts/dream/1U5Pu0pVtvM.json,en,22.56,最後は笑い声だけで、結末が文から分からない,,正しい,,
+D6srtcztceU,hook,H_RESULT,結果・結末の先出し,,テストをカンニングしたキッズの悲惨なマツローを,mcshorts/data/transcripts/dream/D6srtcztceU.json,ja,0.0,「悲惨な末路」と結末を先に言う（「マツロー」は「末路」の聞き間違いの可能性）,,正しい,,
+D6srtcztceU,development,D_DIALOGUE,会話・掛け合い,,all right today's show and tell let's go i wonder what this guy brought,mcshorts/data/transcripts/dream/D6srtcztceU.json,en,30.0,発表会（show and tell）での会話が中心,,違う,DX,前後の発言を見ても、登場人物どうしの会話・言い合いが中心とは確認できません。一人の反応が大半なので、会話型とは断定できません
+D6srtcztceU,payoff,PX,判断不能,,I'm not a hack.,mcshorts/data/transcripts/dream/D6srtcztceU.json,en,54.1,最後の文は短い台詞だけで、どう終わるかが文から分からない,,正しい,,
+O_8PGIz3TLc,hook,H_LABEL,強い評価・レッテル,H_INTRO,マイクラ鬼ごっこでありえない着地を見せるドリームという男,mcshorts/data/transcripts/dream/O_8PGIz3TLc.json,ja,0.0,「ありえない着地」と強い評価を付けた人物の紹介,,正しい,,
+O_8PGIz3TLc,development,D_BATTLE,対決・攻防,,"Oh, watch out, watch out, watch out!",mcshorts/data/transcripts/dream/O_8PGIz3TLc.json,en,12.5,鬼ごっこの実況が中心。中盤に「またもや変態プレイ」とナレーションで再予告,,正しい,,
+O_8PGIz3TLc,payoff,P_COMMENT,ツッコミ・感想の一言,,もはやここまで来ると彼はマイクラの神様なのかもしれませんね,mcshorts/data/transcripts/dream/O_8PGIz3TLc.json,ja,58.38,最後にナレーションの感想で締める,,正しい,,
+d2PlYjZcRo0,hook,H_RESULT,結果・結末の先出し,,ブロックスを プラスタらこうなんだ,mcshorts/data/transcripts/dream/d2PlYjZcRo0.json,ja,0.0,「〜たらこうなる」の形で結末を先に言う（聞き間違いの可能性）,,違う,HX,「〜たらこうなる」という形は読めますが、肝心の出来事が聞き取れず、結果の先出しとは確定できません（返答では DX。フックの判断不能の分類名 HX で記録）
+d2PlYjZcRo0,development,D_ESCALATE,段階的なエスカレート,,I'll get you a laptop.,mcshorts/data/transcripts/dream/d2PlYjZcRo0.json,en,40.48,Xbox→車→ノートPC→何でも見られると、条件がだんだんエスカレートする,,正しい,,D_ESCALATE の根拠は30〜43秒の区間に限定
+d2PlYjZcRo0,payoff,P_COMMENT,ツッコミ・感想の一言,,普通にサイコパスだと思う方はチャンネル登録,mcshorts/data/transcripts/dream/d2PlYjZcRo0.json,ja,68.66,最後にナレーションの一言で締める,,正しい,,
+i2o5r0vZOrg,hook,H_RESULT,結果・結末の先出し,,ドリームになってしまったドリームがついに限界を迎えます,mcshorts/data/transcripts/dream/i2o5r0vZOrg.json,ja,2.66,「ついに限界を迎えます」と結末を先に言う（「ドリームになってしまった」は聞き間違いの可能性）,,違う,HX,「限界を迎えます」は結果の予告に見えますが、主語の聞き間違いが大きく、内容を確認できません（返答では DX。フックの判断不能の分類名 HX で記録）
+i2o5r0vZOrg,development,DX,判断不能,,,mcshorts/data/transcripts/dream/i2o5r0vZOrg.json,ja,,中盤の書き起こしが意味の通らない文だけ,,正しい,,
+i2o5r0vZOrg,payoff,PX,判断不能,,I DISOWED YOU!!!,mcshorts/data/transcripts/dream/i2o5r0vZOrg.json,ja,26.42,最後の台詞（I DISOWED YOU!!!）はあるが、codebook のどの型か文だけでは決めにくい,,正しい,,

@@ -1,0 +1,1870 @@
+{
+ "id": "d2PlYjZcRo0",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 1.5,
+    "text": "ブロックスを プラスタらこうなんだ",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      0.0,
+      0.14,
+      "ブ"
+     ],
+     [
+      0.14,
+      0.28,
+      "ロ"
+     ],
+     [
+      0.28,
+      0.4,
+      "ック"
+     ],
+     [
+      0.4,
+      0.54,
+      "ス"
+     ],
+     [
+      0.54,
+      0.66,
+      "を"
+     ],
+     [
+      0.66,
+      0.8,
+      " プ"
+     ],
+     [
+      0.8,
+      0.88,
+      "ラ"
+     ],
+     [
+      0.88,
+      0.94,
+      "ス"
+     ],
+     [
+      0.94,
+      1.06,
+      "タ"
+     ],
+     [
+      1.06,
+      1.14,
+      "ら"
+     ],
+     [
+      1.14,
+      1.34,
+      "こう"
+     ],
+     [
+      1.34,
+      1.5,
+      "なんだ"
+     ]
+    ]
+   },
+   {
+    "start": 2.16,
+    "end": 2.9,
+    "text": "え bro、 누のエメラル",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      2.16,
+      2.48,
+      "え"
+     ],
+     [
+      2.48,
+      2.72,
+      " bro、"
+     ],
+     [
+      2.84,
+      2.9,
+      " 누"
+     ],
+     [
+      2.9,
+      2.9,
+      "の"
+     ],
+     [
+      2.9,
+      2.9,
+      "エ"
+     ],
+     [
+      2.9,
+      2.9,
+      "メ"
+     ],
+     [
+      2.9,
+      2.9,
+      "ラ"
+     ],
+     [
+      2.9,
+      2.9,
+      "ル"
+     ]
+    ]
+   },
+   {
+    "start": 2.9,
+    "end": 3.4,
+    "text": "Hey bro, give me that エメラル",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      2.9,
+      2.9,
+      "Hey"
+     ],
+     [
+      2.9,
+      2.9,
+      " bro,"
+     ],
+     [
+      2.9,
+      2.9,
+      " give"
+     ],
+     [
+      2.9,
+      2.98,
+      " me"
+     ],
+     [
+      2.98,
+      3.12,
+      " that"
+     ],
+     [
+      3.24,
+      3.28,
+      " エ"
+     ],
+     [
+      3.28,
+      3.34,
+      "メ"
+     ],
+     [
+      3.34,
+      3.4,
+      "ラ"
+     ],
+     [
+      3.4,
+      3.4,
+      "ル"
+     ]
+    ]
+   },
+   {
+    "start": 4.58,
+    "end": 5.88,
+    "text": "Alright, how are you gonna stop me?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      4.58,
+      4.9,
+      "Alright,"
+     ],
+     [
+      5.02,
+      5.08,
+      " how"
+     ],
+     [
+      5.08,
+      5.22,
+      " are"
+     ],
+     [
+      5.22,
+      5.24,
+      " you"
+     ],
+     [
+      5.24,
+      5.38,
+      " gonna"
+     ],
+     [
+      5.38,
+      5.64,
+      " stop"
+     ],
+     [
+      5.64,
+      5.88,
+      " me?"
+     ]
+    ]
+   },
+   {
+    "start": 7.0,
+    "end": 7.52,
+    "text": "Wait, what?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      7.0,
+      7.32,
+      "Wait,"
+     ],
+     [
+      7.48,
+      7.52,
+      " what?"
+     ]
+    ]
+   },
+   {
+    "start": 8.86,
+    "end": 9.66,
+    "text": "DIGUSTY",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      8.86,
+      9.18,
+      "DI"
+     ],
+     [
+      9.18,
+      9.34,
+      "G"
+     ],
+     [
+      9.34,
+      9.52,
+      "UST"
+     ],
+     [
+      9.52,
+      9.66,
+      "Y"
+     ]
+    ]
+   },
+   {
+    "start": 9.66,
+    "end": 10.36,
+    "text": "It's taking your stuff",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      9.66,
+      9.8,
+      "It"
+     ],
+     [
+      9.8,
+      9.8,
+      "'s"
+     ],
+     [
+      9.8,
+      9.96,
+      " taking"
+     ],
+     [
+      9.96,
+      10.12,
+      " your"
+     ],
+     [
+      10.12,
+      10.36,
+      " stuff"
+     ]
+    ]
+   },
+   {
+    "start": 11.1,
+    "end": 11.42,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      11.1,
+      11.42,
+      "What?"
+     ]
+    ]
+   },
+   {
+    "start": 11.64,
+    "end": 11.66,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      11.64,
+      11.66,
+      "What?"
+     ]
+    ]
+   },
+   {
+    "start": 11.66,
+    "end": 12.16,
+    "text": "Just milk?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      11.66,
+      11.76,
+      "Just"
+     ],
+     [
+      11.76,
+      12.16,
+      " milk?"
+     ]
+    ]
+   },
+   {
+    "start": 12.44,
+    "end": 13.28,
+    "text": "Whatever, I'll tell you",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      12.44,
+      12.56,
+      "Wh"
+     ],
+     [
+      12.56,
+      12.76,
+      "atever,"
+     ],
+     [
+      12.9,
+      12.92,
+      " I"
+     ],
+     [
+      12.92,
+      12.98,
+      "'ll"
+     ],
+     [
+      12.98,
+      13.18,
+      " tell"
+     ],
+     [
+      13.18,
+      13.28,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 13.68,
+    "end": 14.74,
+    "text": "Why am I nauseous?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      13.68,
+      14.0,
+      "Why"
+     ],
+     [
+      14.0,
+      14.12,
+      " am"
+     ],
+     [
+      14.12,
+      14.22,
+      " I"
+     ],
+     [
+      14.22,
+      14.44,
+      " nause"
+     ],
+     [
+      14.44,
+      14.74,
+      "ous?"
+     ]
+    ]
+   },
+   {
+    "start": 14.82,
+    "end": 16.2,
+    "text": "I had soooo",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      14.82,
+      14.94,
+      "I"
+     ],
+     [
+      14.94,
+      15.28,
+      " had"
+     ],
+     [
+      15.28,
+      15.66,
+      " so"
+     ],
+     [
+      15.66,
+      16.2,
+      "ooo"
+     ]
+    ]
+   },
+   {
+    "start": 16.2,
+    "end": 16.72,
+    "text": "Nah",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      16.2,
+      16.24,
+      "N"
+     ],
+     [
+      16.24,
+      16.72,
+      "ah"
+     ]
+    ]
+   },
+   {
+    "start": 16.72,
+    "end": 18.12,
+    "text": "Tell me that was milk!",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      16.72,
+      17.3,
+      "Tell"
+     ],
+     [
+      17.3,
+      17.48,
+      " me"
+     ],
+     [
+      17.48,
+      17.62,
+      " that"
+     ],
+     [
+      17.62,
+      17.8,
+      " was"
+     ],
+     [
+      17.8,
+      18.12,
+      " milk!"
+     ]
+    ]
+   },
+   {
+    "start": 18.34,
+    "end": 19.28,
+    "text": "Alright, no more trolling",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      18.34,
+      18.46,
+      "Alright,"
+     ],
+     [
+      18.56,
+      18.62,
+      " no"
+     ],
+     [
+      18.62,
+      18.8,
+      " more"
+     ],
+     [
+      18.8,
+      19.02,
+      " tro"
+     ],
+     [
+      19.02,
+      19.28,
+      "lling"
+     ]
+    ]
+   },
+   {
+    "start": 19.28,
+    "end": 20.26,
+    "text": "Give me that diamond bro",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      19.28,
+      19.46,
+      "Give"
+     ],
+     [
+      19.46,
+      19.56,
+      " me"
+     ],
+     [
+      19.56,
+      19.7,
+      " that"
+     ],
+     [
+      19.7,
+      20.0,
+      " diamond"
+     ],
+     [
+      20.0,
+      20.26,
+      " bro"
+     ]
+    ]
+   },
+   {
+    "start": 20.26,
+    "end": 20.6,
+    "text": "Okay",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      20.26,
+      20.6,
+      "Okay"
+     ]
+    ]
+   },
+   {
+    "start": 20.6,
+    "end": 21.48,
+    "text": "Oh, bet",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      20.6,
+      21.2,
+      "Oh,"
+     ],
+     [
+      21.26,
+      21.48,
+      " bet"
+     ]
+    ]
+   },
+   {
+    "start": 21.48,
+    "end": 22.98,
+    "text": "But first, let me do something",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      21.48,
+      21.76,
+      "But"
+     ],
+     [
+      21.76,
+      22.08,
+      " first,"
+     ],
+     [
+      22.26,
+      22.38,
+      " let"
+     ],
+     [
+      22.38,
+      22.48,
+      " me"
+     ],
+     [
+      22.48,
+      22.64,
+      " do"
+     ],
+     [
+      22.64,
+      22.98,
+      " something"
+     ]
+    ]
+   },
+   {
+    "start": 22.98,
+    "end": 23.76,
+    "text": "OKAY, sure",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      22.98,
+      23.36,
+      "OK"
+     ],
+     [
+      23.36,
+      23.6,
+      "AY,"
+     ],
+     [
+      23.6,
+      23.76,
+      " sure"
+     ]
+    ]
+   },
+   {
+    "start": 24.12,
+    "end": 24.44,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      24.12,
+      24.44,
+      "No!"
+     ]
+    ]
+   },
+   {
+    "start": 24.66,
+    "end": 24.98,
+    "text": "What the?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      24.66,
+      24.76,
+      "What"
+     ],
+     [
+      24.76,
+      24.98,
+      " the?"
+     ]
+    ]
+   },
+   {
+    "start": 25.12,
+    "end": 25.98,
+    "text": "Bro, you're disgusting",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      25.12,
+      25.26,
+      "Bro,"
+     ],
+     [
+      25.38,
+      25.44,
+      " you"
+     ],
+     [
+      25.44,
+      25.52,
+      "'re"
+     ],
+     [
+      25.52,
+      25.98,
+      " disgusting"
+     ]
+    ]
+   },
+   {
+    "start": 25.98,
+    "end": 27.14,
+    "text": "Now, you're gonna troll me?",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      25.98,
+      26.4,
+      "Now,"
+     ],
+     [
+      26.52,
+      26.56,
+      " you"
+     ],
+     [
+      26.56,
+      26.66,
+      "'re"
+     ],
+     [
+      26.66,
+      26.72,
+      " gonna"
+     ],
+     [
+      26.72,
+      26.96,
+      " troll"
+     ],
+     [
+      26.96,
+      27.14,
+      " me?"
+     ]
+    ]
+   },
+   {
+    "start": 27.18,
+    "end": 27.86,
+    "text": "Imma troll you",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      27.18,
+      27.24,
+      "I"
+     ],
+     [
+      27.24,
+      27.34,
+      "mma"
+     ],
+     [
+      27.34,
+      27.62,
+      " troll"
+     ],
+     [
+      27.62,
+      27.86,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 27.86,
+    "end": 29.54,
+    "text": "This minecraft's gonna come speeding down",
+    "no_speech": 0.0,
+    "logprob": -0.88,
+    "words": [
+     [
+      27.86,
+      28.14,
+      "This"
+     ],
+     [
+      28.14,
+      28.32,
+      " mine"
+     ],
+     [
+      28.32,
+      28.48,
+      "craft"
+     ],
+     [
+      28.48,
+      28.58,
+      "'s"
+     ],
+     [
+      28.58,
+      28.68,
+      " gonna"
+     ],
+     [
+      28.68,
+      28.88,
+      " come"
+     ],
+     [
+      28.88,
+      29.26,
+      " speeding"
+     ],
+     [
+      29.26,
+      29.54,
+      " down"
+     ]
+    ]
+   },
+   {
+    "start": 29.54,
+    "end": 31.52,
+    "text": "You're gonna have to save either your mom or dad",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      29.54,
+      29.68,
+      "You"
+     ],
+     [
+      29.68,
+      29.72,
+      "'re"
+     ],
+     [
+      29.72,
+      29.82,
+      " gonna"
+     ],
+     [
+      29.82,
+      30.02,
+      " have"
+     ],
+     [
+      30.02,
+      30.18,
+      " to"
+     ],
+     [
+      30.18,
+      30.44,
+      " save"
+     ],
+     [
+      30.44,
+      30.68,
+      " either"
+     ],
+     [
+      30.68,
+      30.88,
+      " your"
+     ],
+     [
+      30.88,
+      31.1,
+      " mom"
+     ],
+     [
+      31.1,
+      31.24,
+      " or"
+     ],
+     [
+      31.24,
+      31.52,
+      " dad"
+     ]
+    ]
+   },
+   {
+    "start": 31.52,
+    "end": 32.38,
+    "text": "Alright, choose bro",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      31.52,
+      31.82,
+      "Alright,"
+     ],
+     [
+      31.9,
+      32.14,
+      " choose"
+     ],
+     [
+      32.14,
+      32.38,
+      " bro"
+     ]
+    ]
+   },
+   {
+    "start": 32.38,
+    "end": 35.84,
+    "text": "My boy, your mother should be saved",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      32.38,
+      32.8,
+      "My"
+     ],
+     [
+      32.8,
+      34.32,
+      " boy,"
+     ],
+     [
+      34.54,
+      34.74,
+      " your"
+     ],
+     [
+      34.74,
+      35.0,
+      " mother"
+     ],
+     [
+      35.0,
+      35.22,
+      " should"
+     ],
+     [
+      35.22,
+      35.38,
+      " be"
+     ],
+     [
+      35.38,
+      35.84,
+      " saved"
+     ]
+    ]
+   },
+   {
+    "start": 35.84,
+    "end": 37.06,
+    "text": "But I'll get you an Xbox",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      35.84,
+      36.18,
+      "But"
+     ],
+     [
+      36.18,
+      36.3,
+      " I"
+     ],
+     [
+      36.3,
+      36.34,
+      "'ll"
+     ],
+     [
+      36.34,
+      36.42,
+      " get"
+     ],
+     [
+      36.42,
+      36.58,
+      " you"
+     ],
+     [
+      36.58,
+      36.78,
+      " an"
+     ],
+     [
+      36.78,
+      37.06,
+      " Xbox"
+     ]
+    ]
+   },
+   {
+    "start": 37.06,
+    "end": 39.54,
+    "text": "I'll get you a car",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      37.06,
+      37.9,
+      "I"
+     ],
+     [
+      37.9,
+      38.68,
+      "'ll"
+     ],
+     [
+      38.68,
+      38.82,
+      " get"
+     ],
+     [
+      38.82,
+      38.98,
+      " you"
+     ],
+     [
+      38.98,
+      39.12,
+      " a"
+     ],
+     [
+      39.12,
+      39.54,
+      " car"
+     ]
+    ]
+   },
+   {
+    "start": 39.54,
+    "end": 41.34,
+    "text": "I'll get you a laptop",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      39.54,
+      40.08,
+      "I"
+     ],
+     [
+      40.08,
+      40.3,
+      "'ll"
+     ],
+     [
+      40.3,
+      40.72,
+      " get"
+     ],
+     [
+      40.72,
+      40.88,
+      " you"
+     ],
+     [
+      40.88,
+      41.02,
+      " a"
+     ],
+     [
+      41.02,
+      41.34,
+      " laptop"
+     ]
+    ]
+   },
+   {
+    "start": 42.46,
+    "end": 44.22,
+    "text": "And you can visit any website",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      42.46,
+      42.9,
+      "And"
+     ],
+     [
+      42.9,
+      43.02,
+      " you"
+     ],
+     [
+      43.02,
+      43.18,
+      " can"
+     ],
+     [
+      43.18,
+      43.44,
+      " visit"
+     ],
+     [
+      43.44,
+      43.86,
+      " any"
+     ],
+     [
+      43.86,
+      44.22,
+      " website"
+     ]
+    ]
+   },
+   {
+    "start": 44.22,
+    "end": 46.64,
+    "text": "Oh, but it was too late",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      44.22,
+      44.88,
+      "Oh,"
+     ],
+     [
+      45.58,
+      45.84,
+      " but"
+     ],
+     [
+      45.84,
+      45.92,
+      " it"
+     ],
+     [
+      45.92,
+      46.06,
+      " was"
+     ],
+     [
+      46.06,
+      46.24,
+      " too"
+     ],
+     [
+      46.24,
+      46.64,
+      " late"
+     ]
+    ]
+   },
+   {
+    "start": 47.56,
+    "end": 48.8,
+    "text": "Bro, I regret this",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      47.56,
+      48.0,
+      "Bro,"
+     ],
+     [
+      48.12,
+      48.12,
+      " I"
+     ],
+     [
+      48.12,
+      48.4,
+      " regret"
+     ],
+     [
+      48.4,
+      48.8,
+      " this"
+     ]
+    ]
+   },
+   {
+    "start": 48.8,
+    "end": 49.8,
+    "text": "I'm sorry bro",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      48.8,
+      48.96,
+      "I"
+     ],
+     [
+      48.96,
+      49.02,
+      "'m"
+     ],
+     [
+      49.02,
+      49.4,
+      " sorry"
+     ],
+     [
+      49.4,
+      49.8,
+      " bro"
+     ]
+    ]
+   },
+   {
+    "start": 49.8,
+    "end": 51.22,
+    "text": "No, you're still alive",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      49.8,
+      50.4,
+      "No,"
+     ],
+     [
+      50.48,
+      50.58,
+      " you"
+     ],
+     [
+      50.58,
+      50.68,
+      "'re"
+     ],
+     [
+      50.68,
+      50.8,
+      " still"
+     ],
+     [
+      50.8,
+      51.22,
+      " alive"
+     ]
+    ]
+   },
+   {
+    "start": 51.22,
+    "end": 52.14,
+    "text": "What's up then",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      51.22,
+      51.58,
+      "What"
+     ],
+     [
+      51.58,
+      51.72,
+      "'s"
+     ],
+     [
+      51.72,
+      51.96,
+      " up"
+     ],
+     [
+      51.96,
+      52.14,
+      " then"
+     ]
+    ]
+   },
+   {
+    "start": 52.78,
+    "end": 54.02,
+    "text": "Bro, I regret this",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      52.78,
+      53.22,
+      "Bro,"
+     ],
+     [
+      53.34,
+      53.36,
+      " I"
+     ],
+     [
+      53.36,
+      53.68,
+      " regret"
+     ],
+     [
+      53.68,
+      54.02,
+      " this"
+     ]
+    ]
+   },
+   {
+    "start": 54.02,
+    "end": 54.96,
+    "text": "I'm sorry bro",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      54.02,
+      54.2,
+      "I"
+     ],
+     [
+      54.2,
+      54.24,
+      "'m"
+     ],
+     [
+      54.24,
+      54.64,
+      " sorry"
+     ],
+     [
+      54.64,
+      54.96,
+      " bro"
+     ]
+    ]
+   },
+   {
+    "start": 54.96,
+    "end": 56.14,
+    "text": "No, is he still alive though",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      54.96,
+      55.16,
+      "No,"
+     ],
+     [
+      55.24,
+      55.34,
+      " is"
+     ],
+     [
+      55.34,
+      55.42,
+      " he"
+     ],
+     [
+      55.42,
+      55.6,
+      " still"
+     ],
+     [
+      55.6,
+      55.9,
+      " alive"
+     ],
+     [
+      55.9,
+      56.14,
+      " though"
+     ]
+    ]
+   },
+   {
+    "start": 56.64,
+    "end": 59.3,
+    "text": "No, what's up then",
+    "no_speech": 0.0,
+    "logprob": -0.24,
+    "words": [
+     [
+      56.64,
+      57.08,
+      "No,"
+     ],
+     [
+      58.54,
+      58.74,
+      " what"
+     ],
+     [
+      58.74,
+      58.82,
+      "'s"
+     ],
+     [
+      58.82,
+      59.06,
+      " up"
+     ],
+     [
+      59.06,
+      59.3,
+      " then"
+     ]
+    ]
+   },
+   {
+    "start": 68.66,
+    "end": 71.22,
+    "text": "普通にサイコパスだと思う方はチャンネル登録",
+    "no_speech": 0.0,
+    "logprob": -0.2,
+    "words": [
+     [
+      68.66,
+      68.94,
+      "普"
+     ],
+     [
+      68.94,
+      69.22,
+      "通"
+     ],
+     [
+      69.22,
+      69.32,
+      "に"
+     ],
+     [
+      69.32,
+      69.46,
+      "サ"
+     ],
+     [
+      69.46,
+      69.52,
+      "イ"
+     ],
+     [
+      69.52,
+      69.6,
+      "コ"
+     ],
+     [
+      69.6,
+      69.7,
+      "パ"
+     ],
+     [
+      69.7,
+      69.78,
+      "ス"
+     ],
+     [
+      69.78,
+      69.86,
+      "だ"
+     ],
+     [
+      69.86,
+      70.1,
+      "と思"
+     ],
+     [
+      70.1,
+      70.24,
+      "う"
+     ],
+     [
+      70.24,
+      70.36,
+      "方"
+     ],
+     [
+      70.36,
+      70.5,
+      "は"
+     ],
+     [
+      70.5,
+      70.76,
+      "チャンネル"
+     ],
+     [
+      70.76,
+      71.22,
+      "登録"
+     ]
+    ]
+   },
+   {
+    "start": 71.22,
+    "end": 73.02,
+    "text": "あと絶対あの牛乳スッシアン",
+    "no_speech": 0.0,
+    "logprob": -0.2,
+    "words": [
+     [
+      71.22,
+      71.52,
+      "あと"
+     ],
+     [
+      71.52,
+      71.72,
+      "絶"
+     ],
+     [
+      71.72,
+      71.88,
+      "対"
+     ],
+     [
+      71.88,
+      72.08,
+      "あの"
+     ],
+     [
+      72.08,
+      72.26,
+      "牛"
+     ],
+     [
+      72.26,
+      72.48,
+      "乳"
+     ],
+     [
+      72.48,
+      72.6,
+      "ス"
+     ],
+     [
+      72.6,
+      72.7,
+      "ッ"
+     ],
+     [
+      72.7,
+      72.82,
+      "シ"
+     ],
+     [
+      72.82,
+      72.94,
+      "ア"
+     ],
+     [
+      72.94,
+      73.02,
+      "ン"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 3.4,
+    "text": "Hey, bro, give me that Emerald",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 3.4,
+    "end": 5.88,
+    "text": "Alright, how are you gonna stop me?",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 7.18,
+    "end": 7.56,
+    "text": "Wait, what?",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 8.96,
+    "end": 9.6,
+    "text": "Disgusting!",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 9.76,
+    "end": 10.4,
+    "text": "Taking your stuff",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 10.4,
+    "end": 12.2,
+    "text": "What? Just milk?",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 12.42,
+    "end": 13.64,
+    "text": "Whatever, I'll take it",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 13.64,
+    "end": 14.72,
+    "text": "Why am I nauseous?",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 16.32,
+    "end": 18.18,
+    "text": "Nah, tell me that was milk!",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 18.26,
+    "end": 19.3,
+    "text": "Alright, no more trolling!",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 19.38,
+    "end": 20.34,
+    "text": "Give me that diamond, bro",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 20.34,
+    "end": 21.56,
+    "text": "Oh, bet",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 21.56,
+    "end": 23.8,
+    "text": "Oh, okay, sure",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 23.8,
+    "end": 26.1,
+    "text": "Nah, what the? Bro, you're disgusting",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 26.1,
+    "end": 27.92,
+    "text": "Nah, you're gonna troll me? I'm gonna troll you",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 27.92,
+    "end": 29.58,
+    "text": "This Minecraft's gonna come speeding down",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 29.58,
+    "end": 31.58,
+    "text": "You're going to have to save either your mom or dad.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 31.66,
+    "end": 32.44,
+    "text": "All right, choose, bro.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 32.52,
+    "end": 33.34,
+    "text": "Help me.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 33.82,
+    "end": 35.84,
+    "text": "My boy, your mother should be saved.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 36.06,
+    "end": 37.06,
+    "text": "But I'll get you an Xbox.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 37.82,
+    "end": 38.22,
+    "text": "Oh.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 38.48,
+    "end": 39.56,
+    "text": "I'll get you a car.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 39.84,
+    "end": 40.28,
+    "text": "Oh.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 40.48,
+    "end": 41.36,
+    "text": "I'll get you a laptop.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 42.5,
+    "end": 44.24,
+    "text": "And you can visit any website.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 44.64,
+    "end": 45.04,
+    "text": "Oh.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 45.28,
+    "end": 46.66,
+    "text": "Oh, but it was too late.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 47.62,
+    "end": 48.84,
+    "text": "Bro, I regret this.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 48.9,
+    "end": 49.78,
+    "text": "I'm sorry, bro.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 50.22,
+    "end": 51.26,
+    "text": "Nah, you're still alive?",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 51.44,
+    "end": 52.18,
+    "text": "What's up, then?",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 52.84,
+    "end": 54.08,
+    "text": "Bro, I regret this.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 54.14,
+    "end": 55.0,
+    "text": "I'm sorry, bro.",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 55.1,
+    "end": 56.14,
+    "text": "Nah, is he still alive, though?",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 56.78,
+    "end": 57.06,
+    "text": "Huh?",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 58.12,
+    "end": 59.36,
+    "text": "Nah, what's up, then?",
+    "no_speech": 0.0,
+    "logprob": -0.32
+   },
+   {
+    "start": 59.58,
+    "end": 63.78,
+    "text": "Nah, I'm sorry for your loss",
+    "no_speech": 0.0,
+    "logprob": -0.41
+   },
+   {
+    "start": 63.78,
+    "end": 65.18,
+    "text": "Why you still got a pulse though?",
+    "no_speech": 0.0,
+    "logprob": -0.41
+   },
+   {
+    "start": 65.9,
+    "end": 66.64,
+    "text": "Let's go!",
+    "no_speech": 0.0,
+    "logprob": -0.41
+   }
+  ]
+ }
+}

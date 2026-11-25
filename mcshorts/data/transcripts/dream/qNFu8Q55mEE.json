@@ -1,0 +1,161 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/qNFu8Q55mEE.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.64,
+     "logprob": -1.02,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "The men who are most difficult in the world"
+    },
+    {
+     "end": 34.24,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "Dude, you're actually so bad. This is so easy. You're garbage. Yeah, get out of here. Bye"
+    },
+    {
+     "end": 56.76,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 54.76,
+     "text": "Is that a YouTube video"
+    },
+    {
+     "end": 89.98,
+     "logprob": -0.95,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "Thank you."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/qNFu8Q55mEE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.46,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "世界一難しいゲームにはまった男たち"
+    },
+    {
+     "end": 35.34,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 30.08,
+     "text": "DUDE YOU'RE ACTUALLY SO BAD THIS IS SO EASY YOU'RE GARBAGE YEAH GET OUT OF HERE BYEEE"
+    },
+    {
+     "end": 46.98,
+     "logprob": -0.74,
+     "no_speech": 0.0,
+     "start": 43.6,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/qNFu8Q55mEE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "世界一難しいゲームにハマった男たち"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/qNFu8Q55mEE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 57.72,
+     "no_speech": 0.0,
+     "start": 55.72,
+     "text": "YouTube Video"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "世界一難しいゲームにハマった男たち。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "世界一難しい（赤）→ ゲームにハマった（白）→ 漢達（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "qNFu8Q55mEE"
+}

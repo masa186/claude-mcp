@@ -1,0 +1,564 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 38.03,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 0.93,
+   "first_cut_minus_first_row_start": 0.93,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.632,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「これが女の子と」",
+      "time_raw": "0.00〜0.73",
+      "visual": "女性の配信者。家の中で猫を何匹も飼っている"
+     },
+     {
+      "end": 1.47,
+      "start": 0.93,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**青**「漢の子の」",
+      "time_raw": "0.93〜1.47",
+      "visual": "カット。男性の配信者。**巨大な銃（ガトリングのような武器）**を構えている [実測: 0.93]"
+     },
+     {
+      "end": 2.27,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「マイクラを遊ぶ時の」",
+      "time_raw": "1.73〜2.27",
+      "visual": "銃で豚を撃つ"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「違いです」",
+      "time_raw": "2.53〜3.00",
+      "visual": "豚を撃つ"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.9,
+     "music_mean_during_row": 0.645,
+     "nearest_cut_to_end": 0.17,
+     "nearest_cut_to_start": 0.93,
+     "nearest_subtitle_change_to_end": 0.43,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「これが〜の違いです」と内容を紹介する",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 24,
+     "content_lemmas": [
+      "此れ",
+      "女の子",
+      "男の子",
+      "マイ-my",
+      "クラ-clarinet",
+      "遊ぶ",
+      "時",
+      "違い"
+     ],
+     "first_token": {
+      "lemma": "此れ",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "これ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": true,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "です(断定)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 1,
+      "助詞": 5,
+      "動詞": 1,
+      "名詞": 6
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "此れ",
+     1
+    ],
+    [
+     "女の子",
+     1
+    ],
+    [
+     "男の子",
+     1
+    ],
+    [
+     "マイ-my",
+     1
+    ],
+    [
+     "クラ-clarinet",
+     1
+    ],
+    [
+     "遊ぶ",
+     1
+    ],
+    [
+     "時",
+     1
+    ],
+    [
+     "違い",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "嬉しいaaaaa?",
+     "words": [
+      "嬉",
+      "しい",
+      "aaaa",
+      "a?"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "嬉しいaaaaa?",
+     "words": [
+      "嬉",
+      "しい",
+      "aaaa",
+      "a?"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "嬉しいaaaaa?",
+     "words": [
+      "嬉",
+      "しい",
+      "aaaa",
+      "a?"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 24,
+    "end": 2.9,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "此れ",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "これ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": true,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "です(断定)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「これが〜の違いです」と内容を紹介する",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "HX",
+    "effective_code": "HX",
+    "quote": "嬉しい",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「これが女の子と」",
+      "time_raw": "0.00〜0.73",
+      "visual": "女性の配信者。家の中で猫を何匹も飼っている"
+     },
+     {
+      "end": 1.47,
+      "start": 0.93,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**青**「漢の子の」",
+      "time_raw": "0.93〜1.47",
+      "visual": "カット。男性の配信者。**巨大な銃（ガトリングのような武器）**を構えている [実測: 0.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "嬉"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.28,
+    "rows": [
+     {
+      "chars": 24,
+      "chars_per_sec": 8.28,
+      "duration": 2.9,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 24
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.26,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 4,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": true,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "です(断定)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_INTRO"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_DIALOGUE",
+     "effective_code": "D_DIALOGUE",
+     "quote": "Is Herobrine actually gonna spawn?",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "Fortnite said",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "宣言。女の子＝猫、男の子＝銃",
+      "range_raw": "0.0〜3.0",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "女の子＝オオカミをなでる。男の子＝洞窟で「ｵｯﾎﾎﾎｯw」、キツネに「アステゥール」と名付ける（英語の \"Ass turds\"＝下品な名前）。5〜8秒に音の突出 [実測]",
+      "range_raw": "3.2〜9",
+      "stage_label": "対比1"
+     },
+     {
+      "content": "女の子＝「※真剣」に建築。男の子＝崖からバケツで水着地 → 失敗して落ちる（「This game is glitching」）",
+      "range_raw": "9.6〜19",
+      "stage_label": "対比2"
+     },
+     {
+      "content": "女の子＝キツネ。男の子＝「かかってこいや」→ 引用符「\"血も涙もない\"」（豚を撃つ）",
+      "range_raw": "17.8〜23",
+      "stage_label": "対比3"
+     },
+     {
+      "content": "女の子＝庭に池。男の子＝「ヘロブライン本当に」（ヘロブラインを呼ぶ祭壇）→ 女の子＝ネザーゲート「完璧な大きさ」。男の子＝「いいぞ～？」→ 32.4秒に大きな口の怪物「wwwww」",
+      "range_raw": "23〜32",
+      "stage_label": "対比4"
+     },
+     {
+      "content": "男の子のネザーゲートの絵が**フォートナイトのキャラ**「フォートナイトのやつw」→ 白の引用符「\"あなたはどっち？\"」",
+      "range_raw": "33.6〜38",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     5,
+     7,
+     26
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     5.8,
+     7.5,
+     26.55
+    ],
+    "cuts": 24,
+    "cuts_per_5s": {
+     "0": 3,
+     "10": 2,
+     "15": 2,
+     "20": 1,
+     "25": 9,
+     "30": 5,
+     "35": 1,
+     "5": 1
+    },
+    "duration_sec": 38.03,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.9,
+    "is_end_position": false,
+    "sec_from_end": 35.13,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "これが女の子と男の子のマイクラを遊ぶ時の違いです"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「これが〜の違いです」と内容を紹介する",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 32.32,
+    "status": "ok",
+    "text": "Fortnite said"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 32.36,
+    "status": "ok",
+    "text": "フォータイトさん。"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Fortnite said",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 17,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/17_PXYdDGT2fms.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/PXYdDGT2fms.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "PXYdDGT2fms"
+}

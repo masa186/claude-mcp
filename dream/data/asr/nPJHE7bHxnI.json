@@ -1,0 +1,407 @@
+{
+ "id": "nPJHE7bHxnI",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.38,
+    "text": "ジョージンには理解できないプレイをカマストリームで",
+    "no_speech": 0.0,
+    "logprob": -0.5,
+    "words": [
+     [
+      0.0,
+      0.18,
+      "ジ"
+     ],
+     [
+      0.18,
+      0.24,
+      "ョ"
+     ],
+     [
+      0.24,
+      0.36,
+      "ージ"
+     ],
+     [
+      0.36,
+      0.46,
+      "ン"
+     ],
+     [
+      0.46,
+      0.58,
+      "には"
+     ],
+     [
+      0.58,
+      0.74,
+      "理"
+     ],
+     [
+      0.74,
+      0.82,
+      "解"
+     ],
+     [
+      0.82,
+      1.0,
+      "でき"
+     ],
+     [
+      1.0,
+      1.18,
+      "ない"
+     ],
+     [
+      1.18,
+      1.38,
+      "プ"
+     ],
+     [
+      1.38,
+      1.4,
+      "レ"
+     ],
+     [
+      1.4,
+      1.42,
+      "イ"
+     ],
+     [
+      1.42,
+      1.56,
+      "を"
+     ],
+     [
+      1.56,
+      1.68,
+      "カ"
+     ],
+     [
+      1.68,
+      1.78,
+      "マ"
+     ],
+     [
+      1.78,
+      1.94,
+      "スト"
+     ],
+     [
+      1.94,
+      2.06,
+      "リ"
+     ],
+     [
+      2.06,
+      2.16,
+      "ーム"
+     ],
+     [
+      2.16,
+      2.38,
+      "で"
+     ]
+    ]
+   },
+   {
+    "start": 36.1,
+    "end": 38.26,
+    "text": "私は情報が完結しませんでしたが",
+    "no_speech": 0.0,
+    "logprob": -0.12,
+    "words": [
+     [
+      36.1,
+      36.46,
+      "私"
+     ],
+     [
+      36.46,
+      36.66,
+      "は"
+     ],
+     [
+      36.66,
+      36.8,
+      "情"
+     ],
+     [
+      36.8,
+      36.98,
+      "報"
+     ],
+     [
+      36.98,
+      37.16,
+      "が"
+     ],
+     [
+      37.16,
+      37.36,
+      "完"
+     ],
+     [
+      37.36,
+      37.48,
+      "結"
+     ],
+     [
+      37.48,
+      37.64,
+      "し"
+     ],
+     [
+      37.64,
+      37.84,
+      "ません"
+     ],
+     [
+      37.84,
+      38.1,
+      "でした"
+     ],
+     [
+      38.1,
+      38.26,
+      "が"
+     ]
+    ]
+   },
+   {
+    "start": 38.26,
+    "end": 39.82,
+    "text": "理解できた方だけチャンネル登録",
+    "no_speech": 0.0,
+    "logprob": -0.12,
+    "words": [
+     [
+      38.26,
+      38.42,
+      "理"
+     ],
+     [
+      38.42,
+      38.54,
+      "解"
+     ],
+     [
+      38.54,
+      38.72,
+      "でき"
+     ],
+     [
+      38.72,
+      38.84,
+      "た"
+     ],
+     [
+      38.84,
+      38.98,
+      "方"
+     ],
+     [
+      38.98,
+      39.18,
+      "だけ"
+     ],
+     [
+      39.18,
+      39.42,
+      "チャンネル"
+     ],
+     [
+      39.42,
+      39.82,
+      "登録"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 4.0,
+    "text": "Y'all boys need a hero? Y'all boys need a hero?",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 4.0,
+    "end": 5.0,
+    "text": "Just stay on him!",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 5.0,
+    "end": 6.0,
+    "text": "No! Yes! Sam, look-",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 6.0,
+    "end": 7.0,
+    "text": "Get him!",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 7.0,
+    "end": 8.0,
+    "text": "Oh my-",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 8.0,
+    "end": 10.0,
+    "text": "You punched him right when I went for it.",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 10.0,
+    "end": 11.0,
+    "text": "I'm dead!",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 11.0,
+    "end": 13.0,
+    "text": "Okay, it's respawning.",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 14.0,
+    "end": 16.0,
+    "text": "Just stay on him, just stay on him.",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 18.0,
+    "end": 19.0,
+    "text": "Shields down, shield down.",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 20.0,
+    "end": 21.0,
+    "text": "Oh my gosh.",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 24.0,
+    "end": 25.0,
+    "text": "He's eating, he's eating, where are you?",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 25.0,
+    "end": 26.0,
+    "text": "I see him, I see him.",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 26.0,
+    "end": 27.0,
+    "text": "Come on.",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 27.0,
+    "end": 29.0,
+    "text": "Oh, watch the dragon! It's perching, watch the dragon, it's perching!",
+    "no_speech": 0.0,
+    "logprob": -0.28
+   },
+   {
+    "start": 29.0,
+    "end": 29.5,
+    "text": "It's purging.",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 29.5,
+    "end": 30.0,
+    "text": "It's that.",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 30.0,
+    "end": 31.0,
+    "text": "Yeah, yeah, yeah.",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 31.0,
+    "end": 32.0,
+    "text": "Damn it.",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 32.0,
+    "end": 33.0,
+    "text": "Oh, what?",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 33.0,
+    "end": 34.0,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 34.0,
+    "end": 35.0,
+    "text": "What the heck?",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 35.0,
+    "end": 36.0,
+    "text": "That's fine.",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 36.0,
+    "end": 38.0,
+    "text": "I didn't know information.",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   },
+   {
+    "start": 38.0,
+    "end": 40.0,
+    "text": "Subscribe to the channel for more information.",
+    "no_speech": 0.0,
+    "logprob": -0.78
+   }
+  ]
+ }
+}

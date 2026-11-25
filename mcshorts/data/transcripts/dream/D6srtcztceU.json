@@ -1,0 +1,181 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/D6srtcztceU.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "logprob": -1.47,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I'm going to touch you for the kids who were punished for the killing of the kids."
+    },
+    {
+     "end": 41.3,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "all right today's show and tell let's go i wonder what this guy brought"
+    },
+    {
+     "end": 46.5,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 41.3,
+     "text": "yo mr frog hello i love mr frog wait why is he why is he looking at him like that yo"
+    },
+    {
+     "end": 54.1,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 46.5,
+     "text": "yo who's next oh it's that cheater guy what a loser wait why is why is he pointing at me what"
+    },
+    {
+     "end": 55.1,
+     "logprob": -1.4,
+     "no_speech": 0.0,
+     "start": 54.1,
+     "text": "I'm not a hack."
+    },
+    {
+     "end": 56.1,
+     "logprob": -1.4,
+     "no_speech": 0.0,
+     "start": 55.1,
+     "text": "Yeah!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/D6srtcztceU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 28.26,
+     "logprob": -0.51,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "テストをカンニングしたキッズの悲惨なマツローを"
+    },
+    {
+     "end": 59.98,
+     "logprob": -0.19,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "おまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえのおまえ"
+    },
+    {
+     "end": 62.18,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 59.98,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/D6srtcztceU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.24,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "テストをカンニングしたキッズの悲惨な末路"
+    },
+    {
+     "end": 5.12,
+     "no_speech": 0.0,
+     "start": 2.24,
+     "text": "テストをカンニングしたキッズの悲惨な末路"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/D6srtcztceU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 85.28,
+     "no_speech": 0.0,
+     "start": 55.3,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "テストをカンニングしたキッズの、悲惨な末路。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "テストを（白）→ カンニングした（赤）→ キッズの（白）→ 悲惨な末路（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "D6srtcztceU"
+}

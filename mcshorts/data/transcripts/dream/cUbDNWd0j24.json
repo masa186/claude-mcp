@@ -1,0 +1,647 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/cUbDNWd0j24.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I'm a kid who made a child with a child, but he will be able to get his child to his child."
+    },
+    {
+     "end": 5.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 4.0,
+     "text": "No, that's ridiculous!"
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 5.0,
+     "text": "Who are you?"
+    },
+    {
+     "end": 7.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "I'm a junior."
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 7.0,
+     "text": "No!"
+    },
+    {
+     "end": 9.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 8.0,
+     "text": "That's right."
+    },
+    {
+     "end": 10.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Does that mean I gotta pay child support?"
+    },
+    {
+     "end": 11.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 10.0,
+     "text": "What?"
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "No?"
+    },
+    {
+     "end": 13.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 12.0,
+     "text": "Thank god!"
+    },
+    {
+     "end": 15.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 13.0,
+     "text": "I'm gonna stop you and make you face reveal."
+    },
+    {
+     "end": 16.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 15.0,
+     "text": "We can do this the easy way?"
+    },
+    {
+     "end": 17.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 16.0,
+     "text": "Or the fuck?"
+    },
+    {
+     "end": 18.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 17.0,
+     "text": "Easy way!"
+    },
+    {
+     "end": 21.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 19.0,
+     "text": "Hey, this is our little secret, alright?"
+    },
+    {
+     "end": 22.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 21.0,
+     "text": "Hey, yo!"
+    },
+    {
+     "end": 23.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 22.0,
+     "text": "That's my son!"
+    },
+    {
+     "end": 24.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 23.0,
+     "text": "With TNT!"
+    },
+    {
+     "end": 25.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 24.0,
+     "text": "Face reveal?"
+    },
+    {
+     "end": 26.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 25.0,
+     "text": "Or else?"
+    },
+    {
+     "end": 27.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 26.0,
+     "text": "Eh, I'll take my chances."
+    },
+    {
+     "end": 28.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 27.0,
+     "text": "What?"
+    },
+    {
+     "end": 29.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 28.0,
+     "text": "Hey, yo, chill!"
+    },
+    {
+     "end": 30.0,
+     "logprob": -0.39,
+     "no_speech": 0.0,
+     "start": 29.0,
+     "text": "I'm your son!"
+    },
+    {
+     "end": 35.56,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "bruh I just don't care hey no hard feelings man I understand why you did"
+    },
+    {
+     "end": 42.62,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 35.56,
+     "text": "all this thank you about to see your dad time to end this daddy I missed you"
+    },
+    {
+     "end": 48.22,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 42.62,
+     "text": "yo stay away from me but I missed you buddy I don't even know you and yet you"
+    },
+    {
+     "end": 52.02,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 48.22,
+     "text": "care about me no I left you in a small pit so that I would be safe cuz I"
+    },
+    {
+     "end": 56.0,
+     "logprob": -0.21,
+     "no_speech": 0.0,
+     "start": 52.02,
+     "text": "stranded you yeah I left you there and you came back"
+    },
+    {
+     "end": 58.0,
+     "logprob": -0.54,
+     "no_speech": 0.0,
+     "start": 56.0,
+     "text": "No, that's ridiculous!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/cUbDNWd0j24.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.1,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "キツジとやって子供ができたブロックスですが"
+    },
+    {
+     "end": 3.12,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 2.1,
+     "text": "彼は自分の子供に"
+    },
+    {
+     "end": 4.18,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 3.12,
+     "text": "ピッサれることになりや"
+    },
+    {
+     "end": 5.24,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 4.18,
+     "text": "No! That's ridiculous!"
+    },
+    {
+     "end": 5.78,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 5.52,
+     "text": "Who are you?"
+    },
+    {
+     "end": 6.74,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 6.08,
+     "text": "I'm junior"
+    },
+    {
+     "end": 7.2,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 6.74,
+     "text": "No!"
+    },
+    {
+     "end": 8.32,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 7.78,
+     "text": "That's right"
+    },
+    {
+     "end": 10.04,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 8.32,
+     "text": "Does that mean I gotta pay child support?"
+    },
+    {
+     "end": 10.6,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 10.36,
+     "text": "What?"
+    },
+    {
+     "end": 11.34,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 11.14,
+     "text": "No?"
+    },
+    {
+     "end": 12.1,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 11.56,
+     "text": "Thank God!"
+    },
+    {
+     "end": 14.42,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 12.34,
+     "text": "I'm gonna stop you and make you face reveal"
+    },
+    {
+     "end": 15.88,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 14.42,
+     "text": "We can do this the easy way"
+    },
+    {
+     "end": 16.76,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 15.88,
+     "text": "Or the fuck"
+    },
+    {
+     "end": 17.22,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 16.76,
+     "text": "Easy way!"
+    },
+    {
+     "end": 20.7,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 19.36,
+     "text": "Hey, this is our little secret, alright?"
+    },
+    {
+     "end": 21.7,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 21.06,
+     "text": "Hey, yo!"
+    },
+    {
+     "end": 22.86,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 22.1,
+     "text": "That's my son!"
+    },
+    {
+     "end": 24.02,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 23.26,
+     "text": "With TNT!"
+    },
+    {
+     "end": 25.94,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 24.48,
+     "text": "Face Revealed or else?"
+    },
+    {
+     "end": 27.44,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 26.32,
+     "text": "Eh, I'll take my chances"
+    },
+    {
+     "end": 27.94,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 27.44,
+     "text": "What?"
+    },
+    {
+     "end": 28.84,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 28.32,
+     "text": "Hey, yo chill!"
+    },
+    {
+     "end": 29.7,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 29.16,
+     "text": "I'm your son!"
+    },
+    {
+     "end": 31.18,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "I just don't care"
+    },
+    {
+     "end": 32.26,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 31.18,
+     "text": "Hey it's so rad"
+    },
+    {
+     "end": 36.0,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 33.26,
+     "text": "Hey no hard feelings man I understand why you did all this"
+    },
+    {
+     "end": 37.24,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 36.0,
+     "text": "I miss my dad"
+    },
+    {
+     "end": 39.88,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 37.24,
+     "text": "I miss my dad"
+    },
+    {
+     "end": 40.98,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 39.88,
+     "text": "Time to end this"
+    },
+    {
+     "end": 42.16,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 40.98,
+     "text": "Daddy I missed you"
+    },
+    {
+     "end": 45.28,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 43.44,
+     "text": "Yo stay away from me"
+    },
+    {
+     "end": 46.28,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 45.28,
+     "text": "But I missed you"
+    },
+    {
+     "end": 47.76,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 46.28,
+     "text": "Buddy I don't even know you"
+    },
+    {
+     "end": 48.92,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 47.76,
+     "text": "And yet you care about me"
+    },
+    {
+     "end": 52.92,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 48.92,
+     "text": "Cause I stranded you"
+    },
+    {
+     "end": 54.88,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 53.54,
+     "text": "Yeah I left you there"
+    },
+    {
+     "end": 56.14,
+     "logprob": -0.25,
+     "no_speech": 0.0,
+     "start": 54.88,
+     "text": "And you came back"
+    },
+    {
+     "end": 57.22,
+     "logprob": -0.94,
+     "no_speech": 0.0,
+     "start": 56.14,
+     "text": "No, that's a dick!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/cUbDNWd0j24.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "羊とやって子供ができたブロックスですが彼は自分の子供に%されることになりやすい"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/cUbDNWd0j24.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 54.99,
+     "no_speech": 0.0,
+     "start": 53.81,
+     "text": "Yeah, I left you there"
+    },
+    {
+     "end": 56.19,
+     "no_speech": 0.0,
+     "start": 54.99,
+     "text": "And you came back!"
+    },
+    {
+     "end": 57.19,
+     "no_speech": 0.0,
+     "start": 56.19,
+     "text": "No, that's for d-"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/cUbDNWd0j24.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "羊とやって子供ができたGroxですが"
+    },
+    {
+     "end": null,
+     "start": 0.1,
+     "text": "彼は自分の子供に"
+    },
+    {
+     "end": null,
+     "start": 0.2,
+     "text": "〇されることになります"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "羊とやって子供ができたグロックスですが、彼は自分の子供に［無音］されることになります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "羊とやって（赤）→ 子供ができた（白）→ Groxですが彼は（白）→ 自分の子供に（白）→ 〇されることに...（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "cUbDNWd0j24"
+}

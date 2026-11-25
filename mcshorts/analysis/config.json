@@ -1,0 +1,17 @@
+{
+ "_about": "段階4a（規則に基づく数値・タイトル・テキスト分析）の設定。Dream と SMP は別々に集計する。",
+ "views_basis": "latest_api_observation",
+ "views_basis_note": "動画ごとに、取得日時の分かる YouTube API の観測のうち最も新しいものを使う。API の観測が無い動画は分析から外して別枠にする（推測で補わない）",
+ "min_age_days": 30,
+ "max_duration_sec": 180,
+ "top_share": 0.2,
+ "bottom_share": 0.2,
+ "neighbors": {"dream": 7, "smp": 15},
+ "neighbors_note": "相対再生＝その動画の再生数 ÷ 投稿順で前後 N 本（自分は除く）の再生数の中央値。前後の動画は、API の観測があり経過日数が min_age_days 以上のものから取る",
+ "permutations": 5000,
+ "seed": 20261125,
+ "min_n": 5,
+ "q_threshold": 0.1,
+ "effect_threshold_numeric": 0.3,
+ "effect_threshold_share": 0.2
+}

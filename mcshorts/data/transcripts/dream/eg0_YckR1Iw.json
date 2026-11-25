@@ -1,0 +1,238 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/eg0_YckR1Iw.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.0,
+     "logprob": -1.23,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "George gave his life for the仲間."
+    },
+    {
+     "end": 5.0,
+     "logprob": -1.23,
+     "no_speech": 0.0,
+     "start": 2.0,
+     "text": "George will see more悲劇 of his dreams."
+    },
+    {
+     "end": 31.04,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "I can't do it, and then I'll do it."
+    },
+    {
+     "end": 33.68,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 33.18,
+     "text": "Oh my god!"
+    },
+    {
+     "end": 34.92,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 33.68,
+     "text": "Oh my god!"
+    },
+    {
+     "end": 35.24,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 35.02,
+     "text": "No!"
+    },
+    {
+     "end": 39.72,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 35.98,
+     "text": "In the situation of the world, Sapnap is in the end of the action."
+    },
+    {
+     "end": 40.86,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 39.84,
+     "text": "Hurry! Hurry!"
+    },
+    {
+     "end": 42.82,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 41.22,
+     "text": "Dream. Don't forget me."
+    },
+    {
+     "end": 43.66,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 43.26,
+     "text": "He's there."
+    },
+    {
+     "end": 44.86,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 44.42,
+     "text": "Die!"
+    },
+    {
+     "end": 46.58,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 45.92,
+     "text": "Oh no!"
+    },
+    {
+     "end": 47.84,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 46.58,
+     "text": "That was gonna work!"
+    },
+    {
+     "end": 52.64,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 50.5,
+     "text": "If you want to subscribe to the end of the video, don't forget to subscribe to the channel."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/eg0_YckR1Iw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.68,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "仲間のため命を捧げたジョージ その意志をついだドリームたちにさらなる悲劇が訪れます"
+    },
+    {
+     "end": 37.78,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 36.04,
+     "text": "絶対絶命の状況の中"
+    },
+    {
+     "end": 39.68,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 37.78,
+     "text": "サップナップがまさかの行動に出ます"
+    },
+    {
+     "end": 52.64,
+     "logprob": -0.14,
+     "no_speech": 0.0,
+     "start": 50.46,
+     "text": "結末が気になる方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/eg0_YckR1Iw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 4.7,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "仲間のため命を捧げたジョージ、その意志を散らドリームたちに更なる悲劇が訪れます。"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/eg0_YckR1Iw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 52.72,
+     "no_speech": 0.0,
+     "start": 45.96,
+     "text": "結末が気になる方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "仲間のため命を捧げたジョージ。その意思を継いだドリーム達に、更なる悲劇が訪れます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "仲間のため（白）→ 命を捧げた（赤）→ George（水色）→ その意思を注いだ（白）→ Dream達に（緑）→ 更なる悲劇が（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "eg0_YckR1Iw"
+}

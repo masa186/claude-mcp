@@ -1,0 +1,676 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドリームのトラップに落とされては嘲られた男。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 2,
+     "text": "屈し低速落下ポーションで生存し、修業の旅修行を決意し",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 7,
+     "text": "男",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 12,
+     "text": "ネオアームストロングサイクロンジェットアームストロング砲じゃねーか。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 16,
+     "text": "完成度たけーなオイ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "俺でもできる。余裕できる余裕できる。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "Groxパイセン、TNTの撃ち方教えろください。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 27,
+     "text": "あーそういうことね。完全に理解した。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 32,
+     "text": "エイム力なら元フォートナイトガチ勢の俺に任せろ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "見えたぜドリーム。俺の魂身の一発をくらえ。",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 44,
+     "text": "ネオアームノーシフト360度ショット！！！",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドリームのトラップに落とされては嘲られた男",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 2,
+     "text": "屈し低速落下ポーションで生存し修行の旅修行を決意し",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 7,
+     "text": "Groxだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 10,
+     "text": "漢オ！",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 12,
+     "text": "ネオアームストロングサイクロンジェットアームストロング砲じゃねーか",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 16,
+     "text": "完成度たけーなオイ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "俺でもできる余裕でできる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 24,
+     "text": "GroxパイセンTNTの打ち方教えろください",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 27,
+     "text": "あーそういうことね完全に理解した",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 32,
+     "text": "エイム力なら元フォートナイトガチ勢の俺に任せろ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "見えたぜDream俺の魂身の一発をくらえ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 44,
+     "text": "ネオアームノーシフト360°ショット!!!",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "緑色",
+     "end": null,
+     "start": 0.2,
+     "text": "Dreamの"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 0.5,
+     "text": "トラップに"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 1.0,
+     "text": "落とされては嗤われた男"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 2.7,
+     "text": "しかし"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 3.0,
+     "text": "低速落下"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 3.7,
+     "text": "ポーションで"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 4.0,
+     "text": "生存し"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 4.5,
+     "text": "復讐のため"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 5.0,
+     "text": "修行を"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 5.7,
+     "text": "決意します"
+    },
+    {
+     "color": "白色",
+     "end": null,
+     "start": 6.7,
+     "text": "Groxだ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "6.5秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームのトラップに落とされて嘲笑われた男、しかし低速落下ポーションで生存し復讐のため修行を決意します"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.0,
+     "start": 0.0,
+     "text": "Dreamのトラップに落とされて嘲笑された男",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 4.5,
+     "start": 2.75,
+     "text": "しかし低速落下ポーションで生存し復讐のため修業を決意します",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 11.25,
+     "start": 11.0,
+     "text": "漢オ!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.0,
+     "start": 12.75,
+     "text": "ネオアーム",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.5,
+     "start": 13.25,
+     "text": "ストロング",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 14.25,
+     "start": 14.0,
+     "text": "サイクロンジェットアーム",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 15.25,
+     "start": 15.0,
+     "text": "アームストロング砲じゃねーか",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.25,
+     "start": 16.0,
+     "text": "完成度たけーなオイ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 21.0,
+     "start": 20.5,
+     "text": "俺でもできる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.0,
+     "start": 21.75,
+     "text": "余裕でできる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.0,
+     "start": 24.25,
+     "text": "Groxパイセン",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 26.0,
+     "start": 25.0,
+     "text": "TNTの撃ち方教えろください",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 27.75,
+     "start": 27.5,
+     "text": "あーそーゆーことね",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 29.0,
+     "start": 28.75,
+     "text": "完全に理解した",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 34.0,
+     "start": 32.25,
+     "text": "エイム力なら元フォートナイトガチ勢の俺に任せろ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.25,
+     "start": 41.0,
+     "text": "見えたぜDream",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 42.25,
+     "start": 42.0,
+     "text": "俺の渾身の一発を",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 44.25,
+     "start": 44.0,
+     "text": "くらえ!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 45.0,
+     "start": 44.25,
+     "text": "ネオアームノーシフト",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 47.0,
+     "start": 46.0,
+     "text": "360°ショット!!!",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 0.0,
+     "text": "Dreamの",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.5,
+     "text": "トラップに",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "落とされて",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.25,
+     "text": "嘲笑された男",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.75,
+     "text": "しかし",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "低速落下",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.5,
+     "text": "ポーションで",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.0,
+     "text": "生存し",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.5,
+     "text": "復讐のため",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.0,
+     "text": "修行を",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.75,
+     "text": "決意します",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.75,
+     "text": "Groxだ",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 7.75,
+     "text": "AYOO",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 8.0,
+     "text": "CHILL!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 11.0,
+     "text": "漢オ!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 12.75,
+     "text": "ネオアーム",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 13.25,
+     "text": "ストロング",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.0,
+     "text": "サイクロン",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.25,
+     "text": "ジェットアーム",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 15.0,
+     "text": "ストロング砲じゃねーか",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 16.0,
+     "text": "完成度たけーなオイ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 20.5,
+     "text": "俺でもできる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 21.75,
+     "text": "余裕でできる",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 22.75,
+     "text": "GG f**king EZ,",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24.25,
+     "text": "Groxパイセン",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 25.0,
+     "text": "TNTの撃ち方",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.0,
+     "text": "教えろください",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 27.5,
+     "text": "あーそーゆーことね",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 28.75,
+     "text": "完全に理解した",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32.25,
+     "text": "エイム力なら",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 33.0,
+     "text": "元フォートナイト",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 33.75,
+     "text": "ガチ勢の",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 34.0,
+     "text": "俺に任せろ",
+     "track": "subtitle"
+    },
+    {
+     "color": "ピンク",
+     "end": null,
+     "start": 40.25,
+     "text": "*?*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 41.0,
+     "text": "見えたぜDream",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 42.0,
+     "text": "俺の渾身の一発を",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 44.0,
+     "text": "くらえ!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 44.25,
+     "text": "ネオアームノーシフト",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 46.0,
+     "text": "360°",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 47.5,
+     "text": "ショット!!!",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "4EaAs1oiYcs"
+}

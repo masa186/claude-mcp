@@ -1,0 +1,650 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 55.45,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.07,
+   "first_cut_minus_first_row_start": -0.2,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.514,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "村人が、黒髪の村人にぶつかる"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この厨二病は」",
+      "time_raw": "0.27〜0.73",
+      "visual": "黒髪の村人がにらむ"
+     },
+     {
+      "end": 1.47,
+      "start": 0.93,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「戦う相手を」",
+      "time_raw": "0.93〜1.47",
+      "visual": "カット。名札「HELLO MY NAME IS ／ That guy that bumped into me」（＝ぶつかった男）[実測: 0.93]"
+     },
+     {
+      "end": 2.53,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「間違えました」",
+      "time_raw": "1.73〜2.53",
+      "visual": "カット。**画面いっぱいの赤**（血しぶきのような演出）[実測: 1.73]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.6,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "2.60〜3.00",
+      "visual": "カット。黒髪の村人が本を持って歩く"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.5,
+     "music_mean_during_row": 0.6,
+     "nearest_cut_to_end": 0.1,
+     "nearest_cut_to_start": 0.2,
+     "nearest_subtitle_change_to_end": 0.9,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.75,
+      1.1,
+      1.85
+     ],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この厨二病は戦う相手を間違えました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 17,
+     "content_lemmas": [
+      "厨",
+      "二",
+      "戦う",
+      "相手",
+      "間違える"
+     ],
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "過去・結果",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 2,
+      "動詞": 2,
+      "名詞": 3,
+      "接尾辞": 1,
+      "連体詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "この厨二病は戦う相手を間違えました"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "厨",
+     1
+    ],
+    [
+     "二",
+     1
+    ],
+    [
+     "戦う",
+     1
+    ],
+    [
+     "相手",
+     1
+    ],
+    [
+     "間違える",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "この厨二病は戦う相手を間違えました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 7,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この中二病は戦",
+     "words": [
+      "この",
+      "中",
+      "二",
+      "病",
+      "は",
+      "戦"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "この厨二病は戦う相手を間違えました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 17,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この中二病は戦う相手を間違えました",
+     "words": [
+      "この",
+      "中",
+      "二",
+      "病",
+      "は",
+      "戦",
+      "う",
+      "相",
+      "手",
+      "を",
+      "間",
+      "違",
+      "え",
+      "ました"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "この厨二病は戦う相手を間違えました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 17,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この中二病は戦う相手を間違えました",
+     "words": [
+      "この",
+      "中",
+      "二",
+      "病",
+      "は",
+      "戦",
+      "う",
+      "相",
+      "手",
+      "を",
+      "間",
+      "違",
+      "え",
+      "ました"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 17,
+    "end": 2.5,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "この厨二病は戦う相手を間違えました"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "過去・結果",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "この厨二病は戦う相手を間違えました"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この厨二病は戦う相手を間違えました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "この中二病は戦う相手を間違えました",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "村人が、黒髪の村人にぶつかる"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この厨二病は」",
+      "time_raw": "0.27〜0.73",
+      "visual": "黒髪の村人がにらむ"
+     },
+     {
+      "end": 1.47,
+      "start": 0.93,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「戦う相手を」",
+      "time_raw": "0.93〜1.47",
+      "visual": "カット。名札「HELLO MY NAME IS ／ That guy that bumped into me」（＝ぶつかった男）[実測: 0.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "この"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 7.62,
+    "rows": [
+     {
+      "chars": 17,
+      "chars_per_sec": 7.62,
+      "duration": 2.23,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 17
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.66,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 14,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "過去・結果",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "この厨二病は戦う相手を間違えました"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "最初にぶつかった村人がノートを持って笑う",
+       "range_raw": "50.6〜55.5",
+       "source": "doc_structure",
+       "source_file": "dream/individual/08_OKhTqo8eVks.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "この厨二病は戦う相手を間違えました",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.27,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "OKhTqo8eVks"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "ナレーションと赤い画面",
+      "range_raw": "0.0〜2.6",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「この野郎...」「そんな怒んなってw」→ 引用符「\"謎のノート\"」→「アイツ...」",
+      "range_raw": "4.4〜9.6",
+      "stage_label": "事件"
+     },
+     {
+      "content": "「ブッ〇してやる...!」「死に晒せ!!」→ ノートに「The guy that bumped into」＝「\"ぶつかった男\"」→ 名札「\"ぶつかった男は私\"」。13〜14秒に Explosion（0.33〜0.36）[音タグ]",
+      "range_raw": "10.5〜16.4",
+      "stage_label": "1人目"
+     },
+     {
+      "content": "「その髪型最高やん」→「その髪を!!」→ 泣き顔のミーム画像「よっしゃぁww」→「あのクソ野郎!!」",
+      "range_raw": "19〜26",
+      "stage_label": "2人目"
+     },
+     {
+      "content": "ノート「\"スティーブみたいな男\"」→「何の音だ...?」「まさか...」「お父さん...」→「\"赤い帽子を被っている奴\"」→「まさか...!!」。37〜38秒に Screaming [音タグ]",
+      "range_raw": "27〜41",
+      "stage_label": "3人目と家族"
+     },
+     {
+      "content": "「ブチこ〇したらぁ!!」→ 泣き顔 → ノート「\"今俺が見てる奴\"」→ 鏡のような額縁を見る。44〜45秒に紙をこする音（Rub・Sanding 0.2〜0.3＝ノートに書く音と思われる）、48〜49秒に Explosion（0.5）[音タグ]",
+      "range_raw": "42.6〜49",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "夜、最初にぶつかった村人がノートを持って笑う。赤の引用符「\"計画通り\"」",
+      "range_raw": "50.6〜55.5",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     13,
+     14,
+     30,
+     48,
+     49,
+     51,
+     54
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.75,
+     1.1,
+     1.85,
+     51.45,
+     54.85
+    ],
+    "cuts": 37,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 4,
+     "15": 5,
+     "20": 4,
+     "25": 4,
+     "30": 4,
+     "35": 5,
+     "45": 2,
+     "5": 1,
+     "50": 3
+    },
+    "duration_sec": 55.45,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.33,
+      "t": 13
+     },
+     {
+      "Explosion": 0.36,
+      "t": 14
+     },
+     {
+      "Gasp": 0.38,
+      "t": 30
+     },
+     {
+      "Explosion": 0.52,
+      "t": 48
+     },
+     {
+      "Explosion": 0.5,
+      "t": 49
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.5,
+    "is_end_position": false,
+    "sec_from_end": 52.95,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "この厨二病は戦う相手を間違えました"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この厨二病は戦う相手を間違えました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 54.0,
+    "status": "ok",
+    "text": "uh"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 32.32,
+    "status": "ok",
+    "text": "はい"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 8,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/08_OKhTqo8eVks.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/OKhTqo8eVks.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "OKhTqo8eVks"
+}

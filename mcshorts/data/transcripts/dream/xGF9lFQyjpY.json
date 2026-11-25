@@ -1,0 +1,350 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/xGF9lFQyjpY.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 10.34,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Hey, he's finally growing up."
+    },
+    {
+     "end": 11.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 10.4,
+     "text": "Damn, you're happy."
+    },
+    {
+     "end": 12.24,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 11.2,
+     "text": "All right, come with me, little buddy."
+    },
+    {
+     "end": 13.72,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 12.3,
+     "text": "We eating good tonight."
+    },
+    {
+     "end": 15.0,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 14.06,
+     "text": "All right, here we are."
+    },
+    {
+     "end": 16.48,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 15.56,
+     "text": "I'm going to just put you here real quick."
+    },
+    {
+     "end": 17.1,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 16.56,
+     "text": "Just wait here, okay?"
+    },
+    {
+     "end": 18.06,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 17.16,
+     "text": "Don't move, don't move, don't move."
+    },
+    {
+     "end": 19.08,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 18.14,
+     "text": "Hold on, I'll be back."
+    },
+    {
+     "end": 25.72,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 21.22,
+     "text": "All right, I'm back."
+    },
+    {
+     "end": 26.76,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 26.04,
+     "text": "Hey, where'd you go?"
+    },
+    {
+     "end": 27.66,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 26.88,
+     "text": "At a window."
+    },
+    {
+     "end": 29.6,
+     "logprob": -0.38,
+     "no_speech": 0.0,
+     "start": 28.8,
+     "text": "Where'd you go, piggy?"
+    },
+    {
+     "end": 32.16,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 29.6,
+     "text": "Well, I lost them that definitely won't be important to the plot"
+    },
+    {
+     "end": 61.6,
+     "logprob": -1.14,
+     "no_speech": 0.0,
+     "start": 59.6,
+     "text": "Oh my god."
+    },
+    {
+     "end": 63.6,
+     "logprob": -1.14,
+     "no_speech": 0.0,
+     "start": 61.6,
+     "text": "Oh my god."
+    },
+    {
+     "end": 65.6,
+     "logprob": -1.14,
+     "no_speech": 0.0,
+     "start": 63.6,
+     "text": "Yeah."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/xGF9lFQyjpY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.66,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "もしあなたがマクラノブタになってしまったらどうなるでしょう?"
+    },
+    {
+     "end": 9.24,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 8.92,
+     "text": "Ey!"
+    },
+    {
+     "end": 10.32,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 9.56,
+     "text": "You finally grown up!"
+    },
+    {
+     "end": 10.98,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 10.54,
+     "text": "Damn,you're happy!"
+    },
+    {
+     "end": 12.22,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 11.28,
+     "text": "Alright,call with me little buddy!"
+    },
+    {
+     "end": 13.5,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 12.3,
+     "text": "We eating good tonight!"
+    },
+    {
+     "end": 15.3,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 14.06,
+     "text": "Alright,here we are..."
+    },
+    {
+     "end": 17.08,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 15.3,
+     "text": "I'm just gonna put you here real quick just wait here okay?"
+    },
+    {
+     "end": 18.04,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 17.22,
+     "text": "Don't move,don't move,don't move!"
+    },
+    {
+     "end": 20.14,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 18.16,
+     "text": "Hold on,I'll be back,hold on..."
+    },
+    {
+     "end": 25.12,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 24.56,
+     "text": "いいぞ!"
+    },
+    {
+     "end": 26.1,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 25.36,
+     "text": "Alright,I'm back..."
+    },
+    {
+     "end": 26.7,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 26.1,
+     "text": "Hey,where'd you go?"
+    },
+    {
+     "end": 28.08,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 26.88,
+     "text": "AD WINDOW..."
+    },
+    {
+     "end": 29.62,
+     "logprob": -0.96,
+     "no_speech": 0.0,
+     "start": 28.78,
+     "text": "Where'd you go,pigi?"
+    },
+    {
+     "end": 32.2,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 29.62,
+     "text": "I lost them that definitely won't be important to the plot"
+    },
+    {
+     "end": 67.76,
+     "logprob": -0.85,
+     "no_speech": 0.0,
+     "start": 59.62,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/xGF9lFQyjpY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.92,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/xGF9lFQyjpY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 68.64,
+     "no_speech": 0.0,
+     "start": 61.64,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "もしあなたがマイクラの豚になってしまったら、どうなるでしょうか？"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "もしあなたが（白）→ マイクラの豚に（ピンク）→ なってしまったら（白）→ どうなるでしょうか？（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "xGF9lFQyjpY"
+}

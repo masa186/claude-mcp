@@ -1,0 +1,965 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 39.68,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 2.73,
+   "first_cut_minus_first_row_start": 2.73,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.522,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 1.47,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "ピンク「テクノブレイドとの決闘中」",
+      "time_raw": "0.00〜1.47",
+      "visual": "城の中、ダイヤの剣を構える一人称。前に **Technoblade**（名前の表示）が迫る"
+     },
+     {
+      "end": null,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dreamが」",
+      "time_raw": "1.73",
+      "visual": "剣がぶつかる（白い火花）"
+     },
+     {
+      "end": 2.53,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「覚醒します」",
+      "time_raw": "2.00〜2.53",
+      "visual": "同上"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "2.73〜3.00",
+      "visual": "カット。木の橋の向こうの門 [実測: 2.73]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.6,
+     "music_mean_during_row": 0.578,
+     "nearest_cut_to_end": 0.13,
+     "nearest_cut_to_start": 2.73,
+     "nearest_subtitle_change_to_end": 12.13,
+     "nearest_subtitle_change_to_start": 14.73,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 17.1,
+     "music_mean_during_row": 0.535,
+     "nearest_cut_to_end": 2.37,
+     "nearest_cut_to_start": 1.17,
+     "nearest_subtitle_change_to_end": 0.23,
+     "nearest_subtitle_change_to_start": 0.17,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 15.9
+    },
+    {
+     "end": 39.4,
+     "music_mean_during_row": 0.502,
+     "nearest_cut_to_end": 5.27,
+     "nearest_cut_to_start": 1.43,
+     "nearest_subtitle_change_to_end": 1.0,
+     "nearest_subtitle_change_to_start": 1.43,
+     "row": 2,
+     "spikes_within_row_or_1s_after": [],
+     "start": 32.7
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜でDreamが覚醒します」と出来事を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "次の部分につながる文の途中",
+     "role": "R_FRAGMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 1,
+     "reason": "15.9秒で「彼が覚醒します」ともう一度引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果の報告・回収",
+     "part": 0,
+     "reason": "「結局〜の勝利で幕を閉じましたが」と結果を述べる",
+     "role": "R_RESOLVE",
+     "row": 2,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 1,
+     "reason": "「本当にすごいですね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 23,
+     "content_lemmas": [
+      "テクノ-techno",
+      "ブレード-blade",
+      "決闘",
+      "Dream",
+      "覚醒",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "テクノ-techno",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "テクノ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "テクノブレイド"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 3,
+      "動詞": 1,
+      "名詞": 5,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "テクノブレイドとの決闘中Dreamが覚醒します"
+    },
+    {
+     "chars": 7,
+     "content_lemmas": [
+      "此処"
+     ],
+     "first_token": {
+      "lemma": "です",
+      "pos1": "助動詞",
+      "pos2": "*",
+      "surface": "です"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 1,
+      "助詞": 2
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "ですがここから"
+    },
+    {
+     "chars": 7,
+     "content_lemmas": [
+      "彼",
+      "覚醒",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 1,
+      "助詞": 1,
+      "動詞": 1,
+      "名詞": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "彼が覚醒します"
+    },
+    {
+     "chars": 26,
+     "content_lemmas": [
+      "結局",
+      "戦い",
+      "テクノ-techno",
+      "ブレード-blade",
+      "勝利",
+      "幕",
+      "閉じる"
+     ],
+     "first_token": {
+      "lemma": "結局",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "結局"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "テクノブレイド"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 5,
+      "動詞": 1,
+      "名詞": 6,
+      "連体詞": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "結局この戦いはテクノブレイドの勝利で幕を閉じましたが"
+    },
+    {
+     "chars": 22,
+     "content_lemmas": [
+      "彼",
+      "張り合う",
+      "Dream",
+      "本当",
+      "凄い"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [
+       "すご"
+      ],
+      "emphasis_words": [
+       "本当に"
+      ],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 1,
+      "助詞": 4,
+      "動詞": 1,
+      "名詞": 2,
+      "形容詞": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "彼と張り合えるDreamが本当にすごいですね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "テクノ-techno",
+     2
+    ],
+    [
+     "ブレード-blade",
+     2
+    ],
+    [
+     "Dream",
+     2
+    ],
+    [
+     "覚醒",
+     2
+    ],
+    [
+     "為る",
+     2
+    ],
+    [
+     "彼",
+     2
+    ],
+    [
+     "決闘",
+     1
+    ],
+    [
+     "此処",
+     1
+    ],
+    [
+     "結局",
+     1
+    ],
+    [
+     "戦い",
+     1
+    ],
+    [
+     "勝利",
+     1
+    ],
+    [
+     "幕",
+     1
+    ],
+    [
+     "閉じる",
+     1
+    ],
+    [
+     "張り合う",
+     1
+    ],
+    [
+     "本当",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.6,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "テクノブレイドとの決闘中Dreamが覚醒します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 5,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "Dream",
+     "words": [
+      "D",
+      "ream"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.6,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "テクノブレイドとの決闘中Dreamが覚醒します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 11,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "Dreamが覚醒します",
+     "words": [
+      "D",
+      "ream",
+      "が",
+      "覚",
+      "醒",
+      "します"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.6,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "テクノブレイドとの決闘中Dreamが覚醒します"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 11,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "Dreamが覚醒します",
+     "words": [
+      "D",
+      "ream",
+      "が",
+      "覚",
+      "醒",
+      "します"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 23,
+    "end": 2.6,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "テクノブレイドとの決闘中Dreamが覚醒します"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "テクノ-techno",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "テクノ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "テクノブレイド"
+      ],
+      "question": false
+     },
+     "text": "テクノブレイドとの決闘中Dreamが覚醒します"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜でDreamが覚醒します」と出来事を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "Dreamが覚醒します",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 1.47,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "ピンク「テクノブレイドとの決闘中」",
+      "time_raw": "0.00〜1.47",
+      "visual": "城の中、ダイヤの剣を構える一人称。前に **Technoblade**（名前の表示）が迫る"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "D"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.85,
+    "rows": [
+     {
+      "chars": 23,
+      "chars_per_sec": 8.85,
+      "duration": 2.6,
+      "gap_to_next_row": 13.3,
+      "row": 0
+     },
+     {
+      "chars": 14,
+      "chars_per_sec": 11.67,
+      "duration": 1.2,
+      "gap_to_next_row": 15.6,
+      "row": 1
+     },
+     {
+      "chars": 48,
+      "chars_per_sec": 7.16,
+      "duration": 6.7,
+      "gap_to_next_row": null,
+      "row": 2
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 85
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.45,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 43,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream",
+      "テクノブレイド"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "テクノブレイドとの決闘中Dreamが覚醒します"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "ですがここから"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "彼が覚醒します"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "テクノブレイド"
+     ],
+     "question": false,
+     "row": 2,
+     "text": "結局この戦いはテクノブレイドの勝利で幕を閉じましたが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [
+      "すご"
+     ],
+     "emphasis_words": [
+      "本当に"
+     ],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 2,
+     "text": "彼と張り合えるDreamが本当にすごいですね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "実況「めっちゃ攻撃的だぞ」",
+       "range_raw": "18〜32",
+       "source": "doc_structure",
+       "source_file": "dream/individual/47_uNdIdgo7wws.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 4
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "テクノブレイドとの決闘中Dreamが覚醒します",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "uNdIdgo7wws"
+    },
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "実況「めっちゃ攻撃的だぞ」",
+       "range_raw": "18〜32",
+       "source": "doc_structure",
+       "source_file": "dream/individual/47_uNdIdgo7wws.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 4
+      }
+     ],
+     "from_part": 1,
+     "from_quote": "彼が覚醒します",
+     "from_role": "R_REHOOK",
+     "from_row": 1,
+     "from_start": 15.9,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "uNdIdgo7wws"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW",
+    "R_FRAGMENT",
+    "R_REHOOK",
+    "R_RESOLVE",
+    "R_COMMENT"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "Look how aggressive DREAM's been.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_PUNISH",
+     "effective_code": "P_PUNISH",
+     "quote": "結局この戦いはテクノグレイドの勝利で幕を閉じましたが",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "Technoblade との斬り合い、ナレーション",
+      "range_raw": "0〜2.6",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "実況（紫字幕）「テクノが矢を拾ったぞ」→「めっちゃ近かった」→ Dream が負ける「You died!」",
+      "range_raw": "2.8〜11",
+      "stage_label": "1戦目"
+     },
+     {
+      "content": "「ﾉｵｵｵｵｵｵｵ!!!」→「惜しくも負けてしまった」",
+      "range_raw": "12〜15",
+      "stage_label": "敗北"
+     },
+     {
+      "content": "「Dream」「ですがここから」「彼が覚醒します」",
+      "range_raw": "16〜17",
+      "stage_label": "第2の予告"
+     },
+     {
+      "content": "実況「めっちゃ攻撃的だぞ」→「やばいなこれ」→ 緑の画面（ダメージ？）→「レッツゴｫ!!!!」。31〜32秒に観客の声（Crowd 0.24、Battle cry）[音タグ]",
+      "range_raw": "18〜32",
+      "stage_label": "2戦目"
+     },
+     {
+      "content": "ナレーション「結局この戦いは」「テクノブレイドの勝利で」「幕を閉じましたが」「彼と張り合えるDreamが」「本当にすごいですね」",
+      "range_raw": "34〜39.7",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [],
+    "cuts": 15,
+    "cuts_per_5s": {
+     "0": 2,
+     "10": 6,
+     "20": 1,
+     "25": 1,
+     "30": 4,
+     "5": 1
+    },
+    "duration_sec": 39.68,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "middle",
+      "row": 1,
+      "start": 15.9
+     },
+     {
+      "position": "end",
+      "row": 2,
+      "start": 32.7
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 39.4,
+    "is_end_position": true,
+    "sec_from_end": 0.28,
+    "start": 32.7,
+    "status": "DOC_OBSERVED",
+    "text": "結局この戦いはテクノブレイドの勝利で幕を閉じましたが 彼と張り合えるDreamが本当にすごいですね"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果の報告・回収",
+     "part": 0,
+     "reason": "「結局〜の勝利で幕を閉じましたが」と結果を述べる",
+     "role": "R_RESOLVE",
+     "row": 2,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 1,
+     "reason": "「本当にすごいですね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 33.5,
+    "status": "ok",
+    "text": "In the end, this fight was TecnoGlade's victory, but the dream with him is really amazing."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 37.04,
+    "status": "ok",
+    "text": "彼と張り合えるドリームが本当にすごいですね"
+   },
+   "payoff_code_4b": {
+    "code": "P_PUNISH",
+    "effective_code": "P_PUNISH",
+    "quote": "結局この戦いはテクノグレイドの勝利で幕を閉じましたが",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 47,
+ "not_applicable": [
+  {
+   "item": 8,
+   "reason": "規則に当てはまる秒が無い",
+   "what": "盛り上がりの候補"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/47_uNdIdgo7wws.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/uNdIdgo7wws.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "uNdIdgo7wws"
+}

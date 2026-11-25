@@ -1,0 +1,102 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.1",
+     "text": "ドクタードーナツが"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.0",
+     "text": "見えないなにかしに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.6",
+     "text": "監視されている事に"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "2.7",
+     "text": "気づきます"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "3.5",
+     "text": "わっ！？…"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "5.2",
+     "text": "おいお前の拠点"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "5.7",
+     "text": "誰かいるぞ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "6.2",
+     "text": "絶対誰かいる"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "7.1",
+     "text": "足音が聞こえるんよ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.0秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドクタードーナツが見えないなにかに監視されている事に気づきます"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "l-i2luVRm9c"
+}

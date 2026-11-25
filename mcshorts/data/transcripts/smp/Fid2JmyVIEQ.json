@@ -1,0 +1,108 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "green",
+     "end": null,
+     "start": 0.0,
+     "text": "Dreamに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "Daquavisの"
+    },
+    {
+     "color": "red",
+     "end": null,
+     "start": 1.5,
+     "text": "ヤラセ動画を"
+    },
+    {
+     "color": "green",
+     "end": null,
+     "start": 2.0,
+     "text": "Dreamは軽々と"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "再現して"
+    },
+    {
+     "color": "purple",
+     "end": null,
+     "start": 3.7,
+     "text": "冷笑します"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.2,
+     "text": "お〜！"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.7,
+     "text": "Dreamも同じこと"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.5,
+     "text": "やってるやん"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.7,
+     "text": "Daquavisのやつ！"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "4.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームに向けたDaquavisのヤラセ動画をDreamは軽々と再現して冷笑します"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Fid2JmyVIEQ"
+}

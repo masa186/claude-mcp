@@ -1,0 +1,555 @@
+{
+ "Uj6C9-aUj_s": {
+  "summary": "2009年の手書きの壁画と、2026年の最新プロジェクターによる部屋全体の没入型デコレーションを比較する動画です。",
+  "ordinary": "部屋の壁画、プロジェクター、子供部屋、寝室。",
+  "extreme": "プロジェクターを点けるだけで、部屋の壁や天井がマインクラフトのゲーム世界そのものに完全に置き換わる。",
+  "payoff": "2026年のデコレーションとして、部屋が「ジ・エンド」や「ネザー」などの幻想的なゲーム空間に変貌するシーン。",
+  "payoff_sec": 7,
+  "duration_sec": 14,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "2009年の設定で、男性が壁画を描こうとして梯子から落ちる。"
+   },
+   {
+    "t": 3,
+    "what": "「Minecraft DOME」というプロジェクターを開封し、設置する。"
+   },
+   {
+    "t": 7,
+    "what": "ドアを開けると、部屋がマインクラフトの「ジ・エンド」の世界になっている。"
+   },
+   {
+    "t": 10,
+    "what": "別の部屋が美しい夕暮れの草原に変わっている。"
+   },
+   {
+    "t": 12,
+    "what": "ベッドから見上げると、天井が「ネザー」の世界になりガストが浮いている。"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "Minecraft decor in 2009 🤮, Versus..., Minecraft decor in 2026 🤩",
+  "needs_context": true,
+  "one_image": true,
+  "is_ad": true,
+  "music": "マインクラフトのゲーム内BGMと、アイテムを拾う時などの効果音",
+  "_model": "gemini-3-flash-preview"
+ },
+ "YMZoYMvBtUI": {
+  "summary": "マインクラフトの剣で遊ぶ子供たちが喧嘩になる問題を、ホログラムで敵を出現させるデバイスで解決し、家族全員で楽しむ様子を描いた動画。",
+  "ordinary": "子供たちがマインクラフトの剣で遊んでいる、リビングルーム、家族。",
+  "extreme": "部屋の中にマインクラフトの敵（ゾンビやスケルトン）がリアルなホログラムとして現れ、実際に攻撃して倒せるようになっている。",
+  "payoff": "家族全員でホログラムのゾンビに囲まれながら戦うシーン。",
+  "payoff_sec": 11,
+  "duration_sec": 15,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "子供たちが剣で叩き合って喧嘩している。"
+   },
+   {
+    "t": 2,
+    "what": "母親が止めに入る。"
+   },
+   {
+    "t": 3,
+    "what": "ホログラムデバイスが登場。"
+   },
+   {
+    "t": 5,
+    "what": "大人がデバイスを起動し、部屋に入る。"
+   },
+   {
+    "t": 8,
+    "what": "男性がゾンビのホログラムを剣で叩く。"
+   },
+   {
+    "t": 9,
+    "what": "男性がスケルトンの矢を避ける。"
+   },
+   {
+    "t": 11,
+    "what": "家族3人でゾンビに囲まれて戦う。"
+   },
+   {
+    "t": 14,
+    "what": "子供がゾンビを倒して喜ぶ。"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "The problem...\nVs...\nThe Solution...",
+  "needs_context": false,
+  "one_image": true,
+  "is_ad": true,
+  "music": "マライア・キャリーの「All I Want for Christmas Is You」のアップテンポなアレンジ。",
+  "_model": "gemini-3-flash-preview"
+ },
+ "TKv74nlJCXs": {
+  "summary": "マインクラフトの世界で「完璧な円」を作ろうと競い合うが、最終的にブロックの影が最も綺麗な円であることに気づく動画。",
+  "ordinary": "マインクラフトでのブロック配置やコマンド操作、影の描写。",
+  "extreme": "すべてが四角いブロックで構成されるマインクラフトの世界で、一切の角がない完璧な円を見つけようとする執着心。",
+  "payoff": "空中に浮かせた土ブロックの影が、ゲーム内の仕様で完璧な円形になっているオチ。",
+  "payoff_sec": 23,
+  "duration_sec": 25,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "緑のキャラクターがマインクラフトで円を作るよう挑戦を出す。"
+   },
+   {
+    "t": 1,
+    "what": "青いキャラクターが木材を並べて円っぽくするが、角があると却下される。"
+   },
+   {
+    "t": 5,
+    "what": "黄色いキャラクターが車輪のアイテムを見せるが、拡大すると角があると言われる。"
+   },
+   {
+    "t": 11,
+    "what": "緑のキャラクターがコマンドを使い、砂のエンティティを円状に配置する。"
+   },
+   {
+    "t": 16,
+    "what": "砂ブロック一つ一つに角があることを指摘され、全員が絶望する。"
+   },
+   {
+    "t": 18,
+    "what": "紫のキャラクターが登場し、土ブロックを空中に放り投げる。"
+   },
+   {
+    "t": 23,
+    "what": "地面に映った土ブロックの影が完璧な円であることを示し、勝利する。"
+   }
+  ],
+  "speech": "Make a circle in Minecraft. Easy, look. I just arrange blocks like this and BOOM. That's not a circle, it has corners. Yeah, you idiot! This is one. You're wrong too, buddy. Wh- HOW? Because if you look close enough, it has corners. Okay, well how would you do it? If you use special commands, you can generate falling sand like this, which makes a real circle. Anyway, YouTube short over. Hey Blobby. What? It has corners. Gentlemen, allow me.",
+  "on_screen_text": "circle, easy, arrange, BOOM, corners, idiot, ONE!, wh- HOW?, corners, commands, falling, makes a, anyway, corners, gentlemen, allow me",
+  "needs_context": false,
+  "one_image": true,
+  "is_ad": false,
+  "music": "マイクラ風のBGMと、オチに向けたドラマチックな合唱風の音楽",
+  "_model": "gemini-3-flash-preview"
+ },
+ "_Kwq7eGAQd0": {
+  "summary": "マインクラフトで「スポーン地点の目印に小さな城を作ろう」と言いつつ、実際には山全体を覆うような超巨大で精巧な都市を建設した様子を見せる動画です。",
+  "ordinary": "マインクラフトの建築、城、村、スポーン地点の目印。",
+  "extreme": "「小さな城」という言葉とは裏腹に、雲を突き抜けるほどの圧倒的なスケールと密度で巨大都市が作られています。",
+  "payoff": "カメラが大きく引き、都市の全貌と雲の上の高さにあることが明らかになるシーンです。",
+  "payoff_sec": 18,
+  "duration_sec": 21,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "村の真上に巨大な構造物の土台が見える。"
+   },
+   {
+    "t": 3,
+    "what": "カメラが上昇し、巨大な壁面が見えてくる。"
+   },
+   {
+    "t": 7,
+    "what": "都市の入り口や外壁のディテールが映る。"
+   },
+   {
+    "t": 12,
+    "what": "多層構造になった都市の内部が次々と映し出される。"
+   },
+   {
+    "t": 18,
+    "what": "カメラがさらに引き、雲海の上にそびえ立つ都市の全景が映る。"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "“We need a small castle to mark the spawn”",
+  "needs_context": false,
+  "one_image": true,
+  "is_ad": false,
+  "music": "壮大でエピックなオーケストラ音楽",
+  "_model": "gemini-3-flash-preview"
+ },
+ "1lwAtQ6x8G4": {
+  "summary": "キャンディ職人がマインクラフトのチキンの顔の柄が入った金太郎飴（手作りハードキャンディ）を制作する過程を紹介する動画。",
+  "ordinary": "キャンディ職人による金太郎飴作りの作業",
+  "extreme": "マインクラフトのドット絵のチキンの顔を巨大なキャンディブロックで精巧に組み立て、伸ばしてミニサイズにする技術",
+  "payoff": "細く伸ばしたキャンディをカットすると、小さな断面に綺麗なチキンの顔が出現する瞬間",
+  "payoff_sec": 21,
+  "duration_sec": 21,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "色とりどりのキャンディ生地を組み立ててチキンの顔のパーツを作る"
+   },
+   {
+    "t": 4,
+    "what": "パーツをまとめて白とグレーのキャンディ生地で全体を包む"
+   },
+   {
+    "t": 10,
+    "what": "ストライプ柄の外層を巻き付け、天井から吊るすように細長く引き伸ばす"
+   },
+   {
+    "t": 16,
+    "what": "伸ばしたキャンディの棒を揃えて台に乗せる"
+   },
+   {
+    "t": 18,
+    "what": "大きな包丁でキャンディを刻むようにカットする"
+   },
+   {
+    "t": 21,
+    "what": "完成したマインクラフトのチキン柄のミニキャンディを指でつまんで見せる"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "なし",
+  "needs_context": true,
+  "one_image": true,
+  "is_ad": false,
+  "music": "マインクラフトのチキンをテーマにしたアップテンポなボーカル曲",
+  "_model": "gemini-3.5-flash"
+ },
+ "yeYFYvkmScY": {
+  "summary": "マインクラフトのブロックやキャラクターをキーキャップにして、キーボードをマイクラの世界に作り変え、最後にスティーブのマスクを被ってタイピングする動画です。",
+  "ordinary": "キーボード、マインクラフトのブロック、タイピングする人。",
+  "extreme": "キーボードの全てのキーが立体的なマイクラのブロックやキャラになっており、もはやキーボードというよりジオラマのようになっている点。",
+  "payoff": "完成したキーボードを、スティーブの被り物をした人が実際に使っているシュールな光景。",
+  "payoff_sec": 20,
+  "duration_sec": 22,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "普通のキーボードが映る"
+   },
+   {
+    "t": 1,
+    "what": "キーキャップを一気に外す"
+   },
+   {
+    "t": 2,
+    "what": "マイクラの家やかまどのブロックを付け始める"
+   },
+   {
+    "t": 4,
+    "what": "土、水、TNTなどのブロックを次々と並べる"
+   },
+   {
+    "t": 7,
+    "what": "クリーパーのフィギュアを置く"
+   },
+   {
+    "t": 8,
+    "what": "スティーブのフィギュアを置く"
+   },
+   {
+    "t": 9,
+    "what": "マグマブロックを並べる"
+   },
+   {
+    "t": 12,
+    "what": "ネザーポータルを設置する"
+   },
+   {
+    "t": 14,
+    "what": "ジ・エンドのブロックやエンダーマンを配置する"
+   },
+   {
+    "t": 18,
+    "what": "ガストやエンダードラゴンの頭を配置する"
+   },
+   {
+    "t": 20,
+    "what": "スティーブのマスクを被った人物がタイピングする様子"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "long video",
+  "needs_context": true,
+  "one_image": true,
+  "is_ad": true,
+  "music": "ブロックを置く音やクリーパーの鳴き声など、マインクラフトのゲーム内効果音",
+  "_model": "gemini-3-flash-preview"
+ },
+ "nARD2-oI_98": {
+  "summary": "2016年にマインクラフトで犬を飼い始めたプレイヤーが、すぐに戻ると言って犬を待たせたまま10年が経過してしまう悲しいアニメーションです。",
+  "ordinary": "マインクラフトで犬をなつかせることや、家の中で犬を座らせて待機させること。",
+  "extreme": "「すぐ戻る」と言ったきり、2016年から2026年までの10年間、犬が同じ場所で主人の帰りを待ち続けている状況。",
+  "payoff": "2026年になっても、年老いたような切ない表情でベッドの上に座り、主人の帰りを待ち続けている犬の姿。",
+  "payoff_sec": 22,
+  "duration_sec": 27,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "2016年、森で一匹の犬を見つける。"
+   },
+   {
+    "t": 2,
+    "what": "骨をあげて犬をなつかせる。"
+   },
+   {
+    "t": 4,
+    "what": "犬に「ロッコ」という名前をつける。"
+   },
+   {
+    "t": 9,
+    "what": "ゾンビに襲われそうになったところを犬に助けられ、お礼に肉をあげる。"
+   },
+   {
+    "t": 14,
+    "what": "犬を家に連れて帰り、ベッドの上に座らせる。"
+   },
+   {
+    "t": 19,
+    "what": "「すぐ戻るよ」と言い残してプレイヤーが家を出る。"
+   },
+   {
+    "t": 22,
+    "what": "表示が2026年に変わり、年老いた表情の犬がまだ待っている様子が映る。"
+   }
+  ],
+  "speech": "Hey lil guy! Don't be scared. Here. I'm gonna call you Rocko. Hey buddy wait up. Eat the steak. Alright Rocko, I'll be right back.",
+  "on_screen_text": "2016, Hey lil guy!, scared, call you, Hey buddy, eat the steak, Alright Rocko, right back, 2026",
+  "needs_context": false,
+  "one_image": true,
+  "is_ad": false,
+  "music": "穏やかでノスタルジックなピアノのBGM",
+  "_model": "gemini-3-flash-preview"
+ },
+ "aLqHNtGGLhA": {
+  "summary": "マインクラフトの新旧テクスチャについて言い争う2人が、第3の人物に誘われてアルファ版の世界へ行き、その美しさに感動する動画。",
+  "ordinary": "マインクラフトのブロック、テクスチャの比較、ポータル。",
+  "extreme": "昔のテクスチャの方が良かったと主張するために、わざわざアルファ版の世界へ連れて行く極端な懐古主義。",
+  "payoff": "アルファ版の鮮やかな緑色の世界と懐かしいBGMが流れるシーン。",
+  "payoff_sec": 17,
+  "duration_sec": 21,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "紫の服のキャラがエメラルドブロックの旧テクスチャを褒める。"
+   },
+   {
+    "t": 2,
+    "what": "黄色の服のキャラが反論する。"
+   },
+   {
+    "t": 7,
+    "what": "鉱石（Ore）のテクスチャについて議論。"
+   },
+   {
+    "t": 14,
+    "what": "緑のキャラが登場。"
+   },
+   {
+    "t": 17,
+    "what": "アルファ版へのポータルに入る。"
+   },
+   {
+    "t": 18,
+    "what": "アルファ版の世界が広がる。"
+   }
+  ],
+  "speech": "This is better, this is TERRIBLE. Oh here we go. Just because you're nostalgic doesn't mean the old textures were better. It's not nostalgia, they were simpler. Look at the ore! Okay but now you're colorblind. Can you tell them apart? No! That's why they changed them! Oh yeah? Which one's which? What about NOW? That doesn't even make sense! GUYS! You wanna see the best textures? Come on in.",
+  "on_screen_text": "This is better, This is TERRIBLE, oh here we go, you're nostalgic, old textures, nostalgia!, simpler, Look at the ore!, colorblind, them apart?, they changed them!, Oh yeah?, Which one's which?, What about NOW?, GUYS!, You wanna see, the best textures?, Come on in, MINECRAFT ALPHA",
+  "needs_context": true,
+  "one_image": true,
+  "is_ad": false,
+  "music": "最初は会話のみ、後半（17秒〜）はMinecraftの有名なBGM「Sweden」のピアノメロディ。",
+  "_model": "gemini-3-flash-preview"
+ },
+ "yIL3RF57wdc": {
+  "summary": "Steveの形をした透明な容器にボールが注がれ、100個から100,000個へとボールの数と細かさが増すにつれて解像度が高くなり、完璧なSteveが完成する動画。",
+  "ordinary": "容器にカラフルなボールを入れてキャラクターの姿を作ること。",
+  "extreme": "ボールの数が最大100,000個という極端な量・細かさになり、物理演算によって高精細にグラフィックが再現されること。",
+  "payoff": "100,000個の超微細なボールが一気に注がれて最も高精度なSteveが完成する場面。",
+  "payoff_sec": 10,
+  "duration_sec": 17,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "100,000個の完成画像が瞬時に表示されたあとカウントダウンの案内が出る"
+   },
+   {
+    "t": 1,
+    "what": "100個の大きなボールが落下して大まかなSteveの形ができる"
+   },
+   {
+    "t": 4,
+    "what": "1,000個のボールが注がれて少し細かくなる"
+   },
+   {
+    "t": 7,
+    "what": "10,000個のボールが注がれてかなり鮮明になる"
+   },
+   {
+    "t": 10,
+    "what": "100,000個の極小ボールが一気に注がれ、超高精細なSteveが完成する"
+   },
+   {
+    "t": 14,
+    "what": "完成した高精細Steveにズームインする"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "100,000 Balls\n100 Balls\nWait for 100,000\n1,000 Balls\n10,000 Balls",
+  "needs_context": false,
+  "one_image": true,
+  "is_ad": false,
+  "music": "ポップで軽快なBGMとボールの落下効果音",
+  "_model": "gemini-3.5-flash"
+ },
+ "XxDZiM8Ao8M": {
+  "summary": "マインクラフトのアイテムをピストンで潰した際の挙動を、ゲーム内と「現実的」な物理演算で比較する動画です。",
+  "ordinary": "マインクラフトのブロック（ソウルサンド、マグマ）、スライムボール、ピストン、ネザーポータル。",
+  "extreme": "現実的な物理演算では、ソウルサンドから骨が飛び出したり、マグマがドロドロの液体に変化したりと、ゲーム内とは異なるリアルな反応を見せます。",
+  "payoff": "スライムボールが現実的な物理演算によって、バラバラに飛び散りながら跳ね回るシーンです。",
+  "payoff_sec": 19,
+  "duration_sec": 23,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "ソウルサンド（マイクラ版）のピストン圧縮"
+   },
+   {
+    "t": 3,
+    "what": "ソウルサンド（現実版）のピストン圧縮。砂埃と骨が舞う"
+   },
+   {
+    "t": 7,
+    "what": "マグマ（マイクラ版）のピストン圧縮"
+   },
+   {
+    "t": 11,
+    "what": "マグマ（現実版）のピストン圧縮。液体状に溶け出す"
+   },
+   {
+    "t": 15,
+    "what": "スライムボール（マイクラ版）のピストン圧縮"
+   },
+   {
+    "t": 19,
+    "what": "スライムボール（現実版）のピストン圧縮。ボールが跳ね回る"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "Minecraft Soul Sand, Render X, Real Life Soul Sand, Minecraft Magma, Real Life Magma, Minecraft Slime Ball, Real Life Slime Ball",
+  "needs_context": true,
+  "one_image": false,
+  "is_ad": false,
+  "music": "ピストンの作動音やブロックが壊れる音などの効果音",
+  "_model": "gemini-3-flash-preview"
+ },
+ "YvVh2vSm5e4": {
+  "summary": "マインクラフトのアイテムやエンチャントを現実世界で再現し、その凄さをレベル別にランク付けした動画です。",
+  "ordinary": "穴掘り、ズボンを履く、掃除、氷の上を歩く、スイカ割り、バスケットボール、空に伸びる光の筋。",
+  "extreme": "マインクラフトの特殊効果が忠実に再現されており、投げたシャベルが戻ってきたり、歩いた場所が凍ったりします。",
+  "payoff": "レベル7として紹介された「ビーコン」が、空高く巨大な光の柱を放っているシーン。",
+  "payoff_sec": 20,
+  "duration_sec": 22,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "忠誠III：投げたシャベルが手元に戻ってくる"
+   },
+   {
+    "t": 3,
+    "what": "鉄のレギンス：金属製の巨大なズボンを履く"
+   },
+   {
+    "t": 6,
+    "what": "効率III：4本のほうきで超高速で床を掃く"
+   },
+   {
+    "t": 10,
+    "what": "氷渡りI：水面を歩くと足元が凍っていく"
+   },
+   {
+    "t": 13,
+    "what": "槍：スイカに槍を突き刺す"
+   },
+   {
+    "t": 17,
+    "what": "束縛の呪い：バスケットボールが頭から離れなくなる"
+   },
+   {
+    "t": 20,
+    "what": "ビーコン：空に向かって一直線に伸びる光の柱"
+   }
+  ],
+  "speech": "Watch this, Yeah boy, Wow",
+  "on_screen_text": "Ranking Minecraft Items In Real Life, Loyalty III, Iron Leggings, Efficiency III, Frost Walker I, Spear, Curse of Binding, Beacon, POLARRANKS, Level 1, Level 3, Level 4, Level 5, Level 6, Level 7",
+  "needs_context": true,
+  "one_image": true,
+  "is_ad": false,
+  "music": "アップテンポでリズミカルなBGMと、マインクラフトのSE",
+  "_model": "gemini-3-flash-preview"
+ },
+ "wUfAF_8sxGU": {
+  "summary": "マインクラフト内で目の前にあるように見えたダイヤモンド鉱石やブロックが、パースペクティブ（錯視）を利用して配置された立体トリックであったことが明かされる動画。",
+  "ordinary": "マインクラフトでダイヤモンド鉱石をツルハシで掘る状況",
+  "extreme": "手前にあると思っていたブロックの位置や距離感が、錯視によって完全に狂っていること",
+  "payoff": "最後のブロックを掘ると、最初の見た目とは全く異なる空間配置の錯視であったことが判明する瞬間",
+  "payoff_sec": 4,
+  "duration_sec": 7,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "手前に2つのダイヤモンド鉱石、奥にダイヤモンドブロックがあるように見える"
+   },
+   {
+    "t": 1,
+    "what": "左側のダイヤモンド鉱石をツルハシで破壊する"
+   },
+   {
+    "t": 2,
+    "what": "右側のダイヤモンド鉱石を破壊する"
+   },
+   {
+    "t": 4,
+    "what": "中央に残ったダイヤモンドブロックを破壊する"
+   },
+   {
+    "t": 5,
+    "what": "ブロックがすべて消え、実際の壁までの距離や配置の錯視が明かされる"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "Insane illusion... 💀",
+  "needs_context": false,
+  "one_image": false,
+  "is_ad": false,
+  "music": "ゲームの採掘効果音と叫び声・爆発音などのSE",
+  "_model": "gemini-3.5-flash"
+ },
+ "02uZI1degwU": {
+  "summary": "6年間プレイしたマインクラフトのハードコアモードのデータを子供に消された父親が、怒りで視聴者を握りつぶす動画。",
+  "ordinary": "父親にゲームの失敗を報告する状況。",
+  "extreme": "父親が超人的な力でカメラ（子供の視点）を物理的に握りつぶしている。",
+  "payoff": "父親がカメラを掴んで粉砕するシーン。",
+  "payoff_sec": 0,
+  "duration_sec": 8,
+  "timeline": [
+   {
+    "t": 0,
+    "what": "父親がカメラを掴もうと手を伸ばす"
+   },
+   {
+    "t": 2,
+    "what": "カメラを握りつぶすような激しい音とエフェクト"
+   },
+   {
+    "t": 5,
+    "what": "さらに力を込めて握りつぶす"
+   },
+   {
+    "t": 7,
+    "what": "画面が真っ暗になる"
+   }
+  ],
+  "speech": "なし",
+  "on_screen_text": "\"Hey dad I was playing on your 6 year old Minecraft hardcore World and I accidentally di-\"",
+  "needs_context": true,
+  "one_image": true,
+  "is_ad": false,
+  "music": "激しく歪んだクラッシュ音とノイズ",
+  "_model": "gemini-3-flash-preview"
+ }
+}

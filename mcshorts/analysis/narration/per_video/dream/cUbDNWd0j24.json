@@ -1,0 +1,893 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 60.81,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.73,
+   "first_cut_minus_first_row_start": 0.73,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.483,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "森で白い体のGroxと羊が並んで立つ。字幕なし"
+     },
+     {
+      "end": null,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤字**「羊とやって」",
+      "time_raw": "0.27",
+      "visual": "羊の顔にニヤけた顔のミーム画像が重なる"
+     },
+     {
+      "end": null,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「子供ができた」",
+      "time_raw": "0.73",
+      "visual": "カット。柵の中の羊 [実測: カット0.73]"
+     },
+     {
+      "end": null,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「Groxですが彼は」",
+      "time_raw": "1.47",
+      "visual": "カメラが引いて、色々な生き物の群れ"
+     },
+     {
+      "end": null,
+      "start": 2.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「自分の子供に」",
+      "time_raw": "2.47",
+      "visual": "カット。ジ・エンドで体にTNTを巻いたGrox [実測: カット2.47]"
+     },
+     {
+      "end": 4.47,
+      "start": 3.13,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤字**「〇されることに...」",
+      "time_raw": "3.13〜4.47",
+      "visual": "TNTの寄り → 4.47で「You Died!」の死亡画面"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.1,
+     "music_mean_during_row": 0.44,
+     "nearest_cut_to_end": 0.37,
+     "nearest_cut_to_start": 0.73,
+     "nearest_subtitle_change_to_end": 1.1,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 3.1,
+     "music_mean_during_row": 0.46,
+     "nearest_cut_to_end": 0.03,
+     "nearest_cut_to_start": 0.37,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 1.1,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 2.1
+    },
+    {
+     "end": 4.2,
+     "music_mean_during_row": 0.415,
+     "nearest_cut_to_end": 0.07,
+     "nearest_cut_to_start": 0.03,
+     "nearest_subtitle_change_to_end": 0.07,
+     "nearest_subtitle_change_to_start": 0.1,
+     "row": 2,
+     "spikes_within_row_or_1s_after": [],
+     "start": 3.1
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜子供ができたGroxですが」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "字幕の区切りで文の途中",
+     "role": "R_FRAGMENT",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〇されることになります」と結末を予告（伏せ字）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 18,
+     "content_lemmas": [
+      "羊",
+      "遣る",
+      "子供",
+      "出来る",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "羊",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "羊"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 3
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "羊とやって子供ができたGroxですが"
+    },
+    {
+     "chars": 8,
+     "content_lemmas": [
+      "彼",
+      "自分",
+      "子供"
+     ],
+     "first_token": {
+      "lemma": "彼",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "彼"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助詞": 3,
+      "名詞": 2
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "彼は自分の子供に"
+    },
+    {
+     "chars": 11,
+     "content_lemmas": [
+      "為る",
+      "事",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "■",
+      "pos1": "補助記号",
+      "pos2": "一般",
+      "surface": "■"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": true,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 1,
+      "動詞": 2,
+      "名詞": 1,
+      "補助記号": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "〇されることになります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "子供",
+     2
+    ],
+    [
+     "羊",
+     1
+    ],
+    [
+     "遣る",
+     1
+    ],
+    [
+     "出来る",
+     1
+    ],
+    [
+     "Grox",
+     1
+    ],
+    [
+     "彼",
+     1
+    ],
+    [
+     "自分",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "事",
+     1
+    ],
+    [
+     "成る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.1,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "羊とやって子供ができたGroxですが"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 10,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "キツジとやって子供が",
+     "words": [
+      "キ",
+      "ツ",
+      "ジ",
+      "と",
+      "やって",
+      "子",
+      "供",
+      "が"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.1,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "羊とやって子供ができたGroxですが"
+      },
+      {
+       "end": 3.1,
+       "fully_inside": false,
+       "row": 1,
+       "start": 2.1,
+       "text": "彼は自分の子供に"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 28,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "キツジとやって子供ができたブロックスですが彼は自分の子供",
+     "words": [
+      "キ",
+      "ツ",
+      "ジ",
+      "と",
+      "やって",
+      "子",
+      "供",
+      "が",
+      "でき",
+      "た",
+      "ブ",
+      "ロ",
+      "ック",
+      "ス",
+      "です",
+      "が",
+      "彼",
+      "は",
+      "自",
+      "分",
+      "の",
+      "子",
+      "供"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.1,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "羊とやって子供ができたGroxですが"
+      },
+      {
+       "end": 3.1,
+       "fully_inside": true,
+       "row": 1,
+       "start": 2.1,
+       "text": "彼は自分の子供に"
+      },
+      {
+       "end": 4.2,
+       "fully_inside": true,
+       "row": 2,
+       "start": 3.1,
+       "text": "〇されることになります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 58,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "キツジとやって子供ができたブロックスですが彼は自分の子供にピッサれることになりやNo! That's ridiculous!",
+     "words": [
+      "キ",
+      "ツ",
+      "ジ",
+      "と",
+      "やって",
+      "子",
+      "供",
+      "が",
+      "でき",
+      "た",
+      "ブ",
+      "ロ",
+      "ック",
+      "ス",
+      "です",
+      "が",
+      "彼",
+      "は",
+      "自",
+      "分",
+      "の",
+      "子",
+      "供",
+      "に",
+      "ピ",
+      "ッ",
+      "サ",
+      "れる",
+      "こと",
+      "にな",
+      "り",
+      "や",
+      "No!",
+      " That",
+      "'s",
+      " ridiculous!"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 18,
+    "end": 2.1,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "羊とやって子供ができたGroxですが"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "羊",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "羊"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "text": "羊とやって子供ができたGroxですが"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜子供ができたGroxですが」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "ピッサれることになりや",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "森で白い体のGroxと羊が並んで立つ。字幕なし"
+     },
+     {
+      "end": null,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤字**「羊とやって」",
+      "time_raw": "0.27",
+      "visual": "羊の顔にニヤけた顔のミーム画像が重なる"
+     },
+     {
+      "end": null,
+      "start": 0.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「子供ができた」",
+      "time_raw": "0.73",
+      "visual": "カット。柵の中の羊 [実測: カット0.73]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "キ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.57,
+    "rows": [
+     {
+      "chars": 18,
+      "chars_per_sec": 8.57,
+      "duration": 2.1,
+      "gap_to_next_row": 0.0,
+      "row": 0
+     },
+     {
+      "chars": 8,
+      "chars_per_sec": 8.0,
+      "duration": 1.0,
+      "gap_to_next_row": 0.0,
+      "row": 1
+     },
+     {
+      "chars": 11,
+      "chars_per_sec": 10.0,
+      "duration": 1.1,
+      "gap_to_next_row": null,
+      "row": 2
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 37
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 11.07,
+    "gap_max": 0.18,
+    "gap_median": 0.18,
+    "gaps_ge_0.3s": 0,
+    "n_words": 36,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "羊とやって子供ができたGroxですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "彼は自分の子供に"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": true,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 2,
+     "text": "〇されることになります"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "TNTを巻いた**別の息子**が現れる",
+       "range_raw": "41.3〜55.5",
+       "source": "doc_structure",
+       "source_file": "dream/individual/01_cUbDNWd0j24.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      },
+      {
+       "quote": "56.27「You Died!」",
+       "range_raw": "55〜57",
+       "source": "doc_structure",
+       "source_file": "dream/individual/01_cUbDNWd0j24.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 7
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "〇されることになります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 2,
+     "from_start": 3.1,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "cUbDNWd0j24"
+    }
+   ],
+   "role_sequence": [
+    "R_SETUP",
+    "R_FRAGMENT",
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_DIALOGUE",
+     "effective_code": "D_DIALOGUE",
+     "quote": "I'm gonna stop you and make you face reveal.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "No, that's ridiculous!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "ナレーションで前提と結末。死亡画面を先に見せる",
+      "range_raw": "0.0〜4.5",
+      "stage_label": "冒頭（予告）"
+     },
+     {
+      "content": "ジ・エンドで「君は誰だ？」「Grox Jrだ」「(まさか…!!)」「じゃあ俺が養育費」「お前の正体を暴くためここにいる」",
+      "range_raw": "5.3〜14",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「簡単な方法でやるか」「難しい方法でやるk...」（字幕が途中で遮られる）→ 鎖とTNTで縛られたGrox「俺の息子じゃん!!」「TNTが沢山!!」。間に羊の頭の子供「エイヨォォォ!!」（音タグ 17〜24秒で羊の鳴き声 Bleat 0.5〜0.7）",
+      "range_raw": "14.8〜24",
+      "stage_label": "事件"
+     },
+     {
+      "content": "「顔出ししないとどうなるか...」「落ち着けぇぇぇ!!」「あなたの息子だぞ?!」「すまんな息子よ」「どうでもいい」",
+      "range_raw": "24.6〜31",
+      "stage_label": "緊張"
+     },
+     {
+      "content": "「※数分後...」。音タグでは29〜31秒で Music が0付近まで落ちる（BGMが一度止まる）",
+      "range_raw": "31.5",
+      "stage_label": "場面転換"
+     },
+     {
+      "content": "「ごめんな少年よ」「悪気は無かったんだ」「お前のせいで父を失った」→「これでパパに会えるな!!」「もう終わりにしよう」",
+      "range_raw": "33.7〜40",
+      "stage_label": "展開の変化"
+     },
+     {
+      "content": "TNTを巻いた**別の息子**が現れる「パパ会いたかった」「お前と面識ないだろ」「お前を置き去りにした」「そうだよ置いてきたのに...」「そんなの馬鹿げてる!!!」",
+      "range_raw": "41.3〜55.5",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "爆発（音タグ 55秒 Explosion、実測 57.05秒に音の突出）→ 56.27「You Died!」「おい!ちょ待っ....」",
+      "range_raw": "55〜57",
+      "stage_label": "オチ"
+     },
+     {
+      "content": "死亡画面に🤔の絵文字と「\"これは何エンド？\"」",
+      "range_raw": "57.4〜60.8",
+      "stage_label": "締め"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     57
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     57.05
+    ],
+    "cuts": 52,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 5,
+     "15": 2,
+     "20": 4,
+     "25": 3,
+     "30": 5,
+     "35": 4,
+     "40": 5,
+     "45": 4,
+     "5": 6,
+     "50": 3,
+     "55": 5,
+     "60": 1
+    },
+    "duration_sec": 60.81,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "opening",
+      "row": 1,
+      "start": 2.1
+     },
+     {
+      "position": "opening",
+      "row": 2,
+      "start": 3.1
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 4.2,
+    "is_end_position": false,
+    "sec_from_end": 56.61,
+    "start": 3.1,
+    "status": "DOC_OBSERVED",
+    "text": "〇されることになります"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〇されることになります」と結末を予告（伏せ字）",
+     "role": "R_RESULT_PREVIEW",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 56.0,
+    "status": "ok",
+    "text": "No, that's ridiculous!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 56.14,
+    "status": "ok",
+    "text": "No, that's a dick!"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "No, that's ridiculous!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 1,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/01_cUbDNWd0j24.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/cUbDNWd0j24.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "cUbDNWd0j24"
+}

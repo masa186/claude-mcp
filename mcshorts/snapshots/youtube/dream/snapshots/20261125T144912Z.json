@@ -1,0 +1,2148 @@
+{
+ "calls": [
+  {
+   "at": "2026-11-25T14:49:12Z",
+   "attempt": 1,
+   "endpoint": "channels",
+   "items": 1,
+   "params": {
+    "id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+    "part": "snippet,statistics,contentDetails"
+   },
+   "server_date": "Wed, 25 Nov 2026 14:49:12 GMT",
+   "status": 200,
+   "units": 1
+  },
+  {
+   "at": "2026-11-25T14:49:12Z",
+   "attempt": 1,
+   "endpoint": "playlistItems",
+   "items": 50,
+   "params": {
+    "maxResults": 50,
+    "part": "contentDetails",
+    "playlistId": "UUDjrYZMZx4zUbLDcKZWnkYw"
+   },
+   "server_date": "Wed, 25 Nov 2026 14:49:13 GMT",
+   "status": 200,
+   "units": 1
+  },
+  {
+   "at": "2026-11-25T14:49:13Z",
+   "attempt": 1,
+   "endpoint": "playlistItems",
+   "items": 8,
+   "params": {
+    "maxResults": 50,
+    "pageToken": "EAAaHlBUOkNESWlFRE15TmpNNU9FSXlNamt6TnpZNE9FVQ",
+    "part": "contentDetails",
+    "playlistId": "UUDjrYZMZx4zUbLDcKZWnkYw"
+   },
+   "server_date": "Wed, 25 Nov 2026 14:49:13 GMT",
+   "status": 200,
+   "units": 1
+  },
+  {
+   "at": "2026-11-25T14:49:13Z",
+   "attempt": 1,
+   "endpoint": "videos",
+   "items": 50,
+   "params": {
+    "id": "cUbDNWd0j24,4dFAPRHYvk8,snRuzLtmLX4,tCQ6I8gQHLM,TSW_96CsF4Q,aZVsf5PhZxo,UQ14cHsyEkA,OKhTqo8eVks,vTPcburl6o8,bAcdBVPA5Zk,G6CB11Q-lT0,mRndDDRWz00,Yb4XjY7uhKw,3NGJSpc1k7A,qNFu8Q55mEE,ZoQjGe7_Kl8,PXYdDGT2fms,YaBIB4VuiqM,0ZPbHZ12VSA,D6srtcztceU,Nnx_PiCiM4Y,xGF9lFQyjpY,p4osmEVx7hY,Pf78c9UhqRk,wWd7KT3RTNg,0iK0gxEUo0U,6qYSnMKV7Mc,loiMd64_c6Q,Px_B8QwN9AA,MxPwX5a6vfg,tdwKZ17Cpzs,Ag_RdDjnYDA,QOhVjXfbKVk,bqyhes0V7Qc,FnzjGyuYTAU,d2PlYjZcRo0,bFmKcjqo7Sk,lzD1xJ46ZC4,sJDbLVB340o,Xb34KasPZyE,i2o5r0vZOrg,S8OLvKN4-o8,ldGtosTpMyw,lpfTNQ5dR70,nPJHE7bHxnI,TWUEJTjUPmY,uNdIdgo7wws,1U5Pu0pVtvM,NNe82nsFlME,LVcWPlryJqA",
+    "part": "snippet,contentDetails,statistics,status"
+   },
+   "server_date": "Wed, 25 Nov 2026 14:49:13 GMT",
+   "status": 200,
+   "units": 1
+  },
+  {
+   "at": "2026-11-25T14:49:13Z",
+   "attempt": 1,
+   "endpoint": "videos",
+   "items": 8,
+   "params": {
+    "id": "wYRkhfRSjDs,eg0_YckR1Iw,H4k6ZUfs3bA,BwGk9qgSqfU,AUQ8r0qXgVU,MzpvoTEXweE,7fSr1a8AlsI,O_8PGIz3TLc",
+    "part": "snippet,contentDetails,statistics,status"
+   },
+   "server_date": "Wed, 25 Nov 2026 14:49:14 GMT",
+   "status": 200,
+   "units": 1
+  }
+ ],
+ "channel": "dream",
+ "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+ "channel_stats": {
+  "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+  "fetched_at": "2026-11-25T14:49:12Z",
+  "published_at": "2026-02-01T20:40:03.403017Z",
+  "subscribers": 48400,
+  "subscribers_note": "API 側で上3桁に丸められた値",
+  "title": "ドリームクリップ",
+  "uploads_playlist": "UUDjrYZMZx4zUbLDcKZWnkYw",
+  "video_count": 58,
+  "view_count": 76780495
+ },
+ "code_commit": "5d2924772edebf942103d62a133a2501ff67fbb8",
+ "extra_ids_requested": [],
+ "finished_at": "2026-11-25T14:49:14Z",
+ "foreign": [],
+ "not_returned": [],
+ "playlist_pages": 2,
+ "schema_version": 1,
+ "started_at": "2026-11-25T14:49:12Z",
+ "units_total": 5,
+ "uploads_count": 58,
+ "videos": [
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 75,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT53S",
+   "duration_sec": 53,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 3229,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-03-12T11:31:48Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "マインクラフト",
+    "shorts",
+    "ゲーム実況",
+    "海外和訳"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/0ZPbHZ12VSA/default.jpg",
+    "high": "https://i.ytimg.com/vi/0ZPbHZ12VSA/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/0ZPbHZ12VSA/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/0ZPbHZ12VSA/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/0ZPbHZ12VSA/sddefault.jpg"
+   },
+   "title": "思ったけど家を投げれるボールドの方が怪物じゃない？",
+   "video_id": "0ZPbHZ12VSA",
+   "views": 240186
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 71,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M17S",
+   "duration_sec": 77,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 7259,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-05T12:37:16Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/0iK0gxEUo0U/default.jpg",
+    "high": "https://i.ytimg.com/vi/0iK0gxEUo0U/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/0iK0gxEUo0U/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/0iK0gxEUo0U/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/0iK0gxEUo0U/sddefault.jpg"
+   },
+   "title": "ゴードンラムゼイによるマイクラクッキング#マイクラ #マインクラフト #minecraft #shorts #gordonramsay",
+   "video_id": "0iK0gxEUo0U",
+   "views": 350292
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 25,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT25S",
+   "duration_sec": 25,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": null,
+   "made_for_kids": false,
+   "missing": {
+    "likes": {
+     "code": "NOT_AVAILABLE",
+     "note": "高評価数が非公開か、応答に無い"
+    },
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-12T09:15:02Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/1U5Pu0pVtvM/default.jpg",
+    "high": "https://i.ytimg.com/vi/1U5Pu0pVtvM/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/1U5Pu0pVtvM/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/1U5Pu0pVtvM/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/1U5Pu0pVtvM/sddefault.jpg"
+   },
+   "title": "エンタメを忘れないダクアビスが面白過ぎます#shorts #マイクラ#minecraft #ドリーム#dream",
+   "video_id": "1U5Pu0pVtvM",
+   "views": 309441
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 313,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "彼のチャンネルはこちら\n\nhttps://youtube.com/@BahaBlast?si=-6uQEBHgc45mS_Xr",
+   "duration_iso": "PT1M5S",
+   "duration_sec": 65,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 39274,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-18T11:27:54Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/3NGJSpc1k7A/default.jpg",
+    "high": "https://i.ytimg.com/vi/3NGJSpc1k7A/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/3NGJSpc1k7A/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/3NGJSpc1k7A/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/3NGJSpc1k7A/sddefault.jpg"
+   },
+   "title": "どんまい。#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "3NGJSpc1k7A",
+   "views": 2110895
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 19,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT34S",
+   "duration_sec": 34,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 1608,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-04-06T11:21:47Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/4dFAPRHYvk8/default.jpg",
+    "high": "https://i.ytimg.com/vi/4dFAPRHYvk8/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/4dFAPRHYvk8/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/4dFAPRHYvk8/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/4dFAPRHYvk8/sddefault.jpg"
+   },
+   "title": "凄すぎ#マイクラ #マインクラフト #minecraft #shorts",
+   "video_id": "4dFAPRHYvk8",
+   "views": 165021
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 208,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT33S",
+   "duration_sec": 33,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 20671,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-04T10:35:16Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/6qYSnMKV7Mc/default.jpg",
+    "high": "https://i.ytimg.com/vi/6qYSnMKV7Mc/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/6qYSnMKV7Mc/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/6qYSnMKV7Mc/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/6qYSnMKV7Mc/sddefault.jpg"
+   },
+   "title": "こればっかりは仕方ない。#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "6qYSnMKV7Mc",
+   "views": 1825897
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 21,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "Dreamのチャンネルはこちら\n↓\n\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT29S",
+   "duration_sec": 29,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 2672,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-03T10:59:26Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "Dream",
+    "ドリーム",
+    "海外翻訳"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/7fSr1a8AlsI/default.jpg",
+    "high": "https://i.ytimg.com/vi/7fSr1a8AlsI/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/7fSr1a8AlsI/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/7fSr1a8AlsI/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/7fSr1a8AlsI/sddefault.jpg"
+   },
+   "title": "Dreamはヤラセをしていた...#shorts",
+   "video_id": "7fSr1a8AlsI",
+   "views": 350261
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 67,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "Dreamのチャンネルはこちら\n↓\n\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT52S",
+   "duration_sec": 52,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 4624,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-05T11:23:49Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "Dream",
+    "ドリーム",
+    "海外和訳"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/AUQ8r0qXgVU/default.jpg",
+    "high": "https://i.ytimg.com/vi/AUQ8r0qXgVU/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/AUQ8r0qXgVU/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/AUQ8r0qXgVU/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/AUQ8r0qXgVU/sddefault.jpg"
+   },
+   "title": "Dream対ヤラセdaquavis#shorts #マイクラ",
+   "video_id": "AUQ8r0qXgVU",
+   "views": 420393
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 227,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT27S",
+   "duration_sec": 27,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 42790,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-27T12:39:14Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/Ag_RdDjnYDA/default.jpg",
+    "high": "https://i.ytimg.com/vi/Ag_RdDjnYDA/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/Ag_RdDjnYDA/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/Ag_RdDjnYDA/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/Ag_RdDjnYDA/sddefault.jpg"
+   },
+   "title": "Groxが無敵な理由の一つ#マイクラ #マインクラフト #minecraft #shorts #ゲーム実況 #grox",
+   "video_id": "Ag_RdDjnYDA",
+   "views": 2932535
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 381,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネル\n↓\n\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT1M6S",
+   "duration_sec": 66,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 36673,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-06T12:21:49Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "ドリーム",
+    "Dream",
+    "海外翻訳",
+    "進撃の巨人"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/BwGk9qgSqfU/default.jpg",
+    "high": "https://i.ytimg.com/vi/BwGk9qgSqfU/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/BwGk9qgSqfU/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/BwGk9qgSqfU/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/BwGk9qgSqfU/sddefault.jpg"
+   },
+   "title": "巨人を駆逐すると誓うDream#shorts #マイクラ",
+   "video_id": "BwGk9qgSqfU",
+   "views": 1988442
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 228,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "彼のチャンネルはこちら\n\nhttps://youtube.com/@BahaBlast?si=-6uQEBHgc45mS_Xr",
+   "duration_iso": "PT1M3S",
+   "duration_sec": 63,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 14713,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-11T12:19:58Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/D6srtcztceU/default.jpg",
+    "high": "https://i.ytimg.com/vi/D6srtcztceU/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/D6srtcztceU/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/D6srtcztceU/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/D6srtcztceU/sddefault.jpg"
+   },
+   "title": "カンニングダメゼッタイ#マイクラ #マインクラフト #minecraft #ゲーム #shorts",
+   "video_id": "D6srtcztceU",
+   "views": 789197
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 114,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT2M4S",
+   "duration_sec": 124,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 27672,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-24T12:34:51Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/FnzjGyuYTAU/default.jpg",
+    "high": "https://i.ytimg.com/vi/FnzjGyuYTAU/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/FnzjGyuYTAU/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/FnzjGyuYTAU/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/FnzjGyuYTAU/sddefault.jpg"
+   },
+   "title": "このDreamは偽物です#shorts #マイクラ #マインクラフト #minecraft #dream #grox #ゲーム実況",
+   "video_id": "FnzjGyuYTAU",
+   "views": 1434169
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 19,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M3S",
+   "duration_sec": 63,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 1719,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-20T11:13:56Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/G6CB11Q-lT0/default.jpg",
+    "high": "https://i.ytimg.com/vi/G6CB11Q-lT0/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/G6CB11Q-lT0/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/G6CB11Q-lT0/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/G6CB11Q-lT0/sddefault.jpg"
+   },
+   "title": "わからせ#マイクラ #マインクラフト #minecraft #shorts #ゲーム実況",
+   "video_id": "G6CB11Q-lT0",
+   "views": 169587
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 71,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\n\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT54S",
+   "duration_sec": 54,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 11921,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-07T09:24:24Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "ドリーム",
+    "Dream",
+    "海外和訳",
+    "切り抜き"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/H4k6ZUfs3bA/default.jpg",
+    "high": "https://i.ytimg.com/vi/H4k6ZUfs3bA/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/H4k6ZUfs3bA/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/H4k6ZUfs3bA/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/H4k6ZUfs3bA/sddefault.jpg"
+   },
+   "title": "ドリームVSダクアビスの神対決#shorts #マイクラ",
+   "video_id": "H4k6ZUfs3bA",
+   "views": 920934
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 70,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\n\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT47S",
+   "duration_sec": 47,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 6421,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-10T12:05:22Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/LVcWPlryJqA/default.jpg",
+    "high": "https://i.ytimg.com/vi/LVcWPlryJqA/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/LVcWPlryJqA/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/LVcWPlryJqA/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/LVcWPlryJqA/sddefault.jpg"
+   },
+   "title": "この2人は最高のライバルであり最高の友達です#shorts #マインクラフト #minecraft",
+   "video_id": "LVcWPlryJqA",
+   "views": 441992
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 860,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT38S",
+   "duration_sec": 38,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 81955,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-01T10:32:34Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/MxPwX5a6vfg/default.jpg",
+    "high": "https://i.ytimg.com/vi/MxPwX5a6vfg/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/MxPwX5a6vfg/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/MxPwX5a6vfg/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/MxPwX5a6vfg/sddefault.jpg"
+   },
+   "title": "怪物が可哀想です#shorts #マイクラ #マインクラフト #minecraft #ゲーム実況",
+   "video_id": "MxPwX5a6vfg",
+   "views": 4662185
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 75,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "※音量に注意してご視聴下さい。\n\nDreamのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT1M11S",
+   "duration_sec": 71,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 8982,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-04T10:16:50Z",
+   "tags": [
+    "#マイクラ",
+    "#ドリーム",
+    "#海外翻訳",
+    "#Dream"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/MzpvoTEXweE/default.jpg",
+    "high": "https://i.ytimg.com/vi/MzpvoTEXweE/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/MzpvoTEXweE/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/MzpvoTEXweE/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/MzpvoTEXweE/sddefault.jpg"
+   },
+   "title": "Georgeを守るDreamがカッコよすぎます。#shorts",
+   "video_id": "MzpvoTEXweE",
+   "views": 531348
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 87,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT36S",
+   "duration_sec": 36,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 5387,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-11T09:47:37Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "Dream",
+    "ドリーム",
+    "海外翻訳"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/NNe82nsFlME/default.jpg",
+    "high": "https://i.ytimg.com/vi/NNe82nsFlME/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/NNe82nsFlME/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/NNe82nsFlME/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/NNe82nsFlME/sddefault.jpg"
+   },
+   "title": "キッズ達がドリームに罠を仕掛けた結果...#shorts #マイクラ #minecraft",
+   "video_id": "NNe82nsFlME",
+   "views": 482803
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 326,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "元動画はこちらから\n↓ \nhttps://youtube.com/@BahaBlast?si=92vOdN-HuZVdleq_",
+   "duration_iso": "PT1M6S",
+   "duration_sec": 66,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 38734,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-10T11:09:45Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/Nnx_PiCiM4Y/default.jpg",
+    "high": "https://i.ytimg.com/vi/Nnx_PiCiM4Y/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/Nnx_PiCiM4Y/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/Nnx_PiCiM4Y/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/Nnx_PiCiM4Y/sddefault.jpg"
+   },
+   "title": "すいません両腕が💦#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "Nnx_PiCiM4Y",
+   "views": 2302976
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 124,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "彼のチャンネルはこちら\n\nhttps://youtube.com/@LookOut3D?si=5Mx-V09242gOrPI-",
+   "duration_iso": "PT56S",
+   "duration_sec": 56,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 20293,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-23T12:12:14Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/OKhTqo8eVks/default.jpg",
+    "high": "https://i.ytimg.com/vi/OKhTqo8eVks/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/OKhTqo8eVks/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/OKhTqo8eVks/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/OKhTqo8eVks/sddefault.jpg"
+   },
+   "title": "キラだから。#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "OKhTqo8eVks",
+   "views": 979142
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 23,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "チャンネル登録お願いします！\n\nドリームのチャンネル\n↓↓↓↓↓↓↓↓↓↓↓↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT1M3S",
+   "duration_sec": 63,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 1940,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-02T09:01:31Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "Dream",
+    "ドリーム",
+    "海外和訳",
+    "切り抜き"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/O_8PGIz3TLc/default.jpg",
+    "high": "https://i.ytimg.com/vi/O_8PGIz3TLc/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/O_8PGIz3TLc/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/O_8PGIz3TLc/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/O_8PGIz3TLc/sddefault.jpg"
+   },
+   "title": "海外マイクラ勢のイかれたプレイがこちら#shorts",
+   "video_id": "O_8PGIz3TLc",
+   "views": 132245
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 46,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "彼のチャンネルはこちら\n\nhttps://youtube.com/@Creebus?si=f1rCijDaWDZc5bpw",
+   "duration_iso": "PT38S",
+   "duration_sec": 38,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 2359,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-15T11:53:33Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/PXYdDGT2fms/default.jpg",
+    "high": "https://i.ytimg.com/vi/PXYdDGT2fms/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/PXYdDGT2fms/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/PXYdDGT2fms/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/PXYdDGT2fms/sddefault.jpg"
+   },
+   "title": "男の子が早ﾀﾋにする理由#shorts #マイクラ #マインクラフト #minecraft",
+   "video_id": "PXYdDGT2fms",
+   "views": 180751
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 138,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT50S",
+   "duration_sec": 50,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 9368,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-07T10:50:04Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/Pf78c9UhqRk/default.jpg",
+    "high": "https://i.ytimg.com/vi/Pf78c9UhqRk/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/Pf78c9UhqRk/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/Pf78c9UhqRk/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/Pf78c9UhqRk/sddefault.jpg"
+   },
+   "title": "ワンチャンGroxよりもドブカス#shorts #マイクラ #マインクラフト #minecraft #ゲーム実況",
+   "video_id": "Pf78c9UhqRk",
+   "views": 679562
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 997,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M1S",
+   "duration_sec": 61,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 109330,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-02T13:18:43Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/Px_B8QwN9AA/default.jpg",
+    "high": "https://i.ytimg.com/vi/Px_B8QwN9AA/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/Px_B8QwN9AA/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/Px_B8QwN9AA/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/Px_B8QwN9AA/sddefault.jpg"
+   },
+   "title": "もしGroxがこれをやっていたら多分無双してます#shorts #マイクラ #マインクラフト #minecraft #ゲーム実況",
+   "video_id": "Px_B8QwN9AA",
+   "views": 4530842
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 177,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "グロックスのチャンネルはこちら\n↓\nhttps://youtube.com/@GroxMC?si=3Fpp024OpFZeXpB6",
+   "duration_iso": "PT40S",
+   "duration_sec": 40,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 22419,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-26T12:04:38Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/QOhVjXfbKVk/default.jpg",
+    "high": "https://i.ytimg.com/vi/QOhVjXfbKVk/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/QOhVjXfbKVk/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/QOhVjXfbKVk/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/QOhVjXfbKVk/sddefault.jpg"
+   },
+   "title": "海外版直哉#shorts #マイクラ #マインクラフト #minecraft #ゲーム実況 #grox",
+   "video_id": "QOhVjXfbKVk",
+   "views": 1282752
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 20,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT24S",
+   "duration_sec": 24,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 3416,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-17T11:32:38Z",
+   "tags": [
+    "short",
+    "マイクラ",
+    "Minecraft",
+    "マインクラフト",
+    "ドリーム",
+    "Dream"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/S8OLvKN4-o8/default.jpg",
+    "high": "https://i.ytimg.com/vi/S8OLvKN4-o8/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/S8OLvKN4-o8/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/S8OLvKN4-o8/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/S8OLvKN4-o8/sddefault.jpg"
+   },
+   "title": "ピンチをチャンスに変えるDream",
+   "video_id": "S8OLvKN4-o8",
+   "views": 438392
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 331,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT42S",
+   "duration_sec": 42,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 9943,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-27T12:05:42Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/TSW_96CsF4Q/default.jpg",
+    "high": "https://i.ytimg.com/vi/TSW_96CsF4Q/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/TSW_96CsF4Q/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/TSW_96CsF4Q/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/TSW_96CsF4Q/sddefault.jpg"
+   },
+   "title": "java版スケルトンの復讐劇#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "TSW_96CsF4Q",
+   "views": 706827
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 565,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT1M1S",
+   "duration_sec": 61,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 41741,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-14T03:00:42Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/TWUEJTjUPmY/default.jpg",
+    "high": "https://i.ytimg.com/vi/TWUEJTjUPmY/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/TWUEJTjUPmY/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/TWUEJTjUPmY/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/TWUEJTjUPmY/sddefault.jpg"
+   },
+   "title": "VRの世界で猫を飼うジョージですが...#shorts #マインクラフト #minecraft #マイクラ #dream",
+   "video_id": "TWUEJTjUPmY",
+   "views": 2200991
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 71,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT58S",
+   "duration_sec": 58,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 6721,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-24T12:01:29Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/UQ14cHsyEkA/default.jpg",
+    "high": "https://i.ytimg.com/vi/UQ14cHsyEkA/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/UQ14cHsyEkA/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/UQ14cHsyEkA/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/UQ14cHsyEkA/sddefault.jpg"
+   },
+   "title": "形が完全にあれ。#マイクラ #マインクラフト #minecraft #shorts #grox #グロックス",
+   "video_id": "UQ14cHsyEkA",
+   "views": 363595
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 452,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT57S",
+   "duration_sec": 57,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 131358,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-20T12:43:09Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/Xb34KasPZyE/default.jpg",
+    "high": "https://i.ytimg.com/vi/Xb34KasPZyE/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/Xb34KasPZyE/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/Xb34KasPZyE/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/Xb34KasPZyE/sddefault.jpg"
+   },
+   "title": "この男は道徳の授業を受けたことがありません。#shorts #マイクラ #マインクラフト #minecraft #dream #ゲーム実況",
+   "video_id": "Xb34KasPZyE",
+   "views": 7183512
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 86,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT42S",
+   "duration_sec": 42,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 18404,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-14T10:13:50Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/YaBIB4VuiqM/default.jpg",
+    "high": "https://i.ytimg.com/vi/YaBIB4VuiqM/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/YaBIB4VuiqM/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/YaBIB4VuiqM/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/YaBIB4VuiqM/sddefault.jpg"
+   },
+   "title": "世界崩壊のお知らせ#shorts #マイクラ #マインクラフト #minecraft #grox #グロックス",
+   "video_id": "YaBIB4VuiqM",
+   "views": 1265808
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 126,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "彼のチャンネルはこちら\n\nhttps://youtube.com/@BahaBlast?si=-6uQEBHgc45mS_Xr",
+   "duration_iso": "PT1M6S",
+   "duration_sec": 66,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 17351,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-19T12:22:19Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/Yb4XjY7uhKw/default.jpg",
+    "high": "https://i.ytimg.com/vi/Yb4XjY7uhKw/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/Yb4XjY7uhKw/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/Yb4XjY7uhKw/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/Yb4XjY7uhKw/sddefault.jpg"
+   },
+   "title": "力強すぎ#マイクラ #マインクラフト #minecraft #shorts #ゲーム実況",
+   "video_id": "Yb4XjY7uhKw",
+   "views": 896060
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 120,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ボールドのチャンネルはこちら\n\nhttps://youtube.com/@AJTHEBOLD?si=qZWMus7fn80N7R86",
+   "duration_iso": "PT48S",
+   "duration_sec": 48,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 4975,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-16T11:55:58Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/ZoQjGe7_Kl8/default.jpg",
+    "high": "https://i.ytimg.com/vi/ZoQjGe7_Kl8/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/ZoQjGe7_Kl8/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/ZoQjGe7_Kl8/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/ZoQjGe7_Kl8/sddefault.jpg"
+   },
+   "title": "ところでこの怪物の名前知っている方いますか？#マイクラ #マインクラフト #minecraft #shorts #海外和訳",
+   "video_id": "ZoQjGe7_Kl8",
+   "views": 286010
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 67,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M3S",
+   "duration_sec": 63,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 4868,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-26T11:06:40Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/aZVsf5PhZxo/default.jpg",
+    "high": "https://i.ytimg.com/vi/aZVsf5PhZxo/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/aZVsf5PhZxo/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/aZVsf5PhZxo/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/aZVsf5PhZxo/sddefault.jpg"
+   },
+   "title": "ざまぁ味噌漬け❤️#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "aZVsf5PhZxo",
+   "views": 230319
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 144,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "彼のチャンネルはこちら\n\nhttps://youtube.com/@LookOut3D?si=5Mx-V09242gOrPI-",
+   "duration_iso": "PT55S",
+   "duration_sec": 55,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 18771,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-21T09:37:01Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/bAcdBVPA5Zk/default.jpg",
+    "high": "https://i.ytimg.com/vi/bAcdBVPA5Zk/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/bAcdBVPA5Zk/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/bAcdBVPA5Zk/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/bAcdBVPA5Zk/sddefault.jpg"
+   },
+   "title": "刺激が欲しけりゃバカになれ#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "bAcdBVPA5Zk",
+   "views": 1041933
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 79,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT33S",
+   "duration_sec": 33,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 7215,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-23T03:52:17Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/bFmKcjqo7Sk/default.jpg",
+    "high": "https://i.ytimg.com/vi/bFmKcjqo7Sk/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/bFmKcjqo7Sk/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/bFmKcjqo7Sk/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/bFmKcjqo7Sk/sddefault.jpg"
+   },
+   "title": "Dreamの周りには猛者しかいません#shorts #マイクラ #マインクラフト #minecraft #daquavis #海外の反応",
+   "video_id": "bFmKcjqo7Sk",
+   "views": 485986
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 16,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M6S",
+   "duration_sec": 66,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 2838,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-25T14:43:03Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/bqyhes0V7Qc/default.jpg",
+    "high": "https://i.ytimg.com/vi/bqyhes0V7Qc/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/bqyhes0V7Qc/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/bqyhes0V7Qc/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/bqyhes0V7Qc/sddefault.jpg"
+   },
+   "title": "Dreamがまさかの行動にでます。#マイクラ #マインクラフト #minecraft #dream #ゲーム実況 #shorts",
+   "video_id": "bqyhes0V7Qc",
+   "views": 241153
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 33,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M1S",
+   "duration_sec": 61,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 3757,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-04-18T11:29:54Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/cUbDNWd0j24/default.jpg",
+    "high": "https://i.ytimg.com/vi/cUbDNWd0j24/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/cUbDNWd0j24/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/cUbDNWd0j24/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/cUbDNWd0j24/sddefault.jpg"
+   },
+   "title": "自業自得 #マイクラ #minecraft #マインクラフト #grox #グロックス #shorts",
+   "video_id": "cUbDNWd0j24",
+   "views": 186833
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 165,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "グロックスのチャンネルはこちら\n↓\nhttps://youtube.com/@GroxMC?si=-JBoDlbUDZJDNdUo",
+   "duration_iso": "PT1M14S",
+   "duration_sec": 74,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 34605,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-23T11:39:30Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/d2PlYjZcRo0/default.jpg",
+    "high": "https://i.ytimg.com/vi/d2PlYjZcRo0/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/d2PlYjZcRo0/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/d2PlYjZcRo0/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/d2PlYjZcRo0/sddefault.jpg"
+   },
+   "title": "むごいですね。#shorts #マイクラ #マインクラフト #minecraft #ゲーム実況 #grox",
+   "video_id": "d2PlYjZcRo0",
+   "views": 1634475
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 49,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "Dreamのチャンネルはこちら\n↓\n\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT53S",
+   "duration_sec": 53,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 6525,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-08T10:02:31Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "ドリーム",
+    "Dream",
+    "海外和訳",
+    "進撃の巨人"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/eg0_YckR1Iw/default.jpg",
+    "high": "https://i.ytimg.com/vi/eg0_YckR1Iw/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/eg0_YckR1Iw/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/eg0_YckR1Iw/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/eg0_YckR1Iw/sddefault.jpg"
+   },
+   "title": "巨人を駆逐するため立ち向かうDreamとサップナップ#shorts #マイクラ実況",
+   "video_id": "eg0_YckR1Iw",
+   "views": 562843
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 13,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\n https://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT40S",
+   "duration_sec": 40,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 3789,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-18T14:26:41Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/i2o5r0vZOrg/default.jpg",
+    "high": "https://i.ytimg.com/vi/i2o5r0vZOrg/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/i2o5r0vZOrg/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/i2o5r0vZOrg/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/i2o5r0vZOrg/sddefault.jpg"
+   },
+   "title": "※犬(オオカミ)はDreamです。#shortvideo #マイクラ #マインクラフト #minecraft #dream",
+   "video_id": "i2o5r0vZOrg",
+   "views": 315710
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 59,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT54S",
+   "duration_sec": 54,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 16379,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-15T11:22:50Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/ldGtosTpMyw/default.jpg",
+    "high": "https://i.ytimg.com/vi/ldGtosTpMyw/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/ldGtosTpMyw/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/ldGtosTpMyw/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/ldGtosTpMyw/sddefault.jpg"
+   },
+   "title": "遂に現実世界でマイクラが遊べるようになった...#shorts #マイクラ #マインクラフト #minecraft #dream",
+   "video_id": "ldGtosTpMyw",
+   "views": 1156339
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 123,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT36S",
+   "duration_sec": 36,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 12049,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-03T11:46:55Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/loiMd64_c6Q/default.jpg",
+    "high": "https://i.ytimg.com/vi/loiMd64_c6Q/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/loiMd64_c6Q/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/loiMd64_c6Q/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/loiMd64_c6Q/sddefault.jpg"
+   },
+   "title": "拠点作りのときクリーパーに家を壊された経験ありますか？#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "loiMd64_c6Q",
+   "views": 811582
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 34,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT1M1S",
+   "duration_sec": 61,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 6969,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-15T03:40:45Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/lpfTNQ5dR70/default.jpg",
+    "high": "https://i.ytimg.com/vi/lpfTNQ5dR70/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/lpfTNQ5dR70/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/lpfTNQ5dR70/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/lpfTNQ5dR70/sddefault.jpg"
+   },
+   "title": "トラブルメーカーすぎるGeorge #マイクラ #マインクラフト #minecraft #dream #shorts",
+   "video_id": "lpfTNQ5dR70",
+   "views": 506783
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 531,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M14S",
+   "duration_sec": 74,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 175902,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-22T12:49:04Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/lzD1xJ46ZC4/default.jpg",
+    "high": "https://i.ytimg.com/vi/lzD1xJ46ZC4/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/lzD1xJ46ZC4/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/lzD1xJ46ZC4/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/lzD1xJ46ZC4/sddefault.jpg"
+   },
+   "title": "発想が終わってるGrox#shorts #マイクラ #マインクラフト #minecraft #海外の反応",
+   "video_id": "lzD1xJ46ZC4",
+   "views": 9905909
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 88,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT16S",
+   "duration_sec": 16,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 9865,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-20T04:10:09Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/mRndDDRWz00/default.jpg",
+    "high": "https://i.ytimg.com/vi/mRndDDRWz00/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/mRndDDRWz00/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/mRndDDRWz00/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/mRndDDRWz00/sddefault.jpg"
+   },
+   "title": "ドキッとなる瞬間#マイクラ #マインクラフト #minecraft #shorts #アニメ",
+   "video_id": "mRndDDRWz00",
+   "views": 1060783
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 74,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT41S",
+   "duration_sec": 41,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 3640,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-14T12:08:37Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/nPJHE7bHxnI/default.jpg",
+    "high": "https://i.ytimg.com/vi/nPJHE7bHxnI/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/nPJHE7bHxnI/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/nPJHE7bHxnI/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/nPJHE7bHxnI/sddefault.jpg"
+   },
+   "title": "一瞬過ぎて情報が完結しない#shorts #マイクラ #マインクラフト #minecraft #dream #ドリーム",
+   "video_id": "nPJHE7bHxnI",
+   "views": 319592
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 141,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M3S",
+   "duration_sec": 63,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 24206,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-08T11:28:36Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/p4osmEVx7hY/default.jpg",
+    "high": "https://i.ytimg.com/vi/p4osmEVx7hY/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/p4osmEVx7hY/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/p4osmEVx7hY/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/p4osmEVx7hY/sddefault.jpg"
+   },
+   "title": "やっぱりGroxは最高ですね#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts #grox #グロックス",
+   "video_id": "p4osmEVx7hY",
+   "views": 1564359
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 409,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "彼のチャンネルはこちら\n\nhttps://youtube.com/@BahaBlast?si=-6uQEBHgc45mS_Xr",
+   "duration_iso": "PT1M3S",
+   "duration_sec": 63,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 47782,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-17T09:25:18Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/qNFu8Q55mEE/default.jpg",
+    "high": "https://i.ytimg.com/vi/qNFu8Q55mEE/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/qNFu8Q55mEE/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/qNFu8Q55mEE/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/qNFu8Q55mEE/sddefault.jpg"
+   },
+   "title": "その後村人はメスになったのでした#shorts #マイクラ #マインクラフト #minecraft #海外和訳",
+   "video_id": "qNFu8Q55mEE",
+   "views": 4134154
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 179,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M37S",
+   "duration_sec": 97,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 51520,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-21T11:39:56Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/sJDbLVB340o/default.jpg",
+    "high": "https://i.ytimg.com/vi/sJDbLVB340o/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/sJDbLVB340o/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/sJDbLVB340o/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/sJDbLVB340o/sddefault.jpg"
+   },
+   "title": "※彼に人の心とかはありません。#shorts #マイクラ #マインクラフト #minecraft #dream",
+   "video_id": "sJDbLVB340o",
+   "views": 3710676
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 81,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT1M9S",
+   "duration_sec": 69,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 13806,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-04-02T12:37:38Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/snRuzLtmLX4/default.jpg",
+    "high": "https://i.ytimg.com/vi/snRuzLtmLX4/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/snRuzLtmLX4/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/snRuzLtmLX4/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/snRuzLtmLX4/sddefault.jpg"
+   },
+   "title": "グロックスの鳴き声癖になる#マイクラ #マインクラフト #minecraft #グロックス #grox #shorts",
+   "video_id": "snRuzLtmLX4",
+   "views": 751263
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 21,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT13S",
+   "duration_sec": 13,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 2380,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-28T10:57:17Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/tCQ6I8gQHLM/default.jpg",
+    "high": "https://i.ytimg.com/vi/tCQ6I8gQHLM/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/tCQ6I8gQHLM/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/tCQ6I8gQHLM/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/tCQ6I8gQHLM/sddefault.jpg"
+   },
+   "title": "ちょっと試してみたくなるやつ#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "tCQ6I8gQHLM",
+   "views": 256489
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 306,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT16S",
+   "duration_sec": 16,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 25525,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-28T11:16:17Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/tdwKZ17Cpzs/default.jpg",
+    "high": "https://i.ytimg.com/vi/tdwKZ17Cpzs/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/tdwKZ17Cpzs/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/tdwKZ17Cpzs/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/tdwKZ17Cpzs/sddefault.jpg"
+   },
+   "title": "ちょっとスッキリしてしまった自分がいます。#マイクラ #マインクラフト #minecraft #ゲーム実況 #grox #shorts",
+   "video_id": "tdwKZ17Cpzs",
+   "views": 1755936
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 68,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT40S",
+   "duration_sec": 40,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 3057,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-02-13T11:52:51Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/uNdIdgo7wws/default.jpg",
+    "high": "https://i.ytimg.com/vi/uNdIdgo7wws/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/uNdIdgo7wws/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/uNdIdgo7wws/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/uNdIdgo7wws/sddefault.jpg"
+   },
+   "title": "二度と見ることの出来ない戦い#shorts #マイクラ #minecraft #ドリーム #dream",
+   "video_id": "uNdIdgo7wws",
+   "views": 275516
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 62,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "",
+   "duration_iso": "PT59S",
+   "duration_sec": 59,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 9353,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-22T10:00:58Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/vTPcburl6o8/default.jpg",
+    "high": "https://i.ytimg.com/vi/vTPcburl6o8/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/vTPcburl6o8/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/vTPcburl6o8/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/vTPcburl6o8/sddefault.jpg"
+   },
+   "title": "サイコパス#マイクラ #マインクラフト #minecraft #shorts #ゲーム実況",
+   "video_id": "vTPcburl6o8",
+   "views": 676239
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 334,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "この方の名前は「AJTHEBOLD」です",
+   "duration_iso": "PT49S",
+   "duration_sec": 49,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 14977,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-06T10:54:10Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/wWd7KT3RTNg/default.jpg",
+    "high": "https://i.ytimg.com/vi/wWd7KT3RTNg/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/wWd7KT3RTNg/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/wWd7KT3RTNg/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/wWd7KT3RTNg/sddefault.jpg"
+   },
+   "title": "この怪物に手を出してはいけません#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts",
+   "video_id": "wWd7KT3RTNg",
+   "views": 866682
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 140,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "ドリームのチャンネルはこちら\n↓\n\nhttps://youtube.com/@dream?si=pIm8xLOxUQKYohGY",
+   "duration_iso": "PT1M1S",
+   "duration_sec": 61,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 7263,
+   "made_for_kids": false,
+   "missing": {},
+   "privacy_status": "public",
+   "published_at": "2026-02-09T13:05:01Z",
+   "tags": [
+    "マイクラ",
+    "Minecraft",
+    "Dream",
+    "ドリーム",
+    "テクノブレイド",
+    "海外翻訳"
+   ],
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/wYRkhfRSjDs/default.jpg",
+    "high": "https://i.ytimg.com/vi/wYRkhfRSjDs/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/wYRkhfRSjDs/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/wYRkhfRSjDs/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/wYRkhfRSjDs/sddefault.jpg"
+   },
+   "title": "脱獄不可能な牢獄なんてこの2人が組めば余裕のよっちゃんです#minecraft #shorts #マイクラ",
+   "video_id": "wYRkhfRSjDs",
+   "views": 396302
+  },
+  {
+   "caption_track": false,
+   "category_id": "20",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "comments": 74,
+   "default_audio_language": null,
+   "default_language": "ja",
+   "definition": "hd",
+   "description": "元動画はこちらから\n↓\n\nhttps://youtube.com/@Mc_Bigness?si=fmEEuMKLEzTx1W7u",
+   "duration_iso": "PT1M9S",
+   "duration_sec": 69,
+   "fetched_at": "2026-11-25T14:49:13Z",
+   "in_uploads_playlist": true,
+   "likes": 7595,
+   "made_for_kids": false,
+   "missing": {
+    "tags": {
+     "code": "NOT_COLLECTED",
+     "note": "API の応答に tags が無い（API はタグが無い動画では項目自体を返さない）"
+    }
+   },
+   "privacy_status": "public",
+   "published_at": "2026-03-09T12:24:41Z",
+   "tags": null,
+   "thumbnails": {
+    "default": "https://i.ytimg.com/vi/xGF9lFQyjpY/default.jpg",
+    "high": "https://i.ytimg.com/vi/xGF9lFQyjpY/hqdefault.jpg",
+    "maxres": "https://i.ytimg.com/vi/xGF9lFQyjpY/maxresdefault.jpg",
+    "medium": "https://i.ytimg.com/vi/xGF9lFQyjpY/mqdefault.jpg",
+    "standard": "https://i.ytimg.com/vi/xGF9lFQyjpY/sddefault.jpg"
+   },
+   "title": "結局食べられるんだね...#マイクラ #マインクラフト #minecraft #ゲーム実況 #shorts #海外の反応",
+   "video_id": "xGF9lFQyjpY",
+   "views": 380513
+  }
+ ]
+}

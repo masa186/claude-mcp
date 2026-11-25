@@ -1,0 +1,924 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 62.37,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 3.47,
+   "first_cut_minus_first_row_start": 3.47,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.427,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "砂漠の村、水と小麦畑（着地した直後の画）"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「マイクラ鬼ごっこで」",
+      "time_raw": "0.27〜1.00",
+      "visual": "砂漠の村を走る（一人称）"
+     },
+     {
+      "end": 2.27,
+      "start": 1.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ありえない着地を見せる」",
+      "time_raw": "1.27〜2.27",
+      "visual": "同上"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ドリームと言う男」",
+      "time_raw": "2.53〜3.00",
+      "visual": "同上"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.1,
+     "music_mean_during_row": 0.205,
+     "nearest_cut_to_end": 0.37,
+     "nearest_cut_to_start": 3.47,
+     "nearest_subtitle_change_to_end": 0.17,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 29.5,
+     "music_mean_during_row": 0.4,
+     "nearest_cut_to_end": 0.9,
+     "nearest_cut_to_start": 0.1,
+     "nearest_subtitle_change_to_end": 0.17,
+     "nearest_subtitle_change_to_start": 0.03,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 26.9
+    },
+    {
+     "end": 61.9,
+     "music_mean_during_row": 0.218,
+     "nearest_cut_to_end": 22.43,
+     "nearest_cut_to_start": 15.93,
+     "nearest_subtitle_change_to_end": 1.5,
+     "nearest_subtitle_change_to_start": 0.13,
+     "row": 2,
+     "spikes_within_row_or_1s_after": [
+      57.2,
+      57.5
+     ],
+     "start": 55.4
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「ありえない着地を見せる〇〇」と強い評価を付けた紹介",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_RESULT_PREVIEW"
+     ],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 0,
+     "reason": "26.9秒で「またもや変態プレイをかまします」と引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 0,
+     "reason": "「神様なのかもしれませんね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 29,
+     "content_lemmas": [
+      "マイ-my",
+      "クラ-Kra",
+      "鬼ごっこ",
+      "有る",
+      "得る",
+      "着地",
+      "見せる",
+      "Dream",
+      "言う",
+      "男"
+     ],
+     "first_token": {
+      "lemma": "マイ-my",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "マイ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ありえない"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "クラ"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 2,
+      "動詞": 4,
+      "名詞": 6
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "マイクラ鬼ごっこでありえない着地を見せるDreamという男"
+    },
+    {
+     "chars": 22,
+     "content_lemmas": [
+      "数",
+      "時間",
+      "又もや",
+      "変態",
+      "プレー-play",
+      "噛ます"
+     ],
+     "first_token": {
+      "lemma": "そして",
+      "pos1": "接続詞",
+      "pos2": "*",
+      "surface": "そして"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 1,
+      "動詞": 1,
+      "名詞": 4,
+      "接尾辞": 1,
+      "接続詞": 1,
+      "補助記号": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "そして数時間後、またもや変態プレイをかまします"
+    },
+    {
+     "chars": 29,
+     "content_lemmas": [
+      "最早",
+      "此処",
+      "来る",
+      "彼",
+      "マイ-my",
+      "クラ-clarinet",
+      "神",
+      "知れる"
+     ],
+     "first_token": {
+      "lemma": "最早",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "もはや"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "もはや",
+       "神"
+      ],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 2,
+      "副詞": 1,
+      "助動詞": 3,
+      "助詞": 8,
+      "動詞": 2,
+      "名詞": 3,
+      "接尾辞": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "マイ-my",
+     2
+    ],
+    [
+     "クラ-Kra",
+     1
+    ],
+    [
+     "鬼ごっこ",
+     1
+    ],
+    [
+     "有る",
+     1
+    ],
+    [
+     "得る",
+     1
+    ],
+    [
+     "着地",
+     1
+    ],
+    [
+     "見せる",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "言う",
+     1
+    ],
+    [
+     "男",
+     1
+    ],
+    [
+     "数",
+     1
+    ],
+    [
+     "時間",
+     1
+    ],
+    [
+     "又もや",
+     1
+    ],
+    [
+     "変態",
+     1
+    ],
+    [
+     "プレー-play",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.1,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "マイクラ鬼ごっこでありえない着地を見せるDreamという男"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マイクラ鬼ごっこで",
+     "words": [
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "鬼",
+      "ご",
+      "っ",
+      "こ",
+      "で"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.1,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "マイクラ鬼ごっこでありえない着地を見せるDreamという男"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 27,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マイクラ鬼ごっこでありえない着地を見せるドリームという男",
+     "words": [
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "鬼",
+      "ご",
+      "っ",
+      "こ",
+      "で",
+      "あり",
+      "え",
+      "ない",
+      "着",
+      "地",
+      "を",
+      "見",
+      "せ",
+      "る",
+      "ド",
+      "リ",
+      "ーム",
+      "という",
+      "男"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.1,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "マイクラ鬼ごっこでありえない着地を見せるDreamという男"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 27,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "マイクラ鬼ごっこでありえない着地を見せるドリームという男",
+     "words": [
+      "マ",
+      "イ",
+      "ク",
+      "ラ",
+      "鬼",
+      "ご",
+      "っ",
+      "こ",
+      "で",
+      "あり",
+      "え",
+      "ない",
+      "着",
+      "地",
+      "を",
+      "見",
+      "せ",
+      "る",
+      "ド",
+      "リ",
+      "ーム",
+      "という",
+      "男"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 29,
+    "end": 3.1,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "マイクラ鬼ごっこでありえない着地を見せるDreamという男"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "マイ-my",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "マイ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ありえない"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream",
+       "クラ"
+      ],
+      "question": false
+     },
+     "text": "マイクラ鬼ごっこでありえない着地を見せるDreamという男"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_INTRO"
+     ],
+     "flag": null,
+     "label": "断定・レッテル",
+     "part": 0,
+     "reason": "「ありえない着地を見せる〇〇」と強い評価を付けた紹介",
+     "role": "R_LABEL",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_LABEL",
+    "effective_code": "H_LABEL",
+    "quote": "マイクラ鬼ごっこでありえない着地を見せるドリームという男",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "砂漠の村、水と小麦畑（着地した直後の画）"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「マイクラ鬼ごっこで」",
+      "time_raw": "0.27〜1.00",
+      "visual": "砂漠の村を走る（一人称）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "マ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.46,
+    "rows": [
+     {
+      "chars": 29,
+      "chars_per_sec": 9.35,
+      "duration": 3.1,
+      "gap_to_next_row": 23.8,
+      "row": 0
+     },
+     {
+      "chars": 22,
+      "chars_per_sec": 8.46,
+      "duration": 2.6,
+      "gap_to_next_row": 25.9,
+      "row": 1
+     },
+     {
+      "chars": 29,
+      "chars_per_sec": 4.46,
+      "duration": 6.5,
+      "gap_to_next_row": null,
+      "row": 2
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 80
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.26,
+    "gap_max": 0.12,
+    "gap_median": 0.12,
+    "gaps_ge_0.3s": 0,
+    "n_words": 63,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "ありえない"
+     ],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream",
+      "クラ"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "マイクラ鬼ごっこでありえない着地を見せるDreamという男"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "そして数時間後、またもや変態プレイをかまします"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "もはや",
+      "神"
+     ],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 2,
+     "text": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「マジかヤベェｪ!!!!!」",
+       "range_raw": "51.7〜58",
+       "source": "doc_structure",
+       "source_file": "dream/individual/58_O_8PGIz3TLc.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "そして数時間後、またもや変態プレイをかまします",
+     "from_role": "R_REHOOK",
+     "from_row": 1,
+     "from_start": 26.9,
+     "note": "2回目の着地の場面",
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "O_8PGIz3TLc"
+    }
+   ],
+   "role_sequence": [
+    "R_LABEL",
+    "R_REHOOK",
+    "R_COMMENT"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "Oh, watch out, watch out, watch out!",
+     "review": {
+      "corrected_code": null,
+      "memo": null,
+      "result": "正しい",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね",
+     "review": {
+      "corrected_code": null,
+      "memo": null,
+      "result": "正しい",
+      "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+     },
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "砂漠の村を走る、ナレーション",
+      "range_raw": "0〜3.5",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "山の上に追っ手（George、BadBoyHalo など）→ 全員「ドリ～ム」×3 → Dream（緑）「ほっ...」",
+      "range_raw": "3.5〜8",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "追っ手「逃げあがった！！！！追え追え追え！！！」→「全員死ぬぞ？！」→ Dream「オォウ!!!」→ 山の頂上から**飛び降りる** → 下の村「行け行け行け行け！」「待て！よく見ろよく！」",
+      "range_raw": "8.6〜20",
+      "stage_label": "逃走"
+     },
+     {
+      "content": "「ありえない...」→ 水に着地（冒頭0秒の画）→ 全員「OOOOOooo!!!!」→ 💀と赤の引用符「\"伝説の始まり\"」",
+      "range_raw": "21.6〜26",
+      "stage_label": "着地"
+     },
+     {
+      "content": "ナレーション「そして数時間後」「またもや変態プレイを」「かまします」",
+      "range_raw": "27〜29.5",
+      "stage_label": "第2の予告"
+     },
+     {
+      "content": "ガストの火の玉「(華麗に球を打ち返す)」→「やばいなこれ...」→「はさみうちだ！逃すな」→ ボートで溶岩の上を渡る？「それ行くのかよ...」「あれ届かなくない？」「向こうまで行けないよ」→「ミスれ！×2」",
+      "range_raw": "30〜50",
+      "stage_label": "ネザー"
+     },
+     {
+      "content": "「ｵｫｫｫｵｵｳｩｩ!!!!!!」→「マジかヤベェｪ!!!!!」",
+      "range_raw": "51.7〜58",
+      "stage_label": "2回目の着地"
+     },
+     {
+      "content": "ナレーション「もはやここまで来ると」「彼はマイクラの神様なのかもしれませんね」",
+      "range_raw": "58.7〜62.4",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     6,
+     11,
+     12,
+     16,
+     18,
+     45,
+     46,
+     48,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     57
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     6.75,
+     11.65,
+     12.65,
+     16.3,
+     18.25,
+     45.0,
+     46.25,
+     48.5,
+     50.6,
+     51.5,
+     52.55,
+     53.55,
+     54.7,
+     54.95,
+     55.3,
+     57.2,
+     57.5
+    ],
+    "cuts": 12,
+    "cuts_per_5s": {
+     "0": 3,
+     "15": 2,
+     "20": 1,
+     "25": 3,
+     "30": 1,
+     "35": 1,
+     "5": 1
+    },
+    "duration_sec": 62.37,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "middle",
+      "row": 1,
+      "start": 26.9
+     },
+     {
+      "position": "end",
+      "row": 2,
+      "start": 55.4
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 61.9,
+    "is_end_position": true,
+    "sec_from_end": 0.47,
+    "start": 55.4,
+    "status": "DOC_OBSERVED",
+    "text": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "感想・ツッコミ",
+     "part": 0,
+     "reason": "「神様なのかもしれませんね」と最後の感想",
+     "role": "R_COMMENT",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 57.0,
+    "status": "ok",
+    "text": "I can't believe that he is a god of my life."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 58.38,
+    "status": "ok",
+    "text": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね",
+    "review": {
+     "corrected_code": null,
+     "memo": null,
+     "result": "正しい",
+     "source": "mcshorts/analysis/codings/dream/review_sample.csv"
+    },
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 58,
+ "not_applicable": [],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/58_O_8PGIz3TLc.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/O_8PGIz3TLc.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "O_8PGIz3TLc"
+}

@@ -1,0 +1,413 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/S8OLvKN4-o8.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.2,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Dream is in a state of heart 0.5."
+    },
+    {
+     "end": 4.6,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 3.2,
+     "text": "I thought I was going to run into that tree?"
+    },
+    {
+     "end": 5.8,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 4.6,
+     "text": "Bad, bad, bad in the..."
+    },
+    {
+     "end": 7.4,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 5.8,
+     "text": "Anastasia on the ground."
+    },
+    {
+     "end": 8.4,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 7.4,
+     "text": "Oh, he went around the mountain?"
+    },
+    {
+     "end": 9.4,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 8.4,
+     "text": "Went around the mountain?"
+    },
+    {
+     "end": 9.9,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 9.4,
+     "text": "Going over?"
+    },
+    {
+     "end": 10.4,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 9.9,
+     "text": "I'm cutting him off!"
+    },
+    {
+     "end": 11.4,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 10.4,
+     "text": "Oh, see him, see him, see him!"
+    },
+    {
+     "end": 12.4,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 11.4,
+     "text": "Nice, nice."
+    },
+    {
+     "end": 13.2,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 12.4,
+     "text": "Oh, he's going down."
+    },
+    {
+     "end": 13.8,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 13.2,
+     "text": "It's a dead end."
+    },
+    {
+     "end": 14.6,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 13.8,
+     "text": "The mountain's a dead end."
+    },
+    {
+     "end": 15.6,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 14.6,
+     "text": "He's nowhere to go."
+    },
+    {
+     "end": 16.8,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 15.6,
+     "text": "Yeah, see him, see him, see him, see him."
+    },
+    {
+     "end": 17.8,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 16.8,
+     "text": "Oh, Dream!"
+    },
+    {
+     "end": 19.2,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 17.8,
+     "text": "He's jumping, he jumped, he jumped!"
+    },
+    {
+     "end": 19.8,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 19.2,
+     "text": "Get him!"
+    },
+    {
+     "end": 20.6,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 19.8,
+     "text": "Wait, get him!"
+    },
+    {
+     "end": 21.2,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 20.6,
+     "text": "Wait, it's me!"
+    },
+    {
+     "end": 22.2,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 21.2,
+     "text": "Yes!"
+    },
+    {
+     "end": 23.2,
+     "logprob": -0.42,
+     "no_speech": 0.0,
+     "start": 22.2,
+     "text": "What?!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/S8OLvKN4-o8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.02,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Dreamがハート0.5の状態で槍を使い3Kリします"
+    },
+    {
+     "end": 3.44,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 3.02,
+     "text": "Dreamがハート0.5の状態で槍を使い3Kリします"
+    },
+    {
+     "end": 3.88,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 3.44,
+     "text": "Dreamがハート0.5の状態で槍を使い3Kリします"
+    },
+    {
+     "end": 7.46,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 3.88,
+     "text": "Bad in anアナスタルの体の体の体を使って"
+    },
+    {
+     "end": 8.22,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 7.46,
+     "text": "He went around the mountain?"
+    },
+    {
+     "end": 8.9,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 8.4,
+     "text": "He went around the mountain?"
+    },
+    {
+     "end": 10.34,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 9.6,
+     "text": "I'm cutting him off!"
+    },
+    {
+     "end": 11.1,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 10.34,
+     "text": "Oh, see him, see him, see him!"
+    },
+    {
+     "end": 12.04,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 11.46,
+     "text": "Nice, nice!"
+    },
+    {
+     "end": 13.18,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 12.48,
+     "text": "Oh, he's going down..."
+    },
+    {
+     "end": 14.42,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 13.18,
+     "text": "The mountain's a dead end!"
+    },
+    {
+     "end": 14.98,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 14.6,
+     "text": "There's nowhere to go"
+    },
+    {
+     "end": 16.72,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 15.46,
+     "text": "Yes, see him, see him, see him!"
+    },
+    {
+     "end": 17.36,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 16.82,
+     "text": "Oh,Dream!"
+    },
+    {
+     "end": 18.04,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 17.72,
+     "text": "He's jumping!"
+    },
+    {
+     "end": 18.44,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 18.16,
+     "text": "He jumped, jumped!"
+    },
+    {
+     "end": 19.6,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 19.12,
+     "text": "Get him!"
+    },
+    {
+     "end": 20.4,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 19.82,
+     "text": "Wait, get him!"
+    },
+    {
+     "end": 21.26,
+     "logprob": -0.72,
+     "no_speech": 0.0,
+     "start": 20.62,
+     "text": "Wait, let me see him!"
+    },
+    {
+     "end": 21.96,
+     "logprob": -0.92,
+     "no_speech": 0.0,
+     "start": 21.26,
+     "text": "イエーイ!"
+    },
+    {
+     "end": 22.8,
+     "logprob": -0.92,
+     "no_speech": 0.0,
+     "start": 21.98,
+     "text": "イエーイ"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/S8OLvKN4-o8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.02,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ドリームがハート0.5の状態で槍を使い3キリします"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/S8OLvKN4-o8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 46.2,
+     "no_speech": 0.0,
+     "start": 16.22,
+     "text": "お夢のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームがハート0.5（れいてんご）の状態で槍を使い、3（さん）キルします。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Dreamが（緑）→ ハート0.5の状態で（赤）→ 槍を使い（白）→ 3キルします（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "S8OLvKN4-o8"
+}

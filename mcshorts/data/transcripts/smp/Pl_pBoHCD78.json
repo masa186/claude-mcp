@@ -1,0 +1,1434 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.0",
+     "text": "1分以内に"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "1.0",
+     "text": "クリーピーホースの"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.0",
+     "text": "ケツに付いた\nハエをはたけ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "3.0",
+     "text": "できた！"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "4.7",
+     "text": "うわまじか"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "6.7",
+     "text": "ハァ…"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.0秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "1分以内にクリーピーホースのケツについたハエをはたけ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.5,
+     "start": 0.0,
+     "text": "1分以内に",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.0,
+     "start": 0.5,
+     "text": "クリーピーホースのケツに付いたハエをはたけ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.25,
+     "start": 3.0,
+     "text": "できた！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 5.0,
+     "start": 4.5,
+     "text": "うわまじか",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.0,
+     "start": 6.5,
+     "text": "ハア…包茎",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.0,
+     "start": 9.0,
+     "text": "頼むこの洞窟から一緒に出てくれん？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.0,
+     "start": 12.0,
+     "text": "アッハ↑",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 15.0,
+     "start": 14.25,
+     "text": "ハッ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 15.5,
+     "start": 15.0,
+     "text": "おけちょっと",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 17.0,
+     "start": 15.5,
+     "text": "大げさに反応しすぎたな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 17.75,
+     "start": 17.0,
+     "text": "何が好きやねん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 20.0,
+     "start": 19.5,
+     "text": "え…",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 21.0,
+     "start": 20.0,
+     "text": "マジでついてきてる？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.0,
+     "start": 21.0,
+     "text": "ここ通れるのか？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.0,
+     "start": 22.5,
+     "text": "ブロック壊してるok",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 24.0,
+     "start": 23.5,
+     "text": "なんでマジでついてきてるん？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 26.0,
+     "start": 25.5,
+     "text": "ハア",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 26.5,
+     "start": 26.0,
+     "text": "待て",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.0,
+     "start": 26.75,
+     "text": "俺が鶏肉持ってるから？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.5,
+     "start": 28.0,
+     "text": "食べる？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 29.5,
+     "start": 29.0,
+     "text": "鶏肉食べる!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 31.25,
+     "start": 31.0,
+     "text": "うわまじ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 31.75,
+     "start": 31.25,
+     "text": "食ったぞ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 32.5,
+     "start": 32.0,
+     "text": "きっしょ!!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 36.25,
+     "start": 35.0,
+     "text": "なんでそんな目で見んだよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 39.0,
+     "start": 38.75,
+     "text": "エサやれ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 39.25,
+     "start": 39.0,
+     "text": "FEED THE HORSE",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.0,
+     "start": 40.5,
+     "text": "5分しかない",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 42.0,
+     "start": 41.5,
+     "text": "吐きそう",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 44.0,
+     "start": 43.0,
+     "text": "またエサ取りに行くから",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 44.5,
+     "start": 44.0,
+     "text": "もっと食うから",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 46.5,
+     "start": 46.0,
+     "text": "おい黙ってくれない?!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 47.5,
+     "start": 47.0,
+     "text": "黙れよ!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 50.0,
+     "start": 49.5,
+     "text": "なんだこの音楽",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 50.25,
+     "start": 50.0,
+     "text": "もっと",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 50.5,
+     "start": 50.25,
+     "text": "いやいや",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 51.0,
+     "start": 50.5,
+     "text": "時間はたっぷりある",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 51.5,
+     "start": 51.0,
+     "text": "大丈夫",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 52.0,
+     "start": 51.5,
+     "text": "もうすぐだー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 53.0,
+     "start": 52.75,
+     "text": "よし戻った!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 54.5,
+     "start": 54.0,
+     "text": "ほら！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 55.0,
+     "start": 54.5,
+     "text": "ほら食え!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 56.25,
+     "start": 55.75,
+     "text": "満足？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 58.0,
+     "start": 56.5,
+     "text": "満足した？ハッピー？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 60.0,
+     "start": 59.5,
+     "text": "足りないの!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 60.5,
+     "start": 60.0,
+     "text": "もっと？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 61.5,
+     "start": 61.0,
+     "text": "やば..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 62.0,
+     "start": 61.5,
+     "text": "オッケー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 62.5,
+     "start": 62.0,
+     "text": "もっと取ってくる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 63.0,
+     "start": 62.75,
+     "text": "すぐ戻る!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 64.0,
+     "start": 63.5,
+     "text": "音楽どんどん速くなってる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 65.5,
+     "start": 65.0,
+     "text": "ハア",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 66.5,
+     "start": 65.5,
+     "text": "もっと食料が必要だ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 67.0,
+     "start": 66.75,
+     "text": "残り3分",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 68.5,
+     "start": 68.0,
+     "text": "あいつが",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 69.25,
+     "start": 68.5,
+     "text": "こいつだけ食うんだよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 70.0,
+     "start": 69.25,
+     "text": "すげえ食欲",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 72.0,
+     "start": 71.75,
+     "text": "向こうの羊も倒そう",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 72.5,
+     "start": 72.0,
+     "text": "おい羊をこっちへ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 73.0,
+     "start": 72.75,
+     "text": "残り2分しかない!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 75.5,
+     "start": 75.0,
+     "text": "足りてくれ!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 76.5,
+     "start": 76.0,
+     "text": "オゲイ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 77.5,
+     "start": 77.0,
+     "text": "流実にこれで足りるよな？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 80.0,
+     "start": 79.5,
+     "text": "頼む",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 82.5,
+     "start": 82.0,
+     "text": "マジかよ!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 83.0,
+     "start": 82.5,
+     "text": "まだ足りない!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 84.0,
+     "start": 83.5,
+     "text": "残り1分しかない!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 85.5,
+     "start": 85.0,
+     "text": "走れない!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 87.5,
+     "start": 87.0,
+     "text": "頼む!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 88.5,
+     "start": 88.0,
+     "text": "あとどんくらいだよ!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 89.75,
+     "start": 89.5,
+     "text": "オマイガッシュ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 91.0,
+     "start": 90.5,
+     "text": "豚がいる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 92.5,
+     "start": 91.5,
+     "text": "あと1分しかないんだぞ!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 95.5,
+     "start": 95.0,
+     "text": "逃げないで!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 96.5,
+     "start": 96.0,
+     "text": "頼む!please",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 99.5,
+     "start": 98.5,
+     "text": "うわ食べることすらできない",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 100.5,
+     "start": 100.0,
+     "text": "食べないと",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 101.5,
+     "start": 100.5,
+     "text": "1個しかとれやん!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 102.0,
+     "start": 101.5,
+     "text": "頼む!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 104.5,
+     "start": 104.0,
+     "text": "頼む今行くから!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 105.5,
+     "start": 105.0,
+     "text": "お願いだ!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 106.5,
+     "start": 106.0,
+     "text": "あと少し!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 110.0,
+     "start": 109.5,
+     "text": "0分!!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 112.0,
+     "start": 111.5,
+     "text": "食べろ!!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 115.0,
+     "start": 114.5,
+     "text": "オーマイガッシュ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 115.5,
+     "start": 115.0,
+     "text": "できた!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 117.0,
+     "start": 116.5,
+     "text": "ハア…",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 118.0,
+     "start": 117.5,
+     "text": "はん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 119.0,
+     "start": 118.5,
+     "text": "できたぞ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 120.0,
+     "start": 119.5,
+     "text": "おけい",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 122.0,
+     "start": 121.5,
+     "text": "これで終わりか…?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 123.0,
+     "start": 122.5,
+     "text": "何見てんだ?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 126.0,
+     "start": 125.5,
+     "text": "は?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 130.0,
+     "start": 129.5,
+     "text": "松明出せ!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 130.5,
+     "start": 130.0,
+     "text": "俺が何したんだ!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 131.5,
+     "start": 131.0,
+     "text": "タスク全部やっただろ!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 133.0,
+     "start": 132.0,
+     "text": "ちゃんと全部やった",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 134.0,
+     "start": 133.5,
+     "text": "鞍も付けたし",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 136.0,
+     "start": 135.0,
+     "text": "ブラシも餌もやった",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 137.0,
+     "start": 136.0,
+     "text": "それで全部だろ?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 138.5,
+     "start": 138.25,
+     "text": "なんだ?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 140.0,
+     "start": 139.5,
+     "text": "道ができてる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 143.0,
+     "start": 142.5,
+     "text": "なんて書いてある?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 143.25,
+     "start": 143.0,
+     "text": "読めない!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 145.0,
+     "start": 143.5,
+     "text": "とりあえず光についてく",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 146.0,
+     "start": 145.0,
+     "text": "どこか連れてってくれるはず",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 147.0,
+     "start": 146.0,
+     "text": "でも残り3分しかない",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 148.0,
+     "start": 147.0,
+     "text": "光があそこまで",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 148.5,
+     "start": 148.0,
+     "text": "導けばいいけど",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 149.0,
+     "start": 148.5,
+     "text": "上へ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 150.0,
+     "start": 149.5,
+     "text": "おけここだ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 150.5,
+     "start": 150.0,
+     "text": "食料ある",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 151.0,
+     "start": 150.5,
+     "text": "完璧",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 151.5,
+     "start": 151.0,
+     "text": "ここか?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 152.5,
+     "start": 152.0,
+     "text": "どこ行けばいい?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 153.5,
+     "start": 153.0,
+     "text": "ふぁ!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 154.0,
+     "start": 153.5,
+     "text": "なんで残り0分なんだよ!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 160.5,
+     "start": 160.0,
+     "text": "どこ行けばいい!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 162.0,
+     "start": 161.0,
+     "text": "おけ↑い",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 163.0,
+     "start": 162.0,
+     "text": "どこかに導いてる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 165.5,
+     "start": 165.0,
+     "text": "ここか!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 167.5,
+     "start": 167.0,
+     "text": "ここに入ればいい!?",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 0.5,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 0.5,
+     "text": "SWAT THE FLIES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 37.75,
+     "text": "5 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 38.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 39.5,
+     "text": "5 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 39.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 40.5,
+     "text": "5 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 40.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 43.0,
+     "text": "5 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 43.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 45.0,
+     "text": "5 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 45.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 47.5,
+     "text": "5 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 47.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 48.0,
+     "text": "4 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 48.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 48.25,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 48.25,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 49.0,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 49.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 51.0,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 51.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 53.0,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 53.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 57.5,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 57.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 58.5,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 58.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 61.0,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 61.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 63.5,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 63.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 67.0,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 67.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 68.0,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 68.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 73.0,
+     "text": "2 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 73.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 75.0,
+     "text": "2 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 75.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 76.5,
+     "text": "2 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 76.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 78.5,
+     "text": "2 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 78.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 83.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 83.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 84.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 84.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 85.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 85.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 88.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 88.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 92.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 92.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 93.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 93.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 94.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 94.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 98.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 98.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 101.5,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 101.5,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 106.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 106.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 111.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 111.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 115.0,
+     "text": "0分!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 115.0,
+     "text": "1 MINUTE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ff0000",
+     "end": null,
+     "start": 115.0,
+     "text": "FEED THE HORSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 126.5,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 127.0,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 130.5,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 130.5,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 133.5,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 134.0,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 136.0,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 136.5,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 139.5,
+     "text": "3 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 139.5,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 141.0,
+     "text": "0 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 141.0,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 143.5,
+     "text": "0 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 143.5,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    },
+    {
+     "color": "#ffffff",
+     "end": null,
+     "start": 144.5,
+     "text": "0 MINUTES",
+     "track": "subtitle"
+    },
+    {
+     "color": null,
+     "end": null,
+     "start": 144.5,
+     "text": "ENTER THE",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-3.5-flash-lite"
+  }
+ ],
+ "video_id": "Pl_pBoHCD78"
+}

@@ -1,0 +1,302 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/Yb4XjY7uhKw.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.8,
+     "logprob": -1.74,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I have a lot of money and money."
+    },
+    {
+     "end": 32.0,
+     "logprob": -0.67,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "Oh"
+    },
+    {
+     "end": 65.58,
+     "logprob": -0.99,
+     "no_speech": 0.0,
+     "start": 60.0,
+     "text": "Thank you."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/Yb4XjY7uhKw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.6,
+     "logprob": -0.2,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "お金に目がくらんだ村人の末路が山すぎます"
+    },
+    {
+     "end": 46.56,
+     "logprob": -0.66,
+     "no_speech": 0.0,
+     "start": 43.94,
+     "text": "ご視聴ありがとうございました"
+    },
+    {
+     "end": 63.84,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 60.56,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Yb4XjY7uhKw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.58,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "お金に目がくらんだ村人の末路がやばすぎます"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Yb4XjY7uhKw.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 88.62,
+     "no_speech": 0.0,
+     "start": 58.64,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/Yb4XjY7uhKw.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "おお金に目がくらんだ村人の末路がヤバすぎます"
+    },
+    {
+     "end": null,
+     "start": 6.0,
+     "text": "何だ？?"
+    },
+    {
+     "end": null,
+     "start": 11.0,
+     "text": "\"歯の妖精\""
+    },
+    {
+     "end": null,
+     "start": 12.0,
+     "text": "カモ発見..."
+    },
+    {
+     "end": null,
+     "start": 15.0,
+     "text": "\"歯を回収\""
+    },
+    {
+     "end": null,
+     "start": 18.0,
+     "text": "\"67ドル\""
+    },
+    {
+     "end": null,
+     "start": 19.0,
+     "text": "見て見て!!"
+    },
+    {
+     "end": null,
+     "start": 20.0,
+     "text": "\"1\""
+    },
+    {
+     "end": null,
+     "start": 21.0,
+     "text": "\"3度見\""
+    },
+    {
+     "end": null,
+     "start": 23.0,
+     "text": "67www"
+    },
+    {
+     "end": null,
+     "start": 24.0,
+     "text": "ウゼェェェエ!!"
+    },
+    {
+     "end": null,
+     "start": 26.0,
+     "text": "?????"
+    },
+    {
+     "end": null,
+     "start": 27.0,
+     "text": "お前はこれで死ねぇ!!"
+    },
+    {
+     "end": null,
+     "start": 32.0,
+     "text": "ごめんやり過ぎた..."
+    },
+    {
+     "end": null,
+     "start": 36.0,
+     "text": "歯折れてんじゃん!!"
+    },
+    {
+     "end": null,
+     "start": 38.0,
+     "text": "?????"
+    },
+    {
+     "end": null,
+     "start": 39.0,
+     "text": "歯がお金になるの!!"
+    },
+    {
+     "end": null,
+     "start": 41.0,
+     "text": "えええええー???"
+    },
+    {
+     "end": null,
+     "start": 42.0,
+     "text": "その歯抜こ!!"
+    },
+    {
+     "end": null,
+     "start": 43.0,
+     "text": "いいねぇ"
+    },
+    {
+     "end": null,
+     "start": 48.0,
+     "text": "準備完了✅"
+    },
+    {
+     "end": null,
+     "start": 50.0,
+     "text": "じゃイクよ～!!"
+    },
+    {
+     "end": null,
+     "start": 51.0,
+     "text": "おっけー"
+    },
+    {
+     "end": null,
+     "start": 52.0,
+     "text": "固い..."
+    },
+    {
+     "end": null,
+     "start": 54.0,
+     "text": "むかつく□"
+    },
+    {
+     "end": null,
+     "start": 101.0,
+     "text": "\"妖精ドン引き\""
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "お金に目が眩んだ村人の末路がヤバすぎます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "お金に（緑）→ 目が眩んだ（白）→ 村人の末路が（赤）→ ヤバすぎます（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Yb4XjY7uhKw"
+}

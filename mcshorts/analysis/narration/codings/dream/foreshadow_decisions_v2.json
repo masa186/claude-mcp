@@ -1,0 +1,308 @@
+{
+  "version": "foreshadow-decisions-v2",
+  "codebook": "codebook_foreshadow_v2.json",
+  "about": "伏線の補正レイヤーの元データ。decisions はユーザーの確認・指示による判定（confirmed=true）、ai_proposals は Claude の判定案（confirmed=false。有効データには入れない）。根拠は時刻の範囲（range_raw）と引用で指定し、foreshadow_corrections.py が元データと照合する。引用は、ユーザーが指定した行の中から照合のために Claude が抜き出したもの",
+  "decided_on": "2026-11-25",
+  "decisions": [
+    {
+      "item_id": "foreshadow:BwGk9qgSqfU:0:1",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "61〜65.6", "quote": "George の死亡画面「GeorgeNotFound was slain by TITAN」", "relation": "unspecified", "origin": "v1"}
+      ],
+      "sources": [{"kind": "review_csv", "item_id": "foreshadow:BwGk9qgSqfU:0:1", "expect": "正しい"}]
+    },
+    {
+      "item_id": "foreshadow:BwGk9qgSqfU:1:1",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "44〜59", "quote": "ネザーゲートの前で巨人を引き付ける", "relation": "unspecified", "origin": "user"}
+      ],
+      "sources": [{"kind": "review_csv", "item_id": "foreshadow:BwGk9qgSqfU:1:1", "expect": "違う"}]
+    },
+    {
+      "item_id": "foreshadow:MzpvoTEXweE:0:1",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "4.9〜15", "quote": "「喰らったんだよ」", "relation": "unspecified", "origin": "user"}
+      ],
+      "sources": [{"kind": "review_csv", "item_id": "foreshadow:MzpvoTEXweE:0:1", "expect": "違う"}]
+    },
+    {
+      "item_id": "foreshadow:loiMd64_c6Q:0:0",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "32.8〜35.4", "quote": "クリーパーが消える", "relation": "unspecified", "origin": "user"}
+      ],
+      "sources": [{"kind": "review_csv", "item_id": "foreshadow:loiMd64_c6Q:0:0", "expect": "違う"}]
+    },
+    {
+      "item_id": "foreshadow:lzD1xJ46ZC4:2:1",
+      "decision_status": "USER_DIRECTED",
+      "status": "HOLD",
+      "hold_reason": "NEEDS_REVIEW",
+      "evidence": [],
+      "concurrent": [
+        {"source": "doc_structure", "range_raw": "27〜42", "quote": "子供の村人に自分のスーツを着せる", "origin": "user",
+         "note": "過去にユーザーが確認した根拠（review_roles.csv）。予告の字幕の行（22.1〜27.1）が終わる前に始まるため、規則Bで回収から外す"}
+      ],
+      "reference": [
+        {"kind": "past_confirmed_evidence", "source": "doc_structure", "range_raw": "27〜42", "quote": "子供の村人に自分のスーツを着せる", "origin": "user"}
+      ],
+      "rules_applied": ["B"],
+      "sources": [
+        {"kind": "review_csv", "item_id": "foreshadow:lzD1xJ46ZC4:2:1", "expect": "違う"},
+        {"kind": "chat", "date": "2026-11-25", "text": "0-2：ルールBを優先。27〜42秒の場面は回収の根拠から外し、参考場面として記録。現時点では回収根拠が成立しないため、状態はHOLD（NEEDS_REVIEW）。過去に確認した判定は履歴として残し、消さない"}
+      ]
+    },
+    {
+      "item_id": "foreshadow:wYRkhfRSjDs:1:1",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "48〜50", "quote": "Dream「待って本当に自由になれの」", "relation": "unspecified", "origin": "user"}
+      ],
+      "sources": [{"kind": "review_csv", "item_id": "foreshadow:wYRkhfRSjDs:1:1", "expect": "違う"}]
+    },
+    {
+      "item_id": "foreshadow:1U5Pu0pVtvM:1:1",
+      "label": "F02",
+      "decision_status": "USER_CONFIRMED",
+      "status": "PARTIAL",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "21.6", "quote": "「3-4」", "relation": "result", "origin": "v1"}
+      ],
+      "reference": [
+        {"kind": "before_state", "source": "doc_structure", "range_raw": "3〜8", "quote": "スコア「1-2」→「1-3」", "origin": "user"}
+      ],
+      "not_confirmed": [{"element": "凡ミスをおかし", "reason": "凡ミスの内容は文から確認できない"}],
+      "rules_applied": ["B", "D"],
+      "sources": [
+        {"kind": "chat", "date": "2026-11-25", "text": "F02：PARTIAL ＋ 追加：候補①。戦況の変化は確認できるが、凡ミスの内容は未確認"},
+        {"kind": "chat", "date": "2026-11-25", "text": "0-3：PARTIALのまま。3〜8秒は変化前の参考場面に移し、21.6秒の「3-4」だけを回収根拠として残す。確認できない要素は「凡ミスの内容」"}
+      ]
+    },
+    {
+      "item_id": "foreshadow:G6CB11Q-lT0:0:0",
+      "label": "F09",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "52〜61.5", "quote": "タイマー 59.67 で止まる", "relation": "result", "origin": "user"},
+        {"source": "doc_structure", "range_raw": "62.5〜62.7", "quote": "男性（青）「(マジかよ...)」", "relation": "reaction", "origin": "v1"}
+      ],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "F09：追加：候補①。タイマーが止まる場面を結果の根拠に追加。顔のアップは反応として残す"}]
+    },
+    {
+      "item_id": "foreshadow:H4k6ZUfs3bA:0:1",
+      "label": "F10",
+      "decision_status": "USER_CONFIRMED",
+      "status": "PARTIAL",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "38〜48", "quote": "Dream がエンドポータルに入る「ｲｪｪｪｪｪｪ!!!!」", "relation": "result", "origin": "user"},
+        {"source": "doc_narration", "row": 1, "quote": "鬼ごっこではDreamが勝ちましたが", "relation": "restatement", "origin": "v1"}
+      ],
+      "not_confirmed": [{"element": "とんでもない逆転劇", "reason": "エンドポータルに入る場面が鬼ごっこの勝利（逆転）かどうかは未確認"}],
+      "rules_applied": ["D"],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "F10：PARTIAL ＋ 追加：候補②。エンドポータルに入る場面を根拠に追加。ただし鬼ごっこの勝利かは未確認"}]
+    },
+    {
+      "item_id": "foreshadow:LVcWPlryJqA:0:1",
+      "label": "F11",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "13.8〜17", "quote": "白の引用符「\"ダクアビス脱出成功\"」", "relation": "unspecified", "origin": "v1"}
+      ],
+      "user_notes": ["「数秒後」と根拠の時刻（13.8秒）の差を注記する"],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "F11：現状のまま。13.8〜17秒を根拠として維持。「数秒後」との時間差は注記する"}]
+    },
+    {
+      "item_id": "foreshadow:MxPwX5a6vfg:0:0",
+      "label": "F13",
+      "decision_status": "USER_CONFIRMED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "23〜30", "quote": "金色の鎧のプレイヤーが怪物の前に立つ", "relation": "action", "origin": "user"},
+        {"source": "doc_structure", "range_raw": "30.7〜35", "quote": "怪物を捕まえて引きずっていく（冒頭1.5秒の画）", "relation": "result", "origin": "v1"}
+      ],
+      "user_notes": ["「数秒後」と根拠の時刻の差（時間表現のずれ）を注記する"],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "F13：追加：候補①。23〜30秒を行動、30.7〜35秒を結果として記録。時間表現のズレも注記する"}]
+    },
+    {
+      "item_id": "foreshadow:NNe82nsFlME:0:1",
+      "label": "F14",
+      "decision_status": "USER_CONFIRMED",
+      "status": "PARTIAL",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "22.7〜29", "quote": "追う側「じゃーねDream!!!!」→「どこ行ったあいつ?!」", "relation": "result", "origin": "user"},
+        {"source": "doc_structure", "range_raw": "29.6〜35.4", "quote": "Dream（緑）「じゃーねー」", "relation": "result", "origin": "v1"}
+      ],
+      "not_confirmed": [{"element": "とんでもない行動", "reason": "行動の具体的な内容は文から確認できない"}],
+      "rules_applied": ["D"],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "F14：PARTIAL ＋ 追加：候補①。22.7〜29秒を結果の根拠に追加。行動の具体的な内容は未確認"}]
+    },
+    {
+      "item_id": "foreshadow:S8OLvKN4-o8:0:0",
+      "label": "F20",
+      "decision_status": "USER_DIRECTED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "18〜21.5", "quote": "追う側「アイツいつ槍作ったんだよ！」", "relation": "unspecified", "origin": "v1"},
+        {"source": "doc_fact_line", "quote": "体力0.5から槍（トライデント）で3人を倒す", "relation": "result", "origin": "user"}
+      ],
+      "rules_applied": ["A"],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "0-4：個別分析の[画面]の行を正式な根拠として認める。ただし時刻は不明と記録し、時刻による前後判定は行わない。根拠の種類はDOC_OBSERVEDとし、時刻が確認できた根拠と区別する"}]
+    },
+    {
+      "item_id": "foreshadow:TWUEJTjUPmY:1:0",
+      "label": "F22",
+      "decision_status": "USER_DIRECTED",
+      "status": "HOLD",
+      "hold_reason": "ROLE_HOLD",
+      "evidence": [],
+      "concurrent": [
+        {"source": "doc_structure", "range_raw": "3.6〜11", "quote": "水の中で溺れかける", "origin": "v1",
+         "note": "予告の字幕の行（9.4〜11.0）より前に始まる。ナレーションが映っている場面を説明している可能性"}
+      ],
+      "rules_applied": ["B", "C"],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "0-1：HOLD。今回の指示によって、起点のナレーションの役割も新たに保留とする（role_decisions_v2.json）。NOT_FOUND とは区別する"}]
+    },
+    {
+      "item_id": "foreshadow:lpfTNQ5dR70:1:0",
+      "label": "F34",
+      "decision_status": "USER_DIRECTED",
+      "status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "8〜13", "quote": "「何もらった？」「何てこったい」", "relation": "unspecified", "origin": "user"}
+      ],
+      "concurrent": [
+        {"source": "doc_structure", "range_raw": "3.8〜8", "quote": "ウォーデン（強いモブ）が出てくる", "origin": "v1",
+         "note": "予告の字幕の行（6.4〜7.9）より前に始まる（v1 の根拠）"}
+      ],
+      "rules_applied": ["B"],
+      "sources": [{"kind": "chat", "date": "2026-11-25", "text": "3：F34の8〜13秒を追加してください"}],
+      "user_notes": ["15〜25秒の追加は AI案（ai_proposals）のまま。確定していない"]
+    }
+  ],
+  "ai_proposals": [
+    {
+      "item_id": "foreshadow:AUQ8r0qXgVU:1:0", "label": "F05", "proposed_status": "NOT_FOUND_IN_TEXT",
+      "concurrent": [{"source": "doc_structure", "range_raw": "39.5〜46", "quote": "**Dream の顔を並べた畑**（Daquavis の動画）"}],
+      "reference": [{"kind": "reference_nearest", "source": "doc_structure", "range_raw": "39.5〜46", "quote": "**Dream の顔を並べた畑**（Daquavis の動画）"}],
+      "rationale": "宣戦布告動画の中身は予告と同時に映る。予告の行の後は問いかけのナレーション（48〜51）だけで、回収に当たる場面が文に無い"
+    },
+    {
+      "item_id": "foreshadow:OKhTqo8eVks:0:0", "label": "F15", "proposed_status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "42.6〜49", "quote": "ノート「\"今俺が見てる奴\"」→ 鏡のような額縁を見る", "relation": "result"},
+        {"source": "doc_structure", "range_raw": "50.6〜55.5", "quote": "最初にぶつかった村人がノートを持って笑う", "relation": "unspecified"}
+      ],
+      "rationale": "42.6〜49 を間違えた結果として加え、v1 の根拠は相手が誰だったかが分かる場面として残す"
+    },
+    {
+      "item_id": "foreshadow:Pf78c9UhqRk:1:0", "label": "F17", "proposed_status": "LINKED",
+      "evidence": [{"source": "doc_structure", "range_raw": "7.3〜13", "quote": "スティーブが**つるはしで型を抜く**（ズル）", "relation": "action"}],
+      "concurrent": [{"source": "doc_structure", "range_raw": "6〜7", "quote": "主人公（番号250）の前でスティーブがブロックを置く"}],
+      "rationale": "v1 の根拠（6〜7）は予告の字幕の行（5.8〜7.1）の途中で始まるため外れる。行の後で最初のやらかしは 7.3〜13 の型抜きのズル"
+    },
+    {
+      "item_id": "foreshadow:TSW_96CsF4Q:0:0", "label": "F21", "proposed_status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "32.5", "quote": "**赤**「\"一回転\"」", "relation": "action"},
+        {"source": "doc_structure", "range_raw": "35.5〜41.3", "quote": "「You Died!」（Score 381）", "relation": "result"}
+      ],
+      "user_declined": [{"source": "doc_structure", "range_raw": "19〜31", "quote": "**赤**「\"スナイパーライフル\"」", "note": "ユーザー指示：今回は追加しない"}],
+      "rationale": "32.5 の一撃を行動として加える"
+    },
+    {
+      "item_id": "foreshadow:Xb34KasPZyE:1:1", "label": "F24", "proposed_status": "PARTIAL",
+      "evidence": [{"source": "doc_structure", "range_raw": "53.9〜56.8", "quote": "赤の引用符「\"村人、無事全滅\"」", "relation": "result"}],
+      "concurrent": [{"source": "doc_structure", "range_raw": "41〜53", "quote": "「この弾丸も君のだな!!!」（撃つ）"}],
+      "not_confirmed": [{"element": "Dreamの6人目ハンターに選ばれた場合", "reason": "ハンターとしての場面は後の行に書かれていない"}],
+      "rationale": "41〜53 は予告の字幕の行（36.9〜41.4）の途中で始まるため規則Bで外れる"
+    },
+    {
+      "item_id": "foreshadow:ZoQjGe7_Kl8:0:0", "label": "F26", "proposed_status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "33〜43", "quote": "光の帯の中で拳の連打", "relation": "action"},
+        {"source": "doc_structure", "range_raw": "44.6〜47.3", "quote": "赤の引用符「\"秒殺\"」", "relation": "result"}
+      ],
+      "rationale": "制裁の行動（必殺技）を加える"
+    },
+    {
+      "item_id": "foreshadow:eg0_YckR1Iw:0:1", "label": "F31", "proposed_status": "PARTIAL",
+      "evidence": [{"source": "doc_structure", "range_raw": "33〜39", "quote": "巨人が来る「マジか!!!」", "relation": "result"}],
+      "concurrent": [{"source": "doc_structure", "range_raw": "3.5〜6", "quote": "赤の引用符「\"巨人がドリーム達を探してる\"」"}],
+      "not_confirmed": [{"element": "更なる悲劇", "reason": "悲劇の結末は動画の中に無い（結末を見せずに終わる）"}],
+      "rationale": "v1 の根拠は予告の字幕の行の途中で始まる字幕の続き。巨人が来る場面を悲劇の始まりとする"
+    },
+    {
+      "item_id": "foreshadow:eg0_YckR1Iw:1:1", "label": "F32", "proposed_status": "PARTIAL",
+      "evidence": [{"source": "doc_structure", "range_raw": "39.9〜47", "quote": "Sapnap「Dream...」「俺のこと忘れないでね」", "relation": "unspecified"}],
+      "not_confirmed": [{"element": "まさかの行動", "reason": "行動の中身（おとりになるのか）は文から確認できない"}],
+      "rationale": "予告の直後の台詞は確認できるが、行動の中身は確認できない"
+    },
+    {
+      "item_id": "foreshadow:i2o5r0vZOrg:0:0", "label": "F33", "proposed_status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "18〜24", "quote": "Dream が溶岩を流す", "relation": "action"},
+        {"source": "doc_structure", "range_raw": "25〜34", "quote": "Dream「俺はお前と縁を切る!!!」", "relation": "unspecified"}
+      ],
+      "rationale": "限界を迎えた最初の行動（溶岩）を加える"
+    },
+    {
+      "item_id": "foreshadow:lpfTNQ5dR70:1:0", "label": "F34", "proposed_status": "LINKED",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "8〜13", "quote": "「何もらった？」「何てこったい」", "relation": "unspecified"},
+        {"source": "doc_structure", "range_raw": "15〜25", "quote": "赤い画面「出ていけ!!」「今すぐ立ち去れ!!」", "relation": "unspecified"}
+      ],
+      "concurrent": [{"source": "doc_structure", "range_raw": "3.8〜8", "quote": "ウォーデン（強いモブ）が出てくる"}],
+      "rationale": "8〜13 はユーザー指示で確定済み（decisions）。15〜25 の追加は未確定の案"
+    },
+    {
+      "item_id": "foreshadow:lzD1xJ46ZC4:1:0", "label": "F36", "proposed_status": "PARTIAL",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "27〜42", "quote": "「※身代わり完成✅」", "relation": "action"},
+        {"source": "doc_structure", "range_raw": "43〜60", "quote": "子供が大群に囲まれる「お前ら落ち着けｪｪ!!!」", "relation": "result"}
+      ],
+      "not_confirmed": [{"element": "村人達から逃げ切ります", "reason": "逃げ切ったと明言する文が無い（規則D）"}],
+      "user_declined": [{"source": "doc_structure", "range_raw": "60〜67", "quote": "親を連れて「彼をGrox Jr.と名付けます」", "note": "ユーザー指示：今回は追加しない"}],
+      "rationale": "方法（身代わり）と、身代わりが大群に囲まれる場面"
+    },
+    {
+      "item_id": "foreshadow:p4osmEVx7hY:1:0", "label": "F38", "proposed_status": "HOLD", "proposed_hold_reason": "ROLE_HOLD",
+      "reference": [
+        {"kind": "pending_candidate", "source": "doc_structure", "range_raw": "8.9〜21", "quote": "「Groxを〇せぇぇ!!!」"},
+        {"kind": "pending_candidate", "source": "doc_structure", "range_raw": "43〜58", "quote": "「一同)突撃ｨｨ!!」"},
+        {"kind": "pending_candidate", "source": "doc_structure", "range_raw": "58〜62.4", "quote": "「追いかけっこが」「始まるのでした」"}
+      ],
+      "rationale": "役割が保留の間は判定しない。役割が決まったら候補を判定する"
+    },
+    {
+      "item_id": "foreshadow:sJDbLVB340o:1:1", "label": "F39", "proposed_status": "LINKED",
+      "evidence": [{"source": "doc_structure", "range_raw": "80〜88", "quote": "「勝者は決して諦めない」", "relation": "unspecified"}],
+      "rationale": "現状のまま。村人の状況がはっきり変わる最初の場面"
+    },
+    {
+      "item_id": "foreshadow:snRuzLtmLX4:1:0", "label": "F40", "proposed_status": "PARTIAL",
+      "evidence": [
+        {"source": "doc_structure", "range_raw": "42〜58", "quote": "「もう一度だけ確認していただくことは可能ですか?」", "relation": "action"},
+        {"source": "doc_structure", "range_raw": "58.6〜64", "quote": "渡したのは**弱化のポーション**", "relation": "action"}
+      ],
+      "reference": [{"kind": "reference_nearest", "source": "doc_structure", "range_raw": "65.2〜68.8", "quote": "外で村人に叩かれる仲間"}],
+      "not_confirmed": [{"element": "危機から逃れます", "reason": "Grox 本人が逃れる場面は文に無い"}],
+      "rationale": "方法（丁寧な依頼と偽のポーション）は確認できる"
+    },
+    {
+      "item_id": "foreshadow:wWd7KT3RTNg:0:0", "label": "F44", "proposed_status": "LINKED",
+      "evidence": [{"source": "doc_structure", "range_raw": "41.6〜45", "quote": "プレイヤーが怪物の頭（黒いブロック）を被っている", "relation": "result"}],
+      "user_declined": [{"source": "doc_structure", "range_raw": "45〜48.2", "quote": "赤の引用符「\"強すぎる...\"」", "note": "ユーザー指示：今回は追加しない"}],
+      "rationale": "現状のまま。「数秒後」との時間差は注記"
+    }
+  ]
+}

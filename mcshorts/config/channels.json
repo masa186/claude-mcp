@@ -1,0 +1,19 @@
+{
+ "_about": "対象チャンネル。段階1ではこの2つだけを扱う。",
+ "channels": [
+  {
+   "slug": "dream",
+   "name": "Dream Clips",
+   "name_ja": "ドリームクリップ",
+   "channel_id": "UCDjrYZMZx4zUbLDcKZWnkYw",
+   "uploads_playlist": "UUDjrYZMZx4zUbLDcKZWnkYw"
+  },
+  {
+   "slug": "smp",
+   "name": "SMP Clips",
+   "name_ja": "SMPクリップ",
+   "channel_id": "UCAuDKdTeZumLSuox_qmQrCQ",
+   "uploads_playlist": "UUAuDKdTeZumLSuox_qmQrCQ"
+  }
+ ]
+}

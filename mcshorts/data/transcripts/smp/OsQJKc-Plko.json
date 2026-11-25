@@ -1,0 +1,120 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "#fbfbf8",
+     "end": null,
+     "start": 0.0,
+     "text": "ドパガキが"
+    },
+    {
+     "color": "#fefefd",
+     "end": null,
+     "start": 0.5,
+     "text": "絶頂する"
+    },
+    {
+     "color": "#fefefd",
+     "end": null,
+     "start": 1.1,
+     "text": "動画を見る"
+    },
+    {
+     "color": "#fbfbfb",
+     "end": null,
+     "start": 1.8,
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "#fcfbfa",
+     "end": null,
+     "start": 2.5,
+     "text": "*ケーキの家に*"
+    },
+    {
+     "color": "#feed0c",
+     "end": null,
+     "start": 3.1,
+     "text": "*きたない*"
+    },
+    {
+     "color": "#fb1c13",
+     "end": null,
+     "start": 3.7,
+     "text": "*はよあけらんかい*"
+    },
+    {
+     "color": "#fbfafa",
+     "end": null,
+     "start": 4.5,
+     "text": "*ドアマン*"
+    },
+    {
+     "color": "#53ff29",
+     "end": null,
+     "start": 4.7,
+     "text": "*ケーキ発見*"
+    },
+    {
+     "color": "#fed904",
+     "end": null,
+     "start": 5.7,
+     "text": "*どっちが先食べる？*"
+    },
+    {
+     "color": "#fc3626",
+     "end": null,
+     "start": 6.4,
+     "text": "*ドパガキedit*"
+    },
+    {
+     "color": "#fefbf9",
+     "end": null,
+     "start": 7.1,
+     "text": "*ドカ食い*"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドパガキが絶頂する動画を見るドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "OsQJKc-Plko"
+}

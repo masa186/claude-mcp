@@ -1,0 +1,865 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドロッパーにみせかけたトラップでドクタードーナツを罠にかけるダッシュ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 4,
+     "text": "ミスったわおい",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "おけ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 8,
+     "text": "2回目の挑戦",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 12,
+     "text": "おーw",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "これはドロッパーの2パート目",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 16,
+     "text": "着地すればいい？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 17,
+     "text": "落下ダメージは受けない？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 18,
+     "text": "下で合流するわ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 19,
+     "text": "水置くの？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 22,
+     "text": "まあ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 23,
+     "text": "それなら結構簡単だな",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 24,
+     "text": "*トラップ入室*",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 27,
+     "text": "ドクタードーナツ ^ ^",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 29,
+     "text": "俺エリトラ2枚あるんよ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 32,
+     "text": "頼むFarex..",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 33,
+     "text": "Farex!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 34,
+     "text": "バイバイーイ!!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 35,
+     "text": "Farex!!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 36,
+     "text": "Farex!!!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 36,
+     "text": "Farex!!!!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 37,
+     "text": "いやいや",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 38,
+     "text": "GG!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 38,
+     "text": "Farexが間に合うから!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 40,
+     "text": "“Farex: リベンジ？”",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 41,
+     "text": "リベンジってなんだよ!?",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 42,
+     "text": "のおおおおおお",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 43,
+     "text": "Farex!!",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 44,
+     "text": "あGG",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 45,
+     "text": "ドーナツ!!!!!!!",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "ドロッパーに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.7,
+     "text": "見せかけた"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "トラップで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.5,
+     "text": "ドクタードーナツを"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.1,
+     "text": "罠にかける"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "NoLimitDash"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.6,
+     "text": "おう"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.1,
+     "text": "ミスったわい"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.1,
+     "text": "もっかいやらせて"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.2,
+     "text": "おけ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.4秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドロッパーに見せかけたトラップでドクタードーナツを罠にかけるダッシュ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.3,
+     "start": 0.0,
+     "text": "ドロッパー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 0.8,
+     "start": 0.3,
+     "text": "かと思ったら",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.0,
+     "start": 0.8,
+     "text": "見せかけたトラップでドクターナッツ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.2,
+     "start": 3.0,
+     "text": "を罠にかける",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 4.0,
+     "start": 3.7,
+     "text": "おう",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 5.1,
+     "start": 4.0,
+     "text": "ミスったわいもっかいやらせて",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.0,
+     "start": 7.7,
+     "text": "おけ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.5,
+     "start": 8.0,
+     "text": "2回目の挑戦",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 12.0,
+     "start": 11.7,
+     "text": "ぷーむ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 12.7,
+     "start": 12.2,
+     "text": "おーわ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.5,
+     "start": 13.0,
+     "text": "できたじゃん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 14.0,
+     "start": 13.7,
+     "text": "うゆ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 15.0,
+     "start": 14.2,
+     "text": "とりまこれはドロッパーの2パーツ目",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 17.0,
+     "start": 15.7,
+     "text": "じゃあ赤いとこに着地すればいい",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 18.0,
+     "start": 17.0,
+     "text": "落下ダメージは受けない",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 19.0,
+     "start": 18.0,
+     "text": "下で合流するわ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 19.7,
+     "start": 19.0,
+     "text": "水置け",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 20.0,
+     "start": 19.7,
+     "text": "水置くの",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.5,
+     "start": 22.0,
+     "text": "まあ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.0,
+     "start": 22.5,
+     "text": "それなら結構簡単だな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.0,
+     "start": 24.2,
+     "text": "*トラップ入室*",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 26.5,
+     "start": 26.2,
+     "text": "Farex",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.0,
+     "start": 26.5,
+     "text": "ドクターナッツ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 31.0,
+     "start": 29.0,
+     "text": "Farex俺エリトラ2枚あるよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 33.5,
+     "start": 32.0,
+     "text": "頼むFarexドクターナッツFarex",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 34.5,
+     "start": 33.5,
+     "text": "すまんFarex",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 37.0,
+     "start": 34.5,
+     "text": "バイバーイ Farex",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 38.0,
+     "start": 37.2,
+     "text": "いやいや",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 40.0,
+     "start": 38.0,
+     "text": "お前に殺されるわけないFarexが間に合うから",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 40.2,
+     "start": 40.0,
+     "text": "GG",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.0,
+     "start": 40.2,
+     "text": "Farexリベンジ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.2,
+     "start": 41.0,
+     "text": "リベンジってなんだよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 43.5,
+     "start": 42.0,
+     "text": "のおおおFarex",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 45.0,
+     "start": 44.2,
+     "text": "あGG",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 46.5,
+     "start": 45.2,
+     "text": "ドーナッツ",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 0.0,
+     "text": "ドロッパー",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 0.2,
+     "text": "かと思ったら..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.5,
+     "text": "見せかけの",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.8,
+     "text": "トラップで",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.2,
+     "text": "ドクタードーナツを",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.2,
+     "text": "罠にかける",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 3.0,
+     "text": "NoLimitDash",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.0,
+     "text": "ミスったわおい",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.2,
+     "text": "もっかいやらせて",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 8.0,
+     "text": "2回目の挑戦",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 11.7,
+     "text": "ぷーむ!",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤紫",
+     "end": null,
+     "start": 12.2,
+     "text": "お〜w",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 13.0,
+     "text": "できたじゃん",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.2,
+     "text": "とりま",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.5,
+     "text": "これは",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.7,
+     "text": "ドロッパーの2パート目",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 15.7,
+     "text": "じゃあ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 16.0,
+     "text": "赤いとこに",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 16.5,
+     "text": "着地すればいい?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 17.2,
+     "text": "落下ダメージは受けない?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 18.2,
+     "text": "下で合流するわ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 19.2,
+     "text": "水置くの?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 22.2,
+     "text": "まあ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 22.5,
+     "text": "それなら結構簡単だな",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24.2,
+     "text": "*トラップ入室*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.2,
+     "text": "Farex..",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 27.2,
+     "text": "ドクタードーナツ^^",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 29.0,
+     "text": "Farex",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 30.7,
+     "text": "俺エリトラ2枚ある",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32.0,
+     "text": "ドクタードーナツ..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 32.2,
+     "text": "頼むFarex",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 33.2,
+     "text": "Farex!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 33.7,
+     "text": "すまん",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 34.2,
+     "text": "Farex!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 34.5,
+     "text": "バイバーイ!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 35.0,
+     "text": "Farex!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 36.2,
+     "text": "バイバイ!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 36.5,
+     "text": "Farex!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 37.2,
+     "text": "いやいや",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 37.5,
+     "text": "お前に殺されるわけ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 38.0,
+     "text": "ないFarexが間に合うから",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 38.2,
+     "text": "GG!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 40.2,
+     "text": "\"Farex: リベンジ\"?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 41.0,
+     "text": "リベンジってなんだよ!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 42.2,
+     "text": "のおおおおお",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 43.0,
+     "text": "Farex!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 44.2,
+     "text": "あGG",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 45.2,
+     "text": "ドーナツ!!!!!",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 45.7,
+     "text": "*テインチャンバー担当Farexはドクタードーナツの生死与奪の権利を持つ*",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "8bn9CAWGzTs"
+}

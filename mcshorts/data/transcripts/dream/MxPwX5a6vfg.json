@@ -1,0 +1,362 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/MxPwX5a6vfg.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.56,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "This怪物 will be seen in a few seconds, in a few seconds."
+    },
+    {
+     "end": 3.84,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 2.56,
+     "text": "I see you!"
+    },
+    {
+     "end": 4.96,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 3.84,
+     "text": "What's that sound?"
+    },
+    {
+     "end": 7.68,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 5.92,
+     "text": "What is that?"
+    },
+    {
+     "end": 9.68,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 7.68,
+     "text": "I can't help myself."
+    },
+    {
+     "end": 11.68,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 9.68,
+     "text": "AHHHHH!"
+    },
+    {
+     "end": 19.92,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 17.68,
+     "text": "I'm not even a Mike Tyson special!"
+    },
+    {
+     "end": 22.8,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 21.2,
+     "text": "You think this is a game or something?"
+    },
+    {
+     "end": 25.04,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 22.8,
+     "text": "You think it's funny, scary, innocent people?"
+    },
+    {
+     "end": 28.0,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 25.04,
+     "text": "If you're so scary, try and scare me!"
+    },
+    {
+     "end": 28.96,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 28.0,
+     "text": "Try and scare me!"
+    },
+    {
+     "end": 29.96,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 28.96,
+     "text": "Where am I going?"
+    },
+    {
+     "end": 31.66,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 29.96,
+     "text": "Break your ugly ass back here!"
+    },
+    {
+     "end": 32.66,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 31.66,
+     "text": "If you don't want to..."
+    },
+    {
+     "end": 33.46,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 32.66,
+     "text": "Stop!"
+    },
+    {
+     "end": 33.96,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 33.46,
+     "text": "Stop!"
+    },
+    {
+     "end": 34.46,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 33.96,
+     "text": "Stop!"
+    },
+    {
+     "end": 35.46,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 34.46,
+     "text": "Stop!"
+    },
+    {
+     "end": 36.46,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 35.46,
+     "text": "Stop!"
+    },
+    {
+     "end": 37.46,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 36.46,
+     "text": "Stop!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/MxPwX5a6vfg.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.48,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "この怪物は数秒後は雲を見ることになりました"
+    },
+    {
+     "end": 3.6,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 2.48,
+     "text": "I see you"
+    },
+    {
+     "end": 4.82,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 3.6,
+     "text": "What's that sound?"
+    },
+    {
+     "end": 7.22,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 6.06,
+     "text": "What is that?"
+    },
+    {
+     "end": 9.54,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 7.72,
+     "text": "I can't help myself"
+    },
+    {
+     "end": 11.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 10.18,
+     "text": "AHHHHH"
+    },
+    {
+     "end": 19.78,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 16.08,
+     "text": "I can't help myself"
+    },
+    {
+     "end": 22.6,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 19.78,
+     "text": "You think this is a game or something?"
+    },
+    {
+     "end": 24.72,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 22.8,
+     "text": "You think it's funny, scary, and innocent people?"
+    },
+    {
+     "end": 27.6,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 24.96,
+     "text": "If you're so scary, try and scare me!"
+    },
+    {
+     "end": 28.8,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 27.8,
+     "text": "Try and scare me!"
+    },
+    {
+     "end": 29.52,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 28.96,
+     "text": "Why are you going?"
+    },
+    {
+     "end": 31.52,
+     "logprob": -0.69,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "BREAK OF THE ASS BACK IN!"
+    },
+    {
+     "end": 37.78,
+     "logprob": -0.69,
+     "no_speech": 0.0,
+     "start": 31.74,
+     "text": "BREAK OF THE ASS BACK IN!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/MxPwX5a6vfg.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.5,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "この怪物は数秒後は雲を見ることになりました"
+    },
+    {
+     "end": 3.62,
+     "no_speech": 0.0,
+     "start": 2.5,
+     "text": "I see you"
+    },
+    {
+     "end": 4.92,
+     "no_speech": 0.0,
+     "start": 3.62,
+     "text": "What's that sound?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/MxPwX5a6vfg.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 37.83,
+     "no_speech": 0.0,
+     "start": 30.83,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "この怪物は数秒後、悪夢を見ることになります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "この怪物は（赤）→ 数秒後（白）→ 悪夢を見ることに...（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "MxPwX5a6vfg"
+}

@@ -1,0 +1,258 @@
+{
+ "id": "PXYdDGT2fms",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 0.48,
+    "text": "嬉しい",
+    "no_speech": 0.0,
+    "logprob": -3.56,
+    "words": [
+     [
+      0.0,
+      0.26,
+      "嬉"
+     ],
+     [
+      0.26,
+      0.48,
+      "しい"
+     ]
+    ]
+   },
+   {
+    "start": 0.48,
+    "end": 6.36,
+    "text": "aaaaa",
+    "no_speech": 0.0,
+    "logprob": -3.56,
+    "words": [
+     [
+      0.48,
+      0.5,
+      "aaaa"
+     ],
+     [
+      0.5,
+      6.36,
+      "a?"
+     ]
+    ]
+   },
+   {
+    "start": 17.06,
+    "end": 17.18,
+    "text": "?",
+    "no_speech": 0.0,
+    "logprob": -3.56,
+    "words": [
+     [
+      17.06,
+      17.18,
+      "すごい"
+     ]
+    ]
+   },
+   {
+    "start": 25.44,
+    "end": 26.7,
+    "text": "I actually gonna spawn",
+    "no_speech": 0.0,
+    "logprob": -3.56,
+    "words": [
+     [
+      25.16,
+      25.52,
+      " actually"
+     ],
+     [
+      25.52,
+      26.24,
+      " gonna"
+     ],
+     [
+      26.24,
+      26.7,
+      " spawn"
+     ]
+    ]
+   },
+   {
+    "start": 30.0,
+    "end": 32.24,
+    "text": "あ、それが完璧です。",
+    "no_speech": 0.0,
+    "logprob": -1.2,
+    "words": [
+     [
+      30.0,
+      30.0,
+      "あ、"
+     ],
+     [
+      30.12,
+      30.36,
+      "それ"
+     ],
+     [
+      30.36,
+      30.44,
+      "が"
+     ],
+     [
+      30.44,
+      30.6,
+      "完"
+     ],
+     [
+      30.6,
+      30.94,
+      "璧"
+     ],
+     [
+      30.94,
+      32.24,
+      "です。"
+     ]
+    ]
+   },
+   {
+    "start": 32.36,
+    "end": 34.48,
+    "text": "フォータイトさん。",
+    "no_speech": 0.0,
+    "logprob": -1.2,
+    "words": [
+     [
+      32.36,
+      32.58,
+      "フ"
+     ],
+     [
+      32.58,
+      33.76,
+      "ォ"
+     ],
+     [
+      33.76,
+      33.84,
+      "ー"
+     ],
+     [
+      33.84,
+      34.06,
+      "タ"
+     ],
+     [
+      34.06,
+      34.14,
+      "イ"
+     ],
+     [
+      34.14,
+      34.3,
+      "ト"
+     ],
+     [
+      34.3,
+      34.48,
+      "さん。"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 0.88,
+    "text": "Hi, Little Babies.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 3.76,
+    "end": 4.54,
+    "text": "Hey, Milo.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 5.72,
+    "end": 8.06,
+    "text": "Whoa, ass turds.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 11.46,
+    "end": 13.04,
+    "text": "This game is glitching.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 16.36,
+    "end": 17.68,
+    "text": "Oh, yeah, baby.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 18.74,
+    "end": 19.64,
+    "text": "Hi, Little Babies.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 19.78,
+    "end": 20.52,
+    "text": "Come on, I'm out.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 23.52,
+    "end": 25.12,
+    "text": "Ooh, that looks good.",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 25.22,
+    "end": 26.88,
+    "text": "Is Herobrine actually gonna spawn?",
+    "no_speech": 0.0,
+    "logprob": -0.49
+   },
+   {
+    "start": 26.88,
+    "end": 30.88,
+    "text": "Bop that's perfect",
+    "no_speech": 0.0,
+    "logprob": -0.72
+   },
+   {
+    "start": 30.88,
+    "end": 32.32,
+    "text": "There we go",
+    "no_speech": 0.0,
+    "logprob": -0.72
+   },
+   {
+    "start": 32.32,
+    "end": 34.78,
+    "text": "Fortnite said",
+    "no_speech": 0.0,
+    "logprob": -0.72
+   }
+  ]
+ }
+}

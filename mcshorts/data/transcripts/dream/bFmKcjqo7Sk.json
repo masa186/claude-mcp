@@ -1,0 +1,168 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/bFmKcjqo7Sk.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "logprob": -1.14,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I can't believe it's a dream that I can't believe it's a dream that I can't believe it."
+    },
+    {
+     "end": 10.0,
+     "logprob": -1.14,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Get it cleaners!"
+    },
+    {
+     "end": 28.0,
+     "logprob": -1.14,
+     "no_speech": 0.0,
+     "start": 26.0,
+     "text": "You killed me?"
+    },
+    {
+     "end": 32.8,
+     "logprob": -1.24,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "If you're a fan of a guy, you'd like to hit me a touch."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/bFmKcjqo7Sk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.92,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "えっとい女性にも容赦しないドリームのライバルだコアビス"
+    },
+    {
+     "end": 10.22,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 9.26,
+     "text": "出てこいです"
+    },
+    {
+     "end": 26.78,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 25.64,
+     "text": "お前はこれだし"
+    },
+    {
+     "end": 32.8,
+     "logprob": -0.17,
+     "no_speech": 0.0,
+     "start": 30.42,
+     "text": "さすがに男すぎると思った方はいいねタッチ"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/bFmKcjqo7Sk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "えっとい女性にも容赦しないドリームのライバルダクアビス"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/bFmKcjqo7Sk.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 32.82,
+     "no_speech": 0.0,
+     "start": 26.02,
+     "text": "さすがに男すぎると思った方はいいねタッチ"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "エッロい女性にも容赦しない、ドリームのライバル、ダクアビス。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "江っ戸い女性にも（白）→ 容赦しない（赤）→ Dreamのライバル（黄緑）→ Daquavis（紫）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "bFmKcjqo7Sk"
+}

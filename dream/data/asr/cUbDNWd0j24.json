@@ -1,0 +1,1580 @@
+{
+ "id": "cUbDNWd0j24",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.1,
+    "text": "キツジとやって子供ができたブロックスですが",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      0.0,
+      0.16,
+      "キ"
+     ],
+     [
+      0.16,
+      0.22,
+      "ツ"
+     ],
+     [
+      0.22,
+      0.34,
+      "ジ"
+     ],
+     [
+      0.34,
+      0.42,
+      "と"
+     ],
+     [
+      0.42,
+      0.62,
+      "やって"
+     ],
+     [
+      0.62,
+      0.84,
+      "子"
+     ],
+     [
+      0.84,
+      0.96,
+      "供"
+     ],
+     [
+      0.96,
+      1.08,
+      "が"
+     ],
+     [
+      1.08,
+      1.26,
+      "でき"
+     ],
+     [
+      1.26,
+      1.34,
+      "た"
+     ],
+     [
+      1.34,
+      1.48,
+      "ブ"
+     ],
+     [
+      1.48,
+      1.58,
+      "ロ"
+     ],
+     [
+      1.58,
+      1.68,
+      "ック"
+     ],
+     [
+      1.68,
+      1.8,
+      "ス"
+     ],
+     [
+      1.8,
+      1.92,
+      "です"
+     ],
+     [
+      1.92,
+      2.1,
+      "が"
+     ]
+    ]
+   },
+   {
+    "start": 2.1,
+    "end": 3.12,
+    "text": "彼は自分の子供に",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      2.1,
+      2.22,
+      "彼"
+     ],
+     [
+      2.22,
+      2.36,
+      "は"
+     ],
+     [
+      2.36,
+      2.54,
+      "自"
+     ],
+     [
+      2.54,
+      2.66,
+      "分"
+     ],
+     [
+      2.66,
+      2.78,
+      "の"
+     ],
+     [
+      2.78,
+      2.9,
+      "子"
+     ],
+     [
+      2.9,
+      3.04,
+      "供"
+     ],
+     [
+      3.04,
+      3.12,
+      "に"
+     ]
+    ]
+   },
+   {
+    "start": 3.12,
+    "end": 4.18,
+    "text": "ピッサれることになりや",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      3.12,
+      3.28,
+      "ピ"
+     ],
+     [
+      3.28,
+      3.34,
+      "ッ"
+     ],
+     [
+      3.34,
+      3.44,
+      "サ"
+     ],
+     [
+      3.44,
+      3.6,
+      "れる"
+     ],
+     [
+      3.6,
+      3.76,
+      "こと"
+     ],
+     [
+      3.76,
+      4.04,
+      "にな"
+     ],
+     [
+      4.04,
+      4.16,
+      "り"
+     ],
+     [
+      4.16,
+      4.18,
+      "や"
+     ]
+    ]
+   },
+   {
+    "start": 4.18,
+    "end": 5.24,
+    "text": "No! That's ridiculous!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      4.18,
+      4.52,
+      "No!"
+     ],
+     [
+      4.7,
+      4.76,
+      " That"
+     ],
+     [
+      4.76,
+      4.86,
+      "'s"
+     ],
+     [
+      4.86,
+      5.24,
+      " ridiculous!"
+     ]
+    ]
+   },
+   {
+    "start": 5.52,
+    "end": 5.78,
+    "text": "Who are you?",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      5.52,
+      5.52,
+      "Who"
+     ],
+     [
+      5.52,
+      5.56,
+      " are"
+     ],
+     [
+      5.56,
+      5.78,
+      " you?"
+     ]
+    ]
+   },
+   {
+    "start": 6.08,
+    "end": 6.74,
+    "text": "I'm junior",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      6.08,
+      6.26,
+      "I"
+     ],
+     [
+      6.26,
+      6.38,
+      "'m"
+     ],
+     [
+      6.38,
+      6.74,
+      " junior"
+     ]
+    ]
+   },
+   {
+    "start": 6.74,
+    "end": 7.2,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      6.74,
+      7.2,
+      "No!"
+     ]
+    ]
+   },
+   {
+    "start": 7.78,
+    "end": 8.32,
+    "text": "That's right",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      7.78,
+      7.96,
+      "That"
+     ],
+     [
+      7.96,
+      8.14,
+      "'s"
+     ],
+     [
+      8.14,
+      8.32,
+      " right"
+     ]
+    ]
+   },
+   {
+    "start": 8.32,
+    "end": 10.04,
+    "text": "Does that mean I gotta pay child support?",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      8.32,
+      8.6,
+      "Does"
+     ],
+     [
+      8.6,
+      8.78,
+      " that"
+     ],
+     [
+      8.78,
+      8.9,
+      " mean"
+     ],
+     [
+      8.9,
+      9.04,
+      " I"
+     ],
+     [
+      9.04,
+      9.18,
+      " gotta"
+     ],
+     [
+      9.18,
+      9.38,
+      " pay"
+     ],
+     [
+      9.38,
+      9.68,
+      " child"
+     ],
+     [
+      9.68,
+      10.04,
+      " support?"
+     ]
+    ]
+   },
+   {
+    "start": 10.36,
+    "end": 10.6,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      10.36,
+      10.6,
+      "What?"
+     ]
+    ]
+   },
+   {
+    "start": 11.14,
+    "end": 11.34,
+    "text": "No?",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      11.14,
+      11.34,
+      "No?"
+     ]
+    ]
+   },
+   {
+    "start": 11.56,
+    "end": 12.1,
+    "text": "Thank God!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      11.56,
+      11.72,
+      "Thank"
+     ],
+     [
+      11.72,
+      12.1,
+      " God!"
+     ]
+    ]
+   },
+   {
+    "start": 12.34,
+    "end": 14.42,
+    "text": "I'm gonna stop you and make you face reveal",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      12.34,
+      12.44,
+      "I"
+     ],
+     [
+      12.44,
+      12.54,
+      "'m"
+     ],
+     [
+      12.54,
+      12.7,
+      " gonna"
+     ],
+     [
+      12.7,
+      13.0,
+      " stop"
+     ],
+     [
+      13.0,
+      13.26,
+      " you"
+     ],
+     [
+      13.26,
+      13.5,
+      " and"
+     ],
+     [
+      13.5,
+      13.7,
+      " make"
+     ],
+     [
+      13.7,
+      13.82,
+      " you"
+     ],
+     [
+      13.82,
+      14.02,
+      " face"
+     ],
+     [
+      14.02,
+      14.42,
+      " reveal"
+     ]
+    ]
+   },
+   {
+    "start": 14.42,
+    "end": 15.88,
+    "text": "We can do this the easy way",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      14.42,
+      14.82,
+      "We"
+     ],
+     [
+      14.82,
+      14.94,
+      " can"
+     ],
+     [
+      14.94,
+      15.06,
+      " do"
+     ],
+     [
+      15.06,
+      15.22,
+      " this"
+     ],
+     [
+      15.22,
+      15.34,
+      " the"
+     ],
+     [
+      15.34,
+      15.58,
+      " easy"
+     ],
+     [
+      15.58,
+      15.88,
+      " way"
+     ]
+    ]
+   },
+   {
+    "start": 15.88,
+    "end": 16.76,
+    "text": "Or the fuck",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      15.88,
+      16.4,
+      "Or"
+     ],
+     [
+      16.4,
+      16.62,
+      " the"
+     ],
+     [
+      16.62,
+      16.76,
+      " fuck"
+     ]
+    ]
+   },
+   {
+    "start": 16.76,
+    "end": 17.22,
+    "text": "Easy way!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      16.76,
+      16.88,
+      "E"
+     ],
+     [
+      16.88,
+      16.98,
+      "asy"
+     ],
+     [
+      16.98,
+      17.22,
+      " way!"
+     ]
+    ]
+   },
+   {
+    "start": 19.36,
+    "end": 20.7,
+    "text": "Hey, this is our little secret, alright?",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      19.36,
+      19.68,
+      "Hey,"
+     ],
+     [
+      19.78,
+      19.9,
+      " this"
+     ],
+     [
+      19.9,
+      20.0,
+      " is"
+     ],
+     [
+      20.0,
+      20.06,
+      " our"
+     ],
+     [
+      20.06,
+      20.18,
+      " little"
+     ],
+     [
+      20.18,
+      20.48,
+      " secret,"
+     ],
+     [
+      20.6,
+      20.7,
+      " alright?"
+     ]
+    ]
+   },
+   {
+    "start": 21.06,
+    "end": 21.7,
+    "text": "Hey, yo!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      21.06,
+      21.3,
+      "Hey,"
+     ],
+     [
+      21.54,
+      21.7,
+      " yo!"
+     ]
+    ]
+   },
+   {
+    "start": 22.1,
+    "end": 22.86,
+    "text": "That's my son!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      22.1,
+      22.16,
+      "That"
+     ],
+     [
+      22.16,
+      22.26,
+      "'s"
+     ],
+     [
+      22.26,
+      22.46,
+      " my"
+     ],
+     [
+      22.46,
+      22.86,
+      " son!"
+     ]
+    ]
+   },
+   {
+    "start": 23.26,
+    "end": 24.02,
+    "text": "With TNT!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      23.26,
+      23.42,
+      "With"
+     ],
+     [
+      23.42,
+      23.66,
+      " T"
+     ],
+     [
+      23.66,
+      24.02,
+      "NT!"
+     ]
+    ]
+   },
+   {
+    "start": 24.48,
+    "end": 25.94,
+    "text": "Face Revealed or else?",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      24.48,
+      24.72,
+      "F"
+     ],
+     [
+      24.72,
+      24.86,
+      "ace"
+     ],
+     [
+      24.86,
+      25.02,
+      " Re"
+     ],
+     [
+      25.02,
+      25.14,
+      "ve"
+     ],
+     [
+      25.14,
+      25.26,
+      "aled"
+     ],
+     [
+      25.26,
+      25.58,
+      " or"
+     ],
+     [
+      25.58,
+      25.94,
+      " else?"
+     ]
+    ]
+   },
+   {
+    "start": 26.32,
+    "end": 27.44,
+    "text": "Eh, I'll take my chances",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      26.32,
+      26.5,
+      "Eh,"
+     ],
+     [
+      26.72,
+      26.82,
+      " I"
+     ],
+     [
+      26.82,
+      26.88,
+      "'ll"
+     ],
+     [
+      26.88,
+      27.0,
+      " take"
+     ],
+     [
+      27.0,
+      27.14,
+      " my"
+     ],
+     [
+      27.14,
+      27.44,
+      " chances"
+     ]
+    ]
+   },
+   {
+    "start": 27.44,
+    "end": 27.94,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      27.44,
+      27.94,
+      "What?"
+     ]
+    ]
+   },
+   {
+    "start": 28.32,
+    "end": 28.84,
+    "text": "Hey, yo chill!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      28.32,
+      28.4,
+      "Hey,"
+     ],
+     [
+      28.5,
+      28.54,
+      " yo"
+     ],
+     [
+      28.54,
+      28.84,
+      " chill!"
+     ]
+    ]
+   },
+   {
+    "start": 29.16,
+    "end": 29.7,
+    "text": "I'm your son!",
+    "no_speech": 0.0,
+    "logprob": -0.32,
+    "words": [
+     [
+      29.16,
+      29.18,
+      "I"
+     ],
+     [
+      29.18,
+      29.24,
+      "'m"
+     ],
+     [
+      29.24,
+      29.36,
+      " your"
+     ],
+     [
+      29.36,
+      29.7,
+      " son!"
+     ]
+    ]
+   },
+   {
+    "start": 30.0,
+    "end": 31.18,
+    "text": "I just don't care",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      30.0,
+      30.56,
+      "I"
+     ],
+     [
+      30.56,
+      30.8,
+      " just"
+     ],
+     [
+      30.8,
+      30.94,
+      " don"
+     ],
+     [
+      30.94,
+      30.98,
+      "'t"
+     ],
+     [
+      30.98,
+      31.18,
+      " care"
+     ]
+    ]
+   },
+   {
+    "start": 31.18,
+    "end": 32.26,
+    "text": "Hey it's so rad",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      31.18,
+      31.42,
+      "Hey"
+     ],
+     [
+      31.42,
+      31.62,
+      " it"
+     ],
+     [
+      31.62,
+      31.8,
+      "'s"
+     ],
+     [
+      31.8,
+      31.9,
+      " so"
+     ],
+     [
+      31.9,
+      32.26,
+      " rad"
+     ]
+    ]
+   },
+   {
+    "start": 33.26,
+    "end": 36.0,
+    "text": "Hey no hard feelings man I understand why you did all this",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      33.26,
+      33.76,
+      "Hey"
+     ],
+     [
+      33.76,
+      33.96,
+      " no"
+     ],
+     [
+      33.96,
+      34.16,
+      " hard"
+     ],
+     [
+      34.16,
+      34.5,
+      " feelings"
+     ],
+     [
+      34.5,
+      34.7,
+      " man"
+     ],
+     [
+      34.7,
+      34.86,
+      " I"
+     ],
+     [
+      34.86,
+      35.14,
+      " understand"
+     ],
+     [
+      35.14,
+      35.32,
+      " why"
+     ],
+     [
+      35.32,
+      35.4,
+      " you"
+     ],
+     [
+      35.4,
+      35.54,
+      " did"
+     ],
+     [
+      35.54,
+      35.66,
+      " all"
+     ],
+     [
+      35.66,
+      36.0,
+      " this"
+     ]
+    ]
+   },
+   {
+    "start": 36.0,
+    "end": 37.24,
+    "text": "I miss my dad",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      36.0,
+      36.4,
+      "I"
+     ],
+     [
+      36.4,
+      36.68,
+      " miss"
+     ],
+     [
+      36.68,
+      36.88,
+      " my"
+     ],
+     [
+      36.88,
+      37.24,
+      " dad"
+     ]
+    ]
+   },
+   {
+    "start": 37.24,
+    "end": 39.88,
+    "text": "I miss my dad",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      37.24,
+      37.64,
+      "I"
+     ],
+     [
+      37.64,
+      37.96,
+      " miss"
+     ],
+     [
+      37.96,
+      38.08,
+      " my"
+     ],
+     [
+      38.08,
+      39.88,
+      " dad"
+     ]
+    ]
+   },
+   {
+    "start": 39.88,
+    "end": 40.98,
+    "text": "Time to end this",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      39.88,
+      40.2,
+      "Time"
+     ],
+     [
+      40.2,
+      40.46,
+      " to"
+     ],
+     [
+      40.46,
+      40.72,
+      " end"
+     ],
+     [
+      40.72,
+      40.98,
+      " this"
+     ]
+    ]
+   },
+   {
+    "start": 40.98,
+    "end": 42.16,
+    "text": "Daddy I missed you",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      40.98,
+      41.16,
+      "Dad"
+     ],
+     [
+      41.16,
+      41.34,
+      "dy"
+     ],
+     [
+      41.34,
+      41.48,
+      " I"
+     ],
+     [
+      41.48,
+      41.8,
+      " missed"
+     ],
+     [
+      41.8,
+      42.16,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 43.44,
+    "end": 45.28,
+    "text": "Yo stay away from me",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      43.44,
+      43.94,
+      "Yo"
+     ],
+     [
+      43.94,
+      44.44,
+      " stay"
+     ],
+     [
+      44.44,
+      44.76,
+      " away"
+     ],
+     [
+      44.76,
+      45.06,
+      " from"
+     ],
+     [
+      45.06,
+      45.28,
+      " me"
+     ]
+    ]
+   },
+   {
+    "start": 45.28,
+    "end": 46.28,
+    "text": "But I missed you",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      45.28,
+      45.54,
+      "But"
+     ],
+     [
+      45.54,
+      45.64,
+      " I"
+     ],
+     [
+      45.64,
+      45.98,
+      " missed"
+     ],
+     [
+      45.98,
+      46.28,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 46.28,
+    "end": 47.76,
+    "text": "Buddy I don't even know you",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      46.28,
+      46.66,
+      "B"
+     ],
+     [
+      46.66,
+      46.74,
+      "ud"
+     ],
+     [
+      46.74,
+      46.8,
+      "dy"
+     ],
+     [
+      46.8,
+      46.92,
+      " I"
+     ],
+     [
+      46.92,
+      47.02,
+      " don"
+     ],
+     [
+      47.02,
+      47.08,
+      "'t"
+     ],
+     [
+      47.08,
+      47.24,
+      " even"
+     ],
+     [
+      47.24,
+      47.5,
+      " know"
+     ],
+     [
+      47.5,
+      47.76,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 47.76,
+    "end": 48.92,
+    "text": "And yet you care about me",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      47.76,
+      47.94,
+      "And"
+     ],
+     [
+      47.94,
+      48.06,
+      " yet"
+     ],
+     [
+      48.06,
+      48.2,
+      " you"
+     ],
+     [
+      48.2,
+      48.46,
+      " care"
+     ],
+     [
+      48.46,
+      48.72,
+      " about"
+     ],
+     [
+      48.72,
+      48.92,
+      " me"
+     ]
+    ]
+   },
+   {
+    "start": 48.92,
+    "end": 52.92,
+    "text": "Cause I stranded you",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      48.92,
+      49.54,
+      "Cause"
+     ],
+     [
+      49.54,
+      52.0,
+      " I"
+     ],
+     [
+      52.0,
+      52.48,
+      " stranded"
+     ],
+     [
+      52.48,
+      52.92,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 53.54,
+    "end": 54.88,
+    "text": "Yeah I left you there",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      53.54,
+      54.04,
+      "Yeah"
+     ],
+     [
+      54.04,
+      54.2,
+      " I"
+     ],
+     [
+      54.2,
+      54.44,
+      " left"
+     ],
+     [
+      54.44,
+      54.62,
+      " you"
+     ],
+     [
+      54.62,
+      54.88,
+      " there"
+     ]
+    ]
+   },
+   {
+    "start": 54.88,
+    "end": 56.14,
+    "text": "And you came back",
+    "no_speech": 0.0,
+    "logprob": -0.25,
+    "words": [
+     [
+      54.88,
+      55.38,
+      "And"
+     ],
+     [
+      55.38,
+      55.52,
+      " you"
+     ],
+     [
+      55.52,
+      55.74,
+      " came"
+     ],
+     [
+      55.74,
+      56.14,
+      " back"
+     ]
+    ]
+   },
+   {
+    "start": 56.14,
+    "end": 57.22,
+    "text": "No, that's a dick!",
+    "no_speech": 0.0,
+    "logprob": -0.94,
+    "words": [
+     [
+      56.14,
+      56.54,
+      "No,"
+     ],
+     [
+      56.64,
+      56.74,
+      " that"
+     ],
+     [
+      56.74,
+      56.84,
+      "'s"
+     ],
+     [
+      56.84,
+      56.96,
+      " a"
+     ],
+     [
+      56.96,
+      57.22,
+      " dick!"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 4.0,
+    "text": "I'm a kid who made a child with a child, but he will be able to get his child to his child.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 4.0,
+    "end": 5.0,
+    "text": "No, that's ridiculous!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 5.0,
+    "end": 6.0,
+    "text": "Who are you?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 6.0,
+    "end": 7.0,
+    "text": "I'm a junior.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 7.0,
+    "end": 8.0,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 8.0,
+    "end": 9.0,
+    "text": "That's right.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 9.0,
+    "end": 10.0,
+    "text": "Does that mean I gotta pay child support?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 10.0,
+    "end": 11.0,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 11.0,
+    "end": 12.0,
+    "text": "No?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 12.0,
+    "end": 13.0,
+    "text": "Thank god!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 13.0,
+    "end": 15.0,
+    "text": "I'm gonna stop you and make you face reveal.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 15.0,
+    "end": 16.0,
+    "text": "We can do this the easy way?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 16.0,
+    "end": 17.0,
+    "text": "Or the fuck?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 17.0,
+    "end": 18.0,
+    "text": "Easy way!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 19.0,
+    "end": 21.0,
+    "text": "Hey, this is our little secret, alright?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 21.0,
+    "end": 22.0,
+    "text": "Hey, yo!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 22.0,
+    "end": 23.0,
+    "text": "That's my son!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 23.0,
+    "end": 24.0,
+    "text": "With TNT!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 24.0,
+    "end": 25.0,
+    "text": "Face reveal?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 25.0,
+    "end": 26.0,
+    "text": "Or else?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 26.0,
+    "end": 27.0,
+    "text": "Eh, I'll take my chances.",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 27.0,
+    "end": 28.0,
+    "text": "What?",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 28.0,
+    "end": 29.0,
+    "text": "Hey, yo, chill!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 29.0,
+    "end": 30.0,
+    "text": "I'm your son!",
+    "no_speech": 0.0,
+    "logprob": -0.39
+   },
+   {
+    "start": 30.0,
+    "end": 35.56,
+    "text": "bruh I just don't care hey no hard feelings man I understand why you did",
+    "no_speech": 0.0,
+    "logprob": -0.21
+   },
+   {
+    "start": 35.56,
+    "end": 42.62,
+    "text": "all this thank you about to see your dad time to end this daddy I missed you",
+    "no_speech": 0.0,
+    "logprob": -0.21
+   },
+   {
+    "start": 42.62,
+    "end": 48.22,
+    "text": "yo stay away from me but I missed you buddy I don't even know you and yet you",
+    "no_speech": 0.0,
+    "logprob": -0.21
+   },
+   {
+    "start": 48.22,
+    "end": 52.02,
+    "text": "care about me no I left you in a small pit so that I would be safe cuz I",
+    "no_speech": 0.0,
+    "logprob": -0.21
+   },
+   {
+    "start": 52.02,
+    "end": 56.0,
+    "text": "stranded you yeah I left you there and you came back",
+    "no_speech": 0.0,
+    "logprob": -0.21
+   },
+   {
+    "start": 56.0,
+    "end": 58.0,
+    "text": "No, that's ridiculous!",
+    "no_speech": 0.0,
+    "logprob": -0.54
+   }
+  ]
+ }
+}

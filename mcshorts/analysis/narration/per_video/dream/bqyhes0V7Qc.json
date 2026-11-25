@@ -1,0 +1,776 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 65.74,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 0.93,
+   "first_cut_minus_first_row_start": 0.66,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.491,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "真上から見下ろした、ガラスの囲いの中のディスペンサー（ガチャの装置）"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ガチャガチャで引いた」",
+      "time_raw": "0.27〜0.73",
+      "visual": "何かが飛び出す（黒い粒、羊のような白いもの）"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**黄**「アイテムを使い」",
+      "time_raw": "1.00〜1.47",
+      "visual": "カット。ガラスの囲いが並ぶ会場 [実測: 0.93]"
+     },
+     {
+      "end": 2.0,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**青**「生き残る」",
+      "time_raw": "1.73〜2.00",
+      "visual": "カット。名前「Daquav...」とピンクのプレイヤー [実測: 1.60]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "緑「いつメン4人組」＋**赤の大きな文字**「※エンドラ参戦?!」",
+      "time_raw": "2.27〜3.00",
+      "visual": "同上、黒いプレイヤーが近づく"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.0,
+     "music_mean_during_row": 0.595,
+     "nearest_cut_to_end": 0.13,
+     "nearest_cut_to_start": 0.66,
+     "nearest_subtitle_change_to_end": 0.13,
+     "nearest_subtitle_change_to_start": 2.86,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.9,
+      1.5,
+      3.05,
+      3.2
+     ],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "次の部分（いつメン4人組）を修飾する文の途中",
+     "role": "R_FRAGMENT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 1,
+     "reason": "「いつメン4人組」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 21,
+     "content_lemmas": [
+      "がちゃがちゃ",
+      "引く-他動詞",
+      "アイテム-item",
+      "使う",
+      "生き残る"
+     ],
+     "first_token": {
+      "lemma": "がちゃがちゃ",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "ガチャガチャ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ガチ"
+      ],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 3,
+      "名詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "ガチャガチャで引いたアイテムを使い生き残る"
+    },
+    {
+     "chars": 7,
+     "content_lemmas": [
+      "何時",
+      "4",
+      "組"
+     ],
+     "first_token": {
+      "lemma": "何時",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "いつ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "助詞": 1,
+      "名詞": 2,
+      "接尾辞": 2
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "いつメン4人組"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "がちゃがちゃ",
+     1
+    ],
+    [
+     "引く-他動詞",
+     1
+    ],
+    [
+     "アイテム-item",
+     1
+    ],
+    [
+     "使う",
+     1
+    ],
+    [
+     "生き残る",
+     1
+    ],
+    [
+     "何時",
+     1
+    ],
+    [
+     "4",
+     1
+    ],
+    [
+     "組",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "ガチャガチャで引いたアイテムを使い生き残る いつメン4人組"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 11,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ガチャガチャでヒットア",
+     "words": [
+      "ガ",
+      "チャ",
+      "ガ",
+      "チャ",
+      "で",
+      "ヒ",
+      "ット",
+      "ア"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "ガチャガチャで引いたアイテムを使い生き残る いつメン4人組"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 26,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ガチャガチャでヒットアイテムを使い、生き残り1名4人組",
+     "words": [
+      "ガ",
+      "チャ",
+      "ガ",
+      "チャ",
+      "で",
+      "ヒ",
+      "ット",
+      "ア",
+      "イ",
+      "テ",
+      "ム",
+      "を",
+      "使",
+      "い、",
+      "生",
+      "き",
+      "残",
+      "り",
+      "1",
+      "名",
+      "4",
+      "人",
+      "組"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.0,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "ガチャガチャで引いたアイテムを使い生き残る いつメン4人組"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 26,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ガチャガチャでヒットアイテムを使い、生き残り1名4人組",
+     "words": [
+      "ガ",
+      "チャ",
+      "ガ",
+      "チャ",
+      "で",
+      "ヒ",
+      "ット",
+      "ア",
+      "イ",
+      "テ",
+      "ム",
+      "を",
+      "使",
+      "い、",
+      "生",
+      "き",
+      "残",
+      "り",
+      "1",
+      "名",
+      "4",
+      "人",
+      "組"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 28,
+    "end": 3.0,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "ガチャガチャで引いたアイテムを使い生き残る いつメン4人組"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "がちゃがちゃ",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "ガチャガチャ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ガチ"
+      ],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "ガチャガチャで引いたアイテムを使い生き残る"
+    },
+    {
+     "first_token": {
+      "lemma": "何時",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "いつ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "いつメン4人組"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "次の部分（いつメン4人組）を修飾する文の途中",
+     "role": "R_FRAGMENT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 1,
+     "reason": "「いつメン4人組」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_SCALE",
+    "effective_code": "H_SCALE",
+    "quote": "ガチャガチャでヒットアイテムを使い、生き残り1名4人組",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "真上から見下ろした、ガラスの囲いの中のディスペンサー（ガチャの装置）"
+     },
+     {
+      "end": 0.73,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ガチャガチャで引いた」",
+      "time_raw": "0.27〜0.73",
+      "visual": "何かが飛び出す（黒い粒、羊のような白いもの）"
+     },
+     {
+      "end": 1.47,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**黄**「アイテムを使い」",
+      "time_raw": "1.00〜1.47",
+      "visual": "カット。ガラスの囲いが並ぶ会場 [実測: 0.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ガ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 10.26,
+    "rows": [
+     {
+      "chars": 28,
+      "chars_per_sec": 10.26,
+      "duration": 2.73,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 28
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 9.09,
+    "gap_max": 0.06,
+    "gap_median": 0.06,
+    "gaps_ge_0.3s": 0,
+    "n_words": 23,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "ガチ"
+     ],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "ガチャガチャで引いたアイテムを使い生き残る"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": true,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "いつメン4人組"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_FRAGMENT",
+    "R_INTRO"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "Die! Die! Die!",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "No!",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "ガチャの装置、ルール、エンドラ参戦の予告",
+      "range_raw": "0.0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "「※Dreamの番」→「なにでた？」→「オラGeorge」→ George「おれ安地にいるから」（安全地帯）→「しゃぁ行くぜ」",
+      "range_raw": "3.2〜13",
+      "stage_label": "1巡目"
+     },
+     {
+      "content": "George「やめろやめろやめろ」「Dreamに打ってくれ頼む!!!」→「ﾎｯﾎｫｳ///」「wwwww」→「頼む〇さないで!!」→「ドンドンドンドン...」「バァン!!!」（撃たれる）",
+      "range_raw": "14.5〜26",
+      "stage_label": "2巡目"
+     },
+     {
+      "content": "「マジかヤベェ」→ **赤**「※エンドラ出現」「あいつどこ行くんだ？」",
+      "range_raw": "26〜31",
+      "stage_label": "事件"
+     },
+     {
+      "content": "「なにがでた？」「エンダーパール？」→ ピンクのプレイヤー「ﾀﾞｧｱｱｯﾊｯﾊwww」→ George「え待って?!」「俺ハート1.5しかない」→「透明人間になった？」",
+      "range_raw": "32.7〜45",
+      "stage_label": "展開"
+     },
+     {
+      "content": "George「盾ゲットしたぞ！」「俺は安全だ」→ Daquavis「回復できる物入ってないの？」「おれ瀕死だからさ」→ **白**「※ダクアビス自滅」→ George「ブハハハハハwww」「(呼吸困難)」",
+      "range_raw": "49〜58",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "燃えるSapnap →「ｲﾔｯﾊｯﾊｯ///」→ 白の引用符「\"運がいいGeorge\"」",
+      "range_raw": "60.9〜65.7",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     3,
+     8,
+     13,
+     26,
+     27,
+     30,
+     34,
+     35,
+     37,
+     42,
+     54,
+     60
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.9,
+     1.5,
+     3.05,
+     3.2,
+     8.05,
+     8.3,
+     8.9,
+     13.15,
+     13.3,
+     13.6,
+     26.85,
+     27.15,
+     30.75,
+     30.95,
+     34.9,
+     35.1,
+     35.3,
+     37.4,
+     42.85,
+     54.7,
+     54.85,
+     60.15
+    ],
+    "cuts": 38,
+    "cuts_per_5s": {
+     "0": 3,
+     "10": 2,
+     "15": 2,
+     "20": 1,
+     "25": 3,
+     "30": 3,
+     "35": 4,
+     "40": 4,
+     "45": 3,
+     "5": 5,
+     "50": 3,
+     "55": 3,
+     "60": 2
+    },
+    "duration_sec": 65.74,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 3.0,
+    "is_end_position": false,
+    "sec_from_end": 62.74,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "ガチャガチャで引いたアイテムを使い生き残る いつメン4人組"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "文の途中（区切りの断片）",
+     "part": 0,
+     "reason": "次の部分（いつメン4人組）を修飾する文の途中",
+     "role": "R_FRAGMENT",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 1,
+     "reason": "「いつメン4人組」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 61.8,
+    "status": "ok",
+    "text": "No!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 58.02,
+    "status": "ok",
+    "text": "笑"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "No!",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 34,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/34_bqyhes0V7Qc.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/bqyhes0V7Qc.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "bqyhes0V7Qc"
+}

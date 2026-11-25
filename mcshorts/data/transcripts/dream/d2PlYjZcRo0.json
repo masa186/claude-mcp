@@ -1,0 +1,731 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/d2PlYjZcRo0.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.4,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Hey, bro, give me that Emerald"
+    },
+    {
+     "end": 5.88,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 3.4,
+     "text": "Alright, how are you gonna stop me?"
+    },
+    {
+     "end": 7.56,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 7.18,
+     "text": "Wait, what?"
+    },
+    {
+     "end": 9.6,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 8.96,
+     "text": "Disgusting!"
+    },
+    {
+     "end": 10.4,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 9.76,
+     "text": "Taking your stuff"
+    },
+    {
+     "end": 12.2,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 10.4,
+     "text": "What? Just milk?"
+    },
+    {
+     "end": 13.64,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 12.42,
+     "text": "Whatever, I'll take it"
+    },
+    {
+     "end": 14.72,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 13.64,
+     "text": "Why am I nauseous?"
+    },
+    {
+     "end": 18.18,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 16.32,
+     "text": "Nah, tell me that was milk!"
+    },
+    {
+     "end": 19.3,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 18.26,
+     "text": "Alright, no more trolling!"
+    },
+    {
+     "end": 20.34,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 19.38,
+     "text": "Give me that diamond, bro"
+    },
+    {
+     "end": 21.56,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 20.34,
+     "text": "Oh, bet"
+    },
+    {
+     "end": 23.8,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 21.56,
+     "text": "Oh, okay, sure"
+    },
+    {
+     "end": 26.1,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 23.8,
+     "text": "Nah, what the? Bro, you're disgusting"
+    },
+    {
+     "end": 27.92,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 26.1,
+     "text": "Nah, you're gonna troll me? I'm gonna troll you"
+    },
+    {
+     "end": 29.58,
+     "logprob": -0.28,
+     "no_speech": 0.0,
+     "start": 27.92,
+     "text": "This Minecraft's gonna come speeding down"
+    },
+    {
+     "end": 31.58,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 29.58,
+     "text": "You're going to have to save either your mom or dad."
+    },
+    {
+     "end": 32.44,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 31.66,
+     "text": "All right, choose, bro."
+    },
+    {
+     "end": 33.34,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 32.52,
+     "text": "Help me."
+    },
+    {
+     "end": 35.84,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 33.82,
+     "text": "My boy, your mother should be saved."
+    },
+    {
+     "end": 37.06,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 36.06,
+     "text": "But I'll get you an Xbox."
+    },
+    {
+     "end": 38.22,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 37.82,
+     "text": "Oh."
+    },
+    {
+     "end": 39.56,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 38.48,
+     "text": "I'll get you a car."
+    },
+    {
+     "end": 40.28,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 39.84,
+     "text": "Oh."
+    },
+    {
+     "end": 41.36,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 40.48,
+     "text": "I'll get you a laptop."
+    },
+    {
+     "end": 44.24,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 42.5,
+     "text": "And you can visit any website."
+    },
+    {
+     "end": 45.04,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 44.64,
+     "text": "Oh."
+    },
+    {
+     "end": 46.66,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 45.28,
+     "text": "Oh, but it was too late."
+    },
+    {
+     "end": 48.84,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 47.62,
+     "text": "Bro, I regret this."
+    },
+    {
+     "end": 49.78,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 48.9,
+     "text": "I'm sorry, bro."
+    },
+    {
+     "end": 51.26,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 50.22,
+     "text": "Nah, you're still alive?"
+    },
+    {
+     "end": 52.18,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 51.44,
+     "text": "What's up, then?"
+    },
+    {
+     "end": 54.08,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 52.84,
+     "text": "Bro, I regret this."
+    },
+    {
+     "end": 55.0,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 54.14,
+     "text": "I'm sorry, bro."
+    },
+    {
+     "end": 56.14,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 55.1,
+     "text": "Nah, is he still alive, though?"
+    },
+    {
+     "end": 57.06,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 56.78,
+     "text": "Huh?"
+    },
+    {
+     "end": 59.36,
+     "logprob": -0.32,
+     "no_speech": 0.0,
+     "start": 58.12,
+     "text": "Nah, what's up, then?"
+    },
+    {
+     "end": 63.78,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 59.58,
+     "text": "Nah, I'm sorry for your loss"
+    },
+    {
+     "end": 65.18,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 63.78,
+     "text": "Why you still got a pulse though?"
+    },
+    {
+     "end": 66.64,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 65.9,
+     "text": "Let's go!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/d2PlYjZcRo0.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.5,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ブロックスを プラスタらこうなんだ"
+    },
+    {
+     "end": 2.9,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 2.16,
+     "text": "え bro、 누のエメラル"
+    },
+    {
+     "end": 3.4,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 2.9,
+     "text": "Hey bro, give me that エメラル"
+    },
+    {
+     "end": 5.88,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 4.58,
+     "text": "Alright, how are you gonna stop me?"
+    },
+    {
+     "end": 7.52,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 7.0,
+     "text": "Wait, what?"
+    },
+    {
+     "end": 9.66,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 8.86,
+     "text": "DIGUSTY"
+    },
+    {
+     "end": 10.36,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 9.66,
+     "text": "It's taking your stuff"
+    },
+    {
+     "end": 11.42,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 11.1,
+     "text": "What?"
+    },
+    {
+     "end": 11.66,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 11.64,
+     "text": "What?"
+    },
+    {
+     "end": 12.16,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 11.66,
+     "text": "Just milk?"
+    },
+    {
+     "end": 13.28,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 12.44,
+     "text": "Whatever, I'll tell you"
+    },
+    {
+     "end": 14.74,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 13.68,
+     "text": "Why am I nauseous?"
+    },
+    {
+     "end": 16.2,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 14.82,
+     "text": "I had soooo"
+    },
+    {
+     "end": 16.72,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 16.2,
+     "text": "Nah"
+    },
+    {
+     "end": 18.12,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 16.72,
+     "text": "Tell me that was milk!"
+    },
+    {
+     "end": 19.28,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 18.34,
+     "text": "Alright, no more trolling"
+    },
+    {
+     "end": 20.26,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 19.28,
+     "text": "Give me that diamond bro"
+    },
+    {
+     "end": 20.6,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 20.26,
+     "text": "Okay"
+    },
+    {
+     "end": 21.48,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 20.6,
+     "text": "Oh, bet"
+    },
+    {
+     "end": 22.98,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 21.48,
+     "text": "But first, let me do something"
+    },
+    {
+     "end": 23.76,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 22.98,
+     "text": "OKAY, sure"
+    },
+    {
+     "end": 24.44,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 24.12,
+     "text": "No!"
+    },
+    {
+     "end": 24.98,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 24.66,
+     "text": "What the?"
+    },
+    {
+     "end": 25.98,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 25.12,
+     "text": "Bro, you're disgusting"
+    },
+    {
+     "end": 27.14,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 25.98,
+     "text": "Now, you're gonna troll me?"
+    },
+    {
+     "end": 27.86,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 27.18,
+     "text": "Imma troll you"
+    },
+    {
+     "end": 29.54,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 27.86,
+     "text": "This minecraft's gonna come speeding down"
+    },
+    {
+     "end": 31.52,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 29.54,
+     "text": "You're gonna have to save either your mom or dad"
+    },
+    {
+     "end": 32.38,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 31.52,
+     "text": "Alright, choose bro"
+    },
+    {
+     "end": 35.84,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 32.38,
+     "text": "My boy, your mother should be saved"
+    },
+    {
+     "end": 37.06,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 35.84,
+     "text": "But I'll get you an Xbox"
+    },
+    {
+     "end": 39.54,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 37.06,
+     "text": "I'll get you a car"
+    },
+    {
+     "end": 41.34,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 39.54,
+     "text": "I'll get you a laptop"
+    },
+    {
+     "end": 44.22,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 42.46,
+     "text": "And you can visit any website"
+    },
+    {
+     "end": 46.64,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 44.22,
+     "text": "Oh, but it was too late"
+    },
+    {
+     "end": 48.8,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 47.56,
+     "text": "Bro, I regret this"
+    },
+    {
+     "end": 49.8,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 48.8,
+     "text": "I'm sorry bro"
+    },
+    {
+     "end": 51.22,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 49.8,
+     "text": "No, you're still alive"
+    },
+    {
+     "end": 52.14,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 51.22,
+     "text": "What's up then"
+    },
+    {
+     "end": 54.02,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 52.78,
+     "text": "Bro, I regret this"
+    },
+    {
+     "end": 54.96,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 54.02,
+     "text": "I'm sorry bro"
+    },
+    {
+     "end": 56.14,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 54.96,
+     "text": "No, is he still alive though"
+    },
+    {
+     "end": 59.3,
+     "logprob": -0.24,
+     "no_speech": 0.0,
+     "start": 56.64,
+     "text": "No, what's up then"
+    },
+    {
+     "end": 71.22,
+     "logprob": -0.2,
+     "no_speech": 0.0,
+     "start": 68.66,
+     "text": "普通にサイコパスだと思う方はチャンネル登録"
+    },
+    {
+     "end": 73.02,
+     "logprob": -0.2,
+     "no_speech": 0.0,
+     "start": 71.22,
+     "text": "あと絶対あの牛乳スッシアン"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/d2PlYjZcRo0.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 1.66,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ブロックスを掘らせたらこうなります"
+    },
+    {
+     "end": 3.42,
+     "no_speech": 0.0,
+     "start": 1.66,
+     "text": "エムラッド"
+    },
+    {
+     "end": 4.66,
+     "no_speech": 0.0,
+     "start": 3.42,
+     "text": "エムラッド"
+    },
+    {
+     "end": 5.08,
+     "no_speech": 0.0,
+     "start": 4.66,
+     "text": "エムラッド"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/d2PlYjZcRo0.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 71.27,
+     "no_speech": 0.0,
+     "start": 66.05,
+     "text": "普通にサイコパスだと思う方はチャンネル登録"
+    },
+    {
+     "end": 73.01,
+     "no_speech": 0.0,
+     "start": 71.27,
+     "text": "あと絶対あの牛乳スカシアン"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "グロックスを怒らせたらこうなります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Groxを（白）→ 怒らせたら（赤）→ こうなります（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "d2PlYjZcRo0"
+}

@@ -1,0 +1,108 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "世界一快感を",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "世界一快感を",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "世界一快感を"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "感じるドロッパーに"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.0,
+     "text": "降りるドクタードーナツ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "*心の準備*"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.5,
+     "text": "おけ、ありがとねぇ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.5,
+     "text": "逝ってらー"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "世界一快感を感じるドロッパーに降りるドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "aGjehKMJgjc"
+}

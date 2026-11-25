@@ -1,0 +1,334 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドクタードーナツが自身のサーバーでチーターを発見します",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "ドクタードーナツが自身のサーバーでチーターを発見します",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "ドクタードーナツが"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "DonutSMPで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.7,
+     "text": "チーターを"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.1,
+     "text": "発見します"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "こいつ壁に寄ってない.."
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.4,
+     "text": "あーこれ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.7,
+     "text": "100%チートだな"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.2,
+     "text": "チャット「イヤガッ」"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドクタードーナツが自身のサーバーでチーターを発見します"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.3,
+     "start": 0.0,
+     "text": "チートだな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 0.9,
+     "start": 0.3,
+     "text": "震えて眠れや",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 1.7,
+     "start": 0.9,
+     "text": "ドクタードーナツが",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 2.2,
+     "start": 1.7,
+     "text": "DonutSMPで",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 2.9,
+     "start": 2.2,
+     "text": "チーターを",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.4,
+     "start": 2.9,
+     "text": "発見します",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 15.7,
+     "start": 15.3,
+     "text": "うん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.3,
+     "start": 15.7,
+     "text": "やはり100%だな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 21.3,
+     "start": 20.7,
+     "text": "俺が殴り続けたら",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.0,
+     "start": 21.3,
+     "text": "そのうち死ぬくね？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.5,
+     "start": 22.9,
+     "text": "ただ殴れば倒せるのか？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.0,
+     "start": 24.6,
+     "text": "あ、おい",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.5,
+     "start": 27.0,
+     "text": "へっへへえーん^^",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 30.6,
+     "start": 29.9,
+     "text": "今チート使ったの",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 31.2,
+     "start": 30.6,
+     "text": "見えちゃったねえ^^",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ドクタードーナツが",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.9,
+     "text": "DonutSMPで",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.7,
+     "text": "チーターを",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.0,
+     "text": "発見します",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "こいつ壁に寄ってない..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.5,
+     "text": "あーこれ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.7,
+     "text": "100%チートだな",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7.1,
+     "text": "チャット「イヤガッ」",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 8.0,
+     "text": "100%チートだろ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 10.6,
+     "text": "直接問い詰めてみるか",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 15.5,
+     "text": "やはり100%だな",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 20.7,
+     "text": "俺が殴り続けたら\nそのうち死ぬくね？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 22.9,
+     "text": "ただ殴れば倒せるのか？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 24.6,
+     "text": "あ、おい",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.9,
+     "text": "へっへへえーん^^",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 29.9,
+     "text": "今チート使ったの\n見えちゃったねえ^^",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "6ros2NR2Bzc"
+}

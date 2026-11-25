@@ -1,0 +1,620 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 62.72,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.05,
+   "first_cut": 0.53,
+   "first_cut_minus_first_row_start": 0.26,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.741,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この男は」",
+      "time_raw": "0.00〜0.53",
+      "visual": "2人の顔出しカメラ。男性のプレイ画面で溶岩に落ちる"
+     },
+     {
+      "end": 1.47,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**紫**「ネザライトフル装備」",
+      "time_raw": "0.53〜1.47",
+      "visual": "カット。死亡画面（溶岩で死亡）。男性が笑ってごまかす [実測: 0.53]"
+     },
+     {
+      "end": 2.27,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「RTAで」",
+      "time_raw": "1.73〜2.27",
+      "visual": "同上"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「彼女に」→ **赤**「分からされました」",
+      "time_raw": "2.53〜3.00",
+      "visual": "カット。**2人の顔のアップ**。女性が真顔で画面を見る [実測: 2.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.5,
+     "music_mean_during_row": 0.225,
+     "nearest_cut_to_end": 0.23,
+     "nearest_cut_to_start": 0.26,
+     "nearest_subtitle_change_to_end": 0.63,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜に分からされました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 28,
+     "content_lemmas": [
+      "男",
+      "ネザライトフル",
+      "装備",
+      "RTA",
+      "彼女",
+      "分",
+      "為る"
+     ],
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "過去・結果",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 3,
+      "助詞": 4,
+      "動詞": 1,
+      "名詞": 5,
+      "連体詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "男",
+     1
+    ],
+    [
+     "ネザライトフル",
+     1
+    ],
+    [
+     "装備",
+     1
+    ],
+    [
+     "RTA",
+     1
+    ],
+    [
+     "彼女",
+     1
+    ],
+    [
+     "分",
+     1
+    ],
+    [
+     "為る",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この男はザライト",
+     "words": [
+      "この",
+      "男",
+      "は",
+      "ザ",
+      "ライ",
+      "ト"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 22,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この男はザライトフル装備RTAで彼女にはから",
+     "words": [
+      "この",
+      "男",
+      "は",
+      "ザ",
+      "ライ",
+      "ト",
+      "フ",
+      "ル",
+      "装",
+      "備",
+      "R",
+      "TA",
+      "で",
+      "彼",
+      "女",
+      "には",
+      "から"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 27,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "この男はザライトフル装備RTAで彼女にはからされました",
+     "words": [
+      "この",
+      "男",
+      "は",
+      "ザ",
+      "ライ",
+      "ト",
+      "フ",
+      "ル",
+      "装",
+      "備",
+      "R",
+      "TA",
+      "で",
+      "彼",
+      "女",
+      "には",
+      "から",
+      "さ",
+      "れ",
+      "ました"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 28,
+    "end": 3.5,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "此の",
+      "pos1": "連体詞",
+      "pos2": "*",
+      "surface": "この"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": true,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "過去・結果",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜に分からされました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "この男はザライトフル装備RTAで彼女にはからされました",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.53,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「この男は」",
+      "time_raw": "0.00〜0.53",
+      "visual": "2人の顔出しカメラ。男性のプレイ画面で溶岩に落ちる"
+     },
+     {
+      "end": 1.47,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**紫**「ネザライトフル装備」",
+      "time_raw": "0.53〜1.47",
+      "visual": "カット。死亡画面（溶岩で死亡）。男性が笑ってごまかす [実測: 0.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "この"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.67,
+    "rows": [
+     {
+      "chars": 28,
+      "chars_per_sec": 8.67,
+      "duration": 3.23,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 28
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.58,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 20,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": true,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "過去・結果",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "男性（青）「(マジかよ...)」",
+       "range_raw": "62.5〜62.7",
+       "source": "doc_structure",
+       "source_file": "dream/individual/11_G6CB11Q-lT0.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "この男はネザライトフル装備RTAで彼女に分からされました",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.27,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "G6CB11Q-lT0"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_BATTLE",
+     "effective_code": "D_BATTLE",
+     "quote": "I can't find diamonds bro. I bet I can",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "We'll be right back.",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "ナレーションと、男性の溶岩での死",
+      "range_raw": "0.0〜3.0",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "女性（ピンク字幕）「私なら見つけれる」→ 男性（青字幕）「ｸｶｶｶwwww」「君が見つけるって？」。**3〜10秒は BGM が無い**（Music 0）[音タグ]",
+      "range_raw": "3.8〜11",
+      "stage_label": "状況説明（挑発）"
+     },
+     {
+      "content": "引用符「\"RTAスタート\"」。**画面右上に緑の数字のタイマー**が出る（0.26）。ここから BGM が鳴り続ける（Music 0.7〜0.9、Video game music と判定）[音タグ]",
+      "range_raw": "12.8",
+      "stage_label": "開始"
+     },
+     {
+      "content": "タイマーが進む中、手順を字幕で「まずチェストを漁り...」「木を切って...」「作業台を作る」「ボートを作って...」「ネザーへGo」→ 引用符「\"素晴らしい手捌き\"」",
+      "range_raw": "14〜32",
+      "stage_label": "展開（実況）"
+     },
+     {
+      "content": "「(よし、行くか)」→ 緑の画面に「\"ボート着地成功✅\"」→「壁ブチ壊して」「意外とムズいやつ」「アイム回収」",
+      "range_raw": "32〜50",
+      "stage_label": "緊張"
+     },
+     {
+      "content": "作業画面で装備を作る「セザライト装備にして...」（字幕の誤字）。タイマー 59.67 で止まる",
+      "range_raw": "52〜61.5",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "2人の顔のアップ。男性（青）「(マジかよ...)」、女性（ピンク）「(ﾌｯ...😎)」",
+      "range_raw": "62.5〜62.7",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     42
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [],
+    "cuts": 28,
+    "cuts_per_5s": {
+     "0": 3,
+     "10": 3,
+     "15": 3,
+     "20": 5,
+     "25": 3,
+     "30": 2,
+     "35": 1,
+     "5": 1,
+     "50": 1,
+     "55": 3,
+     "60": 3
+    },
+    "duration_sec": 62.72,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.33,
+      "t": 42
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 3.5,
+    "is_end_position": false,
+    "sec_from_end": 59.22,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "この男はネザライトフル装備RTAで彼女に分からされました"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「この男は〜に分からされました」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 60.0,
+    "status": "ok",
+    "text": "Thank you."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 10.42,
+    "status": "ok",
+    "text": "You can find them"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "We'll be right back.",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 11,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/11_G6CB11Q-lT0.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/G6CB11Q-lT0.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "G6CB11Q-lT0"
+}

@@ -1,0 +1,102 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.1",
+     "text": "ドーナツSMP史上"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "1.0",
+     "text": "最大の"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "1.7",
+     "text": "神建築を"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.7",
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": "3.7",
+     "text": "*探索中*"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "4.5",
+     "text": "色が好きだわ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "5.7",
+     "text": "明るい青の海って"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "7.0",
+     "text": "あんま見ないよな"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": "7.7",
+     "text": "*ぐ~*"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.0秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドーナツSMP史上最大の神建築を見つけたドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "HtTJSjhshm8"
+}

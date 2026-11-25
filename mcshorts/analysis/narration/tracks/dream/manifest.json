@@ -1,0 +1,24 @@
+{
+ "channel": "dream",
+ "inputs_sha256": {
+  "dream/data/videos.json": "e1b4caa1964dcfa3382b4b602538ee21df4c771f840fa69a429f30c046f02540",
+  "dream/narration_list.md": "46e83b5aaf0b4e869d0a9eab5ebf88d5a3f5df7a134447454381b5c88da64122",
+  "mcshorts/analysis/codings/dream/claude_v1.jsonl": "3ba863834564a7836c6398f8ce48fa171dbb5f80df270941363a31d6f4e53be8",
+  "mcshorts/analysis/codings/dream/review_sample.csv": "987304a4e8fc6d7d87e517e91196452b02270b94a4a2ce15939bc60292da7e74",
+  "mcshorts/data/features.jsonl": "04914a5472ad9c76b0dfcadb88eda038d8158068e989749a84a9f7583f67b211"
+ },
+ "n_videos": 58,
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ }
+}

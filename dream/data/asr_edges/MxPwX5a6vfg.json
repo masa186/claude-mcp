@@ -1,0 +1,31 @@
+{
+ "id": "MxPwX5a6vfg",
+ "head": [
+  {
+   "start": 0.0,
+   "end": 2.5,
+   "text": "この怪物は数秒後は雲を見ることになりました",
+   "no_speech": 0.0
+  },
+  {
+   "start": 2.5,
+   "end": 3.62,
+   "text": "I see you",
+   "no_speech": 0.0
+  },
+  {
+   "start": 3.62,
+   "end": 4.92,
+   "text": "What's that sound?",
+   "no_speech": 0.0
+  }
+ ],
+ "tail": [
+  {
+   "start": 30.83,
+   "end": 37.83,
+   "text": "日本語のナレーション",
+   "no_speech": 0.0
+  }
+ ]
+}

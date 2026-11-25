@@ -1,0 +1,921 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/FnzjGyuYTAU.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.92,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "We're going to go to the end of the building, but we're going to go to the end of the building."
+    },
+    {
+     "end": 6.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 2.92,
+     "text": "We're going to go to the end of the building, but we're going to go to the end of the building."
+    },
+    {
+     "end": 8.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 6.46,
+     "text": "There could be villagers on the other side of this."
+    },
+    {
+     "end": 10.46,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 8.92,
+     "text": "Before lighting it, we should block it."
+    },
+    {
+     "end": 11.96,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 11.34,
+     "text": "That's right."
+    },
+    {
+     "end": 13.18,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 12.16,
+     "text": "But why didn't you get me?"
+    },
+    {
+     "end": 15.36,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 14.52,
+     "text": "I bet."
+    },
+    {
+     "end": 17.02,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 15.44,
+     "text": "Now, the villagers can't get through."
+    },
+    {
+     "end": 17.9,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 17.66,
+     "text": "What?"
+    },
+    {
+     "end": 18.86,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 18.46,
+     "text": "Stop."
+    },
+    {
+     "end": 19.82,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 19.12,
+     "text": "The job's done."
+    },
+    {
+     "end": 22.44,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 19.96,
+     "text": "So the next order of business, we're gonna do."
+    },
+    {
+     "end": 22.84,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 22.56,
+     "text": "Okay, no."
+    },
+    {
+     "end": 23.7,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 22.92,
+     "text": "That was unnecessary."
+    },
+    {
+     "end": 24.7,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 23.86,
+     "text": "Alright, let me check it out."
+    },
+    {
+     "end": 26.14,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 24.8,
+     "text": "It's gonna be easy to get in."
+    },
+    {
+     "end": 26.94,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 26.5,
+     "text": "Ooh."
+    },
+    {
+     "end": 28.56,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 27.78,
+     "text": "I take that back."
+    },
+    {
+     "end": 29.12,
+     "logprob": -0.47,
+     "no_speech": 0.0,
+     "start": 28.62,
+     "text": "It's a nightmare."
+    },
+    {
+     "end": 36.6,
+     "logprob": -0.13,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "oh nice when did they add that update unfortunately there's only one way in"
+    },
+    {
+     "end": 41.88,
+     "logprob": -0.13,
+     "no_speech": 0.0,
+     "start": 36.6,
+     "text": "someone has to sacrifice themselves let's settle this with musical chairs"
+    },
+    {
+     "end": 52.62,
+     "logprob": -0.13,
+     "no_speech": 0.0,
+     "start": 41.88,
+     "text": "loser has to do it dear god i'm so sorry dude wait what he can't hear anything but he's very"
+    },
+    {
+     "end": 58.5,
+     "logprob": -0.13,
+     "no_speech": 0.0,
+     "start": 52.62,
+     "text": "locked in i bet let's do it thanks for everything have fun let's go"
+    },
+    {
+     "end": 66.04,
+     "logprob": -0.07,
+     "no_speech": 0.0,
+     "start": 58.5,
+     "text": "hold on a second what if he survived oh nah nah he dead hey what's up chill i got gold"
+    },
+    {
+     "end": 72.94,
+     "logprob": -0.07,
+     "no_speech": 0.0,
+     "start": 66.04,
+     "text": "bet i need some ender pearls dude i said ender pearls come on what is this rng what about your"
+    },
+    {
+     "end": 80.3,
+     "logprob": -0.07,
+     "no_speech": 0.0,
+     "start": 72.94,
+     "text": "friend nah you know what you're an idiot come on come on what you're not allowed to do that"
+    },
+    {
+     "end": 87.52,
+     "logprob": -0.07,
+     "no_speech": 0.0,
+     "start": 80.3,
+     "text": "do you think i'm playing what you do y'all are really testing my patience give anything other"
+    },
+    {
+     "end": 94.16,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 87.52,
+     "text": "than a crying obsidian bruh all right i'm gonna need help what's up everyone i brought my friend"
+    },
+    {
+     "end": 98.56,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 94.16,
+     "text": "dream what you guys don't think it's him code red say the line"
+    },
+    {
+     "end": 104.5,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 98.56,
+     "text": "tell me why did you hurt my feelings see i told you it was here let's go all right time to get blaze"
+    },
+    {
+     "end": 120.26,
+     "logprob": -0.64,
+     "no_speech": 0.0,
+     "start": 104.5,
+     "text": "runs oh hey yo chill definitely is who's gone huh oh you're the ghost let's go"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/FnzjGyuYTAU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.8,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "裏人に追われエンド要塞へ行くのに不正するブロックパス"
+    },
+    {
+     "end": 6.22,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 2.8,
+     "text": "ですが一人の犠牲とイセレブドリームによって状況は異変します"
+    },
+    {
+     "end": 8.44,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 6.22,
+     "text": "There could be villagers on the other side of this"
+    },
+    {
+     "end": 10.52,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 8.88,
+     "text": "Before lighting it, we should block it"
+    },
+    {
+     "end": 16.92,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 14.54,
+     "text": "I bet! Now the villagers can't get through"
+    },
+    {
+     "end": 19.74,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 17.54,
+     "text": "What? Stop! The job's done!"
+    },
+    {
+     "end": 22.36,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 19.98,
+     "text": "So the next order of business, we're gonna do!"
+    },
+    {
+     "end": 23.64,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 22.56,
+     "text": "Okay, no, that was unnecessary"
+    },
+    {
+     "end": 24.68,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 23.64,
+     "text": "Alright, let me check it out"
+    },
+    {
+     "end": 26.16,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 24.68,
+     "text": "It's gonna be easy to get in"
+    },
+    {
+     "end": 29.06,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 26.16,
+     "text": "I take that back, it's a nightmare"
+    },
+    {
+     "end": 30.52,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 29.06,
+     "text": "お母さんのキャラメー"
+    },
+    {
+     "end": 31.5,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 30.52,
+     "text": "んっ oh nice!"
+    },
+    {
+     "end": 32.68,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 31.68,
+     "text": "そしたらいいね!"
+    },
+    {
+     "end": 33.56,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 32.84,
+     "text": "めっちゃうかっ"
+    },
+    {
+     "end": 34.3,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 33.56,
+     "text": "ランチャラメ!"
+    },
+    {
+     "end": 35.24,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 34.58,
+     "text": "unfortunately"
+    },
+    {
+     "end": 36.56,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 35.24,
+     "text": "there's only one way in"
+    },
+    {
+     "end": 37.4,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 36.56,
+     "text": "someone has to"
+    },
+    {
+     "end": 38.38,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 37.4,
+     "text": "sacrifice themselves"
+    },
+    {
+     "end": 40.76,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 39.62,
+     "text": "let's settle this"
+    },
+    {
+     "end": 41.82,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 40.76,
+     "text": "with musical chairs"
+    },
+    {
+     "end": 43.36,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 41.82,
+     "text": "LOSER HAS TO DO IT"
+    },
+    {
+     "end": 48.56,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 47.6,
+     "text": "dear god"
+    },
+    {
+     "end": 49.8,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 48.56,
+     "text": "I'm so sorry dude"
+    },
+    {
+     "end": 50.52,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 49.8,
+     "text": "wait what?"
+    },
+    {
+     "end": 51.72,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 50.74,
+     "text": "he can't hear anything"
+    },
+    {
+     "end": 53.16,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 51.72,
+     "text": "but he's very locked in"
+    },
+    {
+     "end": 53.68,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 53.16,
+     "text": "I bet!"
+    },
+    {
+     "end": 54.68,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 54.0,
+     "text": "let's do it!"
+    },
+    {
+     "end": 55.92,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 55.2,
+     "text": "thanks for"
+    },
+    {
+     "end": 56.32,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 55.92,
+     "text": "everything"
+    },
+    {
+     "end": 56.98,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 56.32,
+     "text": "have fun"
+    },
+    {
+     "end": 58.36,
+     "logprob": -1.1,
+     "no_speech": 0.0,
+     "start": 57.42,
+     "text": "let's go"
+    },
+    {
+     "end": 59.42,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 58.94,
+     "text": "pitches good"
+    },
+    {
+     "end": 60.66,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 59.42,
+     "text": "hold on a second"
+    },
+    {
+     "end": 61.72,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 60.66,
+     "text": "what if he survived"
+    },
+    {
+     "end": 63.54,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 61.72,
+     "text": "oh no nah he dead"
+    },
+    {
+     "end": 64.68,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 63.54,
+     "text": "hey what's up"
+    },
+    {
+     "end": 66.02,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 64.68,
+     "text": "chill i got gold"
+    },
+    {
+     "end": 66.46,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 66.02,
+     "text": "bet"
+    },
+    {
+     "end": 67.8,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 66.46,
+     "text": "i need some ender pearls"
+    },
+    {
+     "end": 70.12,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 67.8,
+     "text": "dude i said ender pearls"
+    },
+    {
+     "end": 70.6,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 70.12,
+     "text": "come on"
+    },
+    {
+     "end": 72.24,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 70.6,
+     "text": "what is this r&g"
+    },
+    {
+     "end": 73.24,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 72.24,
+     "text": "what about your friend"
+    },
+    {
+     "end": 74.42,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 73.24,
+     "text": "nah you know what"
+    },
+    {
+     "end": 75.32,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 74.42,
+     "text": "you're an idiot"
+    },
+    {
+     "end": 76.9,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 75.96,
+     "text": "come on"
+    },
+    {
+     "end": 77.62,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 76.9,
+     "text": "come on"
+    },
+    {
+     "end": 78.52,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 77.62,
+     "text": "what"
+    },
+    {
+     "end": 80.24,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 78.52,
+     "text": "you're not allowed to do that"
+    },
+    {
+     "end": 81.7,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 80.24,
+     "text": "do you think i'm playing"
+    },
+    {
+     "end": 83.06,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 82.52,
+     "text": "what"
+    },
+    {
+     "end": 83.96,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 83.06,
+     "text": "you do"
+    },
+    {
+     "end": 86.28,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 83.96,
+     "text": "y'all are really testing my patience"
+    },
+    {
+     "end": 88.3,
+     "logprob": -0.58,
+     "no_speech": 0.0,
+     "start": 86.28,
+     "text": "give anything other than a crying upset"
+    },
+    {
+     "end": 89.86,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 89.08,
+     "text": "Bruh"
+    },
+    {
+     "end": 90.78,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 89.86,
+     "text": "Alright,I'mma need help"
+    },
+    {
+     "end": 92.58,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 91.5,
+     "text": "What's up everyone?"
+    },
+    {
+     "end": 94.54,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 92.96,
+     "text": "I brought my friend Dream!"
+    },
+    {
+     "end": 97.26,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 95.66,
+     "text": "What?You guys don't think it's him?"
+    },
+    {
+     "end": 98.5,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 97.46,
+     "text": "Code Red,Say the line"
+    },
+    {
+     "end": 99.1,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 98.5,
+     "text": "Tığed Me"
+    },
+    {
+     "end": 100.08,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 99.1,
+     "text": "プレイ dollars"
+    },
+    {
+     "end": 101.26,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 100.08,
+     "text": "DDED"
+    },
+    {
+     "end": 102.54,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 101.26,
+     "text": "See,I told you it was here"
+    },
+    {
+     "end": 103.28,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 102.54,
+     "text": "Let's go!"
+    },
+    {
+     "end": 104.8,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 103.54,
+     "text": "Alright,Time to get blaze rods"
+    },
+    {
+     "end": 105.5,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 104.8,
+     "text": "Oh!"
+    },
+    {
+     "end": 106.68,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 105.92,
+     "text": "Hey,Yo Chill"
+    },
+    {
+     "end": 109.22,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 106.68,
+     "text": "It isn't because of my way,right?"
+    },
+    {
+     "end": 110.1,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 109.22,
+     "text": "Yeah,It definitely is"
+    },
+    {
+     "end": 111.1,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 110.1,
+     "text": "Help Me"
+    },
+    {
+     "end": 111.62,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 111.1,
+     "text": "No!"
+    },
+    {
+     "end": 113.64,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 112.78,
+     "text": "Bro's gone"
+    },
+    {
+     "end": 114.86,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 114.46,
+     "text": "Huh?"
+    },
+    {
+     "end": 115.62,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 115.34,
+     "text": "ICK"
+    },
+    {
+     "end": 117.32,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 115.62,
+     "text": "Oh,You're the ghost!"
+    },
+    {
+     "end": 118.24,
+     "logprob": -1.57,
+     "no_speech": 0.0,
+     "start": 117.62,
+     "text": "Let's go"
+    },
+    {
+     "end": 118.62,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 118.24,
+     "text": "Oh!"
+    },
+    {
+     "end": 120.78,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 119.18,
+     "text": "Oh he got a heart attack"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/FnzjGyuYTAU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.84,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "村人に追われエンド要塞へ行くのに苦戦するグロッカス"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 2.84,
+     "text": "ですが一人の犠牲とイセレブドリームによって"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/FnzjGyuYTAU.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 117.99,
+     "no_speech": 0.0,
+     "start": 116.99,
+     "text": "どうぞ!"
+    },
+    {
+     "end": 118.99,
+     "no_speech": 0.0,
+     "start": 117.99,
+     "text": "Let's go!"
+    },
+    {
+     "end": 120.99,
+     "no_speech": 0.0,
+     "start": 118.99,
+     "text": "Oh, he got a heart attack"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "村人に追われ、エンド要塞へ行くのに苦戦するグロックス。ですが1人の犠牲と偽デブドリームによって状況は一変します。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "村人に追われ（白）→ エンド要塞へ行くのに（白）→ 苦戦するGrox（白）→ ですが1人の犠牲と（赤）→ 偽デブDreamによって（緑）→ 状況は（白）→ 一変します（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "FnzjGyuYTAU"
+}

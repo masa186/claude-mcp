@@ -1,0 +1,78 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "マイクラで\n最も流行ってる\nミームを生んだ\nCamman18"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "Camman18\nis the NEW"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.0,
+     "text": "ゴールデンデンダライオンの\nthe golden dandelion"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.0,
+     "text": "ミームが\nis MASSIVE"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.0,
+     "text": "数日前、\n新スナップショットの\n動画を作った時に"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラで最も流行ってるミームを生んだCamman18"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "5rT3j1W4lUo"
+}

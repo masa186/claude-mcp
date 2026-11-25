@@ -1,0 +1,682 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 68.64,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.33,
+   "first_cut_minus_first_row_start": 0.33,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.487,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「もしあなたが」",
+      "time_raw": "0.00〜0.27",
+      "visual": "略奪者（ピリジャー）の顔のアップ"
+     },
+     {
+      "end": 1.27,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**ピンク**「マイクラの豚に」",
+      "time_raw": "0.53〜1.27",
+      "visual": "カット。暗い小屋の中、キラキラ光る演出 [実測: 0.33, 0.53]"
+     },
+     {
+      "end": 2.0,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「なってしまったら」",
+      "time_raw": "1.47〜2.00",
+      "visual": "同上"
+     },
+     {
+      "end": 3.0,
+      "start": 2.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「どうなるでしょうか？」",
+      "time_raw": "2.27〜3.00",
+      "visual": "光が爆発 → 外で**略奪者が爆発する**（白い閃光）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.7,
+     "music_mean_during_row": 0.477,
+     "nearest_cut_to_end": 0.43,
+     "nearest_cut_to_start": 0.33,
+     "nearest_subtitle_change_to_end": 0.43,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.15,
+      0.5,
+      1.25,
+      2.2,
+      2.45,
+      2.65,
+      2.85,
+      3.15
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「〜になってしまったらどうなるでしょうか？」と問う",
+     "role": "R_QUESTION",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 30,
+     "content_lemmas": [
+      "若し",
+      "貴方",
+      "マイ-my",
+      "クラ-clarinet",
+      "豚",
+      "成る",
+      "仕舞う",
+      "どう",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "若し",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "もし"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "問いかけ",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": true
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "副詞": 2,
+      "助動詞": 2,
+      "助詞": 5,
+      "動詞": 3,
+      "名詞": 3,
+      "補助記号": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "成る",
+     2
+    ],
+    [
+     "若し",
+     1
+    ],
+    [
+     "貴方",
+     1
+    ],
+    [
+     "マイ-my",
+     1
+    ],
+    [
+     "クラ-clarinet",
+     1
+    ],
+    [
+     "豚",
+     1
+    ],
+    [
+     "仕舞う",
+     1
+    ],
+    [
+     "どう",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "もしあなたがマクラ",
+     "words": [
+      "もし",
+      "あ",
+      "なた",
+      "が",
+      "マ",
+      "ク",
+      "ラ"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 29,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "もしあなたがマクラノブタになってしまったらどうなるでしょう?",
+     "words": [
+      "もし",
+      "あ",
+      "なた",
+      "が",
+      "マ",
+      "ク",
+      "ラ",
+      "ノ",
+      "ブ",
+      "タ",
+      "にな",
+      "って",
+      "しま",
+      "った",
+      "ら",
+      "どう",
+      "なる",
+      "でしょう?"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 29,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "もしあなたがマクラノブタになってしまったらどうなるでしょう?",
+     "words": [
+      "もし",
+      "あ",
+      "なた",
+      "が",
+      "マ",
+      "ク",
+      "ラ",
+      "ノ",
+      "ブ",
+      "タ",
+      "にな",
+      "って",
+      "しま",
+      "った",
+      "ら",
+      "どう",
+      "なる",
+      "でしょう?"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 30,
+    "end": 2.7,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "若し",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "もし"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "問いかけ",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": true
+     },
+     "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「〜になってしまったらどうなるでしょうか？」と問う",
+     "role": "R_QUESTION",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_QUESTION",
+    "effective_code": "H_QUESTION",
+    "quote": "もしあなたがマクラノブタになってしまったらどうなるでしょう?",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「もしあなたが」",
+      "time_raw": "0.00〜0.27",
+      "visual": "略奪者（ピリジャー）の顔のアップ"
+     },
+     {
+      "end": 1.27,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**ピンク**「マイクラの豚に」",
+      "time_raw": "0.53〜1.27",
+      "visual": "カット。暗い小屋の中、キラキラ光る演出 [実測: 0.33, 0.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "もし"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 11.11,
+    "rows": [
+     {
+      "chars": 30,
+      "chars_per_sec": 11.11,
+      "duration": 2.7,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 30
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 10.9,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 18,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "問いかけ",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": true,
+     "row": 0,
+     "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_QUESTION"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_DIALOGUE",
+     "effective_code": "D_DIALOGUE",
+     "quote": "Hold on, I'll be back.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "Oh my god.",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "問いかけ、略奪者の爆発の先出し",
+      "range_raw": "0.0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "豚の視点。牧場の動物たち「ヤッホー!!」「一同)ヤッホー!!」「みんなで頑張r...」（豚の鳴き声 Oink 6〜9秒）[音タグ]",
+      "range_raw": "3.2〜10",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "プレイヤーに運ばれる「君重いね...」「一緒にいこうね」「今夜はご馳走だぁ～」→ 家に連れ込まれ「はい、着きました」「あとでここに来るから」「動くなよ」",
+      "range_raw": "10.4〜22",
+      "stage_label": "事件"
+     },
+     {
+      "content": "プレイヤーが戻ると「今戻っt...」「どこ行った？」→ 窓から逃げた豚「まあいいや」「話は進むし」（落書き顔のプレイヤー）",
+      "range_raw": "24〜35",
+      "stage_label": "逃走"
+     },
+     {
+      "content": "豚が村を走る → 村人「元気だったかBro」「元気してた？」→ チェストの中に「何だこれ？」（エメラルドとTNTのようなアイテム）",
+      "range_raw": "36〜50",
+      "stage_label": "展開"
+     },
+     {
+      "content": "略奪者に近づく → **略奪者が爆発**（53〜58秒に Explosion 0.4〜0.7）[音タグ] → 上空から見ると、豚が乗ったTNTが飛んでいき地面に衝撃波。白の引用符「\"ミサイルになる豚\"」",
+      "range_raw": "50.6〜61",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "家の中、プレイヤーが**豚肉を食べている**（顔だけ実写）。白の引用符「\"運命は変わらない豚\"」",
+      "range_raw": "62.8〜68.6",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     2,
+     3,
+     29,
+     36,
+     38,
+     39,
+     40,
+     42,
+     44,
+     45,
+     46,
+     48,
+     50,
+     51,
+     52,
+     53,
+     54,
+     58,
+     59
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.15,
+     0.5,
+     1.25,
+     2.2,
+     2.45,
+     2.65,
+     2.85,
+     3.15,
+     29.45,
+     36.35,
+     38.1,
+     39.15,
+     39.7,
+     40.25,
+     40.95,
+     42.55,
+     44.3,
+     45.4,
+     45.9,
+     46.45,
+     48.25,
+     50.0,
+     50.25,
+     51.05,
+     51.6,
+     52.1,
+     52.25,
+     52.45,
+     53.95,
+     54.25,
+     54.6,
+     59.0
+    ],
+    "cuts": 46,
+    "cuts_per_5s": {
+     "0": 5,
+     "10": 5,
+     "15": 5,
+     "20": 4,
+     "25": 2,
+     "30": 3,
+     "35": 1,
+     "40": 1,
+     "45": 4,
+     "5": 5,
+     "50": 4,
+     "55": 4,
+     "60": 3
+    },
+    "duration_sec": 68.64,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.3,
+      "t": 1
+     },
+     {
+      "Explosion": 0.41,
+      "t": 53
+     },
+     {
+      "Explosion": 0.58,
+      "t": 54
+     },
+     {
+      "Explosion": 0.7,
+      "t": 58
+     },
+     {
+      "Explosion": 0.36,
+      "t": 59
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.7,
+    "is_end_position": false,
+    "sec_from_end": 65.94,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "もしあなたがマイクラの豚になってしまったらどうなるでしょうか？"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「〜になってしまったらどうなるでしょうか？」と問う",
+     "role": "R_QUESTION",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 63.6,
+    "status": "ok",
+    "text": "Yeah."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 29.62,
+    "status": "ok",
+    "text": "I lost them that definitely won't be important to the plot"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Oh my god.",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 22,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/22_xGF9lFQyjpY.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/xGF9lFQyjpY.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "xGF9lFQyjpY"
+}

@@ -1,0 +1,1324 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": "00:00",
+     "text": "偽拠点でチーターを釣るドクタードーナツ。もしスポナーに気づいたらBAN確定です。",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "偽拠点で"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.7,
+     "text": "チーターを"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "釣るドクタードーナツ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.7,
+     "text": "もしスポナーに"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.7,
+     "text": "気づいたら"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.0,
+     "text": "BAN確定です"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.0,
+     "text": "EZすぎ"
+    },
+    {
+     "color": "青",
+     "end": null,
+     "start": 5.7,
+     "text": "ハッハハハハ"
+    },
+    {
+     "color": "青",
+     "end": null,
+     "start": 7.2,
+     "text": "(悪魔笑い)"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "4.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "偽拠点でチーターを釣るドーナツSMP管理者、もしスポナーに気づいたらBAN確定です"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.5,
+     "start": 0.0,
+     "text": "偽拠点て",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 1.25,
+     "start": 0.5,
+     "text": "チーターを釣る",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 2.25,
+     "start": 1.25,
+     "text": "ドクター・ドーナツ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 4.25,
+     "start": 2.75,
+     "text": "もしスポナーに気づいたらBAN確定です",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 5.5,
+     "start": 5.0,
+     "text": "EZすぎ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 7.0,
+     "start": 5.75,
+     "text": "ハッハハハハ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.0,
+     "start": 7.25,
+     "text": "（悪魔笑い）",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 9.0,
+     "start": 8.25,
+     "text": "今見えたぞ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.0,
+     "start": 9.0,
+     "text": "今の小さな微動見えたからな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 11.0,
+     "start": 10.5,
+     "text": "いやいや",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 11.5,
+     "start": 11.0,
+     "text": "今の見えたからな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.0,
+     "start": 12.0,
+     "text": "ヘイヘイー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.5,
+     "start": 13.0,
+     "text": "あんたやばいな！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 14.5,
+     "start": 14.0,
+     "text": "yoあんた",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 15.75,
+     "start": 14.5,
+     "text": "今さらパール投げるなよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.5,
+     "start": 15.75,
+     "text": "いきなり芝居すんなよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 17.0,
+     "start": 16.5,
+     "text": "“え？どこ？”",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 18.0,
+     "start": 17.0,
+     "text": "適当に掘ってみよ^_^",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 18.75,
+     "start": 18.25,
+     "text": "*友達を呼ぶ*",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 19.75,
+     "start": 19.25,
+     "text": "オーマイガー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 20.5,
+     "start": 20.0,
+     "text": "yo",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 21.0,
+     "start": 20.5,
+     "text": "ワホー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.25,
+     "start": 21.0,
+     "text": "スポナーどこだ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.0,
+     "start": 22.25,
+     "text": "待てちょっと混乱した",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.5,
+     "start": 23.25,
+     "text": "おい！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 24.5,
+     "start": 23.5,
+     "text": "この辺にスプーンあるはず",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.5,
+     "start": 25.0,
+     "text": "なんで分かるん？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 26.5,
+     "start": 25.75,
+     "text": "円グラフ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 27.5,
+     "start": 27.0,
+     "text": "マジで",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.75,
+     "start": 27.5,
+     "text": "円グラフの言う通りなら",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 30.0,
+     "start": 28.75,
+     "text": "ほんまにやばいぞ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 30.75,
+     "start": 30.25,
+     "text": "オーマイゴッ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 32.5,
+     "start": 31.0,
+     "text": "5時間ありえだろ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 33.5,
+     "start": 32.75,
+     "text": "おいしい",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 35.75,
+     "start": 33.5,
+     "text": "やばい拠点であってくれどうか頼む",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 37.0,
+     "start": 35.75,
+     "text": "*パールX-Ray再び*",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 39.25,
+     "start": 37.75,
+     "text": "見えた！たぶん..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 40.5,
+     "start": 40.0,
+     "text": "こっちか？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.25,
+     "start": 40.75,
+     "text": "*的外れ*",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 43.0,
+     "start": 41.25,
+     "text": "wwwwww",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 43.75,
+     "start": 43.25,
+     "text": "こいつ演技してる？ww",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 47.5,
+     "start": 45.75,
+     "text": "みえ..見えてる！！見えた!!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 48.0,
+     "start": 47.5,
+     "text": "オーマイゴッド!!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 50.5,
+     "start": 48.0,
+     "text": "頼む！！頼む頼む頼むやばい拠点であれ頼む頼む",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 51.5,
+     "start": 50.75,
+     "text": "こいつそれが..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 51.75,
+     "start": 51.5,
+     "text": "おﾞボﾞォﾞｯ//♡",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 54.0,
+     "start": 52.25,
+     "text": "yo みんな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 54.75,
+     "start": 54.0,
+     "text": "やばい拠点かどうか分かるだろ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 55.75,
+     "start": 54.75,
+     "text": "ゾンビスポナーだ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 57.0,
+     "start": 55.75,
+     "text": "少なくとも少なくとも",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 57.5,
+     "start": 57.0,
+     "text": "まあ何か見つけただけ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 58.0,
+     "start": 57.5,
+     "text": "ましだ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 58.75,
+     "start": 58.25,
+     "text": "オマイゴド",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 59.75,
+     "start": 59.0,
+     "text": "マジかよやっとだ..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 62.0,
+     "start": 59.75,
+     "text": "5時間かけてやっと なんか見つけたぞ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 63.5,
+     "start": 62.75,
+     "text": "ドクター・ドーナツ！1！！！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 64.5,
+     "start": 63.75,
+     "text": "うそだ!?!?!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 65.25,
+     "start": 64.5,
+     "text": "ドクタードーナ!!!!!!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 66.0,
+     "start": 65.5,
+     "text": "???",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 66.5,
+     "start": 66.25,
+     "text": "スクショ撮らせて!!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 67.5,
+     "start": 66.75,
+     "text": "*この後ドーナツはキッズをBANしようと試みたが名前を忘れた事に気づいた*",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "ME",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.25,
+     "text": "AWN",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.5,
+     "text": "AKE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.75,
+     "text": "ISE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.25,
+     "text": "onstash_",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.75,
+     "text": "PAWNER*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "MPEEKERにしゃ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.0,
+     "text": "min",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.5,
+     "text": "mining*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.0,
+     "text": "'s",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.0,
+     "text": "EASY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.0,
+     "text": "IHA*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 8.0,
+     "text": "'THAT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 8.5,
+     "text": "AW",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 9.0,
+     "text": "TLE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 9.5,
+     "text": "CRO",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 9.75,
+     "text": "EMENT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 10.0,
+     "text": "ubmit",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 10.25,
+     "text": "NO",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11.0,
+     "text": "AW",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11.25,
+     "text": "IAT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 11.5,
+     "text": "DDY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 12.0,
+     "text": "EY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 12.5,
+     "text": "HEY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 13.0,
+     "text": "RE LIKE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 13.5,
+     "text": "ICK",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14.0,
+     "text": "'0",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14.25,
+     "text": "DDY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14.5,
+     "text": "N'T",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14.75,
+     "text": "ARLING",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 15.0,
+     "text": "ow",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 15.25,
+     "text": "N'T",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 15.5,
+     "text": "ECT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 15.75,
+     "text": "KE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16.0,
+     "text": "ST",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16.5,
+     "text": "UM",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 16.75,
+     "text": "ERE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 17.0,
+     "text": "E JUST",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 17.25,
+     "text": "RANDOM",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 17.75,
+     "text": "ACE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 18.25,
+     "text": "'s friend*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 19.25,
+     "text": "Y GOD",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 20.0,
+     "text": "Y",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 20.25,
+     "text": "ALLY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 21.0,
+     "text": "IWNER",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 21.25,
+     "text": "HERE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 22.0,
+     "text": "IT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 22.25,
+     "text": "AIT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 22.5,
+     "text": "w",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 22.75,
+     "text": "FUSED",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 23.25,
+     "text": "EAR",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 23.5,
+     "text": "RE'S",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 24.0,
+     "text": "WNER",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 24.25,
+     "text": "P HERE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 25.0,
+     "text": "S HE KNOW",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 25.75,
+     "text": "ART?",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 26.0,
+     "text": "LAVA",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 27.0,
+     "text": "EAR",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 27.25,
+     "text": "CHART",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 27.75,
+     "text": "OING",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 28.0,
+     "text": "PAYING",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 28.5,
+     "text": "KE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 29.0,
+     "text": "THING",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 29.5,
+     "text": "CLOSE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 30.5,
+     "text": "Y GOD",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 31.0,
+     "text": "OURS",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 31.5,
+     "text": "KE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 32.0,
+     "text": "WAY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 32.75,
+     "text": "RO",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 33.0,
+     "text": "WAY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 33.25,
+     "text": "GHT BE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 33.75,
+     "text": "AZY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 34.0,
+     "text": "ISE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 34.25,
+     "text": "ULLY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 34.5,
+     "text": "SA",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 35.0,
+     "text": "AZY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 35.5,
+     "text": "ASE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 36.25,
+     "text": "meth",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 36.5,
+     "text": "method*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 37.75,
+     "text": "WIT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 39.0,
+     "text": "INK",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 40.0,
+     "text": "R",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 40.25,
+     "text": "ERE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 41.0,
+     "text": "aw..",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 42.75,
+     "text": "HE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 43.0,
+     "text": "TING",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 45.75,
+     "text": "aw..",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 46.0,
+     "text": "EE IT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 47.5,
+     "text": "Y GOD",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 48.0,
+     "text": "ASE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 49.25,
+     "text": "CRAZY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 50.0,
+     "text": "ISE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 50.5,
+     "text": "ULD SEE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 51.0,
+     "text": "IS..",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 52.25,
+     "text": "GUYS",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 53.0,
+     "text": "OULD",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 53.25,
+     "text": "EE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 53.5,
+     "text": "'s",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 54.0,
+     "text": "RAZY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 54.5,
+     "text": "'s",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 54.75,
+     "text": "MBIE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 55.25,
+     "text": "NNER",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 55.75,
+     "text": "EAST",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 56.5,
+     "text": "UND",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 56.75,
+     "text": "THING",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 57.25,
+     "text": "'S GO",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 58.0,
+     "text": "Y GOD",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 59.0,
+     "text": "SP",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 59.25,
+     "text": "WAY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 59.5,
+     "text": "sp",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 60.0,
+     "text": "BE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 60.5,
+     "text": "pectator*",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 62.0,
+     "text": "ONUT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 63.75,
+     "text": "WAY",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 64.75,
+     "text": "ONUT",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 65.25,
+     "text": "E TAKE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 65.5,
+     "text": "TURE",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 66.0,
+     "text": "TURE",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "7v8ZWXi6GWg"
+}

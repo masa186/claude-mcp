@@ -1,0 +1,266 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/LVcWPlryJqA.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.7,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "In the war, Dream and Dacuavis,"
+    },
+    {
+     "end": 5.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 2.7,
+     "text": "but in a few years, there will be a miracle that happens."
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 5.0,
+     "text": "Are you trying to get out?"
+    },
+    {
+     "end": 7.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "No, I'm not."
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 7.0,
+     "text": "Are you trying to get out?"
+    },
+    {
+     "end": 9.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 8.0,
+     "text": "No!"
+    },
+    {
+     "end": 13.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "Bro, it's impossible to get out!"
+    },
+    {
+     "end": 15.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 14.0,
+     "text": "Yes! Yes!"
+    },
+    {
+     "end": 16.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 15.0,
+     "text": "No!"
+    },
+    {
+     "end": 18.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 16.0,
+     "text": "You're trapped! You're trapped!"
+    },
+    {
+     "end": 22.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 18.0,
+     "text": "I won this round! Let's go!"
+    },
+    {
+     "end": 25.0,
+     "logprob": -0.56,
+     "no_speech": 0.0,
+     "start": 22.0,
+     "text": "I won this round! Let's go!"
+    },
+    {
+     "end": 33.16,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 25.0,
+     "text": "you thought it was the void but it's not the void it's just like a building map"
+    },
+    {
+     "end": 37.58,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 33.16,
+     "text": "no"
+    },
+    {
+     "end": 41.3,
+     "logprob": -0.41,
+     "no_speech": 0.0,
+     "start": 37.58,
+     "text": "what"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/LVcWPlryJqA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.78,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "決闘中に奈落へ落ちてしまったドリームとダクアビスですが数両後まさかの出来事が起こります"
+    },
+    {
+     "end": 21.98,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 18.22,
+     "text": "取り残されてしまったドリームですがここから彼のプレイスキルが火を吹きます"
+    },
+    {
+     "end": 34.36,
+     "logprob": -1.69,
+     "no_speech": 0.0,
+     "start": 30.0,
+     "text": "ただのボイドではなくても建物の場所を見ることができる"
+    },
+    {
+     "end": 35.46,
+     "logprob": -1.69,
+     "no_speech": 0.0,
+     "start": 34.36,
+     "text": "いいね"
+    },
+    {
+     "end": 37.56,
+     "logprob": -1.69,
+     "no_speech": 0.0,
+     "start": 37.12,
+     "text": "お!"
+    },
+    {
+     "end": 38.76,
+     "logprob": -1.69,
+     "no_speech": 0.0,
+     "start": 38.6,
+     "text": "お!"
+    },
+    {
+     "end": 41.68,
+     "logprob": -1.69,
+     "no_speech": 0.0,
+     "start": 41.24,
+     "text": "お!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/LVcWPlryJqA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "決闘中に奈落へ落ちてしまったドリームとダクアビスですが数両方まさかの出来事が起こります"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/LVcWPlryJqA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 41.23,
+     "no_speech": 0.0,
+     "start": 39.23,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "決闘中に奈落へ落ちてしまったドリームとダクアビス。ですが数秒後、まさかの出来事が起こります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "決闘中に（白）→ 奈落へ落ちてしまった（白）→ DreamとDaquavis（白）→ ですが数秒後（白）→ まさかの出来事が（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "LVcWPlryJqA"
+}

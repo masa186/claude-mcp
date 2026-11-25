@@ -1,0 +1,342 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/lpfTNQ5dR70.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.62,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "3 friends of Skyblock, the dream friends of the 3rd team"
+    },
+    {
+     "end": 4.7,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 3.62,
+     "text": "where the situation is"
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 4.7,
+     "text": "strange"
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 6.0,
+     "text": "but there are no other things"
+    },
+    {
+     "end": 11.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 8.0,
+     "text": "Alright, George, go, George, go, George, go, George, go"
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "What'd you get?"
+    },
+    {
+     "end": 16.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 12.0,
+     "text": "Oh, no, oh, no, I'm going, I'm going"
+    },
+    {
+     "end": 17.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 16.0,
+     "text": "Oh, no, I'm going, I'm going"
+    },
+    {
+     "end": 20.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 17.0,
+     "text": "Get it out, get it out, get it out"
+    },
+    {
+     "end": 23.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 20.0,
+     "text": "Get it out, get it out"
+    },
+    {
+     "end": 27.0,
+     "logprob": -0.88,
+     "no_speech": 0.0,
+     "start": 23.0,
+     "text": "Who's this bees? Get it out!"
+    },
+    {
+     "end": 32.0,
+     "logprob": -1.23,
+     "no_speech": 0.0,
+     "start": 27.0,
+     "text": "The situation is still worse, but the situation is still worse, but they are still in the beginning of the story of the Warden."
+    },
+    {
+     "end": 34.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 32.0,
+     "text": "Alright, I'm gonna kill the warden, bro."
+    },
+    {
+     "end": 36.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 34.0,
+     "text": "You're not killing the warden, guys."
+    },
+    {
+     "end": 38.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 36.0,
+     "text": "No! Don't sleep me!"
+    },
+    {
+     "end": 42.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 38.0,
+     "text": "Yes! Yes! Yes! Yes! We got the warden, guys!"
+    },
+    {
+     "end": 45.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 42.0,
+     "text": "Oh my, George. Are you serious, bro?"
+    },
+    {
+     "end": 47.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 45.0,
+     "text": "Guys, it's a warden."
+    },
+    {
+     "end": 49.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 47.0,
+     "text": "Wait, what?"
+    },
+    {
+     "end": 50.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 49.0,
+     "text": "Wait, what?"
+    },
+    {
+     "end": 51.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 50.0,
+     "text": "I'm like, what?"
+    },
+    {
+     "end": 53.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 51.0,
+     "text": "George has failed."
+    },
+    {
+     "end": 55.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 53.0,
+     "text": "If you're in this place,"
+    },
+    {
+     "end": 58.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 55.0,
+     "text": "you'll be able to play the sky block a little bit."
+    },
+    {
+     "end": 60.0,
+     "logprob": -0.53,
+     "no_speech": 0.0,
+     "start": 58.0,
+     "text": "If you think about it, you'll be able to play it."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/lpfTNQ5dR70.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.48,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "スカイブロックで生活することになったドリームの友達3人組ですが"
+    },
+    {
+     "end": 7.86,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 6.36,
+     "text": "どこか様子がおかしいです"
+    },
+    {
+     "end": 29.22,
+     "logprob": -0.16,
+     "no_speech": 0.0,
+     "start": 26.76,
+     "text": "続くゴミ引きで状況はさらに悪化しますが"
+    },
+    {
+     "end": 31.72,
+     "logprob": -0.1,
+     "no_speech": 0.0,
+     "start": 29.22,
+     "text": "彼らはまだこの先の悲劇を知りません"
+    },
+    {
+     "end": 55.24,
+     "logprob": -0.1,
+     "no_speech": 0.0,
+     "start": 53.84,
+     "text": "もしこの場にドリームがいれば"
+    },
+    {
+     "end": 57.92,
+     "logprob": -0.1,
+     "no_speech": 0.0,
+     "start": 55.24,
+     "text": "彼らは少しまともにスカイブロックをプレイできたでしょうか?"
+    },
+    {
+     "end": 59.46,
+     "logprob": -0.06,
+     "no_speech": 0.0,
+     "start": 57.92,
+     "text": "そう思った方はいいねタッチ"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/lpfTNQ5dR70.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "スカイブロックで生活することになったドリームの友達3人組ですが"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/lpfTNQ5dR70.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 58.0,
+     "no_speech": 0.0,
+     "start": 53.16,
+     "text": "もしこの場にドリームがいれば彼らは少しまともにスカイブロックをプレイできたでしょうか?"
+    },
+    {
+     "end": 59.48,
+     "no_speech": 0.0,
+     "start": 58.12,
+     "text": "そう思った方はいいねタッチ"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "スカイブロックで生活することになったドリームの友達三人組ですが、どこか様子がおかしいです。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "スカイブロックで（水色）→ 生活することになった（白）→ Dreamの友達（緑）→ 三人組ですが（白）→ ［約3秒間の本編絶叫シーン］ → どこか様子が（白）→ おかしいです（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "lpfTNQ5dR70"
+}

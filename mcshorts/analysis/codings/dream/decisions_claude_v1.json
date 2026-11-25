@@ -1,0 +1,297 @@
+{
+ "about": "Dream Clips 58本の分類（Claude が Whisper 全編の文字起こしを読んで付けた）。状態はすべて UNVERIFIED。quote は元の文字起こしの1区間の文をそのまま写したもの（lang は ja＝日本語指定・en＝英語指定の書き起こし）。Whisper の聞き間違いは直していない。",
+ "coder": "claude",
+ "codebook_version": "v1",
+ "videos": {
+  "0ZPbHZ12VSA": {
+   "hook": {"code": "H_INTRO", "also": [], "lang": "ja", "quote": "マイクラバンガンダムニのリカイブツを倒す EJサボード", "reason": "「〜を倒す〇〇」の体言止め。結果・ひねり・評価は言っていない（人名・作品名は聞き間違いの可能性）"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "We have a code red! Code red! Set the alarms!", "reason": "中盤は警報と指示の掛け合いが中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Robot activate weatherstorm defense protocol", "reason": "最後の文はロボットの起動命令だけで、結末（勝ち負けなど）が文から分からない"}
+  },
+  "0iK0gxEUo0U": {
+   "hook": {"code": "H_INTRO", "also": [], "lang": "ja", "quote": "マイクラの世界にやってきたボードナムズイですか?", "reason": "「〜にやってきた〇〇」の紹介。文末は「ですか?」と書き起こされているが、問いかけか「ですが」の聞き間違いかは文から決められないため、確実に言える紹介に分類", "flag": "聞き間違いの可能性が高い"},
+   "development": {"code": "D_PROCESS", "also": [], "lang": "en", "quote": "An underground oven!", "reason": "友人が見たことのない調理法を見せる手順が中心（Ziggy's here to show me a way of cooking）"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "こんなことをする料理人は滅多にいないでしょうね", "reason": "最後に日本語ナレーションの感想で締める"}
+  },
+  "1U5Pu0pVtvM": {
+   "hook": {"code": "H_TWIST", "also": [], "lang": "ja", "quote": "ドリームとの決闘中ダクアビスがまさかの行動に出ます", "reason": "「まさかの行動に出ます」で予想外の展開を予告。何をするかは言っていない"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "ja", "quote": "最初は順調に勝ち進んでいたダクアビスですが彼はこの後本ミスを犯す戦況が一気に変わります", "reason": "決闘の戦況の変化を中盤のナレーションで予告"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Ahahaha!", "reason": "最後は笑い声だけで、結末が文から分からない"}
+  },
+  "3NGJSpc1k7A": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "裏人を襲おうとした結果この男は", "reason": "「〜した結果この男は…ことになります」（次の区間「つかな盹描することになります」）で結末を先に言う形"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤の書き起こしは「...」だけで、文から判断できない"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "最後の文は「You」などだけで、結末が文から分からない"}
+  },
+  "4dFAPRHYvk8": {
+   "hook": {"code": "H_SCALE", "also": ["H_INTRO"], "lang": "ja", "quote": "超巨大トラップを使い後、100人を穴にハメるジュデロン。", "reason": "「超巨大」「100人」と規模・数字で引きつける"},
+   "development": {"code": "D_PROCESS", "also": [], "lang": "en", "quote": "After using my biggest trap, I immediately ran to another one that was slightly different.", "reason": "トラップを使い、次のトラップへ移る手順の説明が中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Let's go", "reason": "最後は「Let's go」だけで、成功かどうかが文から分からない"}
+  },
+  "6qYSnMKV7Mc": {
+   "hook": {"code": "H_RESULT", "also": [], "lang": "ja", "quote": "数量後、この車以外はボコボコにされてしまいます。", "reason": "「ボコボコにされてしまいます」と結末を先に言う（「数量後」は「数秒後」の聞き間違いの可能性）"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤に文が無い"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "最後に文が無い（「ご視聴ありがとうございました」は Whisper がよく作る定型文で、判断に使わない）"}
+  },
+  "7fSr1a8AlsI": {
+   "hook": {"code": "H_LABEL", "also": [], "lang": "ja", "quote": "ドリームの鍵技はすべてやらせです", "reason": "「すべてやらせです」と強く断定する（「鍵技」は「神技」の聞き間違いの可能性）"},
+   "development": {"code": "D_PROCESS", "also": [], "lang": "en", "quote": "Let's check how many frames.", "reason": "コマ数を数えて検証する手順が中心"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "en", "quote": "That's crazy!", "reason": "検証の後、驚きの一言で締める"}
+  },
+  "AUQ8r0qXgVU": {
+   "hook": {"code": "H_INTRO", "also": [], "lang": "ja", "quote": "ラクアビスのやらせ先制布告を軽々と超えてくるドリーム", "reason": "「〜を超えてくるドリーム」の体言止めの紹介"},
+   "development": {"code": "D_REPEAT", "also": [], "lang": "en", "quote": "He's dead!", "reason": "「He's dead!」が十数回繰り返される"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "皆さんはこの意味がわかりますか", "reason": "最後に視聴者への問いかけで締める"}
+  },
+  "Ag_RdDjnYDA": {
+   "hook": {"code": "H_RESULT", "also": [], "lang": "ja", "quote": "彼はヒツジクをやりました", "reason": "「〜をやりました」と出来事を先に言う（「ヒツジク」は聞き間違いの可能性）"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "That sheep just saved you!", "reason": "羊に助けられた後の掛け合いが中心"},
+   "payoff": {"code": "P_REVERSAL", "also": [], "lang": "en", "quote": "I'm taking custody of our son!", "reason": "最後に「息子の親権を取る」と意外な関係が明かされる"}
+  },
+  "BwGk9qgSqfU": {
+   "hook": {"code": "H_RESULT", "also": ["H_INTRO", "H_TWIST"], "lang": "ja", "quote": "数秒後彼らに悲劇が訪れます", "reason": "「巨人から逃げるドリームたち」に続けて「悲劇が訪れます」と結末を先に言う"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "ja", "quote": "なんとか逃げ切ったドリームたち。ですがこの後、ジョージがまさかの行動に出ます。", "reason": "巨人からの逃走（追いかけっこ）が中心で、中盤でもう一度ひねりを予告している"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "彼が少しでもかっこいいと思ったらチャンネル登録", "reason": "最後はナレーションの一言（チャンネル登録のお願い）で締める。直前は「No!」「Why?」だけで結末は文から分からない"}
+  },
+  "D6srtcztceU": {
+   "hook": {"code": "H_RESULT", "also": [], "lang": "ja", "quote": "テストをカンニングしたキッズの悲惨なマツローを", "reason": "「悲惨な末路」と結末を先に言う（「マツロー」は「末路」の聞き間違いの可能性）"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "all right today's show and tell let's go i wonder what this guy brought", "reason": "発表会（show and tell）での会話が中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "I'm not a hack.", "reason": "最後の文は短い台詞だけで、どう終わるかが文から分からない"}
+  },
+  "FnzjGyuYTAU": {
+   "hook": {"code": "H_TWIST", "also": ["H_INTRO"], "lang": "ja", "quote": "ですが一人の犠牲とイセレブドリームによって状況は異変します", "reason": "「〜ですが…状況は一変します」で展開の変化を予告する"},
+   "development": {"code": "D_PROCESS", "also": [], "lang": "en", "quote": "someone has to sacrifice themselves let's settle this with musical chairs", "reason": "エンド要塞へ行くための段取り（封鎖・犠牲・エンダーパール集め）が順に進む"},
+   "payoff": {"code": "P_PUNISH", "also": [], "lang": "ja", "quote": "Oh he got a heart attack", "reason": "最後に仲間が驚かされてやられる（心臓発作）"}
+  },
+  "G6CB11Q-lT0": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "この男はザライトフル装備RTAで彼女にはからされました", "reason": "「この男は〜されました」と結末を先に言う（「はからされました」は「わからされました」の聞き間違いの可能性）"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "I can't find diamonds bro. I bet I can", "reason": "彼女とのRTAの勝負の掛け合い"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "We'll be right back.", "reason": "最後の文から結末が分からない"}
+  },
+  "H4k6ZUfs3bA": {
+   "hook": {"code": "H_TWIST", "also": [], "lang": "ja", "quote": "ジャクアビスに追い詰められ絶対絶命のピンチに陥るドリームですがこの後とんでもない逆転劇が巻き起こります", "reason": "「〜ですがこの後とんでもない逆転劇が」と予想外の展開を予告"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "Please! You're dead! You're dead!", "reason": "追いかけっこ・戦いの実況が中心"},
+   "payoff": {"code": "P_REVERSAL", "also": ["P_COMMENT"], "lang": "ja", "quote": "おにごっこではドリームが勝ちましたが", "reason": "追い詰められていたドリームが勝つ＝予告した逆転が起きたことを最後に述べ、続けて問いかけで締める"}
+  },
+  "LVcWPlryJqA": {
+   "hook": {"code": "H_TWIST", "also": [], "lang": "ja", "quote": "決闘中に奈落へ落ちてしまったドリームとダクアビスですが数両後まさかの出来事が起こります", "reason": "「〜ですが…まさかの出来事が」と予想外の展開を予告"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "You're trapped! You're trapped!", "reason": "奈落での攻防の掛け合いが中心。中盤にもナレーションでひねりを予告している"},
+   "payoff": {"code": "P_REVERSAL", "also": [], "lang": "en", "quote": "you thought it was the void but it's not the void it's just like a building map", "reason": "奈落だと思ったら奈落ではなかったと最後に明かされる"}
+  },
+  "MxPwX5a6vfg": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "この怪物は数秒後は雲を見ることになりました", "reason": "「この怪物は〜ことになりました」と結末を先に言う"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "If you're so scary, try and scare me!", "reason": "怪物を挑発する台詞の掛け合いが中心"},
+   "payoff": {"code": "P_PUNISH", "also": [], "lang": "en", "quote": "Break your ugly ass back here!", "reason": "最後は相手を追い返す台詞と「Stop!」の連呼で、怪物側がやられる流れ（誰の台詞かは文からは確定できない）"}
+  },
+  "MzpvoTEXweE": {
+   "hook": {"code": "H_RESULT", "also": ["H_TWIST"], "lang": "ja", "quote": "ダメージを受けると電流をクラウドリームとジョージ数量をおかれに悲劇が落とすれます", "reason": "「ダメージを受けると…悲劇が訪れます」と条件と結末を先に言う（聞き間違いが多い）", "flag": "聞き間違いが多い"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "They're catching me!", "reason": "追われて逃げる実況が中心"},
+   "payoff": {"code": "P_PUNISH", "also": [], "lang": "en", "quote": "Dream! Seriously!", "reason": "最後は叫びと「No!」で、やられる側で終わる（根拠は弱い）", "flag": "根拠が弱い"}
+  },
+  "NNe82nsFlME": {
+   "hook": {"code": "H_TWIST", "also": [], "lang": "ja", "quote": "キッズたちが作ったトラックに引っ掛かってしまうドリームですが、数秒後彼がとんでもない行動に出ます。", "reason": "「〜ですが、数秒後…とんでもない行動に出ます」と予想外の展開を予告"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "Alright, the Superhero Music is playing, you ready?", "reason": "トラップを仕掛けた側の掛け合いが中心"},
+   "payoff": {"code": "P_REVERSAL", "also": ["P_COMMENT"], "lang": "en", "quote": "Oh my god, he touched it! He touched it! How did he do that?", "reason": "トラップにかかったはずのドリームが予想外のことをして終わる。最後はナレーションの問いかけ"}
+  },
+  "Nnx_PiCiM4Y": {
+   "hook": {"code": "H_PROHIBIT", "also": [], "lang": "ja", "quote": "親を殺された村人を煽ってはいけません", "reason": "「〜してはいけません」の禁止の形"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤の書き起こしは単語の断片だけで、文から判断できない"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "最後の書き起こしが意味の通らない文で、判断できない"}
+  },
+  "OKhTqo8eVks": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "この中二病は戦う相手を間違えました", "reason": "「この中二病は〜を間違えました」と結末を先に言い、レッテルも付ける"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤の書き起こしは「uh」だけ"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "最後の書き起こしは「uh」だけ"}
+  },
+  "O_8PGIz3TLc": {
+   "hook": {"code": "H_LABEL", "also": ["H_INTRO"], "lang": "ja", "quote": "マイクラ鬼ごっこでありえない着地を見せるドリームという男", "reason": "「ありえない着地」と強い評価を付けた人物の紹介"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "Oh, watch out, watch out, watch out!", "reason": "鬼ごっこの実況が中心。中盤に「またもや変態プレイ」とナレーションで再予告"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "もはやここまで来ると彼はマイクラの神様なのかもしれませんね", "reason": "最後にナレーションの感想で締める"}
+  },
+  "PXYdDGT2fms": {
+   "hook": {"code": "HX", "also": [], "lang": "ja", "quote": "嬉しい", "reason": "冒頭の日本語は「嬉しい」「aaaaa」だけで、ナレーションの文として判断できない"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "Is Herobrine actually gonna spawn?", "reason": "短い台詞の掛け合いだけ"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Fortnite said", "reason": "最後の文から結末が分からない"}
+  },
+  "Pf78c9UhqRk": {
+   "hook": {"code": "H_RESULT", "also": ["H_TWIST"], "lang": "ja", "quote": "開始早々やらかします", "reason": "「イカゲームに参加するスティーブですが」に続けて「開始早々やらかします」と結末を先に言う"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "According to his file, he sped run Minecraft in five minutes.", "reason": "運営側の会話が中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Lemme adjust the settings.", "reason": "最後は設定を変える台詞で、結末が文から分からない"}
+  },
+  "Px_B8QwN9AA": {
+   "hook": {"code": "H_RESULT", "also": ["H_SCALE", "H_LABEL"], "lang": "ja", "quote": "この男は逆にぶち込むRTAで世界最速記録を叩き出します", "reason": "「世界最速記録を叩き出します」と結末を先に言う（最上級も含む）"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤の文は「Let's go!」だけ"},
+   "payoff": {"code": "PX", "also": [], "lang": "ja", "quote": "お疲れ様でした", "reason": "最後の文はあいさつだけで、結末が文から分からない"}
+  },
+  "QOhVjXfbKVk": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL", "H_TWIST"], "lang": "ja", "quote": "彼の機嫌を損ねたらこうなります", "reason": "「〜したらこうなります」と結末を先に言う形。前の区間で強いレッテル（「〜男グロックスですが」）も付けている"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "He's going for three. Let's go", "reason": "バスケットボールの1対1の勝負の実況"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "You ain't gonna score on me.", "reason": "最後は勝負の途中の台詞で、結末が文から分からない"}
+  },
+  "S8OLvKN4-o8": {
+   "hook": {"code": "H_RESULT", "also": ["H_SCALE"], "lang": "ja", "quote": "Dreamがハート0.5の状態で槍を使い3Kリします", "reason": "「〜で3キルします」と結末を先に言う。「ハート0.5」「3キル」の数字もある"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "I'm cutting him off!", "reason": "追いかけ・戦いの実況が中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "What?!", "reason": "最後は歓声と「What?!」で、どちらが勝ったかが文から分からない"}
+  },
+  "TSW_96CsF4Q": {
+   "hook": {"code": "H_OTHER", "also": [], "lang": "ja", "quote": "ジャバ版スケルトンは本気を出すと考えます", "reason": "スケルトンについての主張の文だが、聞き間違いの可能性があり、どの型か決めにくい", "flag": "聞き間違いの可能性が高い"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤に文が無い"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "あなたはジャバ版と統合版のスケルトンどっちが強いと思いますか?", "reason": "最後に視聴者への問いかけで締める"}
+  },
+  "TWUEJTjUPmY": {
+   "hook": {"code": "H_RESULT", "also": ["H_SCALE", "H_TWIST"], "lang": "ja", "quote": "開始早々ピンチになります", "reason": "「50時間VRで生活する…ジョージですか（ですが）」に続けて「開始早々ピンチになります」と結末を先に言う"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "Whoa! Stop! I'm trying to catch this cat bad!", "reason": "猫を捕まえようとする台詞が中心"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "普通に理不尽だと思った方はチャンネル登録", "reason": "最後にナレーションの一言で締める"}
+  },
+  "UQ14cHsyEkA": {
+   "hook": {"code": "H_SCALE", "also": ["H_INTRO"], "lang": "ja", "quote": "世界一最強のゴーレムを作るグラフ", "reason": "「世界一最強」の最上級で引きつける"},
+   "development": {"code": "D_ESCALATE", "also": [], "lang": "ja", "quote": "I can make an even better one!", "reason": "ゴーレムを作り直して、より強いものにしていく"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "息子に弾丸を打ち込まれても無傷なボーレムが最高に狂ってますね", "reason": "最後にナレーションの感想で締める"}
+  },
+  "Xb34KasPZyE": {
+   "hook": {"code": "H_LABEL", "also": ["H_SCALE"], "lang": "ja", "quote": "ドリームの友人の中で唯一 道徳心のないバクタレは間違いなく彼です", "reason": "「道徳心のない…は間違いなく彼です」と強いレッテルを付けて断定する"},
+   "development": {"code": "D_ESCALATE", "also": [], "lang": "en", "quote": "Dude, with anvils too?", "reason": "橋の安全確認がジャンプ→金床とだんだんひどくなる。中盤にナレーションでもう一度予告（「〜こうなります」）"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "I think these bullets are all...", "reason": "最後の台詞が途中で切れていて、結末が文から分からない"}
+  },
+  "YaBIB4VuiqM": {
+   "hook": {"code": "H_INTRO", "also": [], "lang": "ja", "quote": "ついに無加減術式を習得したブロックス", "reason": "「〜を習得した〇〇」の紹介"},
+   "development": {"code": "D_REPEAT", "also": [], "lang": "ja", "quote": "I don't smell that bad", "reason": "「臭くない」というやりとりが繰り返される（I don't smell bad, right? / I don't smell that bad / by smelling bad）"},
+   "payoff": {"code": "P_PUNISH", "also": [], "lang": "ja", "quote": "Don't tell me you died", "reason": "最後に相手が死んでしまう（やられる）"}
+  },
+  "Yb4XjY7uhKw": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "お金に目がくらんだ村人の末路が山すぎます", "reason": "「〜の末路が…すぎます」と結末を先に言う（「山すぎます」は聞き間違いの可能性）"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤に文が無い"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "最後に文が無い（定型文だけ）"}
+  },
+  "ZoQjGe7_Kl8": {
+   "hook": {"code": "HX", "also": [], "lang": "ja", "quote": "I'mma smoke you up!", "reason": "冒頭に日本語のナレーションの文が書き起こされていない（英語の台詞から始まる）"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "Try and hit me with your best shot!", "reason": "村を壊した相手への復讐の対決"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Get ready!", "reason": "最後は対決の直前の台詞で、結末が文から分からない"}
+  },
+  "aZVsf5PhZxo": {
+   "hook": {"code": "HX", "also": [], "lang": "ja", "quote": "このいじねっこは長神に乗せて sehenさくの補助をお見yaくよ", "reason": "「このいじめっこは」で始まるが、後半が聞き取れておらず文として判断できない"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "There you go guys! Alright, whatever you do, don't leave the barn at night!", "reason": "羊の世話をする側の台詞が中心"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "めちゃくちゃスカッとしますね", "reason": "最後にナレーションの感想で締める"}
+  },
+  "bAcdBVPA5Zk": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "刺激を求めすぎた村人の末路が悲惨すぎます", "reason": "「〜の末路が悲惨すぎます」と結末を先に言う"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤に文が無い"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "最後に文が無い（定型文だけ）"}
+  },
+  "bFmKcjqo7Sk": {
+   "hook": {"code": "H_LABEL", "also": ["H_INTRO"], "lang": "ja", "quote": "えっとい女性にも容赦しないドリームのライバルだコアビス", "reason": "「女性にも容赦しない」と強い評価を付けた人物の紹介"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤の文が短く、展開が文から分からない"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "さすがに男すぎると思った方はいいねタッチ", "reason": "最後にナレーションの一言で締める"}
+  },
+  "bqyhes0V7Qc": {
+   "hook": {"code": "H_SCALE", "also": ["H_INTRO"], "lang": "ja", "quote": "ガチャガチャでヒットアイテムを使い、生き残り1名4人組", "reason": "「1名」「4人組」の数字がある紹介。ただし聞き間違いが多く、確信は低い", "flag": "聞き間違いが多い"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "Die! Die! Die!", "reason": "ガチャのアイテムでの戦いの実況が中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "No!", "reason": "最後は「No!」の連呼だけで、誰がどうなったかが文から分からない"}
+  },
+  "cUbDNWd0j24": {
+   "hook": {"code": "H_RESULT", "also": ["H_TWIST"], "lang": "ja", "quote": "ピッサれることになりや", "reason": "「〜子供ができたブロックスですが／彼は自分の子供に／〜されることになり」と結末を先に言う（伏せ字の部分は聞き取れていない）"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "I'm gonna stop you and make you face reveal.", "reason": "息子との言い合いが中心"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "en", "quote": "No, that's ridiculous!", "reason": "最後は短いツッコミの台詞で締める（冒頭の4秒目と同じ台詞）"}
+  },
+  "d2PlYjZcRo0": {
+   "hook": {"code": "H_RESULT", "also": [], "lang": "ja", "quote": "ブロックスを プラスタらこうなんだ", "reason": "「〜たらこうなる」の形で結末を先に言う（聞き間違いの可能性）"},
+   "development": {"code": "D_ESCALATE", "also": [], "lang": "en", "quote": "I'll get you a laptop.", "reason": "Xbox→車→ノートPC→何でも見られると、条件がだんだんエスカレートする"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "普通にサイコパスだと思う方はチャンネル登録", "reason": "最後にナレーションの一言で締める"}
+  },
+  "eg0_YckR1Iw": {
+   "hook": {"code": "H_RESULT", "also": ["H_INTRO"], "lang": "ja", "quote": "仲間のため命を捧げたジョージ その意志をついだドリームたちにさらなる悲劇が訪れます", "reason": "「さらなる悲劇が訪れます」と結末を先に言う"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "Hurry! Hurry!", "reason": "絶体絶命の状況での攻防。中盤にナレーションで「まさかの行動」を再予告"},
+   "payoff": {"code": "P_CONTINUE", "also": ["P_COMMENT"], "lang": "ja", "quote": "結末が気になる方はチャンネル登録", "reason": "結末を見せずに「結末が気になる方は」で終わる"}
+  },
+  "i2o5r0vZOrg": {
+   "hook": {"code": "H_RESULT", "also": [], "lang": "ja", "quote": "ドリームになってしまったドリームがついに限界を迎えます", "reason": "「ついに限界を迎えます」と結末を先に言う（「ドリームになってしまった」は聞き間違いの可能性）"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤の書き起こしが意味の通らない文だけ"},
+   "payoff": {"code": "PX", "also": [], "lang": "ja", "quote": "I DISOWED YOU!!!", "reason": "最後の台詞（I DISOWED YOU!!!）はあるが、codebook のどの型か文だけでは決めにくい"}
+  },
+  "ldGtosTpMyw": {
+   "hook": {"code": "H_SCALE", "also": ["H_INTRO"], "lang": "ja", "quote": "$1000万円の機械を使いマイクラの世界へ行くドリーム", "reason": "「1000万円」の金額で引きつける紹介"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "You can't even run that far.", "reason": "逃げる側と追う側の掛け合い（マンハント）"},
+   "payoff": {"code": "P_PUNISH", "also": [], "lang": "en", "quote": "Dream, you're dead.", "reason": "最後にドリームがやられる"}
+  },
+  "loiMd64_c6Q": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "彼はありえない方法でクリートワーを退治します", "reason": "「〜を退治します」と結末を先に言う（「ありえない方法」の評価付き）"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "Tell me why every mob in Minecraft never gets blown up, but I'm the only one.", "reason": "クリーパーとの言い合いが中心"},
+   "payoff": {"code": "P_PUNISH", "also": [], "lang": "en", "quote": "Mojang's now removing you from the game, little man.", "reason": "最後に相手（クリーパー）がゲームから消される"}
+  },
+  "lpfTNQ5dR70": {
+   "hook": {"code": "H_TWIST", "also": ["H_SCALE"], "lang": "ja", "quote": "スカイブロックで生活することになったドリームの友達3人組ですが", "reason": "「〜3人組ですが」「どこか様子がおかしいです」で予想外の展開を予告"},
+   "development": {"code": "D_ESCALATE", "also": [], "lang": "ja", "quote": "続くゴミ引きで状況はさらに悪化しますが", "reason": "状況がさらに悪化していく"},
+   "payoff": {"code": "P_PUNISH", "also": ["P_COMMENT"], "lang": "en", "quote": "George has failed.", "reason": "最後に失敗で終わり、ナレーションの一言で締める"}
+  },
+  "lzD1xJ46ZC4": {
+   "hook": {"code": "H_RESULT", "also": ["H_TWIST", "H_LABEL"], "lang": "ja", "quote": "しかし彼はちょうどブカスな方法で村人たちから逃げ切ります", "reason": "「しかし彼は〜方法で逃げ切ります」と結末を先に言う"},
+   "development": {"code": "D_ESCALATE", "also": [], "lang": "ja", "quote": "余計なことをしでかし状況はさらに悪化しますが", "reason": "状況がさらに悪化し、作戦で一変する（中盤のナレーション）"},
+   "payoff": {"code": "P_REVERSAL", "also": ["P_COMMENT"], "lang": "en", "quote": "I'm naming you Grox Jr.", "reason": "最後に村人の子どもを引き取って名前を付ける、という意外な締め"}
+  },
+  "mRndDDRWz00": {
+   "hook": {"code": "H_RESULT", "also": ["H_SCALE"], "lang": "ja", "quote": "8年間プレイしたハードコアが台無しになる瞬間", "reason": "「台無しになる瞬間」と結末を先に言う（「8年間」の数字もある）"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "3秒の動画で中盤が無い"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "3秒の動画で最後の文が無い"}
+  },
+  "nPJHE7bHxnI": {
+   "hook": {"code": "H_LABEL", "also": ["H_INTRO"], "lang": "ja", "quote": "ジョージンには理解できないプレイをカマストリームで", "reason": "「理解できないプレイをかます」と強い評価を付けた紹介（聞き間違いの可能性）"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "Just stay on him, just stay on him.", "reason": "戦い・追いかけの実況が中心"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "理解できた方だけチャンネル登録", "reason": "最後にナレーションの一言で締める"}
+  },
+  "p4osmEVx7hY": {
+   "hook": {"code": "HX", "also": [], "lang": "ja", "quote": "え、よ、チリール!", "reason": "冒頭の日本語は台詞（Hey yo chill）の聞き取りで、後に続く「ピンチになります」も英語の台詞の聞き間違いと区別できない"},
+   "development": {"code": "D_REPEAT", "also": [], "lang": "en", "quote": "Alright, who's next?", "reason": "「Who's next?」と次の相手を呼ぶやりとりが繰り返される"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Hey chill chill relax", "reason": "最後の台詞が冒頭と同じで（ループの可能性）、結末が文から分からない"}
+  },
+  "qNFu8Q55mEE": {
+   "hook": {"code": "H_SCALE", "also": ["H_INTRO"], "lang": "ja", "quote": "世界一難しいゲームにはまった男たち", "reason": "「世界一難しい」の最上級で引きつける"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "ja", "quote": "DUDE YOU'RE ACTUALLY SO BAD THIS IS SO EASY YOU'RE GARBAGE YEAH GET OUT OF HERE BYEEE", "reason": "あおり合いの台詞が中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Is that a YouTube video", "reason": "最後の文から結末が分からない"}
+  },
+  "sJDbLVB340o": {
+   "hook": {"code": "H_LABEL", "also": ["H_INTRO"], "lang": "ja", "quote": "デスゲームを開催するドリームの友達のブカス君", "reason": "「ブカス君」（ドブカスの聞き間違いの可能性）と強いレッテルを付けた紹介"},
+   "development": {"code": "D_ESCALATE", "also": [], "lang": "ja", "quote": "どんどん減っていく村人たちですが、このあとからに天気が訪れます。", "reason": "村人がどんどん減っていき、中盤で転機を予告"},
+   "payoff": {"code": "P_CONTINUE", "also": [], "lang": "en", "quote": "Now let's do 100 gorillas versus a villager!", "reason": "最後に次の勝負を宣言して終わる"}
+  },
+  "snRuzLtmLX4": {
+   "hook": {"code": "H_TWIST", "also": ["H_LABEL"], "lang": "ja", "quote": "ですが彼はとってもクズい方法でキキパー", "reason": "「〜されるブロックス／ですが彼はとってもクズい方法で」と予想外の展開を予告（後半は聞き取れていない）"},
+   "development": {"code": "D_REPEAT", "also": [], "lang": "ja", "quote": "but is there any way you can check again?", "reason": "「安全か確かめて」と仲間に何度も確認させる"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "気持ちよさそうですね", "reason": "最後にナレーションの一言で締める"}
+  },
+  "tCQ6I8gQHLM": {
+   "hook": {"code": "H_PROHIBIT", "also": [], "lang": "ja", "quote": "常にメイズをもたしてはいけません", "reason": "「〜してはいけません」の禁止の形"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "11秒の動画で中盤の文が無い"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "ja", "quote": "And his name is John Cena!!", "reason": "最後はミームの決め台詞で締める"}
+  },
+  "tdwKZ17Cpzs": {
+   "hook": {"code": "H_RESULT", "also": [], "lang": "ja", "quote": "彼に子供を任せるとこうなります", "reason": "「〜するとこうなります」の形"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "Excuse me sir, would you mind switching seats with my son?", "reason": "席を替わる会話が中心"},
+   "payoff": {"code": "P_COMMENT", "also": [], "lang": "en", "quote": "Ah, of course. So he likes the outside, huh?", "reason": "最後は短い台詞で締める"}
+  },
+  "uNdIdgo7wws": {
+   "hook": {"code": "H_RESULT", "also": [], "lang": "ja", "quote": "Dreamが覚醒します", "reason": "「覚醒します」と出来事を先に言う"},
+   "development": {"code": "D_BATTLE", "also": [], "lang": "en", "quote": "Look how aggressive DREAM's been.", "reason": "戦いの実況が中心"},
+   "payoff": {"code": "P_PUNISH", "also": ["P_COMMENT"], "lang": "ja", "quote": "結局この戦いはテクノグレイドの勝利で幕を閉じましたが", "reason": "覚醒したドリームが結局負けて終わり、続けてナレーションの感想で締める"}
+  },
+  "vTPcburl6o8": {
+   "hook": {"code": "H_INTRO", "also": [], "lang": "ja", "quote": "マブマが迫ってくる部屋を出すする村人", "reason": "「〜部屋を脱出する村人」の紹介（聞き間違いの可能性）"},
+   "development": {"code": "D_ESCALATE", "also": [], "lang": "en", "quote": "Do you guys want me to make it more fun?", "reason": "遊びをもっと過激にしていく"},
+   "payoff": {"code": "P_SUCCESS", "also": [], "lang": "en", "quote": "let's go congrats little jimmy just go up the stairs", "reason": "最後に子どもが目標を達成する"}
+  },
+  "wWd7KT3RTNg": {
+   "hook": {"code": "H_RESULT", "also": ["H_LABEL"], "lang": "ja", "quote": "調子に乗っているこのアホンダラに数秒後天末が下ります", "reason": "「数秒後天罰が下ります」と結末を先に言い、強いレッテルも付ける"},
+   "development": {"code": "DX", "also": [], "lang": null, "quote": null, "reason": "中盤に文が無い"},
+   "payoff": {"code": "PX", "also": [], "lang": null, "quote": null, "reason": "最後に文が無い（定型文だけ）"}
+  },
+  "wYRkhfRSjDs": {
+   "hook": {"code": "H_RESULT", "also": ["H_SCALE"], "lang": "ja", "quote": "テクノグレイドは脱獄不可能な牢獄に閉じ込められたドリームを助けます", "reason": "「〜を助けます」と結末を先に言う（「脱獄不可能」の最上級もある）"},
+   "development": {"code": "D_PROCESS", "also": [], "lang": "en", "quote": "Oh, I used the blueprints. I burrowed in underground and swam up through the lava with fire resistance.", "reason": "脱獄の手順の説明が中心"},
+   "payoff": {"code": "P_SUCCESS", "also": ["P_COMMENT"], "lang": "en", "quote": "You're gonna be free, Connor.", "reason": "最後に脱獄が成功する。続けてナレーションの一言"}
+  },
+  "xGF9lFQyjpY": {
+   "hook": {"code": "H_QUESTION", "also": [], "lang": "ja", "quote": "もしあなたがマクラノブタになってしまったらどうなるでしょう?", "reason": "「〜したらどうなるでしょう?」と視聴者に問いかける"},
+   "development": {"code": "D_DIALOGUE", "also": [], "lang": "en", "quote": "Hold on, I'll be back.", "reason": "豚に話しかける台詞が中心"},
+   "payoff": {"code": "PX", "also": [], "lang": "en", "quote": "Oh my god.", "reason": "最後は「Oh my god.」だけで、結末が文から分からない"}
+  }
+ }
+}

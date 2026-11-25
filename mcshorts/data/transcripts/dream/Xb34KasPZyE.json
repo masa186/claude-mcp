@@ -1,0 +1,419 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/Xb34KasPZyE.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.96,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Oh, let's go, diamonds!"
+    },
+    {
+     "end": 6.18,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 5.24,
+     "text": "How are we gonna get across?"
+    },
+    {
+     "end": 7.16,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 6.5,
+     "text": "Let's go!"
+    },
+    {
+     "end": 9.14,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 7.58,
+     "text": "Now, y'all are the best!"
+    },
+    {
+     "end": 10.18,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 9.2,
+     "text": "What a great idea!"
+    },
+    {
+     "end": 12.08,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 10.82,
+     "text": "Oh, you good?"
+    },
+    {
+     "end": 13.8,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 12.84,
+     "text": "Bro, slipping!"
+    },
+    {
+     "end": 15.96,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 14.16,
+     "text": "Hey, someone come test out this bridge for me!"
+    },
+    {
+     "end": 17.9,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 16.34,
+     "text": "Okay, okay, looks pretty safe."
+    },
+    {
+     "end": 18.6,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 18.04,
+     "text": "Try jumping!"
+    },
+    {
+     "end": 21.8,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 20.4,
+     "text": "Uh, I still don't trust it."
+    },
+    {
+     "end": 24.18,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 22.8,
+     "text": "Uh, I'm not convinced."
+    },
+    {
+     "end": 26.6,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 24.48,
+     "text": "How much can this bridge take, bro?"
+    },
+    {
+     "end": 28.4,
+     "logprob": -0.35,
+     "no_speech": 0.0,
+     "start": 26.8,
+     "text": "Dude, with anvils too?"
+    },
+    {
+     "end": 30.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 28.4,
+     "text": "Oh, okay! We're making progress!"
+    },
+    {
+     "end": 32.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 30.4,
+     "text": "Now y'all are getting me mad!"
+    },
+    {
+     "end": 34.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 32.4,
+     "text": "Is this safe or not?"
+    },
+    {
+     "end": 36.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 34.4,
+     "text": "Nah, see, hey!"
+    },
+    {
+     "end": 38.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 36.4,
+     "text": "Yeah, I knew it wasn't safe!"
+    },
+    {
+     "end": 44.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 42.4,
+     "text": "Wait... I bet!"
+    },
+    {
+     "end": 46.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 44.4,
+     "text": "Those cheeks are crazy!"
+    },
+    {
+     "end": 48.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 46.4,
+     "text": "Hey, when am I taking you out on a date?"
+    },
+    {
+     "end": 50.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 48.4,
+     "text": "Hmm..."
+    },
+    {
+     "end": 52.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 50.4,
+     "text": "Oh, she's yours?"
+    },
+    {
+     "end": 54.4,
+     "logprob": -0.29,
+     "no_speech": 0.0,
+     "start": 52.4,
+     "text": "I think these bullets are all..."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/Xb34KasPZyE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.8,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ドリームの友人の中で唯一 道徳心のないバクタレは間違いなく彼です"
+    },
+    {
+     "end": 9.6,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 3.8,
+     "text": "oh let's go diamonds how are we gonna get across let's go now y'all are the best what a great"
+    },
+    {
+     "end": 17.5,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 9.6,
+     "text": "idea oh you good bro slipping hey someone come test out this bridge for me okay okay looks pretty"
+    },
+    {
+     "end": 27.06,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 17.5,
+     "text": "safe try jumping i still don't trust it i'm not convinced how much can this bridge take bro dude"
+    },
+    {
+     "end": 28.92,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 27.06,
+     "text": "でも、アンビルも同じか!?"
+    },
+    {
+     "end": 30.76,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 29.28,
+     "text": "あ、OK! 進めよう!"
+    },
+    {
+     "end": 32.68,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 31.0,
+     "text": "今、あなたが私が怒られている!"
+    },
+    {
+     "end": 33.78,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 32.82,
+     "text": "安全だった!"
+    },
+    {
+     "end": 36.88,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 34.22,
+     "text": "いや、私は安全だった!"
+    },
+    {
+     "end": 38.72,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 36.94,
+     "text": "そんなサイコパス野郎グロックスですが、"
+    },
+    {
+     "end": 41.36,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 38.84,
+     "text": "ドリームの6人目ハンターに選ばれた場合こうなります。"
+    },
+    {
+     "end": 41.9,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 41.5,
+     "text": "Dream!"
+    },
+    {
+     "end": 44.24,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 43.6,
+     "text": "I bet!"
+    },
+    {
+     "end": 46.24,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 44.92,
+     "text": "Those cheeks are crazy!"
+    },
+    {
+     "end": 48.9,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 47.26,
+     "text": "Hey! When am I taking you out on a date?"
+    },
+    {
+     "end": 49.34,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 49.06,
+     "text": "Hm!"
+    },
+    {
+     "end": 52.12,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 49.6,
+     "text": "Oh! She's yours?"
+    },
+    {
+     "end": 53.86,
+     "logprob": -0.62,
+     "no_speech": 0.0,
+     "start": 52.44,
+     "text": "I think these bullets are all-"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Xb34KasPZyE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.86,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "ドリームの友人の中で唯一贈得心のないバクタレは間違いなく彼です"
+    },
+    {
+     "end": 4.94,
+     "no_speech": 0.0,
+     "start": 3.86,
+     "text": "Oh let's go diamond!"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/Xb34KasPZyE.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 76.8,
+     "no_speech": 0.0,
+     "start": 49.8,
+     "text": "レーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームの友人の中で唯一、道徳心のないバカたれは間違いなく彼です。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Dreamの（緑）→ 友人の中で唯一（白）→ 道徳心のない（黄）→ 馬鹿タレは（赤）→ 間違えなく彼です（白）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Xb34KasPZyE"
+}

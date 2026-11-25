@@ -1,0 +1,1822 @@
+{
+ "audiotag": {
+  "hop": 1,
+  "labels": [
+   "Speech",
+   "Narration, monologue",
+   "Female speech, woman speaking",
+   "Male speech, man speaking",
+   "Music",
+   "Laughter",
+   "Screaming",
+   "Shout",
+   "Yell",
+   "Explosion",
+   "Boom",
+   "Sound effect",
+   "Whoosh, swoosh, swish",
+   "Cheering",
+   "Gasp",
+   "Silence"
+  ],
+  "note": "確率による自動判定（0〜1）。2秒の窓を1秒ずつずらしたもの",
+  "rows": [
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.57,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.89,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 0
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.01,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.63,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.73,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 1
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.6,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.61,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 2
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.64,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.55,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 3
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.4,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.1,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 4
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.33,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.1,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 5
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.42,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.06,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 6
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.46,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 7
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.4,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 8
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.36,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 9
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.39,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 10
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.35,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 11
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.37,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.1,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 12
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.38,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 13
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.31,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.07,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 14
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.36,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.08,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 15
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.41,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 16
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 17
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.37,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 18
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.06,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 19
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.34,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.12,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 20
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.37,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.13,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 21
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.42,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.06,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 22
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.4,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 23
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 24
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.38,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 25
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.08,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 26
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.08,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 27
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.07,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 28
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.34,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 29
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.46,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 30
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 31
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 32
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.38,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 33
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.07,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 34
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.36,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.07,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 35
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.39,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 36
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.01,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.48,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.11,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 37
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.14,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 38
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.06,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 39
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.55,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.08,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 40
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.6,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 41
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.63,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.06,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 42
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.05,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 43
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.41,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 44
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.49,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 45
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.5,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 46
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.38,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 47
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.01,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.38,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.04,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 48
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.02,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.32,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.07,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 49
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.03,
+    "Speech": 0.07,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 50
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.44,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.15,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 51
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.43,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 52
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.47,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.01,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 53
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.07,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.52,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.09,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 54
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.01,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.47,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.28,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 55
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.58,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.0,
+    "Speech": 0.3,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 56
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.58,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.03,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 57
+   },
+   {
+    "Boom": 0.0,
+    "Cheering": 0.0,
+    "Explosion": 0.0,
+    "Female speech, woman speaking": 0.0,
+    "Gasp": 0.0,
+    "Laughter": 0.0,
+    "Male speech, man speaking": 0.0,
+    "Music": 0.57,
+    "Narration, monologue": 0.0,
+    "Screaming": 0.0,
+    "Shout": 0.0,
+    "Silence": 0.0,
+    "Sound effect": 0.02,
+    "Speech": 0.04,
+    "Whoosh, swoosh, swish": 0.0,
+    "Yell": 0.0,
+    "t": 58
+   }
+  ],
+  "source": "dream/data/audiotag/Px_B8QwN9AA.json",
+  "status": "ok",
+  "win": 2
+ },
+ "channel": "dream",
+ "codes_4b": {
+  "codes": {
+   "development": {
+    "code": "DX",
+    "effective_code": "DX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "hook": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "この男は逆にぶち込むRTAで世界最速記録を叩き出します",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "payoff": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "お疲れ様でした",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  },
+  "note": "review があるものは確認済みの結果。effective_code は修正を重ねた分類（元の分類は code に残す）",
+  "source": "mcshorts/analysis/codings/dream/claude_v1.jsonl",
+  "status": "UNVERIFIED"
+ },
+ "csv_tn58": {
+  "source": "tools/tn_dream58.json",
+  "status": "UNVERIFIED",
+  "sub": "この男は（白）→ 羊にブチ込むRTAで（白）→ 世界最速記録を（赤）→ 叩き出します（白）",
+  "voice": "この男は、羊にブチ込むRTAで世界最速記録を叩き出します。"
+ },
+ "discrepancies": [
+  {
+   "bigram_similarity_doc_vs_whisper_ja": 0.677,
+   "doc_text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します",
+   "doc_text_in_csv_sub": false,
+   "doc_text_in_csv_voice": true,
+   "end": 3.9,
+   "row_index": 0,
+   "start": 0.0,
+   "whisper_ja_overlapping_segments": [
+    0
+   ],
+   "whisper_ja_overlapping_text": "この男は逆にぶち込むRTAで世界最速記録を叩き出します"
+  }
+ ],
+ "doc_individual": {
+  "fact_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット: **0〜4.1秒にカットが無い**（58本の中で珍しい。最初の4秒は1ショット）[実測]"
+    },
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "音: 0秒に Slam・Bang、2秒に Howl 0.52（叫び声と思われる）[音タグ]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "書き起こし",
+      "画面"
+     ],
+     "text": "書き起こし（「この男は逆にぶち込むRTAで世界最速記録を叩き出します」）と字幕がほぼ一致（羊を「逆に」と聞き間違い）[書き起こし][画面]"
+    },
+    {
+     "section": "冒頭のナレーション",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "4秒以降は**声がほぼ無い**（Speech 0〜0.1）。配信者は黙々とプレイしている [音タグ]"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "実測",
+      "画面"
+     ],
+     "text": "上部テロップ [画面]: 1行目 黄「見た目以上に難しい」、2行目 **赤の大きな文字**「ケ〇穴確定RTA」。全編同じ [実測]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "画面"
+     ],
+     "text": "状況: 「羊をピストンでボートに押し込む」スピードランの世界記録（推測。画面ではピストンと柵と羊の装置が映る）[画面]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "カット 31回、1ショット平均 1.88秒 [実測]。冒頭4秒は1ショット"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "字幕の切り替え 24回、字幕が出ている時間 38% [実測]"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "BGM: 平均 0.45（全編で一定、0.3〜0.6）[音タグ]。**山場でも BGM を抜かない**"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "音タグ"
+     ],
+     "text": "声: 4秒以降ほぼ無し [音タグ]。字幕と効果音（作業の音・羊の声）で進める"
+    },
+    {
+     "section": "編集・テンポ",
+     "tags": [
+      "実測"
+     ],
+     "text": "効果音: 音の突出が27回（作業の区切りごと）[実測]"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "gemini_lines_excluded": 0,
+  "interpretation_lines": {
+   "lines": [
+    {
+     "section": "冒頭0〜3秒のフック",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] スクロールが止まる理由**: 「羊にブチ込むRTA」という**意味の分からない、下品な響きの競技名**。そして配信者が**記録達成の瞬間に椅子から飛び上がって消える**、という本気の喜びの画。何の競技か分からないのに「世界最速記録」という言葉で本気度が伝わる"
+    },
+    {
+     "section": "上部テロップ・投稿タイトル",
+     "tags": [
+      "考察"
+     ],
+     "text": "仕組み [考察]: 伏せ字の下ネタ（#14 と同じ「ケ〇穴確定」）。「羊にブチ込む」を別の下品な言葉で言い直している。1行目の「見た目以上に難しい」で**ちゃんとした競技**だと示す"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "考察"
+     ],
+     "text": "**[考察] 離脱しにくい理由**: タイマーが常に動いていて（#11 と同じ）、**「羊にブチ込む」とは結局何なのか**が最後まで分からない。手順を1つずつ字幕で説明するので、何も知らない人でも進み具合が分かる"
+    },
+    {
+     "section": "構成（時系列）",
+     "tags": [
+      "画面",
+      "考察"
+     ],
+     "text": "タイマーは動画の50.5秒の間に55.4秒分進む（4.8秒→55.35秒で 00:00.000→00:55.352）。**ほぼ等速で、早送りはほとんどしていない**と読める [画面・考察]"
+    },
+    {
+     "section": "素材",
+     "tags": [
+      "考察"
+     ],
+     "text": "素材の面白さ [考察]: 競技の名前のくだらなさと、本人の本気さ。最後の喜び方が**本物の感情**"
+    }
+   ],
+   "note": "[考察] の行。事実としては使わない",
+   "status": "DOC_INTERPRETATION"
+  },
+  "opening_frames": {
+   "rows": [
+    {
+     "end": 0.53,
+     "start": 0.0,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「この男は」",
+     "time_raw": "0.00〜0.53",
+     "visual": "配信者の顔（左上）＋ジャングルの柵の中の羊"
+    },
+    {
+     "end": 1.47,
+     "start": 0.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "白「羊にブチ込むRTAで」",
+     "time_raw": "0.73〜1.47",
+     "visual": "配信者が**椅子から立ち上がって画面から消える**（喜んで飛び跳ねている）"
+    },
+    {
+     "end": 3.0,
+     "start": 1.73,
+     "status": "DOC_OBSERVED",
+     "subtitle": "**赤**「世界最速記録を」→ 白「叩き出します」",
+     "time_raw": "1.73〜3.00",
+     "visual": "空の椅子が映ったまま"
+    }
+   ],
+   "status": "DOC_OBSERVED"
+  },
+  "source": "dream/individual/29_Px_B8QwN9AA.md",
+  "structure": {
+   "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+   "rows": [
+    {
+     "content": "記録達成の喜びの先出し、ナレーション",
+     "content_status": "DOC_OBSERVED",
+     "end": 3.9,
+     "range_raw": "0.0〜3.9",
+     "stage_label": "冒頭",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 0.0
+    },
+    {
+     "content": "「よーい...」→「スタート!!」。**右上にタイマー 00:00.000** が出る",
+     "content_status": "DOC_OBSERVED",
+     "end": 6.8,
+     "range_raw": "4.2〜6.8",
+     "stage_label": "開始",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 4.2
+    },
+    {
+     "content": "「まずは木を回収」→「ピストンも回収」→「ダイヤモンドゲット」→「石を掘って...」→「かまどを作り...」→「銅を入れる」。15秒・30秒にタイプライターの音（Typewriter 0.35〜0.60＝作業台の操作音と思われる）[音タグ]",
+     "content_status": "DOC_OBSERVED",
+     "end": 30.0,
+     "range_raw": "7.5〜30",
+     "stage_label": "手順",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 7.5
+    },
+    {
+     "content": "「ボートを作る」→ 引用符なしの字幕「ぶち込む用の羊」→「ぶち込む機会を作る」（ピストンと柵の装置）。39〜42秒に羊の声（Bleat 0.5〜0.6）[音タグ]",
+     "content_status": "DOC_OBSERVED",
+     "end": 47.0,
+     "range_raw": "30〜47",
+     "stage_label": "準備",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 30.0
+    },
+    {
+     "content": "赤「そして遂に...」→ 装置が動く（52秒に Mechanisms・Gears）[音タグ]",
+     "content_status": "DOC_OBSERVED",
+     "end": 55.0,
+     "range_raw": "51.9〜55",
+     "stage_label": "クライマックス",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 51.9
+    },
+    {
+     "content": "タイマー **00:55.352** で止まる。配信者「ﾚｯﾂｺﾞｫｫｫｫｵｵ!!!!」→ 椅子から立ち上がって消える（冒頭の画）→ 👍の絵文字と白の引用符「\"ユニークな才能\"」",
+     "content_status": "DOC_OBSERVED",
+     "end": 60.3,
+     "range_raw": "55.4〜60.3",
+     "stage_label": "オチ",
+     "stage_label_status": "DOC_INTERPRETATION",
+     "start": 55.4
+    }
+   ]
+  }
+ },
+ "doc_narration": {
+  "notes": [],
+  "rows": [
+   {
+    "end": 3.9,
+    "parts": [
+     {
+      "part_index": 0,
+      "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+     }
+    ],
+    "row_index": 0,
+    "source": "dream/narration_list.md",
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "この男は羊にブチ込むRTAで世界最速記録を叩き出します"
+   }
+  ],
+  "source": "dream/narration_list.md",
+  "status": "DOC_OBSERVED",
+  "time_unit": "字幕の区間（文単位）"
+ },
+ "duration_sec": 60.26,
+ "measured": {
+  "audio": {
+   "first3s_db": [
+    -41.9,
+    -10.8,
+    -12.3,
+    -8.0,
+    -9.3,
+    -7.3,
+    -13.4,
+    -11.6,
+    -7.8,
+    -10.1,
+    -7.6,
+    -14.5,
+    -7.8,
+    -7.6,
+    -14.9
+   ],
+   "max_db": -5.8,
+   "median_db": -21.9,
+   "onset": 0.0,
+   "p95_db": -12.4,
+   "spikes": [
+    0.15,
+    2.4,
+    2.95,
+    4.15,
+    5.4,
+    6.05,
+    7.8,
+    11.1,
+    19.3,
+    21.3,
+    22.8,
+    23.7,
+    28.85,
+    32.1,
+    32.5,
+    39.55,
+    40.35,
+    41.35,
+    41.85,
+    42.5,
+    46.95,
+    47.5,
+    55.8,
+    56.3,
+    57.2,
+    59.0,
+    60.15
+   ]
+  },
+  "cuts": [
+   4.13,
+   4.73,
+   5.07,
+   5.67,
+   11.87,
+   14.47,
+   15.07,
+   16.2,
+   18.73,
+   24.07,
+   25.07,
+   25.93,
+   26.53,
+   30.53,
+   31.8,
+   32.27,
+   34.87,
+   36.93,
+   39.4,
+   39.6,
+   42.4,
+   45.2,
+   45.53,
+   46.33,
+   49.2,
+   49.53,
+   51.8,
+   52.07,
+   52.4,
+   54.93,
+   56.07
+  ],
+  "cuts_first3s": [],
+  "dur": 60.26,
+  "layout": {
+   "content": [
+    25,
+    330
+   ],
+   "play": [
+    96,
+    330
+   ],
+   "top": [
+    25,
+    96
+   ]
+  },
+  "motion_median": 10.7,
+  "moves": [
+   [
+    17.53,
+    17.8
+   ],
+   [
+    41.6,
+    42.07
+   ],
+   [
+    51.0,
+    51.27
+   ],
+   [
+    54.0,
+    54.27
+   ],
+   [
+    56.4,
+    56.67
+   ]
+  ],
+  "n_shots": 32,
+  "n_subs": 24,
+  "shot_mean": 1.88,
+  "shot_median": 1.21,
+  "source": "dream/data/measure/Px_B8QwN9AA.json",
+  "status": "ok",
+  "sub_changes": [
+   0.07,
+   0.73,
+   2.27,
+   3.4,
+   4.13,
+   4.8,
+   6.6,
+   7.27,
+   9.13,
+   11.93,
+   13.8,
+   17.67,
+   19.53,
+   20.93,
+   24.4,
+   25.87,
+   27.33,
+   32.33,
+   35.4,
+   39.4,
+   40.8,
+   44.27,
+   45.67,
+   56.6
+  ],
+  "sub_on_ratio": 0.38,
+  "top_changes": []
+ },
+ "no": 29,
+ "video_id": "Px_B8QwN9AA",
+ "whisper_en": {
+  "segments": [
+   {
+    "category": "latin",
+    "end": 4.0,
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "This guy is going to hit the RTA world record."
+   },
+   {
+    "category": "latin",
+    "end": 56.48,
+    "segment_index": 1,
+    "start": 30.0,
+    "text": "Let's go!"
+   },
+   {
+    "category": "latin",
+    "end": 89.98,
+    "segment_index": 2,
+    "start": 60.0,
+    "text": "Thank you."
+   }
+  ],
+  "source": "dream/data/asr/Px_B8QwN9AA.json",
+  "status": "ok",
+  "time_unit": "区間"
+ },
+ "whisper_ja": {
+  "note": "聞き間違いはそのまま。直していない",
+  "segments": [
+   {
+    "category": "japanese",
+    "end": 3.92,
+    "logprob": -0.14,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [
+     0
+    ],
+    "segment_index": 0,
+    "start": 0.0,
+    "text": "この男は逆にぶち込むRTAで世界最速記録を叩き出します",
+    "words": [
+     {
+      "end": 0.28,
+      "start": 0.0,
+      "word": "この"
+     },
+     {
+      "end": 0.48,
+      "start": 0.28,
+      "word": "男"
+     },
+     {
+      "end": 0.66,
+      "start": 0.48,
+      "word": "は"
+     },
+     {
+      "end": 0.84,
+      "start": 0.66,
+      "word": "逆"
+     },
+     {
+      "end": 1.06,
+      "start": 0.84,
+      "word": "に"
+     },
+     {
+      "end": 1.18,
+      "start": 1.06,
+      "word": "ぶ"
+     },
+     {
+      "end": 1.26,
+      "start": 1.18,
+      "word": "ち"
+     },
+     {
+      "end": 1.36,
+      "start": 1.26,
+      "word": "込"
+     },
+     {
+      "end": 1.48,
+      "start": 1.36,
+      "word": "む"
+     },
+     {
+      "end": 1.68,
+      "start": 1.48,
+      "word": "R"
+     },
+     {
+      "end": 2.04,
+      "start": 1.68,
+      "word": "TA"
+     },
+     {
+      "end": 2.2,
+      "start": 2.04,
+      "word": "で"
+     },
+     {
+      "end": 2.46,
+      "start": 2.2,
+      "word": "世界"
+     },
+     {
+      "end": 2.66,
+      "start": 2.46,
+      "word": "最"
+     },
+     {
+      "end": 2.86,
+      "start": 2.66,
+      "word": "速"
+     },
+     {
+      "end": 3.02,
+      "start": 2.86,
+      "word": "記"
+     },
+     {
+      "end": 3.14,
+      "start": 3.02,
+      "word": "録"
+     },
+     {
+      "end": 3.26,
+      "start": 3.14,
+      "word": "を"
+     },
+     {
+      "end": 3.42,
+      "start": 3.26,
+      "word": "叩"
+     },
+     {
+      "end": 3.54,
+      "start": 3.42,
+      "word": "き"
+     },
+     {
+      "end": 3.64,
+      "start": 3.54,
+      "word": "出"
+     },
+     {
+      "end": 3.92,
+      "start": 3.64,
+      "word": "します"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 42.36,
+    "logprob": -0.89,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 1,
+    "start": 38.1,
+    "text": "お疲れ様でした",
+    "words": [
+     {
+      "end": 39.5,
+      "start": 38.1,
+      "word": "お"
+     },
+     {
+      "end": 40.64,
+      "start": 39.5,
+      "word": "疲"
+     },
+     {
+      "end": 40.74,
+      "start": 40.64,
+      "word": "れ"
+     },
+     {
+      "end": 40.76,
+      "start": 40.74,
+      "word": "様"
+     },
+     {
+      "end": 42.36,
+      "start": 40.76,
+      "word": "でした"
+     }
+    ]
+   },
+   {
+    "category": "japanese",
+    "end": 60.22,
+    "logprob": -0.89,
+    "no_speech": 0.0,
+    "overlaps_doc_rows": [],
+    "segment_index": 2,
+    "start": 60.0,
+    "text": "またね",
+    "words": [
+     {
+      "end": 60.22,
+      "start": 60.0,
+      "word": "また"
+     },
+     {
+      "end": 60.22,
+      "start": 60.22,
+      "word": "ね"
+     }
+    ]
+   }
+  ],
+  "source": "dream/data/asr/Px_B8QwN9AA.json",
+  "status": "ok",
+  "time_unit": "単語単位（words）と区間"
+ }
+}

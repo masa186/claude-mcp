@@ -1,0 +1,868 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 51.06,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.0,
+   "first_cut_minus_first_row_start": 1.0,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.486,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**紫**「Daqabisの」",
+      "time_raw": "0.00〜0.73",
+      "visual": "草原に Dream（緑の頭）が立ち、周りに水路"
+     },
+     {
+      "end": 1.73,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ヤラセ宣戦布告を」",
+      "time_raw": "1.00〜1.73",
+      "visual": "水路の間の畑を耕す（一人称）[実測: 1.00]"
+     },
+     {
+      "end": 2.53,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「軽々と超えてくる」",
+      "time_raw": "2.00〜2.53",
+      "visual": "種を植える"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「Dream」",
+      "time_raw": "2.73〜3.00",
+      "visual": "同上"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 3.1,
+     "music_mean_during_row": 0.527,
+     "nearest_cut_to_end": 2.1,
+     "nearest_cut_to_start": 1.0,
+     "nearest_subtitle_change_to_end": 0.23,
+     "nearest_subtitle_change_to_start": 0.33,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    },
+    {
+     "end": 42.8,
+     "music_mean_during_row": 0.575,
+     "nearest_cut_to_end": 0.07,
+     "nearest_cut_to_start": 0.8,
+     "nearest_subtitle_change_to_end": 1.07,
+     "nearest_subtitle_change_to_start": 0.6,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      40.25
+     ],
+     "start": 40.2
+    },
+    {
+     "end": 50.5,
+     "music_mean_during_row": 0.515,
+     "nearest_cut_to_end": 3.97,
+     "nearest_cut_to_start": 0.67,
+     "nearest_subtitle_change_to_end": 0.63,
+     "nearest_subtitle_change_to_start": 0.13,
+     "row": 2,
+     "spikes_within_row_or_1s_after": [],
+     "start": 44.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜を軽々と超えてくる〇〇」の紹介（「ヤラセ」の評価を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [
+      "R_QUESTION"
+     ],
+     "flag": null,
+     "label": "中盤の再フック",
+     "part": 0,
+     "reason": "40.2秒で「一方〜は...？」と次の比較へ引き直す",
+     "role": "R_REHOOK",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「この意味が分かりますか？」と視聴者に問う",
+     "role": "R_QUESTION",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 30,
+     "content_lemmas": [
+      "Daquavis",
+      "遣らせ",
+      "宣戦",
+      "布告",
+      "越える",
+      "来る",
+      "Dream"
+     ],
+     "first_token": {
+      "lemma": "Daquavis",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Daquavis"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis",
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 5,
+      "形状詞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "Daquavisのヤラセ宣戦布告を軽々と超えてくるDream"
+    },
+    {
+     "chars": 18,
+     "content_lemmas": [
+      "Daquavis",
+      "宣戦",
+      "布告",
+      "動画"
+     ],
+     "first_token": {
+      "lemma": "一方",
+      "pos1": "接続詞",
+      "pos2": "*",
+      "surface": "一方"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "問いかけ",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis"
+      ],
+      "question": true
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 2,
+      "名詞": 4,
+      "接続詞": 1,
+      "補助記号": 4
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "一方Daquavisの宣戦布告動画は...？"
+    },
+    {
+     "chars": 15,
+     "content_lemmas": [
+      "皆",
+      "意味",
+      "分かる"
+     ],
+     "first_token": {
+      "lemma": "皆",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "皆"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "問いかけ",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": true
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 3,
+      "動詞": 1,
+      "名詞": 2,
+      "接尾辞": 1,
+      "補助記号": 1,
+      "連体詞": 1
+     },
+     "row": 2,
+     "status": "DOC_OBSERVED",
+     "text": "皆さんはこの意味が分かりますか？"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "Daquavis",
+     2
+    ],
+    [
+     "宣戦",
+     2
+    ],
+    [
+     "布告",
+     2
+    ],
+    [
+     "遣らせ",
+     1
+    ],
+    [
+     "越える",
+     1
+    ],
+    [
+     "来る",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "動画",
+     1
+    ],
+    [
+     "皆",
+     1
+    ],
+    [
+     "意味",
+     1
+    ],
+    [
+     "分かる",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.1,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Daquavisのヤラセ宣戦布告を軽々と超えてくるDream"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ラクアビスのやらせ",
+     "words": [
+      "ラ",
+      "ク",
+      "ア",
+      "ビ",
+      "ス",
+      "の",
+      "や",
+      "ら",
+      "せ"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.1,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "Daquavisのヤラセ宣戦布告を軽々と超えてくるDream"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 25,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ラクアビスのやらせ先制布告を軽々と超えてくるドリーム",
+     "words": [
+      "ラ",
+      "ク",
+      "ア",
+      "ビ",
+      "ス",
+      "の",
+      "や",
+      "ら",
+      "せ",
+      "先",
+      "制",
+      "布",
+      "告",
+      "を",
+      "軽",
+      "々",
+      "と",
+      "超",
+      "えて",
+      "く",
+      "る",
+      "ド",
+      "リ",
+      "ーム"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 3.1,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "Daquavisのヤラセ宣戦布告を軽々と超えてくるDream"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 25,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ラクアビスのやらせ先制布告を軽々と超えてくるドリーム",
+     "words": [
+      "ラ",
+      "ク",
+      "ア",
+      "ビ",
+      "ス",
+      "の",
+      "や",
+      "ら",
+      "せ",
+      "先",
+      "制",
+      "布",
+      "告",
+      "を",
+      "軽",
+      "々",
+      "と",
+      "超",
+      "えて",
+      "く",
+      "る",
+      "ド",
+      "リ",
+      "ーム"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 30,
+    "end": 3.1,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "Daquavisのヤラセ宣戦布告を軽々と超えてくるDream"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "Daquavis",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "Daquavis"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Daquavis",
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "Daquavisのヤラセ宣戦布告を軽々と超えてくるDream"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜を軽々と超えてくる〇〇」の紹介（「ヤラセ」の評価を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_INTRO",
+    "effective_code": "H_INTRO",
+    "quote": "ラクアビスのやらせ先制布告を軽々と超えてくるドリーム",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.73,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**紫**「Daqabisの」",
+      "time_raw": "0.00〜0.73",
+      "visual": "草原に Dream（緑の頭）が立ち、周りに水路"
+     },
+     {
+      "end": 1.73,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ヤラセ宣戦布告を」",
+      "time_raw": "1.00〜1.73",
+      "visual": "水路の間の畑を耕す（一人称）[実測: 1.00]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ラ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 6.92,
+    "rows": [
+     {
+      "chars": 30,
+      "chars_per_sec": 9.68,
+      "duration": 3.1,
+      "gap_to_next_row": 37.1,
+      "row": 0
+     },
+     {
+      "chars": 18,
+      "chars_per_sec": 6.92,
+      "duration": 2.6,
+      "gap_to_next_row": 1.2,
+      "row": 1
+     },
+     {
+      "chars": 15,
+      "chars_per_sec": 2.31,
+      "duration": 6.5,
+      "gap_to_next_row": null,
+      "row": 2
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 63
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.29,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 54,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Daquavis",
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "Daquavisのヤラセ宣戦布告を軽々と超えてくるDream"
+    },
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "問いかけ",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Daquavis"
+     ],
+     "question": true,
+     "row": 1,
+     "text": "一方Daquavisの宣戦布告動画は...？"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "問いかけ",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": true,
+     "row": 2,
+     "text": "皆さんはこの意味が分かりますか？"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "**Dream の顔を並べた畑**（Daquavis の動画）",
+       "range_raw": "39.5〜46",
+       "source": "doc_structure",
+       "source_file": "dream/individual/55_AUQ8r0qXgVU.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "一方Daquavisの宣戦布告動画は...？",
+     "from_role": "R_REHOOK",
+     "from_row": 1,
+     "from_start": 40.2,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "AUQ8r0qXgVU"
+    }
+   ],
+   "role_sequence": [
+    "R_INTRO",
+    "R_REHOOK",
+    "R_QUESTION"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_REPEAT",
+     "effective_code": "D_REPEAT",
+     "quote": "He's dead!",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "皆さんはこの意味がわかりますか",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "畑、ナレーション",
+      "range_raw": "0〜3.1",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "白「①田んぼ植え」→「②種植え付け」（TNTも）→ Daquavis が来る → 白「種植えつけ完了✅」",
+      "range_raw": "3.5〜11",
+      "stage_label": "手順①②"
+     },
+     {
+      "content": "白「③フルボッコだドン」→（三人称視点で出来る余裕っぷり）→「×1」「×2」「×4」→「perfect！」",
+      "range_raw": "12.7〜23",
+      "stage_label": "手順③"
+     },
+     {
+      "content": "「③サボテン」→「これ、」「実はめちゃくちゃ」「難しい」→「(余裕だぜ)」",
+      "range_raw": "22〜25",
+      "stage_label": "手順③'"
+     },
+     {
+      "content": "「④環境保全」（木を植える）→「(優しいでしょ)」→「⑤処すぞ」",
+      "range_raw": "25.7〜34",
+      "stage_label": "手順④⑤"
+     },
+     {
+      "content": "看板に書く「\"Daquavisというプレイヤーが種を植え_\"」→「\"Daquavisというプレイヤーが種を植えることで1対1の勝負に勝てると考えている\"」",
+      "range_raw": "35.4〜39",
+      "stage_label": "メッセージ"
+     },
+     {
+      "content": "「一方daquavisの」「宣戦布告動画は...？」→ **Dream の顔を並べた畑**（Daquavis の動画）→ 💀と↓の絵文字",
+      "range_raw": "39.5〜46",
+      "stage_label": "比較"
+     },
+     {
+      "content": "ナレーション「皆さんは」「この意味が」「分かりますか？」",
+      "range_raw": "48〜51",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     9,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     23,
+     24,
+     26,
+     33,
+     40
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     9.1,
+     11.75,
+     12.05,
+     13.0,
+     14.25,
+     14.9,
+     15.1,
+     15.35,
+     16.9,
+     17.6,
+     23.95,
+     24.25,
+     24.55,
+     26.45,
+     33.3,
+     33.95,
+     40.25
+    ],
+    "cuts": 37,
+    "cuts_per_5s": {
+     "0": 1,
+     "10": 6,
+     "15": 5,
+     "20": 4,
+     "25": 5,
+     "30": 3,
+     "35": 2,
+     "40": 5,
+     "45": 1,
+     "5": 5
+    },
+    "duration_sec": 51.06,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "end",
+      "row": 1,
+      "start": 40.2
+     },
+     {
+      "position": "end",
+      "row": 2,
+      "start": 44.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 50.5,
+    "is_end_position": true,
+    "sec_from_end": 0.56,
+    "start": 44.0,
+    "status": "DOC_OBSERVED",
+    "text": "皆さんはこの意味が分かりますか？"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「この意味が分かりますか？」と視聴者に問う",
+     "role": "R_QUESTION",
+     "row": 2,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 48.58,
+    "status": "ok",
+    "text": "Do you understand this meaning?"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 48.64,
+    "status": "ok",
+    "text": "皆さんはこの意味がわかりますか"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "皆さんはこの意味がわかりますか",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 55,
+ "not_applicable": [],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/55_AUQ8r0qXgVU.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/AUQ8r0qXgVU.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "AUQ8r0qXgVU"
+}

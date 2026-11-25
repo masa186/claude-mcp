@@ -1,0 +1,685 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 33.62,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.47,
+   "first_cut_minus_first_row_start": 0.47,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.516,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "平らな砂漠。字幕なし"
+     },
+     {
+      "end": null,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「超巨大トラップを」",
+      "time_raw": "0.27",
+      "visual": "同じ砂漠"
+     },
+     {
+      "end": 0.73,
+      "start": 0.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "赤「超巨大トラップを」",
+      "time_raw": "0.47〜0.73",
+      "visual": "カット2回。砂の下の仕掛け（丸石と木材）を見せる [実測: 0.47, 0.73]"
+     },
+     {
+      "end": null,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「使い」",
+      "time_raw": "1.00",
+      "visual": "黄色い床の下に丸石。仕掛けの内側"
+     },
+     {
+      "end": 1.73,
+      "start": 1.33,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「500人を」",
+      "time_raw": "1.33〜1.73",
+      "visual": "カット。JudeLow本人の顔（ワイプ）＋砂漠に群がる大量のプレイヤー"
+     },
+     {
+      "end": 2.53,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「罠にはめる」",
+      "time_raw": "2.00〜2.53",
+      "visual": "砂のピラミッド状の地形"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**紫**「ジュデロウ」",
+      "time_raw": "2.73〜3.00",
+      "visual": "同上"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.9,
+     "music_mean_during_row": 0.593,
+     "nearest_cut_to_end": 0.23,
+     "nearest_cut_to_start": 0.47,
+     "nearest_subtitle_change_to_end": 0.23,
+     "nearest_subtitle_change_to_start": 3.13,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.15,
+      0.45,
+      0.7,
+      1.15,
+      1.45
+     ],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜を罠にはめる〇〇」の体言止めの紹介（「500人」の数字を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 25,
+     "content_lemmas": [
+      "トラップ-trap",
+      "使う",
+      "500",
+      "罠",
+      "嵌める",
+      "ジュ-je",
+      "デ-des",
+      "ロー-law"
+     ],
+     "first_token": {
+      "lemma": "超",
+      "pos1": "接頭辞",
+      "pos2": "*",
+      "surface": "超"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "ジュデロウ"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 6,
+      "形状詞": 1,
+      "接尾辞": 1,
+      "接頭辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "トラップ-trap",
+     1
+    ],
+    [
+     "使う",
+     1
+    ],
+    [
+     "500",
+     1
+    ],
+    [
+     "罠",
+     1
+    ],
+    [
+     "嵌める",
+     1
+    ],
+    [
+     "ジュ-je",
+     1
+    ],
+    [
+     "デ-des",
+     1
+    ],
+    [
+     "ロー-law",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "超巨大トラップを使",
+     "words": [
+      "超",
+      "巨",
+      "大",
+      "ト",
+      "ラ",
+      "ップ",
+      "を",
+      "使"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 26,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "超巨大トラップを使い後、100人を穴にハメるジュデロン。",
+     "words": [
+      "超",
+      "巨",
+      "大",
+      "ト",
+      "ラ",
+      "ップ",
+      "を",
+      "使",
+      "い",
+      "後、",
+      "100",
+      "人",
+      "を",
+      "穴",
+      "に",
+      "ハ",
+      "メ",
+      "る",
+      "ジ",
+      "ュ",
+      "デ",
+      "ロ",
+      "ン。"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.9,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 55,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "超巨大トラップを使い後、100人を穴にハメるジュデロン。Kill Judy's right there at 25 grand!",
+     "words": [
+      "超",
+      "巨",
+      "大",
+      "ト",
+      "ラ",
+      "ップ",
+      "を",
+      "使",
+      "い",
+      "後、",
+      "100",
+      "人",
+      "を",
+      "穴",
+      "に",
+      "ハ",
+      "メ",
+      "る",
+      "ジ",
+      "ュ",
+      "デ",
+      "ロ",
+      "ン。",
+      "K",
+      "ill",
+      " Judy",
+      "'s",
+      " right",
+      " there",
+      " at",
+      " 25",
+      " grand!"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 25,
+    "end": 2.9,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "超",
+      "pos1": "接頭辞",
+      "pos2": "*",
+      "surface": "超"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [
+       "ジュデロウ"
+      ],
+      "question": false
+     },
+     "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜を罠にはめる〇〇」の体言止めの紹介（「500人」の数字を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_SCALE",
+    "effective_code": "H_SCALE",
+    "quote": "超巨大トラップを使い後、100人を穴にハメるジュデロン。",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "平らな砂漠。字幕なし"
+     },
+     {
+      "end": null,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「超巨大トラップを」",
+      "time_raw": "0.27",
+      "visual": "同じ砂漠"
+     },
+     {
+      "end": 0.73,
+      "start": 0.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "赤「超巨大トラップを」",
+      "time_raw": "0.47〜0.73",
+      "visual": "カット2回。砂の下の仕掛け（丸石と木材）を見せる [実測: 0.47, 0.73]"
+     },
+     {
+      "end": null,
+      "start": 1.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「使い」",
+      "time_raw": "1.00",
+      "visual": "黄色い床の下に丸石。仕掛けの内側"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "超"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.62,
+    "rows": [
+     {
+      "chars": 25,
+      "chars_per_sec": 8.62,
+      "duration": 2.9,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 25
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 8.9,
+    "gap_max": 0.22,
+    "gap_median": 0.22,
+    "gaps_ge_0.3s": 0,
+    "n_words": 23,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "ジュデロウ"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_INTRO"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_PROCESS",
+     "effective_code": "D_PROCESS",
+     "quote": "After using my biggest trap, I immediately ran to another one that was slightly different.",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "Let's go",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "ナレーションで「超巨大トラップで500人を罠に」",
+      "range_raw": "0.0〜3.0",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "大会の混戦。「ヤれ!」「2万5千ドルだぞ!!」（賞金）「こっちおいで///」、金のリンゴ",
+      "range_raw": "3.2〜12",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "本人の解説を紫字幕で。「巨大トラップを作った後」「すぐに少し違う」罠へ。「この砂場には」「僕が射撃できる所があり」「的ブロックを撃つと」「覗き込んだ奴らを」（落とす）",
+      "range_raw": "13.0〜23",
+      "stage_label": "解説"
+     },
+     {
+      "content": "罠に近づくプレイヤー。「やぁみんな元気？」「まだ終わってねぇぞ!!」「ｵｫｫｫｳｩｩ///(感じてる)」「クロスボウと」「的ブロックの罠だぜ」「レッツゴォww」。この区間に音の突出が10回以上（23.55〜30.25秒）[実測]",
+      "range_raw": "23.7〜30",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "☠️の絵文字と「\"江戸いトラップ\"」の字幕で締め",
+      "range_raw": "30.8〜33.6",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     9,
+     16,
+     23,
+     24,
+     25,
+     28,
+     29,
+     30
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.15,
+     0.45,
+     0.7,
+     1.15,
+     1.45,
+     9.5,
+     9.8,
+     16.25,
+     23.55,
+     23.85,
+     24.2,
+     24.4,
+     24.65,
+     24.95,
+     25.2,
+     28.2,
+     28.55,
+     28.85,
+     29.3,
+     29.95,
+     30.25
+    ],
+    "cuts": 18,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 3,
+     "15": 2,
+     "20": 3,
+     "25": 1,
+     "30": 3,
+     "5": 2
+    },
+    "duration_sec": 33.62,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.9,
+    "is_end_position": false,
+    "sec_from_end": 30.72,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "超巨大トラップを使い500人を罠にはめるジュデロウ"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「〜を罠にはめる〇〇」の体言止めの紹介（「500人」の数字を含む）",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 26.0,
+    "status": "ok",
+    "text": "Let's go"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 24.86,
+    "status": "ok",
+    "text": "They're smaller!"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Let's go",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 2,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/02_4dFAPRHYvk8.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/4dFAPRHYvk8.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "4dFAPRHYvk8"
+}

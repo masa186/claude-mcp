@@ -1,0 +1,96 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "全てのゲームで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.7,
+     "text": "マイクラが遊べる瞬間を見る"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.1,
+     "text": "オーネピクセル"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.1,
+     "text": "スカイリムでマインクラフト"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.6,
+     "text": "いまスカイリムにいる"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.4,
+     "text": "これ実際の映像ね"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.7,
+     "text": "これマジでそのまま"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.7,
+     "text": "バニラのマインクラフトと"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "全てのゲームでマイクラが遊べる瞬間を見るオーネピクセル"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "amEHHi_HRc8"
+}

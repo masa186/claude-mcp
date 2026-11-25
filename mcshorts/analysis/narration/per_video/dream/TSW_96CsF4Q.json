@@ -1,0 +1,765 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 41.33,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.13,
+   "first_cut_minus_first_row_start": 0.86,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.553,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "洞窟でダイヤ装備のプレイヤー（名前 Rymie）がこちらに走ってくる"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「java版スケルトンが」",
+      "time_raw": "0.27〜1.00",
+      "visual": "溶岩の上を走る"
+     },
+     {
+      "end": 1.47,
+      "start": 1.13,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「本気を出すと」",
+      "time_raw": "1.13〜1.47",
+      "visual": "カット。溶岩と鍾乳石を見上げる視点 [実測: 1.13]"
+     },
+     {
+      "end": 2.73,
+      "start": 1.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「こうなります」",
+      "time_raw": "1.73〜2.73",
+      "visual": "落下・回転する視点、弓を構える"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白の引用符「\"スケルトン視点\"」",
+      "time_raw": "3.00",
+      "visual": "洞窟の奥にプレイヤー。手前に弓"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.7,
+     "music_mean_during_row": 0.667,
+     "nearest_cut_to_end": 1.57,
+     "nearest_cut_to_start": 0.86,
+     "nearest_subtitle_change_to_end": 0.1,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.27
+    },
+    {
+     "end": 40.9,
+     "music_mean_during_row": 0.59,
+     "nearest_cut_to_end": 1.37,
+     "nearest_cut_to_start": 1.6,
+     "nearest_subtitle_change_to_end": 1.37,
+     "nearest_subtitle_change_to_start": 0.13,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [],
+     "start": 37.4
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜が本気を出すとこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「どっちが強いと思いますか？」と問う",
+     "role": "R_QUESTION",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 23,
+     "content_lemmas": [
+      "java",
+      "版",
+      "スケルトン-skeleton",
+      "本気",
+      "出す",
+      "こう",
+      "成る"
+     ],
+     "first_token": {
+      "lemma": "java",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "java"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "こうなる",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 3,
+      "動詞": 2,
+      "名詞": 4
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "java版スケルトンが本気を出すとこうなります"
+    },
+    {
+     "chars": 31,
+     "content_lemmas": [
+      "貴方",
+      "java",
+      "版",
+      "統合",
+      "版",
+      "スケルトン-skeleton",
+      "何方",
+      "強い",
+      "思う"
+     ],
+     "first_token": {
+      "lemma": "貴方",
+      "pos1": "代名詞",
+      "pos2": "*",
+      "surface": "あなた"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "問いかけ",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": true
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 2,
+      "助動詞": 1,
+      "助詞": 6,
+      "動詞": 1,
+      "名詞": 5,
+      "形容詞": 1,
+      "補助記号": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "あなたはjava版と統合版のスケルトンどっちが強いと思いますか？"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "版",
+     3
+    ],
+    [
+     "java",
+     2
+    ],
+    [
+     "スケルトン-skeleton",
+     2
+    ],
+    [
+     "本気",
+     1
+    ],
+    [
+     "出す",
+     1
+    ],
+    [
+     "こう",
+     1
+    ],
+    [
+     "成る",
+     1
+    ],
+    [
+     "貴方",
+     1
+    ],
+    [
+     "統合",
+     1
+    ],
+    [
+     "何方",
+     1
+    ],
+    [
+     "強い",
+     1
+    ],
+    [
+     "思う",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "java版スケルトンが本気を出すとこうなります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 10,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ジャバ版スケルトンは",
+     "words": [
+      "ジャ",
+      "バ",
+      "版",
+      "ス",
+      "ケ",
+      "ル",
+      "ト",
+      "ン",
+      "は"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "java版スケルトンが本気を出すとこうなります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ジャバ版スケルトンは本気を出すと考えます",
+     "words": [
+      "ジャ",
+      "バ",
+      "版",
+      "ス",
+      "ケ",
+      "ル",
+      "ト",
+      "ン",
+      "は",
+      "本",
+      "気",
+      "を",
+      "出",
+      "す",
+      "と",
+      "考",
+      "え",
+      "ます"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.7,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "java版スケルトンが本気を出すとこうなります"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ジャバ版スケルトンは本気を出すと考えます",
+     "words": [
+      "ジャ",
+      "バ",
+      "版",
+      "ス",
+      "ケ",
+      "ル",
+      "ト",
+      "ン",
+      "は",
+      "本",
+      "気",
+      "を",
+      "出",
+      "す",
+      "と",
+      "考",
+      "え",
+      "ます"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 23,
+    "end": 2.7,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "java版スケルトンが本気を出すとこうなります"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "java",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "java"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "こうなる",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "java版スケルトンが本気を出すとこうなります"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜が本気を出すとこうなります」と結果を予告",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_OTHER",
+    "effective_code": "H_OTHER",
+    "quote": "ジャバ版スケルトンは本気を出すと考えます",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "洞窟でダイヤ装備のプレイヤー（名前 Rymie）がこちらに走ってくる"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「java版スケルトンが」",
+      "time_raw": "0.27〜1.00",
+      "visual": "溶岩の上を走る"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "ジャ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 9.16,
+    "rows": [
+     {
+      "chars": 23,
+      "chars_per_sec": 9.47,
+      "duration": 2.43,
+      "gap_to_next_row": 34.7,
+      "row": 0
+     },
+     {
+      "chars": 31,
+      "chars_per_sec": 8.86,
+      "duration": 3.5,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 54
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 1.22,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 41,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "こうなる",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "java版スケルトンが本気を出すとこうなります"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "問いかけ",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": true,
+     "row": 1,
+     "text": "あなたはjava版と統合版のスケルトンどっちが強いと思いますか？"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "「You Died!」（Score 381）",
+       "range_raw": "35.5〜41.3",
+       "source": "doc_structure",
+       "source_file": "dream/individual/05_TSW_96CsF4Q.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 7
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "java版スケルトンが本気を出すとこうなります",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.27,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "TSW_96CsF4Q"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW",
+    "R_QUESTION"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_COMMENT",
+     "effective_code": "P_COMMENT",
+     "quote": "あなたはジャバ版と統合版のスケルトンどっちが強いと思いますか?",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "予告と「\"スケルトン視点\"」",
+      "range_raw": "0.0〜3.0",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "撃った矢を「かわされる」→「またかわされる」→**赤**「更にかわされる」（3段で強くなる）→「(イテッ)」→ 溶岩で「(熱い熱い熱い!!)」",
+      "range_raw": "4.3〜8",
+      "stage_label": "事件（屈辱）"
+     },
+     {
+      "content": "「(あの野郎...!!)」「(見返してやる...!!)」",
+      "range_raw": "9.6〜11",
+      "stage_label": "動機"
+     },
+     {
+      "content": "**赤**「\"警報\"」（レッドストーンと音ブロック）。12〜15秒に車のクラクション（Vehicle horn 0.2）と判定された音＝音ブロックの警報と思われる [音タグ・考察]。9.6〜17.9秒に音の突出が20回以上 [実測]",
+      "range_raw": "12〜20",
+      "stage_label": "準備"
+     },
+     {
+      "content": "「(奴だ...!)」「(見てろよ...)」「(武器を整えて...)」**赤**「\"スナイパーライフル\"」「(ジャンプして)」「(足場を作り...)」",
+      "range_raw": "19〜31",
+      "stage_label": "緊張"
+     },
+     {
+      "content": "**赤**「\"一回転\"」→ 32〜33秒に Ding（矢が当たった音と思われる）[音タグ]、33.3秒に音の突出 [実測]",
+      "range_raw": "32.5",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "相手はダイヤを掘っている「(今日は大量だな...)」（青字幕＝相手の心の声）",
+      "range_raw": "34.0",
+      "stage_label": "落差"
+     },
+     {
+      "content": "「You Died!」（Score 381）。ナレーション「あなたはjava版と統合版のスケルトン どっちが強いと思いますか？」",
+      "range_raw": "35.5〜41.3",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     4,
+     9,
+     10,
+     11,
+     13,
+     14,
+     15,
+     16,
+     17,
+     33
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     4.15,
+     9.6,
+     10.0,
+     10.35,
+     10.75,
+     11.15,
+     11.6,
+     11.8,
+     13.05,
+     13.45,
+     13.6,
+     13.8,
+     14.2,
+     14.6,
+     14.85,
+     15.15,
+     15.35,
+     15.7,
+     16.1,
+     16.4,
+     16.85,
+     17.25,
+     17.65,
+     17.9,
+     33.3
+    ],
+    "cuts": 10,
+    "cuts_per_5s": {
+     "0": 1,
+     "10": 1,
+     "20": 2,
+     "25": 2,
+     "35": 3,
+     "5": 1
+    },
+    "duration_sec": 41.33,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     },
+     {
+      "position": "end",
+      "row": 1,
+      "start": 37.4
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 40.9,
+    "is_end_position": true,
+    "sec_from_end": 0.43,
+    "start": 37.4,
+    "status": "DOC_OBSERVED",
+    "text": "あなたはjava版と統合版のスケルトンどっちが強いと思いますか？"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「どっちが強いと思いますか？」と問う",
+     "role": "R_QUESTION",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 30.0,
+    "status": "ok",
+    "text": "You think you're strong with the Java版 and the統合版 of the Skeleton Dodge?"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 37.42,
+    "status": "ok",
+    "text": "あなたはジャバ版と統合版のスケルトンどっちが強いと思いますか?"
+   },
+   "payoff_code_4b": {
+    "code": "P_COMMENT",
+    "effective_code": "P_COMMENT",
+    "quote": "あなたはジャバ版と統合版のスケルトンどっちが強いと思いますか?",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 5,
+ "not_applicable": [],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/05_TSW_96CsF4Q.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/TSW_96CsF4Q.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "TSW_96CsF4Q"
+}

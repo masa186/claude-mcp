@@ -1,0 +1,614 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 62.72,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.93,
+   "first_cut_minus_first_row_start": 0.66,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.544,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "緑の手と茶色の手が、**光る目の画面のスマホ**を奪い合う"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「世界一難しい」",
+      "time_raw": "0.27〜1.00",
+      "visual": "同上"
+     },
+     {
+      "end": 1.73,
+      "start": 0.93,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ゲームにハマった」",
+      "time_raw": "0.93〜1.73",
+      "visual": "カット。村人の手のスマホ [実測: 0.93]"
+     },
+     {
+      "end": 2.27,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「漢達」",
+      "time_raw": "2.00〜2.27",
+      "visual": "カット。ゾンビが村人を殴る。漫画の効果文字「ドドドド」[実測: 1.87]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "2.73〜3.00",
+      "visual": "カット。平和な村の家 [実測: 2.60]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.5,
+     "music_mean_during_row": 0.61,
+     "nearest_cut_to_end": 0.1,
+     "nearest_cut_to_start": 0.66,
+     "nearest_subtitle_change_to_end": 0.63,
+     "nearest_subtitle_change_to_start": 0.93,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      1.85
+     ],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「世界一難しいゲームにハマった漢達」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 15,
+     "content_lemmas": [
+      "世界",
+      "一",
+      "難しい",
+      "ゲーム-game",
+      "嵌まる",
+      "男"
+     ],
+     "first_token": {
+      "lemma": "世界",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "世界"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "世界一"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 1,
+      "動詞": 1,
+      "名詞": 4,
+      "形容詞": 1,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "世界一難しいゲームにハマった漢達"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "世界",
+     1
+    ],
+    [
+     "一",
+     1
+    ],
+    [
+     "難しい",
+     1
+    ],
+    [
+     "ゲーム-game",
+     1
+    ],
+    [
+     "嵌まる",
+     1
+    ],
+    [
+     "男",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "世界一難しいゲームにハマった漢達"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 6,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "世界一難しい",
+     "words": [
+      "世界",
+      "一",
+      "難",
+      "しい"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "世界一難しいゲームにハマった漢達"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 16,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "世界一難しいゲームにはまった男たち",
+     "words": [
+      "世界",
+      "一",
+      "難",
+      "しい",
+      "ゲ",
+      "ーム",
+      "には",
+      "ま",
+      "った",
+      "男",
+      "た",
+      "ち"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.5,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "世界一難しいゲームにハマった漢達"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 16,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "世界一難しいゲームにはまった男たち",
+     "words": [
+      "世界",
+      "一",
+      "難",
+      "しい",
+      "ゲ",
+      "ーム",
+      "には",
+      "ま",
+      "った",
+      "男",
+      "た",
+      "ち"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 15,
+    "end": 2.5,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "世界一難しいゲームにハマった漢達"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "世界",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "世界"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "世界一"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "世界一難しいゲームにハマった漢達"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「世界一難しいゲームにハマった漢達」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_SCALE",
+    "effective_code": "H_SCALE",
+    "quote": "世界一難しいゲームにはまった男たち",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": null,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "0.00",
+      "visual": "緑の手と茶色の手が、**光る目の画面のスマホ**を奪い合う"
+     },
+     {
+      "end": 1.0,
+      "start": 0.27,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「世界一難しい」",
+      "time_raw": "0.27〜1.00",
+      "visual": "同上"
+     },
+     {
+      "end": 1.73,
+      "start": 0.93,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ゲームにハマった」",
+      "time_raw": "0.93〜1.73",
+      "visual": "カット。村人の手のスマホ [実測: 0.93]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "世界"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 6.73,
+    "rows": [
+     {
+      "chars": 15,
+      "chars_per_sec": 6.73,
+      "duration": 2.23,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 15
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 6.5,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 12,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "世界一"
+     ],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": true,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "世界一難しいゲームにハマった漢達"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_INTRO"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_DIALOGUE",
+     "effective_code": "D_DIALOGUE",
+     "quote": "DUDE YOU'RE ACTUALLY SO BAD THIS IS SO EASY YOU'RE GARBAGE YEAH GET OUT OF HERE BYEEE",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": "Is that a YouTube video",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "スマホの奪い合い、ナレーション",
+      "range_raw": "0.0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "村の朝「ﾎｵｵｵｵｵｵｵｳｳｳｳｳｳ!!!」→ 豚に「さてと...」→ 羊がアイテムを落として「(???????)」「死んだ...」",
+      "range_raw": "3.9〜9",
+      "stage_label": "前振り"
+     },
+     {
+      "content": "村人がスマホで「これこれ♪」→ 引用符「\"激ムズゲーム\"」→ 失敗して「ｱｧｧｧ///」→「\"リベンジ\"」→「クソだらあぁぁ!!!」",
+      "range_raw": "10.5〜20",
+      "stage_label": "事件"
+     },
+     {
+      "content": "ゾンビ（水色字幕）「オォウ君って本当に」「そのゲーム下手だねw」「それを私によこせ」→ ゾンビがクリアして「君は悪い子だな」「これ本当簡単だよ」「ここから出ていけ」「さよなら～」",
+      "range_raw": "21〜35",
+      "stage_label": "展開"
+     },
+     {
+      "content": "暗転、引用符「\"次の日\"」→ 村人たちを引き連れたゾンビ「(ちょっと待て...)」「(あれは...!)」「(やろうってのか...)」→「\"バトル開始\"」",
+      "range_raw": "35.6〜46",
+      "stage_label": "対決"
+     },
+     {
+      "content": "「\"両者一歩も譲らない\"」（冒頭0秒の画）→ ゾンビの画面「あっ...」",
+      "range_raw": "47.7〜54",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "「お前...」→ **「ビデオだったんか?!」**（ゾンビはゲームではなく動画を見ていた。英語の元音声 \"Is that a YouTube video\"）→「はい失格ね～」「じゃあ処刑」",
+      "range_raw": "55〜58.6",
+      "stage_label": "どんでん返し"
+     },
+     {
+      "content": "ゾンビが村人たちに焼かれる、狂った笑顔の村人に赤の引用符「\"自業自得\"」",
+      "range_raw": "60.3〜62.7",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     1,
+     3,
+     44,
+     59
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     1.85,
+     44.0,
+     59.35,
+     59.6
+    ],
+    "cuts": 54,
+    "cuts_per_5s": {
+     "0": 6,
+     "10": 2,
+     "15": 3,
+     "20": 5,
+     "25": 4,
+     "30": 2,
+     "35": 5,
+     "40": 6,
+     "45": 6,
+     "5": 4,
+     "50": 4,
+     "55": 6,
+     "60": 1
+    },
+    "duration_sec": 62.72,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Screaming": 0.36,
+      "t": 3
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.5,
+    "is_end_position": false,
+    "sec_from_end": 60.22,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "世界一難しいゲームにハマった漢達"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「世界一難しいゲームにハマった漢達」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 60.0,
+    "status": "ok",
+    "text": "Thank you."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 30.08,
+    "status": "ok",
+    "text": "DUDE YOU'RE ACTUALLY SO BAD THIS IS SO EASY YOU'RE GARBAGE YEAH GET OUT OF HERE BYEEE"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": "Is that a YouTube video",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 15,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/15_qNFu8Q55mEE.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/qNFu8Q55mEE.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "qNFu8Q55mEE"
+}

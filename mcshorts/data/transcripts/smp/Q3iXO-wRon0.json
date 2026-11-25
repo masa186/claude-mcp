@@ -1,0 +1,108 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": "0.0",
+     "text": "ロールが自分の画像を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.0",
+     "text": "貼れて激怒する"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "1.5",
+     "text": "ドクタードーナツですが、"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "2.7",
+     "text": "これは"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "3.0",
+     "text": "本人が"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "3.3",
+     "text": "AI画像と"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "4.0",
+     "text": "主張している"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "5.0",
+     "text": "マップアートであり"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "6.0",
+     "text": "ドーナツは見る度に"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": "7.0",
+     "text": "ガチ効きしています"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "11.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "とある画像を貼られて激怒するドクタードーナツですが、これは本人がAI画像と主張しているマップアートであり、ドーナツは見る度にガチ効きしています。それってほんとにAIなのか？結論は残念ながらいいえ、AIじゃありません"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "Q3iXO-wRon0"
+}

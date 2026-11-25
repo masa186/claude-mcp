@@ -1,0 +1,657 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 65.64,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.07,
+   "first_cut_minus_first_row_start": 0.8,
+   "first_doc_row_start": 0.27,
+   "music_mean_outside_narration": 0.473,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「お金に」",
+      "time_raw": "0.00〜0.27",
+      "visual": "村人の手に「67」と書かれたお札（揺れる・ズーム）"
+     },
+     {
+      "end": 1.0,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「目が眩んだ」",
+      "time_raw": "0.53〜1.00",
+      "visual": "同じお札、背景は草原"
+     },
+     {
+      "end": 1.73,
+      "start": 1.07,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「村人の末路が」",
+      "time_raw": "1.07〜1.73",
+      "visual": "カット。村人の顔の寄り [実測: 1.07]"
+     },
+     {
+      "end": 2.73,
+      "start": 2.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「ヤバすぎます」",
+      "time_raw": "2.00〜2.73",
+      "visual": "カット。家の中、ドアにひもが結ばれ、村人がそれを見ている [実測: 2.00]"
+     },
+     {
+      "end": null,
+      "start": 3.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "—",
+      "time_raw": "3.00",
+      "visual": "モザイクのかかった画（流血の場面）"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.8,
+     "music_mean_during_row": 0.417,
+     "nearest_cut_to_end": 0.6,
+     "nearest_cut_to_start": 0.8,
+     "nearest_subtitle_change_to_end": 1.73,
+     "nearest_subtitle_change_to_start": 0.2,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      0.65,
+      0.85,
+      1.1
+     ],
+     "start": 0.27
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜の末路がヤバすぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 20,
+     "content_lemmas": [
+      "金",
+      "目",
+      "眩む",
+      "村人",
+      "末路",
+      "やばい",
+      "過ぎる"
+     ],
+     "first_token": {
+      "lemma": "御",
+      "pos1": "接頭辞",
+      "pos2": "*",
+      "surface": "お"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "すぎ",
+       "ヤバ"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 4,
+      "形容詞": 1,
+      "接頭辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "金",
+     1
+    ],
+    [
+     "目",
+     1
+    ],
+    [
+     "眩む",
+     1
+    ],
+    [
+     "村人",
+     1
+    ],
+    [
+     "末路",
+     1
+    ],
+    [
+     "やばい",
+     1
+    ],
+    [
+     "過ぎる",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.27,
+       "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 9,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "お金に目がくらんだ",
+     "words": [
+      "お",
+      "金",
+      "に",
+      "目",
+      "が",
+      "く",
+      "ら",
+      "んだ"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "お金に目がくらんだ村人の末路が山すぎます",
+     "words": [
+      "お",
+      "金",
+      "に",
+      "目",
+      "が",
+      "く",
+      "ら",
+      "んだ",
+      "村",
+      "人",
+      "の",
+      "末",
+      "路",
+      "が",
+      "山",
+      "す",
+      "ぎ",
+      "ます"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.8,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.27,
+       "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 20,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "お金に目がくらんだ村人の末路が山すぎます",
+     "words": [
+      "お",
+      "金",
+      "に",
+      "目",
+      "が",
+      "く",
+      "ら",
+      "んだ",
+      "村",
+      "人",
+      "の",
+      "末",
+      "路",
+      "が",
+      "山",
+      "す",
+      "ぎ",
+      "ます"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 20,
+    "end": 2.8,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "御",
+      "pos1": "接頭辞",
+      "pos2": "*",
+      "surface": "お"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "すぎ",
+       "ヤバ"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜の末路がヤバすぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_RESULT",
+    "effective_code": "H_RESULT",
+    "quote": "お金に目がくらんだ村人の末路が山すぎます",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**緑**「お金に」",
+      "time_raw": "0.00〜0.27",
+      "visual": "村人の手に「67」と書かれたお札（揺れる・ズーム）"
+     },
+     {
+      "end": 1.0,
+      "start": 0.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「目が眩んだ」",
+      "time_raw": "0.53〜1.00",
+      "visual": "同じお札、背景は草原"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "お"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 7.91,
+    "rows": [
+     {
+      "chars": 20,
+      "chars_per_sec": 7.91,
+      "duration": 2.53,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 20
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.69,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 18,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "すぎ",
+      "ヤバ"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "ドアが勢いよく開く → 59秒に血",
+       "range_raw": "50.5〜59",
+       "source": "doc_structure",
+       "source_file": "dream/individual/13_Yb4XjY7uhKw.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 6
+      }
+     ],
+     "from_part": 0,
+     "from_quote": "お金に目が眩んだ村人の末路がヤバすぎます",
+     "from_role": "R_RESULT_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.27,
+     "note": null,
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "Yb4XjY7uhKw"
+    }
+   ],
+   "role_sequence": [
+    "R_RESULT_PREVIEW"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "DX",
+     "effective_code": "DX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "PX",
+     "effective_code": "PX",
+     "quote": null,
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "「67」のお札、ドアのひも、モザイク",
+      "range_raw": "0.0〜3.0",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "朝「ﾎｵｵｵｵｵｫｫｵｳｳｳ///」→ 夜に寝る「zzzzz」。3〜5秒に遠吠え（Howl 0.34）[音タグ]",
+      "range_raw": "3.4〜9",
+      "stage_label": "状況説明"
+     },
+     {
+      "content": "「何だ??」→ 引用符「\"歯の妖精\"」→ 妖精「カモ発見...」→ 引用符「\"歯を回収\"」→ 枕の下に「\"67ドル\"」。16〜17秒に Plop [音タグ]",
+      "range_raw": "9.3〜19",
+      "stage_label": "事件"
+     },
+     {
+      "content": "友だちに「見て見て!!」→ 引用符「\"2\"」→ ニヤけ顔で「67www」→ 泣き顔のミーム「ウゼェェェ!!」→「お前はこれで死ねェ!!」。21〜23秒に爆発音と BGM の停止（Music 0〜0.1）[音タグ]",
+      "range_raw": "20〜27",
+      "stage_label": "展開"
+     },
+     {
+      "content": "殴られて暗転。29秒に Sine wave 0.58（耳鳴りのような音）[音タグ] →「ごめんヤり過ぎた...」→「歯折れてんじゃん!!」（目が＄マーク）",
+      "range_raw": "28〜37",
+      "stage_label": "変化"
+     },
+     {
+      "content": "「??????」「歯がお金になるの!!」「えぇぇぇぇー???」「その歯抜こ!!」「いいねぇ」→ ドアにひもを結んで「準備完了✅」",
+      "range_raw": "39〜50",
+      "stage_label": "緊張"
+     },
+     {
+      "content": "「じゃイクよ～!!」「おっけー」→ 窓の外で「むかつく」→ ドアが勢いよく開く → 59秒に血。59秒に Breaking・Crack [音タグ]。54〜55秒で BGM が落ちる（Music 0.1〜0.2）",
+      "range_raw": "50.5〜59",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "窓の外から歯の妖精が見ている。赤の引用符「\"妖精ドン引き\"」",
+      "range_raw": "60.7〜65.6",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     0,
+     1,
+     22,
+     61
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     0.65,
+     0.85,
+     1.1,
+     61.35
+    ],
+    "cuts": 58,
+    "cuts_per_5s": {
+     "0": 4,
+     "10": 5,
+     "15": 4,
+     "20": 2,
+     "25": 4,
+     "30": 1,
+     "35": 5,
+     "40": 5,
+     "45": 7,
+     "5": 4,
+     "50": 6,
+     "55": 6,
+     "60": 5
+    },
+    "duration_sec": 65.64,
+    "excitement_audiotag_ge_threshold": [
+     {
+      "Explosion": 0.31,
+      "t": 22
+     }
+    ],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.27
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.8,
+    "is_end_position": false,
+    "sec_from_end": 62.84,
+    "start": 0.27,
+    "status": "DOC_OBSERVED",
+    "text": "お金に目が眩んだ村人の末路がヤバすぎます"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [
+      "R_LABEL"
+     ],
+     "flag": null,
+     "label": "結果・結末の予告",
+     "part": 0,
+     "reason": "「〜の末路がヤバすぎます」と結末を先に言う",
+     "role": "R_RESULT_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 60.0,
+    "status": "ok",
+    "text": "Thank you."
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "text": "お金に目がくらんだ村人の末路が山すぎます"
+   },
+   "payoff_code_4b": {
+    "code": "PX",
+    "effective_code": "PX",
+    "quote": null,
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 13,
+ "not_applicable": [
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/13_Yb4XjY7uhKw.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/Yb4XjY7uhKw.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "Yb4XjY7uhKw"
+}

@@ -1,0 +1,510 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "見えない何かに追われてるのを身抜くドクタードーナツ",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "見えない"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.5,
+     "text": "何かに"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.7,
+     "text": "追われてるのを"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.2,
+     "text": "見抜く"
+    },
+    {
+     "color": "cyan",
+     "end": null,
+     "start": 1.7,
+     "text": "ドクター・ドーナツ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.5,
+     "text": "*滑空中*"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.7,
+     "text": "Hudsonが"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.0,
+     "text": "俺に1億送ったらしいけど"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.7,
+     "text": "まじで？"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.2,
+     "text": "ありえん"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.0,
+     "text": "W.Hudson"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "見えない何かに追われてるのを見抜くドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 1.25,
+     "start": 0.0,
+     "text": "見えない何かに追われてるのを見抜く",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 2.25,
+     "start": 1.75,
+     "text": "ドクター・ドーナツ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 4.5,
+     "start": 3.75,
+     "text": "Hudsonが俺に1億送ったらしいけど",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 5.0,
+     "start": 4.75,
+     "text": "まじで？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 6.25,
+     "start": 6.0,
+     "text": "ありえん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 7.25,
+     "start": 7.0,
+     "text": "W. Hudson",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 19.5,
+     "start": 14.75,
+     "text": "待って、5秒以内に誰かがエリトラで飛びながら俺を追ってくる確率って皆どれくらいだと思う？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 26.5,
+     "start": 26.25,
+     "text": "待てど",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 27.0,
+     "start": 26.5,
+     "text": "は？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 28.0,
+     "start": 27.5,
+     "text": "誰か…",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 29.5,
+     "start": 29.0,
+     "text": "ふぁ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 32.25,
+     "start": 31.75,
+     "text": "/tpa Mr..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 47.0,
+     "start": 46.25,
+     "text": "エリトラ探せ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 48.0,
+     "start": 47.25,
+     "text": "エリトラ探せ..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 51.0,
+     "start": 48.25,
+     "text": "エリトラ探せ..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 54.25,
+     "start": 54.0,
+     "text": "ペドロ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 56.25,
+     "start": 55.0,
+     "text": "ペドロなんでそんなことするお前",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 57.5,
+     "start": 56.5,
+     "text": "“雪玉当てたかっただけ”",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 58.25,
+     "start": 57.75,
+     "text": "WWW",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "見えない",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.5,
+     "text": "何かに",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.75,
+     "text": "追われてるのを",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.5,
+     "text": "見抜く",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 1.75,
+     "text": "ドクター・ドーナツ",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": 2.5,
+     "text": "*滑空中*",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 3.75,
+     "text": "Hudsonが",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.0,
+     "text": "俺に1億送ったらしいけど",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.25,
+     "text": "100",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.5,
+     "text": "mil.",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.75,
+     "text": "まじで？",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.0,
+     "text": "Did you actually?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.25,
+     "text": "HUDSON?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.2,
+     "text": "ありえん",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.5,
+     "text": "WAY.",
+     "track": "subtitle"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": 7.0,
+     "text": "W. Hudson",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 9.75,
+     "text": "*気配を感じる..*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.75,
+     "text": "待って",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 15.0,
+     "text": "5秒以内に誰かが",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 16.0,
+     "text": "エリトラで飛びながら",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 17.0,
+     "text": "俺を追ってくる確率って",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 18.0,
+     "text": "皆どれくらいだと思う？",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": 21.25,
+     "text": "*パール音*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 26.0,
+     "text": "WHAT?",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 27.5,
+     "text": "SOMEONE.",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 29.0,
+     "text": "WHAT?",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 31.75,
+     "text": "*戦闘中ログ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 35.75,
+     "text": "*誘導を試みる*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 38.75,
+     "text": "*こ、こない*",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": 46.25,
+     "text": "エリトラ探せ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 46.5,
+     "text": "FAN",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 46.75,
+     "text": "LITRA.",
+     "track": "subtitle"
+    },
+    {
+     "color": "黄",
+     "end": null,
+     "start": 47.0,
+     "text": "エリトラ探せ..",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 52.0,
+     "text": "*ドーナツSMP開発者ペドロ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 54.0,
+     "text": "PEDRO?",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 56.75,
+     "text": "“雪玉当てたかっただけ”",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "EUUVfOuOU1A"
+}

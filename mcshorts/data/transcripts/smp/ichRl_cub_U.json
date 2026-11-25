@@ -1,0 +1,289 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "マインクラフト史上最長のジャンプ記録を更新するドクタードーナツ",
+     "track": "voice"
+    },
+    {
+     "end": null,
+     "start": 0,
+     "text": "マインクラフト史上最長のジャンプ記録を更新するドクタードーナツ",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "マインクラフト"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.2,
+     "text": "史上最長の"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "ジャンプ記録を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.8,
+     "text": "更新する"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.6,
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "yellow",
+     "end": null,
+     "start": 3.2,
+     "text": "*20マスジャンプ挑戦*"
+    },
+    {
+     "color": "red",
+     "end": null,
+     "start": 4.4,
+     "text": "*記録11マス*"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.4,
+     "text": "よおおおお"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.1,
+     "text": "お前さあ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.0,
+     "text": "お前タイミング悪すぎだろ"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.0秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラ史上最長のジャンプ記録を更新するドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.25,
+     "start": 0.0,
+     "text": "マイクラ史上最長のジャンプ記録を更新する",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.0,
+     "start": 2.25,
+     "text": "ドクター・ドーナツ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 6.0,
+     "start": 5.25,
+     "text": "よおおおお",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.0,
+     "start": 6.0,
+     "text": "お前さあお前タイミング悪すぎだろ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.25,
+     "start": 8.0,
+     "text": "ブロ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.25,
+     "start": 9.0,
+     "text": "これが史上最長のジャンプだ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 11.0,
+     "start": 10.25,
+     "text": "マインクラフトの",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 14.0,
+     "start": 11.5,
+     "text": "いくぞ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.0,
+     "start": 14.75,
+     "text": "お〜w",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 20.0,
+     "start": 19.25,
+     "text": "まじでいってんの？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.0,
+     "start": 20.0,
+     "text": "お前？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 32.25,
+     "start": 31.75,
+     "text": "待てと！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 34.0,
+     "start": 32.25,
+     "text": "ここで壊すとどうなるんだ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 35.75,
+     "start": 34.75,
+     "text": "もしもし？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 37.0,
+     "start": 36.25,
+     "text": "お、待て",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 37.0,
+     "start": 37.0,
+     "text": "あいつころしちゃった",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.25,
+     "text": "*20マスジャンプ挑戦*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.25,
+     "text": "*記録11マス*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 8.25,
+     "text": "*テイク2*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 16.5,
+     "text": "*軌道砲発動*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 18.0,
+     "text": "(...?)",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 22.75,
+     "text": "*軌道砲確認*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 28.0,
+     "text": "*気配を感じる..*",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "ichRl_cub_U"
+}

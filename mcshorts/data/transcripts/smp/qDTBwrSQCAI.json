@@ -1,0 +1,84 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "ゲーム実況に憧れた子どもを見る"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.7,
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.7,
+     "text": "マインクラフト、だけど緑に触れてはいけない"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.3,
+     "text": "しんだ"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.3,
+     "text": "おけま.."
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 7.7,
+     "text": "ワールド読み込みです"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ゲーム実況に憧れた子どもを見るドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "qDTBwrSQCAI"
+}

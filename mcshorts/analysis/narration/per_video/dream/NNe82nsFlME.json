@@ -1,0 +1,929 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 35.43,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 1.47,
+   "first_cut_minus_first_row_start": 1.47,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.474,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 1.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「キッズ達が」→ 白「作ったトラップに」",
+      "time_raw": "0.00〜1.27",
+      "visual": "真上から見た Sapnap（ダイヤの鎧）が、TNTの横で何かを仕掛ける"
+     },
+     {
+      "end": 2.53,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「引っかかってしまう」→ **緑**「Dream」",
+      "time_raw": "1.47〜2.53",
+      "visual": "カット。**Dream の後ろ姿**（緑の頭、白い体）が崖の上に立つ [実測: 1.47]"
+     },
+     {
+      "end": 3.0,
+      "start": 2.73,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ですが数秒後彼が」",
+      "time_raw": "2.73〜3.00",
+      "visual": "カット。黒い穴（エンドポータル）とTNT、落ちていく Dream [実測: 2.67]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 5.0,
+     "music_mean_during_row": 0.575,
+     "nearest_cut_to_end": 0.27,
+     "nearest_cut_to_start": 1.47,
+     "nearest_subtitle_change_to_end": 1.13,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [
+      5.2
+     ],
+     "start": 0.0
+    },
+    {
+     "end": 35.1,
+     "music_mean_during_row": 0.56,
+     "nearest_cut_to_end": 4.7,
+     "nearest_cut_to_start": 1.1,
+     "nearest_subtitle_change_to_end": 0.57,
+     "nearest_subtitle_change_to_start": 0.17,
+     "row": 1,
+     "spikes_within_row_or_1s_after": [
+      33.95
+     ],
+     "start": 31.5
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜引っかかってしまうDreamですが」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "ひねりの予告",
+     "part": 1,
+     "reason": "「数秒後彼がとんでもない行動に出ます」と予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「何が起きたか分かりましたか？」と問う",
+     "role": "R_QUESTION",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 1,
+     "reason": "「分かった方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 30,
+     "content_lemmas": [
+      "キッド-kid",
+      "作る",
+      "トラップ-trap",
+      "引っ掛かる",
+      "仕舞う",
+      "Dream"
+     ],
+     "first_token": {
+      "lemma": "キッド-kid",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "キッズ"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "助動詞": 2,
+      "助詞": 4,
+      "動詞": 3,
+      "名詞": 3,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "キッズ達が作ったトラップに引っかかってしまうDreamですが"
+    },
+    {
+     "chars": 17,
+     "content_lemmas": [
+      "数",
+      "秒",
+      "彼",
+      "とんでも",
+      "無い",
+      "行動",
+      "出る"
+     ],
+     "first_token": {
+      "lemma": "数",
+      "pos1": "名詞",
+      "pos2": "数詞",
+      "surface": "数"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "とんでもない"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "代名詞": 1,
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 2,
+      "動詞": 1,
+      "名詞": 3,
+      "形容詞": 1,
+      "接尾辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "数秒後彼がとんでもない行動に出ます"
+    },
+    {
+     "chars": 17,
+     "content_lemmas": [
+      "皆",
+      "何",
+      "起きる",
+      "分かる"
+     ],
+     "first_token": {
+      "lemma": "皆",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "皆"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "問いかけ",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": true
+     },
+     "part": 0,
+     "pos_counts": {
+      "代名詞": 1,
+      "助動詞": 3,
+      "助詞": 4,
+      "動詞": 2,
+      "名詞": 1,
+      "接尾辞": 1,
+      "補助記号": 1
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "皆さんは何が起きたか分かりましたか？"
+    },
+    {
+     "chars": 13,
+     "content_lemmas": [
+      "分かる",
+      "方",
+      "チャンネル-channel",
+      "登録"
+     ],
+     "first_token": {
+      "lemma": "分かる",
+      "pos1": "動詞",
+      "pos2": "一般",
+      "surface": "分かっ"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": true,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "体言・その他",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "part": 1,
+     "pos_counts": {
+      "助動詞": 1,
+      "助詞": 1,
+      "動詞": 1,
+      "名詞": 3
+     },
+     "row": 1,
+     "status": "DOC_OBSERVED",
+     "text": "分かった方はチャンネル登録"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "分かる",
+     2
+    ],
+    [
+     "キッド-kid",
+     1
+    ],
+    [
+     "作る",
+     1
+    ],
+    [
+     "トラップ-trap",
+     1
+    ],
+    [
+     "引っ掛かる",
+     1
+    ],
+    [
+     "仕舞う",
+     1
+    ],
+    [
+     "Dream",
+     1
+    ],
+    [
+     "数",
+     1
+    ],
+    [
+     "秒",
+     1
+    ],
+    [
+     "彼",
+     1
+    ],
+    [
+     "とんでも",
+     1
+    ],
+    [
+     "無い",
+     1
+    ],
+    [
+     "行動",
+     1
+    ],
+    [
+     "出る",
+     1
+    ],
+    [
+     "皆",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 5.0,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "キッズ達が作ったトラップに引っかかってしまうDreamですが 数秒後彼がとんでもない行動に出ます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 10,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "キッズたちが作ったト",
+     "words": [
+      "キ",
+      "ッ",
+      "ズ",
+      "た",
+      "ち",
+      "が",
+      "作",
+      "った",
+      "ト"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 5.0,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "キッズ達が作ったトラップに引っかかってしまうDreamですが 数秒後彼がとんでもない行動に出ます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 30,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "キッズたちが作ったトラックに引っ掛かってしまうドリームですが、数",
+     "words": [
+      "キ",
+      "ッ",
+      "ズ",
+      "た",
+      "ち",
+      "が",
+      "作",
+      "った",
+      "ト",
+      "ラ",
+      "ック",
+      "に",
+      "引",
+      "っ",
+      "掛",
+      "か",
+      "って",
+      "しま",
+      "う",
+      "ド",
+      "リ",
+      "ーム",
+      "です",
+      "が、",
+      "数"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 5.0,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "キッズ達が作ったトラップに引っかかってしまうDreamですが 数秒後彼がとんでもない行動に出ます"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 46,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "キッズたちが作ったトラックに引っ掛かってしまうドリームですが、数秒後彼がとんでもない行動に出ます。",
+     "words": [
+      "キ",
+      "ッ",
+      "ズ",
+      "た",
+      "ち",
+      "が",
+      "作",
+      "った",
+      "ト",
+      "ラ",
+      "ック",
+      "に",
+      "引",
+      "っ",
+      "掛",
+      "か",
+      "って",
+      "しま",
+      "う",
+      "ド",
+      "リ",
+      "ーム",
+      "です",
+      "が、",
+      "数",
+      "秒",
+      "後",
+      "彼",
+      "が",
+      "と",
+      "ん",
+      "でも",
+      "ない",
+      "行",
+      "動",
+      "に",
+      "出",
+      "ます。"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 47,
+    "end": 5.0,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "キッズ達が作ったトラップに引っかかってしまうDreamですが 数秒後彼がとんでもない行動に出ます"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "キッド-kid",
+      "pos1": "名詞",
+      "pos2": "普通名詞",
+      "surface": "キッズ"
+     },
+     "flags": {
+      "adversative": true,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [],
+      "ending_type": "ですが止め",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Dream"
+      ],
+      "question": false
+     },
+     "text": "キッズ達が作ったトラップに引っかかってしまうDreamですが"
+    },
+    {
+     "first_token": {
+      "lemma": "数",
+      "pos1": "名詞",
+      "pos2": "数詞",
+      "surface": "数"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "とんでもない"
+      ],
+      "ending_type": "ます(予告・現在)",
+      "fuseji": false,
+      "number": true,
+      "prohibition": false,
+      "proper_nouns": [],
+      "question": false
+     },
+     "text": "数秒後彼がとんでもない行動に出ます"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "前提・状況の説明",
+     "part": 0,
+     "reason": "「〜引っかかってしまうDreamですが」の前提",
+     "role": "R_SETUP",
+     "row": 0,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "ひねりの予告",
+     "part": 1,
+     "reason": "「数秒後彼がとんでもない行動に出ます」と予告",
+     "role": "R_TWIST_PREVIEW",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_TWIST",
+    "effective_code": "H_TWIST",
+    "quote": "キッズたちが作ったトラックに引っ掛かってしまうドリームですが、数秒後彼がとんでもない行動に出ます。",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 1.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「キッズ達が」→ 白「作ったトラップに」",
+      "time_raw": "0.00〜1.27",
+      "visual": "真上から見た Sapnap（ダイヤの鎧）が、TNTの横で何かを仕掛ける"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "キ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 8.87,
+    "rows": [
+     {
+      "chars": 47,
+      "chars_per_sec": 9.4,
+      "duration": 5.0,
+      "gap_to_next_row": 26.5,
+      "row": 0
+     },
+     {
+      "chars": 30,
+      "chars_per_sec": 8.33,
+      "duration": 3.6,
+      "gap_to_next_row": null,
+      "row": 1
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 77
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 2.17,
+    "gap_max": 0.06,
+    "gap_median": 0.06,
+    "gaps_ge_0.3s": 0,
+    "n_words": 54,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 1
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": true,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "ですが止め",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Dream"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "キッズ達が作ったトラップに引っかかってしまうDreamですが"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "とんでもない"
+     ],
+     "ending_type": "ます(予告・現在)",
+     "fuseji": false,
+     "number": true,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 0,
+     "text": "数秒後彼がとんでもない行動に出ます"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "問いかけ",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": true,
+     "row": 1,
+     "text": "皆さんは何が起きたか分かりましたか？"
+    },
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": true,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [],
+     "ending_type": "体言・その他",
+     "fuseji": false,
+     "number": false,
+     "part": 1,
+     "prohibition": false,
+     "proper_nouns": [],
+     "question": false,
+     "row": 1,
+     "text": "分かった方はチャンネル登録"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [
+    {
+     "channel": "dream",
+     "coder": "claude",
+     "evidence": [
+      {
+       "quote": "Dream（緑）「じゃーねー」",
+       "range_raw": "29.6〜35.4",
+       "source": "doc_structure",
+       "source_file": "dream/individual/49_NNe82nsFlME.md",
+       "status": "DOC_OBSERVED",
+       "structure_row": 4
+      }
+     ],
+     "from_part": 1,
+     "from_quote": "数秒後彼がとんでもない行動に出ます",
+     "from_role": "R_TWIST_PREVIEW",
+     "from_row": 0,
+     "from_start": 0.0,
+     "note": "何をしたかは文では説明されない（ナレーションが「分かりましたか？」と問う）",
+     "review_status": "UNVERIFIED",
+     "status": "LINKED",
+     "video_id": "NNe82nsFlME"
+    }
+   ],
+   "role_sequence": [
+    "R_SETUP",
+    "R_TWIST_PREVIEW",
+    "R_QUESTION",
+    "R_CTA"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_DIALOGUE",
+     "effective_code": "D_DIALOGUE",
+     "quote": "Alright, the Superhero Music is playing, you ready?",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_REVERSAL",
+     "effective_code": "P_REVERSAL",
+     "quote": "Oh my god, he touched it! He touched it! How did he do that?",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "トラップ、Dream の後ろ姿、ナレーション",
+      "range_raw": "0〜5",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "追う側の一人称（オレンジ字幕）「俺らでアイツ捕えるぞ」＋白「＊水を流すDream＊」→「ヤツはお終いだ」→「そろそろそっち行くわ」→「ここでアイツを〇してやる」",
+      "range_raw": "5.4〜12",
+      "stage_label": "追う側の作戦"
+     },
+     {
+      "content": "エンドポータルの部屋。Dream（緑字幕）「よっしゃ」→「音楽が流れてるぜ」→「準備はいい？」→「天国を見ることになるぜ」",
+      "range_raw": "14〜22",
+      "stage_label": "準備"
+     },
+     {
+      "content": "赤いトラップの壁 → 水 → 追う側「じゃーねDream!!!!」→「どこ行ったあいつ?!」「ちょっ待っ...」→ 暗い画面",
+      "range_raw": "22.7〜29",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "Dream（緑）「じゃーねー」→ ジ・エンドの白い地面に土ブロック → ナレーション「皆さんは何が起きたか」「分かりましたか？」「分かった方は」「チャンネル登録」",
+      "range_raw": "29.6〜35.4",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     5,
+     33
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     5.2,
+     33.95
+    ],
+    "cuts": 20,
+    "cuts_per_5s": {
+     "0": 2,
+     "10": 4,
+     "15": 3,
+     "20": 2,
+     "25": 4,
+     "30": 2,
+     "5": 3
+    },
+    "duration_sec": 35.43,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     },
+     {
+      "position": "end",
+      "row": 1,
+      "start": 31.5
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 35.1,
+    "is_end_position": true,
+    "sec_from_end": 0.33,
+    "start": 31.5,
+    "status": "DOC_OBSERVED",
+    "text": "皆さんは何が起きたか分かりましたか？ 分かった方はチャンネル登録"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "視聴者への問いかけ",
+     "part": 0,
+     "reason": "「何が起きたか分かりましたか？」と問う",
+     "role": "R_QUESTION",
+     "row": 1,
+     "status": "UNVERIFIED"
+    },
+    {
+     "also": [],
+     "flag": null,
+     "label": "呼びかけ（登録・いいね）",
+     "part": 1,
+     "reason": "「分かった方はチャンネル登録」",
+     "role": "R_CTA",
+     "row": 1,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 29.38,
+    "status": "ok",
+    "text": "Bye!"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "japanese",
+    "start": 33.6,
+    "status": "ok",
+    "text": "わかった方はチャンネル登録"
+   },
+   "payoff_code_4b": {
+    "code": "P_REVERSAL",
+    "effective_code": "P_REVERSAL",
+    "quote": "Oh my god, he touched it! He touched it! How did he do that?",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 49,
+ "not_applicable": [],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/49_NNe82nsFlME.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/NNe82nsFlME.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "NNe82nsFlME"
+}

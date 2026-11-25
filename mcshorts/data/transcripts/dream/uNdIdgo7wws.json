@@ -1,0 +1,298 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/uNdIdgo7wws.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.7,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "The DREAM is in the battle of Technoblade."
+    },
+    {
+     "end": 4.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 2.7,
+     "text": "Oh, that arrow was so close!"
+    },
+    {
+     "end": 6.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 4.5,
+     "text": "Techno just picked up that arrow."
+    },
+    {
+     "end": 8.0,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 6.5,
+     "text": "Oh my gosh, it's so close!"
+    },
+    {
+     "end": 9.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 8.0,
+     "text": "Oh no, DREAM!"
+    },
+    {
+     "end": 10.0,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 9.5,
+     "text": "DREAM!"
+    },
+    {
+     "end": 11.0,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 10.0,
+     "text": "Oh, yes! Yes! Yes!"
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "Oh, no!"
+    },
+    {
+     "end": 13.0,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 12.0,
+     "text": "No!"
+    },
+    {
+     "end": 14.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 13.0,
+     "text": "TECNO CAN'T LOSE!"
+    },
+    {
+     "end": 18.0,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 14.5,
+     "text": "The DREAM is in the battle of this game, but he is in the battle of this game."
+    },
+    {
+     "end": 19.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 18.0,
+     "text": "Look how aggressive DREAM's been."
+    },
+    {
+     "end": 21.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 19.5,
+     "text": "DREAM is not playing around."
+    },
+    {
+     "end": 22.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 21.5,
+     "text": "Techno's up too hard."
+    },
+    {
+     "end": 23.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 22.5,
+     "text": "Oh my goodness."
+    },
+    {
+     "end": 24.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 23.5,
+     "text": "Oh my goodness, oh my goodness."
+    },
+    {
+     "end": 27.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 24.5,
+     "text": "DREAM can't see the heart that he doesn't know that he's losing."
+    },
+    {
+     "end": 28.5,
+     "logprob": -0.45,
+     "no_speech": 0.0,
+     "start": 27.5,
+     "text": "Oh no."
+    },
+    {
+     "end": 30.5,
+     "logprob": -0.6,
+     "no_speech": 0.0,
+     "start": 28.5,
+     "text": "Oh, they both have their heart! Oh my God!"
+    },
+    {
+     "end": 33.5,
+     "logprob": -0.6,
+     "no_speech": 0.0,
+     "start": 30.5,
+     "text": "Let's go! Let's go! Let's go!"
+    },
+    {
+     "end": 39.5,
+     "logprob": -0.6,
+     "no_speech": 0.0,
+     "start": 33.5,
+     "text": "In the end, this fight was TecnoGlade's victory, but the dream with him is really amazing."
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/uNdIdgo7wws.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.58,
+     "logprob": -0.67,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Dreamが覚醒します"
+    },
+    {
+     "end": 37.04,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 33.98,
+     "text": "結局この戦いはテクノグレイドの勝利で幕を閉じましたが"
+    },
+    {
+     "end": 39.34,
+     "logprob": -0.11,
+     "no_speech": 0.0,
+     "start": 37.04,
+     "text": "彼と張り合えるドリームが本当にすごいですね"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/uNdIdgo7wws.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 2.58,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "テクノブレイドとの決闘中ドリームが覚醒します"
+    },
+    {
+     "end": 4.42,
+     "no_speech": 0.0,
+     "start": 2.58,
+     "text": "Oh! That arrow was so close!"
+    },
+    {
+     "end": 4.98,
+     "no_speech": 0.0,
+     "start": 4.42,
+     "text": "テクノ…"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/uNdIdgo7wws.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 37.08,
+     "no_speech": 0.0,
+     "start": 32.68,
+     "text": "結局この戦いはテクノグレイドの勝利で幕を閉じましたが"
+    },
+    {
+     "end": 39.42,
+     "no_speech": 0.0,
+     "start": 37.08,
+     "text": "彼と張り合えるドリームは本当にすごいですね"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "テクノブレイドとの決闘中、ドリームが覚醒します。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "テクノブレイド（ピンク）との決闘中（白）→ Dream（緑）が（白）→ 覚醒します（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "uNdIdgo7wws"
+}

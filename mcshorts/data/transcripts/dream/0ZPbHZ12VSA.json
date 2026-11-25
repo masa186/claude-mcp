@@ -1,0 +1,313 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/0ZPbHZ12VSA.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Micra-van Van Damny nori Kai Butsu otaosu EJ-Sabolison"
+    },
+    {
+     "end": 5.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 3.0,
+     "text": "Yo, what is going on outside?"
+    },
+    {
+     "end": 6.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 5.0,
+     "text": "What is that?"
+    },
+    {
+     "end": 11.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 9.0,
+     "text": "Evacuate the village! I'll be right back!"
+    },
+    {
+     "end": 12.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 11.0,
+     "text": "Alright, I'm on it!"
+    },
+    {
+     "end": 16.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 13.0,
+     "text": "We have a code red! Code red! Set the alarms!"
+    },
+    {
+     "end": 19.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 16.0,
+     "text": "Get systems online! You two, meet me at the docking bay!"
+    },
+    {
+     "end": 22.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 19.0,
+     "text": "Make sure no containment gets out! Move!"
+    },
+    {
+     "end": 28.0,
+     "logprob": -0.43,
+     "no_speech": 0.0,
+     "start": 24.0,
+     "text": "Sentry, I don't care about the progress of the destroyer. I need it right now!"
+    },
+    {
+     "end": 30.0,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 28.0,
+     "text": "Oh"
+    },
+    {
+     "end": 44.44,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 40.88,
+     "text": "Robot activate weatherstorm defense protocol"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/0ZPbHZ12VSA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.94,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マイクラバンガンダムニのリカイブツを倒す EJサボード"
+    },
+    {
+     "end": 4.82,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 2.94,
+     "text": "よ! What is going on outside?"
+    },
+    {
+     "end": 5.48,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 4.98,
+     "text": "What is that?"
+    },
+    {
+     "end": 11.08,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 9.24,
+     "text": "Evacuate the village! I'll be right back!"
+    },
+    {
+     "end": 11.96,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 11.24,
+     "text": "Alright, I'm on it!"
+    },
+    {
+     "end": 14.44,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 12.92,
+     "text": "We have a Code Red! Code Red!"
+    },
+    {
+     "end": 15.44,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 14.56,
+     "text": "Send the alarms!"
+    },
+    {
+     "end": 17.26,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 16.08,
+     "text": "Get systems online!"
+    },
+    {
+     "end": 19.12,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 17.52,
+     "text": "You two meet me at the docking bay!"
+    },
+    {
+     "end": 21.2,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 19.5,
+     "text": "Make sure no containment gets out!"
+    },
+    {
+     "end": 21.98,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 21.4,
+     "text": "Move!"
+    },
+    {
+     "end": 26.52,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 23.98,
+     "text": "Sentry! I don't care about the progress of the destroyer!"
+    },
+    {
+     "end": 27.32,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 26.64,
+     "text": "I need it right now!"
+    },
+    {
+     "end": 28.18,
+     "logprob": -0.26,
+     "no_speech": 0.0,
+     "start": 27.64,
+     "text": "Yes sir!"
+    },
+    {
+     "end": 46.46,
+     "logprob": -4.34,
+     "no_speech": 0.0,
+     "start": 28.18,
+     "text": "だがベザーの ハモポティенко ゴッソ cult"
+    },
+    {
+     "end": 48.3,
+     "logprob": -0.61,
+     "no_speech": 0.0,
+     "start": 46.46,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/0ZPbHZ12VSA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "マイクラ版ワンダムに乗り怪物を倒すエイジーサポート"
+    },
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 3.0,
+     "text": "ヨ! What is going on outside?"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/0ZPbHZ12VSA.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 47.22,
+     "no_speech": 0.0,
+     "start": 45.22,
+     "text": "日本語のナレーション"
+    },
+    {
+     "end": 49.22,
+     "no_speech": 0.0,
+     "start": 47.22,
+     "text": "日本語のナレーション"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラ版ガンダムに乗り、怪物を倒すエイジェイザボールド。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラ版（白）→ ガンダムに乗り（水色）→ 怪物を倒す（白）→ エイジェイザボールド（黄）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "0ZPbHZ12VSA"
+}

@@ -1,0 +1,102 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ドクタードーナツが"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "彼女のパーフェクトと"
+    },
+    {
+     "color": "青",
+     "end": null,
+     "start": 2.0,
+     "text": "同棲しました"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.5,
+     "text": "ヘイベイビー"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.2,
+     "text": "(ニヤニヤ)"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.0,
+     "text": "やあチャット"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.0,
+     "text": "みんな聞こえる？"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.7,
+     "text": "あっ//♥"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7.2,
+     "text": "やあみんなー"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドクタードーナツが彼女のパーフェクトと同棲しました"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "889JjAdKHyU"
+}

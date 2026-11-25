@@ -1,0 +1,223 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/NNe82nsFlME.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 5.02,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "Kids-tach-ta-truck-truck-q-hich-kaka-te-shmoud-dream-s-shus-go-bo-kare-g-to-en-de-mo-nay-kou-do-ni-de-mas-"
+    },
+    {
+     "end": 7.1,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 5.02,
+     "text": "Just, uh, get ready! We got him!"
+    },
+    {
+     "end": 8.8,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 7.34,
+     "text": "It's cool!"
+    },
+    {
+     "end": 10.26,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 9.74,
+     "text": "There he goes!"
+    },
+    {
+     "end": 12.54,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 11.94,
+     "text": "Good part possible!"
+    },
+    {
+     "end": 17.54,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 14.66,
+     "text": "Alright, the Superhero Music is playing, you ready?"
+    },
+    {
+     "end": 20.36,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 18.5,
+     "text": "You've gotta find out what Heaven looks like, bro."
+    },
+    {
+     "end": 24.06,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 23.22,
+     "text": "He's so serious!"
+    },
+    {
+     "end": 25.12,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 24.54,
+     "text": "He's so serious!"
+    },
+    {
+     "end": 27.88,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 25.4,
+     "text": "Oh my god, he touched it! He touched it! How did he do that?"
+    },
+    {
+     "end": 29.38,
+     "logprob": -1.13,
+     "no_speech": 0.0,
+     "start": 28.24,
+     "text": "Wait, he did! He said it! He said his end!"
+    },
+    {
+     "end": 29.88,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 29.38,
+     "text": "Bye!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/NNe82nsFlME.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 4.98,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "キッズたちが作ったトラックに引っ掛かってしまうドリームですが、数秒後彼がとんでもない行動に出ます。"
+    },
+    {
+     "end": 33.6,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 31.46,
+     "text": "皆さんは何が起きたかわかりましたか"
+    },
+    {
+     "end": 35.1,
+     "logprob": -0.22,
+     "no_speech": 0.0,
+     "start": 33.6,
+     "text": "わかった方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/NNe82nsFlME.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "キッズたちが作ったトラックに引っかかってしまうドリームですが数秒後彼がとんでもない行動に出ます"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/NNe82nsFlME.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 33.65,
+     "no_speech": 0.0,
+     "start": 28.43,
+     "text": "皆さんは何が起きたか分かりましたか?"
+    },
+    {
+     "end": 35.17,
+     "no_speech": 0.0,
+     "start": 33.79,
+     "text": "分かった方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "キッズ達が作ったトラップに引っかかってしまうドリーム。ですが数秒後、彼がとんでもない行動に出ます。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "キッズ達が（白）→ 作ったトラップに（白）→ 引っかかってしまう（白）→ Dream（緑）→ ですが数秒後彼が（白）→ とんでもない行動に（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "NNe82nsFlME"
+}

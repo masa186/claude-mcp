@@ -1,0 +1,766 @@
+{
+ "id": "Ag_RdDjnYDA",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 1.3,
+    "text": "彼はヒツジクをやりました",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      0.0,
+      0.24,
+      "彼"
+     ],
+     [
+      0.24,
+      0.4,
+      "は"
+     ],
+     [
+      0.4,
+      0.58,
+      "ヒ"
+     ],
+     [
+      0.58,
+      0.62,
+      "ツ"
+     ],
+     [
+      0.62,
+      0.7,
+      "ジ"
+     ],
+     [
+      0.7,
+      0.82,
+      "ク"
+     ],
+     [
+      0.82,
+      0.88,
+      "を"
+     ],
+     [
+      0.88,
+      0.96,
+      "や"
+     ],
+     [
+      0.96,
+      1.3,
+      "りました"
+     ]
+    ]
+   },
+   {
+    "start": 1.3,
+    "end": 2.66,
+    "text": "ボックスにイン",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      1.3,
+      1.78,
+      "ボ"
+     ],
+     [
+      1.78,
+      1.9,
+      "ック"
+     ],
+     [
+      1.9,
+      1.98,
+      "ス"
+     ],
+     [
+      1.98,
+      2.1,
+      "に"
+     ],
+     [
+      2.1,
+      2.48,
+      "イ"
+     ],
+     [
+      2.48,
+      2.66,
+      "ン"
+     ]
+    ]
+   },
+   {
+    "start": 2.66,
+    "end": 3.78,
+    "text": "Oh hold up I know",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      2.66,
+      2.98,
+      "Oh"
+     ],
+     [
+      2.98,
+      3.24,
+      " hold"
+     ],
+     [
+      3.24,
+      3.4,
+      " up"
+     ],
+     [
+      3.4,
+      3.54,
+      " I"
+     ],
+     [
+      3.54,
+      3.78,
+      " know"
+     ]
+    ]
+   },
+   {
+    "start": 3.78,
+    "end": 5.2,
+    "text": "Hey let me borrow this",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      3.78,
+      4.2,
+      "Hey"
+     ],
+     [
+      4.2,
+      4.38,
+      " let"
+     ],
+     [
+      4.38,
+      4.5,
+      " me"
+     ],
+     [
+      4.5,
+      4.82,
+      " borrow"
+     ],
+     [
+      4.82,
+      5.2,
+      " this"
+     ]
+    ]
+   },
+   {
+    "start": 6.14,
+    "end": 7.08,
+    "text": "Let's go",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      6.14,
+      6.62,
+      "Let"
+     ],
+     [
+      6.62,
+      6.74,
+      "'s"
+     ],
+     [
+      6.74,
+      7.08,
+      " go"
+     ]
+    ]
+   },
+   {
+    "start": 7.08,
+    "end": 8.34,
+    "text": "It's working",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      7.08,
+      7.8,
+      "It"
+     ],
+     [
+      7.8,
+      7.92,
+      "'s"
+     ],
+     [
+      7.92,
+      8.34,
+      " working"
+     ]
+    ]
+   },
+   {
+    "start": 8.34,
+    "end": 9.24,
+    "text": "I gotta get out",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      8.34,
+      8.62,
+      "I"
+     ],
+     [
+      8.62,
+      8.78,
+      " gotta"
+     ],
+     [
+      8.78,
+      8.96,
+      " get"
+     ],
+     [
+      8.96,
+      9.24,
+      " out"
+     ]
+    ]
+   },
+   {
+    "start": 9.24,
+    "end": 10.58,
+    "text": "That sheep just saved you",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      9.24,
+      9.5,
+      "That"
+     ],
+     [
+      9.5,
+      9.76,
+      " sheep"
+     ],
+     [
+      9.76,
+      10.0,
+      " just"
+     ],
+     [
+      10.0,
+      10.34,
+      " saved"
+     ],
+     [
+      10.34,
+      10.58,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 10.58,
+    "end": 11.48,
+    "text": "Bro I owe you",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      10.58,
+      10.8,
+      "Bro"
+     ],
+     [
+      10.8,
+      10.98,
+      " I"
+     ],
+     [
+      10.98,
+      11.24,
+      " owe"
+     ],
+     [
+      11.24,
+      11.48,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 11.48,
+    "end": 12.64,
+    "text": "How can I repay you",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      11.48,
+      11.68,
+      "How"
+     ],
+     [
+      11.68,
+      11.84,
+      " can"
+     ],
+     [
+      11.84,
+      11.96,
+      " I"
+     ],
+     [
+      11.96,
+      12.28,
+      " repay"
+     ],
+     [
+      12.28,
+      12.64,
+      " you"
+     ]
+    ]
+   },
+   {
+    "start": 13.34,
+    "end": 14.14,
+    "text": "Wait what",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      13.34,
+      13.82,
+      "Wait"
+     ],
+     [
+      13.82,
+      14.14,
+      " what"
+     ]
+    ]
+   },
+   {
+    "start": 14.14,
+    "end": 15.4,
+    "text": "NAAA",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      14.14,
+      15.02,
+      "N"
+     ],
+     [
+      15.02,
+      15.26,
+      "AA"
+     ],
+     [
+      15.26,
+      15.4,
+      "A"
+     ]
+    ]
+   },
+   {
+    "start": 15.4,
+    "end": 16.68,
+    "text": "Hey this is our little secret alright",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      15.4,
+      15.66,
+      "Hey"
+     ],
+     [
+      15.66,
+      15.86,
+      " this"
+     ],
+     [
+      15.86,
+      15.96,
+      " is"
+     ],
+     [
+      15.96,
+      16.0,
+      " our"
+     ],
+     [
+      16.0,
+      16.14,
+      " little"
+     ],
+     [
+      16.14,
+      16.44,
+      " secret"
+     ],
+     [
+      16.44,
+      16.68,
+      " alright"
+     ]
+    ]
+   },
+   {
+    "start": 17.52,
+    "end": 18.48,
+    "text": "Wait actually",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      17.52,
+      18.0,
+      "Wait"
+     ],
+     [
+      18.0,
+      18.48,
+      " actually"
+     ]
+    ]
+   },
+   {
+    "start": 18.48,
+    "end": 19.1,
+    "text": "Hold up",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      18.48,
+      18.86,
+      "Hold"
+     ],
+     [
+      18.86,
+      19.1,
+      " up"
+     ]
+    ]
+   },
+   {
+    "start": 19.1,
+    "end": 20.48,
+    "text": "I'm taking custody of our son",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      19.1,
+      19.34,
+      "I"
+     ],
+     [
+      19.34,
+      19.46,
+      "'m"
+     ],
+     [
+      19.46,
+      19.46,
+      " taking"
+     ],
+     [
+      19.46,
+      19.88,
+      " custody"
+     ],
+     [
+      19.88,
+      20.12,
+      " of"
+     ],
+     [
+      20.12,
+      20.24,
+      " our"
+     ],
+     [
+      20.24,
+      20.48,
+      " son"
+     ]
+    ]
+   },
+   {
+    "start": 21.0,
+    "end": 22.42,
+    "text": "I'm a great father",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      21.0,
+      21.48,
+      "I"
+     ],
+     [
+      21.48,
+      21.56,
+      "'m"
+     ],
+     [
+      21.56,
+      21.68,
+      " a"
+     ],
+     [
+      21.68,
+      21.94,
+      " great"
+     ],
+     [
+      21.94,
+      22.42,
+      " father"
+     ]
+    ]
+   },
+   {
+    "start": 22.42,
+    "end": 23.7,
+    "text": "Are staying here and uh",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      22.42,
+      22.7,
+      "Are"
+     ],
+     [
+      22.7,
+      23.0,
+      " staying"
+     ],
+     [
+      23.0,
+      23.28,
+      " here"
+     ],
+     [
+      23.28,
+      23.46,
+      " and"
+     ],
+     [
+      23.46,
+      23.7,
+      " uh"
+     ]
+    ]
+   },
+   {
+    "start": 23.7,
+    "end": 24.5,
+    "text": "Don't move",
+    "no_speech": 0.0,
+    "logprob": -0.33,
+    "words": [
+     [
+      23.7,
+      24.18,
+      "Don"
+     ],
+     [
+      24.18,
+      24.26,
+      "'t"
+     ],
+     [
+      24.26,
+      24.5,
+      " move"
+     ]
+    ]
+   },
+   {
+    "start": 24.5,
+    "end": 25.82,
+    "text": "ご視聴ありがとうございました",
+    "no_speech": 0.0,
+    "logprob": -0.52,
+    "words": [
+     [
+      24.5,
+      25.0,
+      "ご"
+     ],
+     [
+      25.0,
+      25.22,
+      "視"
+     ],
+     [
+      25.22,
+      25.24,
+      "聴"
+     ],
+     [
+      25.24,
+      25.82,
+      "ありがとうございました"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 1.52,
+    "text": "Tare wa Hitsujiku yarimashita",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 1.52,
+    "end": 2.72,
+    "text": "Boxing me in!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 2.72,
+    "end": 3.92,
+    "text": "Oh, hold up, I know!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 3.92,
+    "end": 5.12,
+    "text": "Hey, let me borrow this!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 6.4,
+    "end": 7.52,
+    "text": "Let's go!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 7.52,
+    "end": 8.48,
+    "text": "It's working!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 8.48,
+    "end": 9.28,
+    "text": "I gotta get out!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 9.28,
+    "end": 10.56,
+    "text": "That sheep just saved you!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 10.56,
+    "end": 11.44,
+    "text": "Bro, I owe you!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 11.44,
+    "end": 12.56,
+    "text": "How can I repay you?",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 13.52,
+    "end": 14.08,
+    "text": "Wait, what?",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 15.36,
+    "end": 16.64,
+    "text": "Hey, this is our little secret, alright?",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 17.68,
+    "end": 18.56,
+    "text": "Wait, actually?",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 18.56,
+    "end": 19.04,
+    "text": "Hold up!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 19.04,
+    "end": 20.4,
+    "text": "I'm taking custody of our son!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 21.28,
+    "end": 22.4,
+    "text": "I'm a great father!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 22.4,
+    "end": 23.92,
+    "text": "All right, stay in here and uh...",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   },
+   {
+    "start": 23.92,
+    "end": 24.48,
+    "text": "Don't move!",
+    "no_speech": 0.0,
+    "logprob": -0.31
+   }
+  ]
+ }
+}

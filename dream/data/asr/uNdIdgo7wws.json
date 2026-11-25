@@ -1,0 +1,404 @@
+{
+ "id": "uNdIdgo7wws",
+ "ja": {
+  "lang": "ja",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.58,
+    "text": "Dreamが覚醒します",
+    "no_speech": 0.0,
+    "logprob": -0.67,
+    "words": [
+     [
+      0.0,
+      0.18,
+      "D"
+     ],
+     [
+      0.18,
+      1.74,
+      "ream"
+     ],
+     [
+      1.74,
+      1.9,
+      "が"
+     ],
+     [
+      1.9,
+      2.1,
+      "覚"
+     ],
+     [
+      2.1,
+      2.24,
+      "醒"
+     ],
+     [
+      2.24,
+      2.58,
+      "します"
+     ]
+    ]
+   },
+   {
+    "start": 33.98,
+    "end": 37.04,
+    "text": "結局この戦いはテクノグレイドの勝利で幕を閉じましたが",
+    "no_speech": 0.0,
+    "logprob": -0.11,
+    "words": [
+     [
+      33.98,
+      34.22,
+      "結"
+     ],
+     [
+      34.22,
+      34.38,
+      "局"
+     ],
+     [
+      34.38,
+      34.6,
+      "この"
+     ],
+     [
+      34.6,
+      34.86,
+      "戦"
+     ],
+     [
+      34.86,
+      34.98,
+      "い"
+     ],
+     [
+      34.98,
+      35.08,
+      "は"
+     ],
+     [
+      35.08,
+      35.18,
+      "テ"
+     ],
+     [
+      35.18,
+      35.26,
+      "ク"
+     ],
+     [
+      35.26,
+      35.34,
+      "ノ"
+     ],
+     [
+      35.34,
+      35.46,
+      "グ"
+     ],
+     [
+      35.46,
+      35.54,
+      "レ"
+     ],
+     [
+      35.54,
+      35.62,
+      "イ"
+     ],
+     [
+      35.62,
+      35.68,
+      "ド"
+     ],
+     [
+      35.68,
+      35.78,
+      "の"
+     ],
+     [
+      35.78,
+      35.92,
+      "勝"
+     ],
+     [
+      35.92,
+      36.06,
+      "利"
+     ],
+     [
+      36.06,
+      36.16,
+      "で"
+     ],
+     [
+      36.16,
+      36.3,
+      "幕"
+     ],
+     [
+      36.3,
+      36.46,
+      "を"
+     ],
+     [
+      36.46,
+      36.56,
+      "閉"
+     ],
+     [
+      36.56,
+      36.68,
+      "じ"
+     ],
+     [
+      36.68,
+      36.86,
+      "ました"
+     ],
+     [
+      36.86,
+      37.04,
+      "が"
+     ]
+    ]
+   },
+   {
+    "start": 37.04,
+    "end": 39.34,
+    "text": "彼と張り合えるドリームが本当にすごいですね",
+    "no_speech": 0.0,
+    "logprob": -0.11,
+    "words": [
+     [
+      37.04,
+      37.34,
+      "彼"
+     ],
+     [
+      37.34,
+      37.44,
+      "と"
+     ],
+     [
+      37.44,
+      37.56,
+      "張"
+     ],
+     [
+      37.56,
+      37.66,
+      "り"
+     ],
+     [
+      37.66,
+      37.76,
+      "合"
+     ],
+     [
+      37.76,
+      37.88,
+      "える"
+     ],
+     [
+      37.88,
+      38.02,
+      "ド"
+     ],
+     [
+      38.02,
+      38.1,
+      "リ"
+     ],
+     [
+      38.1,
+      38.24,
+      "ーム"
+     ],
+     [
+      38.24,
+      38.38,
+      "が"
+     ],
+     [
+      38.38,
+      38.66,
+      "本当"
+     ],
+     [
+      38.66,
+      38.86,
+      "に"
+     ],
+     [
+      38.86,
+      39.08,
+      "すごい"
+     ],
+     [
+      39.08,
+      39.34,
+      "ですね"
+     ]
+    ]
+   }
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "prob": 1,
+  "segs": [
+   {
+    "start": 0.0,
+    "end": 2.7,
+    "text": "The DREAM is in the battle of Technoblade.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 2.7,
+    "end": 4.5,
+    "text": "Oh, that arrow was so close!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 4.5,
+    "end": 6.5,
+    "text": "Techno just picked up that arrow.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 6.5,
+    "end": 8.0,
+    "text": "Oh my gosh, it's so close!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 8.0,
+    "end": 9.5,
+    "text": "Oh no, DREAM!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 9.5,
+    "end": 10.0,
+    "text": "DREAM!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 10.0,
+    "end": 11.0,
+    "text": "Oh, yes! Yes! Yes!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 11.0,
+    "end": 12.0,
+    "text": "Oh, no!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 12.0,
+    "end": 13.0,
+    "text": "No!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 13.0,
+    "end": 14.5,
+    "text": "TECNO CAN'T LOSE!",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 14.5,
+    "end": 18.0,
+    "text": "The DREAM is in the battle of this game, but he is in the battle of this game.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 18.0,
+    "end": 19.5,
+    "text": "Look how aggressive DREAM's been.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 19.5,
+    "end": 21.5,
+    "text": "DREAM is not playing around.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 21.5,
+    "end": 22.5,
+    "text": "Techno's up too hard.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 22.5,
+    "end": 23.5,
+    "text": "Oh my goodness.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 23.5,
+    "end": 24.5,
+    "text": "Oh my goodness, oh my goodness.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 24.5,
+    "end": 27.5,
+    "text": "DREAM can't see the heart that he doesn't know that he's losing.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 27.5,
+    "end": 28.5,
+    "text": "Oh no.",
+    "no_speech": 0.0,
+    "logprob": -0.45
+   },
+   {
+    "start": 28.5,
+    "end": 30.5,
+    "text": "Oh, they both have their heart! Oh my God!",
+    "no_speech": 0.0,
+    "logprob": -0.6
+   },
+   {
+    "start": 30.5,
+    "end": 33.5,
+    "text": "Let's go! Let's go! Let's go!",
+    "no_speech": 0.0,
+    "logprob": -0.6
+   },
+   {
+    "start": 33.5,
+    "end": 39.5,
+    "text": "In the end, this fight was TecnoGlade's victory, but the dream with him is really amazing.",
+    "no_speech": 0.0,
+    "logprob": -0.6
+   }
+  ]
+ }
+}

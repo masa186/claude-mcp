@@ -1,0 +1,601 @@
+{
+ "channel": "dream",
+ "doc_notes": [],
+ "duration_sec": 41.54,
+ "items": {
+  "10_timing": {
+   "audio_onset": 0.0,
+   "first_cut": 0.13,
+   "first_cut_minus_first_row_start": 0.13,
+   "first_doc_row_start": 0.0,
+   "music_mean_outside_narration": 0.476,
+   "note": "音タグは2秒の窓・1秒刻みなので、区間の前後0.5秒を含めて平均した。効果音の種類は音タグの判定（確率）",
+   "opening_frames_0_3s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ついに」",
+      "time_raw": "0.00〜0.27",
+      "visual": "クリーパーの顔が画面いっぱい"
+     },
+     {
+      "end": 1.27,
+      "start": 0.4,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「無下限術式を」",
+      "time_raw": "0.40〜1.27",
+      "visual": "カット。洞窟でクリーパーがGroxを避ける [実測: 0.13, 0.40, 1.00]"
+     },
+     {
+      "end": 2.27,
+      "start": 1.47,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「習得した」→ 白「Grox」",
+      "time_raw": "1.47〜2.27",
+      "visual": "カット。エンダーマン・ゾンビ・クリーパーの大群の中に立つGrox。モブがGroxに触れない"
+     },
+     {
+      "end": 3.0,
+      "start": 2.53,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**黄**「待てやコラァ!!!」",
+      "time_raw": "2.53〜3.00",
+      "visual": "カット。**画面を埋め尽くす数千の村人**が穴の縁に [実測: 2.53]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "rows": [
+    {
+     "end": 2.3,
+     "music_mean_during_row": 0.463,
+     "nearest_cut_to_end": 0.23,
+     "nearest_cut_to_start": 0.13,
+     "nearest_subtitle_change_to_end": 0.23,
+     "nearest_subtitle_change_to_start": 0.07,
+     "row": 0,
+     "spikes_within_row_or_1s_after": [],
+     "start": 0.0
+    }
+   ],
+   "status": "ok（実測・音タグ）と DOC_OBSERVED（字幕の区間）の組み合わせ"
+  },
+  "1_roles": {
+   "parts": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「ついに〜を習得したGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "status": "UNVERIFIED"
+  },
+  "2_words": {
+   "parts": [
+    {
+     "chars": 17,
+     "content_lemmas": [
+      "遂に",
+      "下限",
+      "術式",
+      "習得",
+      "為る",
+      "Grox"
+     ],
+     "first_token": {
+      "lemma": "遂に",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "ついに"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ついに"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "part": 0,
+     "pos_counts": {
+      "副詞": 1,
+      "助動詞": 1,
+      "助詞": 1,
+      "動詞": 1,
+      "名詞": 4,
+      "接頭辞": 1
+     },
+     "row": 0,
+     "status": "DOC_OBSERVED",
+     "text": "ついに無下限術式を習得したGrox"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・形態素解析",
+   "top_content_lemmas": [
+    [
+     "遂に",
+     1
+    ],
+    [
+     "下限",
+     1
+    ],
+    [
+     "術式",
+     1
+    ],
+    [
+     "習得",
+     1
+    ],
+    [
+     "為る",
+     1
+    ],
+    [
+     "Grox",
+     1
+    ]
+   ]
+  },
+  "3_opening_windows": {
+   "0-1s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": false,
+       "row": 0,
+       "start": 0.0,
+       "text": "ついに無下限術式を習得したGrox"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 8,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ついに無加減術式",
+     "words": [
+      "つ",
+      "い",
+      "に",
+      "無",
+      "加",
+      "減",
+      "術",
+      "式"
+     ]
+    }
+   },
+   "0-3s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "ついに無下限術式を習得したGrox"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese"
+     ],
+     "chars": 18,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ついに無加減術式を習得したブロックス",
+     "words": [
+      "つ",
+      "い",
+      "に",
+      "無",
+      "加",
+      "減",
+      "術",
+      "式",
+      "を",
+      "習",
+      "得",
+      "した",
+      "ブ",
+      "ロ",
+      "ック",
+      "ス"
+     ]
+    }
+   },
+   "0-5s": {
+    "doc_subtitle": {
+     "note": "行の区間が窓をまたぐ場合、窓の中の文字数は推測しない（fully_inside=false）",
+     "rows_starting_in_window": [
+      {
+       "end": 2.3,
+       "fully_inside": true,
+       "row": 0,
+       "start": 0.0,
+       "text": "ついに無下限術式を習得したGrox"
+      }
+     ],
+     "status": "DOC_OBSERVED"
+    },
+    "whisper_ja_words": {
+     "categories": [
+      "japanese",
+      "latin"
+     ],
+     "chars": 29,
+     "note": "Whisper 日本語指定の単語のうち、開始が窓の中のもの。聞き間違いはそのまま",
+     "status": "ok",
+     "text": "ついに無加減術式を習得したブロックスえ、 chill, chill,",
+     "words": [
+      "つ",
+      "い",
+      "に",
+      "無",
+      "加",
+      "減",
+      "術",
+      "式",
+      "を",
+      "習",
+      "得",
+      "した",
+      "ブ",
+      "ロ",
+      "ック",
+      "ス",
+      "え、",
+      " chill,",
+      " chill,"
+     ]
+    }
+   }
+  },
+  "4_hook": {
+   "first_doc_row": {
+    "chars": 17,
+    "end": 2.3,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "ついに無下限術式を習得したGrox"
+   },
+   "first_parts": [
+    {
+     "first_token": {
+      "lemma": "遂に",
+      "pos1": "副詞",
+      "pos2": "*",
+      "surface": "ついに"
+     },
+     "flags": {
+      "adversative": false,
+      "assertion": false,
+      "cta": false,
+      "demonstrative_start": false,
+      "emotion_words": [],
+      "emphasis_words": [
+       "ついに"
+      ],
+      "ending_type": "体言(人物)",
+      "fuseji": false,
+      "number": false,
+      "prohibition": false,
+      "proper_nouns": [
+       "Grox"
+      ],
+      "question": false
+     },
+     "text": "ついに無下限術式を習得したGrox"
+    }
+   ],
+   "first_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「ついに〜を習得したGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "hook_code_4b": {
+    "code": "H_INTRO",
+    "effective_code": "H_INTRO",
+    "quote": "ついに無加減術式を習得したブロックス",
+    "review": null,
+    "status": "UNVERIFIED"
+   },
+   "opening_frames_0_1s": {
+    "rows": [
+     {
+      "end": 0.27,
+      "start": 0.0,
+      "status": "DOC_OBSERVED",
+      "subtitle": "白「ついに」",
+      "time_raw": "0.00〜0.27",
+      "visual": "クリーパーの顔が画面いっぱい"
+     },
+     {
+      "end": 1.27,
+      "start": 0.4,
+      "status": "DOC_OBSERVED",
+      "subtitle": "**赤**「無下限術式を」",
+      "time_raw": "0.40〜1.27",
+      "visual": "カット。洞窟でクリーパーがGroxを避ける [実測: 0.13, 0.40, 1.00]"
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   },
+   "whisper_first_word": {
+    "category": "japanese",
+    "start": 0.0,
+    "status": "ok",
+    "word": "つ"
+   }
+  },
+  "5_length_speed_pause": {
+   "doc_rows": {
+    "median_chars_per_sec": 7.39,
+    "rows": [
+     {
+      "chars": 17,
+      "chars_per_sec": 7.39,
+      "duration": 2.3,
+      "gap_to_next_row": null,
+      "row": 0
+     }
+    ],
+    "status": "DOC_OBSERVED",
+    "total_chars": 17
+   },
+   "whisper_overlapping_doc_rows": {
+    "chars_per_sec": 7.76,
+    "gap_max": null,
+    "gap_median": null,
+    "gaps_ge_0.3s": 0,
+    "n_words": 16,
+    "note": "字幕の行と時間が重なる Whisper 日本語の区間の単語だけ。対応付けではない",
+    "status": "ok",
+    "word_gaps_positive": 0
+   }
+  },
+  "6_sentence_flags": {
+   "parts": [
+    {
+     "adversative": false,
+     "assertion": false,
+     "cta": false,
+     "demonstrative_start": false,
+     "emotion_words": [],
+     "emphasis_words": [
+      "ついに"
+     ],
+     "ending_type": "体言(人物)",
+     "fuseji": false,
+     "number": false,
+     "part": 0,
+     "prohibition": false,
+     "proper_nouns": [
+      "Grox"
+     ],
+     "question": false,
+     "row": 0,
+     "text": "ついに無下限術式を習得したGrox"
+    }
+   ],
+   "status": "DOC_OBSERVED（本文）・規則"
+  },
+  "7_order_foreshadow": {
+   "links": [],
+   "role_sequence": [
+    "R_INTRO"
+   ],
+   "status": "UNVERIFIED"
+  },
+  "8_development": {
+   "codes_4b": {
+    "development": {
+     "code": "D_REPEAT",
+     "effective_code": "D_REPEAT",
+     "quote": "I don't smell that bad",
+     "review": null,
+     "status": "UNVERIFIED"
+    },
+    "payoff": {
+     "code": "P_PUNISH",
+     "effective_code": "P_PUNISH",
+     "quote": "Don't tell me you died",
+     "review": null,
+     "status": "UNVERIFIED"
+    }
+   },
+   "doc_structure": {
+    "note": "「段階」は過去の分析の考察（DOC_INTERPRETATION）、「内容」は [画面] の観察（DOC_OBSERVED）",
+    "rows": [
+     {
+      "content": "「無下限術式」、モブが寄ってこないGrox、村人の大群",
+      "range_raw": "0.0〜3",
+      "stage_label": "冒頭"
+     },
+     {
+      "content": "大群に追われて「ｵｫｫｵｵｳｩｩ///」「リラーックス」→「ヤバいって」「ここから逃げなきゃ!!」「湖がある!!」",
+      "range_raw": "3.4〜9",
+      "stage_label": "事件"
+     },
+     {
+      "content": "村人「あぁ...」「僕らがどこで」**黄の箱**「(臭いチェック)トイレしてると思う？」→「ﾍｯw」「俺別に臭くなくね？」→「ジーザス」→「落ち着けｪｪｪ///」「隠れる場所がなーい!!」",
+      "range_raw": "9.5〜20",
+      "stage_label": "種明かし"
+     },
+     {
+      "content": "牛を見つけて「ひとつだけあった」→ 牛をかぶって村人の中を通る「(いいじゃんww)」「(行くぞ)」→「君のお陰で助かった」→ 牛が嫌がる「わぁ??」「俺そんな臭くないし」「大げさな」「小だけじゃなくて」「大もかよ」",
+      "range_raw": "20〜30",
+      "stage_label": "展開"
+     },
+     {
+      "content": "洞窟に戻り、クリーパーもエンダーマンも逃げる「っしゃ行くぞぉ!!」「これ意外と使えんじゃん!」",
+      "range_raw": "30〜35",
+      "stage_label": "クライマックス"
+     },
+     {
+      "content": "牛が倒れる「嘘だろ起きろ!!」「死んだなんて言わないで」→ **実写のGrox本人**（ブロックのかぶり物）に赤の引用符「\"自滅すGrox\"」",
+      "range_raw": "35.9〜41.5",
+      "stage_label": "オチ"
+     }
+    ]
+   },
+   "interpretation": {
+    "candidate_seconds": [
+     4,
+     5,
+     6,
+     36,
+     37
+    ],
+    "note": "候補であってクライマックスとは断定しない。映像は見ていない",
+    "rule": "音量の急な変化（実測の spikes）がある秒、または音タグの Screaming・Shout・Yell・Explosion・Boom・Laughter・Cheering・Gasp のいずれかが 0.3 以上の秒を「盛り上がりの候補」とする（規則による候補。断定しない）",
+    "status": "INTERPRETATION"
+   },
+   "measured": {
+    "audio_spikes_sec": [
+     4.3,
+     5.7,
+     6.6,
+     36.6,
+     37.15,
+     37.3
+    ],
+    "cuts": 39,
+    "cuts_per_5s": {
+     "0": 6,
+     "10": 2,
+     "15": 6,
+     "20": 3,
+     "25": 6,
+     "30": 3,
+     "35": 5,
+     "5": 8
+    },
+    "duration_sec": 41.54,
+    "excitement_audiotag_ge_threshold": [],
+    "status": "ok"
+   },
+   "narration_positions": {
+    "note": "opening＝10秒より前、end＝最後の10秒、それ以外＝middle",
+    "rows": [
+     {
+      "position": "opening",
+      "row": 0,
+      "start": 0.0
+     }
+    ],
+    "status": "DOC_OBSERVED"
+   }
+  },
+  "9_ending": {
+   "last_doc_row": {
+    "end": 2.3,
+    "is_end_position": false,
+    "sec_from_end": 39.24,
+    "start": 0.0,
+    "status": "DOC_OBSERVED",
+    "text": "ついに無下限術式を習得したGrox"
+   },
+   "last_doc_row_roles": [
+    {
+     "also": [],
+     "flag": null,
+     "label": "人物・状況の紹介",
+     "part": 0,
+     "reason": "「ついに〜を習得したGrox」の紹介",
+     "role": "R_INTRO",
+     "row": 0,
+     "status": "UNVERIFIED"
+    }
+   ],
+   "last_whisper_en": {
+    "start": 35.88,
+    "status": "ok",
+    "text": "bro wake up don't tell me you died"
+   },
+   "last_whisper_ja_non_boilerplate": {
+    "category": "latin",
+    "start": 37.38,
+    "status": "ok",
+    "text": "Don't tell me you died"
+   },
+   "payoff_code_4b": {
+    "code": "P_PUNISH",
+    "effective_code": "P_PUNISH",
+    "quote": "Don't tell me you died",
+    "review": null,
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "no": 18,
+ "not_applicable": [
+  {
+   "item": 7,
+   "reason": "予告（結果・ひねり・再フック）の部分が無い",
+   "what": "伏線"
+  },
+  {
+   "item": 9,
+   "reason": "最後の10秒にナレーションの行が無い（最後の行は締めのナレーションではない）",
+   "what": "締めのナレーション"
+  }
+ ],
+ "sources": {
+  "codes_4b": "mcshorts/analysis/codings/dream/claude_v1.jsonl（UNVERIFIED。確認済みのものは review 付き）",
+  "individual": "dream/individual/18_YaBIB4VuiqM.md（DOC_OBSERVED / DOC_INTERPRETATION）",
+  "narration_text": "dream/narration_list.md（DOC_OBSERVED・本文の基準）",
+  "roles": "analysis/narration/codings/dream/roles_claude_v1.jsonl（UNVERIFIED）",
+  "whisper": "dream/data/asr/YaBIB4VuiqM.json（ok・聞き間違いあり）"
+ },
+ "tool": {
+  "dictionary_info": [
+   {
+    "charset": "utf8",
+    "filename": "unidic_lite/dicdir/sys.dic",
+    "size": 756264,
+    "version": 102
+   }
+  ],
+  "fugashi": "1.5.2",
+  "lexicon_version": "v1",
+  "unidic_lite": "1.0.8"
+ },
+ "unavailable": [],
+ "video_id": "YaBIB4VuiqM"
+}

@@ -1,0 +1,404 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "緑",
+     "end": null,
+     "start": "0.1",
+     "text": "Dreamを"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": "0.6",
+     "text": "超えたという"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": "1.0",
+     "text": "日本人が"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": "1.7",
+     "text": "ハンター"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": "2.1",
+     "text": "16人から"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": "2.7",
+     "text": "逃げる瞬間"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": "3.3",
+     "text": "なんですが"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": "4.0",
+     "text": "*畑着地*"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": "5.0",
+     "text": "*1キル*"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": "5.7",
+     "text": "*装備装着*"
+    },
+    {
+     "color": "水色",
+     "end": null,
+     "start": "6.7",
+     "text": "これヤラセくさスギィ！"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ドリームを超えたという日本人がハンター16人から逃げる瞬間なんですが"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 6.0,
+     "start": 0.0,
+     "text": "Dreamを超えたという日本人がハンター16人から逃げる瞬間なんですが",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.0,
+     "start": 6.75,
+     "text": "これヤラセくさスギィ！",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 9.75,
+     "start": 9.0,
+     "text": "なんで都合よく黒曜石12個持ってだねん",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.5,
+     "start": 24.75,
+     "text": "マンハントってベッド爆破ありなのかよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 34.25,
+     "start": 34.0,
+     "text": "クリスタル投げ捨て",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 41.25,
+     "start": 40.75,
+     "text": "まかちゃかふぁいやー",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 44.5,
+     "start": 43.5,
+     "text": "ウィンドチャージどこで入手した？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 52.5,
+     "start": 51.25,
+     "text": "俺は何を見せられてんだ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 56.25,
+     "start": 56.0,
+     "text": "畳み掛けて",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 0.0,
+     "text": "Dreamを",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 0.5,
+     "text": "超えたという",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 1.0,
+     "text": "日本人が",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 1.75,
+     "text": "ハンター",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 2.0,
+     "text": "16人から",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 2.75,
+     "text": "逃げる瞬間",
+     "track": "subtitle"
+    },
+    {
+     "color": "緑",
+     "end": null,
+     "start": 3.25,
+     "text": "なんですが",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 4.0,
+     "text": "*畑着地*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 5.0,
+     "text": "*1キル*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 6.0,
+     "text": "*装備装着*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.75,
+     "text": "これヤラセくさスギィ！",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 9.0,
+     "text": "*なんで俺は都合よく黒曜石12個持ってたねん*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 12.0,
+     "text": "*ハサミ効率5*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 18.5,
+     "text": "*ネザーIN*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 21.5,
+     "text": "*ボート渡り*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 22.5,
+     "text": "*ノースフトブリッジ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 24.75,
+     "text": "*マンハントってベッド爆破ありなのかよ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 28.0,
+     "text": "*落下*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 32.25,
+     "text": "*引っかかりすぎだろ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 33.75,
+     "text": "*クリスタル投げ捨て*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 34.75,
+     "text": "*ブリッジ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 36.5,
+     "text": "*ハサミ*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 40.0,
+     "text": "*マグマボート*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 40.75,
+     "text": "*まかちゃかふぁいやー*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 43.5,
+     "text": "*ウィンドチャージどこで入手した？*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 46.0,
+     "text": "*着水*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 47.25,
+     "text": "*黒曜石設置*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 48.25,
+     "text": "*+2キル*",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 51.25,
+     "text": "俺は何を見せられてんだ",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 54.75,
+     "text": "*火打石と打ち金着地*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 55.25,
+     "text": "*DreamとDawuavis接近中*",
+     "track": "subtitle"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 56.0,
+     "text": "*TNT置いて…*",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "UD6LUYp1d6o"
+}

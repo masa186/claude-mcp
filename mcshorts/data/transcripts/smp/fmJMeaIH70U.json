@@ -1,0 +1,261 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "ゲームで死ぬ訳がないと確信しているJettism"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.5,
+     "text": "理由はピンチになると即座にパールを引く男"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 5.0,
+     "text": "コブハがいるから"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.0,
+     "text": "コブハ、なにすればいいか分かるよな"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "6.2秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ゲームで死ぬわけがないと確信しているJettism、理由はピンチになると即座にパールを引く男コブハがいるから"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.0,
+     "start": 0.0,
+     "text": "ゲームで死ぬ訳がないと確信している",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 7.0,
+     "start": 2.0,
+     "text": "Jettism理由はピンチになると即座にパールを引く男",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 8.5,
+     "start": 7.0,
+     "text": "コブハがいるから",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 15.0,
+     "start": 11.5,
+     "text": "引け引けコブハ引けコブハコブハ..",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 21.0,
+     "start": 17.5,
+     "text": "やっぱりやっぱりなパール引いてマッペール",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ゲームで",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.0,
+     "text": "死ぬ訳がないと",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.25,
+     "text": "確信している",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.0,
+     "text": "Jettism",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.25,
+     "text": "理由は",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.0,
+     "text": "ピンチになると",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.0,
+     "text": "即座に",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.25,
+     "text": "パールを",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 4.5,
+     "text": "引く男",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.0,
+     "text": "コブハがいるから",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.25,
+     "text": "コブハ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.5,
+     "text": "なにすればいいか",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7.0,
+     "text": "分かるよな",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 12.0,
+     "text": "引け引け",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 12.25,
+     "text": "コブハ",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 13.0,
+     "text": "引け",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 14.0,
+     "text": "コブハコブハ..",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 17.5,
+     "text": "やっぱり",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 18.25,
+     "text": "やっぱりな",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 19.5,
+     "text": "パール引いて",
+     "track": "subtitle"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 20.0,
+     "text": "マッペール",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "fmJMeaIH70U"
+}

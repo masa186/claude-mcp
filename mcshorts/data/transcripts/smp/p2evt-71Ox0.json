@@ -1,0 +1,102 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.0",
+     "text": "Java版と"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "0.7",
+     "text": "統合版に"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "1.1",
+     "text": "シフトディメンション"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.0",
+     "text": "がくる"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "2.2",
+     "text": "もう1つとびっきり"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "4.0",
+     "text": "特別な"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "5.0",
+     "text": "お知らせです"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": "5.7",
+     "text": "オーマイゴッド!!!"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": "6.0",
+     "text": "ついにこの時がきた!!"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.8秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "Java版と統合版にシフトディメンションが来る"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "p2evt-71Ox0"
+}

@@ -1,0 +1,96 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "隠れて"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.5,
+     "text": "見つからなければ"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.1,
+     "text": "豪華賞品"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.7,
+     "text": "ゲット"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 2.2,
+     "text": "各国のYouTuberが"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 3.7,
+     "text": "この空間に隠れている"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.7,
+     "text": "見つかれば脱落"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 7.0,
+     "text": "まずは8人に絞る"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.4秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "隠れて見つからなければ豪華賞品ゲット"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "tfDdjddS1Cc"
+}

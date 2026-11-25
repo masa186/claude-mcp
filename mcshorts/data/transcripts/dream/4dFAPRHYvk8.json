@@ -1,0 +1,343 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/4dFAPRHYvk8.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "I'm going to get out of 500 people from the top of the trap."
+    },
+    {
+     "end": 17.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 13.0,
+     "text": "After using my biggest trap, I immediately ran to another one that was slightly different."
+    },
+    {
+     "end": 21.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 17.0,
+     "text": "This sand trap had an area for me to stand in a target block that I could shoot,"
+    },
+    {
+     "end": 23.5,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 21.0,
+     "text": "causing players to fall down if they peek over and look at me."
+    },
+    {
+     "end": 26.0,
+     "logprob": -0.44,
+     "no_speech": 0.0,
+     "start": 23.5,
+     "text": "Hey boys, what's up? Guess what? They're smaller!"
+    },
+    {
+     "end": 28.0,
+     "logprob": -0.83,
+     "no_speech": 0.0,
+     "start": 26.0,
+     "text": "Let's go"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/4dFAPRHYvk8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 2.92,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "超巨大トラップを使い後、100人を穴にハメるジュデロン。"
+    },
+    {
+     "end": 5.44,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 3.2,
+     "text": "Kill Judy's right there at 25 grand!"
+    },
+    {
+     "end": 7.12,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 6.1,
+     "text": "I meant to do it."
+    },
+    {
+     "end": 9.42,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 7.72,
+     "text": "It is really fun."
+    },
+    {
+     "end": 14.26,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 12.76,
+     "text": "After using my biggest trap,"
+    },
+    {
+     "end": 16.72,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 14.44,
+     "text": "I immediately ran to another one that was slightly different."
+    },
+    {
+     "end": 18.96,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 17.06,
+     "text": "This sand trap had an area for me to stand"
+    },
+    {
+     "end": 20.56,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 18.96,
+     "text": "and a target block that I can shoot,"
+    },
+    {
+     "end": 23.26,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 20.74,
+     "text": "causing players to fall down if they peek over and look at me."
+    },
+    {
+     "end": 24.3,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 23.5,
+     "text": "Hey boys, what's up?"
+    },
+    {
+     "end": 24.76,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 24.44,
+     "text": "Guess what?"
+    },
+    {
+     "end": 25.48,
+     "logprob": -0.4,
+     "no_speech": 0.0,
+     "start": 24.86,
+     "text": "They're smaller!"
+    },
+    {
+     "end": 29.44,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 27.3,
+     "text": "ご視聴ありがとうございました"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/4dFAPRHYvk8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 5.0,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "超巨大トラップを使い500人を 罠にはめるジュデロン"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/4dFAPRHYvk8.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 30.62,
+     "no_speech": 0.0,
+     "start": 26.62,
+     "text": "ゴースボード トーゲットフロック ベビー レッツゴー"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/gemini/4dFAPRHYvk8.json",
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0.0,
+     "text": "超巨大トラップを使い、500人を罠にはめる"
+    },
+    {
+     "end": null,
+     "start": 3.0,
+     "text": "ジュデロウをやれ！"
+    },
+    {
+     "end": null,
+     "start": 5.0,
+     "text": "2万5千ドルだぞ！！"
+    },
+    {
+     "end": null,
+     "start": 6.8,
+     "text": "ちょっと待て！"
+    },
+    {
+     "end": null,
+     "start": 9.0,
+     "text": "それは本当に罠"
+    },
+    {
+     "end": null,
+     "start": 10.5,
+     "text": "オオオオウッ！！！！"
+    },
+    {
+     "end": null,
+     "start": 12.0,
+     "text": "wwww"
+    },
+    {
+     "end": null,
+     "start": 13.5,
+     "text": "巨大トラップを作った後すぐに少し違う別の罠に走って行った"
+    },
+    {
+     "end": null,
+     "start": 17.5,
+     "text": "この砂場には僕が射撃できる所があり、的ブロックを撃つと、"
+    },
+    {
+     "end": null,
+     "start": 20.8,
+     "text": "プレイヤー達を落下させ、覗き込んだ奴らをハメることが出来る"
+    },
+    {
+     "end": null,
+     "start": 23.8,
+     "text": "よぉみんな元気？"
+    },
+    {
+     "end": null,
+     "start": 25.1,
+     "text": "まだ終わってねぇぞ！！"
+    },
+    {
+     "end": null,
+     "start": 26.5,
+     "text": "小さくー！"
+    },
+    {
+     "end": null,
+     "start": 27.5,
+     "text": "オオオウゥ！！！(感じてる)"
+    },
+    {
+     "end": null,
+     "start": 28.5,
+     "text": "クロスボウと的ブロックの罠だぜ、レッツゴィww"
+    },
+    {
+     "end": null,
+     "start": 31.0,
+     "text": "エドいトラップ"
+    }
+   ],
+   "source": "dream_gemini",
+   "status": "UNVERIFIED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "超巨大トラップを使い、500人を罠にはめるジュデロウ。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "超巨大トラップを（赤）→ 使い（白）→ 500人を（赤）→ 罠にはめる（白）→ ジュデロウ（紫）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "4dFAPRHYvk8"
+}

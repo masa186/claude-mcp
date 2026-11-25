@@ -1,0 +1,321 @@
+{
+ "channel": "dream",
+ "transcripts": [
+  {
+   "detected_lang": "en",
+   "file": "dream/data/asr/TWUEJTjUPmY.json",
+   "kind": "speech",
+   "lang": "en",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.44,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "You're living in the dream of a dream of a 50-hour VR,"
+    },
+    {
+     "end": 3.9,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 3.44,
+     "text": "but..."
+    },
+    {
+     "end": 4.84,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 3.9,
+     "text": "Swim!"
+    },
+    {
+     "end": 5.38,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 4.84,
+     "text": "Oh, no."
+    },
+    {
+     "end": 8.08,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 5.38,
+     "text": "Ah! Ah! Ah!"
+    },
+    {
+     "end": 9.54,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 8.08,
+     "text": "Yes! Oh my God!"
+    },
+    {
+     "end": 10.98,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 9.54,
+     "text": "It's going to be a chance to get a chance to get a chance to get a chance."
+    },
+    {
+     "end": 12.02,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 10.98,
+     "text": "Oh my God!"
+    },
+    {
+     "end": 12.94,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 12.02,
+     "text": "Hey, cat!"
+    },
+    {
+     "end": 15.02,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 14.02,
+     "text": "You're on this fish?"
+    },
+    {
+     "end": 15.82,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 15.02,
+     "text": "Come here!"
+    },
+    {
+     "end": 17.18,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 15.82,
+     "text": "Shh, shh, shh, shh."
+    },
+    {
+     "end": 17.76,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 17.18,
+     "text": "Cat!"
+    },
+    {
+     "end": 18.28,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 17.76,
+     "text": "Hello?"
+    },
+    {
+     "end": 21.98,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 18.28,
+     "text": "Whoa! Stop! I'm trying to catch this cat bad!"
+    },
+    {
+     "end": 24.42,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 21.98,
+     "text": "Come here. Please. Please."
+    },
+    {
+     "end": 28.3,
+     "logprob": -0.79,
+     "no_speech": 0.0,
+     "start": 26.32,
+     "text": "Yes! Oh my God!"
+    },
+    {
+     "end": 32.88,
+     "logprob": -1.15,
+     "no_speech": 0.0,
+     "start": 28.3,
+     "text": "He succeeded in buying a dog, but he will be able to know the world's badness of the world."
+    },
+    {
+     "end": 60.8,
+     "logprob": -0.93,
+     "no_speech": 0.0,
+     "start": 58.3,
+     "text": "Don't forget to subscribe to the channel!"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "detected_lang": "ja",
+   "file": "dream/data/asr/TWUEJTjUPmY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "note": "単語ごとの時刻は file に残っている",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 3.44,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "50時間VRで生活するというドリームの親友ジョージですか"
+    },
+    {
+     "end": 10.96,
+     "logprob": -0.23,
+     "no_speech": 0.0,
+     "start": 9.4,
+     "text": "開始早々ピンチになります"
+    },
+    {
+     "end": 11.52,
+     "logprob": -2.47,
+     "no_speech": 0.0,
+     "start": 10.96,
+     "text": "おわり!"
+    },
+    {
+     "end": 18.92,
+     "logprob": -2.47,
+     "no_speech": 0.0,
+     "start": 11.6,
+     "text": "おわり!"
+    },
+    {
+     "end": 26.12,
+     "logprob": -2.47,
+     "no_speech": 0.0,
+     "start": 18.94,
+     "text": "私の名前はStreipe 本当に申し訳するなら"
+    },
+    {
+     "end": 38.48,
+     "logprob": -2.47,
+     "no_speech": 0.0,
+     "start": 36.02,
+     "text": "それはどんな 54"
+    },
+    {
+     "end": 45.06,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 39.28,
+     "text": "ストライフは私のエモーショナルのコンフォーターを提供することができる"
+    },
+    {
+     "end": 48.28,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 45.06,
+     "text": "ストライフは私のエモーショナルのコンフォーターを提供する"
+    },
+    {
+     "end": 49.84,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 48.28,
+     "text": "私の友人が…"
+    },
+    {
+     "end": 60.54,
+     "logprob": -0.63,
+     "no_speech": 0.0,
+     "start": 57.96,
+     "text": "普通に理不尽だと思った方はチャンネル登録"
+    }
+   ],
+   "source": "dream_asr",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/TWUEJTjUPmY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "head_5s",
+   "segments": [
+    {
+     "end": 3.44,
+     "no_speech": 0.0,
+     "start": 0.0,
+     "text": "50時間VRで生活するというドリームの親友ジョージですか"
+    },
+    {
+     "end": 4.58,
+     "no_speech": 0.0,
+     "start": 3.44,
+     "text": "スウム"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "file": "dream/data/asr_edges/TWUEJTjUPmY.json",
+   "kind": "speech",
+   "lang": "ja",
+   "method": "whisper",
+   "scope": "tail_7s",
+   "segments": [
+    {
+     "end": 60.62,
+     "no_speech": 0.0,
+     "start": 54.0,
+     "text": "チャンネル登録をお願いいたします"
+    }
+   ],
+   "source": "dream_asr_edges",
+   "status": "ok",
+   "tool": "faster-whisper large-v3-turbo"
+  },
+  {
+   "kind": "narration_voice",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "50時間VRで生活するというドリームの親友ジョージですが、開始早々ピンチになります。"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "subtitle_sequence",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "CSV に区間ごとの秒が無い"
+    }
+   },
+   "scope": "narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "50時間（白）→ VRで生活すると言う（赤）→ Dream（緑）の親友（白）→ George（水色）ですが...（白）→ ［約6秒間の水泳パニックシーン］ → 開始早々（白）→ ピンチになります（赤）"
+    }
+   ],
+   "source": "dream_tn58",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "TWUEJTjUPmY"
+}

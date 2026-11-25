@@ -1,0 +1,1273 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "動画全体を Gemini に読ませた試み。実ファイルと照らすと合わず不採用（文書記載）。照合用に残っているだけ",
+   "scope": "full",
+   "segments": [
+    {
+     "end": null,
+     "start": 0,
+     "text": "マイクラで",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 0.5,
+     "text": "リアルで",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 1.5,
+     "text": "プレゼント",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 2,
+     "text": "するというミスタービースト",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 4,
+     "text": "マイクラで1番上手く",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 6,
+     "text": "再現した人に",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 7.5,
+     "text": "テスラをあげる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 11,
+     "text": "PCに名前を貼った",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 13,
+     "text": "では始めて",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 14,
+     "text": "始めろ作業開始だ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 17,
+     "text": "どうやって作るんだ？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 20,
+     "text": "まず土台から作ろう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 22,
+     "text": "おけ集中するわ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 24,
+     "text": "言い忘れてよ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 25.5,
+     "text": "賞品はテスラだけじゃない",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 28,
+     "text": "本物の家も用意した",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 31,
+     "text": "25万ドル以上もする",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 33.5,
+     "text": "ふぁ！？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 35,
+     "text": "家だって！？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 36.5,
+     "text": "テスラの勝者は",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 38,
+     "text": "3つの枠の1つを得て",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 39.5,
+     "text": "家を争う",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 43.5,
+     "text": "家が賞品ってなんだよ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 45.5,
+     "text": "家と車が賞品なら",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 47.5,
+     "text": "気合を入れないとな",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 49,
+     "text": "半分だけ作って",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 50.5,
+     "text": "最後に反転させる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 52.5,
+     "text": "彼らはプロだから",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 54,
+     "text": "マイクラのコマンドを使って",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 55.5,
+     "text": "効率よく建築する",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 57,
+     "text": "炎のホイール作るわ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 59,
+     "text": "自信ある？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 60,
+     "text": "自信ははある",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 61,
+     "text": "こんな大きさは珍しいけど",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 63.5,
+     "text": "得意分野なのか",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 65,
+     "text": "きも！",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 66,
+     "text": "なんやその設計",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 67,
+     "text": "乗り物が得意なタコ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 68.5,
+     "text": "ジキーズは",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 70,
+     "text": "芸術的な建築で有名だ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 73,
+     "text": "いや",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 117,
+     "text": "よし",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 118,
+     "text": "最後のブロックを置いて",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 119.5,
+     "text": "ウソだろ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 126.5,
+     "text": "手を上げて",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 130,
+     "text": "よし",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 131,
+     "text": "審査を始めよう",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 132.5,
+     "text": "最初はニコ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 134,
+     "text": "俺が勝ち取る予定の",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 136,
+     "text": "テスラに乗ってる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 139,
+     "text": "お〜ｗ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 140,
+     "text": "この部屋ごと",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 141,
+     "text": "作ったのはすごいな",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 143,
+     "text": "こっちを見てくれ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 145,
+     "text": "作業してるのは俺だけだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 147.5,
+     "text": "みんなのモニターには",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 150.5,
+     "text": "なにも映ってない",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 152,
+     "text": "クインテンだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 153,
+     "text": "やあみんな！",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 154.5,
+     "text": "ここはどこだ？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 156.5,
+     "text": "巨大な景観の上だよ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 159,
+     "text": "おお",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 200.5,
+     "text": "前面四角いのなんや？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 201.5,
+     "text": "崖からジャンプしてる",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 205,
+     "text": "クールだろ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 206,
+     "text": "地面に置かずに",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 208,
+     "text": "動きを持たせたんだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 210,
+     "text": "すっご",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 211,
+     "text": "しかも斜めで",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 212,
+     "text": "まっすぐじゃない",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 213,
+     "text": "動きを表現してみた",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 215.5,
+     "text": "タコの番だ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 217,
+     "text": "話そうか",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 218,
+     "text": "これだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 219,
+     "text": "なんだこれ？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 221,
+     "text": "これが作品？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 222,
+     "text": "タコ？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 224,
+     "text": "建築これだけ？",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 225.5,
+     "text": "こっちだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 227,
+     "text": "驚いた",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 228.5,
+     "text": "ん〜",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 229,
+     "text": "見てくれ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 230.5,
+     "text": "開いたドアがイイ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 232,
+     "text": "斬新なアイデアだ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 234,
+     "text": "外観は今のところ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 236,
+     "text": "最高の出来かもね",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 237.5,
+     "text": "次だ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 238.5,
+     "text": "ジキーズ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 240,
+     "text": "傑作だぞ",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 242,
+     "text": "ドーン！",
+     "track": "subtitle"
+    },
+    {
+     "end": null,
+     "start": 243,
+     "text": "こいつ優勝だろ",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_full",
+   "status": "REJECTED",
+   "tool": "gemini-3.5-flash-lite"
+  },
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "マイクラで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "建築を"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.25,
+     "text": "リアルで"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.0,
+     "text": "プレゼントする"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.25,
+     "text": "という"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.75,
+     "text": "ミスタービースト"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.5,
+     "text": "目隠し外して"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.75,
+     "text": "マイクラで1番上手く"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.5,
+     "text": "再現した人に"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "3.4秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "マイクラで作った建築をリアルでプレゼントするというミスタービースト"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  },
+  {
+   "kind": "voice+subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "note": "日本語の声と字幕を分けて読ませた試み。字幕を声として書くなど実ファイルと合わず不採用（文書記載）",
+   "scope": "full",
+   "segments": [
+    {
+     "end": 0.88,
+     "start": 0.0,
+     "text": "マイクラで",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 1.76,
+     "start": 0.88,
+     "text": "建築を",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 3.01,
+     "start": 1.76,
+     "text": "プレゼントするという",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 4.19,
+     "start": 3.01,
+     "text": "ミスタービースト",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.05,
+     "start": 4.19,
+     "text": "目隠し外してマイクラで1番上手く再現した人にテスラをあげる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 10.87,
+     "start": 10.05,
+     "text": "ウソだろ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 12.63,
+     "start": 10.87,
+     "text": "PCに名前を貼った",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 13.93,
+     "start": 12.63,
+     "text": "では始めて",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 14.53,
+     "start": 13.93,
+     "text": "はじめよう",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 16.59,
+     "start": 14.53,
+     "text": "いくぞ 始めろ作業開始だ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 17.58,
+     "start": 16.59,
+     "text": "マジか",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 18.04,
+     "start": 17.58,
+     "text": "おい",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 20.25,
+     "start": 18.04,
+     "text": "どうやって作るんだ？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 22.25,
+     "start": 20.25,
+     "text": "まず土台から作ろう",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 23.3,
+     "start": 22.25,
+     "text": "おけ 集中するわ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 25.54,
+     "start": 23.3,
+     "text": "言い忘れてたよ 賞品はテスラだけじゃない",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 27.27,
+     "start": 25.54,
+     "text": "なんと",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 30.68,
+     "start": 27.27,
+     "text": "本物の家も用意した",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 33.72,
+     "start": 30.68,
+     "text": "25万ドル以上もする",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 35.19,
+     "start": 33.72,
+     "text": "ふぁ!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 36.31,
+     "start": 35.19,
+     "text": "家だって!?",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 38.01,
+     "start": 36.31,
+     "text": "テスラの勝者は",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 40.54,
+     "start": 38.01,
+     "text": "3つの枠の1つを得て 家を争う",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 44.03,
+     "start": 40.54,
+     "text": "そうや 懸かっているのは テスラだけじゃない",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 46.01,
+     "start": 44.03,
+     "text": "家が賞品ってなんだよ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 48.65,
+     "start": 46.01,
+     "text": "家と車が賞品なら 気合いを入れないとな",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 52.19,
+     "start": 48.65,
+     "text": "半分だけ作って 最後に反転させる",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 54.01,
+     "start": 52.19,
+     "text": "彼らはプロだから",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 56.63,
+     "start": 54.01,
+     "text": "マイクラのコマンドを使って 効率よく建築する",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 58.74,
+     "start": 56.63,
+     "text": "炎のホイール作るわ",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 60.13,
+     "start": 58.74,
+     "text": "自信ある？",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 61.27,
+     "start": 60.13,
+     "text": "自信はある",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 64.91,
+     "start": 61.27,
+     "text": "こんな大きさは珍しいけど 得意分野なのか",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 65.55,
+     "start": 64.91,
+     "text": "きも!",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 67.24,
+     "start": 65.55,
+     "text": "なんやその設計",
+     "track": "japanese_voice"
+    },
+    {
+     "end": 90.0,
+     "start": 67.24,
+     "text": "不明",
+     "track": "japanese_voice"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.0,
+     "text": "マイクラで",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 0.5,
+     "text": "作った",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.0,
+     "text": "建築を",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.25,
+     "text": "リアルで",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 1.75,
+     "text": "プレゼントする",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.25,
+     "text": "という",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 2.75,
+     "text": "ミスタービースト",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 3.5,
+     "text": "目隠し外して",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 4.75,
+     "text": "マイクラで1番上手く",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 6.75,
+     "text": "再現した人に",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 8.0,
+     "text": "テスラをあげる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 9.5,
+     "text": "ウソだろ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 10.75,
+     "text": "PCに名前を貼った",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 12.75,
+     "text": "では始めて",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 13.75,
+     "text": "はじめよう",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 14.5,
+     "text": "いくぞ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 15.0,
+     "text": "始めろ作業開始だ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 17.0,
+     "text": "マジか",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 17.5,
+     "text": "おい",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 18.0,
+     "text": "どうやって作るんだ？",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 20.25,
+     "text": "まず土台から作ろう",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 22.25,
+     "text": "おけ 集中するわ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 23.75,
+     "text": "言い忘れてたよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 25.5,
+     "text": "賞品はテスラだけじゃない",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 28.75,
+     "text": "なんと",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 29.25,
+     "text": "本物の家も用意した",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 32.0,
+     "text": "25万ドル以上もする",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 34.25,
+     "text": "ふぁ!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 35.0,
+     "text": "うお!w",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 35.5,
+     "text": "家だって!?",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 36.5,
+     "text": "テスラの勝者は",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 38.0,
+     "text": "3つの枠の1つを得て",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 39.75,
+     "text": "家を争う",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 41.0,
+     "text": "懸かっているのは",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 42.75,
+     "text": "テスラだけじゃない",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 44.0,
+     "text": "家が賞品ってなんだよ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 46.0,
+     "text": "家と車が賞品なら",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 47.0,
+     "text": "気合いを入れないとな",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 49.0,
+     "text": "半分だけ作って",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 50.5,
+     "text": "最後に反転させる",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 52.25,
+     "text": "彼らはプロだから",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 54.0,
+     "text": "マイクラのコマンドを使って",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 55.5,
+     "text": "効率よく建築する",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 56.75,
+     "text": "炎のホイール作るわ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 58.75,
+     "text": "やあ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 59.25,
+     "text": "自信ある？",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 60.0,
+     "text": "自信はある",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 61.25,
+     "text": "こんな大きさは珍しいけど",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 63.75,
+     "text": "得意分野なのか",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 65.0,
+     "text": "きも!",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 66.0,
+     "text": "なんやその設計",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 67.25,
+     "text": "乗り物が得意なタコ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 69.0,
+     "text": "ジキーズは",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 69.75,
+     "text": "芸術的な建築で有名だ",
+     "track": "subtitle"
+    },
+    {
+     "color": "white",
+     "end": null,
+     "start": 112.0,
+     "text": "不明",
+     "track": "subtitle"
+    }
+   ],
+   "source": "smp_voice",
+   "status": "REJECTED",
+   "tool": "gemini-flash-lite-latest"
+  }
+ ],
+ "video_id": "G5iZVGHd0QE"
+}

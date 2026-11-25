@@ -1,0 +1,84 @@
+{
+ "channel": "smp",
+ "transcripts": [
+  {
+   "kind": "narration_subtitle",
+   "lang": "ja",
+   "method": "gemini",
+   "missing": {
+    "end": {
+     "code": "NOT_COLLECTED",
+     "note": "終了秒は答えさせていない"
+    }
+   },
+   "scope": "opening_8s",
+   "segments": [
+    {
+     "color": "白",
+     "end": null,
+     "start": 0.0,
+     "text": "ベリティに本名を暴露された"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 1.25,
+     "text": "ドクタードーナツ"
+    },
+    {
+     "color": "黄色",
+     "end": null,
+     "start": 2.25,
+     "text": "キミは21歳だね"
+    },
+    {
+     "color": "赤",
+     "end": null,
+     "start": 3.25,
+     "text": "*あ リーク限界 まずい*"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 5.0,
+     "text": "ど…どうやって…"
+    },
+    {
+     "color": "白",
+     "end": null,
+     "start": 6.25,
+     "text": "どこで知ったのか分らんけど"
+    }
+   ],
+   "source": "smp_open",
+   "status": "UNVERIFIED",
+   "tool": "gemini-flash-lite-latest"
+  },
+  {
+   "kind": "narration_text",
+   "lang": "ja",
+   "method": "user_csv",
+   "missing": {
+    "timestamps": {
+     "code": "NOT_COLLECTED",
+     "note": "区間ごとの秒が無い。raw.sec の意味は記録なし"
+    }
+   },
+   "raw": {
+    "sec": "2.6秒",
+    "src": "csv"
+   },
+   "scope": "opening_narration",
+   "segments": [
+    {
+     "end": null,
+     "start": null,
+     "text": "ベリティに本名をバラされたドクタードーナツ"
+    }
+   ],
+   "source": "smp_tn299",
+   "status": "UNVERIFIED"
+  }
+ ],
+ "video_id": "5mgN8E2aCNc"
+}
