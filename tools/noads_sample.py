@@ -30,8 +30,9 @@ total = sum((b - a) / sp for a, b, sp, _ in seg)
 FREEZE = noads_cut.FREEZE
 
 # 文字の表（新しい秒）。最初のナレーションは2つに割り、「世界が消えます」を赤にする
-cut1 = narr_dur * 0.36
-texts = [('narr', 0.0, cut1, '3秒後、', 'white'), ('narr', cut1, narr_dur, '世界が消えます', 'red')]
+texts, t0 = [], 0.0
+for text, frac, col in getattr(noads_cut, 'NARR_CHUNKS', [('3秒後、', 0.36, 'white'), ('世界が消えます', 0.64, 'red')]):
+    texts.append(('narr', t0, t0 + narr_dur * frac, text, col)); t0 += narr_dur * frac
 for kind, orig, new, text in noads_cut.LINES:
     if kind == 'ナレーション':
         continue
