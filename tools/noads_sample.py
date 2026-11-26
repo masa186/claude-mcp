@@ -19,9 +19,13 @@ W, H = 720, 1280
 
 narr_dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', NARR],
                                 capture_output=True, text=True).stdout)
-a0, b0, _, what0 = noads_cut.SEG[0]
-seg = [(a0, b0, (b0 - a0) / narr_dur, what0)] + list(noads_cut.SEG[1:])
-noads_cut.SEG[:] = seg
+seg = list(noads_cut.SEG)
+if getattr(noads_cut, 'FIT_FIRST', True):
+    a0, b0, _, what0 = seg[0]
+    seg[0] = (a0, b0, (b0 - a0) / narr_dur, what0)
+    noads_cut.SEG[:] = seg
+ZOOM = getattr(noads_cut, 'ZOOM_FIRST', True)
+DUCK = getattr(noads_cut, 'DUCK', False)
 total = sum((b - a) / sp for a, b, sp, _ in seg)
 FREEZE = noads_cut.FREEZE
 
@@ -70,20 +74,21 @@ for i, (kind, s, e, text, col) in enumerate(texts):
 
 # 映像と音をつなぐ
 fc = ['[0:v]split=%d%s' % (len(seg), ''.join('[vs%d]' % i for i in range(len(seg)))),
-      '[0:a]asplit=%d%s' % (len(seg) - 1, ''.join('[as%d]' % i for i in range(1, len(seg))))]  # 最初の区間は音を使わない
+      ('[0:a]asplit=%d%s' % (len(seg), ''.join('[as%d]' % i for i in range(len(seg)))) if DUCK else
+       '[0:a]asplit=%d%s' % (len(seg) - 1, ''.join('[as%d]' % i for i in range(1, len(seg)))))]  # 前の版は最初の区間の音を使わない
 vlabels, alabels = [], []
 for i, (a, b, sp, _) in enumerate(seg):
     d = (b - a) / sp
     v = '[vs%d]trim=%.3f:%.3f,setpts=(PTS-STARTPTS)/%.4f' % (i, a, b, sp)
-    if i == 0:
+    if i == 0 and ZOOM:
         # 核とベリティが並ぶ左上を切り出し、少しずつ寄りながら拡大する
         v += (",crop=400:403:50:430,scale=w='trunc(720*(1+0.2*t/%.3f)/2)*2':h='trunc(726*(1+0.2*t/%.3f)/2)*2':eval=frame"
               ",crop=720:726,pad=720:1280:0:324:black" % (d, d))
     if i == len(seg) - 1:
         v += ',tpad=stop_mode=clone:stop_duration=%.2f' % FREEZE
     fc.append(v + ',fps=30,format=yuv420p,setsar=1[v%d]' % i)
-    if i == 0:
-        fc.append('anullsrc=r=44100:cl=stereo,atrim=0:%.3f[a%d]' % (d, i))   # 最初は元の音を消す
+    if i == 0 and not DUCK:
+        fc.append('anullsrc=r=44100:cl=stereo,atrim=0:%.3f[a%d]' % (d, i))   # 最初は元の音を消す（前の版）
     else:
         aa = '[as%d]atrim=%.3f:%.3f,asetpts=PTS-STARTPTS,aformat=sample_rates=44100:channel_layouts=stereo' % (i, a, b)
         if i == len(seg) - 1:
@@ -93,7 +98,12 @@ for i, (a, b, sp, _) in enumerate(seg):
 fc.append(''.join(v + a for v, a in zip(vlabels, alabels)) + 'concat=n=%d:v=1:a=1[bv][ba]' % len(seg))
 # ナレーションを0秒から重ねる
 fc.append('[1:a]aformat=sample_rates=44100:channel_layouts=stereo,volume=1.6[na]')
-fc.append('[ba][na]amix=inputs=2:duration=first:normalize=0[aout]')
+if DUCK:
+    # ナレーションの間だけ元の音を小さくする
+    fc.append("[ba]volume=0.3:enable='between(t,0,%.3f)'[bd]" % (narr_dur + 0.15))
+    fc.append('[bd][na]amix=inputs=2:duration=first:normalize=0[aout]')
+else:
+    fc.append('[ba][na]amix=inputs=2:duration=first:normalize=0[aout]')
 # 文字を重ねる
 last = 'bv'
 for j, (p, s, e) in enumerate(overlays):
@@ -109,5 +119,5 @@ cmd += ['-filter_complex', ';'.join(fc), '-map', '[%s]' % last, '-map', '[aout]'
 r = subprocess.run(cmd, capture_output=True, text=True)
 if r.returncode:
     print(r.stderr[-3000:]); sys.exit(1)
-print('出来た：%s（%.1f秒。最初の区間は %.2f 倍の速さ）' % (OUT, total + FREEZE, seg[0][2]))
+print('出来た：%s（%.1f秒。カット %d 回）' % (OUT, total + FREEZE, len(seg) - 1))
 print(json.dumps([(round(s, 2), round(e, 2), t) for _, s, e, t, _ in texts], ensure_ascii=False))
