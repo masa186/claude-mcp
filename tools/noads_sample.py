@@ -38,7 +38,8 @@ for kind, orig, new, text in noads_cut.LINES:
         continue
     s, e = noads_cut.to_new(orig[0]), noads_cut.to_new(orig[1])
     texts.append(('head' if kind == '見出し' else 'verity', s, e, text, 'red' if kind == '見出し' else 'yellow'))
-texts.append(('quote', total, total + FREEZE, noads_cut.END, 'red'))
+if noads_cut.END:
+    texts.append(('quote', total, total + FREEZE, noads_cut.END, 'red'))
 COL = {'white': '#FFFFFF', 'red': '#FF2D2D', 'yellow': '#FFE600'}
 
 
