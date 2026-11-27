@@ -92,6 +92,11 @@ for i, (a, b, sp, _) in enumerate(seg):
         fc.append('anullsrc=r=44100:cl=stereo,atrim=0:%.3f[a%d]' % (d, i))   # 最初は元の音を消す（前の版）
     else:
         aa = '[as%d]atrim=%.3f:%.3f,asetpts=PTS-STARTPTS,aformat=sample_rates=44100:channel_layouts=stereo' % (i, a, b)
+        fade = getattr(noads_cut, 'FADE', 0)
+        if fade and i > 0:
+            aa += ',afade=t=in:d=%.3f' % fade
+        if fade and i < len(seg) - 1:
+            aa += ',afade=t=out:st=%.3f:d=%.3f' % (d - fade, fade)
         if i == len(seg) - 1:
             aa += ',apad=pad_dur=%.2f' % FREEZE
         fc.append(aa + '[a%d]' % i)

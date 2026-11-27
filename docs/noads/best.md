@@ -1,5 +1,7 @@
 # ベリティの動画（noads.mp4）・最強版のフック（2026-11-26）
 
+> **最新は `final.md`（完全版・11/27）**：カットを BGM の拍の頭にそろえ、「3秒後」と先出しなしを決めた。
+
 `plan.md`（決定版・34秒）を、次の2つの分析で作り直した。
 - みんくらの100万超え3本の実ファイルと Studio の維持率（`docs/minkura_hits_real.md`）
 - Dream Clips 58本・SMP クリップ 299本の全動画（`docs/title_narration_3ch.md`、`plan.md` 3節）
