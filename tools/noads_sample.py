@@ -7,10 +7,11 @@
 - 文字は PIL で透明な PNG に描き、ffmpeg で重ねる
 - ナレーションの声は仮（Open JTalk）。本番は VOICEVOX 四国めたんに差し替える
 """
-import os, sys, subprocess, json
+import os, sys, subprocess, json, importlib
 from PIL import Image, ImageDraw, ImageFont
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import noads_cut
+# 切り方のファイルは CUT_MODULE で選ぶ（例：CUT_MODULE=dog_cut）。無ければベリティの noads_cut
+noads_cut = importlib.import_module(os.environ.get('CUT_MODULE', 'noads_cut'))
 
 SRC, NARR, WORK, OUT = sys.argv[1:5]
 os.makedirs(WORK, exist_ok=True)
@@ -63,10 +64,13 @@ def put(d, y, s, size, col, stroke):
                      align='center', spacing=10)
 
 
+TOP = getattr(noads_cut, 'TOP', ('ベリティに核は意味ない', '最後の1秒で絶叫'))
+
+
 def top(d):
     d.rectangle([0, 0, W, 322], fill='black')
-    put(d, 175, 'ベリティに核は意味ない', 58, COL['yellow'], 6)
-    put(d, 262, '最後の1秒で絶叫', 70, COL['red'], 7)
+    put(d, 175, TOP[0], 58, COL['yellow'], 6)
+    put(d, 262, TOP[1], 70, COL['red'], 7)
 
 
 overlays = [(png('top.png', top), 0, total + FREEZE)]
@@ -86,8 +90,12 @@ for i, (a, b, sp, _) in enumerate(seg):
         # 核とベリティが並ぶ左上を切り出し、少しずつ寄りながら拡大する
         v += (",crop=400:403:50:430,scale=w='trunc(720*(1+0.2*t/%.3f)/2)*2':h='trunc(726*(1+0.2*t/%.3f)/2)*2':eval=frame"
               ",crop=720:726,pad=720:1280:0:324:black" % (d, d))
-    if i == len(seg) - 1:
+    if i == len(seg) - 1 and FREEZE > 0:
         v += ',tpad=stop_mode=clone:stop_duration=%.2f' % FREEZE
+    shift = getattr(noads_cut, 'SHIFT_Y', 0)
+    if shift:
+        # ゲーム画面が上部タイトルの帯に隠れないよう、下へずらす
+        v += ',crop=720:%d:0:0,pad=720:1280:0:%d:black' % (1280 - shift, shift)
     fc.append(v + ',fps=30,format=yuv420p,setsar=1[v%d]' % i)
     if i == 0 and not DUCK:
         fc.append('anullsrc=r=44100:cl=stereo,atrim=0:%.3f[a%d]' % (d, i))   # 最初は元の音を消す（前の版）
@@ -98,7 +106,7 @@ for i, (a, b, sp, _) in enumerate(seg):
             aa += ',afade=t=in:d=%.3f' % fade
         if fade and i < len(seg) - 1:
             aa += ',afade=t=out:st=%.3f:d=%.3f' % (d - fade, fade)
-        if i == len(seg) - 1:
+        if i == len(seg) - 1 and FREEZE > 0:
             aa += ',apad=pad_dur=%.2f' % FREEZE
         fc.append(aa + '[a%d]' % i)
     vlabels.append('[v%d]' % i); alabels.append('[a%d]' % i)
